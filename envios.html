@@ -1,39 +1,43 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Devoluciones y Cambios — Skinny Boy</title>
-  <meta name="description" content="Política de devoluciones, cambios y reembolsos de Skinny Boy. Conoce tus derechos como consumidor colombiano." />
+  <title>Política de Envíos — ESCENA Bike Shop</title>
+  <meta name="description" content="Tiempos, costos y seguimiento de envíos de partes BMX de ESCENA Bike Shop a todo Colombia." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="canonical" href="https://escenabikeshop.com/envios.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/escena-logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { background: #fff; color: #0A0A0A; font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; }
-
-    .top-bar { background: #0A0A0A; padding: 0 1.5rem; height: 56px; display: flex; align-items: center; justify-content: space-between; }
-    .top-bar .logo { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.1em; text-decoration: none; }
-    .top-bar .back { color: rgba(255,255,255,0.5); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+    .top-bar { background: #0A0A0A; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 50; }
+    .top-bar .logo { display: flex; align-items: center; gap: .55rem; text-decoration: none; }
+    .top-bar .logo img { width: 32px; height: 32px; border-radius: 50%; background: #fff; }
+    .top-bar .logo span { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.12em; }
+    .top-bar .back { color: rgba(255,255,255,0.5); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
     .top-bar .back:hover { color: #E8C84A; }
-
     .hero { background: #0A0A0A; padding: 4rem 1.5rem 3rem; text-align: center; }
     .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.5rem); color: #fff; letter-spacing: 0.06em; margin-bottom: .5rem; }
     .hero .sub { color: rgba(255,255,255,0.4); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
-
     .container { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
     .section { margin-bottom: 2.5rem; }
     .section h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.06em; margin-bottom: .75rem; color: #0A0A0A; border-left: 3px solid #E8C84A; padding-left: .75rem; }
     .section h3 { font-size: .92rem; font-weight: 700; margin: 1.2rem 0 .4rem; }
     .section p { font-size: .9rem; color: #333; margin-bottom: .7rem; }
-    .section ul { font-size: .9rem; color: #333; padding-left: 1.4rem; margin-bottom: .7rem; }
-    .section ul li { margin-bottom: .35rem; }
+    .section ul, .section ol { font-size: .9rem; color: #333; padding-left: 1.4rem; margin-bottom: .7rem; }
+    .section ul li, .section ol li { margin-bottom: .35rem; }
+    .section a { color: #0A0A0A; font-weight: 600; }
     .callout { background: #f9f9f7; border: 1px solid #e8e8e6; border-radius: 8px; padding: 1.2rem 1.4rem; font-size: .85rem; color: #444; margin: 1rem 0; }
     .callout.gold { border-color: #E8C84A; background: #fffdf0; }
     .callout.dark { background: #0A0A0A; color: rgba(255,255,255,0.7); border-color: #0A0A0A; }
     .callout.dark strong { color: #E8C84A; }
-
-    /* Yes/No grid */
+    .callout strong { color: #0A0A0A; }
     .yn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
     @media(max-width:480px) { .yn-grid { grid-template-columns: 1fr; } }
     .yn-card { border-radius: 8px; padding: 1.2rem; }
@@ -44,15 +48,17 @@
     .yn-no .yn-label { color: #dc2626; }
     .yn-card ul { padding-left: 1.2rem; font-size: .85rem; color: #444; }
     .yn-card ul li { margin-bottom: .3rem; }
-
-    /* Steps */
     .steps { counter-reset: step; list-style: none; padding: 0; }
     .steps li { counter-increment: step; display: flex; gap: 1rem; align-items: flex-start; padding: .8rem 0; border-bottom: 1px solid #f0f0f0; font-size: .9rem; color: #333; }
     .steps li:last-child { border-bottom: none; }
     .steps li::before { content: counter(step); width: 28px; height: 28px; border-radius: 50%; background: #E8C84A; color: #0A0A0A; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .85rem; flex-shrink: 0; }
-
+    .zone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: 1rem 0; }
+    @media(max-width:520px) { .zone-grid { grid-template-columns: 1fr; } }
+    .zone { border: 1px solid #ececeb; border-radius: 8px; padding: 1rem 1.2rem; }
+    .zone .city { font-weight: 700; font-size: .9rem; }
+    .zone .time { font-size: .82rem; color: #16a34a; margin-top: .2rem; }
+    .zone .cost { font-size: .78rem; color: #999; }
     .updated { font-size: .78rem; color: #999; text-align: center; margin-top: 2rem; }
-
     footer { background: #0A0A0A; color: rgba(255,255,255,0.35); font-size: .8rem; padding: 2rem 1.5rem; text-align: center; }
     footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 .5rem; }
     footer a:hover { color: #E8C84A; }
@@ -61,120 +67,102 @@
 <body>
 
 <nav class="top-bar">
-  <a href="index.html" class="logo">SKINNY BOY</a>
-  <a href="index.html" class="back">← Volver a la tienda</a>
+  <a href="index.html" class="logo"><img src="assets/img/escena-logo.jpg" alt="ESCENA Bike Shop" width="32" height="32" /><span>ESCENA</span></a>
+  <a href="index.html" class="back">&larr; Volver a la tienda</a>
 </nav>
 
 <div class="hero">
-  <h1>Devoluciones y Cambios</h1>
-  <p class="sub">Política de reembolsos · Estatuto del Consumidor · Ley 1480/2011</p>
+  <h1>Política de Envíos</h1>
+  <p class="sub">Tiempos, costos y seguimiento de tu pedido</p>
 </div>
 
 <div class="container">
 
   <div class="callout dark">
-    <strong>Nuestro compromiso:</strong> Cada par de Skinny Boy pasa por un control de calidad antes de salir. Si algo no está bien, lo resolvemos. Esta política explica cómo y cuándo aplicamos cambios, devoluciones y garantías.
+    <strong>Rodamos contigo:</strong> En ESCENA despachamos tus partes BMX a todo Colombia con transportadoras nacionales de confianza. Acá te contamos tiempos, costos y cómo rastrear tu pedido.
   </div>
 
   <div class="section">
-    <h2>1. Cuándo Aplica un Cambio o Devolución</h2>
-
-    <div class="yn-grid">
-      <div class="yn-card yn-yes">
-        <div class="yn-label">✓ Sí aplica</div>
-        <ul>
-          <li>Defecto de fabricación comprobado</li>
-          <li>Producto recibido diferente al pedido</li>
-          <li>Talla incorrecta enviada (error nuestro)</li>
-          <li>Daño durante el transporte (con fotos)</li>
-          <li>Producto llegó en mal estado</li>
-        </ul>
-      </div>
-      <div class="yn-card yn-no">
-        <div class="yn-label">✗ No aplica</div>
-        <ul>
-          <li>Cambio de opinión después del envío</li>
-          <li>Talla incorrecta elegida por el cliente</li>
-          <li>Desgaste por uso normal</li>
-          <li>Daños por mal uso o descuido</li>
-          <li>Pedidos custom o personalizados confirmados</li>
-          <li>Producto sin empaque original</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="callout">
-      <strong>Nota sobre tallas:</strong> Recomendamos revisar nuestra guía de tallas antes de comprar. Si tienes dudas, escríbenos por WhatsApp — te ayudamos a elegir la talla correcta antes de confirmar tu pedido.
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>2. Plazo para Solicitar Cambio o Devolución</h2>
-    <p>Tienes <strong>5 días calendario</strong> contados desde la fecha de recepción del producto para reportar cualquier inconveniente. Pasado este plazo, solo aplicará garantía por defecto de fabricación.</p>
-    <p>Para defectos de fabricación que se evidencien con el uso normal, aplica una <strong>garantía de 30 días</strong> a partir de la entrega.</p>
-  </div>
-
-  <div class="section">
-    <h2>3. Cómo Solicitar un Cambio o Devolución</h2>
+    <h2>1. Proceso de tu Pedido</h2>
     <ol class="steps">
-      <li>Escríbenos por WhatsApp al <strong>+57 313 892 0027</strong> o por correo a <strong>Skinnyboyseaker@gmail.com</strong> con el asunto "Solicitud de cambio / devolución".</li>
-      <li>Incluye: tu nombre, número de pedido, descripción del problema y <strong>fotos o video</strong> del defecto o daño.</li>
-      <li>Revisamos tu caso en máximo <strong>2 días hábiles</strong> y te confirmamos si aplica el cambio o devolución.</li>
-      <li>Si aplica, te indicamos la dirección para enviar el producto. El <strong>costo del envío de retorno lo cubrimos nosotros</strong> cuando el error es nuestro.</li>
-      <li>Una vez recibamos y verifiquemos el producto, procesamos el cambio o reembolso en máximo <strong>5 días hábiles</strong>.</li>
+      <li><strong>Confirmación del pedido.</strong> Recibís confirmación inmediata por WhatsApp con los detalles de tu orden.</li>
+      <li><strong>Alistamiento — 1 a 2 días hábiles.</strong> Revisamos, verificamos stock y preparamos tus partes. Para pedidos especiales o por encargo puede extenderse.</li>
+      <li><strong>Control de calidad y empaque.</strong> Revisamos cada parte antes de empacar. Tu pedido va protegido para el transporte.</li>
+      <li><strong>Despacho y número de guía.</strong> Te enviamos el número de guía por WhatsApp el día del despacho.</li>
+      <li><strong>Entrega — 2 a 5 días hábiles adicionales.</strong> Dependiendo de tu ciudad y la transportadora.</li>
     </ol>
   </div>
 
   <div class="section">
-    <h2>4. Opciones de Resolución</h2>
-
-    <h3>Cambio de producto</h3>
-    <p>Si hay disponibilidad, te enviamos un producto nuevo de reemplazo sin costo adicional. Si no hay stock del mismo modelo, podemos ofrecerte otro producto de igual o mayor valor.</p>
-
-    <h3>Reembolso</h3>
-    <p>Si no hay posibilidad de reemplazo, realizamos el reembolso del valor pagado a través del mismo método de pago utilizado, o por transferencia bancaria según tu preferencia. El plazo de reembolso puede variar entre 3 y 10 días hábiles dependiendo del banco o plataforma de pago.</p>
-
-    <h3>Crédito en tienda</h3>
-    <p>También puedes optar por un crédito equivalente al valor del producto para tu próxima compra.</p>
-  </div>
-
-  <div class="section">
-    <h2>5. Condiciones del Producto para Devolución</h2>
-    <p>Para que aplique el cambio o devolución, el producto debe:</p>
-    <ul>
-      <li>Estar en las mismas condiciones en que fue recibido (sin uso adicional al necesario para identificar el defecto).</li>
-      <li>Incluir el empaque original, si aún lo tienes.</li>
-      <li>No presentar daños adicionales causados después de la recepción.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>6. Pedidos Personalizados (Custom)</h2>
-    <p>Los pedidos de sneakers <strong>personalizados o hechos a medida</strong> (custom) no son elegibles para devolución por cambio de opinión, ya que son elaborados exclusivamente para ti. Sin embargo, la garantía por defecto de fabricación aplica igual que para los productos estándar.</p>
-    <p>Confirmamos contigo todos los detalles (diseño, colores, talla) antes de iniciar la producción.</p>
-  </div>
-
-  <div class="section">
-    <h2>7. Derechos del Consumidor (Ley 1480 de 2011)</h2>
-    <p>Como consumidor colombiano, tienes derechos garantizados por el Estatuto del Consumidor:</p>
-    <ul>
-      <li><strong>Garantía mínima legal:</strong> 1 año para productos con defectos de fabricación (artículo 7).</li>
-      <li><strong>Derecho de retracto:</strong> En compras por comercio electrónico, tienes hasta <strong>5 días hábiles</strong> después de recibir el producto para retractarte, siempre que el producto no haya sido usado y esté en perfecto estado. En ese caso, corren por tu cuenta los gastos de envío de retorno.</li>
-      <li><strong>Información veraz:</strong> Tienes derecho a recibir información completa y clara sobre los productos antes de comprar.</li>
-    </ul>
-    <div class="callout">
-      Si considerás que tus derechos como consumidor no han sido respetados, puedes presentar una queja ante la <strong>Superintendencia de Industria y Comercio (SIC)</strong> en <a href="https://www.sic.gov.co" target="_blank" style="color:#0A0A0A;font-weight:600;">www.sic.gov.co</a>.
+    <h2>2. Tiempos y Costos de Envío</h2>
+    <p>Realizamos envíos a todo el territorio colombiano a través de transportadoras nacionales como Interrapidísimo, Servientrega y Coordinadora.</p>
+    <div class="zone-grid">
+      <div class="zone"><div class="city">Bogotá D.C.</div><div class="time">2 – 3 días hábiles</div><div class="cost">Costo según peso</div></div>
+      <div class="zone"><div class="city">Medellín / Cali</div><div class="time">2 – 3 días hábiles</div><div class="cost">Costo según peso</div></div>
+      <div class="zone"><div class="city">Barranquilla / Cartagena</div><div class="time">3 – 4 días hábiles</div><div class="cost">Costo según peso</div></div>
+      <div class="zone"><div class="city">Otras ciudades</div><div class="time">3 – 5 días hábiles</div><div class="cost">Costo según peso y destino</div></div>
+      <div class="zone"><div class="city">Municipios apartados</div><div class="time">Hasta 8 días hábiles</div><div class="cost">Consultar por WhatsApp</div></div>
+    </div>
+    <div class="callout gold">
+      El costo exacto del envío se calcula y te lo confirmamos <strong>antes</strong> de hacer efectivo el pago. Escríbenos por WhatsApp con tu dirección para una cotización inmediata.
     </div>
   </div>
 
   <div class="section">
-    <h2>8. Contacto</h2>
-    <p>Para cualquier solicitud de cambio, devolución o garantía:</p>
+    <h2>3. Seguimiento del Pedido</h2>
+    <p>Una vez despachado tu pedido:</p>
     <ul>
-      <li>WhatsApp: <a href="https://wa.me/573138920027" style="color:#0A0A0A;font-weight:600;">+57 313 892 0027</a></li>
-      <li>Correo: <a href="mailto:Skinnyboyseaker@gmail.com" style="color:#0A0A0A;font-weight:600;">Skinnyboyseaker@gmail.com</a></li>
+      <li>Recibirás el número de guía por WhatsApp.</li>
+      <li>Podrás rastrear tu paquete directamente en el sitio de la transportadora con ese número.</li>
+      <li>También puedes escribirnos al <a href="https://wa.me/573001234567">+57 300 123 4567</a> para consultar el estado de tu envío.</li>
     </ul>
-    <p>Respondemos en horario hábil (lunes a viernes, 9 am – 6 pm).</p>
+  </div>
+
+  <div class="section">
+    <h2>4. Dirección de Entrega</h2>
+    <p>Es tu responsabilidad proporcionar una dirección completa y correcta al momento de realizar el pedido, incluyendo:</p>
+    <ul>
+      <li>Dirección completa (calle, número, apartamento o casa)</li>
+      <li>Barrio / vereda</li>
+      <li>Ciudad y departamento</li>
+      <li>Nombre completo del receptor</li>
+      <li>Teléfono de contacto para la transportadora</li>
+    </ul>
+    <p>ESCENA Bike Shop no se hace responsable por retrasos o pérdidas causados por dirección incorrecta o incompleta.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Pedidos No Entregados</h2>
+    <p>Si la transportadora intenta la entrega sin éxito (nadie en la dirección, dirección incorrecta, etc.):</p>
+    <ul>
+      <li>Generalmente realizan hasta 2 intentos de entrega.</li>
+      <li>Después, el paquete queda en la bodega de la transportadora por un período determinado.</li>
+      <li>Si el paquete regresa a nuestras instalaciones por este motivo, se generará un costo adicional de reenvío que debe cubrirse antes del segundo despacho.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>6. Envíos Internacionales</h2>
+    <p>Actualmente solo realizamos envíos dentro de Colombia. Para solicitudes internacionales, contáctanos directamente por WhatsApp — evaluamos cada caso de forma individual.</p>
+  </div>
+
+  <div class="section">
+    <h2>7. Daños en el Transporte</h2>
+    <p>Si tu pedido llega con daños visibles en el empaque o en el producto:</p>
+    <ul>
+      <li>Toma fotos del paquete y del producto antes de abrirlo.</li>
+      <li>Escríbenos de inmediato por WhatsApp con las fotos.</li>
+      <li>Gestionamos el reclamo ante la transportadora y buscamos la mejor solución para ti.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>8. Contacto</h2>
+    <p>Para cualquier duda sobre tu envío:</p>
+    <ul>
+      <li>WhatsApp: <a href="https://wa.me/573001234567">+57 300 123 4567</a></li>
+      <li>Correo: <a href="mailto:escenabikeshop@gmail.com">escenabikeshop@gmail.com</a></li>
+    </ul>
   </div>
 
   <p class="updated">Última actualización: junio de 2026</p>
@@ -189,7 +177,7 @@
     <a href="devoluciones.html">Devoluciones</a>
     <a href="terminos.html">Términos</a>
   </p>
-  <p>&copy; 2026 Skinny Boy. Todos los derechos reservados.</p>
+  <p>&copy; 2026 ESCENA BIKE SHOP. Todos los derechos reservados.</p>
 </footer>
 
 </body>

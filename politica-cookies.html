@@ -1,906 +1,154 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Skinny Boy · Análisis & Propuesta</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Cookies — ESCENA Bike Shop</title>
+  <meta name="description" content="Política de cookies de ESCENA Bike Shop: qué cookies usamos y cómo controlarlas." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="canonical" href="https://escenabikeshop.com/politica-cookies.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/escena-logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --black: #080808;
-      --dark:  #111111;
-      --dark2: #1A1A1A;
-      --dark3: #222222;
-      --white: #FFFFFF;
-      --off:   #F5F5F3;
-      --muted: #888888;
-      --gold:  #E8C84A;
-      --gold2: #F5E090;
-      --red:   #F97316;
-      --green: #10B981;
-      --border: rgba(255,255,255,0.08);
-    }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--black);
-      color: #E0E0E0;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* ── NOISE TEXTURE ── */
-    body::before {
-      content:'';
-      position:fixed;
-      inset:0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events:none;
-      z-index:0;
-    }
-
-    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; position: relative; z-index:1; }
-
-    /* ── HERO ── */
-    .hero {
-      padding: 80px 0 70px;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-      position: relative;
-    }
-    .hero::after {
-      content:'';
-      position:absolute;
-      bottom:0; left:50%; transform:translateX(-50%);
-      width:300px; height:1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-    .hero-eyebrow {
-      display:inline-block;
-      background: rgba(232,200,74,0.1);
-      border: 1px solid rgba(232,200,74,0.3);
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      padding: 6px 20px;
-      border-radius: 50px;
-      margin-bottom: 32px;
-    }
-    .hero-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(52px, 12vw, 100px);
-      line-height: 0.95;
-      letter-spacing: 2px;
-      color: var(--white);
-      margin-bottom: 24px;
-    }
-    .hero-title span { color: var(--gold); }
-    .hero-sub {
-      font-size: 16px;
-      color: var(--muted);
-      max-width: 480px;
-      margin: 0 auto 40px;
-      line-height: 1.7;
-    }
-    .hero-sub strong { color: var(--white); }
-    .hero-verdict {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(239,68,68,0.1);
-      border: 1px solid rgba(239,68,68,0.3);
-      color: #FCA5A5;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 10px 22px;
-      border-radius: 8px;
-    }
-
-    /* ── SECTIONS ── */
-    section { padding: 70px 0; border-bottom: 1px solid var(--border); }
-    .section-tag {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .section-tag::before {
-      content:'';
-      width: 24px;
-      height: 1px;
-      background: var(--gold);
-    }
-    .section-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(36px, 8vw, 64px);
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 40px;
-      letter-spacing: 1px;
-    }
-
-    /* ── PROBLEM CARDS ── */
-    .problems-grid {
-      display: grid;
-      gap: 12px;
-    }
-    .problem-card {
-      background: var(--dark2);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--red);
-      border-radius: 12px;
-      padding: 22px 24px;
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-    .problem-icon {
-      font-size: 20px;
-      flex-shrink: 0;
-      margin-top: 2px;
-      width: 36px;
-      height: 36px;
-      background: rgba(239,68,68,0.1);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .problem-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 5px;
-    }
-    .problem-desc {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-    .problem-desc strong { color: #E0E0E0; }
-
-    /* ── LEGAL SECTION ── */
-    .legal-card {
-      background: linear-gradient(135deg, rgba(239,68,68,0.08), rgba(239,68,68,0.03));
-      border: 1px solid rgba(239,68,68,0.25);
-      border-radius: 16px;
-      padding: 36px;
-      margin-bottom: 20px;
-    }
-    .legal-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-    .legal-icon {
-      width: 48px;
-      height: 48px;
-      background: rgba(239,68,68,0.15);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      flex-shrink: 0;
-    }
-    .legal-title { font-size: 18px; font-weight: 800; color: var(--white); }
-    .legal-subtitle { font-size: 12px; color: #FCA5A5; margin-top: 2px; }
-    .legal-items { display: grid; gap: 14px; }
-    .legal-item {
-      background: rgba(0,0,0,0.3);
-      border-radius: 10px;
-      padding: 16px 20px;
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-    }
-    .legal-item-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
-    .legal-item-title { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-    .legal-item-desc { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
-    .legal-item-desc strong { color: #FCA5A5; }
-    .fine-box {
-      background: rgba(239,68,68,0.12);
-      border: 1px solid rgba(239,68,68,0.3);
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-top: 20px;
-      display: flex;
-      gap: 14px;
-      align-items: center;
-    }
-    .fine-box-text { font-size: 13.5px; color: #E0E0E0; line-height: 1.6; }
-    .fine-box-text strong { color: #FCA5A5; }
-
-    /* ── WHAT WE BUILT ── */
-    .features-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    @media(max-width:600px){ .features-grid { grid-template-columns: 1fr; } }
-    .feature-card {
-      background: var(--dark2);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--green);
-      border-radius: 12px;
-      padding: 20px 22px;
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-    }
-    .feature-icon {
-      font-size: 18px;
-      flex-shrink: 0;
-      width: 34px;
-      height: 34px;
-      background: rgba(16,185,129,0.1);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .feature-title { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-    .feature-desc { font-size: 12px; color: var(--muted); line-height: 1.55; }
-    .feature-desc strong { color: #6EE7B7; }
-
-    /* ── COMPARISON TABLE ── */
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-    .compare-table thead tr {
-      background: var(--dark2);
-    }
-    .compare-table th {
-      padding: 16px 20px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-align: left;
-    }
-    .compare-table th:first-child { color: var(--muted); }
-    .compare-table th:nth-child(2) { color: var(--red); background: rgba(239,68,68,0.06); }
-    .compare-table th:nth-child(3) { color: var(--green); background: rgba(16,185,129,0.06); }
-    .compare-table td {
-      padding: 14px 20px;
-      font-size: 13px;
-      border-top: 1px solid var(--border);
-      vertical-align: top;
-      line-height: 1.45;
-    }
-    .compare-table td:first-child { color: var(--muted); font-weight: 600; font-size: 12px; }
-    .compare-table td:nth-child(2) {
-      color: #FCA5A5;
-      background: rgba(239,68,68,0.03);
-    }
-    .compare-table td:nth-child(3) {
-      color: #6EE7B7;
-      background: rgba(16,185,129,0.03);
-    }
-    .compare-table tr:hover td { filter: brightness(1.08); }
-    .price-bad  { font-family:'Bebas Neue',sans-serif; font-size:22px; color:var(--red); letter-spacing:1px; }
-    .price-good { font-family:'Bebas Neue',sans-serif; font-size:22px; color:var(--green); letter-spacing:1px; }
-
-    /* ── VERDICT ── */
-    .verdict-box {
-      background: linear-gradient(135deg, rgba(232,200,74,0.08), rgba(232,200,74,0.03));
-      border: 1px solid rgba(232,200,74,0.25);
-      border-radius: 20px;
-      padding: 44px 40px;
-      text-align: center;
-      margin-top: 60px;
-    }
-    .verdict-label {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(32px, 8vw, 56px);
-      letter-spacing: 3px;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .verdict-text {
-      font-size: 15px;
-      color: #D0D0D0;
-      max-width: 540px;
-      margin: 0 auto 36px;
-      line-height: 1.75;
-    }
-    .verdict-text strong { color: var(--white); }
-
-    /* ── FOOTER ── */
-    footer {
-      padding: 40px 0;
-      text-align: center;
-    }
-    .footer-brand {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 20px;
-      letter-spacing: 4px;
-      background: linear-gradient(135deg, var(--white), var(--gold));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 8px;
-    }
-    .footer-note { font-size: 11px; color: var(--muted); letter-spacing: 1px; }
-
-    /* ── DIVIDER ── */
-    .divider {
-      width: 48px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-      margin: 0 0 36px;
-    }
-
-    /* ── REVOPS SECTION ── */
-    .revops-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 40px;
-    }
-    @media(max-width:600px){ .revops-stats { grid-template-columns: 1fr; } }
-    .stat-card {
-      background: var(--dark2);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 28px 20px;
-      text-align: center;
-    }
-    .stat-number {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(40px, 9vw, 64px);
-      letter-spacing: 2px;
-      line-height: 1;
-      background: linear-gradient(135deg, var(--white), var(--gold));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 8px;
-    }
-    .stat-label {
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      line-height: 1.5;
-    }
-    .revops-cards {
-      display: grid;
-      gap: 14px;
-    }
-    .logic-card {
-      background: var(--dark2);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--gold);
-      border-radius: 12px;
-      padding: 22px 24px;
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-    }
-    .logic-icon {
-      font-size: 20px;
-      flex-shrink: 0;
-      width: 38px;
-      height: 38px;
-      background: rgba(232,200,74,0.1);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .logic-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 6px;
-    }
-    .logic-desc {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-    .logic-desc strong { color: #E8C84A; }
-
-    /* ── HIGHLIGHT ── */
-    .highlight-red { color: #FCA5A5; font-weight: 600; }
-    .highlight-gold { color: var(--gold); font-weight: 600; }
-    .highlight-green { color: #6EE7B7; font-weight: 600; }
-
-    /* ── RESPONSIVE ── */
-    @media(max-width:640px){
-      section { padding: 50px 0; }
-      .verdict-box { padding: 32px 20px; }
-      .legal-card { padding: 24px 20px; }
-      .compare-table th, .compare-table td { padding: 12px 14px; font-size: 12px; }
-    }
+    body { background: #fff; color: #0A0A0A; font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; }
+    .top-bar { background: #0A0A0A; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 50; }
+    .top-bar .logo { display: flex; align-items: center; gap: .55rem; text-decoration: none; }
+    .top-bar .logo img { width: 32px; height: 32px; border-radius: 50%; background: #fff; }
+    .top-bar .logo span { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.12em; }
+    .top-bar .back { color: rgba(255,255,255,0.5); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+    .top-bar .back:hover { color: #E8C84A; }
+    .hero { background: #0A0A0A; padding: 4rem 1.5rem 3rem; text-align: center; }
+    .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.5rem); color: #fff; letter-spacing: 0.06em; margin-bottom: .5rem; }
+    .hero .sub { color: rgba(255,255,255,0.4); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .container { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .section { margin-bottom: 2.5rem; }
+    .section h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.06em; margin-bottom: .75rem; color: #0A0A0A; border-left: 3px solid #E8C84A; padding-left: .75rem; }
+    .section h3 { font-size: .92rem; font-weight: 700; margin: 1.2rem 0 .4rem; }
+    .section p { font-size: .9rem; color: #333; margin-bottom: .7rem; }
+    .section ul, .section ol { font-size: .9rem; color: #333; padding-left: 1.4rem; margin-bottom: .7rem; }
+    .section ul li, .section ol li { margin-bottom: .35rem; }
+    .section a { color: #0A0A0A; font-weight: 600; }
+    .callout { background: #f9f9f7; border: 1px solid #e8e8e6; border-radius: 8px; padding: 1.2rem 1.4rem; font-size: .85rem; color: #444; margin: 1rem 0; }
+    .callout.gold { border-color: #E8C84A; background: #fffdf0; }
+    .callout.dark { background: #0A0A0A; color: rgba(255,255,255,0.7); border-color: #0A0A0A; }
+    .callout.dark strong { color: #E8C84A; }
+    .callout strong { color: #0A0A0A; }
+    .yn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media(max-width:480px) { .yn-grid { grid-template-columns: 1fr; } }
+    .yn-card { border-radius: 8px; padding: 1.2rem; }
+    .yn-yes { border: 1px solid #22c55e; background: #f0fdf4; }
+    .yn-no { border: 1px solid #ef4444; background: #fef2f2; }
+    .yn-label { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .6rem; }
+    .yn-yes .yn-label { color: #16a34a; }
+    .yn-no .yn-label { color: #dc2626; }
+    .yn-card ul { padding-left: 1.2rem; font-size: .85rem; color: #444; }
+    .yn-card ul li { margin-bottom: .3rem; }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li { counter-increment: step; display: flex; gap: 1rem; align-items: flex-start; padding: .8rem 0; border-bottom: 1px solid #f0f0f0; font-size: .9rem; color: #333; }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before { content: counter(step); width: 28px; height: 28px; border-radius: 50%; background: #E8C84A; color: #0A0A0A; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .85rem; flex-shrink: 0; }
+    .zone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: 1rem 0; }
+    @media(max-width:520px) { .zone-grid { grid-template-columns: 1fr; } }
+    .zone { border: 1px solid #ececeb; border-radius: 8px; padding: 1rem 1.2rem; }
+    .zone .city { font-weight: 700; font-size: .9rem; }
+    .zone .time { font-size: .82rem; color: #16a34a; margin-top: .2rem; }
+    .zone .cost { font-size: .78rem; color: #999; }
+    .updated { font-size: .78rem; color: #999; text-align: center; margin-top: 2rem; }
+    footer { background: #0A0A0A; color: rgba(255,255,255,0.35); font-size: .8rem; padding: 2rem 1.5rem; text-align: center; }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 .5rem; }
+    footer a:hover { color: #E8C84A; }
   </style>
 </head>
 <body>
 
-<!-- ═══ HERO ═══ -->
-<header class="hero">
-  <div class="container">
-    <div class="hero-eyebrow">Propuesta · 2026</div>
-    <h1 class="hero-title">SKINNY<br/><span>BOY</span></h1>
-    <p class="hero-sub">
-      Revisamos <strong>skinnyboy.co</strong> y construimos un mockup con tus fotos reales.<br/>
-      Esto es lo que vemos, y lo que ya tenemos listo para ti.
-    </p>
+<nav class="top-bar">
+  <a href="index.html" class="logo"><img src="assets/img/escena-logo.jpg" alt="ESCENA Bike Shop" width="32" height="32" /><span>ESCENA</span></a>
+  <a href="index.html" class="back">&larr; Volver a la tienda</a>
+</nav>
+
+<div class="hero">
+  <h1>Política de Cookies</h1>
+  <p class="sub">Uso de cookies y tecnologías similares</p>
+</div>
+
+<div class="container">
+
+  <div class="callout">
+    <strong>Sobre las cookies de este sitio.</strong> Usamos cookies para que la tienda funcione bien y para entender de forma general cómo se navega. Aquí te explicamos qué son, cuáles usamos y cómo puedes controlarlas.
   </div>
-</header>
 
-<main>
+  <div class="section">
+    <h2>1. ¿Qué son las Cookies?</h2>
+    <p>Las cookies son pequeños archivos de texto que un sitio web guarda en tu dispositivo (computador o celular) cuando lo visitas. Sirven para recordar tus preferencias, mantener el sitio funcionando y, en algunos casos, analizar el tráfico de forma anónima.</p>
+  </div>
 
-<!-- ═══ PROBLEMAS ═══ -->
-<section>
-  <div class="container">
-    <p class="section-tag">Lo que vemos</p>
-    <h2 class="section-title">OPORTUNIDADES<br/>DE MEJORA</h2>
+  <div class="section">
+    <h2>2. Tipos de Cookies que Usamos</h2>
+    <h3>Cookies técnicas (necesarias)</h3>
+    <p>Permiten el funcionamiento básico del sitio: cargar la tienda, recordar tu navegación durante la sesión y habilitar los botones de pedido por WhatsApp. Sin ellas, el sitio no funciona correctamente. No requieren consentimiento.</p>
+    <h3>Cookies de terceros</h3>
+    <p>Al usar servicios externos como Google Fonts (para las tipografías) o al abrir enlaces a WhatsApp e Instagram, esos servicios pueden establecer sus propias cookies bajo sus políticas de privacidad.</p>
+    <h3>Cookies analíticas (opcionales)</h3>
+    <p>Si en el futuro habilitamos herramientas de analítica, usaremos cookies para entender de forma agregada y anónima cómo se usa el sitio y así mejorarlo. Estas solo se activan con tu consentimiento.</p>
+  </div>
 
-    <div class="problems-grid">
+  <div class="section">
+    <h2>3. ¿Para Qué las Usamos?</h2>
+    <ul>
+      <li>Garantizar el funcionamiento correcto de la tienda.</li>
+      <li>Recordar preferencias básicas durante tu visita.</li>
+      <li>Mejorar la experiencia y el rendimiento del sitio.</li>
+    </ul>
+    <p>No usamos cookies para vender tus datos ni para publicidad invasiva.</p>
+  </div>
 
-      <div class="problem-card">
-        <div class="problem-icon">🖼️</div>
-        <div>
-          <p class="problem-title">El fondo compite con los productos</p>
-          <p class="problem-desc">La marca de agua del logo en el fondo distrae la atención del cliente. Con un fondo limpio, <strong>los productos son los protagonistas</strong> y la experiencia de compra se vuelve más clara y directa.</p>
-        </div>
-      </div>
-
-      <div class="problem-card">
-        <div class="problem-icon">🏗️</div>
-        <div>
-          <p class="problem-title">Estructura de navegación mejorable</p>
-          <p class="problem-desc">El sitio tiene el copyright y las redes sociales al inicio, y el contenido principal llega después. Una estructura más intuitiva — con hero, catálogo y contacto bien ordenados — <strong>hace que el cliente llegue más rápido a lo que busca.</strong></p>
-        </div>
-      </div>
-
-      <div class="problem-card">
-        <div class="problem-icon">📋</div>
-        <div>
-          <p class="problem-title">Cada producto merece su propia historia</p>
-          <p class="problem-desc">Cuando todos los productos comparten la misma descripción, el cliente no entiende qué hace especial a cada modelo. <strong>Un texto propio por producto</strong> — nombre, materiales, qué lo hace diferente — convierte más y justifica el precio.</p>
-        </div>
-      </div>
-
-      <div class="problem-card">
-        <div class="problem-icon">💬</div>
-        <div>
-          <p class="problem-title">WhatsApp como canal principal, no secundario</p>
-          <p class="problem-desc">Hoy WhatsApp aparece como opción para personalizaciones. Si la mayoría de tus ventas cierran por ahí, debería estar en el centro: <strong>un botón por producto, uno flotante siempre visible, y el checkout conectado directamente.</strong></p>
-        </div>
-      </div>
-
-      <div class="problem-card">
-        <div class="problem-icon">🛡️</div>
-        <div>
-          <p class="problem-title">El checkout puede tener más respaldo</p>
-          <p class="problem-desc">El sitio ya recoge datos y procesa pagos — lo cual es genial. Agregar una política de privacidad, términos y condiciones y un checkbox de autorización de datos <strong>le da más confianza al comprador</strong> y protege el negocio ante cualquier consulta.</p>
-        </div>
-      </div>
-
-      <div class="problem-card">
-        <div class="problem-icon">⚡</div>
-        <div>
-          <p class="problem-title">Velocidad de carga</p>
-          <p class="problem-desc">El sitio usa una tecnología robusta que puede generar tiempos de carga mayores en conexiones móviles. Un catálogo más liviano <strong>carga al instante</strong> — sin esperas, sin spinners — especialmente importante cuando el cliente está desde el celular.</p>
-        </div>
-      </div>
-
-      <div class="problem-card">
-        <div class="problem-icon">🔍</div>
-        <div>
-          <p class="problem-title">Visibilidad en Google</p>
-          <p class="problem-desc">La configuración técnica actual hace difícil que Google indexe los productos. Con un sitio bien estructurado, <strong>búsquedas como "sneakers hechos a mano Colombia"</strong> empiezan a traer clientes nuevos sin pagar publicidad.</p>
-        </div>
-      </div>
-
-      <div class="problem-card">
-        <div class="problem-icon">🎨</div>
-        <div>
-          <p class="problem-title">Tipografía e identidad visual</p>
-          <p class="problem-desc">La fuente actual es genérica y no refleja el estilo de Skinny Boy. Con una tipografía pensada para la marca — <strong>bold, exclusiva, con carácter</strong> — el sitio empieza a sentirse tan premium como los productos que vende.</p>
-        </div>
-      </div>
-
-      <div class="problem-card">
-        <div class="problem-icon">📖</div>
-        <div>
-          <p class="problem-title">La historia de la marca merece más espacio</p>
-          <p class="problem-desc">107K seguidores en Instagram confían en Skinny Boy — pero el sitio no les muestra quién eres, cómo fabricas, ni qué dicen tus clientes. <strong>Una sección "Nosotros", video del proceso y reseñas reales</strong> construyen confianza y convierten a visitantes en compradores.</p>
-        </div>
-      </div>
-
+  <div class="section">
+    <h2>4. Cómo Controlar o Eliminar las Cookies</h2>
+    <p>Puedes gestionar o eliminar las cookies desde la configuración de tu navegador:</p>
+    <ul>
+      <li><strong>Chrome:</strong> Configuración &rarr; Privacidad y seguridad &rarr; Cookies.</li>
+      <li><strong>Safari:</strong> Preferencias &rarr; Privacidad.</li>
+      <li><strong>Firefox:</strong> Ajustes &rarr; Privacidad &amp; Seguridad.</li>
+    </ul>
+    <div class="callout gold">
+      Ten en cuenta que si bloqueas las cookies técnicas, algunas funciones del sitio podrían dejar de funcionar correctamente.
     </div>
   </div>
-</section>
 
-<!-- ═══ LEGAL ═══ -->
-<section>
-  <div class="container">
-    <p class="section-tag">Algo importante</p>
-    <h2 class="section-title">COBERTURA<br/>LEGAL</h2>
-
-    <div class="legal-card">
-      <div class="legal-header">
-        <div class="legal-icon">🛡️</div>
-        <div>
-          <p class="legal-title">Tu sitio ya recoge datos y procesa pagos — vale la pena cubrirte bien</p>
-          <p class="legal-subtitle">Nombre · Email · Teléfono · Dirección · Ciudad · País · Método de pago</p>
-        </div>
-      </div>
-
-      <div class="legal-items">
-
-        <div class="legal-item">
-          <div class="legal-item-icon">📄</div>
-          <div>
-            <p class="legal-item-title">Política de Privacidad</p>
-            <p class="legal-item-desc">Cuando recoges datos de clientes, es buena práctica tener una política que explique cómo los usas. <strong>Le da confianza al comprador</strong> y cubre el negocio ante cualquier pregunta o reclamo.</p>
-          </div>
-        </div>
-
-        <div class="legal-item">
-          <div class="legal-item-icon">📜</div>
-          <div>
-            <p class="legal-item-title">Términos y Condiciones</p>
-            <p class="legal-item-desc">Básico para cualquier tienda online. Define las reglas del juego antes de que haya un malentendido con un cliente — <strong>protege al negocio y al comprador por igual.</strong></p>
-          </div>
-        </div>
-
-        <div class="legal-item">
-          <div class="legal-item-icon">↩️</div>
-          <div>
-            <p class="legal-item-title">Política de Devoluciones</p>
-            <p class="legal-item-desc">En compras online el cliente no puede ver el producto en persona antes de pagar. Tener una política clara de cambios y devoluciones <strong>reduce fricciones y genera confianza</strong> — especialmente en productos sobre pedido.</p>
-          </div>
-        </div>
-
-        <div class="legal-item">
-          <div class="legal-item-icon">☑️</div>
-          <div>
-            <p class="legal-item-title">Autorización de tratamiento de datos</p>
-            <p class="legal-item-desc">Un simple checkbox en el checkout que diga "acepto el tratamiento de mis datos" es suficiente. <strong>Es un estándar en cualquier tienda online bien hecha</strong> y le da al cliente tranquilidad antes de pagar.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="fine-box">
-        <div style="font-size:28px;flex-shrink:0;">💡</div>
-        <div class="fine-box-text">
-          No es nada complicado de implementar — y marca una diferencia enorme en la percepción del negocio. <strong>Un sitio con respaldo legal completo genera más confianza, convierte mejor, y protege tu operación.</strong> Lo incluimos en nuestra propuesta sin costo adicional.
-        </div>
-      </div>
-    </div>
-
+  <div class="section">
+    <h2>5. Cambios a Esta Política</h2>
+    <p>Podemos actualizar esta política de cookies cuando cambien nuestras prácticas o la normativa aplicable. La fecha de la última actualización aparece al pie de este documento.</p>
   </div>
-</section>
 
-<!-- ═══ LO QUE CONSTRUIMOS ═══ -->
-<section>
-  <div class="container">
-    <p class="section-tag">Lo que ya tienes</p>
-    <h2 class="section-title">TU NUEVO<br/>SITIO</h2>
-
-    <div class="features-grid">
-
-      <div class="feature-card">
-        <div class="feature-icon">🎯</div>
-        <div>
-          <p class="feature-title">Hero a pantalla completa</p>
-          <p class="feature-desc">Tu mejor foto + slogan + botón directo a WhatsApp. El cliente llega y en <strong>1 segundo</strong> sabe qué es Skinny Boy.</p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">💬</div>
-        <div>
-          <p class="feature-title">WhatsApp en cada producto</p>
-          <p class="feature-desc">Botón "Pedir directo por WhatsApp" que abre la conversación con <strong>producto y talla ya escritos.</strong> Un tap = conversación.</p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🎬</div>
-        <div>
-          <p class="feature-title">Video "Hecho a Mano"</p>
-          <p class="feature-desc">Sección dedicada a tu proceso de fabricación. <strong>Eso es lo que justifica el precio</strong> y convierte visitantes en compradores.</p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">👟</div>
-        <div>
-          <p class="feature-title">Catálogo profesional</p>
-          <p class="feature-desc">Cada producto con foto premium, precio, talla, badge (Best Seller / Limited / Nuevo), descripción propia y Quick View. <strong>Cada modelo con su propia identidad.</strong></p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🛒</div>
-        <div>
-          <p class="feature-title">Carrito con checkout a WhatsApp</p>
-          <p class="feature-desc">El cliente arma su pedido completo y te lo envía por WhatsApp con <strong>todo listo: productos, tallas, dirección.</strong></p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <div>
-          <p class="feature-title">Botón flotante de WhatsApp</p>
-          <p class="feature-desc"><strong>Siempre visible</strong> en cualquier punto del sitio. El cliente puede escribirte desde donde sea, en cualquier momento.</p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">📸</div>
-        <div>
-          <p class="feature-title">Galería + Reseñas</p>
-          <p class="feature-desc">Feed de Instagram integrado y carrusel de testimonios. <strong>107K seguidores</strong> ven la misma marca en todas partes.</p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <div>
-          <p class="feature-title">Carga instantánea</p>
-          <p class="feature-desc">HTML limpio, sin frameworks pesados. <strong>Todo visible al primer segundo.</strong> Sin spinners, sin "Cargando productos..."</p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🔍</div>
-        <div>
-          <p class="feature-title">SEO real</p>
-          <p class="feature-desc">Google indexa cada producto. "Sneakers hechos a mano Colombia" empieza a traerte clientes que <strong>hoy no te encuentran.</strong></p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">⚖️</div>
-        <div>
-          <p class="feature-title">Documentación legal incluida</p>
-          <p class="feature-desc">Política de privacidad, T&C, política de devoluciones y checkbox de autorización. <strong>Todo lo que el cliente necesita ver para comprar con confianza.</strong></p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🧾</div>
-        <div>
-          <p class="feature-title">Facturación electrónica DIAN — Alegra</p>
-          <p class="feature-desc">Cada pedido genera su factura electrónica automáticamente vía API de Alegra. <strong>100% DIAN-compliant, cero trabajo manual,</strong> y contabilidad lista desde el primer día.</p>
-        </div>
-      </div>
-
-    </div>
+  <div class="section">
+    <h2>6. Contacto</h2>
+    <p>Para dudas sobre nuestra política de cookies:</p>
+    <ul>
+      <li>Correo: <a href="mailto:escenabikeshop@gmail.com">escenabikeshop@gmail.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/573001234567">+57 300 123 4567</a></li>
+    </ul>
+    <p>Consulta también nuestra <a href="politica-privacidad.html">Política de Privacidad</a>.</p>
   </div>
-</section>
 
-<!-- ═══ EL NEGOCIO ═══ -->
-<section>
-  <div class="container">
-    <p class="section-tag">Por qué tiene sentido</p>
-    <h2 class="section-title">107K SEGUIDORES<br/>ES UN NEGOCIO</h2>
+  <p class="updated">Última actualización: junio de 2026</p>
 
-    <div class="revops-stats">
-      <div class="stat-card">
-        <div class="stat-number">107K</div>
-        <div class="stat-label">audiencia propia<br/>sin canal de conversión</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">0</div>
-        <div class="stat-label">clientes nuevos<br/>desde Google hoy</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">∞</div>
-        <div class="stat-label">DMs manuales para<br/>escalar sin un sistema</div>
-      </div>
-    </div>
-
-    <div class="revops-cards">
-
-      <div class="logic-card">
-        <div class="logic-icon">🏠</div>
-        <div>
-          <p class="logic-title">Instagram es tierra arrendada</p>
-          <p class="logic-desc">Un shadowban, un cambio de algoritmo, una cuenta hackeada — y de un día para otro el canal de ventas desaparece. <strong>Un sitio web es el único activo digital que es 100% tuyo:</strong> nadie te lo puede quitar, cambiar, ni monetizar sin tu permiso.</p>
-        </div>
-      </div>
-
-      <div class="logic-card">
-        <div class="logic-icon">🔁</div>
-        <div>
-          <p class="logic-title">107K sin conversión directa son 107K dormidos</p>
-          <p class="logic-desc">Hoy esa audiencia termina en el DM — y ahí empieza el trabajo manual. Un catálogo online convierte el scroll en intención real: el cliente ve el producto, elige talla, confirma precio y llega al WhatsApp <strong>listo para cerrar.</strong> Tú solo dices sí.</p>
-        </div>
-      </div>
-
-      <div class="logic-card">
-        <div class="logic-icon">📈</div>
-        <div>
-          <p class="logic-title">WhatsApp tiene un techo de escala</p>
-          <p class="logic-desc">Cada venta hoy requiere tu atención: responder consulta, confirmar disponibilidad, enviar link de pago, hacer seguimiento. Eso funciona para 5 pedidos al día. A 20, es inmanejable. <strong>El sitio hace la calificación por ti</strong> — solo te llegan pedidos listos.</p>
-        </div>
-      </div>
-
-      <div class="logic-card">
-        <div class="logic-icon">🔍</div>
-        <div>
-          <p class="logic-title">SEO: clientes que todavía no te siguen</p>
-          <p class="logic-desc">"Tenis artesanales Colombia", "sneakers personalizados Bogotá" — búsquedas reales, competencia casi nula. Hoy esas personas no te encuentran. <strong>Un sitio bien indexado los trae sin pagar publicidad,</strong> ampliando el negocio más allá del follow.</p>
-        </div>
-      </div>
-
-      <div class="logic-card">
-        <div class="logic-icon">🧾</div>
-        <div>
-          <p class="logic-title">Alegra: facturación automática desde el primer pedido</p>
-          <p class="logic-desc">La DIAN exige facturación electrónica. Con la integración de Alegra, <strong>cada pedido genera su factura automáticamente</strong> — sin hacer nada manualmente. Cumplimiento tributario desde el día uno, contabilidad lista, y una operación que se ve profesional ante cualquier cliente o aliado.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TABLA COMPARATIVA ═══ -->
-<section>
-  <div class="container">
-    <p class="section-tag">El resumen</p>
-    <h2 class="section-title">LADO A<br/>LADO</h2>
-
-    <div style="overflow-x:auto;">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>skinnyboy.co · Actual</th>
-            <th>Nuestro mockup</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Primera impresión</td>
-            <td>Logo watermark en el fondo</td>
-            <td>Hero fullscreen + video + CTA WhatsApp</td>
-          </tr>
-          <tr>
-            <td>Diseño</td>
-            <td>Tipografía genérica, fondo ocupado</td>
-            <td>Bebas Neue + Inter, hecho para Skinny Boy</td>
-          </tr>
-          <tr>
-            <td>Productos</td>
-            <td>Descripción igual en todos los modelos</td>
-            <td>Catálogo con badges, tallas, Quick View y descripción propia</td>
-          </tr>
-          <tr>
-            <td>WhatsApp</td>
-            <td>Solo para personalizaciones</td>
-            <td>Canal principal: por producto + flotante + checkout</td>
-          </tr>
-          <tr>
-            <td>Historia de marca</td>
-            <td>No incluye</td>
-            <td>Sección completa con stats y storytelling</td>
-          </tr>
-          <tr>
-            <td>Video del proceso</td>
-            <td>No incluye</td>
-            <td>Sección "Hecho a Mano" dedicada</td>
-          </tr>
-          <tr>
-            <td>Reseñas</td>
-            <td>No incluye</td>
-            <td>Carrusel de testimonios</td>
-          </tr>
-          <tr>
-            <td>Galería Instagram</td>
-            <td>No incluye</td>
-            <td>Feed integrado con 107K seguidores</td>
-          </tr>
-          <tr>
-            <td>Checkout</td>
-            <td>Mercado Pago / PayPal sin cobertura legal</td>
-            <td>Carrito → WhatsApp o formulario con T&C completos</td>
-          </tr>
-          <tr>
-            <td>Velocidad</td>
-            <td>Spinner de carga en móvil</td>
-            <td>Instantánea, sin esperas</td>
-          </tr>
-          <tr>
-            <td>SEO</td>
-            <td>Visibilidad limitada en Google</td>
-            <td>HTML limpio, todo indexable</td>
-          </tr>
-          <tr>
-            <td>Legal</td>
-            <td>Sin política de privacidad ni T&C</td>
-            <td>Política de privacidad, T&C y devoluciones incluidas</td>
-          </tr>
-          <tr>
-            <td>Facturación electrónica</td>
-            <td>No incluye</td>
-            <td>Automática vía Alegra API · DIAN-compliant</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- VERDICT BOX -->
-    <div class="verdict-box">
-      <p class="verdict-label">Tu marca lo merece</p>
-      <p class="verdict-text">
-        <strong>107K personas creen en Skinny Boy.</strong> Un sitio a esa altura solo amplifica lo que ya construiste — más presencia, más confianza, más conversión.<br/><br/>
-        Lo que construimos ya está en vivo, con tus fotos reales, y funciona perfecto en el celular ahora mismo. Dale un vistazo y la diferencia habla sola.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-</main>
+</div>
 
 <footer>
-  <div class="container">
-    <p class="footer-brand">SKINNY BOY · PROPUESTA 2026</p>
-    <p class="footer-note">Daniel Acosta · daniel.f.acosta96@gmail.com · +57 313 666 2777</p>
-  </div>
+  <p style="margin-bottom:.75rem;">
+    <a href="politica-privacidad.html">Privacidad</a>
+    <a href="politica-cookies.html">Cookies</a>
+    <a href="envios.html">Envíos</a>
+    <a href="devoluciones.html">Devoluciones</a>
+    <a href="terminos.html">Términos</a>
+  </p>
+  <p>&copy; 2026 ESCENA BIKE SHOP. Todos los derechos reservados.</p>
 </footer>
 
-
-<!-- ====== CONFIDENTIAL PROTECTION ====== -->
-<style>
-  #conf-bar { position:fixed; top:0; left:0; right:0; z-index:9999; background:#0A0A0A; border-bottom:2px solid #E8C84A; padding:.5rem 1.2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-family:'Inter',sans-serif; font-size:.72rem; font-weight:600; letter-spacing:.06em; color:rgba(255,255,255,0.7); }
-  #conf-bar .conf-label { color:#E8C84A; }
-  #conf-bar .conf-right { text-align:right; white-space:nowrap; }
-  body { padding-top:36px; }
-  #conf-wm { position:fixed; inset:0; z-index:9998; pointer-events:none; overflow:hidden; }
-  #conf-wm::before { content:''; position:absolute; inset:-100%; background-image:repeating-linear-gradient(45deg,transparent,transparent 120px,rgba(10,10,10,.0) 120px,rgba(10,10,10,.0) 240px); }
-  .wm-text { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
-  .wm-text span { font-family:'Inter',sans-serif; font-size:clamp(1rem,2.5vw,1.6rem); font-weight:900; letter-spacing:.25em; color:rgba(0,0,0,0.06); transform:rotate(-35deg); white-space:nowrap; user-select:none; -webkit-user-select:none; }
-  @media(prefers-color-scheme:dark){ .wm-text span { color:rgba(255,255,255,0.04); } }
-</style>
-
-<div id="conf-bar">
-  <span><span class="conf-label">⚠ CONFIDENCIAL</span> &nbsp;·&nbsp; Propuesta exclusiva · No compartir sin autorización</span>
-  <span class="conf-right">© Daniel Acosta · 2026</span>
-</div>
-
-<div id="conf-wm">
-  <div class="wm-text"><span>PROPUESTA CONFIDENCIAL · USO NO AUTORIZADO PROHIBIDO · PROPUESTA CONFIDENCIAL · USO NO AUTORIZADO PROHIBIDO</span></div>
-</div>
-
-<script>
-  (function(){
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('keydown', function(e){
-      const k = e.key.toLowerCase();
-      if (e.ctrlKey && ['u','s','a','p'].includes(k)) { e.preventDefault(); return false; }
-      if (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(k)) { e.preventDefault(); return false; }
-      if (e.key === 'F12') { e.preventDefault(); return false; }
-    });
-    Object.defineProperty(document,'oncontextmenu',{get:()=>null,set:()=>{}});
-    console.log('%c⚠ DOCUMENTO CONFIDENCIAL', 'color:#E8C84A;font-size:18px;font-weight:bold;');
-    console.log('%cEste material es propiedad intelectual de Daniel Acosta. Su reproducción, distribución o uso no autorizado está prohibido y puede constituir una violación de derechos de autor bajo la Ley 23 de 1982 de Colombia.', 'color:#cc0000;font-size:13px;');
-  })();
-</script>
 </body>
 </html>

@@ -1,45 +1,64 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Cookies — Skinny Boy</title>
-  <meta name="description" content="Política de uso de cookies del sitio web de Skinny Boy." />
+  <title>Política de Privacidad — ESCENA Bike Shop</title>
+  <meta name="description" content="Política de tratamiento de datos personales de ESCENA Bike Shop, conforme a la Ley 1581 de 2012." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="canonical" href="https://escenabikeshop.com/politica-privacidad.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/escena-logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { background: #fff; color: #0A0A0A; font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; }
-
-    .top-bar { background: #0A0A0A; padding: 0 1.5rem; height: 56px; display: flex; align-items: center; justify-content: space-between; }
-    .top-bar .logo { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.1em; text-decoration: none; }
-    .top-bar .back { color: rgba(255,255,255,0.5); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+    .top-bar { background: #0A0A0A; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 50; }
+    .top-bar .logo { display: flex; align-items: center; gap: .55rem; text-decoration: none; }
+    .top-bar .logo img { width: 32px; height: 32px; border-radius: 50%; background: #fff; }
+    .top-bar .logo span { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.12em; }
+    .top-bar .back { color: rgba(255,255,255,0.5); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
     .top-bar .back:hover { color: #E8C84A; }
-
     .hero { background: #0A0A0A; padding: 4rem 1.5rem 3rem; text-align: center; }
     .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.5rem); color: #fff; letter-spacing: 0.06em; margin-bottom: .5rem; }
     .hero .sub { color: rgba(255,255,255,0.4); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
-
     .container { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
     .section { margin-bottom: 2.5rem; }
     .section h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.06em; margin-bottom: .75rem; color: #0A0A0A; border-left: 3px solid #E8C84A; padding-left: .75rem; }
+    .section h3 { font-size: .92rem; font-weight: 700; margin: 1.2rem 0 .4rem; }
     .section p { font-size: .9rem; color: #333; margin-bottom: .7rem; }
-    .section ul { font-size: .9rem; color: #333; padding-left: 1.4rem; margin-bottom: .7rem; }
-    .section ul li { margin-bottom: .35rem; }
+    .section ul, .section ol { font-size: .9rem; color: #333; padding-left: 1.4rem; margin-bottom: .7rem; }
+    .section ul li, .section ol li { margin-bottom: .35rem; }
+    .section a { color: #0A0A0A; font-weight: 600; }
     .callout { background: #f9f9f7; border: 1px solid #e8e8e6; border-radius: 8px; padding: 1.2rem 1.4rem; font-size: .85rem; color: #444; margin: 1rem 0; }
-
-    /* Cookie type table */
-    .cookie-table { width: 100%; border-collapse: collapse; font-size: .85rem; margin: 1rem 0; }
-    .cookie-table th { background: #0A0A0A; color: #fff; padding: .6rem .9rem; text-align: left; font-weight: 600; font-size: .78rem; letter-spacing: .04em; }
-    .cookie-table td { padding: .6rem .9rem; border-bottom: 1px solid #eee; vertical-align: top; }
-    .cookie-table tr:last-child td { border-bottom: none; }
-    .badge { display: inline-block; font-size: .7rem; font-weight: 700; padding: .15rem .5rem; border-radius: 4px; letter-spacing: .04em; }
-    .badge-req { background: #0A0A0A; color: #fff; }
-    .badge-opt { background: #E8C84A; color: #0A0A0A; }
-
+    .callout.gold { border-color: #E8C84A; background: #fffdf0; }
+    .callout.dark { background: #0A0A0A; color: rgba(255,255,255,0.7); border-color: #0A0A0A; }
+    .callout.dark strong { color: #E8C84A; }
+    .callout strong { color: #0A0A0A; }
+    .yn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media(max-width:480px) { .yn-grid { grid-template-columns: 1fr; } }
+    .yn-card { border-radius: 8px; padding: 1.2rem; }
+    .yn-yes { border: 1px solid #22c55e; background: #f0fdf4; }
+    .yn-no { border: 1px solid #ef4444; background: #fef2f2; }
+    .yn-label { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .6rem; }
+    .yn-yes .yn-label { color: #16a34a; }
+    .yn-no .yn-label { color: #dc2626; }
+    .yn-card ul { padding-left: 1.2rem; font-size: .85rem; color: #444; }
+    .yn-card ul li { margin-bottom: .3rem; }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li { counter-increment: step; display: flex; gap: 1rem; align-items: flex-start; padding: .8rem 0; border-bottom: 1px solid #f0f0f0; font-size: .9rem; color: #333; }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before { content: counter(step); width: 28px; height: 28px; border-radius: 50%; background: #E8C84A; color: #0A0A0A; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .85rem; flex-shrink: 0; }
+    .zone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: 1rem 0; }
+    @media(max-width:520px) { .zone-grid { grid-template-columns: 1fr; } }
+    .zone { border: 1px solid #ececeb; border-radius: 8px; padding: 1rem 1.2rem; }
+    .zone .city { font-weight: 700; font-size: .9rem; }
+    .zone .time { font-size: .82rem; color: #16a34a; margin-top: .2rem; }
+    .zone .cost { font-size: .78rem; color: #999; }
     .updated { font-size: .78rem; color: #999; text-align: center; margin-top: 2rem; }
-
     footer { background: #0A0A0A; color: rgba(255,255,255,0.35); font-size: .8rem; padding: 2rem 1.5rem; text-align: center; }
     footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 .5rem; }
     footer a:hover { color: #E8C84A; }
@@ -48,115 +67,116 @@
 <body>
 
 <nav class="top-bar">
-  <a href="index.html" class="logo">SKINNY BOY</a>
-  <a href="index.html" class="back">← Volver a la tienda</a>
+  <a href="index.html" class="logo"><img src="assets/img/escena-logo.jpg" alt="ESCENA Bike Shop" width="32" height="32" /><span>ESCENA</span></a>
+  <a href="index.html" class="back">&larr; Volver a la tienda</a>
 </nav>
 
 <div class="hero">
-  <h1>Política de Cookies</h1>
-  <p class="sub">Cómo usamos cookies en este sitio</p>
+  <h1>Política de Privacidad</h1>
+  <p class="sub">Tratamiento de Datos Personales · Ley 1581 de 2012</p>
 </div>
 
 <div class="container">
 
   <div class="callout">
-    Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo para hacer que funcionen correctamente y mejorar tu experiencia. Este documento explica qué cookies usamos y cómo puedes controlarlas.
+    <strong>En ESCENA protegemos tu información.</strong> Este documento explica qué datos recopilamos, por qué los usamos y cuáles son tus derechos como titular, conforme a la Ley 1581 de 2012 y el Decreto 1377 de 2013 de la República de Colombia.
   </div>
 
   <div class="section">
-    <h2>1. ¿Qué Cookies Usamos?</h2>
-
-    <table class="cookie-table">
-      <thead>
-        <tr>
-          <th>Cookie</th>
-          <th>Tipo</th>
-          <th>Propósito</th>
-          <th>Duración</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>sb_cart</code></td>
-          <td><span class="badge badge-req">Necesaria</span></td>
-          <td>Guarda los artículos en tu carrito entre páginas</td>
-          <td>Sesión</td>
-        </tr>
-        <tr>
-          <td><code>sb_cookie_consent</code></td>
-          <td><span class="badge badge-req">Necesaria</span></td>
-          <td>Recuerda si aceptaste o rechazaste las cookies</td>
-          <td>12 meses</td>
-        </tr>
-        <tr>
-          <td><code>sb_size_pref</code></td>
-          <td><span class="badge badge-opt">Funcional</span></td>
-          <td>Recuerda tu talla de preferencia para pedidos futuros</td>
-          <td>6 meses</td>
-        </tr>
-        <tr>
-          <td>Cookies de análisis (Google Analytics)</td>
-          <td><span class="badge badge-opt">Análisis</span></td>
-          <td>Estadísticas anónimas de uso del sitio (páginas más visitadas, tiempo en sitio)</td>
-          <td>13 meses</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Actualmente <strong>no utilizamos cookies de publicidad o rastreo de terceros</strong> para mostrarte anuncios personalizados en otras plataformas.</p>
+    <h2>1. Responsable del Tratamiento</h2>
+    <p><strong>Nombre:</strong> ESCENA BIKE SHOP</p>
+    <p><strong>Correo electrónico:</strong> <a href="mailto:escenabikeshop@gmail.com">escenabikeshop@gmail.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/573001234567">+57 300 123 4567</a></p>
+    <p><strong>País:</strong> Colombia</p>
   </div>
 
   <div class="section">
-    <h2>2. Cookies Necesarias</h2>
-    <p>Estas cookies son esenciales para el funcionamiento del sitio. Sin ellas, el carrito de compras no funcionaría y no podrías completar pedidos. No requieren tu consentimiento pero te informamos de su uso.</p>
-  </div>
-
-  <div class="section">
-    <h2>3. Cookies Funcionales</h2>
-    <p>Mejoran tu experiencia recordando preferencias como tu talla. Puedes desactivarlas, pero la experiencia de compra será un poco menos fluida.</p>
-  </div>
-
-  <div class="section">
-    <h2>4. Cookies de Análisis</h2>
-    <p>Usamos herramientas de análisis para entender cómo los visitantes interactúan con el sitio (qué páginas visitan, cuánto tiempo pasan, desde qué dispositivos). Esta información es <strong>anónima y agregada</strong> — no te identifica personalmente. Nos ayuda a mejorar el sitio y la experiencia de compra.</p>
-    <p>Puedes rechazar estas cookies en el banner de consentimiento sin afectar la funcionalidad del sitio.</p>
-  </div>
-
-  <div class="section">
-    <h2>5. Cómo Controlar las Cookies</h2>
-    <p>Tienes varias formas de controlar las cookies:</p>
+    <h2>2. Datos que Recopilamos</h2>
+    <p>Recopilamos únicamente los datos necesarios para procesar tu pedido y brindarte una buena experiencia:</p>
     <ul>
-      <li><strong>Banner de consentimiento:</strong> Al ingresar al sitio por primera vez, puedes aceptar o rechazar las cookies opcionales.</li>
-      <li><strong>Configuración del navegador:</strong> Puedes bloquear o eliminar cookies desde la configuración de privacidad de tu navegador. Ten en cuenta que bloquear cookies necesarias puede afectar el funcionamiento del carrito.</li>
-      <li><strong>Herramientas del navegador:</strong> Chrome, Firefox, Safari y Edge tienen opciones de gestión de cookies en sus menús de configuración → Privacidad.</li>
+      <li><strong>Datos de contacto:</strong> nombre, número de WhatsApp, correo electrónico.</li>
+      <li><strong>Datos de envío:</strong> dirección de entrega, ciudad, departamento.</li>
+      <li><strong>Datos de pedido:</strong> productos, referencias, medidas y preferencias.</li>
+      <li><strong>Datos de navegación:</strong> cookies técnicas de funcionamiento del sitio (ver Política de Cookies).</li>
     </ul>
+    <p>No recopilamos números de tarjeta de crédito ni datos bancarios directamente — los pagos se procesan a través de plataformas externas seguras.</p>
+  </div>
 
+  <div class="section">
+    <h2>3. Finalidad del Tratamiento</h2>
+    <p>Usamos tus datos exclusivamente para:</p>
+    <ul>
+      <li>Procesar, confirmar y coordinar el envío de tu pedido.</li>
+      <li>Comunicarnos contigo vía WhatsApp o correo electrónico sobre el estado de tu compra.</li>
+      <li>Generar facturas electrónicas cuando aplique.</li>
+      <li>Gestionar solicitudes de cambio o garantía.</li>
+      <li>Enviarte información sobre nuevos productos o drops, <em>solo si nos diste autorización expresa</em>.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>4. Base Legal para el Tratamiento</h2>
+    <ul>
+      <li><strong>Ejecución del contrato:</strong> para procesar y entregar tu pedido.</li>
+      <li><strong>Obligación legal:</strong> para cumplir con requerimientos fiscales y de la DIAN.</li>
+      <li><strong>Consentimiento:</strong> para comunicaciones de marketing, revocable en cualquier momento.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>5. Conservación de Datos</h2>
+    <ul>
+      <li>La ejecución y garantía de tu pedido (mínimo 6 meses desde la entrega).</li>
+      <li>El cumplimiento de obligaciones contables y fiscales (hasta 5 años según normativa colombiana).</li>
+    </ul>
+    <p>Transcurridos estos plazos, tus datos serán eliminados o anonimizados de forma segura.</p>
+  </div>
+
+  <div class="section">
+    <h2>6. Derechos del Titular</h2>
+    <ul>
+      <li><strong>Conocer</strong> qué datos tenemos sobre ti y cómo los usamos.</li>
+      <li><strong>Actualizar o corregir</strong> información inexacta o incompleta.</li>
+      <li><strong>Suprimir</strong> tus datos cuando ya no sean necesarios o retires tu consentimiento.</li>
+      <li><strong>Revocar</strong> la autorización para comunicaciones de marketing en cualquier momento.</li>
+      <li><strong>Presentar quejas</strong> ante la Superintendencia de Industria y Comercio (SIC).</li>
+    </ul>
     <div class="callout">
-      <strong>Nota:</strong> Si eliminas las cookies de tu navegador, tu carrito se vaciará y tendrás que volver a aceptar las preferencias la próxima vez que visites el sitio.
+      Para ejercer cualquiera de estos derechos, escríbenos a <strong>escenabikeshop@gmail.com</strong> con asunto "Derechos Habeas Data". Responderemos en máximo <strong>10 días hábiles</strong>.
     </div>
   </div>
 
   <div class="section">
-    <h2>6. Cookies de Terceros</h2>
-    <p>Si embebemos contenido de redes sociales (Instagram, TikTok) o usamos herramientas de pago externas, esas plataformas pueden instalar sus propias cookies según sus políticas:</p>
+    <h2>7. Transferencia de Datos a Terceros</h2>
     <ul>
-      <li><a href="https://privacycenter.instagram.com" target="_blank" style="color:#0A0A0A;font-weight:600;">Política de privacidad de Instagram / Meta</a></li>
-      <li><a href="https://www.tiktok.com/legal/page/row/privacy-policy/es" target="_blank" style="color:#0A0A0A;font-weight:600;">Política de privacidad de TikTok</a></li>
+      <li><strong>Operadores logísticos</strong> (Interrapidísimo, Servientrega, Coordinadora) para gestionar tu envío.</li>
+      <li><strong>Plataformas de pago</strong> (Nequi, Daviplata, pasarelas) para procesar transacciones de forma segura.</li>
+      <li><strong>Software de facturación</strong> para la emisión de facturas electrónicas ante la DIAN.</li>
+      <li><strong>Autoridades competentes</strong> cuando la ley lo exija.</li>
     </ul>
-    <p>No tenemos control sobre las cookies de terceros.</p>
+    <p>No vendemos ni compartimos tus datos con terceros para fines publicitarios.</p>
   </div>
 
   <div class="section">
-    <h2>7. Actualizaciones</h2>
-    <p>Podemos actualizar esta política cuando agreguemos nuevas funcionalidades al sitio. La fecha de última actualización aparece al pie de este documento.</p>
+    <h2>8. Seguridad de la Información</h2>
+    <p>Adoptamos medidas técnicas y organizativas para proteger tus datos contra acceso no autorizado, pérdida o divulgación. Sin embargo, ningún sistema de transmisión por internet es 100% seguro. Si detectamos una brecha de seguridad que te afecte, te notificaremos a la brevedad.</p>
   </div>
 
   <div class="section">
-    <h2>8. Contacto</h2>
-    <p>Si tienes preguntas sobre el uso de cookies:</p>
+    <h2>9. Cookies</h2>
+    <p>Este sitio usa cookies técnicas para su funcionamiento. Consulta nuestra <a href="politica-cookies.html">Política de Cookies</a> para más detalles.</p>
+  </div>
+
+  <div class="section">
+    <h2>10. Cambios a Esta Política</h2>
+    <p>Podemos actualizar esta política periódicamente. Cuando lo hagamos, actualizaremos la fecha al pie de este documento. Si los cambios son relevantes, te lo notificaremos por los canales de contacto disponibles.</p>
+  </div>
+
+  <div class="section">
+    <h2>11. Contacto</h2>
     <ul>
-      <li>Correo: <a href="mailto:Skinnyboyseaker@gmail.com" style="color:#0A0A0A;font-weight:600;">Skinnyboyseaker@gmail.com</a></li>
-      <li>WhatsApp: <a href="https://wa.me/573138920027" style="color:#0A0A0A;font-weight:600;">+57 313 892 0027</a></li>
+      <li>Correo: <a href="mailto:escenabikeshop@gmail.com">escenabikeshop@gmail.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/573001234567">+57 300 123 4567</a></li>
     </ul>
   </div>
 
@@ -172,7 +192,7 @@
     <a href="devoluciones.html">Devoluciones</a>
     <a href="terminos.html">Términos</a>
   </p>
-  <p>&copy; 2026 Skinny Boy. Todos los derechos reservados.</p>
+  <p>&copy; 2026 ESCENA BIKE SHOP. Todos los derechos reservados.</p>
 </footer>
 
 </body>

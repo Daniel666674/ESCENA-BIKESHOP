@@ -1,0 +1,38 @@
+# ESCENA BIKE SHOP
+
+> Tienda underground de partes y componentes BMX en Colombia. Riders montando una tienda para riders: stems, bielas, rines y sillines originales de las mejores marcas, con pedidos por WhatsApp y envíos a todo el país.
+
+ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. Vende únicamente partes originales de marcas reconocidas de la escena BMX mundial y despacha a los 32 departamentos de Colombia. La compra se realiza por WhatsApp y el pago se coordina por Nequi, Daviplata, transferencia bancaria o efectivo.
+
+## Datos clave
+- Nombre: ESCENA BIKE SHOP
+- País: Colombia
+- Categoría: Tienda de partes y componentes de BMX (BikeStore)
+- Canal de venta: WhatsApp (pedido directo por chat)
+- Cobertura de envíos: todo Colombia (Interrapidísimo, Servientrega, Coordinadora)
+- Métodos de pago: Nequi, Daviplata, transferencia, efectivo
+- Idioma: Español (Colombia)
+
+## Categorías de producto
+- Stems (front load y top load) — Volume, Mutany, Fiend
+- Bielas / cranks (cromoly 48 spline) — Mutany, Fiend, Cult
+- Rines / rims (doble pared) — Éclat
+- Sillines / seats (pivotal) — Cult
+
+## Marcas
+Cult, Fiend, Éclat, Volume, Mutany.
+
+## Páginas
+- Inicio / tienda: https://escenabikeshop.com/
+- Envíos: https://escenabikeshop.com/envios.html
+- Devoluciones y cambios: https://escenabikeshop.com/devoluciones.html
+- Términos y condiciones: https://escenabikeshop.com/terminos.html
+- Política de privacidad: https://escenabikeshop.com/politica-privacidad.html
+- Política de cookies: https://escenabikeshop.com/politica-cookies.html
+
+## Cómo comprar
+1. El cliente elige los productos en el sitio.
+2. Toca "Pedir por WhatsApp" para generar el mensaje del pedido.
+3. Confirma referencias, medidas y dirección por chat.
+4. Coordina el pago y el envío.
+5. Recibe el número de guía para rastrear el pedido.
