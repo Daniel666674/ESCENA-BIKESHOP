@@ -6,7 +6,7 @@
 
   <!-- ============ SEO ============ -->
   <title>ESCENA BIKE SHOP — Partes y Componentes BMX | Colombia</title>
-  <meta name="description" content="ESCENA Bike Shop: tienda underground de partes y componentes BMX en Colombia. Stems, bielas, rines y sillines de Cult, Fiend, Éclat, Volume y Mutany. Pedidos por WhatsApp con envío a todo el país." />
+  <meta name="description" content="ESCENA Bike Shop: Tienda de partes y componentes BMX en Colombia. Stems, bielas, rines y sillines de Cult, Fiend, Éclat, Volume y Mutany. Pedidos por WhatsApp con envío a todo el país." />
   <meta name="keywords" content="BMX Colombia, partes BMX, componentes BMX, stem BMX, bielas BMX, rines BMX, sillin BMX, tienda BMX, Cult, Fiend, Eclat, Volume, Mutany, Escena Bike Shop" />
   <meta name="author" content="ESCENA BIKE SHOP" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -21,12 +21,12 @@
   <meta property="og:site_name" content="ESCENA BIKE SHOP" />
   <meta property="og:locale" content="es_CO" />
   <meta property="og:title" content="ESCENA BIKE SHOP — Partes y Componentes BMX" />
-  <meta property="og:description" content="Tienda underground de partes BMX en Colombia. Stems, bielas, rines y sillines de las mejores marcas. Pedidos por WhatsApp." />
+  <meta property="og:description" content="Tienda de partes BMX en Colombia. Stems, bielas, rines y sillines de las mejores marcas. Pedidos por WhatsApp." />
   <meta property="og:url" content="https://escenabikeshop.com/" />
   <meta property="og:image" content="https://escenabikeshop.com/assets/img/escena-logo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ESCENA BIKE SHOP — Partes y Componentes BMX" />
-  <meta name="twitter:description" content="Tienda underground de partes BMX en Colombia. Pedidos por WhatsApp." />
+  <meta name="twitter:description" content="Tienda de partes BMX en Colombia. Pedidos por WhatsApp." />
   <meta name="twitter:image" content="https://escenabikeshop.com/assets/img/escena-logo.jpg" />
 
   <!-- ============ Icons / Manifest ============ -->
@@ -46,7 +46,7 @@
     "@type": "BikeStore",
     "@id": "https://escenabikeshop.com/#store",
     "name": "ESCENA BIKE SHOP",
-    "description": "Tienda underground de partes y componentes BMX en Colombia. Distribuidor de stems, bielas, rines, sillines y accesorios de las marcas Cult, Fiend, Éclat, Volume y Mutany.",
+    "description": "Tienda de partes y componentes BMX en Colombia. Distribuidor de stems, bielas, rines, sillines y accesorios de las marcas Cult, Fiend, Éclat, Volume y Mutany.",
     "url": "https://escenabikeshop.com/",
     "logo": "https://escenabikeshop.com/assets/img/escena-logo.jpg",
     "image": "https://escenabikeshop.com/assets/img/escena-logo.jpg",
@@ -149,14 +149,16 @@
     }
 
     /* ============ HERO ============ */
-    .hero { position: relative; min-height: 88vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: var(--ink); }
-    .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .45; }
-    .hero .overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.4) 0%, rgba(10,10,10,.75) 100%); }
-    .hero .inner { position: relative; z-index: 2; padding: 2rem 1.5rem; max-width: 900px; }
-    .hero .kicker { color: var(--gold); font-size: .78rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: 1.2rem; }
-    .hero h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(3rem, 11vw, 7rem); line-height: .92; letter-spacing: .02em; }
+    .hero { position: relative; min-height: 74vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: var(--ink); }
+    @media (max-width: 860px) { .hero { min-height: 62svh; } .hero video { transform: scale(1.7); } }
+    .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; opacity: .62; }
+    .hero .overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.35) 0%, rgba(10,10,10,.3) 45%, rgba(10,10,10,.72) 100%); }
+    .hero .inner { position: relative; z-index: 2; padding: 2.5rem 1.5rem; max-width: 900px; }
+    .hero .kicker { color: var(--gold); font-size: .76rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .9rem; }
+    .hero h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(3.4rem, 15vw, 8rem); line-height: .9; letter-spacing: .03em; text-shadow: 0 2px 30px rgba(0,0,0,.5); }
     .hero h1 .gold { color: var(--gold); }
-    .hero p.lead { color: rgba(255,255,255,.75); font-size: clamp(.95rem, 2.4vw, 1.15rem); max-width: 560px; margin: 1.4rem auto 2rem; font-weight: 300; }
+    .hero .tagline { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1.3rem, 4.5vw, 2rem); letter-spacing: .08em; margin-top: .6rem; }
+    .hero p.lead { color: rgba(255,255,255,.78); font-size: clamp(.95rem, 2.4vw, 1.12rem); max-width: 540px; margin: 1.2rem auto 1.8rem; font-weight: 300; }
     .btn { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; text-decoration: none; border-radius: 4px; padding: .95rem 1.8rem; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; transition: transform .15s, opacity .2s; }
     .btn:hover { transform: translateY(-2px); }
     .btn-gold { background: var(--gold); color: var(--ink); }
@@ -287,8 +289,9 @@
   </video>
   <div class="overlay"></div>
   <div class="inner">
-    <p class="kicker">Underground BMX · Colombia</p>
-    <h1>PARTES QUE<br /><span class="gold">AGUANTAN</span> CALLE</h1>
+    <p class="kicker">BMX Shop · Colombia</p>
+    <h1>ESCENA <span class="gold">BMX</span></h1>
+    <p class="tagline">Partes que aguantan calle</p>
     <p class="lead">Stems, bielas, rines y sillines originales de las marcas que mueven la escena. Directo de la tienda a tu bici — pedís por WhatsApp, montás y ruedas.</p>
     <div class="btns">
       <a href="#tienda" class="btn btn-gold">Ver la tienda</a>
@@ -407,7 +410,7 @@
     <div class="brand-col">
       <img src="assets/img/escena-logo.jpg" alt="Logo ESCENA Bike Shop" width="54" />
       <div class="name">ESCENA BIKE SHOP</div>
-      <p>Tienda underground de partes y componentes BMX en Colombia. Riders montando una tienda para riders.</p>
+      <p>Tienda de partes y componentes BMX en Colombia. Riders montando una tienda para riders.</p>
     </div>
     <div>
       <h4>Tienda</h4>
