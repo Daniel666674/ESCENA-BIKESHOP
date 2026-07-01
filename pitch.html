@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acuerdo de Confidencialidad — Skinny Boy × Daniel Acosta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: #fff; color: #0A0A0A; font-family: 'Inter', Georgia, serif; line-height: 1.75; }
+
+    /* Print */
+    @media print {
+      .no-print { display: none !important; }
+      body { font-size: 11pt; }
+      .page { padding: 0; max-width: 100%; }
+      .doc { box-shadow: none; border: none; padding: 2cm; }
+    }
+
+    /* Screen nav */
+    .no-print.top-bar { background: #0A0A0A; padding: .75rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .no-print.top-bar .logo { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: .1em; text-decoration: none; }
+    .no-print.top-bar .actions { display: flex; gap: .75rem; }
+    .btn { font-size: .75rem; font-weight: 700; letter-spacing: .06em; padding: .45rem 1.1rem; border-radius: 4px; border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: .4rem; transition: background .2s; }
+    .btn-gold { background: #E8C84A; color: #0A0A0A; }
+    .btn-gold:hover { background: #d4b43c; }
+    .btn-outline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.2); }
+    .btn-outline:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+
+    /* Document */
+    .page { padding: 2rem 1rem 4rem; }
+    .doc { max-width: 800px; margin: 0 auto; background: #fff; border: 1px solid #ddd; padding: 3rem 3.5rem; }
+    @media(max-width:600px){ .doc { padding: 2rem 1.5rem; } }
+
+    /* Header */
+    .doc-header { border-bottom: 3px solid #0A0A0A; padding-bottom: 1.5rem; margin-bottom: 2rem; }
+    .doc-header .brand { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: .12em; color: #888; margin-bottom: .5rem; }
+    .doc-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.6rem, 4vw, 2.4rem); letter-spacing: .06em; line-height: 1.1; margin-bottom: .75rem; }
+    .doc-meta { display: flex; flex-wrap: wrap; gap: .5rem 2rem; font-size: .8rem; color: #555; }
+    .doc-meta span strong { color: #0A0A0A; }
+
+    /* Gold rule */
+    .gold-rule { height: 3px; background: linear-gradient(90deg, #E8C84A, #c9a93a); border: none; margin: 1.75rem 0; border-radius: 2px; }
+
+    /* Sections */
+    .clause { margin-bottom: 1.75rem; }
+    .clause h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: .06em; margin-bottom: .5rem; display: flex; align-items: baseline; gap: .6rem; }
+    .clause h2 .num { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: #0A0A0A; color: #E8C84A; font-size: .75rem; border-radius: 3px; flex-shrink: 0; }
+    .clause p { font-size: .88rem; color: #222; margin-bottom: .6rem; }
+    .clause ul { font-size: .88rem; color: #222; padding-left: 1.4rem; margin-bottom: .6rem; }
+    .clause ul li { margin-bottom: .35rem; }
+    .highlight { background: #fffdf0; border-left: 3px solid #E8C84A; padding: .8rem 1rem; font-size: .85rem; color: #333; margin: .8rem 0; border-radius: 0 4px 4px 0; }
+
+    /* Parties box */
+    .parties { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.25rem 0; }
+    @media(max-width:500px){ .parties { grid-template-columns: 1fr; } }
+    .party { border: 1px solid #ddd; border-radius: 6px; padding: 1rem 1.2rem; }
+    .party .role { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #888; margin-bottom: .4rem; }
+    .party .name { font-size: .95rem; font-weight: 700; margin-bottom: .3rem; }
+    .party .detail { font-size: .8rem; color: #555; line-height: 1.5; }
+
+    /* Signature section */
+    .sig-section { margin-top: 2.5rem; }
+    .sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem; }
+    @media(max-width:500px){ .sig-grid { grid-template-columns: 1fr; } }
+    .sig-block { }
+    .sig-block .sig-line { border-bottom: 1.5px solid #0A0A0A; height: 48px; margin-bottom: .5rem; }
+    .sig-block .sig-label { font-size: .75rem; font-weight: 600; letter-spacing: .04em; color: #333; margin-bottom: .15rem; }
+    .sig-block .sig-sub { font-size: .72rem; color: #888; }
+    .sig-date { margin-top: 1rem; }
+    .sig-date .sig-line { border-bottom: 1.5px solid #0A0A0A; height: 36px; max-width: 220px; margin-bottom: .4rem; }
+
+    /* Footer */
+    .doc-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #eee; font-size: .72rem; color: #999; text-align: center; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+<nav class="no-print top-bar">
+  <a href="index.html" class="logo">SKINNY BOY</a>
+  <div class="actions">
+    <a href="index.html" class="btn btn-outline">← Volver</a>
+    <button class="btn btn-gold" onclick="window.print()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      Imprimir / PDF
+    </button>
+  </div>
+</nav>
+
+<div class="page">
+<div class="doc">
+
+  <div class="doc-header">
+    <div class="brand">ACUERDO LEGAL · COLOMBIA · 2026</div>
+    <h1 class="doc-title">Acuerdo de<br/>Confidencialidad (NDA)</h1>
+    <div class="doc-meta">
+      <span><strong>Tipo:</strong> Acuerdo de No Divulgación Unilateral</span>
+      <span><strong>Ley aplicable:</strong> República de Colombia</span>
+      <span><strong>Fecha:</strong> _________________ de 2026</span>
+    </div>
+  </div>
+
+  <hr class="gold-rule" />
+
+  <div class="clause">
+    <h2><span class="num">1</span> Las Partes</h2>
+    <p>El presente Acuerdo de Confidencialidad y No Divulgación ("Acuerdo") se celebra entre:</p>
+    <div class="parties">
+      <div class="party">
+        <div class="role">Proveedor (Divulgante)</div>
+        <div class="name">Daniel Acosta</div>
+        <div class="detail">
+          daniel.f.acosta96@gmail.com<br/>
+          +57 313 666 2777<br/>
+          Colombia
+        </div>
+      </div>
+      <div class="party">
+        <div class="role">Cliente (Receptor)</div>
+        <div class="name">________________________________</div>
+        <div class="detail">
+          Nombre completo o razón social<br/>
+          CC / NIT: ______________________<br/>
+          Correo: ________________________<br/>
+          Tel: ___________________________
+        </div>
+      </div>
+    </div>
+    <p>En adelante referidos individualmente como "la Parte" y colectivamente como "las Partes".</p>
+  </div>
+
+  <div class="clause">
+    <h2><span class="num">2</span> Propósito</h2>
+    <p>Las Partes han sostenido o tienen la intención de sostener conversaciones relacionadas con el <strong>desarrollo de un sitio web, herramientas digitales y estrategia de comercio electrónico</strong> para la marca del Cliente.</p>
+    <p>Con este fin, el Proveedor puede revelar al Cliente información confidencial, incluyendo pero no limitado a: mockups, diseños, propuestas comerciales, estrategias, código fuente, arquitecturas de sistema, integraciones de software y cualquier otro material creativo o técnico de su autoría.</p>
+    <p>Este Acuerdo establece los términos bajo los cuales dicha información confidencial debe ser protegida y manejada.</p>
+  </div>
+
+  <div class="clause">
+    <h2><span class="num">3</span> Definición de Información Confidencial</h2>
+    <p>Para efectos de este Acuerdo, "Información Confidencial" incluye toda la información, oral o escrita, que el Proveedor comparta con el Cliente, en particular:</p>
+    <ul>
+      <li>Diseños, mockups, prototipos y maquetas de sitios web o aplicaciones.</li>
+      <li>Propuestas comerciales, cotizaciones y estrategias de negocio.</li>
+      <li>Código fuente, arquitecturas técnicas e integraciones de software.</li>
+      <li>Conceptos creativos, identidad visual y propuestas de marca.</li>
+      <li>Cualquier material o documento marcado como "CONFIDENCIAL" o que por su naturaleza deba entenderse como tal.</li>
+    </ul>
+  </div>
+
+  <div class="clause">
+    <h2><span class="num">4</span> Obligaciones del Cliente (Receptor)</h2>
+    <p>El Cliente se compromete a:</p>
+    <ul>
+      <li><strong>No divulgar</strong> la Información Confidencial a ningún tercero sin consentimiento previo y por escrito del Proveedor.</li>
+      <li><strong>No compartir</strong> mockups, diseños, código o estrategias con desarrolladores, agencias o personas externas, incluyendo al actual proveedor de servicios digitales del Cliente.</li>
+      <li><strong>No reproducir</strong> ni utilizar la Información Confidencial para un propósito distinto al de evaluar la propuesta del Proveedor.</li>
+      <li><strong>No encargar a terceros</strong> la replicación, adaptación o copia de los diseños, conceptos o soluciones técnicas reveladas.</li>
+      <li>Proteger la Información Confidencial con el mismo nivel de cuidado que protege su propia información confidencial, y en ningún caso con un nivel inferior al razonablemente diligente.</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>Punto clave:</strong> El Cliente no podrá utilizar la Información Confidencial para solicitar a cualquier tercero (incluyendo desarrolladores, agencias o freelancers) la creación de trabajos sustancialmente similares a los revelados por el Proveedor, sin haber contratado previamente los servicios del Proveedor.
+    </div>
+  </div>
+
+  <div class="clause">
+    <h2><span class="num">5</span> Excepciones</h2>
+    <p>Las obligaciones de confidencialidad no aplican a información que:</p>
+    <ul>
+      <li>Sea o se vuelva de dominio público sin acción u omisión del Cliente.</li>
+      <li>Haya sido conocida por el Cliente antes de la revelación por el Proveedor, con prueba documental de ello.</li>
+      <li>Sea requerida por orden judicial o autoridad competente, caso en el cual el Cliente deberá notificar al Proveedor con la mayor brevedad posible.</li>
+    </ul>
+  </div>
+
+  <div class="clause">
+    <h2><span class="num">6</span> Propiedad Intelectual</h2>
+    <p>Toda la Información Confidencial revelada, incluyendo diseños, código, conceptos y propuestas, permanece como <strong>propiedad intelectual exclusiva del Proveedor</strong> hasta tanto no se perfeccione un contrato de prestación de servicios y se acuerde expresamente la transferencia de derechos.</p>
+    <p>La revisión del material confidencial por parte del Cliente no le otorga ningún derecho de propiedad intelectual, licencia de uso ni autorización para reproducirlo o adaptarlo.</p>
+    <p>La propiedad intelectual de los trabajos del Proveedor está protegida por la <strong>Ley 23 de 1982</strong> sobre Derechos de Autor y la <strong>Decisión Andina 351 de 1993</strong>.</p>
+  </div>
+
+  <div class="clause">
+    <h2><span class="num">7</span> Vigencia</h2>
+    <p>Este Acuerdo entra en vigor en la fecha de su firma y permanece vigente por un período de <strong>dos (2) años</strong>, o hasta que las Partes celebren un contrato de servicios que lo reemplace o modifique, lo que ocurra primero.</p>
+    <p>Las obligaciones de confidencialidad respecto a la Información Confidencial revelada durante la vigencia del Acuerdo subsisten por <strong>dos (2) años adicionales</strong> tras su terminación.</p>
+  </div>
+
+  <div class="clause">
+    <h2><span class="num">8</span> Consecuencias del Incumplimiento</h2>
+    <p>En caso de incumplimiento de las obligaciones de confidencialidad, el Proveedor podrá:</p>
+    <ul>
+      <li>Exigir el cese inmediato del uso o divulgación no autorizados.</li>
+      <li>Reclamar indemnización por los daños y perjuicios causados, incluyendo lucro cesante.</li>
+      <li>Iniciar las acciones legales pertinentes ante la Superintendencia de Industria y Comercio (SIC) o ante los jueces competentes de Colombia.</li>
+    </ul>
+    <p>Las Partes acuerdan que el incumplimiento de este Acuerdo causaría daños irreparables al Proveedor, para los cuales las medidas económicas podrían ser insuficientes, por lo que el Proveedor tendrá derecho a solicitar medidas cautelares ante los jueces competentes sin necesidad de prestar caución.</p>
+  </div>
+
+  <div class="clause">
+    <h2><span class="num">9</span> Ley Aplicable y Resolución de Conflictos</h2>
+    <p>Este Acuerdo se rige por las leyes de la <strong>República de Colombia</strong>. Cualquier controversia que surja de o en relación con este Acuerdo se resolverá, en primera instancia, mediante negociación directa entre las Partes durante un período de <strong>10 días hábiles</strong>.</p>
+    <p>Si no se alcanza acuerdo, las controversias serán resueltas por los jueces ordinarios competentes de Colombia, renunciando las Partes a cualquier otro fuero que pudiera corresponderles.</p>
+  </div>
+
+  <div class="clause">
+    <h2><span class="num">10</span> Generalidades</h2>
+    <ul>
+      <li><strong>Integralidad:</strong> Este Acuerdo constituye el acuerdo completo entre las Partes respecto a su objeto y reemplaza cualquier entendimiento previo, oral o escrito.</li>
+      <li><strong>Modificaciones:</strong> Cualquier modificación debe hacerse por escrito y firmada por ambas Partes.</li>
+      <li><strong>Nulidad parcial:</strong> Si alguna disposición de este Acuerdo es declarada nula o inaplicable, las demás disposiciones permanecerán en plena vigencia.</li>
+      <li><strong>Comunicaciones electrónicas:</strong> Los intercambios de mensajes por WhatsApp, correo electrónico u otros medios digitales en que se mencione este Acuerdo o se comparta Información Confidencial tendrán validez legal conforme a la Ley 527 de 1999.</li>
+    </ul>
+  </div>
+
+  <hr class="gold-rule" />
+
+  <div class="sig-section">
+    <p style="font-size:.88rem;color:#333;margin-bottom:.5rem;">En constancia de lo anterior, las Partes suscriben el presente Acuerdo en la ciudad de _________________, el día _____ del mes de _________________ de 2026.</p>
+
+    <div class="sig-grid">
+      <div class="sig-block">
+        <div class="sig-line"></div>
+        <div class="sig-label">Daniel Acosta</div>
+        <div class="sig-sub">Proveedor · CC ___________________</div>
+        <div class="sig-sub">daniel.f.acosta96@gmail.com</div>
+      </div>
+      <div class="sig-block">
+        <div class="sig-line"></div>
+        <div class="sig-label">________________________________</div>
+        <div class="sig-sub">Cliente · CC / NIT _______________</div>
+        <div class="sig-sub">________________________________</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <p>Acuerdo de Confidencialidad · Celebrado al amparo de la Ley 23 de 1982 (Derechos de Autor), la Decisión Andina 351 de 1993 y la Ley 527 de 1999 (Comercio Electrónico) de la República de Colombia.</p>
+    <p style="margin-top:.4rem;">Este documento no requiere notaría ni registro para tener validez legal entre las partes.</p>
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>

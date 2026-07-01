@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Envíos — Skinny Boy</title>
+  <meta name="description" content="Todo lo que necesitas saber sobre envíos, tiempos de entrega y seguimiento de tu pedido Skinny Boy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: #fff; color: #0A0A0A; font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; }
+
+    .top-bar { background: #0A0A0A; padding: 0 1.5rem; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .top-bar .logo { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.1em; text-decoration: none; }
+    .top-bar .back { color: rgba(255,255,255,0.5); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+    .top-bar .back:hover { color: #E8C84A; }
+
+    .hero { background: #0A0A0A; padding: 4rem 1.5rem 3rem; text-align: center; }
+    .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.5rem); color: #fff; letter-spacing: 0.06em; margin-bottom: .5rem; }
+    .hero .sub { color: rgba(255,255,255,0.4); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .section { margin-bottom: 2.5rem; }
+    .section h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.06em; margin-bottom: .75rem; color: #0A0A0A; border-left: 3px solid #E8C84A; padding-left: .75rem; }
+    .section p { font-size: .9rem; color: #333; margin-bottom: .7rem; }
+    .section ul { font-size: .9rem; color: #333; padding-left: 1.4rem; margin-bottom: .7rem; }
+    .section ul li { margin-bottom: .35rem; }
+    .callout { background: #f9f9f7; border: 1px solid #e8e8e6; border-radius: 8px; padding: 1.2rem 1.4rem; font-size: .85rem; color: #444; margin: 1rem 0; }
+    .callout.gold { border-color: #E8C84A; background: #fffdf0; }
+
+    /* Timeline */
+    .timeline { list-style: none; padding: 0; margin: 1rem 0; }
+    .timeline li { display: flex; gap: 1rem; padding-bottom: 1.25rem; position: relative; }
+    .timeline li::before { content: ''; position: absolute; left: 14px; top: 28px; bottom: 0; width: 2px; background: #e8e8e6; }
+    .timeline li:last-child::before { display: none; }
+    .tl-dot { width: 30px; height: 30px; border-radius: 50%; background: #0A0A0A; color: #E8C84A; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: .9rem; flex-shrink: 0; }
+    .tl-body h4 { font-size: .9rem; font-weight: 600; margin-bottom: .2rem; }
+    .tl-body p { font-size: .82rem; color: #555; margin: 0; }
+
+    /* Price grid */
+    .ship-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin: 1rem 0; }
+    @media(max-width: 480px) { .ship-grid { grid-template-columns: 1fr; } }
+    .ship-card { border: 1px solid #e8e8e6; border-radius: 8px; padding: 1rem 1.2rem; }
+    .ship-card .city { font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #888; margin-bottom: .3rem; }
+    .ship-card .time { font-size: .95rem; font-weight: 600; color: #0A0A0A; }
+    .ship-card .cost { font-size: .82rem; color: #555; }
+
+    .updated { font-size: .78rem; color: #999; text-align: center; margin-top: 2rem; }
+
+    footer { background: #0A0A0A; color: rgba(255,255,255,0.35); font-size: .8rem; padding: 2rem 1.5rem; text-align: center; }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 .5rem; }
+    footer a:hover { color: #E8C84A; }
+  </style>
+</head>
+<body>
+
+<nav class="top-bar">
+  <a href="index.html" class="logo">SKINNY BOY</a>
+  <a href="index.html" class="back">← Volver a la tienda</a>
+</nav>
+
+<div class="hero">
+  <h1>Política de Envíos</h1>
+  <p class="sub">Tiempos, costos y seguimiento de tu pedido</p>
+</div>
+
+<div class="container">
+
+  <div class="callout gold">
+    <strong>Importante:</strong> Cada par de Skinny Boy es hecho a mano en Colombia. Esto significa que tu pedido requiere un tiempo de producción antes de ser despachado. Queremos que llegue perfecto — eso toma tiempo y cuidado.
+  </div>
+
+  <div class="section">
+    <h2>1. Proceso de tu Pedido</h2>
+    <ul class="timeline">
+      <li>
+        <div class="tl-dot">1</div>
+        <div class="tl-body">
+          <h4>Confirmación del pedido</h4>
+          <p>Recibes confirmación inmediata por WhatsApp con los detalles de tu orden.</p>
+        </div>
+      </li>
+      <li>
+        <div class="tl-dot">2</div>
+        <div class="tl-body">
+          <h4>Producción artesanal — 3 a 5 días hábiles</h4>
+          <p>Elaboramos tu par a mano. Para pedidos custom o tallas especiales puede extenderse hasta 7 días hábiles.</p>
+        </div>
+      </li>
+      <li>
+        <div class="tl-dot">3</div>
+        <div class="tl-body">
+          <h4>Control de calidad y empaque</h4>
+          <p>Revisamos cada par antes de empacar. Tu pedido va en caja protegida con empaque premium.</p>
+        </div>
+      </li>
+      <li>
+        <div class="tl-dot">4</div>
+        <div class="tl-body">
+          <h4>Despacho y número de guía</h4>
+          <p>Te enviamos el número de guía por WhatsApp el día del despacho.</p>
+        </div>
+      </li>
+      <li>
+        <div class="tl-dot">5</div>
+        <div class="tl-body">
+          <h4>Entrega — 2 a 5 días hábiles adicionales</h4>
+          <p>Dependiendo de tu ciudad y la transportadora.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>2. Tiempos y Costos de Envío</h2>
+    <p>Realizamos envíos a todo el territorio colombiano a través de transportadoras nacionales de confianza.</p>
+
+    <div class="ship-grid">
+      <div class="ship-card">
+        <div class="city">Bogotá D.C.</div>
+        <div class="time">2 – 3 días hábiles</div>
+        <div class="cost">Costo según peso</div>
+      </div>
+      <div class="ship-card">
+        <div class="city">Medellín / Cali</div>
+        <div class="time">2 – 3 días hábiles</div>
+        <div class="cost">Costo según peso</div>
+      </div>
+      <div class="ship-card">
+        <div class="city">Barranquilla / Cartagena</div>
+        <div class="time">3 – 4 días hábiles</div>
+        <div class="cost">Costo según peso</div>
+      </div>
+      <div class="ship-card">
+        <div class="city">Otras ciudades</div>
+        <div class="time">3 – 5 días hábiles</div>
+        <div class="cost">Costo según peso y destino</div>
+      </div>
+      <div class="ship-card" style="border-color:#E8C84A;background:#fffdf0;">
+        <div class="city">Municipios apartados</div>
+        <div class="time">Hasta 8 días hábiles</div>
+        <div class="cost">Consultar por WhatsApp</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      El costo exacto del envío se calcula y te lo confirmamos antes de hacer efectivo el pago. Escríbenos por WhatsApp con tu dirección para una cotización inmediata.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>3. Seguimiento del Pedido</h2>
+    <p>Una vez despachado tu pedido:</p>
+    <ul>
+      <li>Recibirás el <strong>número de guía</strong> por WhatsApp.</li>
+      <li>Podrás rastrear tu paquete directamente en el sitio de la transportadora con ese número.</li>
+      <li>También puedes escribirnos a <a href="https://wa.me/573138920027" style="color:#0A0A0A;font-weight:600;">+57 313 892 0027</a> para consultar el estado de tu envío.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>4. Dirección de Entrega</h2>
+    <p>Es tu responsabilidad proporcionar una dirección completa y correcta al momento de realizar el pedido, incluyendo:</p>
+    <ul>
+      <li>Dirección completa (calle, número, apartamento o casa)</li>
+      <li>Barrio / vereda</li>
+      <li>Ciudad y departamento</li>
+      <li>Nombre completo del receptor</li>
+      <li>Teléfono de contacto para la transportadora</li>
+    </ul>
+    <p>Skinny Boy no se hace responsable por retrasos o pérdidas causados por dirección incorrecta o incompleta.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Pedidos No Entregados</h2>
+    <p>Si la transportadora intenta la entrega sin éxito (nadie en la dirección, dirección incorrecta, etc.):</p>
+    <ul>
+      <li>Generalmente realizan hasta 2 intentos de entrega.</li>
+      <li>Después, el paquete queda en la bodega de la transportadora por un período determinado.</li>
+      <li>Si el paquete regresa a nuestras instalaciones por este motivo, se generará un costo adicional de reenvío que debe cubrirse antes del segundo despacho.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>6. Envíos Internacionales</h2>
+    <p>Actualmente <strong>solo realizamos envíos dentro de Colombia</strong>. Para solicitudes internacionales, contáctanos directamente por WhatsApp — evaluamos cada caso de forma individual.</p>
+  </div>
+
+  <div class="section">
+    <h2>7. Daños en el Transporte</h2>
+    <p>Si tu pedido llega con daños visibles en el empaque o en el producto:</p>
+    <ul>
+      <li>Toma fotos del paquete y del producto <strong>antes de abrirlo</strong>.</li>
+      <li>Escríbenos de inmediato por WhatsApp con las fotos.</li>
+      <li>Gestionamos el reclamo ante la transportadora y buscamos la mejor solución para ti.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>8. Contacto</h2>
+    <p>Para cualquier duda sobre tu envío:</p>
+    <ul>
+      <li>WhatsApp: <a href="https://wa.me/573138920027" style="color:#0A0A0A;font-weight:600;">+57 313 892 0027</a></li>
+      <li>Correo: <a href="mailto:Skinnyboyseaker@gmail.com" style="color:#0A0A0A;font-weight:600;">Skinnyboyseaker@gmail.com</a></li>
+    </ul>
+  </div>
+
+  <p class="updated">Última actualización: junio de 2026</p>
+
+</div>
+
+<footer>
+  <p style="margin-bottom:.75rem;">
+    <a href="politica-privacidad.html">Privacidad</a>
+    <a href="politica-cookies.html">Cookies</a>
+    <a href="envios.html">Envíos</a>
+    <a href="devoluciones.html">Devoluciones</a>
+    <a href="terminos.html">Términos</a>
+  </p>
+  <p>&copy; 2026 Skinny Boy. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

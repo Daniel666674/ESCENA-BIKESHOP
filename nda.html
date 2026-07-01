@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Skinny Boy — Exclusividad y Calidad | Sneakers Hechos a Mano en Colombia</title>
+  <meta name="description" content="Skinny Boy — Sneakers exclusivos hechos 100% a mano en Colombia. Pensar es gratis." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { display: ['Bebas Neue','Impact','sans-serif'] },
+          colors: {
+            sb: { black:'#0A0A0A', white:'#FFFFFF', offwhite:'#F5F5F3', gray:'#E8E8E6', muted:'#888888', dark:'#1A1A1A' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { background: #fff; color: #0A0A0A; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+    img { max-width: 100%; display: block; }
+
+    .reveal { opacity:0; transform:translateY(32px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-left { opacity:0; transform:translateX(-32px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal-left.visible { opacity:1; transform:translateX(0); }
+    .reveal-right { opacity:0; transform:translateX(32px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal-right.visible { opacity:1; transform:translateX(0); }
+    .stagger>* { opacity:0; transform:translateY(24px); transition:opacity .5s ease,transform .5s ease; }
+    .stagger.visible>*:nth-child(1){opacity:1;transform:translateY(0);transition-delay:.05s}
+    .stagger.visible>*:nth-child(2){opacity:1;transform:translateY(0);transition-delay:.12s}
+    .stagger.visible>*:nth-child(3){opacity:1;transform:translateY(0);transition-delay:.19s}
+    .stagger.visible>*:nth-child(4){opacity:1;transform:translateY(0);transition-delay:.26s}
+    .stagger.visible>*:nth-child(5){opacity:1;transform:translateY(0);transition-delay:.33s}
+    .stagger.visible>*:nth-child(6){opacity:1;transform:translateY(0);transition-delay:.40s}
+    .stagger.visible>*:nth-child(7){opacity:1;transform:translateY(0);transition-delay:.47s}
+    .stagger.visible>*:nth-child(8){opacity:1;transform:translateY(0);transition-delay:.54s}
+
+    .marquee-track { display:flex; width:max-content; animation:marquee 32s linear infinite; }
+    @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    @keyframes fadeUp { 0%{opacity:0;transform:translateY(20px)} 100%{opacity:1;transform:translateY(0)} }
+    @keyframes slideInRight { 0%{transform:translateX(100%)} 100%{transform:translateX(0)} }
+
+    .product-card .quick-view-btn { opacity:0; transform:translateY(8px); transition:opacity .25s,transform .25s; }
+    .product-card:hover .quick-view-btn { opacity:1; transform:translateY(0); }
+    .product-card .product-img { transition:transform .5s ease; }
+    .product-card:hover .product-img { transform:scale(1.04); }
+    .collection-card .col-img { transition:transform .6s ease; }
+    .collection-card:hover .col-img { transform:scale(1.06); }
+    .gallery-item:hover .gallery-overlay { opacity:1; }
+    .gallery-overlay { transition:opacity .3s; }
+
+    .modal-backdrop { backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); }
+    .modal-content { animation:fadeUp .3s ease forwards; }
+
+    /* Cart drawer */
+    .cart-drawer { position:fixed; inset-y:0; right:0; width:100%; max-width:420px; background:#fff; z-index:60; transform:translateX(100%); transition:transform .4s cubic-bezier(.4,0,.2,1); display:flex; flex-direction:column; box-shadow:-4px 0 40px rgba(0,0,0,0.12); }
+    .cart-drawer.open { transform:translateX(0); }
+    .cart-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:59; opacity:0; pointer-events:none; transition:opacity .4s; }
+    .cart-overlay.open { opacity:1; pointer-events:all; }
+
+    /* Checkout modal */
+    .checkout-modal { position:fixed; inset:0; z-index:70; display:flex; align-items:flex-end; justify-content:center; padding:0; }
+    @media(min-width:640px){ .checkout-modal { align-items:center; padding:1rem; } }
+    .checkout-panel { background:#fff; width:100%; max-width:560px; max-height:90svh; overflow-y:auto; animation:fadeUp .3s ease forwards; }
+
+    .dot { width:8px; height:8px; border-radius:50%; background:#D0D0D0; transition:background .3s,width .3s; cursor:pointer; }
+    .dot.active { background:#0A0A0A; width:24px; border-radius:4px; }
+    .toast { transform:translateX(110%); transition:transform .4s ease; }
+    .toast.show { transform:translateX(0); }
+
+    /* Cookie banner */
+    #cookie-banner { position:fixed; bottom:0; left:0; right:0; z-index:80; background:#0A0A0A; border-top:1px solid rgba(255,255,255,0.1); padding:1rem 1.25rem; display:flex; flex-direction:column; gap:.75rem; transform:translateY(100%); transition:transform .4s ease; }
+    #cookie-banner.visible { transform:translateY(0); }
+    @media(min-width:640px){ #cookie-banner { flex-direction:row; align-items:center; justify-content:space-between; padding:1rem 2rem; } }
+    #cookie-banner p { font-size:.78rem; color:rgba(255,255,255,0.5); line-height:1.5; }
+    #cookie-banner p a { color:rgba(255,255,255,0.75); text-decoration:underline; }
+    #cookie-banner p a:hover { color:#E8C84A; }
+    .cookie-btns { display:flex; gap:.6rem; flex-shrink:0; }
+    .cookie-btn { font-size:.75rem; font-weight:600; letter-spacing:.06em; padding:.45rem 1rem; border-radius:4px; border:none; cursor:pointer; transition:background .2s; white-space:nowrap; }
+    .cookie-btn-accept { background:#E8C84A; color:#0A0A0A; }
+    .cookie-btn-accept:hover { background:#d4b43c; }
+    .cookie-btn-reject { background:transparent; color:rgba(255,255,255,0.4); border:1px solid rgba(255,255,255,0.15); }
+    .cookie-btn-reject:hover { color:#fff; border-color:rgba(255,255,255,0.4); }
+    .nav-link { position:relative; }
+    .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:#0A0A0A; transition:width .3s; }
+    .nav-link:hover::after { width:100%; }
+    .mobile-menu { transform:translateX(100%); transition:transform .4s cubic-bezier(.4,0,.2,1); }
+    .mobile-menu.open { transform:translateX(0); }
+    .size-btn { border:1px solid #D0D0D0; padding:8px 14px; cursor:pointer; transition:all .2s; font-size:13px; background:transparent; color:#0A0A0A; }
+    .size-btn:hover,.size-btn.selected { background:#0A0A0A; color:#fff; border-color:#0A0A0A; }
+    ::-webkit-scrollbar { width:4px; }
+    ::-webkit-scrollbar-track { background:#F5F5F3; }
+    ::-webkit-scrollbar-thumb { background:#CCC; border-radius:2px; }
+
+    /* Floating WA button */
+    .wa-float { position:fixed; bottom:24px; right:24px; z-index:55; width:56px; height:56px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(37,211,102,0.5); transition:transform .2s,box-shadow .2s; cursor:pointer; }
+    .wa-float:hover { transform:scale(1.1); box-shadow:0 6px 28px rgba(37,211,102,0.6); }
+
+    @media (max-width:640px) {
+      .hero-title { font-size:clamp(3rem,18vw,5.5rem) !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="bg-sb-black text-white text-xs font-medium tracking-widest overflow-hidden" style="height:36px;display:flex;align-items:center;">
+    <div class="marquee-track select-none whitespace-nowrap">
+      <span class="px-8">✦ ENVÍOS A TODO COLOMBIA E INTERNACIONALES</span>
+      <span class="px-8">✦ 100% HECHO A MANO 🇨🇴</span>
+      <span class="px-8">✦ EXCLUSIVIDAD Y CALIDAD</span>
+      <span class="px-8">✦ PENSAR ES GRATIS</span>
+      <span class="px-8">✦ DROPS EXCLUSIVOS LIMITADOS</span>
+      <span class="px-8">✦ ENVÍOS A TODO COLOMBIA E INTERNACIONALES</span>
+      <span class="px-8">✦ 100% HECHO A MANO 🇨🇴</span>
+      <span class="px-8">✦ EXCLUSIVIDAD Y CALIDAD</span>
+      <span class="px-8">✦ PENSAR ES GRATIS</span>
+      <span class="px-8">✦ DROPS EXCLUSIVOS LIMITADOS</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="sticky top-0 z-50 bg-white border-b border-sb-gray transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex-shrink-0">
+          <span class="font-display text-2xl sm:text-3xl tracking-widest text-sb-black" style="letter-spacing:5px;">SKINNY BOY</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#sneakers" class="nav-link text-xs tracking-widest uppercase text-sb-dark font-medium">Sneakers</a>
+          <a href="#accesorios" class="nav-link text-xs tracking-widest uppercase text-sb-dark font-medium">Accesorios</a>
+          <a href="#nosotros" class="nav-link text-xs tracking-widest uppercase text-sb-dark font-medium">Nosotros</a>
+          <a href="#contacto" class="px-5 py-2 bg-sb-black text-white text-xs tracking-widest uppercase font-semibold hover:bg-sb-dark transition-colors">Contacto</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <!-- Cart button -->
+          <button id="cart-btn" class="relative p-2 hover:opacity-60 transition-opacity" aria-label="Carrito">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <span id="cart-badge" class="absolute -top-1 -right-1 bg-sb-black text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+          </button>
+          <button id="menu-btn" class="md:hidden p-2 hover:opacity-60 transition-opacity" aria-label="Menú">
+            <div>
+              <span class="block w-6 h-px bg-sb-black mb-1.5"></span>
+              <span class="block w-6 h-px bg-sb-black mb-1.5"></span>
+              <span class="block w-4 h-px bg-sb-black"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-full z-50 flex flex-col bg-white">
+    <div class="flex items-center justify-between px-6 h-16 border-b border-sb-gray">
+      <span class="font-display text-2xl tracking-widest">SKINNY BOY</span>
+      <button id="menu-close" class="p-2 hover:opacity-60 transition-opacity">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="flex flex-col mt-6 px-6">
+      <a href="#sneakers" class="mobile-link py-5 text-3xl font-display tracking-widest border-b border-sb-gray hover:opacity-60 transition-opacity">SNEAKERS</a>
+      <a href="#accesorios" class="mobile-link py-5 text-3xl font-display tracking-widest border-b border-sb-gray hover:opacity-60 transition-opacity">ACCESORIOS</a>
+      <a href="#nosotros" class="mobile-link py-5 text-3xl font-display tracking-widest border-b border-sb-gray hover:opacity-60 transition-opacity">NOSOTROS</a>
+      <a href="#contacto" class="mobile-link py-5 text-3xl font-display tracking-widest hover:opacity-60 transition-opacity">CONTACTO</a>
+    </div>
+    <div class="mt-auto px-6 pb-10">
+      <p class="text-sb-muted text-xs tracking-widest uppercase mb-3">Síguenos</p>
+      <div class="flex gap-5">
+        <a href="https://www.instagram.com/_skinny_boy/" target="_blank" class="text-sb-dark hover:opacity-60 transition-opacity text-sm">Instagram</a>
+        <a href="https://www.tiktok.com/@sneakerskinnyboy" target="_blank" class="text-sb-dark hover:opacity-60 transition-opacity text-sm">TikTok</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="relative overflow-hidden" style="min-height:100svh;display:flex;align-items:center;justify-content:center;">
+    <div class="absolute inset-0 z-0">
+      <img src="img/IMG_7509.jpg" alt="Skinny Boy" class="w-full h-full object-cover" style="object-position:center;" />
+    </div>
+    <div class="absolute inset-0 z-10" style="background:rgba(0,0,0,0.52);"></div>
+    <div class="relative z-20 text-center px-4 w-full max-w-5xl mx-auto">
+      <p class="text-white/70 text-xs tracking-[0.5em] uppercase mb-5 reveal">Hecho a mano en Colombia</p>
+      <h1 class="hero-title font-display leading-none tracking-wider text-white mb-6 reveal" style="font-size:clamp(3.5rem,14vw,12rem);transition-delay:.1s;">EXCLUSIVIDAD<br/>Y ESTILO</h1>
+      <p class="text-white/80 text-base md:text-lg max-w-xl mx-auto mb-10 font-light leading-relaxed reveal" style="transition-delay:.2s;">Sneakers exclusivos diseñados y fabricados 100% a mano en Colombia.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center reveal" style="transition-delay:.3s;">
+        <a href="#sneakers" class="px-8 py-4 bg-white text-sb-black font-semibold text-xs tracking-widest uppercase hover:bg-sb-offwhite transition-colors">Ver Sneakers</a>
+        <a href="https://wa.me/573138920027" target="_blank" class="px-8 py-4 border border-white text-white font-semibold text-xs tracking-widest uppercase hover:bg-white hover:text-sb-black transition-colors">WhatsApp</a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+      <div class="w-px h-10 bg-gradient-to-b from-white to-transparent animate-pulse mx-auto"></div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="bg-sb-offwhite border-y border-sb-gray">
+    <div class="max-w-7xl mx-auto px-4 py-5">
+      <div class="stagger grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="flex flex-col items-center gap-1.5 py-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="1.5" width="22"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <p class="text-xs font-semibold tracking-wide">100% Handmade</p>
+          <p class="text-xs text-sb-muted">Trabajo manual</p>
+        </div>
+        <div class="flex flex-col items-center gap-1.5 py-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="1.5" width="22"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <p class="text-xs font-semibold tracking-wide">Envío Nacional</p>
+          <p class="text-xs text-sb-muted">E internacional</p>
+        </div>
+        <div class="flex flex-col items-center gap-1.5 py-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="1.5" width="22"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <p class="text-xs font-semibold tracking-wide">Pago Seguro</p>
+          <p class="text-xs text-sb-muted">Múltiples medios</p>
+        </div>
+        <div class="flex flex-col items-center gap-1.5 py-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="1.5" width="22"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p class="text-xs font-semibold tracking-wide">Made in Colombia</p>
+          <p class="text-xs text-sb-muted">100% colombiano 🇨🇴</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="py-20 px-4 max-w-7xl mx-auto reveal">
+    <div class="text-center mb-10">
+      <p class="text-sb-muted text-xs tracking-[0.4em] uppercase mb-3">El proceso</p>
+      <h2 class="font-display tracking-wider" style="font-size:clamp(2.8rem,10vw,6rem);">HECHO A MANO</h2>
+    </div>
+    <div class="relative w-full overflow-hidden bg-sb-black" style="aspect-ratio:16/9;max-height:80vh;">
+      <video id="brand-video" class="w-full h-full object-cover" playsinline loop muted poster="img/IMG_7509.jpg">
+        <source src="img/hero.mp4" type="video/mp4" />
+      </video>
+      <button id="video-toggle" class="absolute inset-0 w-full h-full flex items-center justify-center group" aria-label="Reproducir">
+        <div id="play-icon" class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-xl transition-transform duration-300 group-hover:scale-110">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#0A0A0A" style="margin-left:4px;"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </button>
+    </div>
+    <p class="text-center text-sb-muted text-xs tracking-widest uppercase mt-5">Exclusividad y Calidad · Hecho en Colombia 🇨🇴</p>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section id="colecciones" class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <p class="text-sb-muted text-xs tracking-[0.4em] uppercase mb-3">Explorar</p>
+      <h2 class="font-display tracking-wider" style="font-size:clamp(2.8rem,10vw,6rem);">COLECCIONES</h2>
+    </div>
+    <div class="stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      <a href="#sneakers" class="collection-card relative overflow-hidden group cursor-pointer block" style="aspect-ratio:3/4;">
+        <img class="col-img absolute inset-0 w-full h-full object-cover" src="img/IMG_7491.jpeg" alt="Sneakers" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-5">
+          <p class="text-xs tracking-widest uppercase text-white/60 mb-1">Lo más vendido</p>
+          <h3 class="font-display text-2xl tracking-wider text-white">SNEAKERS</h3>
+          <p class="text-xs text-white/50 mt-1 group-hover:text-white transition-colors">Ver todo →</p>
+        </div>
+      </a>
+      <a href="#sneakers" class="collection-card relative overflow-hidden group cursor-pointer block" style="aspect-ratio:3/4;">
+        <img class="col-img absolute inset-0 w-full h-full object-cover" src="img/IMG_7489.jpeg" alt="Tapestry" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-5">
+          <p class="text-xs tracking-widest uppercase text-white/60 mb-1">Textiles únicos</p>
+          <h3 class="font-display text-2xl tracking-wider text-white">TAPESTRY</h3>
+          <p class="text-xs text-white/50 mt-1 group-hover:text-white transition-colors">Ver todo →</p>
+        </div>
+      </a>
+      <a href="#sneakers" class="collection-card relative overflow-hidden group cursor-pointer block" style="aspect-ratio:3/4;">
+        <img class="col-img absolute inset-0 w-full h-full object-cover" src="img/IMG_7490.jpg" alt="Skeleton" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-5">
+          <p class="text-xs tracking-widest uppercase text-white/60 mb-1">Edición especial</p>
+          <h3 class="font-display text-2xl tracking-wider text-white">SKELETON</h3>
+          <p class="text-xs text-white/50 mt-1 group-hover:text-white transition-colors">Ver todo →</p>
+        </div>
+      </a>
+      <a href="#accesorios" class="collection-card relative overflow-hidden group cursor-pointer block" style="aspect-ratio:3/4;">
+        <img class="col-img absolute inset-0 w-full h-full object-cover" src="img/IMG_7496.jpg" alt="Accesorios" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-5">
+          <p class="text-xs tracking-widest uppercase text-white/60 mb-1">Completa el look</p>
+          <h3 class="font-display text-2xl tracking-wider text-white">ACCESORIOS</h3>
+          <p class="text-xs text-white/50 mt-1 group-hover:text-white transition-colors">Ver todo →</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- SNEAKERS GRID -->
+  <section id="sneakers" class="py-20 bg-sb-offwhite">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12 reveal">
+        <p class="text-sb-muted text-xs tracking-[0.4em] uppercase mb-3">Hechos a mano</p>
+        <h2 class="font-display tracking-wider" style="font-size:clamp(2.8rem,10vw,6rem);">SNEAKERS</h2>
+      </div>
+      <div id="products-grid" class="stagger grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"></div>
+      <div class="text-center mt-10 reveal">
+        <a href="https://wa.me/573138920027?text=Hola%2C%20quiero%20ver%20m%C3%A1s%20modelos" target="_blank" class="inline-block px-10 py-4 border border-sb-black text-sb-black text-xs tracking-widest uppercase font-semibold hover:bg-sb-black hover:text-white transition-colors">Ver más en WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESORIOS -->
+  <section id="accesorios" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12 reveal">
+        <p class="text-sb-muted text-xs tracking-[0.4em] uppercase mb-3">Completa tu outfit</p>
+        <h2 class="font-display tracking-wider" style="font-size:clamp(2.8rem,10vw,6rem);">ACCESORIOS</h2>
+      </div>
+      <div class="stagger grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+        <div class="product-card cursor-pointer">
+          <div class="relative overflow-hidden" style="aspect-ratio:1;">
+            <img class="product-img w-full h-full object-cover" src="img/IMG_7504.jpeg" alt="Cangurera Purple" loading="lazy" />
+            <span class="absolute top-3 left-3 bg-sb-black text-white text-xs font-bold tracking-widest px-2 py-1">Nuevo</span>
+            <div class="absolute inset-x-0 bottom-0 p-3">
+              <button class="quick-view-btn w-full py-3 bg-white text-sb-black text-xs font-semibold tracking-widest uppercase hover:bg-sb-black hover:text-white transition-colors" data-id="9">Quick View</button>
+            </div>
+          </div>
+          <div class="pt-3 pb-1">
+            <p class="text-xs text-sb-muted tracking-wider uppercase mb-1">Skinny Boy</p>
+            <h3 class="text-sm font-medium">Cangurera Purple</h3>
+            <p class="text-sb-black font-semibold mt-1">$120.000</p>
+          </div>
+        </div>
+        <div class="product-card cursor-pointer">
+          <div class="relative overflow-hidden" style="aspect-ratio:1;">
+            <img class="product-img w-full h-full object-cover" src="img/IMG_7496.jpg" alt="Cangurera Duo" loading="lazy" />
+            <span class="absolute top-3 left-3 bg-sb-black text-white text-xs font-bold tracking-widest px-2 py-1">Limited</span>
+            <div class="absolute inset-x-0 bottom-0 p-3">
+              <button class="quick-view-btn w-full py-3 bg-white text-sb-black text-xs font-semibold tracking-widest uppercase hover:bg-sb-black hover:text-white transition-colors" data-id="10">Quick View</button>
+            </div>
+          </div>
+          <div class="pt-3 pb-1">
+            <p class="text-xs text-sb-muted tracking-wider uppercase mb-1">Skinny Boy</p>
+            <h3 class="text-sm font-medium">Cangurera Duo Pack</h3>
+            <p class="text-sb-black font-semibold mt-1">$200.000</p>
+          </div>
+        </div>
+        <div class="product-card cursor-pointer">
+          <div class="relative overflow-hidden" style="aspect-ratio:1;">
+            <img class="product-img w-full h-full object-cover" src="img/IMG_7508.jpg" alt="Bucket Hat" loading="lazy" />
+            <span class="absolute top-3 left-3 bg-sb-black text-white text-xs font-bold tracking-widest px-2 py-1">Nuevo</span>
+            <div class="absolute inset-x-0 bottom-0 p-3">
+              <button class="quick-view-btn w-full py-3 bg-white text-sb-black text-xs font-semibold tracking-widest uppercase hover:bg-sb-black hover:text-white transition-colors" data-id="11">Quick View</button>
+            </div>
+          </div>
+          <div class="pt-3 pb-1">
+            <p class="text-xs text-sb-muted tracking-wider uppercase mb-1">Skinny Boy</p>
+            <h3 class="text-sm font-medium">Bucket Hat Camo</h3>
+            <p class="text-sb-black font-semibold mt-1">$85.000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STORY -->
+  <section id="nosotros" class="py-20 bg-sb-offwhite">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="reveal-left relative">
+          <img src="img/IMG_7506.jpeg" alt="Skinny Boy handmade" class="w-full object-cover" style="aspect-ratio:4/5;" loading="lazy" />
+          <div class="absolute -bottom-5 -right-5 bg-sb-black text-white p-6 hidden md:block">
+            <p class="font-display text-4xl">100%</p>
+            <p class="text-xs font-semibold tracking-widest uppercase mt-1">A Mano</p>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <p class="text-sb-muted text-xs tracking-[0.4em] uppercase mb-4">Nuestra historia</p>
+          <h2 class="font-display tracking-wider leading-tight mb-8" style="font-size:clamp(2.5rem,8vw,5rem);">EXCLUSIVIDAD<br/>Y CALIDAD.</h2>
+          <p class="text-sb-muted leading-relaxed mb-5 text-sm">Skinny Boy nació con una visión: crear sneakers que no encontrarás en ningún otro lugar. Cada par es diseñado, cortado y cosido a mano en Colombia, usando materiales premium.</p>
+          <p class="text-sb-muted leading-relaxed mb-10 text-sm">No somos producción en masa. Somos exclusividad. Cada par cuenta una historia, cada puntada es intencional. Pensar es gratis — crear es lo que nos define.</p>
+          <div class="grid grid-cols-3 gap-6 mb-10">
+            <div><p class="font-display text-4xl">107K+</p><p class="text-xs text-sb-muted tracking-widest uppercase mt-1">Comunidad IG</p></div>
+            <div><p class="font-display text-4xl">100%</p><p class="text-xs text-sb-muted tracking-widest uppercase mt-1">A Mano</p></div>
+            <div><p class="font-display text-4xl">🇨🇴</p><p class="text-xs text-sb-muted tracking-widest uppercase mt-1">Colombia</p></div>
+          </div>
+          <a href="https://www.instagram.com/_skinny_boy/" target="_blank" class="inline-block px-8 py-4 bg-sb-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-sb-dark transition-colors">Síguenos en Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY BANNER -->
+  <section class="relative overflow-hidden flex items-center justify-center" style="min-height:65vh;">
+    <div class="absolute inset-0">
+      <img src="img/IMG_7492.jpeg" alt="Skinny Boy Lifestyle" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0" style="background:rgba(0,0,0,0.65);"></div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto reveal">
+      <p class="text-white/60 text-xs tracking-[0.5em] uppercase mb-6">Filosofía</p>
+      <h2 class="font-display leading-none tracking-wider text-white mb-8" style="font-size:clamp(3rem,13vw,10rem);">PENSAR ES<br/>GRATIS</h2>
+      <p class="text-white/70 text-base mb-10 font-light">Diseño exclusivo. Trabajo manual. Sin límites.</p>
+      <a href="https://wa.me/573138920027?text=Quiero%20saber%20m%C3%A1s%20sobre%20Skinny%20Boy" target="_blank" class="inline-block px-10 py-4 bg-white text-sb-black font-semibold text-xs tracking-widest uppercase hover:bg-sb-offwhite transition-colors">Escríbenos →</a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <p class="text-sb-muted text-xs tracking-[0.4em] uppercase mb-3">La comunidad</p>
+      <h2 class="font-display tracking-wider" style="font-size:clamp(2.5rem,9vw,5rem);">@_SKINNY_BOY</h2>
+      <p class="text-sb-muted text-sm mt-3">107K+ seguidores en Instagram</p>
+    </div>
+    <div class="stagger grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
+      <a href="https://www.instagram.com/_skinny_boy/" target="_blank" class="gallery-item relative overflow-hidden block" style="aspect-ratio:1;"><img src="img/IMG_7493.jpeg" alt="Gallery" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" /><div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0 bg-black/50"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div></a>
+      <a href="https://www.instagram.com/_skinny_boy/" target="_blank" class="gallery-item relative overflow-hidden block" style="aspect-ratio:1;"><img src="img/IMG_7494.jpg" alt="Gallery" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" /><div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0 bg-black/50"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div></a>
+      <a href="https://www.instagram.com/_skinny_boy/" target="_blank" class="gallery-item relative overflow-hidden block" style="aspect-ratio:1;"><img src="img/IMG_7498.jpeg" alt="Gallery" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" /><div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0 bg-black/50"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div></a>
+      <a href="https://www.instagram.com/_skinny_boy/" target="_blank" class="gallery-item relative overflow-hidden block" style="aspect-ratio:1;"><img src="img/IMG_7499.jpg" alt="Gallery" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" /><div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0 bg-black/50"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div></a>
+      <a href="https://www.instagram.com/_skinny_boy/" target="_blank" class="gallery-item relative overflow-hidden block" style="aspect-ratio:1;"><img src="img/IMG_7500.jpeg" alt="Gallery" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" /><div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0 bg-black/50"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div></a>
+      <a href="https://www.instagram.com/_skinny_boy/" target="_blank" class="gallery-item relative overflow-hidden block" style="aspect-ratio:1;"><img src="img/IMG_7505.jpeg" alt="Gallery" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" /><div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0 bg-black/50"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div></a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-20 bg-sb-offwhite overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12 reveal">
+        <p class="text-sb-muted text-xs tracking-[0.4em] uppercase mb-3">La comunidad habla</p>
+        <h2 class="font-display tracking-wider" style="font-size:clamp(2.5rem,9vw,5rem);">RESEÑAS</h2>
+      </div>
+      <div class="relative">
+        <div id="testimonials-track" class="overflow-hidden">
+          <div id="testimonials-inner" class="flex transition-transform duration-500 ease-in-out"></div>
+        </div>
+        <button id="prev-btn" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 md:-translate-x-6 w-10 h-10 border border-sb-gray bg-white flex items-center justify-center hover:border-sb-black transition-colors z-10"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 md:translate-x-6 w-10 h-10 border border-sb-gray bg-white flex items-center justify-center hover:border-sb-black transition-colors z-10"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+      </div>
+      <div id="dots" class="flex items-center justify-center gap-2 mt-8"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contacto" class="py-28 px-4 text-center reveal">
+    <p class="text-sb-muted text-xs tracking-[0.4em] uppercase mb-4">Contáctanos</p>
+    <h2 class="font-display tracking-wider mb-4" style="font-size:clamp(2.8rem,12vw,7rem);">ESCRÍBENOS</h2>
+    <p class="text-sb-muted mb-10 text-sm max-w-sm mx-auto leading-relaxed">¿Quieres un par exclusivo? Háblanos por WhatsApp o Instagram.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+      <a href="https://wa.me/573138920027?text=Hola%2C%20quiero%20info%20sobre%20Skinny%20Boy" target="_blank" class="px-8 py-4 bg-sb-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-sb-dark transition-colors flex items-center justify-center gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://www.instagram.com/_skinny_boy/" target="_blank" class="px-8 py-4 border border-sb-black text-sb-black font-semibold text-xs tracking-widest uppercase hover:bg-sb-black hover:text-white transition-colors flex items-center justify-center gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+    </div>
+    <p class="text-sb-muted text-xs mt-6">Skinnyboyseaker@gmail.com · +57 313 892 0027</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-sb-black text-white pt-16 pb-8 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+        <div class="col-span-2 md:col-span-1">
+          <span class="font-display text-3xl tracking-widest block mb-4">SKINNY BOY</span>
+          <p class="text-white/50 text-sm mb-1">© "pensar es gratis"</p>
+          <p class="text-white/50 text-sm mb-6">Exclusividad y Calidad.<br/>Made in Colombia 🇨🇴</p>
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/_skinny_boy/" target="_blank" class="text-white/40 hover:text-white transition-colors" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://www.tiktok.com/@sneakerskinnyboy" target="_blank" class="text-white/40 hover:text-white transition-colors" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.5a8.14 8.14 0 004.77 1.52V6.57a4.85 4.85 0 01-1-.12z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xs tracking-widest uppercase font-semibold mb-5 text-white/80">Tienda</h4>
+          <ul class="space-y-3 text-sm text-white/40">
+            <li><a href="#sneakers" class="hover:text-white transition-colors">Sneakers</a></li>
+            <li><a href="#accesorios" class="hover:text-white transition-colors">Cangureras</a></li>
+            <li><a href="#accesorios" class="hover:text-white transition-colors">Bucket Hats</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs tracking-widest uppercase font-semibold mb-5 text-white/80">Info</h4>
+          <ul class="space-y-3 text-sm text-white/40">
+            <li><a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a></li>
+            <li><a href="https://wa.me/573138920027" target="_blank" class="hover:text-white transition-colors">Envíos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs tracking-widest uppercase font-semibold mb-5 text-white/80">Contacto</h4>
+          <ul class="space-y-3 text-sm text-white/40">
+            <li>Colombia 🇨🇴</li>
+            <li><a href="https://wa.me/573138920027" target="_blank" class="hover:text-white transition-colors">+57 313 892 0027</a></li>
+            <li><a href="mailto:Skinnyboyseaker@gmail.com" class="hover:text-white transition-colors">Skinnyboyseaker@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
+        <p>&copy; 2026 Skinny Boy. Todos los derechos reservados.</p>
+        <div class="flex flex-wrap justify-center gap-x-4 gap-y-1">
+          <a href="politica-privacidad.html" class="hover:text-white/60 transition-colors">Privacidad</a>
+          <a href="politica-cookies.html" class="hover:text-white/60 transition-colors">Cookies</a>
+          <a href="envios.html" class="hover:text-white/60 transition-colors">Envíos</a>
+          <a href="devoluciones.html" class="hover:text-white/60 transition-colors">Devoluciones</a>
+          <a href="terminos.html" class="hover:text-white/60 transition-colors">Términos</a>
+        </div>
+        <p>Hecho a mano con ♥ en Colombia 🇨🇴</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== COOKIE BANNER ===================== -->
+  <div id="cookie-banner" role="dialog" aria-label="Aviso de cookies">
+    <p>Usamos cookies para el carrito y análisis anónimos del sitio. Lee nuestra <a href="politica-cookies.html">Política de Cookies</a> y <a href="politica-privacidad.html">Política de Privacidad</a>.</p>
+    <div class="cookie-btns">
+      <button class="cookie-btn cookie-btn-reject" onclick="setCookieConsent('rejected')">Solo necesarias</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="setCookieConsent('accepted')">Aceptar todo</button>
+    </div>
+  </div>
+
+  <!-- ===================== FLOATING WHATSAPP ===================== -->
+  <a href="https://wa.me/573138920027?text=Hola%2C%20quiero%20info%20sobre%20Skinny%20Boy" target="_blank" class="wa-float" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ===================== CART OVERLAY ===================== -->
+  <div id="cart-overlay" class="cart-overlay"></div>
+
+  <!-- ===================== CART DRAWER ===================== -->
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="flex items-center justify-between px-5 py-4 border-b border-sb-gray flex-shrink-0">
+      <div class="flex items-center gap-3">
+        <h2 class="font-display text-2xl tracking-wider">CARRITO</h2>
+        <span id="drawer-count" class="bg-sb-black text-white text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+      </div>
+      <button id="cart-close" class="p-2 hover:opacity-60 transition-opacity">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Cart items -->
+    <div id="cart-items" class="flex-1 overflow-y-auto px-5 py-4"></div>
+
+    <!-- Empty state -->
+    <div id="cart-empty" class="flex-1 flex flex-col items-center justify-center px-5 text-center hidden">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#CCC" stroke-width="1"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <p class="text-sb-muted text-sm mt-4 mb-2">Tu carrito está vacío</p>
+      <p class="text-xs text-sb-muted">Agrega productos para comenzar</p>
+    </div>
+
+    <!-- Cart footer -->
+    <div id="cart-footer" class="px-5 pb-6 pt-4 border-t border-sb-gray flex-shrink-0 hidden">
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-sm font-semibold tracking-wide">TOTAL</span>
+        <span id="cart-total" class="text-xl font-bold font-display tracking-wider">$0</span>
+      </div>
+      <button id="checkout-wa-btn" class="w-full py-4 bg-[#25D366] text-white font-semibold text-xs tracking-widest uppercase mb-3 flex items-center justify-center gap-2 hover:bg-[#1ebe5d] transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Pedir por WhatsApp
+      </button>
+      <button id="checkout-native-btn" class="w-full py-4 bg-sb-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-sb-dark transition-colors">
+        Completar Pedido
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================== QUICK VIEW MODAL ===================== -->
+  <div id="modal" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center hidden">
+    <div class="modal-backdrop absolute inset-0 bg-black/60" id="modal-backdrop"></div>
+    <div class="modal-content relative bg-white w-full sm:max-w-2xl sm:mx-4 max-h-[92svh] overflow-y-auto z-10 shadow-2xl">
+      <button id="modal-close" class="absolute top-4 right-4 p-2 hover:opacity-50 transition-opacity z-10">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="grid grid-cols-1 sm:grid-cols-2">
+        <div class="relative" style="aspect-ratio:1;">
+          <img id="modal-img" src="" alt="" class="w-full h-full object-cover" />
+          <span id="modal-badge" class="absolute top-4 left-4 text-xs font-bold tracking-widest px-3 py-1"></span>
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col justify-center">
+          <p class="text-xs text-sb-muted tracking-widest uppercase mb-2">Skinny Boy</p>
+          <h3 id="modal-name" class="font-display text-3xl tracking-wider mb-1"></h3>
+          <p id="modal-price" class="text-sb-black text-xl font-semibold mb-5"></p>
+          <p id="modal-size-label" class="text-xs text-sb-muted mb-3 tracking-widest uppercase">Talla (EU)</p>
+          <div id="size-selector" class="flex gap-2 flex-wrap mb-6">
+            <button class="size-btn" data-size="36">36</button>
+            <button class="size-btn" data-size="37">37</button>
+            <button class="size-btn" data-size="38">38</button>
+            <button class="size-btn" data-size="39">39</button>
+            <button class="size-btn" data-size="40">40</button>
+            <button class="size-btn" data-size="41">41</button>
+            <button class="size-btn" data-size="42">42</button>
+            <button class="size-btn" data-size="43">43</button>
+          </div>
+          <button id="add-to-cart-btn" class="w-full py-4 bg-sb-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-sb-dark transition-colors mb-3">Agregar al Carrito</button>
+          <a id="whatsapp-order" href="#" target="_blank" class="w-full py-3 border border-sb-black text-sb-black font-semibold text-xs tracking-widest uppercase hover:bg-sb-black hover:text-white transition-colors text-center block">Pedir directo por WhatsApp</a>
+          <p class="text-xs text-sb-muted text-center mt-4">100% hecho a mano · Envío a todo Colombia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== CHECKOUT MODAL ===================== -->
+  <div id="checkout-modal" class="checkout-modal fixed inset-0 z-[70] hidden">
+    <div class="absolute inset-0 bg-black/60 modal-backdrop" id="checkout-backdrop"></div>
+    <div class="checkout-panel relative z-10 shadow-2xl">
+      <div class="flex items-center justify-between px-6 py-5 border-b border-sb-gray">
+        <h2 class="font-display text-2xl tracking-wider">COMPLETAR PEDIDO</h2>
+        <button id="checkout-close" class="p-2 hover:opacity-60 transition-opacity">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <!-- Order summary -->
+      <div class="px-6 py-4 bg-sb-offwhite border-b border-sb-gray">
+        <p class="text-xs text-sb-muted tracking-widest uppercase mb-3">Tu pedido</p>
+        <div id="checkout-summary" class="space-y-2"></div>
+        <div class="flex justify-between items-center mt-3 pt-3 border-t border-sb-gray">
+          <span class="text-xs font-semibold tracking-widest uppercase">Total</span>
+          <span id="checkout-total" class="font-display text-xl tracking-wider"></span>
+        </div>
+      </div>
+      <!-- Form -->
+      <form id="checkout-form" class="px-6 py-6 space-y-4">
+        <div>
+          <label class="text-xs tracking-widest uppercase font-semibold block mb-2">Nombre completo *</label>
+          <input type="text" id="cf-name" required placeholder="Tu nombre" class="w-full border border-sb-gray px-4 py-3 text-sm focus:outline-none focus:border-sb-black transition-colors" />
+        </div>
+        <div>
+          <label class="text-xs tracking-widest uppercase font-semibold block mb-2">WhatsApp / Teléfono *</label>
+          <input type="tel" id="cf-phone" required placeholder="+57 300 000 0000" class="w-full border border-sb-gray px-4 py-3 text-sm focus:outline-none focus:border-sb-black transition-colors" />
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs tracking-widest uppercase font-semibold block mb-2">Ciudad *</label>
+            <input type="text" id="cf-city" required placeholder="Bogotá" class="w-full border border-sb-gray px-4 py-3 text-sm focus:outline-none focus:border-sb-black transition-colors" />
+          </div>
+          <div>
+            <label class="text-xs tracking-widest uppercase font-semibold block mb-2">Departamento</label>
+            <input type="text" id="cf-dept" placeholder="Cundinamarca" class="w-full border border-sb-gray px-4 py-3 text-sm focus:outline-none focus:border-sb-black transition-colors" />
+          </div>
+        </div>
+        <div>
+          <label class="text-xs tracking-widest uppercase font-semibold block mb-2">Dirección de entrega *</label>
+          <input type="text" id="cf-address" required placeholder="Calle 123 # 45-67, Apto 101" class="w-full border border-sb-gray px-4 py-3 text-sm focus:outline-none focus:border-sb-black transition-colors" />
+        </div>
+        <div>
+          <label class="text-xs tracking-widest uppercase font-semibold block mb-2">Método de pago *</label>
+          <select id="cf-payment" required class="w-full border border-sb-gray px-4 py-3 text-sm focus:outline-none focus:border-sb-black transition-colors bg-white appearance-none">
+            <option value="">Seleccionar...</option>
+            <option>Nequi</option>
+            <option>Daviplata</option>
+            <option>Transferencia bancaria</option>
+            <option>Efectivo contra entrega</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs tracking-widest uppercase font-semibold block mb-2">Notas adicionales</label>
+          <textarea id="cf-notes" rows="2" placeholder="Instrucciones especiales, diseño personalizado..." class="w-full border border-sb-gray px-4 py-3 text-sm focus:outline-none focus:border-sb-black transition-colors resize-none"></textarea>
+        </div>
+        <button type="submit" class="w-full py-4 bg-sb-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-sb-dark transition-colors mt-2">Enviar Pedido por WhatsApp →</button>
+        <p class="text-xs text-sb-muted text-center">Te contactaremos en menos de 24 horas para confirmar tu pedido.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast fixed bottom-24 right-6 z-50 bg-sb-black text-white px-5 py-3 text-xs font-semibold flex items-center gap-3 shadow-2xl">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-msg">¡Agregado al carrito!</span>
+  </div>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    // ── DATA ──────────────────────────────────────────────────────
+    const products = [
+      { id:1,  name:'Tapestry Black',    price:350000, badge:'Best Seller', img:'img/IMG_7489.jpeg', hasSizes:true },
+      { id:2,  name:'Skeleton Edition',  price:380000, badge:'Limited',     img:'img/IMG_7490.jpg',  hasSizes:true },
+      { id:3,  name:'Royal Blue',        price:350000, badge:'Nuevo',       img:'img/IMG_7491.jpeg', hasSizes:true },
+      { id:4,  name:'Panda Gum',         price:320000, badge:'Best Seller', img:'img/IMG_7492.jpeg', hasSizes:true },
+      { id:5,  name:'Purple Suede',      price:340000, badge:'Nuevo',       img:'img/IMG_7493.jpeg', hasSizes:true },
+      { id:6,  name:'Purple Lace',       price:360000, badge:'Limited',     img:'img/IMG_7494.jpg',  hasSizes:true },
+      { id:7,  name:'Triple Black',      price:300000, badge:'Best Seller', img:'img/IMG_7497.jpeg', hasSizes:true },
+      { id:8,  name:'Black Cream',       price:340000, badge:'Nuevo',       img:'img/IMG_7503.jpg',  hasSizes:true },
+      { id:9,  name:'Cangurera Purple',  price:120000, badge:'Nuevo',       img:'img/IMG_7504.jpeg', hasSizes:false },
+      { id:10, name:'Cangurera Duo Pack',price:200000, badge:'Limited',     img:'img/IMG_7496.jpg',  hasSizes:false },
+      { id:11, name:'Bucket Hat Camo',   price:85000,  badge:'Nuevo',       img:'img/IMG_7508.jpg',  hasSizes:false },
+    ];
+
+    function fmtCOP(n) { return '$' + n.toLocaleString('es-CO'); }
+
+    // ── CART STATE ────────────────────────────────────────────────
+    let cart = []; // {id, name, price, img, size, qty}
+
+    function cartTotal() { return cart.reduce((s,i) => s + i.price * i.qty, 0); }
+    function cartCount() { return cart.reduce((s,i) => s + i.qty, 0); }
+
+    function addToCart(product, size) {
+      const key = product.id + '_' + (size || 'unica');
+      const existing = cart.find(i => i._key === key);
+      if (existing) { existing.qty++; }
+      else { cart.push({ _key:key, id:product.id, name:product.name, price:product.price, img:product.img, size, qty:1 }); }
+      updateCartUI();
+      showToast(product.name + ' agregado ✓');
+    }
+
+    function removeFromCart(key) {
+      cart = cart.filter(i => i._key !== key);
+      updateCartUI();
+    }
+
+    function changeQty(key, delta) {
+      const item = cart.find(i => i._key === key);
+      if (!item) return;
+      item.qty = Math.max(0, item.qty + delta);
+      if (item.qty === 0) cart = cart.filter(i => i._key !== key);
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const count = cartCount();
+      const total = cartTotal();
+
+      // Badge
+      const badge = document.getElementById('cart-badge');
+      const drawerCount = document.getElementById('drawer-count');
+      badge.textContent = count;
+      badge.classList.toggle('hidden', count === 0);
+      drawerCount.textContent = count;
+
+      // Total
+      document.getElementById('cart-total').textContent = fmtCOP(total);
+
+      // Items list
+      const itemsEl = document.getElementById('cart-items');
+      const emptyEl = document.getElementById('cart-empty');
+      const footerEl = document.getElementById('cart-footer');
+
+      if (cart.length === 0) {
+        itemsEl.classList.add('hidden');
+        emptyEl.classList.remove('hidden');
+        footerEl.classList.add('hidden');
+      } else {
+        itemsEl.classList.remove('hidden');
+        emptyEl.classList.add('hidden');
+        footerEl.classList.remove('hidden');
+        itemsEl.innerHTML = cart.map(item => `
+          <div class="flex gap-4 py-4 border-b border-sb-gray last:border-0">
+            <img src="${item.img}" alt="${item.name}" class="w-16 h-16 object-cover flex-shrink-0" />
+            <div class="flex-1 min-w-0">
+              <p class="text-xs font-semibold truncate">${item.name}</p>
+              ${item.size ? `<p class="text-xs text-sb-muted mt-0.5">Talla ${item.size}</p>` : ''}
+              <p class="text-xs font-semibold mt-1">${fmtCOP(item.price)}</p>
+              <div class="flex items-center gap-3 mt-2">
+                <button onclick="changeQty('${item._key}',-1)" class="w-7 h-7 border border-sb-gray flex items-center justify-center text-sb-muted hover:border-sb-black hover:text-sb-black transition-colors text-lg leading-none">−</button>
+                <span class="text-sm font-semibold w-4 text-center">${item.qty}</span>
+                <button onclick="changeQty('${item._key}',1)" class="w-7 h-7 border border-sb-gray flex items-center justify-center text-sb-muted hover:border-sb-black hover:text-sb-black transition-colors text-lg leading-none">+</button>
+                <button onclick="removeFromCart('${item._key}')" class="ml-auto text-sb-muted hover:text-sb-black transition-colors">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Checkout summary
+      const summaryEl = document.getElementById('checkout-summary');
+      if (summaryEl) {
+        summaryEl.innerHTML = cart.map(i => `
+          <div class="flex justify-between text-sm">
+            <span class="text-sb-dark">${i.name}${i.size ? ' (T.'+i.size+')' : ''} × ${i.qty}</span>
+            <span class="font-medium">${fmtCOP(i.price * i.qty)}</span>
+          </div>
+        `).join('');
+        const totEl = document.getElementById('checkout-total');
+        if (totEl) totEl.textContent = fmtCOP(total);
+      }
+    }
+
+    // ── CART DRAWER ────────────────────────────────────────────────
+    const cartDrawer = document.getElementById('cart-drawer');
+    const cartOverlay = document.getElementById('cart-overlay');
+
+    function openCart() { cartDrawer.classList.add('open'); cartOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeCart() { cartDrawer.classList.remove('open'); cartOverlay.classList.remove('open'); document.body.style.overflow = ''; }
+
+    document.getElementById('cart-btn').addEventListener('click', openCart);
+    document.getElementById('cart-close').addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+
+    // WhatsApp checkout from cart
+    document.getElementById('checkout-wa-btn').addEventListener('click', () => {
+      if (cart.length === 0) return;
+      const lines = cart.map(i => `• ${i.name}${i.size ? ' (Talla ' + i.size + ')' : ''} x${i.qty} — ${fmtCOP(i.price * i.qty)}`).join('\n');
+      const msg = `Hola Skinny Boy, quiero hacer este pedido:\n\n${lines}\n\nTOTAL: ${fmtCOP(cartTotal())}`;
+      window.open('https://wa.me/573138920027?text=' + encodeURIComponent(msg), '_blank');
+    });
+
+    // Native checkout
+    document.getElementById('checkout-native-btn').addEventListener('click', () => {
+      if (cart.length === 0) return;
+      updateCartUI(); // refresh summary
+      closeCart();
+      document.getElementById('checkout-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // ── CHECKOUT MODAL ─────────────────────────────────────────────
+    function closeCheckout() {
+      document.getElementById('checkout-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('checkout-close').addEventListener('click', closeCheckout);
+    document.getElementById('checkout-backdrop').addEventListener('click', closeCheckout);
+
+    document.getElementById('checkout-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const name    = document.getElementById('cf-name').value.trim();
+      const phone   = document.getElementById('cf-phone').value.trim();
+      const city    = document.getElementById('cf-city').value.trim();
+      const dept    = document.getElementById('cf-dept').value.trim();
+      const address = document.getElementById('cf-address').value.trim();
+      const payment = document.getElementById('cf-payment').value;
+      const notes   = document.getElementById('cf-notes').value.trim();
+
+      const lines = cart.map(i => `• ${i.name}${i.size ? ' (Talla ' + i.size + ')' : ''} x${i.qty} — ${fmtCOP(i.price * i.qty)}`).join('\n');
+      const msg = [
+        `*NUEVO PEDIDO — Skinny Boy*`,
+        ``,
+        `*Cliente:* ${name}`,
+        `*Teléfono:* ${phone}`,
+        `*Ciudad:* ${city}${dept ? ', ' + dept : ''}`,
+        `*Dirección:* ${address}`,
+        `*Pago:* ${payment}`,
+        notes ? `*Notas:* ${notes}` : '',
+        ``,
+        `*Productos:*`,
+        lines,
+        ``,
+        `*TOTAL: ${fmtCOP(cartTotal())}*`,
+      ].filter(Boolean).join('\n');
+
+      window.open('https://wa.me/573138920027?text=' + encodeURIComponent(msg), '_blank');
+      closeCheckout();
+      cart = [];
+      updateCartUI();
+      showToast('¡Pedido enviado! Te contactaremos pronto.');
+    });
+
+    // ── QUICK VIEW MODAL ───────────────────────────────────────────
+    const modal = document.getElementById('modal');
+    let currentProduct = null, selectedSize = null;
+
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('[data-id]');
+      if (!btn) return;
+      const id = parseInt(btn.dataset.id);
+      const p = products.find(x => x.id === id);
+      if (p) openModal(p);
+    });
+
+    function openModal(p) {
+      currentProduct = p; selectedSize = null;
+      document.getElementById('modal-img').src = p.img;
+      document.getElementById('modal-img').alt = p.name;
+      document.getElementById('modal-name').textContent = p.name;
+      document.getElementById('modal-price').textContent = fmtCOP(p.price);
+      const b = document.getElementById('modal-badge');
+      b.textContent = p.badge;
+      b.className = 'absolute top-4 left-4 text-xs font-bold tracking-widest px-3 py-1 bg-sb-black text-white';
+      // Show/hide size selector
+      const sizeSection = document.getElementById('size-selector');
+      const sizeLabel = document.getElementById('modal-size-label');
+      sizeSection.style.display = p.hasSizes ? 'flex' : 'none';
+      sizeLabel.style.display = p.hasSizes ? 'block' : 'none';
+      document.querySelectorAll('.size-btn').forEach(x => x.classList.remove('selected'));
+      updateModalWA();
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() { modal.classList.add('hidden'); document.body.style.overflow = ''; currentProduct = null; selectedSize = null; }
+    function updateModalWA() {
+      const name = currentProduct ? currentProduct.name : '';
+      const size = selectedSize ? selectedSize : '(sin seleccionar)';
+      const msg = encodeURIComponent(`Hola, quiero pedir los Skinny Boy ${name}${currentProduct?.hasSizes ? ' en talla ' + size : ''}`);
+      document.getElementById('whatsapp-order').href = `https://wa.me/573138920027?text=${msg}`;
+    }
+
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+    document.getElementById('modal-backdrop').addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeCart(); closeCheckout(); } });
+    document.querySelectorAll('.size-btn').forEach(btn => btn.addEventListener('click', () => {
+      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedSize = btn.dataset.size;
+      updateModalWA();
+    }));
+
+    document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+      if (!currentProduct) return;
+      if (currentProduct.hasSizes && !selectedSize) { showToast('Selecciona una talla primero'); return; }
+      addToCart(currentProduct, selectedSize);
+      closeModal();
+      openCart();
+    });
+
+    // ── PRODUCTS GRID ──────────────────────────────────────────────
+    const grid = document.getElementById('products-grid');
+    products.filter(p => p.id <= 8).forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'product-card cursor-pointer';
+      card.innerHTML = `<div class="relative overflow-hidden" style="aspect-ratio:3/4;"><img class="product-img w-full h-full object-cover" src="${p.img}" alt="${p.name}" loading="lazy"/><span class="absolute top-3 left-3 bg-sb-black text-white text-xs font-bold tracking-widest px-2 py-1">${p.badge}</span><div class="absolute inset-x-0 bottom-0 p-3"><button class="quick-view-btn w-full py-3 bg-white text-sb-black text-xs font-semibold tracking-widest uppercase hover:bg-sb-black hover:text-white transition-colors" data-id="${p.id}">Quick View</button></div></div><div class="pt-3 pb-1"><p class="text-xs text-sb-muted tracking-wider uppercase mb-1">Skinny Boy</p><h3 class="text-sm font-medium">${p.name}</h3><p class="text-sb-black font-semibold mt-1">${fmtCOP(p.price)}</p></div>`;
+      grid.appendChild(card);
+    });
+
+    // ── TESTIMONIALS CAROUSEL ──────────────────────────────────────
+    const testimonials = [
+      { name:'Santiago M.', handle:'@santi_co', rating:5, text:'Los sneakers más exclusivos que he tenido. La calidad del cuero y la gamuza es increíble. Se nota que son hechos a mano.' },
+      { name:'Valentina R.', handle:'@vale.style', rating:5, text:'Pedí los Tapestry Black y llegaron perfectos. El textil artesanal es una obra de arte. Ya quiero mi segundo par.' },
+      { name:'Andrés P.', handle:'@andres_bta', rating:5, text:'La atención por WhatsApp fue excelente. Me asesoraron con la talla y el diseño. Los sneakers son únicos.' },
+      { name:'Camila T.', handle:'@cami.sneakers', rating:5, text:'Lo mejor de Skinny Boy es que cada par es diferente. La exclusividad es real, no es marketing. 100% recomendados.' },
+      { name:'Felipe G.', handle:'@pipe_co', rating:5, text:'Envío rápido, empaque premium y los sneakers superaron mis expectativas. La calidad colombiana al máximo.' },
+    ];
+    const inner = document.getElementById('testimonials-inner');
+    const dotsEl = document.getElementById('dots');
+    let currentSlide = 0, autoTimer;
+    testimonials.forEach(t => {
+      const stars = '★'.repeat(t.rating) + '☆'.repeat(5 - t.rating);
+      const el = document.createElement('div');
+      el.className = 'flex-shrink-0 px-2';
+      el.style.width = '33.333%';
+      el.innerHTML = `<div class="border border-sb-gray bg-white p-6 h-full flex flex-col"><div class="text-sb-black text-sm mb-4">${stars}</div><p class="text-sb-dark text-sm leading-relaxed flex-1 mb-5">"${t.text}"</p><div><p class="text-sm font-semibold">${t.name}</p><p class="text-xs text-sb-muted">${t.handle}</p></div></div>`;
+      inner.appendChild(el);
+    });
+    function getSPV() { return window.innerWidth >= 1024 ? 3 : 1; }
+    function getMax() { return Math.max(0, testimonials.length - getSPV()); }
+    function buildDots() { dotsEl.innerHTML = ''; for (let i = 0; i <= getMax(); i++) { const d = document.createElement('button'); d.className = 'dot' + (i === currentSlide ? ' active' : ''); d.addEventListener('click', () => goTo(i)); dotsEl.appendChild(d); } }
+    function goTo(i) { currentSlide = Math.max(0, Math.min(i, getMax())); const w = getSPV() === 1 ? 100 : 100/3; inner.style.transform = `translateX(-${w * currentSlide}%)`; document.querySelectorAll('.dot').forEach((d,j) => d.classList.toggle('active', j === currentSlide)); clearInterval(autoTimer); autoTimer = setInterval(() => goTo(currentSlide + 1 > getMax() ? 0 : currentSlide + 1), 5000); }
+    document.getElementById('prev-btn').addEventListener('click', () => goTo(currentSlide - 1));
+    document.getElementById('next-btn').addEventListener('click', () => goTo(currentSlide + 1 > getMax() ? 0 : currentSlide + 1));
+    function updateWidths() { const spv = getSPV(); inner.querySelectorAll(':scope>div').forEach(el => el.style.width = spv === 1 ? '100%' : '33.333%'); if (currentSlide > getMax()) goTo(getMax()); buildDots(); }
+    window.addEventListener('resize', updateWidths);
+    updateWidths(); buildDots();
+    autoTimer = setInterval(() => goTo(currentSlide + 1 > getMax() ? 0 : currentSlide + 1), 5000);
+
+    // ── MOBILE MENU ────────────────────────────────────────────────
+    const mobileMenu = document.getElementById('mobile-menu');
+    document.getElementById('menu-btn').addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; });
+    document.getElementById('menu-close').addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; });
+    document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }));
+
+    // ── VIDEO ──────────────────────────────────────────────────────
+    const brandVideo = document.getElementById('brand-video');
+    const videoToggle = document.getElementById('video-toggle');
+    const playIcon = document.getElementById('play-icon');
+    videoToggle.addEventListener('click', () => {
+      if (brandVideo.paused) { brandVideo.play(); playIcon.style.opacity = '0'; }
+      else { brandVideo.pause(); playIcon.style.opacity = '1'; }
+    });
+    brandVideo.addEventListener('pause', () => { playIcon.style.opacity = '1'; });
+    brandVideo.addEventListener('play', () => { playIcon.style.opacity = '0'; });
+
+    // ── TOAST ──────────────────────────────────────────────────────
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    // ── SCROLL REVEAL ──────────────────────────────────────────────
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold:.08, rootMargin:'0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.stagger').forEach(el => io.observe(el));
+
+    // ── NAVBAR SHADOW ──────────────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.style.boxShadow = window.scrollY > 60 ? '0 1px 12px rgba(0,0,0,0.08)' : 'none'; }, { passive:true });
+
+    // ── COOKIE CONSENT ────────────────────────────────────────────
+    const cookieBanner = document.getElementById('cookie-banner');
+    function setCookieConsent(val) {
+      localStorage.setItem('sb_cookie_consent', val);
+      cookieBanner.classList.remove('visible');
+    }
+    if (!localStorage.getItem('sb_cookie_consent')) {
+      setTimeout(() => cookieBanner.classList.add('visible'), 1200);
+    }
+
+    updateCartUI();
+  </script>
+
+  <!-- ====== CONFIDENTIAL PROTECTION ====== -->
+  <style>
+    #conf-bar { position:fixed; top:0; left:0; right:0; z-index:9999; background:#0A0A0A; border-bottom:2px solid #E8C84A; padding:.45rem 1.2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-family:'Inter',sans-serif; font-size:.7rem; font-weight:600; letter-spacing:.06em; color:rgba(255,255,255,0.65); }
+    #conf-bar .conf-label { color:#E8C84A; }
+    #conf-wm { position:fixed; inset:0; z-index:9000; pointer-events:none; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+    #conf-wm span { font-family:'Inter',sans-serif; font-size:clamp(1rem,2.5vw,1.5rem); font-weight:900; letter-spacing:.22em; color:rgba(0,0,0,0.055); transform:rotate(-35deg); white-space:nowrap; user-select:none; -webkit-user-select:none; }
+  </style>
+
+  <div id="conf-bar">
+    <span><span class="conf-label">⚠ PROPUESTA CONFIDENCIAL</span> &nbsp;·&nbsp; Mockup exclusivo · No distribuir sin autorización</span>
+    <span>© Daniel Acosta · 2026</span>
+  </div>
+
+  <div id="conf-wm"><span>PROPUESTA CONFIDENCIAL · SKINNY BOY · USO NO AUTORIZADO PROHIBIDO</span></div>
+
+  <script>
+    (function(){
+      document.body.style.paddingTop = (parseInt(document.body.style.paddingTop)||0) + 'px';
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.addEventListener('keydown', function(e){
+        const k = e.key.toLowerCase();
+        if (e.ctrlKey && ['u','s','a','p'].includes(k)) { e.preventDefault(); return false; }
+        if (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(k)) { e.preventDefault(); return false; }
+        if (e.key === 'F12') { e.preventDefault(); return false; }
+      });
+      console.log('%c⚠ DOCUMENTO CONFIDENCIAL', 'color:#E8C84A;font-size:18px;font-weight:bold;');
+      console.log('%cEste mockup es propiedad intelectual de Daniel Acosta. Su reproducción o distribución no autorizada está prohibida bajo la Ley 23 de 1982 de Colombia.', 'color:#cc0000;font-size:13px;');
+    })();
+  </script>
+</body>
+</html>
