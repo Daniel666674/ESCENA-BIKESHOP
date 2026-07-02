@@ -33,6 +33,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/escena-logo.svg" />
   <link rel="apple-touch-icon" href="assets/img/escena-logo.jpg" />
   <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="assets/css/cart.css" />
 
   <!-- ============ Fonts ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -258,6 +259,7 @@
     @media (max-width: 980px) { .grid { grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 440px) { .grid { grid-template-columns: 1fr; } }
+    @media (max-width: 720px) { #grid.grid > .card:nth-child(n+5) { display: none; } }
     .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .15s; }
     .card:hover { box-shadow: 0 14px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
     .card .ph-link { display: block; }
@@ -274,6 +276,8 @@
     .card .price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .02em; margin-bottom: .7rem; }
     .card .buy { display: block; text-align: center; background: var(--ink); color: #fff; text-decoration: none; padding: .7rem; border-radius: 5px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s, color .2s; border: 1px solid var(--ink); }
     .card .buy:hover { background: #fff; color: var(--ink); }
+    .card-actions { display: flex; flex-direction: column; gap: .5rem; }
+    .card-actions .add-cart-btn { padding: .65rem 1rem; font-size: .7rem; }
 
     /* ============ VALUE PROPS ============ */
     .props { background: var(--panel); }
@@ -429,14 +433,21 @@
     <img src="assets/img/escena-logo.jpg" alt="Logo ESCENA BMX" width="34" height="34" />
     <span class="name">ESCENA BMX</span>
   </a>
-  <nav class="nav-links" id="nav">
-    <a href="#comprar">Cómo comprar</a>
-    <a href="#categorias">Categorías</a>
-    <a href="tienda.html">Tienda</a>
-    <a href="#faq">FAQ</a>
-    <a class="nav-cta" href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp</a>
-  </nav>
-  <button class="burger" id="burger" aria-label="Menú">☰</button>
+  <div class="nav-right">
+    <nav class="nav-links" id="nav">
+      <a href="tienda.html">Tienda</a>
+      <a href="armar-bmx.html">Arma tu BMX</a>
+      <a href="blog.html">Blog</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+    <button class="cart-btn" id="cartBtnHeader" aria-label="Ver carrito">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-badge" id="cartBadgeHeader">0</span>
+    </button>
+    <button class="burger" id="burger" aria-label="Menú">☰</button>
+  </div>
 </header>
 
 <!-- ============ HERO (split) ============ -->
@@ -826,7 +837,10 @@
             '<h3><a class="title-link" href="'+href+'">'+p.n+'</a></h3>' +
             '<p class="spec">'+p.spec+'</p>' +
             '<div class="price">'+cop(p.price)+'</div>' +
-            '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
+            '<div class="card-actions">' +
+              '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
+              '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+p.n+'" data-brand="'+p.brand+'" data-price="'+p.price+'" data-img="'+p.img+'">Agregar al carrito</button>' +
+            '</div>' +
           '</div>' +
         '</article>';
     }).join("");
@@ -881,5 +895,7 @@
     closeNL();
   });
 </script>
+<script>var ESCENA_ROOT = "";</script>
+<script src="assets/js/cart.js"></script>
 </body>
 </html>

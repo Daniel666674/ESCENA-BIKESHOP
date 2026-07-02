@@ -1,0 +1,44 @@
+/* ESCENA cart — shared drawer + button styles */
+.nav-right { display: flex; align-items: center; gap: 1.1rem; }
+.cart-btn { position: relative; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: none; border: none; cursor: pointer; color: var(--ink); padding: 0; }
+.cart-btn svg { width: 22px; height: 22px; fill: none; stroke: var(--ink); stroke-width: 1.8; }
+.cart-badge { position: absolute; top: -4px; right: -6px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 999px; background: var(--ink); color: #fff; font-size: .64rem; font-weight: 800; display: none; align-items: center; justify-content: center; line-height: 1; }
+.cart-badge.show { display: flex; }
+
+.cart-overlay { position: fixed; inset: 0; z-index: 600; background: rgba(10,10,10,.55); opacity: 0; pointer-events: none; transition: opacity .25s; }
+.cart-overlay.show { opacity: 1; pointer-events: auto; }
+.cart-drawer { position: fixed; top: 0; right: 0; bottom: 0; z-index: 601; width: min(420px, 100%); background: #fff; display: flex; flex-direction: column; transform: translateX(100%); transition: transform .3s ease; box-shadow: -20px 0 60px rgba(0,0,0,.25); }
+.cart-overlay.show .cart-drawer { transform: translateX(0); }
+.cart-head { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 1.4rem; border-bottom: 1px solid var(--line); }
+.cart-head h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: .05em; }
+.cart-close { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--ink); }
+.cart-close:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.cart-body { flex: 1; overflow-y: auto; padding: 0 1.4rem; }
+.cart-empty { text-align: center; color: var(--muted); font-size: .88rem; padding: 3rem 1rem; }
+.cart-item { display: grid; grid-template-columns: 62px 1fr auto; gap: .8rem; padding: 1rem 0; border-bottom: 1px solid var(--line); align-items: start; }
+.cart-item .ci-img { width: 62px; height: 62px; border-radius: 8px; overflow: hidden; background: #0A0A0A; }
+.cart-item .ci-img img { width: 100%; height: 100%; object-fit: cover; }
+.cart-item .ci-brand { font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.cart-item .ci-name { font-size: .84rem; font-weight: 600; margin: .1rem 0 .35rem; line-height: 1.25; }
+.cart-item .ci-qty { display: inline-flex; align-items: center; gap: .5rem; border: 1px solid var(--line); border-radius: 999px; padding: .15rem .3rem; }
+.cart-item .ci-qty button { width: 22px; height: 22px; border: none; background: none; cursor: pointer; font-size: .95rem; color: var(--ink); line-height: 1; }
+.cart-item .ci-qty span { font-size: .8rem; min-width: 14px; text-align: center; }
+.cart-item .ci-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; text-align: right; white-space: nowrap; }
+.cart-item .ci-remove { display: block; margin-top: .5rem; background: none; border: none; color: var(--muted); font-size: .7rem; letter-spacing: .05em; text-decoration: underline; cursor: pointer; padding: 0; }
+.cart-item .ci-remove:hover { color: var(--ink); }
+.cart-foot { padding: 1.1rem 1.4rem 1.4rem; border-top: 1px solid var(--line); }
+.cart-subtotal { display: flex; justify-content: space-between; align-items: center; margin-bottom: .9rem; font-size: .9rem; }
+.cart-subtotal .amt { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; }
+.cart-checkout { display: flex; align-items: center; justify-content: center; gap: .5rem; width: 100%; background: #25D366; color: #fff; border: none; border-radius: 8px; padding: .95rem 1rem; font-weight: 700; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; font-family: inherit; transition: opacity .2s; margin-bottom: .6rem; }
+.cart-checkout:hover { opacity: .88; }
+.cart-checkout svg { width: 17px; height: 17px; fill: #fff; }
+.cart-checkout:disabled { opacity: .4; cursor: not-allowed; }
+.cart-continue { display: block; text-align: center; font-size: .78rem; color: var(--muted); text-decoration: underline; cursor: pointer; background: none; border: none; width: 100%; font-family: inherit; }
+
+.add-cart-btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; background: #fff; color: var(--ink); border: 1.5px solid var(--ink); border-radius: 5px; padding: .68rem 1rem; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; font-family: inherit; transition: background .2s, color .2s; }
+.add-cart-btn:hover { background: var(--ink); color: #fff; }
+.add-cart-btn.added { background: var(--ink); color: #fff; }
+
+@media (max-width: 720px) {
+  .cart-drawer { width: 100%; }
+}

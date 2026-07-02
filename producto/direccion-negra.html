@@ -21,6 +21,7 @@
   <link rel="icon" type="image/svg+xml" href="../assets/img/escena-logo.svg" />
   <link rel="apple-touch-icon" href="../assets/img/escena-logo.jpg" />
   <link rel="manifest" href="../site.webmanifest" />
+  <link rel="stylesheet" href="../assets/css/cart.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -80,6 +81,11 @@
     .pdp-info h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: .02em; margin: .35rem 0 1rem; line-height: 1.05; }
     .pdp-price { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: .02em; margin-bottom: 1.4rem; }
     .pdp-actions { display: flex; flex-direction: column; gap: .7rem; max-width: 340px; margin-bottom: 1.6rem; }
+    .pdp-qty { display: inline-flex; align-items: center; gap: .4rem; border: 1.5px solid var(--line); border-radius: 6px; padding: .2rem .3rem; align-self: flex-start; }
+    .pdp-qty button { width: 28px; height: 28px; border: none; background: none; cursor: pointer; font-size: 1.1rem; color: var(--ink); line-height: 1; }
+    .pdp-qty input { width: 34px; text-align: center; border: none; font-family: inherit; font-size: .9rem; color: var(--ink); }
+    .pdp-qty input::-webkit-inner-spin-button, .pdp-qty input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    .pdp-qty input[type=number] { -moz-appearance: textfield; }
     .pdp-share { display: flex; align-items: center; gap: .6rem; margin-bottom: 1.8rem; }
     .pdp-share span { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
     .pdp-share button { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .45rem .9rem; font-size: .74rem; font-weight: 600; cursor: pointer; font-family: inherit; color: var(--ink); transition: all .15s; }
@@ -182,14 +188,21 @@
     <img src="../assets/img/escena-logo.jpg" alt="Logo ESCENA BMX" width="34" height="34" />
     <span class="name">ESCENA BMX</span>
   </a>
-  <nav class="nav-links" id="nav">
-    <a href="../index.html#comprar">Cómo comprar</a>
-    <a href="../index.html#categorias">Categorías</a>
-    <a href="../tienda.html">Tienda</a>
-    <a href="../index.html#faq">FAQ</a>
-    <a class="nav-cta" href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp</a>
-  </nav>
-  <button class="burger" id="burger" aria-label="Menú">☰</button>
+  <div class="nav-right">
+    <nav class="nav-links" id="nav">
+      <a href="../tienda.html">Tienda</a>
+      <a href="../armar-bmx.html">Arma tu BMX</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#categorias">Categorías</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a class="nav-cta" href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+    <button class="cart-btn" id="cartBtnHeader" aria-label="Ver carrito">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-badge" id="cartBadgeHeader">0</span>
+    </button>
+    <button class="burger" id="burger" aria-label="Menú">☰</button>
+  </div>
 </header>
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -210,6 +223,12 @@
     <div class="pdp-price">$135.000 COP</div>
     <div class="pdp-actions">
       <a class="btn btn-ink" href="https://wa.me/573107630504?text=Hola%20ESCENA%20%F0%9F%90%95%2C%20quiero%20pedir%3A%20Direcci%C3%B3n%20BMX%20Negra%20%28%29%20%E2%80%94%20%24135.000%20COP.%20%C2%BFEst%C3%A1%20disponible%3F" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      <div class="pdp-qty">
+        <button type="button" id="qtyDec" aria-label="Reducir cantidad">&minus;</button>
+        <input type="number" class="qty-input" id="qtyInput" value="1" min="1" />
+        <button type="button" id="qtyInc" aria-label="Aumentar cantidad">+</button>
+      </div>
+      <button type="button" class="add-cart-btn" data-slug="direccion-negra" data-n="Dirección BMX Negra" data-brand="ESCENA BIKE SHOP" data-price="135000" data-img="assets/img/products/direccion-negra.jpg">Agregar al carrito</button>
     </div>
     <div class="pdp-share">
       <span>Compartir</span>
@@ -354,6 +373,17 @@
       });
     });
   }
+
+  /* ---- Qty stepper ---- */
+  var qtyInput = document.getElementById("qtyInput");
+  var qtyDec = document.getElementById("qtyDec");
+  var qtyInc = document.getElementById("qtyInc");
+  if (qtyInput) {
+    qtyDec.addEventListener("click", function(){ qtyInput.value = Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1); });
+    qtyInc.addEventListener("click", function(){ qtyInput.value = (parseInt(qtyInput.value, 10) || 1) + 1; });
+  }
 </script>
+<script>var ESCENA_ROOT = "../";</script>
+<script src="../assets/js/cart.js"></script>
 </body>
 </html>
