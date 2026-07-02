@@ -142,25 +142,34 @@
     /* ============ TOP BAR / NAV ============ */
     header.top-bar {
       position: sticky; top: 0; z-index: 100;
-      background: #fff; height: 64px; padding: 0 1.5rem;
+      background: #fff; height: 84px; padding: 0 1.8rem;
       display: flex; align-items: center; justify-content: space-between;
       border-bottom: 1px solid var(--line);
     }
-    .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
-    .brand img { width: 34px; height: 34px; border-radius: 50%; background: #fff; border: 1px solid var(--line); }
-    .brand .name { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; letter-spacing: .1em; }
-    .nav-links { display: flex; gap: 1.6rem; align-items: center; }
-    .nav-links a { color: #555; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-cta { color: #fff !important; background: var(--ink); padding: .5rem .9rem; border-radius: 4px; font-weight: 700; border: 1px solid var(--ink); }
-    .nav-cta:hover { color: #fff !important; opacity: .85; }
-    .burger { display: none; background: none; border: 0; color: var(--ink); font-size: 1.5rem; cursor: pointer; }
-    @media (max-width: 860px) {
-      .nav-links { position: fixed; inset: 64px 0 auto 0; background: #fff; flex-direction: column; gap: 0; padding: .5rem 1.5rem 1.5rem; transform: translateY(-120%); transition: transform .3s; border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0,0,0,.06); }
+    .brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; }
+    .brand img { width: 52px; height: 52px; border-radius: 50%; background: #fff; border: 1px solid var(--line); }
+    .brand .name { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: 1.85rem; letter-spacing: .09em; }
+    .nav-right { display: flex; align-items: center; gap: 1.3rem; }
+    .nav-links { display: flex; gap: .3rem; align-items: center; }
+    .nav-links a { color: #444; font-size: .8rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; text-decoration: none; transition: color .2s, background .2s; padding: .7rem .95rem; border-radius: 6px; }
+    .nav-links a:hover { color: var(--ink); background: var(--panel); }
+    .nav-cta { color: #fff !important; background: var(--ink); padding: .85rem 1.5rem !important; border-radius: 6px; font-weight: 700; border: 1px solid var(--ink); margin-left: .3rem; }
+    .nav-cta:hover { color: #fff !important; opacity: .85; background: var(--ink) !important; }
+    .cart-btn { width: 46px; height: 46px; }
+    .cart-btn svg { width: 26px; height: 26px; }
+    .burger { display: none; background: none; border: 0; color: var(--ink); font-size: 1.9rem; cursor: pointer; line-height: 1; }
+    @media (max-width: 980px) {
+      .nav-links { position: fixed; inset: 84px 0 auto 0; background: #fff; flex-direction: column; gap: 0; padding: .5rem 1.8rem 1.8rem; transform: translateY(-120%); transition: transform .3s; border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0,0,0,.06); align-items: stretch; }
       .nav-links.open { transform: translateY(0); }
-      .nav-links a { padding: .9rem 0; border-bottom: 1px solid var(--line); width: 100%; color: var(--ink); }
-      .nav-cta { text-align: center; margin-top: .8rem; }
+      .nav-links a { padding: 1.05rem .2rem; border-bottom: 1px solid var(--line); width: 100%; color: var(--ink); border-radius: 0; font-size: .88rem; }
+      .nav-cta { text-align: center; margin-top: .9rem; margin-left: 0; }
       .burger { display: block; }
+    }
+    @media (max-width: 480px) {
+      header.top-bar { height: 72px; padding: 0 1.1rem; }
+      .brand img { width: 42px; height: 42px; }
+      .brand .name { font-size: 1.5rem; }
+      .nav-links { inset: 72px 0 auto 0; }
     }
 
     /* ============ HERO (split layout) ============ */
@@ -191,29 +200,51 @@
       .hero-copy p.lead { margin-left: auto; margin-right: auto; }
     }
 
-    /* ============ STAMP STRIP (rotating stamped word, replaces old scrolling marquee) ============ */
-    .stamp-strip { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); padding: 1.3rem 0; overflow: hidden; }
-    .stamp-inner { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; align-items: center; gap: .8rem; }
-    .stamp-wrap { position: relative; display: inline-flex; align-items: center; justify-content: center; padding: .2rem 1.2rem; }
-    .stamp-wrap .ring { position: absolute; inset: -8px; border: 2px solid #fff; border-radius: 8px; opacity: 0; pointer-events: none; }
-    .stamp-text { font-family: 'Bebas Neue', sans-serif; letter-spacing: .14em; font-size: clamp(1.3rem, 4vw, 2.1rem); color: #fff; text-align: center; white-space: nowrap; display: inline-block; }
-    .stamp-wrap.stamping .stamp-text { animation: stampIn .5s cubic-bezier(.2,1.7,.4,1); }
-    .stamp-wrap.stamping .ring { animation: stampRing .5s ease-out; }
-    @keyframes stampIn {
-      0% { opacity: 0; transform: scale(2.3) rotate(-9deg); filter: blur(2px); }
-      55% { opacity: 1; transform: scale(.94) rotate(2deg); filter: blur(0); }
-      78% { transform: scale(1.04) rotate(-1deg); }
-      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    /* ============ IMPACT BAND (skid-slam kinetic type, replaces old scrolling marquee) ============ */
+    .stamp-strip { position: relative; background: var(--ink); padding: 3.4rem 0; overflow: hidden; isolation: isolate; }
+    .stamp-strip::before, .stamp-strip::after {
+      content: ""; position: absolute; left: 0; right: 0; height: 9px;
+      background: repeating-linear-gradient(-45deg, #fff 0 11px, var(--ink) 11px 22px);
     }
-    @keyframes stampRing {
-      0% { opacity: .9; transform: scale(.9) rotate(-4deg); border-width: 3px; }
-      100% { opacity: 0; transform: scale(1.7) rotate(4deg); border-width: 1px; }
+    .stamp-strip::before { top: 0; }
+    .stamp-strip::after { bottom: 0; }
+    .stamp-texture { position: absolute; inset: 0; z-index: 0; opacity: .5; pointer-events: none;
+      background-image: repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0px, rgba(255,255,255,.05) 1px, transparent 1px, transparent 26px); }
+    .stamp-inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
+    .stamp-wrap { position: relative; display: inline-flex; align-items: center; justify-content: center; padding: .3rem 1.6rem; min-height: 3.6rem; }
+    .stamp-text { position: relative; z-index: 2; font-family: 'Bebas Neue', sans-serif; letter-spacing: .14em; font-size: clamp(2.1rem, 7vw, 4.4rem); color: #fff; text-align: center; white-space: nowrap; display: inline-block; text-shadow: 0 6px 18px rgba(0,0,0,.4); }
+    .skid { position: absolute; top: 50%; left: -70%; width: 240%; height: 58%; transform: translateY(-50%) skewX(-16deg); z-index: 1;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.85) 42%, rgba(255,255,255,.85) 58%, transparent 100%);
+      filter: blur(7px); opacity: 0; pointer-events: none; }
+    .stamp-wrap.stamping .skid { animation: skidPass .55s cubic-bezier(.2,.7,.3,1); }
+    .stamp-wrap.stamping .stamp-text { animation: slamIn .58s cubic-bezier(.16,1.6,.3,1); }
+    .stamp-inner.shake { animation: impactShake .32s ease; }
+    @keyframes skidPass {
+      0% { opacity: 0; left: -70%; }
+      30% { opacity: .9; }
+      65% { opacity: .35; }
+      100% { opacity: 0; left: 55%; }
     }
-    .stamp-dots { display: flex; gap: .4rem; }
+    @keyframes slamIn {
+      0% { opacity: 0; transform: scale(3.4) rotate(-7deg); filter: blur(4px); letter-spacing: .5em; }
+      50% { opacity: 1; transform: scale(.92) rotate(1.8deg); filter: blur(0); }
+      72% { transform: scale(1.05) rotate(-.8deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); letter-spacing: .14em; }
+    }
+    @keyframes impactShake {
+      0% { transform: translate(0,0); }
+      18% { transform: translate(-4px, 2px); }
+      36% { transform: translate(4px, -2px); }
+      54% { transform: translate(-3px, 1px); }
+      72% { transform: translate(3px, 0); }
+      100% { transform: translate(0,0); }
+    }
+    .stamp-dots { display: flex; gap: .45rem; }
     .stamp-dots i { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.25); font-style: normal; transition: background .25s, transform .25s; }
-    .stamp-dots i.active { background: #fff; transform: scale(1.35); }
+    .stamp-dots i.active { background: #fff; transform: scale(1.4); }
+    @media (max-width: 640px) { .stamp-strip { padding: 2.4rem 0; } }
     @media (prefers-reduced-motion: reduce) {
-      .stamp-wrap.stamping .stamp-text, .stamp-wrap.stamping .ring { animation: none; }
+      .stamp-wrap.stamping .stamp-text, .stamp-wrap.stamping .skid, .stamp-inner.shake { animation: none; }
     }
 
     /* ============ SECTIONS ============ */
@@ -478,11 +509,12 @@
   </div>
 </section>
 
-<!-- ============ STAMP STRIP ============ -->
+<!-- ============ IMPACT BAND ============ -->
 <div class="stamp-strip" aria-hidden="true">
-  <div class="stamp-inner">
+  <div class="stamp-texture"></div>
+  <div class="stamp-inner" id="stampInner">
     <div class="stamp-wrap" id="stampWrap">
-      <span class="ring"></span>
+      <span class="skid" id="stampSkid"></span>
       <span class="stamp-text" id="stampText">CULT</span>
     </div>
     <div class="stamp-dots" id="stampDots"></div>
@@ -851,8 +883,9 @@
   burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
   nav.addEventListener("click", function(e){ if(e.target.tagName==="A") nav.classList.remove("open"); });
 
-  /* ---- Stamp strip rotator ---- */
+  /* ---- Impact band rotator (skid + slam + shake) ---- */
   var STAMP_ITEMS = ["CULT", "FIEND", "ÉCLAT", "VOLUME", "MUTANY", "FEDERAL", "ODYSSEY", "STOLEN", "+100 PARTES EN STOCK", "ENVÍOS A TODO COLOMBIA", "PARTES 100% ORIGINALES"];
+  var stampInner = document.getElementById("stampInner");
   var stampWrap = document.getElementById("stampWrap");
   var stampText = document.getElementById("stampText");
   var stampDots = document.getElementById("stampDots");
@@ -864,15 +897,17 @@
   var stampIdx = 0;
   function showStamp(i){
     stampWrap.classList.remove("stamping");
+    stampInner.classList.remove("shake");
     void stampWrap.offsetWidth;
     stampText.textContent = STAMP_ITEMS[i];
     stampWrap.classList.add("stamping");
     stampDots.querySelectorAll("i").forEach(function(d, di){ d.classList.toggle("active", di === i); });
+    setTimeout(function(){ stampInner.classList.add("shake"); }, 290);
   }
   setInterval(function(){
     stampIdx = (stampIdx + 1) % STAMP_ITEMS.length;
     showStamp(stampIdx);
-  }, 2200);
+  }, 2400);
 
   /* ---- Newsletter popup (shows on every visit, no suppression) ---- */
   var nlOverlay = document.getElementById("nlOverlay");
