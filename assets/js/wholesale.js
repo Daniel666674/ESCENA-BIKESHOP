@@ -1,4 +1,9 @@
-/* ESCENA wholesale mode — demo-level retailer pricing (15% off), client-side only */
+/* ESCENA wholesale mode — demo-level retailer pricing (15% off), client-side only.
+   DEPLOYMENT TODO: with <5 retailers, swap DEMO_PASSWORD for a small per-retailer
+   allowlist (e.g. var CODES = {"ESCENA15-TIENDAX": "Tienda X", ...}) so each
+   retailer can be revoked individually and orders can be attributed to whoever's
+   code was used. Still no backend needed — just check membership in login()
+   instead of equality against one shared string. Not done for the demo. */
 (function () {
   var WS_KEY = "escena_wholesale_v1";
   var DISCOUNT = 0.15;
