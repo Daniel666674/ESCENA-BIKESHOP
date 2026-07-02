@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO ============ -->
+  <title>Arma tu BMX — Configurador de Partes | ESCENA BIKE SHOP</title>
+  <meta name="description" content="Armá tu BMX pieza por pieza: horquilla, manubrio, stem, bielas, bujes, sillín y más. Elegí entre más de 100 partes en stock y pedí tu build completo por WhatsApp." />
+  <meta name="keywords" content="armar BMX, configurador BMX, build BMX, arma tu bicicleta BMX, partes BMX Colombia, Escena Bike Shop" />
+  <meta name="author" content="ESCENA BIKE SHOP" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="geo.region" content="CO" />
+  <meta name="geo.placename" content="Colombia" />
+  <link rel="canonical" href="https://escenabikeshop.com/armar-bmx.html" />
+  <link rel="alternate" hreflang="es-co" href="https://escenabikeshop.com/armar-bmx.html" />
+
+  <!-- ============ Open Graph / Social ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ESCENA BIKE SHOP" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:title" content="Arma tu BMX — Configurador de Partes | ESCENA BIKE SHOP" />
+  <meta property="og:description" content="Armá tu BMX pieza por pieza y pedí tu build completo por WhatsApp. Más de 100 partes en stock." />
+  <meta property="og:url" content="https://escenabikeshop.com/armar-bmx.html" />
+  <meta property="og:image" content="https://escenabikeshop.com/assets/img/escena-logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Arma tu BMX — Configurador de Partes | ESCENA BIKE SHOP" />
+  <meta name="twitter:description" content="Armá tu BMX pieza por pieza y pedí tu build completo por WhatsApp." />
+  <meta name="twitter:image" content="https://escenabikeshop.com/assets/img/escena-logo.jpg" />
+
+  <!-- ============ Icons / Manifest ============ -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/escena-logo.svg" />
+  <link rel="apple-touch-icon" href="assets/img/escena-logo.jpg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="assets/css/cart.css" />
+
+  <!-- ============ Fonts ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ============ Structured Data ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://escenabikeshop.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Arma tu BMX", "item": "https://escenabikeshop.com/armar-bmx.html" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #ffffff; --panel: #f6f6f4; --ink: #0A0A0A; --muted: #666; --line: #ececeb; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; font-weight: 700; text-decoration: none; border-radius: 4px; padding: .95rem 1.8rem; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; transition: transform .15s, opacity .2s; border: none; cursor: pointer; font-family: inherit; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-ink { background: var(--ink); color: #fff; }
+    .btn-ink:hover { opacity: .88; }
+    .btn-outline { background: #fff; color: var(--ink); border: 1.5px solid var(--ink); }
+    .btn-outline:hover { background: var(--ink); color: #fff; }
+    .btn:disabled { opacity: .35; cursor: not-allowed; transform: none !important; }
+    .btn-text { background: none; border: none; color: var(--muted); font-size: .8rem; text-decoration: underline; cursor: pointer; font-family: inherit; padding: .5rem 0; }
+    .btn-text:hover { color: var(--ink); }
+
+    /* ---- utility / nav (shared pattern) ---- */
+    .utility { background: var(--ink); color: rgba(255,255,255,.65); font-size: .72rem; letter-spacing: .04em; }
+    .utility .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 34px; }
+    .utility a { color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s; }
+    .utility a:hover { color: #fff; }
+    .utility .u-links { display: flex; gap: 1.2rem; }
+    @media (max-width: 640px) { .utility .u-info { display: none; } }
+
+    header.top-bar { position: sticky; top: 0; z-index: 100; background: #fff; height: 64px; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+    .brand img { width: 34px; height: 34px; border-radius: 50%; background: #fff; border: 1px solid var(--line); }
+    .brand .name { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; letter-spacing: .1em; }
+    .nav-links { display: flex; gap: 1.6rem; align-items: center; }
+    .nav-links a { color: #555; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+    .nav-cta { color: #fff !important; background: var(--ink); padding: .5rem .9rem; border-radius: 4px; font-weight: 700; border: 1px solid var(--ink); }
+    .nav-cta:hover { color: #fff !important; opacity: .85; }
+    .burger { display: none; background: none; border: 0; color: var(--ink); font-size: 1.5rem; cursor: pointer; }
+    @media (max-width: 860px) {
+      .nav-links { position: fixed; inset: 64px 0 auto 0; background: #fff; flex-direction: column; gap: 0; padding: .5rem 1.5rem 1.5rem; transform: translateY(-120%); transition: transform .3s; border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0,0,0,.06); }
+      .nav-links.open { transform: translateY(0); }
+      .nav-links a { padding: .9rem 0; border-bottom: 1px solid var(--line); width: 100%; color: var(--ink); }
+      .nav-cta { text-align: center; margin-top: .8rem; }
+      .burger { display: block; }
+    }
+
+    .breadcrumb { padding: 1.2rem 1.5rem 0; font-size: .78rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .3rem; max-width: 1180px; margin: 0 auto; }
+    .breadcrumb a { text-decoration: none; color: var(--muted); }
+    .breadcrumb a:hover { color: var(--ink); }
+    .breadcrumb .sep { opacity: .5; }
+    .breadcrumb .current { color: var(--ink); }
+
+    .page-head { max-width: 1180px; margin: 0 auto; padding: 1.2rem 1.5rem 1.6rem; }
+    .page-head .eyebrow { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .page-head h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: .02em; margin: .3rem 0 .6rem; }
+    .page-head p { color: var(--muted); font-size: .95rem; max-width: 640px; }
+
+    /* ---- build bar ---- */
+    .build-bar { position: sticky; top: 64px; z-index: 90; background: var(--ink); color: #fff; }
+    .build-bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 52px; }
+    .build-bar .bb-info { font-size: .8rem; display: flex; gap: .5rem; align-items: baseline; flex-wrap: wrap; }
+    .build-bar .bb-info .amt { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: .02em; }
+    .build-bar .bb-info .count { color: rgba(255,255,255,.6); font-size: .74rem; }
+    .build-bar button { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 5px; padding: .45rem .9rem; font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; font-family: inherit; transition: background .2s; }
+    .build-bar button:hover { background: rgba(255,255,255,.24); }
+
+    /* ---- progress ---- */
+    .progress-wrap { max-width: 1180px; margin: 0 auto; padding: 1.4rem 1.5rem 0; }
+    .progress-track { height: 4px; background: var(--line); border-radius: 999px; overflow: hidden; }
+    .progress-fill { height: 100%; background: var(--ink); border-radius: 999px; transition: width .3s ease; }
+
+    /* ---- wizard ---- */
+    #wizard { max-width: 1180px; margin: 0 auto; padding: 1.6rem 1.5rem 5rem; scroll-margin-top: 130px; }
+    .step-head { margin-bottom: 1.6rem; }
+    .step-head .step-count { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .step-head h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: .02em; margin: .3rem 0 .5rem; }
+    .step-head p { color: var(--muted); font-size: .9rem; max-width: 560px; }
+
+    .opt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; margin-bottom: 2rem; }
+    @media (max-width: 980px) { .opt-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 720px) { .opt-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 440px) { .opt-grid { grid-template-columns: 1fr; } }
+    .opt-card { position: relative; background: #fff; border: 1.5px solid var(--line); border-radius: 12px; overflow: hidden; text-align: left; cursor: pointer; padding: 0; font-family: inherit; transition: border-color .15s, box-shadow .15s, transform .15s; }
+    .opt-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.08); transform: translateY(-3px); }
+    .opt-card.selected { border-color: var(--ink); box-shadow: 0 0 0 1.5px var(--ink); }
+    .opt-ph { aspect-ratio: 1/1; background: #0A0A0A; overflow: hidden; }
+    .opt-ph img { width: 100%; height: 100%; object-fit: cover; }
+    .opt-body { padding: .8rem .9rem 1rem; }
+    .opt-brand { font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .opt-card h3 { font-size: .84rem; font-weight: 600; margin: .2rem 0 .3rem; line-height: 1.3; color: var(--ink); }
+    .opt-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; }
+    .opt-check { position: absolute; top: .6rem; right: .6rem; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 800; }
+    .opt-empty { color: var(--muted); font-size: .88rem; padding: 2rem 0; }
+
+    .step-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
+    .step-nav { display: flex; gap: .8rem; }
+
+    /* ---- summary ---- */
+    .summary-list { border-top: 1px solid var(--line); margin-bottom: 1.5rem; }
+    .summary-row { display: grid; grid-template-columns: 60px 1fr auto auto; gap: 1rem; align-items: center; padding: .9rem 0; border-bottom: 1px solid var(--line); }
+    .summary-row .sr-img { width: 60px; height: 60px; border-radius: 8px; overflow: hidden; background: #0A0A0A; }
+    .summary-row .sr-img img { width: 100%; height: 100%; object-fit: cover; }
+    .summary-row .sr-label { font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .summary-row h4 { font-size: .88rem; font-weight: 600; margin: .1rem 0; }
+    .summary-row .sr-brand { font-size: .74rem; color: var(--muted); }
+    .summary-row .sr-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; white-space: nowrap; }
+    .summary-row .sr-change { background: none; border: none; color: var(--muted); font-size: .74rem; text-decoration: underline; cursor: pointer; font-family: inherit; white-space: nowrap; }
+    .summary-row .sr-change:hover { color: var(--ink); }
+    @media (max-width: 560px) { .summary-row { grid-template-columns: 46px 1fr; } .summary-row .sr-price, .summary-row .sr-change { grid-column: 2; justify-self: start; } }
+    .summary-total { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; border-top: 2px solid var(--ink); margin-bottom: 1.5rem; }
+    .summary-total span:first-child { font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+    .summary-total .amt { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; }
+    .summary-actions { display: flex; flex-direction: column; gap: .8rem; max-width: 420px; margin-bottom: 1.5rem; }
+    .summary-actions .cart-checkout svg { width: 17px; height: 17px; }
+    .empty-msg { color: var(--muted); font-size: .92rem; padding: 1.5rem 0; }
+
+    /* ---- footer ---- */
+    footer { background: var(--ink); color: rgba(255,255,255,.4); padding: 3.5rem 1.5rem 2rem; }
+    footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; }
+    @media (max-width: 720px) { footer .wrap { grid-template-columns: 1fr; gap: 2rem; } }
+    footer .brand-col img { width: 54px; border-radius: 50%; background: #fff; margin-bottom: .9rem; }
+    footer .brand-col .name { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 1.6rem; letter-spacing: .1em; }
+    footer .brand-col p { font-size: .82rem; margin-top: .5rem; max-width: 320px; }
+    footer h4 { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: .1em; margin-bottom: 1rem; }
+    footer a { color: rgba(255,255,255,.5); text-decoration: none; display: block; padding: .3rem 0; font-size: .84rem; transition: color .2s; }
+    footer a:hover { color: #fff; }
+    .foot-social { display: flex; gap: .6rem; margin-top: .3rem; }
+    .foot-social a { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 0; }
+    .foot-social a svg { width: 18px; height: 18px; fill: #fff; }
+    .foot-social a:hover { opacity: .85; }
+    .ico-whatsapp { background: #25D366 !important; }
+    .ico-instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important; }
+    .pay-row { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .4rem; }
+    .pay-row span { font-size: .68rem; letter-spacing: .04em; color: rgba(255,255,255,.5); border: 1px solid rgba(255,255,255,.15); border-radius: 5px; padding: .25rem .5rem; }
+    .foot-bottom { max-width: 1180px; margin: 2.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; font-size: .76rem; }
+
+    .wa-float { position: fixed; bottom: 1.4rem; right: 1.4rem; z-index: 200; background: #25D366; color: #fff; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.25); text-decoration: none; transition: transform .15s; }
+    .wa-float:hover { transform: scale(1.08); }
+    .wa-float svg { width: 30px; height: 30px; fill: #fff; }
+
+    .nl-overlay { position: fixed; inset: 0; z-index: 500; background: rgba(10,10,10,.72); display: none; align-items: center; justify-content: center; padding: 1.2rem; }
+    .nl-overlay.show { display: flex; }
+    .nl-modal { background: #fff; border-radius: 14px; max-width: 420px; width: 100%; padding: 2.2rem 1.8rem 1.8rem; position: relative; text-align: center; box-shadow: 0 30px 80px rgba(0,0,0,.4); }
+    .nl-modal .nl-close { position: absolute; top: .8rem; right: .8rem; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--ink); }
+    .nl-modal .nl-close:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .nl-modal img { width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 1rem; background: #fff; border: 1px solid var(--line); }
+    .nl-modal h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: .03em; margin-bottom: .5rem; }
+    .nl-modal p { font-size: .85rem; color: var(--muted); margin-bottom: 1.3rem; }
+    .nl-form { display: flex; flex-direction: column; gap: .7rem; }
+    .nl-form input { border: 1.5px solid var(--line); border-radius: 8px; padding: .8rem 1rem; font-size: .9rem; font-family: inherit; }
+    .nl-form input:focus { outline: none; border-color: var(--ink); }
+    .nl-form button { display: flex; align-items: center; justify-content: center; gap: .5rem; background: #25D366; color: #fff; border: none; border-radius: 8px; padding: .85rem 1rem; font-weight: 700; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; font-family: inherit; transition: opacity .2s; }
+    .nl-form button:hover { opacity: .88; }
+    .nl-form button svg { width: 16px; height: 16px; fill: #fff; }
+    .nl-skip { margin-top: .9rem; font-size: .76rem; color: var(--muted); text-decoration: underline; cursor: pointer; background: none; border: none; font-family: inherit; }
+    .nl-note { font-size: .68rem; color: #999; margin-top: .8rem; }
+    .toast { position: fixed; bottom: 6.5rem; right: 1.4rem; z-index: 250; background: var(--ink); color: #fff; padding: .7rem 1.1rem; border-radius: 8px; font-size: .8rem; opacity: 0; transform: translateY(8px); transition: opacity .2s, transform .2s; pointer-events: none; }
+    .toast.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- ============ NEWSLETTER MODAL ============ -->
+<div class="nl-overlay" id="nlOverlay">
+  <div class="nl-modal">
+    <button class="nl-close" id="nlClose" aria-label="Cerrar">&times;</button>
+    <img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" />
+    <h3>ÚNETE A LA ESCENA</h3>
+    <p>Enterate primero de nuevos productos, restocks y promos. Dejanos tu número de WhatsApp y te escribimos.</p>
+    <form class="nl-form" id="nlForm">
+      <input type="tel" id="nlPhone" placeholder="300 123 4567" inputmode="tel" required />
+      <button type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>Suscribirme por WhatsApp</button>
+    </form>
+    <button class="nl-skip" id="nlSkip">Ahora no</button>
+    <p class="nl-note">Cero spam — solo novedades por WhatsApp.</p>
+  </div>
+</div>
+
+<!-- ============ UTILITY STRIP ============ -->
+<div class="utility">
+  <div class="wrap">
+    <span class="u-info">Lun – Sáb · Envíos a toda Colombia</span>
+    <div class="u-links">
+      <a href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp +57 310 763 0504</a>
+      <a href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="top-bar">
+  <a href="index.html" class="brand" aria-label="ESCENA BMX - Inicio">
+    <img src="assets/img/escena-logo.jpg" alt="Logo ESCENA BMX" width="34" height="34" />
+    <span class="name">ESCENA BMX</span>
+  </a>
+  <div class="nav-right">
+    <nav class="nav-links" id="nav">
+      <a href="tienda.html">Tienda</a>
+      <a href="armar-bmx.html" class="active">Arma tu BMX</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#categorias">Categorías</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="nav-cta" href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+    <button class="cart-btn" id="cartBtnHeader" aria-label="Ver carrito">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-badge" id="cartBadgeHeader">0</span>
+    </button>
+    <button class="burger" id="burger" aria-label="Menú">☰</button>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Inicio</a><span class="sep">/</span>
+  <span class="current">Arma tu BMX</span>
+</nav>
+
+<div class="page-head">
+  <span class="eyebrow">Configurador</span>
+  <h1>ARMA TU BMX</h1>
+  <p>Elegí pieza por pieza — horquilla, manubrio, stem, bielas, bujes, sillín y más — y armá tu build completo. Al final te mandamos todo listo por WhatsApp.</p>
+</div>
+
+<div class="build-bar">
+  <div class="wrap">
+    <div class="bb-info"><span class="amt" id="bbAmt">$0 COP</span><span class="count" id="bbCount">0 piezas seleccionadas</span></div>
+    <button type="button" id="bbSummaryBtn">Ver resumen</button>
+  </div>
+</div>
+
+<div class="progress-wrap">
+  <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+</div>
+
+<div id="wizard">
+  <div id="wizardBody"></div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="brand-col">
+      <img src="assets/img/escena-logo.jpg" alt="Logo ESCENA Bike Shop" width="54" />
+      <div class="name">ESCENA BIKE SHOP</div>
+      <p>Tienda de partes y componentes BMX en Colombia. Riders montando una tienda para riders.</p>
+      <div class="foot-social">
+        <a class="ico-whatsapp" href="https://wa.me/573107630504" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg></a>
+        <a class="ico-instagram" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C8.74 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.336 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.014 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.898 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.898-.421-.419-.69-.824-.897-1.38-.165-.42-.36-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.06-1.17.255-1.814.42-2.234.207-.57.477-.96.897-1.381.419-.419.81-.689 1.379-.896.42-.166 1.051-.36 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Tienda</h4>
+      <a href="tienda.html">Componentes</a>
+      <a href="armar-bmx.html">Arma tu BMX</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#categorias">Categorías</a>
+      <a href="index.html#faq">Preguntas frecuentes</a>
+    </div>
+    <div>
+      <h4>Info</h4>
+      <a href="envios.html">Envíos</a>
+      <a href="devoluciones.html">Devoluciones</a>
+      <a href="terminos.html">Términos</a>
+      <a href="politica-privacidad.html">Privacidad</a>
+      <a href="politica-cookies.html">Cookies</a>
+      <div class="pay-row">
+        <span>Nequi</span><span>Daviplata</span><span>Transferencia</span><span>Efectivo</span>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; 2026 ESCENA BIKE SHOP. Todos los derechos reservados.</span>
+    <span>Hecho en Colombia · Ride or die 🐕</span>
+  </div>
+</footer>
+
+<!-- ============ FLOAT WHATSAPP ============ -->
+<a class="wa-float" href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20armar%20mi%20BMX" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/products-data.js"></script>
+<script>
+var WA = "573107630504";
+
+/* ---- Mobile nav ---- */
+var burger = document.getElementById("burger"), nav = document.getElementById("nav");
+burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
+nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
+
+/* ---- Newsletter popup ---- */
+var nlOverlay = document.getElementById("nlOverlay");
+var nlClose = document.getElementById("nlClose");
+var nlSkip = document.getElementById("nlSkip");
+var nlForm = document.getElementById("nlForm");
+function openNL(){ nlOverlay.classList.add("show"); }
+function closeNL(){ nlOverlay.classList.remove("show"); }
+setTimeout(openNL, 900);
+nlClose.addEventListener("click", closeNL);
+nlSkip.addEventListener("click", closeNL);
+nlOverlay.addEventListener("click", function(e){ if (e.target === nlOverlay) closeNL(); });
+document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeNL(); });
+nlForm.addEventListener("submit", function(e){
+  e.preventDefault();
+  var phone = document.getElementById("nlPhone").value.trim();
+  if (!phone) return;
+  var msg = encodeURIComponent("Hola ESCENA 🐕, quiero unirme al newsletter para enterarme de nuevos productos y promos. Mi WhatsApp es: " + phone);
+  window.open("https://wa.me/" + WA + "?text=" + msg, "_blank", "noopener");
+  closeNL();
+});
+
+/* ---- Toast ---- */
+var toast = document.getElementById("toast");
+function showToast(msg){
+  toast.textContent = msg;
+  toast.classList.add("show");
+  setTimeout(function(){ toast.classList.remove("show"); }, 2200);
+}
+
+/* ============ CONFIGURATOR ============ */
+var WA_SVG_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>';
+
+var STEPS = [
+  { key: "horquillas", label: "Horquilla", cat: "horquillas" },
+  { key: "manubrios", label: "Manubrio", cat: "manubrios" },
+  { key: "stems", label: "Stem", cat: "stems" },
+  { key: "punos", label: "Puños", cat: "punos" },
+  { key: "dc", label: "Dirección y BB", cat: "dc" },
+  { key: "bielas", label: "Bielas", cat: "bielas" },
+  { key: "pinones", label: "Piñón", cat: "pinones" },
+  { key: "buje-d", label: "Buje delantero", cat: "bujes", filter: function(p){ return /delantero/i.test(p.n); } },
+  { key: "buje-t", label: "Buje trasero", cat: "bujes", filter: function(p){ return !/delantero/i.test(p.n); } },
+  { key: "sillines", label: "Sillín", cat: "sillines" },
+  { key: "tijas", label: "Tija", cat: "tijas" },
+  { key: "pedales", label: "Pedales", cat: "pedales" }
+];
+var EXTRAS_CATS = ["clavijas", "tornilleria", "piezas", "herramientas", "rines"];
+var TOTAL_STEPS = STEPS.length + 2; /* + extras + summary */
+
+var state = { picks: {}, extras: [] };
+var currentStep = 0;
+
+function cop(n){ return "$" + Math.round(n).toLocaleString("es-CO") + " COP"; }
+function slugOf(p){ return p.img.split("/").pop().replace(/\.[a-zA-Z0-9]+$/, ""); }
+function productsFor(step){
+  return ESCENA_PRODUCTS.filter(function(p){
+    if (p.cat !== step.cat) return false;
+    if (step.filter) return step.filter(p);
+    return true;
+  });
+}
+function extrasProducts(){
+  return ESCENA_PRODUCTS.filter(function(p){ return EXTRAS_CATS.indexOf(p.cat) !== -1; });
+}
+function calcTotal(){
+  var total = 0, count = 0;
+  STEPS.forEach(function(s){ var p = state.picks[s.key]; if (p) { total += p.price; count++; } });
+  state.extras.forEach(function(p){ total += p.price; count++; });
+  return { total: total, count: count };
+}
+function allRows(){
+  var rows = [];
+  STEPS.forEach(function(s, i){
+    var p = state.picks[s.key];
+    if (p) rows.push({ label: s.label, product: p, stepIndex: i });
+  });
+  state.extras.forEach(function(p){ rows.push({ label: "Extra", product: p, stepIndex: STEPS.length }); });
+  return rows;
+}
+
+function updateBuildBar(){
+  var calc = calcTotal();
+  document.getElementById("bbAmt").textContent = cop(calc.total);
+  document.getElementById("bbCount").textContent = calc.count + (calc.count === 1 ? " pieza seleccionada" : " piezas seleccionadas");
+  document.getElementById("progressFill").style.width = Math.round(((currentStep + 1) / TOTAL_STEPS) * 100) + "%";
+}
+
+function optCardHTML(p, selected){
+  var slug = slugOf(p);
+  return '<button type="button" class="opt-card' + (selected ? ' selected' : '') + '" data-slug="' + slug + '">' +
+    (selected ? '<span class="opt-check">&#10003;</span>' : '') +
+    '<div class="opt-ph"><img src="' + p.img + '" alt="' + p.n + '" loading="lazy" width="220" height="220"></div>' +
+    '<div class="opt-body"><span class="opt-brand">' + p.brand + '</span><h3>' + p.n + '</h3><div class="opt-price">' + cop(p.price) + '</div></div>' +
+  '</button>';
+}
+
+function renderStep(){
+  var body = document.getElementById("wizardBody");
+  if (currentStep < STEPS.length) {
+    renderPickStep(body, STEPS[currentStep]);
+  } else if (currentStep === STEPS.length) {
+    renderExtrasStep(body);
+  } else {
+    renderSummary(body);
+  }
+  updateBuildBar();
+  var wiz = document.getElementById("wizard");
+  var top = wiz.getBoundingClientRect().top + window.pageYOffset - 120;
+  window.scrollTo({ top: top, behavior: "smooth" });
+}
+
+function goNext(){ if (currentStep < TOTAL_STEPS - 1) { currentStep++; renderStep(); } }
+function goPrev(){ if (currentStep > 0) { currentStep--; renderStep(); } }
+
+function renderPickStep(body, step){
+  var options = productsFor(step);
+  var picked = state.picks[step.key];
+  var html = '<div class="step-head"><span class="step-count">Paso ' + (currentStep + 1) + ' de ' + STEPS.length + '</span>' +
+    '<h2>' + step.label + '</h2>' +
+    '<p>Elegí ' + step.label.toLowerCase() + ' para tu build, o pasá al siguiente paso si no la necesitás.</p></div>';
+
+  if (options.length === 0) {
+    html += '<p class="opt-empty">No hay opciones disponibles en esta categoría por ahora.</p>';
+  } else {
+    html += '<div class="opt-grid">' + options.map(function(p){ return optCardHTML(p, picked && picked.img === p.img); }).join("") + '</div>';
+  }
+
+  html += '<div class="step-actions">' +
+    '<button type="button" class="btn-text" id="skipStep">Omitir esta pieza →</button>' +
+    '<div class="step-nav">' +
+      (currentStep > 0 ? '<button type="button" class="btn btn-outline" id="prevStep">← Anterior</button>' : '') +
+      '<button type="button" class="btn btn-ink" id="nextStep">Siguiente →</button>' +
+    '</div>' +
+  '</div>';
+  body.innerHTML = html;
+
+  body.querySelectorAll(".opt-card").forEach(function(card){
+    card.addEventListener("click", function(){
+      var slug = card.getAttribute("data-slug");
+      var product = options.find(function(p){ return slugOf(p) === slug; });
+      if (state.picks[step.key] && state.picks[step.key].img === product.img) {
+        delete state.picks[step.key];
+      } else {
+        state.picks[step.key] = product;
+      }
+      renderPickStep(body, step);
+      updateBuildBar();
+    });
+  });
+  document.getElementById("skipStep").addEventListener("click", goNext);
+  document.getElementById("nextStep").addEventListener("click", goNext);
+  var prevBtn = document.getElementById("prevStep");
+  if (prevBtn) prevBtn.addEventListener("click", goPrev);
+}
+
+function renderExtrasStep(body){
+  var options = extrasProducts();
+  var html = '<div class="step-head"><span class="step-count">Extras</span>' +
+    '<h2>Accesorios y piezas extra</h2>' +
+    '<p>Sumá clavijas, tornillería, rines u otras piezas si las necesitás. Podés elegir varias o ninguna.</p></div>';
+
+  html += '<div class="opt-grid">' + options.map(function(p){
+    var selected = state.extras.some(function(e){ return e.img === p.img; });
+    return optCardHTML(p, selected);
+  }).join("") + '</div>';
+
+  html += '<div class="step-actions">' +
+    '<button type="button" class="btn-text" id="skipStep">Omitir extras →</button>' +
+    '<div class="step-nav">' +
+      '<button type="button" class="btn btn-outline" id="prevStep">← Anterior</button>' +
+      '<button type="button" class="btn btn-ink" id="nextStep">Ver resumen →</button>' +
+    '</div>' +
+  '</div>';
+  body.innerHTML = html;
+
+  body.querySelectorAll(".opt-card").forEach(function(card){
+    card.addEventListener("click", function(){
+      var slug = card.getAttribute("data-slug");
+      var product = options.find(function(p){ return slugOf(p) === slug; });
+      var idx = state.extras.findIndex(function(e){ return e.img === product.img; });
+      if (idx > -1) state.extras.splice(idx, 1);
+      else state.extras.push(product);
+      renderExtrasStep(body);
+      updateBuildBar();
+    });
+  });
+  document.getElementById("skipStep").addEventListener("click", goNext);
+  document.getElementById("nextStep").addEventListener("click", goNext);
+  document.getElementById("prevStep").addEventListener("click", goPrev);
+}
+
+function renderSummary(body){
+  var rows = allRows();
+  var calc = calcTotal();
+  var html = '<div class="step-head"><span class="step-count">Resumen</span><h2>Tu BMX armado</h2><p>Revisá tu selección antes de pedir por WhatsApp.</p></div>';
+
+  if (rows.length === 0) {
+    html += '<p class="empty-msg">No seleccionaste ninguna pieza todavía. Volvé atrás y elegí al menos una para poder pedirla.</p>';
+  } else {
+    html += '<div class="summary-list">' + rows.map(function(r){
+      return '<div class="summary-row">' +
+        '<div class="sr-img"><img src="' + r.product.img + '" alt="' + r.product.n + '" width="60" height="60"></div>' +
+        '<div class="sr-name"><span class="sr-label">' + r.label + '</span><h4>' + r.product.n + '</h4><span class="sr-brand">' + r.product.brand + '</span></div>' +
+        '<div class="sr-price">' + cop(r.product.price) + '</div>' +
+        '<button type="button" class="sr-change" data-step="' + r.stepIndex + '">Cambiar</button>' +
+      '</div>';
+    }).join("") + '</div>';
+  }
+
+  html += '<div class="summary-total"><span>Total estimado</span><span class="amt">' + cop(calc.total) + '</span></div>';
+  html += '<div class="summary-actions">' +
+    '<button type="button" class="btn cart-checkout" id="waOrderBtn"' + (rows.length === 0 ? ' disabled' : '') + '>' + WA_SVG_ICON + 'Pedir armado por WhatsApp</button>' +
+    '<button type="button" class="btn btn-outline" id="addAllCartBtn"' + (rows.length === 0 ? ' disabled' : '') + '>Agregar todo al carrito</button>' +
+  '</div>';
+  html += '<div class="step-actions" style="border-top:none;padding-top:0;">' +
+    '<button type="button" class="btn-text" id="prevStep">← Anterior</button>' +
+    '<button type="button" class="btn-text" id="restartBtn">Empezar de nuevo</button>' +
+  '</div>';
+  body.innerHTML = html;
+
+  body.querySelectorAll(".sr-change").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      currentStep = parseInt(btn.getAttribute("data-step"), 10);
+      renderStep();
+    });
+  });
+
+  var waBtn = document.getElementById("waOrderBtn");
+  if (waBtn && rows.length) {
+    waBtn.addEventListener("click", function(){
+      var lines = ["Hola ESCENA 🐕, quiero armar mi BMX con estas piezas:"];
+      rows.forEach(function(r){
+        lines.push("• " + r.label + ": " + r.product.n + " (" + r.product.brand + ") — " + cop(r.product.price));
+      });
+      lines.push("Total estimado: " + cop(calc.total));
+      lines.push("¿Está todo disponible?");
+      var msg = encodeURIComponent(lines.join("\n"));
+      window.open("https://wa.me/" + WA + "?text=" + msg, "_blank", "noopener");
+    });
+  }
+
+  var addAllBtn = document.getElementById("addAllCartBtn");
+  if (addAllBtn && rows.length) {
+    addAllBtn.addEventListener("click", function(){
+      rows.forEach(function(r){
+        window.EscenaCart.add({ slug: slugOf(r.product), n: r.product.n, brand: r.product.brand, price: r.product.price, img: r.product.img }, 1);
+      });
+      showToast("Build agregado al carrito");
+    });
+  }
+
+  document.getElementById("prevStep").addEventListener("click", goPrev);
+  document.getElementById("restartBtn").addEventListener("click", function(){
+    state = { picks: {}, extras: [] };
+    currentStep = 0;
+    renderStep();
+  });
+}
+
+document.getElementById("bbSummaryBtn").addEventListener("click", function(){
+  currentStep = TOTAL_STEPS - 1;
+  renderStep();
+});
+
+renderStep();
+</script>
+<script>var ESCENA_ROOT = "";</script>
+<script src="assets/js/cart.js"></script>
+</body>
+</html>

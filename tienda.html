@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO ============ -->
+  <title>Tienda — Más de 100 Partes BMX | ESCENA BIKE SHOP</title>
+  <meta name="description" content="Catálogo completo de ESCENA Bike Shop: más de 100 partes BMX en stock — stems, manubrios, horquillas, bielas, bujes, piñones, pedales, sillines y más. Filtrá por categoría y pedí por WhatsApp." />
+  <meta name="keywords" content="tienda BMX Colombia, partes BMX, catálogo BMX, stem BMX, manubrio BMX, horquilla BMX, bielas BMX, buje BMX, rines BMX, piñon BMX, pedales BMX, sillin BMX, Escena Bike Shop" />
+  <meta name="author" content="ESCENA BIKE SHOP" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="geo.region" content="CO" />
+  <meta name="geo.placename" content="Colombia" />
+  <link rel="canonical" href="https://escenabikeshop.com/tienda.html" />
+  <link rel="alternate" hreflang="es-co" href="https://escenabikeshop.com/tienda.html" />
+
+  <!-- ============ Open Graph / Social ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ESCENA BIKE SHOP" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:title" content="Tienda — Más de 100 Partes BMX | ESCENA BIKE SHOP" />
+  <meta property="og:description" content="Catálogo completo: stems, manubrios, horquillas, bielas, bujes, piñones, pedales, sillines y más. Pedidos por WhatsApp." />
+  <meta property="og:url" content="https://escenabikeshop.com/tienda.html" />
+  <meta property="og:image" content="https://escenabikeshop.com/assets/img/escena-logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tienda — Más de 100 Partes BMX | ESCENA BIKE SHOP" />
+  <meta name="twitter:description" content="Catálogo completo de partes BMX. Pedidos por WhatsApp." />
+  <meta name="twitter:image" content="https://escenabikeshop.com/assets/img/escena-logo.jpg" />
+
+  <!-- ============ Icons / Manifest ============ -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/escena-logo.svg" />
+  <link rel="apple-touch-icon" href="assets/img/escena-logo.jpg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="assets/css/cart.css" />
+
+  <!-- ============ Fonts ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ============ Structured Data ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://escenabikeshop.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tienda", "item": "https://escenabikeshop.com/tienda.html" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #ffffff;
+      --panel: #f6f6f4;
+      --ink: #0A0A0A;
+      --muted: #666;
+      --line: #ececeb;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: .04em; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; text-decoration: none; border-radius: 4px; padding: .95rem 1.8rem; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; transition: transform .15s, opacity .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: #fff; color: var(--ink); border: 1px solid #fff; }
+    .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
+    .btn-ink { background: var(--ink); color: #fff; }
+
+    /* ============ UTILITY STRIP ============ */
+    .utility { background: var(--ink); color: rgba(255,255,255,.65); font-size: .72rem; letter-spacing: .04em; }
+    .utility .wrap { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; height: 34px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .utility a { color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s; }
+    .utility a:hover { color: #fff; }
+    .utility .u-links { display: flex; gap: 1.2rem; }
+    @media (max-width: 640px) { .utility .u-info { display: none; } }
+
+    /* ============ TOP BAR / NAV ============ */
+    header.top-bar {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff; height: 64px; padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+    .brand img { width: 34px; height: 34px; border-radius: 50%; background: #fff; border: 1px solid var(--line); }
+    .brand .name { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; letter-spacing: .1em; }
+    .nav-links { display: flex; gap: 1.6rem; align-items: center; }
+    .nav-links a { color: #555; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+    .nav-cta { color: #fff !important; background: var(--ink); padding: .5rem .9rem; border-radius: 4px; font-weight: 700; border: 1px solid var(--ink); }
+    .nav-cta:hover { color: #fff !important; opacity: .85; }
+    .burger { display: none; background: none; border: 0; color: var(--ink); font-size: 1.5rem; cursor: pointer; }
+    @media (max-width: 860px) {
+      .nav-links { position: fixed; inset: 64px 0 auto 0; background: #fff; flex-direction: column; gap: 0; padding: .5rem 1.5rem 1.5rem; transform: translateY(-120%); transition: transform .3s; border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0,0,0,.06); }
+      .nav-links.open { transform: translateY(0); }
+      .nav-links a { padding: .9rem 0; border-bottom: 1px solid var(--line); width: 100%; color: var(--ink); }
+      .nav-cta { text-align: center; margin-top: .8rem; }
+      .burger { display: block; }
+    }
+
+    /* ============ PAGE HEADER ============ */
+    .page-head { background: var(--ink); padding: 2.6rem 1.5rem; }
+    .page-head .wrap { max-width: 1180px; margin: 0 auto; }
+    .page-head .crumb { font-size: .74rem; color: rgba(255,255,255,.5); margin-bottom: .6rem; }
+    .page-head .crumb a { color: rgba(255,255,255,.5); text-decoration: none; }
+    .page-head .crumb a:hover { color: #fff; }
+    .page-head h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.2rem, 6vw, 3.6rem); letter-spacing: .03em; line-height: 1; }
+    .page-head p { color: rgba(255,255,255,.6); margin-top: .5rem; font-size: .9rem; }
+
+    /* ============ SECTIONS / SHOP ============ */
+    section { padding: 3rem 1.5rem 4.5rem; }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .filters { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .filters button { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; font-weight: 600; color: var(--muted); transition: all .15s; font-family: inherit; }
+    .filters button.active, .filters button:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
+    @media (max-width: 980px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 440px) { .grid { grid-template-columns: 1fr; } }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .15s; }
+    .card:hover { box-shadow: 0 14px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
+    .card .ph-link { display: block; }
+    .card .ph { position: relative; aspect-ratio: 1 / 1; background: #0A0A0A; overflow: hidden; }
+    .card .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .card:hover .ph img { transform: scale(1.05); }
+    .card .tag { position: absolute; top: .7rem; left: .7rem; background: #fff; color: var(--ink); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .55rem; border-radius: 3px; }
+    .card .body { padding: 1rem 1rem 1.2rem; display: flex; flex-direction: column; flex: 1; }
+    .card .brand-lbl { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .card h3 { font-size: .92rem; font-weight: 600; margin: .25rem 0 .1rem; line-height: 1.3; }
+    .card .title-link { color: var(--ink); text-decoration: none; }
+    .card .title-link:hover { text-decoration: underline; }
+    .card .spec { font-size: .76rem; color: var(--muted); margin-bottom: .8rem; flex: 1; }
+    .card .price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .02em; margin-bottom: .7rem; }
+    .card .buy { display: block; text-align: center; background: var(--ink); color: #fff; text-decoration: none; padding: .7rem; border-radius: 5px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s, color .2s; border: 1px solid var(--ink); }
+    .card .buy:hover { background: #fff; color: var(--ink); }
+    .card-actions { display: flex; flex-direction: column; gap: .5rem; }
+    .card-actions .add-cart-btn { padding: .65rem 1rem; font-size: .7rem; }
+    .empty-state { text-align: center; padding: 3rem 1rem; color: var(--muted); font-size: .9rem; }
+
+    /* ============ PAGINATION (real navigation, no infinite scroll) ============ */
+    .pagination { display: flex; align-items: center; justify-content: center; gap: .5rem; margin-top: 2.8rem; flex-wrap: wrap; }
+    .page-btn { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: .6rem 1rem; font-size: .78rem; font-weight: 700; cursor: pointer; color: var(--ink); font-family: inherit; transition: all .15s; }
+    .page-btn:hover:not(:disabled) { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .page-btn:disabled { opacity: .3; cursor: not-allowed; }
+    .page-numbers { display: flex; gap: .35rem; flex-wrap: wrap; justify-content: center; }
+    .page-numbers button { background: #fff; border: 1px solid var(--line); border-radius: 6px; width: 38px; height: 38px; font-size: .8rem; font-weight: 700; cursor: pointer; color: var(--ink); font-family: inherit; transition: all .15s; }
+    .page-numbers button:hover { border-color: var(--ink); }
+    .page-numbers button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .page-info { text-align: center; font-size: .78rem; color: var(--muted); margin-top: 1rem; }
+
+    /* ============ FOOTER ============ */
+    footer { background: var(--ink); color: rgba(255,255,255,.4); padding: 3.5rem 1.5rem 2rem; }
+    footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; }
+    @media (max-width: 720px) { footer .wrap { grid-template-columns: 1fr; gap: 2rem; } }
+    footer .brand-col img { width: 54px; border-radius: 50%; background: #fff; margin-bottom: .9rem; }
+    footer .brand-col .name { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 1.6rem; letter-spacing: .1em; }
+    footer .brand-col p { font-size: .82rem; margin-top: .5rem; max-width: 320px; }
+    footer h4 { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: .1em; margin-bottom: 1rem; }
+    footer a { color: rgba(255,255,255,.5); text-decoration: none; display: block; padding: .3rem 0; font-size: .84rem; transition: color .2s; }
+    footer a:hover { color: #fff; }
+    .foot-social { display: flex; gap: .6rem; margin-top: .3rem; }
+    .foot-social a { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 0; }
+    .foot-social a svg { width: 18px; height: 18px; fill: #fff; }
+    .foot-social a:hover { opacity: .85; }
+    .ico-whatsapp { background: #25D366 !important; }
+    .ico-instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important; }
+    .pay-row { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .4rem; }
+    .pay-row span { font-size: .68rem; letter-spacing: .04em; color: rgba(255,255,255,.5); border: 1px solid rgba(255,255,255,.15); border-radius: 5px; padding: .25rem .5rem; }
+    .foot-bottom { max-width: 1180px; margin: 2.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; font-size: .76rem; }
+
+    /* ============ FLOAT WHATSAPP ============ */
+    .wa-float { position: fixed; bottom: 1.4rem; right: 1.4rem; z-index: 200; background: #25D366; color: #fff; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.25); text-decoration: none; transition: transform .15s; }
+    .wa-float:hover { transform: scale(1.08); }
+    .wa-float svg { width: 30px; height: 30px; fill: #fff; }
+
+    /* ============ NEWSLETTER MODAL ============ */
+    .nl-overlay { position: fixed; inset: 0; z-index: 500; background: rgba(10,10,10,.72); display: none; align-items: center; justify-content: center; padding: 1.2rem; }
+    .nl-overlay.show { display: flex; }
+    .nl-modal { background: #fff; border-radius: 14px; max-width: 420px; width: 100%; padding: 2.2rem 1.8rem 1.8rem; position: relative; text-align: center; box-shadow: 0 30px 80px rgba(0,0,0,.4); }
+    .nl-modal .nl-close { position: absolute; top: .8rem; right: .8rem; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--ink); }
+    .nl-modal .nl-close:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .nl-modal img { width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 1rem; background: #fff; border: 1px solid var(--line); }
+    .nl-modal h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: .03em; margin-bottom: .5rem; }
+    .nl-modal p { font-size: .85rem; color: var(--muted); margin-bottom: 1.3rem; }
+    .nl-form { display: flex; flex-direction: column; gap: .7rem; }
+    .nl-form input { border: 1.5px solid var(--line); border-radius: 8px; padding: .8rem 1rem; font-size: .9rem; font-family: inherit; }
+    .nl-form input:focus { outline: none; border-color: var(--ink); }
+    .nl-form button { display: flex; align-items: center; justify-content: center; gap: .5rem; background: #25D366; color: #fff; border: none; border-radius: 8px; padding: .85rem 1rem; font-weight: 700; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; font-family: inherit; transition: opacity .2s; }
+    .nl-form button:hover { opacity: .88; }
+    .nl-form button svg { width: 16px; height: 16px; fill: #fff; }
+    .nl-skip { margin-top: .9rem; font-size: .76rem; color: var(--muted); text-decoration: underline; cursor: pointer; background: none; border: none; font-family: inherit; }
+    .nl-note { font-size: .68rem; color: #999; margin-top: .8rem; }
+
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+  </style>
+</head>
+<body>
+
+<!-- ============ NEWSLETTER MODAL ============ -->
+<div class="nl-overlay" id="nlOverlay">
+  <div class="nl-modal">
+    <button class="nl-close" id="nlClose" aria-label="Cerrar">&times;</button>
+    <img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" />
+    <h3>ÚNETE A LA ESCENA</h3>
+    <p>Enterate primero de nuevos productos, restocks y promos. Dejanos tu número de WhatsApp y te escribimos.</p>
+    <form class="nl-form" id="nlForm">
+      <input type="tel" id="nlPhone" placeholder="300 123 4567" inputmode="tel" required />
+      <button type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>Suscribirme por WhatsApp</button>
+    </form>
+    <button class="nl-skip" id="nlSkip">Ahora no</button>
+    <p class="nl-note">Cero spam — solo novedades por WhatsApp.</p>
+  </div>
+</div>
+
+<!-- ============ UTILITY STRIP ============ -->
+<div class="utility">
+  <div class="wrap">
+    <span class="u-info">Lun – Sáb · Envíos a toda Colombia</span>
+    <div class="u-links">
+      <a href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp +57 310 763 0504</a>
+      <a href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="top-bar">
+  <a href="index.html" class="brand" aria-label="ESCENA BMX - Inicio">
+    <img src="assets/img/escena-logo.jpg" alt="Logo ESCENA BMX" width="34" height="34" />
+    <span class="name">ESCENA BMX</span>
+  </a>
+  <div class="nav-right">
+    <nav class="nav-links" id="nav">
+      <a href="tienda.html" class="active">Tienda</a>
+      <a href="armar-bmx.html">Arma tu BMX</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#categorias">Categorías</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="nav-cta" href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+    <button class="cart-btn" id="cartBtnHeader" aria-label="Ver carrito">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-badge" id="cartBadgeHeader">0</span>
+    </button>
+    <button class="burger" id="burger" aria-label="Menú">☰</button>
+  </div>
+</header>
+
+<!-- ============ PAGE HEADER ============ -->
+<div class="page-head">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Inicio</a> / Tienda</div>
+    <h1>LA TIENDA</h1>
+    <p id="pageSubtitle">Más de 100 partes BMX en stock. Filtrá por categoría y pedí por WhatsApp.</p>
+  </div>
+</div>
+
+<!-- ============ SHOP ============ -->
+<section>
+  <div class="wrap" id="tiendaTop">
+    <div class="filters" id="filters">
+      <button data-filter="all">Todo</button>
+      <button data-filter="stems">Stems</button>
+      <button data-filter="manubrios">Manubrios</button>
+      <button data-filter="horquillas">Horquillas</button>
+      <button data-filter="bielas">Bielas</button>
+      <button data-filter="bujes">Bujes</button>
+      <button data-filter="rines">Rines</button>
+      <button data-filter="pinones">Piñones</button>
+      <button data-filter="pedales">Pedales</button>
+      <button data-filter="sillines">Sillines</button>
+      <button data-filter="tijas">Tijas</button>
+      <button data-filter="punos">Puños</button>
+      <button data-filter="dc">Dirección y BB</button>
+      <button data-filter="clavijas">Clavijas</button>
+      <button data-filter="tornilleria">Tornillería</button>
+      <button data-filter="piezas">Piezas varias</button>
+      <button data-filter="herramientas">Herramientas</button>
+    </div>
+
+    <div class="grid" id="grid"><!-- products injected by JS --></div>
+    <p class="page-info" id="pageInfo"></p>
+
+    <div class="pagination" id="pagination">
+      <button class="page-btn" id="prevBtn">‹ Anterior</button>
+      <div class="page-numbers" id="pageNumbers"></div>
+      <button class="page-btn" id="nextBtn">Siguiente ›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="brand-col">
+      <img src="assets/img/escena-logo.jpg" alt="Logo ESCENA Bike Shop" width="54" />
+      <div class="name">ESCENA BIKE SHOP</div>
+      <p>Tienda de partes y componentes BMX en Colombia. Riders montando una tienda para riders.</p>
+      <div class="foot-social">
+        <a class="ico-whatsapp" href="https://wa.me/573107630504" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg></a>
+        <a class="ico-instagram" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C8.74 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.336 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.014 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.898 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.898-.421-.419-.69-.824-.897-1.38-.165-.42-.36-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.06-1.17.255-1.814.42-2.234.207-.57.477-.96.897-1.381.419-.419.81-.689 1.379-.896.42-.166 1.051-.36 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Tienda</h4>
+      <a href="index.html#comprar">Cómo comprar</a>
+      <a href="index.html#categorias">Categorías</a>
+      <a href="tienda.html">Componentes</a>
+      <a href="index.html#escena">La Escena</a>
+      <a href="index.html#faq">Preguntas frecuentes</a>
+    </div>
+    <div>
+      <h4>Info</h4>
+      <a href="envios.html">Envíos</a>
+      <a href="devoluciones.html">Devoluciones</a>
+      <a href="terminos.html">Términos</a>
+      <a href="politica-privacidad.html">Privacidad</a>
+      <a href="politica-cookies.html">Cookies</a>
+      <div class="pay-row">
+        <span>Nequi</span><span>Daviplata</span><span>Transferencia</span><span>Efectivo</span>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; 2026 ESCENA BIKE SHOP. Todos los derechos reservados.</span>
+    <span>Hecho en Colombia · Ride or die 🐕</span>
+  </div>
+</footer>
+
+<!-- ============ FLOAT WHATSAPP ============ -->
+<a class="wa-float" href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20info%20de%20partes%20BMX" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+</a>
+
+<script>
+var PRODUCTS = [
+    { n:"Volume Front Load Stem", brand:"Volume", cat:"stems", spec:"Front load · 48mm · Aluminio pulido plata", price:210000, tag:"Nuevo", img:"assets/img/products/volume-stem-front-load-plata.jpg" },
+    { n:"Mutany Savage V2 Stem", brand:"Mutany", cat:"stems", spec:"Front load · Aluminio CNC plata", price:230000, tag:"", img:"assets/img/products/mutanty-savage-v2-stem-plata.jpg" },
+    { n:"Fiend Fiending Stem Negro", brand:"Fiend", cat:"stems", spec:"Front load · Negro mate", price:195000, tag:"", img:"assets/img/products/fiend-fiending-stem-negro.jpg" },
+    { n:"Fiend Fiending Stem Morado", brand:"Fiend", cat:"stems", spec:"Front load · Púrpura anodizado", price:195000, tag:"Edición", img:"assets/img/products/fiend-fiending-stem-morado.jpg" },
+    { n:"Mutany Savage Bielas 165", brand:"Mutany", cat:"bielas", spec:"Cromoly · 48 spline · 165mm · Negro", price:420000, tag:"Top", img:"assets/img/products/mutany-savage-bielas-negro.jpg" },
+    { n:"Fiend Bielas 165", brand:"Fiend", cat:"bielas", spec:"Cromoly · 48 spline · 165mm · Negro", price:390000, tag:"", img:"assets/img/products/fiend-bielas-negro.jpg" },
+    { n:"Cult Bielas 165", brand:"Cult", cat:"bielas", spec:"Cromoly heat-treated · 165mm · Negro", price:410000, tag:"", img:"assets/img/products/cult-bielas-negro.jpg" },
+    { n:"Éclat Trippin Rin", brand:"Éclat", cat:"rines", spec:"20\" · Doble pared · 36H · Negro", price:240000, tag:"", img:"assets/img/products/eclat-trippin-rin-negro.jpg" },
+    { n:"Cult x Vans Pivotal Sillín", brand:"Cult", cat:"sillines", spec:"Pivotal slim · Cordura · Negro", price:185000, tag:"Colab", img:"assets/img/products/cult-vans-sillin-negro.jpg" },
+    { n:"Cult Pivotal Sillín Cuadros", brand:"Cult", cat:"sillines", spec:"Pivotal slim · Checkerboard B/N", price:175000, tag:"", img:"assets/img/products/cult-sillin-cuadros.jpg" },
+    { n:"Manubrio BMX Cromoly Negro", brand:"", cat:"manubrios", spec:"Cromoly · Cross brace · Negro mate", price:230000, tag:"", img:"assets/img/products/manubrio-cromoly-negro-01.jpg" },
+    { n:"Manubrio BMX Cromado", brand:"", cat:"manubrios", spec:"Cromoly · Cross brace · Plata cromado", price:240000, tag:"", img:"assets/img/products/manubrio-cromoly-cromado.jpg" },
+    { n:"Manubrio BMX Negro", brand:"", cat:"manubrios", spec:"Cromoly · Cross brace · Negro mate", price:225000, tag:"", img:"assets/img/products/manubrio-cromoly-negro-02.jpg" },
+    { n:"Manubrio BMX Negro Mate", brand:"", cat:"manubrios", spec:"Cromoly · Cross brace · Negro mate", price:225000, tag:"Nuevo", img:"assets/img/products/manubrio-cromoly-negro-03.jpg" },
+    { n:"Manubrio BMX Negro Bajo", brand:"", cat:"manubrios", spec:"Cromoly · Low rise · Negro mate", price:220000, tag:"", img:"assets/img/products/manubrio-cromoly-negro-04.jpg" },
+    { n:"Horquilla Wethepeople Cromada", brand:"Wethepeople", cat:"horquillas", spec:"Cromoly · Tubo recto · Cromado", price:420000, tag:"", img:"assets/img/products/wethepeople-horquilla-cromada.jpg" },
+    { n:"Horquilla BMX Negra", brand:"", cat:"horquillas", spec:"Cromoly · Tubo recto · Negro mate", price:400000, tag:"", img:"assets/img/products/horquilla-cromoly-negra-01.jpg" },
+    { n:"Horquilla Federal Cromada", brand:"Federal", cat:"horquillas", spec:"Cromoly · Tubo recto · Cromado", price:430000, tag:"", img:"assets/img/products/federal-horquilla-cromada.jpg" },
+    { n:"Horquilla BMX Negra Steerer Blanco", brand:"", cat:"horquillas", spec:"Cromoly · Steerer blanco · Negro mate", price:410000, tag:"", img:"assets/img/products/horquilla-cromoly-negra-02.jpg" },
+    { n:"Horquilla BMX Plateada", brand:"", cat:"horquillas", spec:"Cromoly · Tubo recto · Plata pulido", price:415000, tag:"", img:"assets/img/products/horquilla-cromoly-plateada.jpg" },
+    { n:"Buje Trasero Stolen Negro", brand:"Stolen", cat:"bujes", spec:"Cassette · Freno disponible · Negro", price:380000, tag:"", img:"assets/img/products/stolen-buje-trasero-cassette-negro.jpg" },
+    { n:"Buje BMX Negro/Cromado", brand:"", cat:"bujes", spec:"Cassette · Doble sellado · Negro/Cromado", price:350000, tag:"", img:"assets/img/products/buje-cassette-negro-cromado.jpg" },
+    { n:"Buje BMX Cassette Negro/Plata", brand:"", cat:"bujes", spec:"Cassette · Doble sellado · Negro/Plata", price:340000, tag:"", img:"assets/img/products/buje-cassette-negro-plata.jpg" },
+    { n:"Buje Odyssey Cassette Negro", brand:"Odyssey", cat:"bujes", spec:"Cassette · Doble sellado · Negro", price:360000, tag:"", img:"assets/img/products/odyssey-buje-cassette-negro.jpg" },
+    { n:"Buje Mutany Mercury Elite LHD", brand:"Mutany", cat:"bujes", spec:"Cassette · LHD · Negro", price:390000, tag:"Top", img:"assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg" },
+    { n:"Buje BMX Negro/Plata", brand:"", cat:"bujes", spec:"Cassette · Doble sellado · Negro/Plata", price:335000, tag:"", img:"assets/img/products/buje-cassette-negro-plata-02.jpg" },
+    { n:"Buje BMX Cassette Negro", brand:"", cat:"bujes", spec:"Cassette · Doble sellado · Negro", price:340000, tag:"", img:"assets/img/products/buje-cassette-negro.jpg" },
+    { n:"Buje Delantero BMX Negro", brand:"", cat:"bujes", spec:"Delantero · Doble sellado · Negro", price:190000, tag:"", img:"assets/img/products/buje-delantero-negro.jpg" },
+    { n:"Buje Delantero Shadow Negro", brand:"Shadow", cat:"bujes", spec:"Delantero · Doble sellado · Negro", price:195000, tag:"", img:"assets/img/products/shadow-buje-delantero-negro.jpg" },
+    { n:"Buje Delantero Cromado", brand:"", cat:"bujes", spec:"Delantero · Doble sellado · Cromado", price:185000, tag:"", img:"assets/img/products/buje-delantero-cromado.jpg" },
+    { n:"Kit de Eje y Espaciadores Plata", brand:"", cat:"bielas", spec:"Eje 22mm · Espaciadores · Plata", price:95000, tag:"", img:"assets/img/products/kit-eje-espaciadores-plata.jpg" },
+    { n:"Bielas Colony Negro", brand:"Colony", cat:"bielas", spec:"Cromoly · 48 spline · Negro", price:420000, tag:"Top", img:"assets/img/products/colony-bielas-negro.jpg" },
+    { n:"Kit de Hardware Bielas Plata", brand:"", cat:"bielas", spec:"Eje, espaciadores y tapas · Plata", price:90000, tag:"", img:"assets/img/products/kit-hardware-bielas-plata.jpg" },
+    { n:"Kit de Hardware Bielas Negro", brand:"", cat:"bielas", spec:"Eje, espaciadores y tapas · Negro", price:90000, tag:"", img:"assets/img/products/kit-hardware-bielas-negro.jpg" },
+    { n:"Stem BSD Negro", brand:"BSD", cat:"stems", spec:"Front load · Negro mate", price:200000, tag:"", img:"assets/img/products/bsd-stem-negro.jpg" },
+    { n:"Stem Volume Negro", brand:"Volume", cat:"stems", spec:"Front load · Negro mate", price:210000, tag:"", img:"assets/img/products/volume-stem-negro.jpg" },
+    { n:"Stem Plata Pulido", brand:"", cat:"stems", spec:"Front load · Aluminio plata pulido", price:200000, tag:"", img:"assets/img/products/stem-plata-pulido.jpg" },
+    { n:"Stem Grabado ESCENA BMX", brand:"ESCENA", cat:"stems", spec:"Front load · Grabado personalizado · Plata", price:235000, tag:"Edición", img:"assets/img/products/escena-stem-grabado-plata.jpg" },
+    { n:"Stem Federal Plata", brand:"Federal", cat:"stems", spec:"Front load · Aluminio plata pulido", price:205000, tag:"", img:"assets/img/products/federal-stem-plata.jpg" },
+    { n:"Stem Federal Negro", brand:"Federal", cat:"stems", spec:"Front load · Negro mate", price:205000, tag:"", img:"assets/img/products/federal-stem-negro.jpg" },
+    { n:"Sillín Fiend Mills Blanco", brand:"Fiend", cat:"sillines", spec:"Pivotal slim · Blanco", price:175000, tag:"", img:"assets/img/products/fiend-mills-sillin-blanco.jpg" },
+    { n:"Sillín Fiend Mills Negro", brand:"Fiend", cat:"sillines", spec:"Pivotal slim · Negro", price:175000, tag:"", img:"assets/img/products/fiend-mills-sillin-negro.jpg" },
+    { n:"Sillín Cult Negro", brand:"Cult", cat:"sillines", spec:"Pivotal slim · Negro", price:180000, tag:"", img:"assets/img/products/cult-sillin-negro.jpg" },
+    { n:"Sillín Odyssey Floral", brand:"Odyssey", cat:"sillines", spec:"Pivotal slim · Estampado floral", price:185000, tag:"Edición", img:"assets/img/products/odyssey-sillin-floral.jpg" },
+    { n:"Sillín Animal Camuflado", brand:"Animal", cat:"sillines", spec:"Pivotal slim · Camuflado", price:180000, tag:"", img:"assets/img/products/animal-sillin-camuflado.jpg" },
+    { n:"Sillín Fit Bike Co Negro", brand:"Fit Bike Co", cat:"sillines", spec:"Pivotal slim · Textura diamante · Negro", price:175000, tag:"", img:"assets/img/products/fit-sillin-diamante-negro.jpg" },
+    { n:"Sillín Stolen Negro", brand:"Stolen", cat:"sillines", spec:"Pivotal slim · Textura · Negro", price:178000, tag:"", img:"assets/img/products/stolen-sillin-negro.jpg" },
+    { n:"Pedales Plataforma Negro", brand:"", cat:"pedales", spec:"Plataforma nylon · Negro", price:95000, tag:"", img:"assets/img/products/pedales-plataforma-negro-01.jpg" },
+    { n:"Pedales Demolition Rosa", brand:"Demolition", cat:"pedales", spec:"Plataforma nylon · Rosa", price:100000, tag:"", img:"assets/img/products/demolition-pedales-rosa.jpg" },
+    { n:"Pedales Plataforma Metal Negro", brand:"", cat:"pedales", spec:"Plataforma aluminio · Negro", price:130000, tag:"", img:"assets/img/products/pedales-metal-negro-01.jpg" },
+    { n:"Pedales Plataforma Metal Negro Par", brand:"", cat:"pedales", spec:"Plataforma aluminio · Negro", price:135000, tag:"", img:"assets/img/products/pedales-metal-negro-02.jpg" },
+    { n:"Pedales Plataforma Metal Angular", brand:"", cat:"pedales", spec:"Plataforma aluminio · Perfil bajo · Negro", price:135000, tag:"", img:"assets/img/products/pedales-metal-negro-03.jpg" },
+    { n:"Pedales Demolition Blanco/Negro", brand:"Demolition", cat:"pedales", spec:"Plataforma nylon · Splash blanco/negro", price:105000, tag:"Edición", img:"assets/img/products/demolition-pedales-splash-blanco.jpg" },
+    { n:"Pedales Demolition Rojo/Blanco", brand:"Demolition", cat:"pedales", spec:"Plataforma nylon · Splash rojo/blanco", price:105000, tag:"Edición", img:"assets/img/products/demolition-pedales-splash-rojo.jpg" },
+    { n:"Piñón Corte Snowflake Plata", brand:"", cat:"pinones", spec:"25T · Aluminio CNC · Plata", price:140000, tag:"", img:"assets/img/products/pinon-snowflake-plata.jpg" },
+    { n:"Piñón Cult Negro", brand:"Cult", cat:"pinones", spec:"25T · Aluminio CNC · Negro", price:145000, tag:"", img:"assets/img/products/cult-pinon-negro.jpg" },
+    { n:"Piñón Odyssey 28T Negro", brand:"Odyssey", cat:"pinones", spec:"28T · Aluminio CNC · Negro", price:150000, tag:"", img:"assets/img/products/odyssey-pinon-28t-negro.jpg" },
+    { n:"Piñón Fiend 25T Negro", brand:"Fiend", cat:"pinones", spec:"25T · Aluminio CNC · Negro", price:145000, tag:"", img:"assets/img/products/fiend-pinon-25t-negro.jpg" },
+    { n:"Piñón Federal Gris", brand:"Federal", cat:"pinones", spec:"25T · Aluminio CNC · Gris", price:145000, tag:"", img:"assets/img/products/federal-pinon-gris.jpg" },
+    { n:"Guarda Piñón BSD Negro", brand:"BSD", cat:"pinones", spec:"Guarda cadena · Nylon reforzado · Negro", price:100000, tag:"", img:"assets/img/products/bsd-guarda-pinon-negro.jpg" },
+    { n:"Guarda Piñón Mutanty Negro", brand:"Mutany", cat:"pinones", spec:"Guarda cadena · Nylon reforzado · Negro", price:100000, tag:"", img:"assets/img/products/mutany-guarda-pinon-negro.jpg" },
+    { n:"Caja de Pedalier Negra", brand:"", cat:"dc", spec:"Copas selladas · Negro", price:110000, tag:"", img:"assets/img/products/caja-pedalier-negra-01.jpg" },
+    { n:"Dirección BMX Negra (Set x2)", brand:"", cat:"dc", spec:"Integrada · Rodamientos sellados · Negro", price:140000, tag:"", img:"assets/img/products/direccion-negra-set.jpg" },
+    { n:"Dirección BMX Negra", brand:"", cat:"dc", spec:"Integrada · Rodamientos sellados · Negro", price:135000, tag:"", img:"assets/img/products/direccion-negra.jpg" },
+    { n:"Caja de Pedalier Demolition Negra", brand:"Demolition", cat:"dc", spec:"Copas selladas · Negro", price:115000, tag:"", img:"assets/img/products/demolition-caja-pedalier-negra.jpg" },
+    { n:"Kit Rodamientos BB Cult", brand:"Cult", cat:"dc", spec:"Rodamientos + sellos · Kit completo", price:55000, tag:"", img:"assets/img/products/cult-kit-rodamientos-bb.jpg" },
+    { n:"Kit Rodamientos BB Odyssey", brand:"Odyssey", cat:"dc", spec:"Rodamientos + sellos · Kit completo", price:55000, tag:"", img:"assets/img/products/odyssey-kit-rodamientos-bb.jpg" },
+    { n:"Kit Rodamientos BB Animal", brand:"Animal", cat:"dc", spec:"Rodamientos + sellos · Kit completo", price:55000, tag:"", img:"assets/img/products/animal-kit-rodamientos-bb.jpg" },
+    { n:"Kit Rodamientos BB", brand:"", cat:"dc", spec:"Rodamientos + sellos · Kit completo", price:50000, tag:"", img:"assets/img/products/kit-rodamientos-bb-generico.jpg" },
+    { n:"Clavijas Odyssey Negro (Par)", brand:"Odyssey", cat:"clavijas", spec:"Aluminio CNC · Par · Negro", price:160000, tag:"", img:"assets/img/products/odyssey-clavijas-negro-par.jpg" },
+    { n:"Clavijas Negro (Par)", brand:"", cat:"clavijas", spec:"Aluminio CNC · Par · Negro", price:150000, tag:"", img:"assets/img/products/clavijas-negro-par.jpg" },
+    { n:"Clavija Cult Negro", brand:"Cult", cat:"clavijas", spec:"Aluminio CNC · Unidad · Negro", price:80000, tag:"", img:"assets/img/products/cult-clavija-negro.jpg" },
+    { n:"Clavija Negro", brand:"", cat:"clavijas", spec:"Aluminio CNC · Unidad · Negro", price:78000, tag:"", img:"assets/img/products/clavija-negro.jpg" },
+    { n:"Clavija Federal Negro", brand:"Federal", cat:"clavijas", spec:"Aluminio CNC · Unidad · Negro", price:80000, tag:"", img:"assets/img/products/federal-clavija-negro.jpg" },
+    { n:"Puños Cult Negro", brand:"Cult", cat:"punos", spec:"Espuma/goma · Negro", price:55000, tag:"", img:"assets/img/products/cult-punos-negro.jpg" },
+    { n:"Puños Cult Rasta", brand:"Cult", cat:"punos", spec:"Goma · Rojo/Amarillo/Verde", price:58000, tag:"Edición", img:"assets/img/products/cult-punos-rasta.jpg" },
+    { n:"Puños Odyssey Negro/Gris", brand:"Odyssey", cat:"punos", spec:"Goma · Negro/Gris", price:55000, tag:"", img:"assets/img/products/odyssey-punos-negro-gris.jpg" },
+    { n:"Puños Federal Gris", brand:"Federal", cat:"punos", spec:"Goma · Gris", price:55000, tag:"", img:"assets/img/products/federal-punos-gris.jpg" },
+    { n:"Puños Fiend Negro", brand:"Fiend", cat:"punos", spec:"Goma · Negro", price:55000, tag:"", img:"assets/img/products/fiend-punos-negro.jpg" },
+    { n:"Puños Fiend Rojo/Blanco", brand:"Fiend", cat:"punos", spec:"Goma · Rojo/Blanco splash", price:58000, tag:"Edición", img:"assets/img/products/fiend-punos-rojo-blanco.jpg" },
+    { n:"Puños Demolition Rojo/Negro", brand:"Demolition", cat:"punos", spec:"Goma · Rojo/Negro", price:56000, tag:"", img:"assets/img/products/demolition-punos-rojo-negro.jpg" },
+    { n:"Puños Cult x Vans Morado", brand:"Cult", cat:"punos", spec:"Goma · Colab Vans · Morado", price:62000, tag:"Colab", img:"assets/img/products/cult-vans-punos-morado.jpg" },
+    { n:"Tornillos Titanio Arcoíris", brand:"", cat:"tornilleria", spec:"Titanio · Set · Multicolor", price:65000, tag:"", img:"assets/img/products/tornillos-titanio-arcoiris-01.jpg" },
+    { n:"Tornillos Titanio Plata", brand:"", cat:"tornilleria", spec:"Titanio · Set · Plata", price:60000, tag:"", img:"assets/img/products/tornillos-titanio-plata.jpg" },
+    { n:"Tornillos Titanio Sillín Arcoíris", brand:"", cat:"tornilleria", spec:"Titanio · Sillín · Multicolor", price:40000, tag:"", img:"assets/img/products/tornillos-titanio-sillin-arcoiris.jpg" },
+    { n:"Tornillos Titanio Morado", brand:"", cat:"tornilleria", spec:"Titanio · Set · Morado/Negro", price:62000, tag:"", img:"assets/img/products/tornillos-titanio-morado.jpg" },
+    { n:"Tornillos Mutanty Negro", brand:"Mutany", cat:"tornilleria", spec:"Acero · Set · Negro", price:25000, tag:"", img:"assets/img/products/mutany-tornillos-negro.jpg" },
+    { n:"Tornillos Federal Negro", brand:"Federal", cat:"tornilleria", spec:"Acero · Set · Negro", price:25000, tag:"", img:"assets/img/products/federal-tornillos-negro.jpg" },
+    { n:"Tija BMX Negra", brand:"", cat:"tijas", spec:"Aluminio · 25.4mm · Negro", price:75000, tag:"", img:"assets/img/products/tija-negra-01.jpg" },
+    { n:"Tija BMX Negra Recta", brand:"", cat:"tijas", spec:"Aluminio · 25.4mm · Negro", price:75000, tag:"", img:"assets/img/products/tija-negra-02.jpg" },
+    { n:"Tija BMX Negra Curva", brand:"", cat:"tijas", spec:"Aluminio · 25.4mm · Negro", price:78000, tag:"", img:"assets/img/products/tija-negra-curva.jpg" },
+    { n:"Kit Freecoaster Brainstorm", brand:"Brainstorm", cat:"piezas", spec:"Kit de conversión freecoaster · Negro", price:220000, tag:"Top", img:"assets/img/products/brainstorm-freecoaster-kit-01.jpg" },
+    { n:"Kit Freecoaster Brainstorm II", brand:"Brainstorm", cat:"piezas", spec:"Kit de conversión freecoaster · Negro", price:220000, tag:"", img:"assets/img/products/brainstorm-freecoaster-kit-02.jpg" },
+    { n:"Kit Freecoaster Brainstorm III", brand:"Brainstorm", cat:"piezas", spec:"Kit de conversión freecoaster · Negro", price:220000, tag:"", img:"assets/img/products/brainstorm-freecoaster-kit-03.jpg" },
+    { n:"Kit Freecoaster Brainstorm Par", brand:"Brainstorm", cat:"piezas", spec:"Kit de conversión freecoaster · Negro", price:230000, tag:"", img:"assets/img/products/brainstorm-freecoaster-kit-04.jpg" },
+    { n:"Eslabones de Cadena Sueltos", brand:"", cat:"piezas", spec:"Media caña · Acero negro", price:30000, tag:"", img:"assets/img/products/eslabones-cadena-sueltos.jpg" },
+    { n:"Cadena Odyssey (Caja)", brand:"Odyssey", cat:"piezas", spec:"Media caña · Acero negro", price:85000, tag:"", img:"assets/img/products/odyssey-cadena-caja.jpg" },
+    { n:"Eje de Pedalier Mutanty P25", brand:"Mutany", cat:"piezas", spec:"Eje 22mm · P25 · Negro", price:70000, tag:"", img:"assets/img/products/mutany-eje-pedalier-p25.jpg" },
+    { n:"Amarres de Cable Iron Fist", brand:"Iron Fist", cat:"piezas", spec:"Cinchos plásticos · Set", price:20000, tag:"", img:"assets/img/products/iron-fist-amarres-cable.jpg" },
+    { n:"Multiherramienta Cult", brand:"Cult", cat:"herramientas", spec:"Multiherramienta plegable BMX", price:110000, tag:"", img:"assets/img/products/cult-multiherramienta-01.jpg" },
+    { n:"Multiherramienta Cult (Empaque)", brand:"Cult", cat:"herramientas", spec:"Multiherramienta plegable BMX", price:110000, tag:"", img:"assets/img/products/cult-multiherramienta-02.jpg" },
+    { n:"Llave Y Roja", brand:"", cat:"herramientas", spec:"Llave allen tipo Y · 3 puntas", price:70000, tag:"", img:"assets/img/products/llave-y-roja.jpg" }
+  ];  var WA = "573107630504";
+  var PAGE_SIZE = 12;
+  var currentFilter = "all";
+  var currentPage = 1;
+
+  function cop(n){ return "$" + n.toLocaleString("es-CO") + " COP"; }
+
+  function getFiltered(filter){
+    return PRODUCTS.filter(function(p){ return filter === "all" || p.cat === filter; });
+  }
+
+  function slugOf(p){
+    var file = p.img.split("/").pop();
+    return file.replace(/\.[a-zA-Z0-9]+$/, "");
+  }
+
+  function cardHTML(p){
+    var msg = encodeURIComponent("Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
+    var href = "producto/" + slugOf(p) + ".html";
+    return '<article class="card">' +
+        '<a class="ph-link" href="'+href+'">' +
+          '<div class="ph">' + (p.tag ? '<span class="tag">'+p.tag+'</span>' : '') +
+            '<img src="'+p.img+'" alt="'+p.n+' - '+p.brand+' BMX" loading="lazy" width="400" height="400"></div>' +
+        '</a>' +
+        '<div class="body">' +
+          '<span class="brand-lbl">'+p.brand+'</span>' +
+          '<h3><a class="title-link" href="'+href+'">'+p.n+'</a></h3>' +
+          '<p class="spec">'+p.spec+'</p>' +
+          '<div class="price">'+cop(p.price)+'</div>' +
+          '<div class="card-actions">' +
+            '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
+            '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+p.n+'" data-brand="'+p.brand+'" data-price="'+p.price+'" data-img="'+p.img+'">Agregar al carrito</button>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+  }
+
+  function render(filter, page){
+    currentFilter = filter;
+    var filtered = getFiltered(filter);
+    var totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    currentPage = Math.min(Math.max(1, page), totalPages);
+    var start = (currentPage - 1) * PAGE_SIZE;
+    var pageItems = filtered.slice(start, start + PAGE_SIZE);
+
+    var g = document.getElementById("grid");
+    if (pageItems.length === 0) {
+      g.innerHTML = '<p class="empty-state">No hay productos en esta categoría todavía.</p>';
+    } else {
+      g.innerHTML = pageItems.map(cardHTML).join("");
+    }
+
+    var info = document.getElementById("pageInfo");
+    info.textContent = filtered.length === 0
+      ? ""
+      : "Mostrando " + (start + 1) + "–" + (start + pageItems.length) + " de " + filtered.length + " productos";
+
+    renderPagination(totalPages);
+  }
+
+  function renderPagination(totalPages){
+    var nums = document.getElementById("pageNumbers");
+    nums.innerHTML = "";
+    for (var i = 1; i <= totalPages; i++){
+      var b = document.createElement("button");
+      b.textContent = String(i);
+      if (i === currentPage) b.className = "active";
+      (function(n){
+        b.addEventListener("click", function(){ render(currentFilter, n); scrollToGridTop(); });
+      })(i);
+      nums.appendChild(b);
+    }
+    document.getElementById("prevBtn").disabled = currentPage <= 1;
+    document.getElementById("nextBtn").disabled = currentPage >= totalPages;
+  }
+
+  function scrollToGridTop(){
+    document.getElementById("tiendaTop").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  document.getElementById("prevBtn").addEventListener("click", function(){ render(currentFilter, currentPage - 1); scrollToGridTop(); });
+  document.getElementById("nextBtn").addEventListener("click", function(){ render(currentFilter, currentPage + 1); scrollToGridTop(); });
+
+  document.getElementById("filters").addEventListener("click", function(e){
+    if (e.target.tagName !== "BUTTON") return;
+    document.querySelectorAll("#filters button").forEach(function(b){ b.classList.remove("active"); });
+    e.target.classList.add("active");
+    render(e.target.dataset.filter, 1);
+    var params = new URLSearchParams(window.location.search);
+    params.set("cat", e.target.dataset.filter);
+    history.replaceState(null, "", "tienda.html?" + params.toString());
+  });
+
+  /* ---- Init from ?cat= query param ---- */
+  var urlParams = new URLSearchParams(window.location.search);
+  var initialCat = urlParams.get("cat") || "all";
+  var initBtn = document.querySelector('#filters button[data-filter="' + initialCat + '"]') || document.querySelector('#filters button[data-filter="all"]');
+  document.querySelectorAll("#filters button").forEach(function(b){ b.classList.remove("active"); });
+  initBtn.classList.add("active");
+  render(initialCat, 1);
+
+  /* ---- Mobile nav ---- */
+  var burger = document.getElementById("burger"), nav = document.getElementById("nav");
+  burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
+  nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
+
+  /* ---- Newsletter popup (shows on every visit, no suppression) ---- */
+  var nlOverlay = document.getElementById("nlOverlay");
+  var nlClose = document.getElementById("nlClose");
+  var nlSkip = document.getElementById("nlSkip");
+  var nlForm = document.getElementById("nlForm");
+  function openNL(){ nlOverlay.classList.add("show"); }
+  function closeNL(){ nlOverlay.classList.remove("show"); }
+  setTimeout(openNL, 900);
+  nlClose.addEventListener("click", closeNL);
+  nlSkip.addEventListener("click", closeNL);
+  nlOverlay.addEventListener("click", function(e){ if (e.target === nlOverlay) closeNL(); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeNL(); });
+  nlForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    var phone = document.getElementById("nlPhone").value.trim();
+    if (!phone) return;
+    var msg = encodeURIComponent("Hola ESCENA 🐕, quiero unirme al newsletter para enterarme de nuevos productos y promos. Mi WhatsApp es: " + phone);
+    window.open("https://wa.me/" + WA + "?text=" + msg, "_blank", "noopener");
+    closeNL();
+  });
+</script>
+<script>var ESCENA_ROOT = "";</script>
+<script src="assets/js/cart.js"></script>
+</body>
+</html>
