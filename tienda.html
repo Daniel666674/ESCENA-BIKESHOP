@@ -124,6 +124,7 @@
     @media (max-width: 440px) { .grid { grid-template-columns: 1fr; } }
     .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .15s; }
     .card:hover { box-shadow: 0 14px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
+    .card .ph-link { display: block; }
     .card .ph { position: relative; aspect-ratio: 1 / 1; background: #0A0A0A; overflow: hidden; }
     .card .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
     .card:hover .ph img { transform: scale(1.05); }
@@ -131,6 +132,8 @@
     .card .body { padding: 1rem 1rem 1.2rem; display: flex; flex-direction: column; flex: 1; }
     .card .brand-lbl { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
     .card h3 { font-size: .92rem; font-weight: 600; margin: .25rem 0 .1rem; line-height: 1.3; }
+    .card .title-link { color: var(--ink); text-decoration: none; }
+    .card .title-link:hover { text-decoration: underline; }
     .card .spec { font-size: .76rem; color: var(--muted); margin-bottom: .8rem; flex: 1; }
     .card .price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .02em; margin-bottom: .7rem; }
     .card .buy { display: block; text-align: center; background: var(--ink); color: #fff; text-decoration: none; padding: .7rem; border-radius: 5px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s, color .2s; border: 1px solid var(--ink); }
@@ -440,14 +443,22 @@ var PRODUCTS = [
     return PRODUCTS.filter(function(p){ return filter === "all" || p.cat === filter; });
   }
 
+  function slugOf(p){
+    var file = p.img.split("/").pop();
+    return file.replace(/\.[a-zA-Z0-9]+$/, "");
+  }
+
   function cardHTML(p){
     var msg = encodeURIComponent("Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
+    var href = "producto/" + slugOf(p) + ".html";
     return '<article class="card">' +
-        '<div class="ph">' + (p.tag ? '<span class="tag">'+p.tag+'</span>' : '') +
-          '<img src="'+p.img+'" alt="'+p.n+' - '+p.brand+' BMX" loading="lazy" width="400" height="400"></div>' +
+        '<a class="ph-link" href="'+href+'">' +
+          '<div class="ph">' + (p.tag ? '<span class="tag">'+p.tag+'</span>' : '') +
+            '<img src="'+p.img+'" alt="'+p.n+' - '+p.brand+' BMX" loading="lazy" width="400" height="400"></div>' +
+        '</a>' +
         '<div class="body">' +
           '<span class="brand-lbl">'+p.brand+'</span>' +
-          '<h3>'+p.n+'</h3>' +
+          '<h3><a class="title-link" href="'+href+'">'+p.n+'</a></h3>' +
           '<p class="spec">'+p.spec+'</p>' +
           '<div class="price">'+cop(p.price)+'</div>' +
           '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
