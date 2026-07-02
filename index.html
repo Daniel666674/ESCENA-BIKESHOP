@@ -128,22 +128,23 @@
     /* ============ TOP BAR / NAV ============ */
     header.top-bar {
       position: sticky; top: 0; z-index: 100;
-      background: var(--ink); height: 60px; padding: 0 1.5rem;
+      background: #fff; height: 64px; padding: 0 1.5rem;
       display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--line);
     }
     .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
-    .brand img { width: 34px; height: 34px; border-radius: 50%; background: #fff; }
-    .brand .name { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; letter-spacing: .12em; }
+    .brand img { width: 34px; height: 34px; border-radius: 50%; background: #fff; border: 1px solid var(--line); }
+    .brand .name { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; letter-spacing: .1em; }
     .nav-links { display: flex; gap: 1.6rem; align-items: center; }
-    .nav-links a { color: rgba(255,255,255,.6); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-cta { color: var(--ink) !important; background: var(--gold); padding: .5rem .9rem; border-radius: 4px; font-weight: 700; }
-    .nav-cta:hover { color: var(--ink) !important; opacity: .9; }
-    .burger { display: none; background: none; border: 0; color: #fff; font-size: 1.5rem; cursor: pointer; }
+    .nav-links a { color: #555; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta { color: var(--ink) !important; background: var(--gold); padding: .5rem .9rem; border-radius: 4px; font-weight: 700; border: 1px solid #d9b93a; }
+    .nav-cta:hover { color: var(--ink) !important; opacity: .85; }
+    .burger { display: none; background: none; border: 0; color: var(--ink); font-size: 1.5rem; cursor: pointer; }
     @media (max-width: 860px) {
-      .nav-links { position: fixed; inset: 60px 0 auto 0; background: var(--ink); flex-direction: column; gap: 0; padding: .5rem 1.5rem 1.5rem; transform: translateY(-120%); transition: transform .3s; }
+      .nav-links { position: fixed; inset: 64px 0 auto 0; background: #fff; flex-direction: column; gap: 0; padding: .5rem 1.5rem 1.5rem; transform: translateY(-120%); transition: transform .3s; border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0,0,0,.06); }
       .nav-links.open { transform: translateY(0); }
-      .nav-links a { padding: .9rem 0; border-bottom: 1px solid rgba(255,255,255,.08); width: 100%; }
+      .nav-links a { padding: .9rem 0; border-bottom: 1px solid var(--line); width: 100%; color: var(--ink); }
       .nav-cta { text-align: center; margin-top: .8rem; }
       .burger { display: block; }
     }
@@ -268,9 +269,9 @@
 
 <!-- ============ NAV ============ -->
 <header class="top-bar">
-  <a href="index.html" class="brand" aria-label="ESCENA Bike Shop - Inicio">
-    <img src="assets/img/escena-logo.jpg" alt="Logo ESCENA Bike Shop" width="34" height="34" />
-    <span class="name">ESCENA</span>
+  <a href="index.html" class="brand" aria-label="ESCENA BMX - Inicio">
+    <img src="assets/img/escena-logo.jpg" alt="Logo ESCENA BMX" width="34" height="34" />
+    <span class="name">ESCENA BMX</span>
   </a>
   <nav class="nav-links" id="nav">
     <a href="#categorias">Categorías</a>
