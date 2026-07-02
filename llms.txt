@@ -1,6 +1,6 @@
 # ESCENA BIKE SHOP
 
-> Tienda de partes y componentes BMX en Colombia. Riders montando una tienda para riders: stems, bielas, rines y sillines originales de las mejores marcas, con pedidos por WhatsApp y envíos a todo el país.
+> Tienda de partes y componentes BMX en Colombia con más de 100 productos en stock. Riders montando una tienda para riders: stems, manubrios, horquillas, bielas, bujes, piñones, pedales, sillines y más, de las mejores marcas, con pedidos por WhatsApp y envíos a todo el país.
 
 ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. Vende únicamente partes originales de marcas reconocidas de la escena BMX mundial y despacha a los 32 departamentos de Colombia. La compra se realiza por WhatsApp y el pago se coordina por Nequi, Daviplata, transferencia bancaria o efectivo.
 
@@ -8,19 +8,32 @@ ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. V
 - Nombre: ESCENA BIKE SHOP
 - País: Colombia
 - Categoría: Tienda de partes y componentes de BMX (BikeStore)
+- Catálogo: más de 100 productos en stock
 - Canal de venta: WhatsApp (pedido directo por chat)
 - Cobertura de envíos: todo Colombia (Interrapidísimo, Servientrega, Coordinadora)
 - Métodos de pago: Nequi, Daviplata, transferencia, efectivo
 - Idioma: Español (Colombia)
 
 ## Categorías de producto
-- Stems (front load y top load) — Volume, Mutany, Fiend
-- Bielas / cranks (cromoly 48 spline) — Mutany, Fiend, Cult
-- Rines / rims (doble pared) — Éclat
-- Sillines / seats (pivotal) — Cult
+- Stems (front load y top load)
+- Manubrios (cromoly cross brace)
+- Horquillas (cromoly)
+- Bielas / cranks (cromoly 48 spline) y hardware de bielas
+- Bujes / hubs (cassette, freecoaster y delanteros)
+- Rines / rims (doble pared)
+- Piñones / sprockets y guardas de piñón
+- Pedales (nylon y aluminio)
+- Sillines / seats (pivotal)
+- Tijas / seatposts
+- Puños / grips
+- Dirección (headsets) y caja de pedalier (bottom bracket)
+- Clavijas / pegs
+- Tornillería (incluye titanio)
+- Herramientas (multiherramientas, llaves)
+- Piezas varias: kits de freecoaster, cadenas, ejes, amarres
 
 ## Marcas
-Cult, Fiend, Éclat, Volume, Mutany.
+Cult, Fiend, Éclat, Volume, Mutany, Federal, Odyssey, Stolen, Demolition, Animal, Shadow, Colony, BSD, Fit Bike Co, Brainstorm, Wethepeople, Iron Fist, entre otras.
 
 ## Páginas
 - Inicio / tienda: https://escenabikeshop.com/
@@ -31,7 +44,7 @@ Cult, Fiend, Éclat, Volume, Mutany.
 - Política de cookies: https://escenabikeshop.com/politica-cookies.html
 
 ## Cómo comprar
-1. El cliente elige los productos en el sitio.
+1. El cliente elige los productos en el sitio (filtrando por categoría si quiere).
 2. Toca "Pedir por WhatsApp" para generar el mensaje del pedido.
 3. Confirma referencias, medidas y dirección por chat.
 4. Coordina el pago y el envío.
