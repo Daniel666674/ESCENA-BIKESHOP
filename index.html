@@ -114,8 +114,10 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --bg: #ffffff;
+      --panel: #f6f6f4;
       --ink: #0A0A0A;
       --gold: #E8C84A;
+      --gold-dim: #d9b93a;
       --muted: #666;
       --line: #ececeb;
     }
@@ -124,6 +126,19 @@
     a { color: inherit; }
     img { max-width: 100%; display: block; }
     .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: .04em; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; text-decoration: none; border-radius: 4px; padding: .95rem 1.8rem; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; transition: transform .15s, opacity .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: var(--ink); border: 1px solid var(--gold-dim); }
+    .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
+    .btn-ink { background: var(--ink); color: #fff; }
+
+    /* ============ UTILITY STRIP ============ */
+    .utility { background: var(--ink); color: rgba(255,255,255,.65); font-size: .72rem; letter-spacing: .04em; }
+    .utility .wrap { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; height: 34px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .utility a { color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s; }
+    .utility a:hover { color: var(--gold); }
+    .utility .u-links { display: flex; gap: 1.2rem; }
+    @media (max-width: 640px) { .utility .u-info { display: none; } }
 
     /* ============ TOP BAR / NAV ============ */
     header.top-bar {
@@ -149,28 +164,39 @@
       .burger { display: block; }
     }
 
-    /* ============ HERO ============ */
-    .hero { position: relative; min-height: 74vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: var(--ink); }
-    @media (max-width: 860px) { .hero { min-height: 62svh; } .hero video { transform: scale(1.7); } }
-    .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; opacity: .62; }
-    .hero .overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.35) 0%, rgba(10,10,10,.3) 45%, rgba(10,10,10,.72) 100%); }
-    .hero .inner { position: relative; z-index: 2; padding: 2.5rem 1.5rem; max-width: 900px; }
-    .hero .kicker { color: var(--gold); font-size: .76rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .9rem; }
-    .hero h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(3.4rem, 15vw, 8rem); line-height: .9; letter-spacing: .03em; text-shadow: 0 2px 30px rgba(0,0,0,.5); }
-    .hero h1 .gold { color: var(--gold); }
-    .hero .tagline { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1.3rem, 4.5vw, 2rem); letter-spacing: .08em; margin-top: .6rem; }
-    .hero p.lead { color: rgba(255,255,255,.78); font-size: clamp(.95rem, 2.4vw, 1.12rem); max-width: 540px; margin: 1.2rem auto 1.8rem; font-weight: 300; }
-    .btn { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; text-decoration: none; border-radius: 4px; padding: .95rem 1.8rem; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; transition: transform .15s, opacity .2s; }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-gold { background: var(--gold); color: var(--ink); }
-    .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
-    .hero .btns { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+    /* ============ HERO (split layout) ============ */
+    .hero { background: var(--ink); padding: 3.2rem 1.5rem; overflow: hidden; }
+    .hero .wrap { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: center; }
+    .hero-copy .kicker { color: var(--gold); font-size: .76rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .9rem; display: block; }
+    .hero-copy h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.8rem, 6.5vw, 5rem); line-height: .92; letter-spacing: .02em; }
+    .hero-copy h1 .gold { color: var(--gold); }
+    .hero-copy .tagline { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1.1rem, 2.6vw, 1.5rem); letter-spacing: .07em; margin-top: .5rem; opacity: .9; }
+    .hero-copy p.lead { color: rgba(255,255,255,.75); font-size: .98rem; max-width: 480px; margin: 1.1rem 0 1.7rem; font-weight: 300; }
+    .hero-copy .btns { display: flex; gap: .8rem; flex-wrap: wrap; }
+    .hero-stats { display: flex; gap: 2.2rem; margin-top: 2.2rem; flex-wrap: wrap; }
+    .hero-stats .n { font-family: 'Bebas Neue', sans-serif; color: var(--gold); font-size: 2rem; line-height: 1; }
+    .hero-stats .l { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-top: .2rem; }
 
-    /* ============ MARQUEE ============ */
-    .marquee { background: var(--gold); color: var(--ink); overflow: hidden; white-space: nowrap; padding: .55rem 0; font-family: 'Bebas Neue', sans-serif; letter-spacing: .12em; font-size: 1rem; }
-    .marquee span { display: inline-block; padding-left: 100%; animation: scroll 22s linear infinite; }
-    @keyframes scroll { to { transform: translateX(-100%); } }
-    .marquee b { margin: 0 1.4rem; opacity: .55; }
+    .hero-media { position: relative; aspect-ratio: 4/5; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); background: #111; }
+    .hero-media video { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
+    .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%); }
+    .hero-media .badge-ring { position: absolute; bottom: 14px; left: 14px; width: 62px; height: 62px; border-radius: 50%; background: #fff; padding: 3px; box-shadow: 0 8px 20px rgba(0,0,0,.4); z-index: 2; }
+    .hero-media .badge-ring img { width: 100%; height: 100%; border-radius: 50%; }
+    .hero-media .pill { position: absolute; top: 14px; right: 14px; background: var(--gold); color: var(--ink); font-family: 'Bebas Neue', sans-serif; letter-spacing: .08em; font-size: .78rem; padding: .35rem .7rem; border-radius: 999px; transform: rotate(3deg); z-index: 2; }
+
+    @media (max-width: 900px) {
+      .hero .wrap { grid-template-columns: 1fr; gap: 1.8rem; text-align: center; }
+      .hero-media { order: -1; aspect-ratio: 16/10; max-width: 480px; margin: 0 auto; width: 100%; }
+      .hero-copy .btns { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-copy p.lead { margin-left: auto; margin-right: auto; }
+    }
+
+    /* ============ MARQUEE (inverted: black bg / gold text) ============ */
+    .marquee { background: var(--ink); color: var(--gold); overflow: hidden; white-space: nowrap; padding: .6rem 0; font-family: 'Bebas Neue', sans-serif; letter-spacing: .1em; font-size: 1rem; border-top: 1px solid rgba(255,255,255,.08); }
+    .marquee span { display: inline-block; padding-left: 100%; animation: scrollrev 26s linear infinite; }
+    @keyframes scrollrev { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+    .marquee b { margin: 0 1.4rem; opacity: .4; color: #fff; }
 
     /* ============ SECTIONS ============ */
     section { padding: 4.5rem 1.5rem; }
@@ -180,17 +206,34 @@
     .sec-head h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1; letter-spacing: .03em; }
     .sec-head h2 .bar { color: var(--gold); }
 
-    /* ============ CATEGORIES ============ */
+    /* ============ PROCESS BAND ("Cómo comprar") ============ */
+    .process { background: var(--panel); }
+    .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; position: relative; }
+    @media (max-width: 780px) { .steps-row { grid-template-columns: 1fr; } }
+    .step { position: relative; padding-top: .5rem; }
+    .step .stepnum { font-family: 'Bebas Neue', sans-serif; font-size: 4.2rem; line-height: 1; -webkit-text-stroke: 2px var(--gold); color: transparent; }
+    .step h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: .03em; margin: .3rem 0 .5rem; }
+    .step p { font-size: .86rem; color: var(--muted); max-width: 280px; }
+
+    /* ============ CATEGORIES (photo cards) ============ */
     .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
     @media (max-width: 720px) { .cats { grid-template-columns: repeat(2, 1fr); } }
-    .cat { border: 1px solid var(--line); border-radius: 10px; padding: 1.6rem 1.2rem; text-decoration: none; transition: border-color .2s, transform .15s; display: block; }
-    .cat:hover { border-color: var(--ink); transform: translateY(-3px); }
-    .cat .num { font-family: 'Bebas Neue', sans-serif; color: var(--gold); font-size: 1.1rem; }
-    .cat h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .04em; margin: .3rem 0; }
-    .cat p { font-size: .8rem; color: var(--muted); }
+    .cat {
+      position: relative; border-radius: 12px; overflow: hidden; text-decoration: none; display: block;
+      min-height: 220px; background-size: cover; background-position: center;
+      transition: transform .3s, box-shadow .3s; isolation: isolate;
+    }
+    .cat::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(10,10,10,.15) 0%, rgba(10,10,10,.88) 100%); }
+    .cat:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(0,0,0,.22); }
+    .cat .content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.2rem; }
+    .cat .num { position: absolute; top: .9rem; left: .9rem; z-index: 2; background: var(--gold); color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: .82rem; width: 30px; height: 30px; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .cat h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .04em; color: #fff; }
+    .cat p { font-size: .78rem; color: rgba(255,255,255,.7); margin-top: .2rem; }
+    .cat .arrow { position: absolute; bottom: 1rem; right: 1rem; z-index: 2; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3); display: flex; align-items: center; justify-content: center; color: #fff; font-size: .85rem; transition: background .2s, transform .2s; }
+    .cat:hover .arrow { background: var(--gold); color: var(--ink); transform: translateX(2px); }
 
     /* ============ PRODUCTS ============ */
-    #tienda { background: #fafafa; }
+    #tienda { background: #fff; }
     .filters { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2rem; }
     .filters button { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; font-weight: 600; color: var(--muted); transition: all .15s; font-family: inherit; }
     .filters button.active, .filters button:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
@@ -205,32 +248,55 @@
     .card:hover .ph img { transform: scale(1.05); }
     .card .tag { position: absolute; top: .7rem; left: .7rem; background: var(--gold); color: var(--ink); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .55rem; border-radius: 3px; }
     .card .body { padding: 1rem 1rem 1.2rem; display: flex; flex-direction: column; flex: 1; }
-    .card .brand-lbl { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+    .card .brand-lbl { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); font-weight: 700; }
     .card h3 { font-size: .92rem; font-weight: 600; margin: .25rem 0 .1rem; line-height: 1.3; }
     .card .spec { font-size: .76rem; color: var(--muted); margin-bottom: .8rem; flex: 1; }
     .card .price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .02em; margin-bottom: .7rem; }
     .card .buy { display: block; text-align: center; background: var(--ink); color: #fff; text-decoration: none; padding: .7rem; border-radius: 5px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s; }
     .card .buy:hover { background: var(--gold); color: var(--ink); }
 
-    /* ============ UNDERGROUND STRIP ============ */
-    .under { background: var(--ink); color: #fff; }
-    .under .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; }
-    @media (max-width: 820px) { .under .wrap { grid-template-columns: 1fr; } }
-    .under h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.4rem, 7vw, 4.5rem); line-height: .95; letter-spacing: .02em; }
-    .under h2 .gold { color: var(--gold); }
-    .under p { color: rgba(255,255,255,.65); font-weight: 300; margin: 1.2rem 0; }
-    .under .stats { display: flex; gap: 2.5rem; margin-top: 1.8rem; }
-    .under .stats .n { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--gold); line-height: 1; }
-    .under .stats .l { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.5); }
-    .under .media { border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.12); }
-    .under .media video { width: 100%; display: block; }
+    /* ============ VALUE PROPS ============ */
+    .props { background: var(--panel); }
+    .props-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+    @media (max-width: 900px) { .props-row { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .props-row { grid-template-columns: 1fr; } }
+    .prop { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.4rem; display: flex; flex-direction: column; gap: .7rem; }
+    .prop .ico { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; color: var(--ink); }
+    .prop h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: .03em; }
+    .prop p { font-size: .82rem; color: var(--muted); }
 
-    /* ============ FEATURES ============ */
-    .feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
-    @media (max-width: 720px) { .feats { grid-template-columns: 1fr; } }
-    .feat { border-top: 3px solid var(--gold); padding-top: 1.2rem; }
-    .feat h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: .04em; margin-bottom: .4rem; }
-    .feat p { font-size: .86rem; color: var(--muted); }
+    /* ============ BRAND STORY (media left / text right) ============ */
+    .story { background: var(--ink); color: #fff; }
+    .story .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 3rem; align-items: center; }
+    @media (max-width: 820px) { .story .wrap { grid-template-columns: 1fr; } }
+    .story .media { border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.12); order: -1; aspect-ratio: 4/5; }
+    .story .media video { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; display: block; }
+    @media (max-width: 820px) { .story .media { order: 0; aspect-ratio: 16/10; } }
+    .story h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: .95; letter-spacing: .02em; }
+    .story h2 .gold { color: var(--gold); }
+    .story p { color: rgba(255,255,255,.65); font-weight: 300; margin: 1.1rem 0; }
+    .story .stats { display: flex; gap: 2.2rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .story .stats .n { font-family: 'Bebas Neue', sans-serif; font-size: 2.3rem; color: var(--gold); line-height: 1; }
+    .story .stats .l { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+
+    /* ============ REVIEWS ============ */
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; } }
+    .review { background: var(--panel); border-radius: 12px; padding: 1.6rem; display: flex; flex-direction: column; gap: .8rem; }
+    .review .stars { display: flex; gap: .15rem; color: var(--gold); }
+    .review .stars svg { width: 15px; height: 15px; fill: var(--gold); }
+    .review blockquote { font-size: .9rem; color: #333; line-height: 1.55; }
+    .review .who { display: flex; align-items: center; gap: .6rem; margin-top: auto; }
+    .review .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--ink); color: var(--gold); font-family: 'Bebas Neue', sans-serif; font-size: .85rem; display: flex; align-items: center; justify-content: center; }
+    .review .who b { display: block; font-size: .82rem; }
+    .review .who span { font-size: .72rem; color: var(--muted); }
+
+    /* ============ BRANDS STRIP ============ */
+    .brands-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2rem 1.5rem; }
+    .brands-row { max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0; }
+    .brands-row span { font-family: 'Bebas Neue', sans-serif; letter-spacing: .1em; font-size: 1.1rem; color: var(--muted); padding: 0 1.4rem; border-right: 1px solid var(--line); transition: color .2s; }
+    .brands-row span:last-child { border-right: none; }
+    .brands-row span:hover { color: var(--ink); }
 
     /* ============ FAQ ============ */
     .faq details { border-bottom: 1px solid var(--line); padding: 1.1rem 0; }
@@ -255,6 +321,12 @@
     footer h4 { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: .1em; margin-bottom: 1rem; }
     footer a { color: rgba(255,255,255,.5); text-decoration: none; display: block; padding: .3rem 0; font-size: .84rem; transition: color .2s; }
     footer a:hover { color: var(--gold); }
+    .foot-social { display: flex; gap: .6rem; margin-top: .3rem; }
+    .foot-social a { width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: var(--ink) !important; display: flex; align-items: center; justify-content: center; padding: 0; }
+    .foot-social a svg { width: 17px; height: 17px; fill: var(--ink); }
+    .foot-social a:hover { opacity: .85; }
+    .pay-row { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .4rem; }
+    .pay-row span { font-size: .68rem; letter-spacing: .04em; color: rgba(255,255,255,.5); border: 1px solid rgba(255,255,255,.15); border-radius: 5px; padding: .25rem .5rem; }
     .foot-bottom { max-width: 1180px; margin: 2.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; font-size: .76rem; }
 
     /* ============ FLOAT WHATSAPP ============ */
@@ -267,6 +339,17 @@
 </head>
 <body>
 
+<!-- ============ UTILITY STRIP ============ -->
+<div class="utility">
+  <div class="wrap">
+    <span class="u-info">Lun – Sáb · Envíos a toda Colombia</span>
+    <div class="u-links">
+      <a href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp +57 310 763 0504</a>
+      <a href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</div>
+
 <!-- ============ NAV ============ -->
 <header class="top-bar">
   <a href="index.html" class="brand" aria-label="ESCENA BMX - Inicio">
@@ -274,39 +357,76 @@
     <span class="name">ESCENA BMX</span>
   </a>
   <nav class="nav-links" id="nav">
+    <a href="#comprar">Cómo comprar</a>
     <a href="#categorias">Categorías</a>
     <a href="#tienda">Tienda</a>
-    <a href="#escena">La Escena</a>
     <a href="#faq">FAQ</a>
     <a class="nav-cta" href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp</a>
   </nav>
   <button class="burger" id="burger" aria-label="Menú">☰</button>
 </header>
 
-<!-- ============ HERO ============ -->
+<!-- ============ HERO (split) ============ -->
 <section class="hero">
-  <video autoplay muted loop playsinline poster="assets/img/products/fiend-bielas-negro.jpg">
-    <source src="assets/video/hero.mp4" type="video/mp4" />
-  </video>
-  <div class="overlay"></div>
-  <div class="inner">
-    <p class="kicker">BMX Shop · Colombia</p>
-    <h1>ESCENA <span class="gold">BMX</span></h1>
-    <p class="tagline">Partes que aguantan calle</p>
-    <p class="lead">Stems, bielas, rines y sillines originales de las marcas que mueven la escena. Directo de la tienda a tu bici — pedís por WhatsApp, montás y ruedas.</p>
-    <div class="btns">
-      <a href="#tienda" class="btn btn-gold">Ver la tienda</a>
-      <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20info%20de%20partes%20BMX" target="_blank" rel="noopener" class="btn btn-ghost">Pedir por WhatsApp</a>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="kicker">BMX Shop · Colombia</span>
+      <h1>ESCENA <span class="gold">BMX</span></h1>
+      <p class="tagline">Partes que aguantan calle</p>
+      <p class="lead">Stems, bielas, rines y sillines originales de las marcas que mueven la escena. Directo de la tienda a tu bici — pedís por WhatsApp, montás y ruedas.</p>
+      <div class="btns">
+        <a href="#tienda" class="btn btn-gold">Ver la tienda</a>
+        <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20info%20de%20partes%20BMX" target="_blank" rel="noopener" class="btn btn-ghost">Pedir por WhatsApp</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="n">5+</div><div class="l">Marcas top</div></div>
+        <div><div class="n">100%</div><div class="l">Original</div></div>
+        <div><div class="n">32</div><div class="l">Depts. Colombia</div></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <video autoplay muted loop playsinline poster="assets/img/products/fiend-bielas-negro.jpg">
+        <source src="assets/video/hero.mp4" type="video/mp4" />
+      </video>
+      <span class="pill">100% Original</span>
+      <div class="badge-ring"><img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" width="62" height="62" /></div>
     </div>
   </div>
 </section>
 
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
-  <span>CULT <b>◆</b> FIEND <b>◆</b> ÉCLAT <b>◆</b> VOLUME <b>◆</b> MUTANY <b>◆</b> ENVÍOS A TODO COLOMBIA <b>◆</b> PARTES 100% ORIGINALES <b>◆</b> CULT <b>◆</b> FIEND <b>◆</b> ÉCLAT <b>◆</b> VOLUME <b>◆</b> MUTANY <b>◆</b> ENVÍOS A TODO COLOMBIA <b>◆</b> PARTES 100% ORIGINALES <b>◆</b></span>
+  <span>CULT <b>×</b> FIEND <b>×</b> ÉCLAT <b>×</b> VOLUME <b>×</b> MUTANY <b>×</b> ENVÍOS A TODO COLOMBIA <b>×</b> PARTES 100% ORIGINALES <b>×</b> CULT <b>×</b> FIEND <b>×</b> ÉCLAT <b>×</b> VOLUME <b>×</b> MUTANY <b>×</b> ENVÍOS A TODO COLOMBIA <b>×</b> PARTES 100% ORIGINALES <b>×</b></span>
 </div>
 
-<!-- ============ CATEGORIES ============ -->
+<!-- ============ CÓMO COMPRAR (process band) ============ -->
+<section id="comprar" class="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Sin vueltas</span>
+      <h2>CÓMO <span class="bar">/</span> COMPRAR</h2>
+    </div>
+    <div class="steps-row">
+      <div class="step">
+        <div class="stepnum">01</div>
+        <h3>Elegís tu parte</h3>
+        <p>Mirás la tienda y elegís stem, bielas, rines o sillín — filtrás por categoría en segundos.</p>
+      </div>
+      <div class="step">
+        <div class="stepnum">02</div>
+        <h3>Pedís por WhatsApp</h3>
+        <p>Un toque arma tu pedido en el chat. Coordinamos pago (Nequi, Daviplata, transferencia o efectivo) y envío ahí mismo.</p>
+      </div>
+      <div class="step">
+        <div class="stepnum">03</div>
+        <h3>Rodás</h3>
+        <p>Te llega a la puerta de tu casa, la montás en tu bici y a rodar. Así de simple.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORIES (photo cards) ============ -->
 <section id="categorias">
   <div class="wrap">
     <div class="sec-head">
@@ -314,10 +434,26 @@
       <h2>CATEGORÍAS <span class="bar">/</span> COMPONENTES</h2>
     </div>
     <div class="cats">
-      <a href="#tienda" class="cat" data-jump="stems"><div class="num">01</div><h3>Stems</h3><p>Front load y top load para control total.</p></a>
-      <a href="#tienda" class="cat" data-jump="bielas"><div class="num">02</div><h3>Bielas</h3><p>Cromoly 48 spline que no perdona.</p></a>
-      <a href="#tienda" class="cat" data-jump="rines"><div class="num">03</div><h3>Rines</h3><p>Doble pared para grinds y drops.</p></a>
-      <a href="#tienda" class="cat" data-jump="sillines"><div class="num">04</div><h3>Sillines</h3><p>Pivotal slim, cómodos y ligeros.</p></a>
+      <a href="#tienda" class="cat" data-jump="stems" style="background-image:url('assets/img/products/volume-stem-front-load-plata.jpg')">
+        <span class="num">01</span>
+        <div class="content"><h3>Stems</h3><p>Front load y top load para control total.</p></div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="#tienda" class="cat" data-jump="bielas" style="background-image:url('assets/img/products/mutany-savage-bielas-negro.jpg')">
+        <span class="num">02</span>
+        <div class="content"><h3>Bielas</h3><p>Cromoly 48 spline que no perdona.</p></div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="#tienda" class="cat" data-jump="rines" style="background-image:url('assets/img/products/eclat-trippin-rin-negro.jpg')">
+        <span class="num">03</span>
+        <div class="content"><h3>Rines</h3><p>Doble pared para grinds y drops.</p></div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="#tienda" class="cat" data-jump="sillines" style="background-image:url('assets/img/products/cult-vans-sillin-negro.jpg')">
+        <span class="num">04</span>
+        <div class="content"><h3>Sillines</h3><p>Pivotal slim, cómodos y ligeros.</p></div>
+        <span class="arrow">→</span>
+      </a>
     </div>
   </div>
 </section>
@@ -342,9 +478,46 @@
   </div>
 </section>
 
-<!-- ============ UNDERGROUND ============ -->
-<section id="escena" class="under">
+<!-- ============ VALUE PROPS ============ -->
+<section class="props">
   <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Por qué ESCENA</span>
+      <h2>RAZONES <span class="bar">/</span> DE PESO</h2>
+    </div>
+    <div class="props-row">
+      <div class="prop">
+        <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+        <h4>Envío a todo el país</h4>
+        <p>Despachamos a los 32 departamentos con Interrapidísimo, Servientrega y Coordinadora.</p>
+      </div>
+      <div class="prop">
+        <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+        <h4>Compra por WhatsApp</h4>
+        <p>Nada de formularios eternos. Elegís, escribís y confirmás en el chat.</p>
+      </div>
+      <div class="prop">
+        <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <h4>Partes originales</h4>
+        <p>Solo marcas oficiales de BMX. Cada parte se revisa antes de salir.</p>
+      </div>
+      <div class="prop">
+        <span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <h4>Asesoría de riders</h4>
+        <p>Te ayudamos a elegir la parte correcta antes de comprar, sin bots.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRAND STORY ============ -->
+<section id="escena" class="story">
+  <div class="wrap">
+    <div class="media">
+      <video autoplay muted loop playsinline poster="assets/img/products/fiend-fiending-stem-negro.jpg">
+        <source src="assets/video/hero.mp4" type="video/mp4" />
+      </video>
+    </div>
     <div>
       <span class="eyebrow" style="color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;">Somos ESCENA</span>
       <h2>NO ES UNA TIENDA.<br />ES LA <span class="gold">ESCENA</span>.</h2>
@@ -356,28 +529,61 @@
         <div><div class="n">32</div><div class="l">Depts. Colombia</div></div>
       </div>
     </div>
-    <div class="media">
-      <video autoplay muted loop playsinline poster="assets/img/products/fiend-fiending-stem-negro.jpg">
-        <source src="assets/video/hero.mp4" type="video/mp4" />
-      </video>
-    </div>
   </div>
 </section>
 
-<!-- ============ FEATURES ============ -->
+<!-- ============ REVIEWS ============ -->
 <section>
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Por qué ESCENA</span>
-      <h2>SIN VUELTAS <span class="bar">/</span> DIRECTO</h2>
+      <span class="eyebrow">La comunidad habla</span>
+      <h2>LO QUE DICE <span class="bar">/</span> LA ESCENA</h2>
     </div>
-    <div class="feats">
-      <div class="feat"><h3>Envío a todo el país</h3><p>Despachamos a los 32 departamentos con Interrapidísimo, Servientrega y Coordinadora. Te damos la guía para que rastrees tu pedido.</p></div>
-      <div class="feat"><h3>Compra por WhatsApp</h3><p>Nada de formularios eternos. Elegís, escribís y confirmás en el chat. Pagás con Nequi, Daviplata, transferencia o efectivo.</p></div>
-      <div class="feat"><h3>Partes originales</h3><p>Solo trabajamos marcas oficiales de BMX. Cada parte se revisa antes de salir. Si algo falla de fábrica, respondemos.</p></div>
+    <div class="reviews-grid">
+      <figure class="review">
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+        </div>
+        <blockquote>Pedí el stem un día por WhatsApp y en menos de una semana ya lo tenía montado. Todo original y el precio justo.</blockquote>
+        <figcaption class="who"><span class="avatar">JD</span><span><b>Juan D.</b><span>Street · Bogotá</span></span></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+        </div>
+        <blockquote>Me ayudaron a elegir las bielas correctas para mi cuadro sin enredarme con specs. Asesoría real, no de bot.</blockquote>
+        <figcaption class="who"><span class="avatar">CR</span><span><b>Camila R.</b><span>Park · Medellín</span></span></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+        </div>
+        <blockquote>Rines Éclat originales a buen precio y guía de envío el mismo día. Volví a comprar sin pensarlo.</blockquote>
+        <figcaption class="who"><span class="avatar">SA</span><span><b>Santiago A.</b><span>Dirt · Cali</span></span></figcaption>
+      </figure>
     </div>
+    <p style="font-size:.7rem;color:var(--muted);margin-top:1.2rem;">*Reseñas de ejemplo — reemplazar con testimonios reales de clientes.</p>
   </div>
 </section>
+
+<!-- ============ BRANDS STRIP ============ -->
+<div class="brands-strip">
+  <div class="brands-row">
+    <span>CULT</span><span>FIEND</span><span>ÉCLAT</span><span>VOLUME</span><span>MUTANY</span>
+  </div>
+</div>
 
 <!-- ============ FAQ ============ -->
 <section id="faq">
@@ -401,7 +607,7 @@
   <div class="wrap">
     <h2>¿LISTO PARA RODAR?</h2>
     <p>Escríbenos por WhatsApp y armamos tu pedido. Respondemos en horario hábil, de lunes a sábado.</p>
-    <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20armar%20un%20pedido" target="_blank" rel="noopener" class="btn" style="background:var(--ink);color:#fff;">Hablar con ESCENA</a>
+    <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20armar%20un%20pedido" target="_blank" rel="noopener" class="btn btn-ink">Hablar con ESCENA</a>
   </div>
 </section>
 
@@ -412,9 +618,14 @@
       <img src="assets/img/escena-logo.jpg" alt="Logo ESCENA Bike Shop" width="54" />
       <div class="name">ESCENA BIKE SHOP</div>
       <p>Tienda de partes y componentes BMX en Colombia. Riders montando una tienda para riders.</p>
+      <div class="foot-social">
+        <a href="https://wa.me/573107630504" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.4.8-1.4.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.6 3.1.5 1.6 1.6 3 2 3.4.3.3 2.6 4 6.3 5.3 2.3.8 3.2.9 4.4.7.7-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2z"/></svg></a>
+        <a href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2.1.3 2.8.6.7.3 1.3.6 1.9 1.2.6.6.9 1.2 1.2 1.9.3.7.5 1.6.6 2.8.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2.1-.6 2.8-.3.7-.6 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.7.3-1.6.5-2.8.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2.1-.3-2.8-.6-.7-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.2-1.2-1.9-.3-.7-.5-1.6-.6-2.8-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-2.1.6-2.8.3-.7.6-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.7-.3 1.6-.5 2.8-.6 1.3-.1 1.7-.1 4.9-.1M12 0C8.7 0 8.3 0 7 .1c-1.3.1-2.2.3-3 .6-.8.3-1.5.8-2.2 1.4C1.1 2.8.6 3.5.3 4.3c-.3.8-.5 1.7-.6 3C-.4 8.6-.4 9 0 12.3s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.8 1.5 1.4 2.2.6.6 1.3 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.8 2.2-1.4.6-.6 1.1-1.3 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.8-1.5-1.4-2.2-.6-.6-1.3-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"/><path d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.4" cy="5.6" r="1.4"/></svg></a>
+      </div>
     </div>
     <div>
       <h4>Tienda</h4>
+      <a href="#comprar">Cómo comprar</a>
       <a href="#categorias">Categorías</a>
       <a href="#tienda">Componentes</a>
       <a href="#escena">La Escena</a>
@@ -427,8 +638,9 @@
       <a href="terminos.html">Términos</a>
       <a href="politica-privacidad.html">Privacidad</a>
       <a href="politica-cookies.html">Cookies</a>
-      <a href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener">Instagram</a>
+      <div class="pay-row">
+        <span>Nequi</span><span>Daviplata</span><span>Transferencia</span><span>Efectivo</span>
+      </div>
     </div>
   </div>
   <div class="foot-bottom">
