@@ -34,6 +34,7 @@
   <link rel="apple-touch-icon" href="assets/img/escena-logo.jpg" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="assets/css/cart.css" />
+  <script src="assets/js/wholesale.js"></script>
 
   <!-- ============ Fonts ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -260,7 +261,7 @@
       <a href="tienda.html">Tienda</a>
       <a href="armar-bmx.html" class="active">Arma tu BMX</a>
       <a href="blog.html">Blog</a>
-      <a href="index.html#categorias">Categorías</a>
+      <a href="mayoristas.html">Mayoristas</a>
       <a href="index.html#faq">FAQ</a>
       <a class="nav-cta" href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp</a>
     </nav>
@@ -315,6 +316,7 @@
       <a href="tienda.html">Componentes</a>
       <a href="armar-bmx.html">Arma tu BMX</a>
       <a href="blog.html">Blog</a>
+      <a href="mayoristas.html">Mayoristas</a>
       <a href="index.html#categorias">Categorías</a>
       <a href="index.html#faq">Preguntas frecuentes</a>
     </div>
@@ -404,7 +406,10 @@ var TOTAL_STEPS = STEPS.length + 2; /* + extras + summary */
 var state = { picks: {}, extras: [] };
 var currentStep = 0;
 
-function cop(n){ return "$" + Math.round(n).toLocaleString("es-CO") + " COP"; }
+function cop(n){
+  if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
+  return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
+}
 function slugOf(p){ return p.img.split("/").pop().replace(/\.[a-zA-Z0-9]+$/, ""); }
 function productsFor(step){
   return ESCENA_PRODUCTS.filter(function(p){
@@ -582,7 +587,9 @@ function renderSummary(body){
   var waBtn = document.getElementById("waOrderBtn");
   if (waBtn && rows.length) {
     waBtn.addEventListener("click", function(){
-      var lines = ["Hola ESCENA 🐕, quiero armar mi BMX con estas piezas:"];
+      var lines = [];
+      if (window.EscenaWholesale && window.EscenaWholesale.isActive()) lines.push("🏷️ PEDIDO MAYORISTA (15% aplicado)");
+      lines.push("Hola ESCENA 🐕, quiero armar mi BMX con estas piezas:");
       rows.forEach(function(r){
         lines.push("• " + r.label + ": " + r.product.n + " (" + r.product.brand + ") — " + cop(r.product.price));
       });

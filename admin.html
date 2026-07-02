@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Admin — ESCENA BIKE SHOP</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/escena-logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #ffffff; --panel: #f6f6f4; --ink: #0A0A0A; --muted: #666; --line: #ececeb; --good: #1baf7a; }
+    body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; font-weight: 700; text-decoration: none; border-radius: 6px; padding: .75rem 1.3rem; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; border: none; font-family: inherit; transition: opacity .2s, background .2s; }
+    .btn-ink { background: var(--ink); color: #fff; }
+    .btn-ink:hover { opacity: .88; }
+    .btn-outline { background: #fff; color: var(--ink); border: 1.5px solid var(--ink); }
+    .btn-outline:hover { background: var(--panel); }
+    .btn-sm { padding: .45rem .8rem; font-size: .68rem; }
+
+    /* ---- Login gate ---- */
+    .gate { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: var(--ink); }
+    .gate-card { background: #fff; border-radius: 14px; max-width: 380px; width: 100%; padding: 2.4rem 2rem; text-align: center; }
+    .gate-card img { width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 1rem; border: 1px solid var(--line); }
+    .gate-card h1 { font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; letter-spacing: .04em; margin-bottom: .4rem; }
+    .gate-card p { font-size: .84rem; color: var(--muted); margin-bottom: 1.4rem; }
+    .gate-card input { width: 100%; border: 1.5px solid var(--line); border-radius: 8px; padding: .85rem 1rem; font-size: .9rem; font-family: inherit; margin-bottom: .9rem; text-align: center; letter-spacing: .05em; }
+    .gate-card input:focus { outline: none; border-color: var(--ink); }
+    .gate-card .btn { width: 100%; }
+    .gate-error { display: none; color: #c0392b; font-size: .78rem; margin-top: .8rem; }
+
+    /* ---- Admin shell ---- */
+    #adminApp { display: none; }
+    #adminApp.show { display: block; }
+    header.admin-bar { background: #fff; border-bottom: 1px solid var(--line); padding: 1rem 1.5rem; position: sticky; top: 0; z-index: 50; }
+    header.admin-bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .admin-brand { display: flex; align-items: center; gap: .7rem; }
+    .admin-brand img { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); }
+    .admin-brand span { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: .06em; }
+    .admin-brand small { display: block; font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .admin-actions { display: flex; align-items: center; gap: .6rem; }
+
+    main { padding: 2rem 0 4rem; }
+    .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: .03em; margin-bottom: .3rem; }
+    .section-sub { font-size: .82rem; color: var(--muted); margin-bottom: 1.4rem; }
+    .demo-tag { display: inline-block; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: .15rem .5rem; font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-left: .5rem; vertical-align: middle; }
+
+    /* ---- KPI tiles ---- */
+    .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.6rem; }
+    @media (max-width: 900px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .kpi-row { grid-template-columns: 1fr; } }
+    .kpi { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.3rem; }
+    .kpi .lbl { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .5rem; }
+    .kpi .val { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.7rem; letter-spacing: -.01em; }
+    .kpi .delta { font-size: .74rem; font-weight: 700; margin-top: .3rem; }
+    .kpi .delta.up { color: var(--good); }
+
+    /* ---- Charts ---- */
+    .chart-row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.2rem; margin-bottom: 2.4rem; }
+    @media (max-width: 900px) { .chart-row { grid-template-columns: 1fr; } }
+    .chart-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.3rem 1.4rem 1rem; position: relative; }
+    .chart-card h3 { font-size: .92rem; font-weight: 700; margin-bottom: .9rem; }
+    .bar-tooltip { position: absolute; background: var(--ink); color: #fff; font-size: .72rem; padding: .35rem .6rem; border-radius: 5px; pointer-events: none; opacity: 0; transition: opacity .12s; white-space: nowrap; transform: translate(-50%, -110%); z-index: 5; }
+    .bar-tooltip.show { opacity: 1; }
+    .rank-list { display: flex; flex-direction: column; gap: .7rem; }
+    .rank-row { display: grid; grid-template-columns: 16px 1fr auto; gap: .6rem; align-items: center; font-size: .78rem; }
+    .rank-row .rn { color: var(--muted); font-weight: 700; }
+    .rank-row .rbar-track { background: var(--panel); border-radius: 3px; height: 10px; overflow: hidden; }
+    .rank-row .rbar-fill { background: var(--ink); height: 100%; border-radius: 3px; }
+    .rank-row .rval { font-weight: 700; white-space: nowrap; }
+    .rank-row .rname { grid-column: 1 / -1; font-size: .74rem; color: var(--muted); margin-top: -.3rem; }
+
+    /* ---- Inventory ---- */
+    .inv-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+    .inv-toolbar input[type=search] { border: 1.5px solid var(--line); border-radius: 8px; padding: .6rem .9rem; font-size: .85rem; font-family: inherit; min-width: 220px; }
+    .inv-toolbar input[type=search]:focus { outline: none; border-color: var(--ink); }
+    .inv-toolbar .inv-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .inv-note { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.2rem; font-size: .8rem; color: #333; margin-bottom: 1.4rem; }
+    .inv-note b { color: var(--ink); }
+
+    .inv-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+    table.inv-table { width: 100%; border-collapse: collapse; font-size: .8rem; min-width: 980px; }
+    table.inv-table th { text-align: left; font-size: .66rem; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: .8rem .7rem; background: var(--panel); border-bottom: 1px solid var(--line); white-space: nowrap; }
+    table.inv-table td { padding: .55rem .7rem; border-bottom: 1px solid var(--line); vertical-align: middle; }
+    table.inv-table tr:last-child td { border-bottom: none; }
+    table.inv-table .thumb { width: 44px; height: 44px; border-radius: 6px; overflow: hidden; background: #0A0A0A; flex-shrink: 0; }
+    table.inv-table .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    table.inv-table input[type=text], table.inv-table input[type=number], table.inv-table select {
+      border: 1px solid var(--line); border-radius: 5px; padding: .4rem .5rem; font-size: .78rem; font-family: inherit; width: 100%; min-width: 90px; background: #fff;
+    }
+    table.inv-table input:focus, table.inv-table select:focus { outline: none; border-color: var(--ink); }
+    table.inv-table .col-name { min-width: 170px; }
+    table.inv-table .col-spec { min-width: 190px; }
+    table.inv-table .stock-toggle { display: inline-flex; align-items: center; gap: .4rem; cursor: pointer; font-size: .74rem; font-weight: 600; }
+    table.inv-table .stock-toggle input { width: auto; min-width: 0; }
+    table.inv-table .row-actions { display: flex; gap: .4rem; white-space: nowrap; }
+    table.inv-table .row-actions button { background: none; border: 1px solid var(--line); border-radius: 5px; padding: .35rem .6rem; font-size: .68rem; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink); }
+    table.inv-table .row-actions button:hover { background: var(--panel); }
+    table.inv-table .row-actions .del { color: #c0392b; border-color: #f0d0cc; }
+    table.inv-table .row-actions .del:hover { background: #fdf2f0; }
+    .file-input { font-size: .68rem; width: 100%; }
+    .empty-row td { text-align: center; color: var(--muted); padding: 2rem; }
+
+    /* ---- WhatsApp support float ---- */
+    .support-float { position: fixed; bottom: 1.4rem; right: 1.4rem; z-index: 200; background: #25D366; color: #fff; display: flex; align-items: center; gap: .6rem; border-radius: 999px; padding: .8rem 1.2rem .8rem .8rem; box-shadow: 0 8px 24px rgba(0,0,0,.25); text-decoration: none; font-size: .78rem; font-weight: 700; }
+    .support-float svg { width: 26px; height: 26px; fill: #fff; flex-shrink: 0; }
+    .support-float:hover { opacity: .92; }
+
+    .toast { position: fixed; top: 1.2rem; right: 1.4rem; z-index: 650; background: var(--ink); color: #fff; padding: .7rem 1.1rem; border-radius: 8px; font-size: .8rem; opacity: 0; transform: translateY(-8px); transition: opacity .2s, transform .2s; pointer-events: none; }
+    .toast.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- ============ LOGIN GATE ============ -->
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" />
+    <h1>PANEL ADMIN</h1>
+    <p>Acceso interno para el equipo de ESCENA BIKE SHOP.</p>
+    <form id="gateForm">
+      <input type="password" id="gatePw" placeholder="Contraseña de administrador" autocomplete="off" required />
+      <button type="submit" class="btn btn-ink">Entrar</button>
+    </form>
+    <p class="gate-error" id="gateError">Contraseña incorrecta.</p>
+  </div>
+</div>
+
+<!-- ============ ADMIN APP ============ -->
+<div id="adminApp">
+  <header class="admin-bar">
+    <div class="wrap">
+      <div class="admin-brand">
+        <img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" />
+        <div>
+          <span>ESCENA ADMIN</span>
+          <small>Panel interno</small>
+        </div>
+      </div>
+      <div class="admin-actions">
+        <a href="index.html" class="btn btn-outline btn-sm">Ver tienda</a>
+        <button type="button" class="btn btn-outline btn-sm" id="adminLogoutBtn">Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <!-- ============ KPI DASHBOARD ============ -->
+      <h2 class="section-title">Resumen<span class="demo-tag">Datos de ejemplo</span></h2>
+      <p class="section-sub">Vista previa de cómo se vería un panel de analítica real una vez conectado a pedidos y visitas del sitio.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="lbl">Ventas este mes</div>
+          <div class="val">$18.450.000</div>
+          <div class="delta up">▲ 12% vs. mes anterior</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Pedidos</div>
+          <div class="val">87</div>
+          <div class="delta up">▲ 9% vs. mes anterior</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Ticket promedio</div>
+          <div class="val">$212.000</div>
+          <div class="delta up">▲ 3% vs. mes anterior</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Producto más pedido</div>
+          <div class="val" style="font-size:1.1rem;">Volume Front Load Stem</div>
+          <div class="delta">23 unidades</div>
+        </div>
+      </div>
+
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Pedidos por semana</h3>
+          <svg id="barChart" viewBox="0 0 640 200" width="100%" height="200" style="overflow:visible;"></svg>
+          <div class="bar-tooltip" id="barTooltip"></div>
+        </div>
+        <div class="chart-card">
+          <h3>Productos más pedidos</h3>
+          <div class="rank-list" id="rankList"></div>
+        </div>
+      </div>
+
+      <!-- ============ INVENTORY MANAGER ============ -->
+      <h2 class="section-title">Inventario<span class="demo-tag">102 productos</span></h2>
+      <p class="section-sub">Editá precios, stock y datos del catálogo. Los cambios se guardan en este navegador.</p>
+
+      <div class="inv-note">
+        <b>Cómo publicar cambios:</b> este panel no escribe directamente a la tienda en vivo (el sitio es estático). Editá lo que necesites y tocá <b>“Exportar JSON”</b> — ese archivo se usa para regenerar las páginas reales del sitio.
+      </div>
+
+      <div class="inv-toolbar">
+        <input type="search" id="invSearch" placeholder="Buscar por nombre, marca o categoría…" />
+        <div class="inv-actions">
+          <button type="button" class="btn btn-outline btn-sm" id="invAddBtn">+ Agregar producto</button>
+          <button type="button" class="btn btn-outline btn-sm" id="invImportBtn">Importar JSON</button>
+          <input type="file" id="invImportFile" accept=".json" style="display:none;" />
+          <button type="button" class="btn btn-outline btn-sm" id="invExportCsvBtn">Exportar CSV</button>
+          <button type="button" class="btn btn-ink btn-sm" id="invExportBtn">Exportar JSON</button>
+        </div>
+      </div>
+
+      <div class="inv-table-wrap">
+        <table class="inv-table">
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <th>Nombre</th>
+              <th>Marca</th>
+              <th>Categoría</th>
+              <th>Especificación</th>
+              <th>Precio COP</th>
+              <th>Tag</th>
+              <th>Stock</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="invBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<a class="support-float" href="https://wa.me/573107630504?text=Hola%2C%20tengo%20un%20problema%20con%20el%20panel%20admin%20de%20ESCENA" target="_blank" rel="noopener" aria-label="Soporte por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+  Soporte
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/products-data.js"></script>
+<script>
+  var ADMIN_KEY = "escena_admin_auth_v1";
+  var ADMIN_PASSWORD = "ESCENAADMIN2026";
+  var CATALOG_KEY = "escena_admin_catalog_v1";
+  var CATEGORY_LABELS = {
+    stems: "Stems", manubrios: "Manubrios", horquillas: "Horquillas",
+    bielas: "Bielas", bujes: "Bujes", rines: "Rines", pinones: "Piñones",
+    pedales: "Pedales", sillines: "Sillines", tijas: "Tijas", punos: "Puños",
+    dc: "Dirección y BB", clavijas: "Clavijas", tornilleria: "Tornillería",
+    piezas: "Piezas varias", herramientas: "Herramientas"
+  };
+
+  /* ---- Toast ---- */
+  var toast = document.getElementById("toast");
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add("show");
+    setTimeout(function () { toast.classList.remove("show"); }, 2200);
+  }
+
+  /* ---- Login gate ---- */
+  var gate = document.getElementById("gate");
+  var adminApp = document.getElementById("adminApp");
+  var gateForm = document.getElementById("gateForm");
+  var gateError = document.getElementById("gateError");
+
+  function isAuthed() { return sessionStorage.getItem(ADMIN_KEY) === "1"; }
+  function showApp() {
+    gate.style.display = "none";
+    adminApp.classList.add("show");
+    initDashboard();
+    initInventory();
+  }
+  if (isAuthed()) showApp();
+
+  gateForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var pw = document.getElementById("gatePw").value.trim();
+    if (pw === ADMIN_PASSWORD) {
+      sessionStorage.setItem(ADMIN_KEY, "1");
+      showApp();
+    } else {
+      gateError.style.display = "block";
+    }
+  });
+  document.getElementById("adminLogoutBtn").addEventListener("click", function () {
+    sessionStorage.removeItem(ADMIN_KEY);
+    window.location.reload();
+  });
+
+  /* ---- KPI charts (sample data) ---- */
+  function initDashboard() {
+    var weeks = ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8"];
+    var values = [9, 12, 8, 15, 11, 14, 10, 18];
+    var svg = document.getElementById("barChart");
+    var tooltip = document.getElementById("barTooltip");
+    var max = Math.max.apply(null, values);
+    var chartW = 640, chartH = 200, padL = 26, padB = 24, padT = 10;
+    var plotW = chartW - padL - 10, plotH = chartH - padB - padT;
+    var barGap = 10;
+    var barW = Math.min(24, (plotW / values.length) - barGap);
+    var svgNS = "http://www.w3.org/2000/svg";
+
+    function el(tag, attrs) {
+      var e = document.createElementNS(svgNS, tag);
+      for (var k in attrs) e.setAttribute(k, attrs[k]);
+      return e;
+    }
+
+    // gridlines
+    [0, 0.5, 1].forEach(function (t) {
+      var y = padT + plotH * (1 - t);
+      svg.appendChild(el("line", { x1: padL, x2: chartW - 4, y1: y, y2: y, stroke: "#ececeb", "stroke-width": 1 }));
+      var label = Math.round(max * t);
+      var txt = el("text", { x: padL - 6, y: y + 3, "font-size": 9, fill: "#999", "text-anchor": "end" });
+      txt.textContent = label;
+      svg.appendChild(txt);
+    });
+
+    values.forEach(function (v, i) {
+      var slot = plotW / values.length;
+      var x = padL + i * slot + (slot - barW) / 2;
+      var h = (v / max) * plotH;
+      var y = padT + plotH - h;
+      var rect = el("rect", { x: x, y: y, width: barW, height: h, rx: 4, ry: 4, fill: "#0A0A0A", "data-label": weeks[i], "data-value": v, style: "cursor:pointer;" });
+      svg.appendChild(rect);
+      var label = el("text", { x: x + barW / 2, y: chartH - 6, "font-size": 9, fill: "#666", "text-anchor": "middle" });
+      label.textContent = weeks[i];
+      svg.appendChild(label);
+
+      rect.addEventListener("pointermove", function (e) {
+        var box = svg.getBoundingClientRect();
+        tooltip.style.left = (e.clientX - box.left) + "px";
+        tooltip.style.top = (e.clientY - box.top) + "px";
+        tooltip.textContent = weeks[i] + ": " + v + " pedidos";
+        tooltip.classList.add("show");
+        rect.setAttribute("fill", "#333");
+      });
+      rect.addEventListener("pointerleave", function () {
+        tooltip.classList.remove("show");
+        rect.setAttribute("fill", "#0A0A0A");
+      });
+    });
+
+    var ranked = [
+      { n: "Volume Front Load Stem", v: 23 },
+      { n: "Mutany Savage Bielas 165", v: 19 },
+      { n: "Cult x Vans Pivotal Sillín", v: 17 },
+      { n: "Odyssey Piñón 28T Negro", v: 15 },
+      { n: "Éclat Trippin Rin", v: 12 }
+    ];
+    var rankMax = ranked[0].v;
+    var rankList = document.getElementById("rankList");
+    rankList.innerHTML = ranked.map(function (r, i) {
+      var pct = Math.round((r.v / rankMax) * 100);
+      return '<div class="rank-row">' +
+        '<span class="rn">' + (i + 1) + '</span>' +
+        '<span class="rbar-track"><span class="rbar-fill" style="width:' + pct + '%;"></span></span>' +
+        '<span class="rval">' + r.v + '</span>' +
+        '<span class="rname">' + r.n + '</span>' +
+        '</div>';
+    }).join("");
+  }
+
+  /* ---- Inventory manager ---- */
+  var catalog = [];
+
+  function slugOf(p) {
+    return p.img.split("/").pop().replace(/\.[a-zA-Z0-9]+$/, "");
+  }
+
+  function loadCatalog() {
+    var saved = localStorage.getItem(CATALOG_KEY);
+    if (saved) {
+      try { return JSON.parse(saved); } catch (e) {}
+    }
+    return ESCENA_PRODUCTS.map(function (p) {
+      return {
+        slug: slugOf(p), n: p.n, brand: p.brand, cat: p.cat, spec: p.spec,
+        price: p.price, tag: p.tag || "", img: p.img, stock: true
+      };
+    });
+  }
+  function saveCatalog() {
+    localStorage.setItem(CATALOG_KEY, JSON.stringify(catalog));
+  }
+
+  function catOptions(selected) {
+    return Object.keys(CATEGORY_LABELS).map(function (k) {
+      return '<option value="' + k + '"' + (k === selected ? " selected" : "") + '>' + CATEGORY_LABELS[k] + '</option>';
+    }).join("");
+  }
+
+  function rowHTML(p, idx) {
+    return '<tr data-idx="' + idx + '">' +
+      '<td><div class="thumb"><img src="' + p.img + '" alt="" loading="lazy" /></div>' +
+        '<input type="file" class="file-input" accept="image/*" data-field="img" /></td>' +
+      '<td class="col-name"><input type="text" data-field="n" value="' + p.n.replace(/"/g, "&quot;") + '" /></td>' +
+      '<td><input type="text" data-field="brand" value="' + (p.brand || "").replace(/"/g, "&quot;") + '" /></td>' +
+      '<td><select data-field="cat">' + catOptions(p.cat) + '</select></td>' +
+      '<td class="col-spec"><input type="text" data-field="spec" value="' + (p.spec || "").replace(/"/g, "&quot;") + '" /></td>' +
+      '<td><input type="number" data-field="price" value="' + p.price + '" min="0" step="1000" /></td>' +
+      '<td><input type="text" data-field="tag" value="' + (p.tag || "").replace(/"/g, "&quot;") + '" /></td>' +
+      '<td><label class="stock-toggle"><input type="checkbox" data-field="stock"' + (p.stock ? " checked" : "") + ' />' + (p.stock ? "En stock" : "Agotado") + '</label></td>' +
+      '<td class="row-actions"><button type="button" class="save">Guardar</button><button type="button" class="del">Eliminar</button></td>' +
+      '</tr>';
+  }
+
+  function renderInventory(filter) {
+    var body = document.getElementById("invBody");
+    var items = catalog;
+    if (filter) {
+      var f = filter.toLowerCase();
+      items = catalog.filter(function (p) {
+        return p.n.toLowerCase().indexOf(f) > -1 || (p.brand || "").toLowerCase().indexOf(f) > -1 || (CATEGORY_LABELS[p.cat] || "").toLowerCase().indexOf(f) > -1;
+      });
+    }
+    if (items.length === 0) {
+      body.innerHTML = '<tr class="empty-row"><td colspan="9">No se encontraron productos.</td></tr>';
+      return;
+    }
+    body.innerHTML = items.map(function (p) {
+      return rowHTML(p, catalog.indexOf(p));
+    }).join("");
+  }
+
+  function initInventory() {
+    catalog = loadCatalog();
+    renderInventory("");
+
+    document.getElementById("invSearch").addEventListener("input", function (e) {
+      renderInventory(e.target.value);
+    });
+
+    document.getElementById("invBody").addEventListener("click", function (e) {
+      var tr = e.target.closest("tr[data-idx]");
+      if (!tr) return;
+      var idx = parseInt(tr.getAttribute("data-idx"), 10);
+
+      if (e.target.classList.contains("save")) {
+        var p = catalog[idx];
+        tr.querySelectorAll("[data-field]").forEach(function (input) {
+          var field = input.getAttribute("data-field");
+          if (field === "img") return;
+          if (field === "stock") { p[field] = input.checked; }
+          else if (field === "price") { p[field] = parseFloat(input.value) || 0; }
+          else { p[field] = input.value; }
+        });
+        saveCatalog();
+        showToast("Producto actualizado");
+        renderInventory(document.getElementById("invSearch").value);
+      }
+
+      if (e.target.classList.contains("del")) {
+        if (confirm("¿Eliminar \"" + catalog[idx].n + "\" del catálogo?")) {
+          catalog.splice(idx, 1);
+          saveCatalog();
+          showToast("Producto eliminado");
+          renderInventory(document.getElementById("invSearch").value);
+        }
+      }
+    });
+
+    document.getElementById("invBody").addEventListener("change", function (e) {
+      if (e.target.getAttribute("data-field") === "img" && e.target.files[0]) {
+        var tr = e.target.closest("tr[data-idx]");
+        var idx = parseInt(tr.getAttribute("data-idx"), 10);
+        var reader = new FileReader();
+        reader.onload = function () {
+          catalog[idx].img = reader.result;
+          saveCatalog();
+          renderInventory(document.getElementById("invSearch").value);
+          showToast("Imagen actualizada (previsualización local)");
+        };
+        reader.readAsDataURL(e.target.files[0]);
+      }
+      if (e.target.getAttribute("data-field") === "stock") {
+        var label = e.target.closest("label");
+        label.lastChild.textContent = e.target.checked ? "En stock" : "Agotado";
+      }
+    });
+
+    document.getElementById("invAddBtn").addEventListener("click", function () {
+      var name = prompt("Nombre del producto nuevo:");
+      if (!name) return;
+      var slug = name.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+      catalog.unshift({
+        slug: slug || ("producto-" + Date.now()), n: name, brand: "", cat: "piezas", spec: "",
+        price: 0, tag: "", img: "assets/img/escena-logo.jpg", stock: true
+      });
+      saveCatalog();
+      document.getElementById("invSearch").value = "";
+      renderInventory("");
+      showToast("Producto agregado — completá los datos y guardá");
+    });
+
+    document.getElementById("invExportBtn").addEventListener("click", function () {
+      var blob = new Blob([JSON.stringify(catalog, null, 2)], { type: "application/json" });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "escena-catalogo.json";
+      a.click();
+      showToast("Catálogo exportado");
+    });
+
+    document.getElementById("invExportCsvBtn").addEventListener("click", function () {
+      var headers = ["slug", "n", "brand", "cat", "spec", "price", "tag", "stock", "img"];
+      var rows = [headers.join(",")];
+      catalog.forEach(function (p) {
+        rows.push(headers.map(function (h) {
+          var v = String(p[h] === undefined ? "" : p[h]).replace(/"/g, '""');
+          return '"' + v + '"';
+        }).join(","));
+      });
+      var blob = new Blob([rows.join("\n")], { type: "text/csv" });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "escena-catalogo.csv";
+      a.click();
+      showToast("CSV exportado");
+    });
+
+    document.getElementById("invImportBtn").addEventListener("click", function () {
+      document.getElementById("invImportFile").click();
+    });
+    document.getElementById("invImportFile").addEventListener("change", function (e) {
+      var file = e.target.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function () {
+        try {
+          var data = JSON.parse(reader.result);
+          if (!Array.isArray(data)) throw new Error("formato inválido");
+          catalog = data;
+          saveCatalog();
+          renderInventory("");
+          showToast("Catálogo importado (" + data.length + " productos)");
+        } catch (err) {
+          alert("No se pudo leer el archivo JSON: " + err.message);
+        }
+      };
+      reader.readAsText(file);
+      e.target.value = "";
+    });
+  }
+</script>
+</body>
+</html>

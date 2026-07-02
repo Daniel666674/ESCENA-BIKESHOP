@@ -34,6 +34,7 @@
   <link rel="apple-touch-icon" href="assets/img/escena-logo.jpg" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="assets/css/cart.css" />
+  <script src="assets/js/wholesale.js"></script>
 
   <!-- ============ Fonts ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -249,7 +250,7 @@
       <a href="tienda.html" class="active">Tienda</a>
       <a href="armar-bmx.html">Arma tu BMX</a>
       <a href="blog.html">Blog</a>
-      <a href="index.html#categorias">Categorías</a>
+      <a href="mayoristas.html">Mayoristas</a>
       <a href="index.html#faq">FAQ</a>
       <a class="nav-cta" href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp</a>
     </nav>
@@ -321,6 +322,9 @@
       <a href="index.html#comprar">Cómo comprar</a>
       <a href="index.html#categorias">Categorías</a>
       <a href="tienda.html">Componentes</a>
+      <a href="armar-bmx.html">Arma tu BMX</a>
+      <a href="blog.html">Blog</a>
+      <a href="mayoristas.html">Mayoristas</a>
       <a href="index.html#escena">La Escena</a>
       <a href="index.html#faq">Preguntas frecuentes</a>
     </div>
@@ -456,7 +460,10 @@ var PRODUCTS = [
   var currentFilter = "all";
   var currentPage = 1;
 
-  function cop(n){ return "$" + n.toLocaleString("es-CO") + " COP"; }
+  function cop(n){
+    if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
+    return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
+  }
 
   function getFiltered(filter){
     return PRODUCTS.filter(function(p){ return filter === "all" || p.cat === filter; });
@@ -468,7 +475,8 @@ var PRODUCTS = [
   }
 
   function cardHTML(p){
-    var msg = encodeURIComponent("Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
+    var wPrefix = (window.EscenaWholesale && window.EscenaWholesale.isActive()) ? "🏷️ PEDIDO MAYORISTA (15% aplicado)\n" : "";
+    var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
     var href = "producto/" + slugOf(p) + ".html";
     return '<article class="card">' +
         '<a class="ph-link" href="'+href+'">' +
