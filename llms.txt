@@ -36,7 +36,11 @@ ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. V
 Cult, Fiend, Éclat, Volume, Mutany, Federal, Odyssey, Stolen, Demolition, Animal, Shadow, Colony, BSD, Fit Bike Co, Brainstorm, Wethepeople, Iron Fist, entre otras.
 
 ## Páginas
-- Inicio / tienda: https://escenabikeshop.com/
+- Inicio: https://escenabikeshop.com/
+- Tienda (catálogo completo, paginado y filtrable por categoría): https://escenabikeshop.com/tienda.html
+- Fichas de producto individuales (una por SKU, con precio, especificaciones y pedido directo): https://escenabikeshop.com/producto/
+- Arma tu BMX (configurador guiado paso a paso para armar una bici completa desde cero): https://escenabikeshop.com/armar-bmx.html
+- Blog (guías de compra, mantenimiento y cultura BMX): https://escenabikeshop.com/blog.html
 - Envíos: https://escenabikeshop.com/envios.html
 - Devoluciones y cambios: https://escenabikeshop.com/devoluciones.html
 - Términos y condiciones: https://escenabikeshop.com/terminos.html
@@ -44,8 +48,13 @@ Cult, Fiend, Éclat, Volume, Mutany, Federal, Odyssey, Stolen, Demolition, Anima
 - Política de cookies: https://escenabikeshop.com/politica-cookies.html
 
 ## Cómo comprar
-1. El cliente elige los productos en el sitio (filtrando por categoría si quiere).
-2. Toca "Pedir por WhatsApp" para generar el mensaje del pedido.
-3. Confirma referencias, medidas y dirección por chat.
-4. Coordina el pago y el envío.
-5. Recibe el número de guía para rastrear el pedido.
+1. El cliente elige los productos en el sitio (filtrando por categoría, buscando en la tienda, o usando el configurador "Arma tu BMX" para armar una bici completa pieza por pieza).
+2. Puede agregar productos a un carrito de compras (persistente en el navegador) o pedir una pieza individual directamente.
+3. Toca "Pedir por WhatsApp" (o "Finalizar pedido por WhatsApp" / "Pedir armado por WhatsApp") para generar el mensaje del pedido con el detalle completo.
+4. Confirma referencias, medidas y dirección por chat.
+5. Coordina el pago y el envío.
+6. Recibe el número de guía para rastrear el pedido.
+
+## Herramientas del sitio
+- Carrito de compras: acumula productos de cualquier página y arma un solo mensaje de pedido consolidado por WhatsApp.
+- Configurador "Arma tu BMX": guía al usuario categoría por categoría (horquilla, manubrio, stem, puños, dirección/BB, bielas, piñón, bujes, sillín, tija, pedales y extras) para armar una bicicleta completa con precio total estimado.
