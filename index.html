@@ -116,8 +116,6 @@
       --bg: #ffffff;
       --panel: #f6f6f4;
       --ink: #0A0A0A;
-      --gold: #E8C84A;
-      --gold-dim: #d9b93a;
       --muted: #666;
       --line: #ececeb;
     }
@@ -128,7 +126,7 @@
     .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: .04em; }
     .btn { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; text-decoration: none; border-radius: 4px; padding: .95rem 1.8rem; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; transition: transform .15s, opacity .2s; }
     .btn:hover { transform: translateY(-2px); }
-    .btn-gold { background: var(--gold); color: var(--ink); border: 1px solid var(--gold-dim); }
+    .btn-primary { background: #fff; color: var(--ink); border: 1px solid #fff; }
     .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
     .btn-ink { background: var(--ink); color: #fff; }
 
@@ -136,7 +134,7 @@
     .utility { background: var(--ink); color: rgba(255,255,255,.65); font-size: .72rem; letter-spacing: .04em; }
     .utility .wrap { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; height: 34px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
     .utility a { color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s; }
-    .utility a:hover { color: var(--gold); }
+    .utility a:hover { color: #fff; }
     .utility .u-links { display: flex; gap: 1.2rem; }
     @media (max-width: 640px) { .utility .u-info { display: none; } }
 
@@ -153,8 +151,8 @@
     .nav-links { display: flex; gap: 1.6rem; align-items: center; }
     .nav-links a { color: #555; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
     .nav-links a:hover { color: var(--ink); }
-    .nav-cta { color: var(--ink) !important; background: var(--gold); padding: .5rem .9rem; border-radius: 4px; font-weight: 700; border: 1px solid #d9b93a; }
-    .nav-cta:hover { color: var(--ink) !important; opacity: .85; }
+    .nav-cta { color: #fff !important; background: var(--ink); padding: .5rem .9rem; border-radius: 4px; font-weight: 700; border: 1px solid var(--ink); }
+    .nav-cta:hover { color: #fff !important; opacity: .85; }
     .burger { display: none; background: none; border: 0; color: var(--ink); font-size: 1.5rem; cursor: pointer; }
     @media (max-width: 860px) {
       .nav-links { position: fixed; inset: 64px 0 auto 0; background: #fff; flex-direction: column; gap: 0; padding: .5rem 1.5rem 1.5rem; transform: translateY(-120%); transition: transform .3s; border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0,0,0,.06); }
@@ -167,14 +165,14 @@
     /* ============ HERO (split layout) ============ */
     .hero { background: var(--ink); padding: 3.2rem 1.5rem; overflow: hidden; }
     .hero .wrap { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: center; }
-    .hero-copy .kicker { color: var(--gold); font-size: .76rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .9rem; display: block; }
+    .hero-copy .kicker { color: #fff; font-size: .76rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .9rem; display: block; }
     .hero-copy h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.8rem, 6.5vw, 5rem); line-height: .92; letter-spacing: .02em; }
-    .hero-copy h1 .gold { color: var(--gold); }
+    .hero-copy h1 .accent-outline { color: transparent; -webkit-text-stroke: 2px #fff; }
     .hero-copy .tagline { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1.1rem, 2.6vw, 1.5rem); letter-spacing: .07em; margin-top: .5rem; opacity: .9; }
     .hero-copy p.lead { color: rgba(255,255,255,.75); font-size: .98rem; max-width: 480px; margin: 1.1rem 0 1.7rem; font-weight: 300; }
     .hero-copy .btns { display: flex; gap: .8rem; flex-wrap: wrap; }
     .hero-stats { display: flex; gap: 2.2rem; margin-top: 2.2rem; flex-wrap: wrap; }
-    .hero-stats .n { font-family: 'Bebas Neue', sans-serif; color: var(--gold); font-size: 2rem; line-height: 1; }
+    .hero-stats .n { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 2rem; line-height: 1; }
     .hero-stats .l { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-top: .2rem; }
 
     .hero-media { position: relative; aspect-ratio: 4/5; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); background: #111; }
@@ -182,7 +180,7 @@
     .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%); }
     .hero-media .badge-ring { position: absolute; bottom: 14px; left: 14px; width: 62px; height: 62px; border-radius: 50%; background: #fff; padding: 3px; box-shadow: 0 8px 20px rgba(0,0,0,.4); z-index: 2; }
     .hero-media .badge-ring img { width: 100%; height: 100%; border-radius: 50%; }
-    .hero-media .pill { position: absolute; top: 14px; right: 14px; background: var(--gold); color: var(--ink); font-family: 'Bebas Neue', sans-serif; letter-spacing: .08em; font-size: .78rem; padding: .35rem .7rem; border-radius: 999px; transform: rotate(3deg); z-index: 2; }
+    .hero-media .pill { position: absolute; top: 14px; right: 14px; background: #fff; color: var(--ink); font-family: 'Bebas Neue', sans-serif; letter-spacing: .08em; font-size: .78rem; padding: .35rem .7rem; border-radius: 999px; transform: rotate(3deg); z-index: 2; }
 
     @media (max-width: 900px) {
       .hero .wrap { grid-template-columns: 1fr; gap: 1.8rem; text-align: center; }
@@ -196,8 +194,8 @@
     .stamp-strip { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); padding: 1.3rem 0; overflow: hidden; }
     .stamp-inner { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; align-items: center; gap: .8rem; }
     .stamp-wrap { position: relative; display: inline-flex; align-items: center; justify-content: center; padding: .2rem 1.2rem; }
-    .stamp-wrap .ring { position: absolute; inset: -8px; border: 2px solid var(--gold); border-radius: 8px; opacity: 0; pointer-events: none; }
-    .stamp-text { font-family: 'Bebas Neue', sans-serif; letter-spacing: .14em; font-size: clamp(1.3rem, 4vw, 2.1rem); color: var(--gold); text-align: center; white-space: nowrap; display: inline-block; }
+    .stamp-wrap .ring { position: absolute; inset: -8px; border: 2px solid #fff; border-radius: 8px; opacity: 0; pointer-events: none; }
+    .stamp-text { font-family: 'Bebas Neue', sans-serif; letter-spacing: .14em; font-size: clamp(1.3rem, 4vw, 2.1rem); color: #fff; text-align: center; white-space: nowrap; display: inline-block; }
     .stamp-wrap.stamping .stamp-text { animation: stampIn .5s cubic-bezier(.2,1.7,.4,1); }
     .stamp-wrap.stamping .ring { animation: stampRing .5s ease-out; }
     @keyframes stampIn {
@@ -212,7 +210,7 @@
     }
     .stamp-dots { display: flex; gap: .4rem; }
     .stamp-dots i { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.25); font-style: normal; transition: background .25s, transform .25s; }
-    .stamp-dots i.active { background: var(--gold); transform: scale(1.35); }
+    .stamp-dots i.active { background: #fff; transform: scale(1.35); }
     @media (prefers-reduced-motion: reduce) {
       .stamp-wrap.stamping .stamp-text, .stamp-wrap.stamping .ring { animation: none; }
     }
@@ -223,14 +221,14 @@
     .sec-head { margin-bottom: 2.5rem; }
     .sec-head .eyebrow { color: var(--muted); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; display: block; margin-bottom: .5rem; }
     .sec-head h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1; letter-spacing: .03em; }
-    .sec-head h2 .bar { color: var(--gold); }
+    .sec-head h2 .bar { color: var(--muted); }
 
     /* ============ PROCESS BAND ("Cómo comprar") ============ */
     .process { background: var(--panel); }
     .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; position: relative; }
     @media (max-width: 780px) { .steps-row { grid-template-columns: 1fr; } }
     .step { position: relative; padding-top: .5rem; }
-    .step .stepnum { font-family: 'Bebas Neue', sans-serif; font-size: 4.2rem; line-height: 1; -webkit-text-stroke: 2px var(--gold); color: transparent; }
+    .step .stepnum { font-family: 'Bebas Neue', sans-serif; font-size: 4.2rem; line-height: 1; -webkit-text-stroke: 2px var(--ink); color: transparent; }
     .step h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: .03em; margin: .3rem 0 .5rem; }
     .step p { font-size: .86rem; color: var(--muted); max-width: 280px; }
 
@@ -245,11 +243,11 @@
     .cat::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(10,10,10,.15) 0%, rgba(10,10,10,.88) 100%); }
     .cat:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(0,0,0,.22); }
     .cat .content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.2rem; }
-    .cat .num { position: absolute; top: .9rem; left: .9rem; z-index: 2; background: var(--gold); color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: .82rem; width: 30px; height: 30px; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .cat .num { position: absolute; top: .9rem; left: .9rem; z-index: 2; background: #fff; color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: .82rem; width: 30px; height: 30px; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
     .cat h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .04em; color: #fff; }
     .cat p { font-size: .78rem; color: rgba(255,255,255,.7); margin-top: .2rem; }
     .cat .arrow { position: absolute; bottom: 1rem; right: 1rem; z-index: 2; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3); display: flex; align-items: center; justify-content: center; color: #fff; font-size: .85rem; transition: background .2s, transform .2s; }
-    .cat:hover .arrow { background: var(--gold); color: var(--ink); transform: translateX(2px); }
+    .cat:hover .arrow { background: #fff; color: var(--ink); transform: translateX(2px); }
 
     /* ============ PRODUCTS ============ */
     #tienda { background: #fff; }
@@ -265,14 +263,14 @@
     .card .ph { position: relative; aspect-ratio: 1 / 1; background: #0A0A0A; overflow: hidden; }
     .card .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
     .card:hover .ph img { transform: scale(1.05); }
-    .card .tag { position: absolute; top: .7rem; left: .7rem; background: var(--gold); color: var(--ink); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .55rem; border-radius: 3px; }
+    .card .tag { position: absolute; top: .7rem; left: .7rem; background: #fff; color: var(--ink); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .55rem; border-radius: 3px; }
     .card .body { padding: 1rem 1rem 1.2rem; display: flex; flex-direction: column; flex: 1; }
-    .card .brand-lbl { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); font-weight: 700; }
+    .card .brand-lbl { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
     .card h3 { font-size: .92rem; font-weight: 600; margin: .25rem 0 .1rem; line-height: 1.3; }
     .card .spec { font-size: .76rem; color: var(--muted); margin-bottom: .8rem; flex: 1; }
     .card .price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .02em; margin-bottom: .7rem; }
-    .card .buy { display: block; text-align: center; background: var(--ink); color: #fff; text-decoration: none; padding: .7rem; border-radius: 5px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s; }
-    .card .buy:hover { background: var(--gold); color: var(--ink); }
+    .card .buy { display: block; text-align: center; background: var(--ink); color: #fff; text-decoration: none; padding: .7rem; border-radius: 5px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s, color .2s; border: 1px solid var(--ink); }
+    .card .buy:hover { background: #fff; color: var(--ink); }
 
     /* ============ VALUE PROPS ============ */
     .props { background: var(--panel); }
@@ -280,7 +278,7 @@
     @media (max-width: 900px) { .props-row { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 480px) { .props-row { grid-template-columns: 1fr; } }
     .prop { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.4rem; display: flex; flex-direction: column; gap: .7rem; }
-    .prop .ico { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; color: var(--ink); }
+    .prop .ico { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--ink); display: flex; align-items: center; justify-content: center; color: var(--ink); }
     .prop h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: .03em; }
     .prop p { font-size: .82rem; color: var(--muted); }
 
@@ -292,21 +290,21 @@
     .story .media video { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; display: block; }
     @media (max-width: 820px) { .story .media { order: 0; aspect-ratio: 16/10; } }
     .story h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: .95; letter-spacing: .02em; }
-    .story h2 .gold { color: var(--gold); }
+    .story h2 .accent-outline { color: transparent; -webkit-text-stroke: 2px #fff; }
     .story p { color: rgba(255,255,255,.65); font-weight: 300; margin: 1.1rem 0; }
     .story .stats { display: flex; gap: 2.2rem; margin-top: 1.5rem; flex-wrap: wrap; }
-    .story .stats .n { font-family: 'Bebas Neue', sans-serif; font-size: 2.3rem; color: var(--gold); line-height: 1; }
+    .story .stats .n { font-family: 'Bebas Neue', sans-serif; font-size: 2.3rem; color: #fff; line-height: 1; }
     .story .stats .l { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); }
 
     /* ============ REVIEWS ============ */
     .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
     @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; } }
     .review { background: var(--panel); border-radius: 12px; padding: 1.6rem; display: flex; flex-direction: column; gap: .8rem; }
-    .review .stars { display: flex; gap: .15rem; color: var(--gold); }
-    .review .stars svg { width: 15px; height: 15px; fill: var(--gold); }
+    .review .stars { display: flex; gap: .15rem; color: var(--ink); }
+    .review .stars svg { width: 15px; height: 15px; fill: var(--ink); }
     .review blockquote { font-size: .9rem; color: #333; line-height: 1.55; }
     .review .who { display: flex; align-items: center; gap: .6rem; margin-top: auto; }
-    .review .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--ink); color: var(--gold); font-family: 'Bebas Neue', sans-serif; font-size: .85rem; display: flex; align-items: center; justify-content: center; }
+    .review .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--ink); color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: .85rem; display: flex; align-items: center; justify-content: center; }
     .review .who b { display: block; font-size: .82rem; }
     .review .who span { font-size: .72rem; color: var(--muted); }
 
@@ -317,18 +315,35 @@
     .brands-row span:last-child { border-right: none; }
     .brands-row span:hover { color: var(--ink); }
 
+    /* ============ INSTAGRAM ============ */
+    .ig-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .ig-handle { display: flex; align-items: center; gap: .7rem; }
+    .ig-handle .ico { width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--ink); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ig-handle .ico svg { width: 20px; height: 20px; fill: var(--ink); }
+    .ig-handle b { display: block; font-size: .92rem; }
+    .ig-handle span { font-size: .78rem; color: var(--muted); }
+    .ig-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: .8rem; }
+    @media (max-width: 980px) { .ig-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 620px) { .ig-grid { grid-template-columns: repeat(3, 1fr); } }
+    .ig-cell { position: relative; aspect-ratio: 1/1; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); text-decoration: none; display: block; }
+    .ig-cell img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .ig-cell:hover img { transform: scale(1.08); }
+    .ig-cell .overlay { position: absolute; inset: 0; background: rgba(10,10,10,.72); opacity: 0; display: flex; align-items: center; justify-content: center; transition: opacity .2s; }
+    .ig-cell:hover .overlay { opacity: 1; }
+    .ig-cell .overlay svg { width: 22px; height: 22px; fill: #fff; }
+
     /* ============ FAQ ============ */
     .faq details { border-bottom: 1px solid var(--line); padding: 1.1rem 0; }
     .faq summary { font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: .98rem; }
     .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: "+"; font-family: 'Bebas Neue', sans-serif; color: var(--gold); font-size: 1.6rem; line-height: 1; }
+    .faq summary::after { content: "+"; font-family: 'Bebas Neue', sans-serif; color: var(--ink); font-size: 1.6rem; line-height: 1; }
     .faq details[open] summary::after { content: "–"; }
     .faq p { font-size: .88rem; color: var(--muted); margin-top: .7rem; max-width: 720px; }
 
     /* ============ CTA BAND ============ */
-    .cta-band { background: var(--gold); text-align: center; }
-    .cta-band h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: .03em; color: var(--ink); }
-    .cta-band p { color: rgba(0,0,0,.7); max-width: 520px; margin: .8rem auto 1.6rem; }
+    .cta-band { background: var(--ink); text-align: center; }
+    .cta-band h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: .03em; color: #fff; }
+    .cta-band p { color: rgba(255,255,255,.65); max-width: 520px; margin: .8rem auto 1.6rem; }
 
     /* ============ FOOTER ============ */
     footer { background: var(--ink); color: rgba(255,255,255,.4); padding: 3.5rem 1.5rem 2rem; }
@@ -339,9 +354,9 @@
     footer .brand-col p { font-size: .82rem; margin-top: .5rem; max-width: 320px; }
     footer h4 { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: .1em; margin-bottom: 1rem; }
     footer a { color: rgba(255,255,255,.5); text-decoration: none; display: block; padding: .3rem 0; font-size: .84rem; transition: color .2s; }
-    footer a:hover { color: var(--gold); }
+    footer a:hover { color: #fff; }
     .foot-social { display: flex; gap: .6rem; margin-top: .3rem; }
-    .foot-social a { width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: var(--ink) !important; display: flex; align-items: center; justify-content: center; padding: 0; }
+    .foot-social a { width: 36px; height: 36px; border-radius: 50%; background: #fff; color: var(--ink) !important; display: flex; align-items: center; justify-content: center; padding: 0; }
     .foot-social a svg { width: 17px; height: 17px; fill: var(--ink); }
     .foot-social a:hover { opacity: .85; }
     .pay-row { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .4rem; }
@@ -390,11 +405,11 @@
   <div class="wrap">
     <div class="hero-copy">
       <span class="kicker">BMX Shop · Colombia</span>
-      <h1>ESCENA <span class="gold">BMX</span></h1>
+      <h1>ESCENA <span class="accent-outline">BMX</span></h1>
       <p class="tagline">Partes que aguantan calle</p>
       <p class="lead">Stems, bielas, rines y sillines originales de las marcas que mueven la escena. Directo de la tienda a tu bici — pedís por WhatsApp, montás y ruedas.</p>
       <div class="btns">
-        <a href="#tienda" class="btn btn-gold">Ver la tienda</a>
+        <a href="#tienda" class="btn btn-primary">Ver la tienda</a>
         <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20info%20de%20partes%20BMX" target="_blank" rel="noopener" class="btn btn-ghost">Pedir por WhatsApp</a>
       </div>
       <div class="hero-stats">
@@ -544,8 +559,8 @@
       </video>
     </div>
     <div>
-      <span class="eyebrow" style="color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;">Somos ESCENA</span>
-      <h2>NO ES UNA TIENDA.<br />ES LA <span class="gold">ESCENA</span>.</h2>
+      <span class="eyebrow" style="color:#fff;letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;">Somos ESCENA</span>
+      <h2>NO ES UNA TIENDA.<br />ES LA <span class="accent-outline">ESCENA</span>.</h2>
       <p>ESCENA Bike Shop nació de rodar. Somos riders montando una tienda para riders: partes que probamos, marcas en las que confiamos y precios sin vueltas. Acá no vendemos cualquier cosa — vendemos lo que nos montaríamos nosotros.</p>
       <p>Del street al park, del primer 180 al bunny hop de tu vida: si la calle te llama, nosotros te montamos la bici.</p>
       <div class="stats">
@@ -610,6 +625,50 @@
   </div>
 </div>
 
+<!-- ============ INSTAGRAM ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">La escena en vivo</span>
+      <h2>INSTAGRAM <span class="bar">/</span> @ESCENABIKESHOP</h2>
+    </div>
+    <div class="ig-head">
+      <div class="ig-handle">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2.1.3 2.8.6.7.3 1.3.6 1.9 1.2.6.6.9 1.2 1.2 1.9.3.7.5 1.6.6 2.8.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2.1-.6 2.8-.3.7-.6 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.7.3-1.6.5-2.8.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2.1-.3-2.8-.6-.7-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.2-1.2-1.9-.3-.7-.5-1.6-.6-2.8-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-2.1.6-2.8.3-.7.6-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.7-.3 1.6-.5 2.8-.6 1.3-.1 1.7-.1 4.9-.1M12 0C8.7 0 8.3 0 7 .1c-1.3.1-2.2.3-3 .6-.8.3-1.5.8-2.2 1.4C1.1 2.8.6 3.5.3 4.3c-.3.8-.5 1.7-.6 3C-.4 8.6-.4 9 0 12.3s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.8 1.5 1.4 2.2.6.6 1.3 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.8 2.2-1.4.6-.6 1.1-1.3 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.8-1.5-1.4-2.2-.6-.6-1.3-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"/><path d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.4" cy="5.6" r="1.4"/></svg></span>
+        <span><b>@escenabikeshop</b><span>Seguinos para ver piezas nuevas, armados y la escena en vivo</span></span>
+      </div>
+      <a class="btn btn-ink" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener">Seguir en Instagram</a>
+    </div>
+    <div class="ig-grid">
+      <a class="ig-cell" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Ver en Instagram">
+        <img src="assets/img/products/volume-stem-front-load-plata.jpg" alt="ESCENA BMX en Instagram" loading="lazy" />
+        <span class="overlay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2.1.3 2.8.6.7.3 1.3.6 1.9 1.2.6.6.9 1.2 1.2 1.9.3.7.5 1.6.6 2.8.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2.1-.6 2.8-.3.7-.6 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.7.3-1.6.5-2.8.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2.1-.3-2.8-.6-.7-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.2-1.2-1.9-.3-.7-.5-1.6-.6-2.8-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-2.1.6-2.8.3-.7.6-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.7-.3 1.6-.5 2.8-.6 1.3-.1 1.7-.1 4.9-.1M12 0C8.7 0 8.3 0 7 .1c-1.3.1-2.2.3-3 .6-.8.3-1.5.8-2.2 1.4C1.1 2.8.6 3.5.3 4.3c-.3.8-.5 1.7-.6 3C-.4 8.6-.4 9 0 12.3s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.8 1.5 1.4 2.2.6.6 1.3 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.8 2.2-1.4.6-.6 1.1-1.3 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.8-1.5-1.4-2.2-.6-.6-1.3-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"/><path d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.4" cy="5.6" r="1.4"/></svg></span>
+      </a>
+      <a class="ig-cell" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Ver en Instagram">
+        <img src="assets/img/products/eclat-trippin-rin-negro.jpg" alt="ESCENA BMX en Instagram" loading="lazy" />
+        <span class="overlay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2.1.3 2.8.6.7.3 1.3.6 1.9 1.2.6.6.9 1.2 1.2 1.9.3.7.5 1.6.6 2.8.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2.1-.6 2.8-.3.7-.6 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.7.3-1.6.5-2.8.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2.1-.3-2.8-.6-.7-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.2-1.2-1.9-.3-.7-.5-1.6-.6-2.8-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-2.1.6-2.8.3-.7.6-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.7-.3 1.6-.5 2.8-.6 1.3-.1 1.7-.1 4.9-.1M12 0C8.7 0 8.3 0 7 .1c-1.3.1-2.2.3-3 .6-.8.3-1.5.8-2.2 1.4C1.1 2.8.6 3.5.3 4.3c-.3.8-.5 1.7-.6 3C-.4 8.6-.4 9 0 12.3s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.8 1.5 1.4 2.2.6.6 1.3 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.8 2.2-1.4.6-.6 1.1-1.3 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.8-1.5-1.4-2.2-.6-.6-1.3-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"/><path d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.4" cy="5.6" r="1.4"/></svg></span>
+      </a>
+      <a class="ig-cell" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Ver en Instagram">
+        <img src="assets/img/products/cult-vans-sillin-negro.jpg" alt="ESCENA BMX en Instagram" loading="lazy" />
+        <span class="overlay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2.1.3 2.8.6.7.3 1.3.6 1.9 1.2.6.6.9 1.2 1.2 1.9.3.7.5 1.6.6 2.8.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2.1-.6 2.8-.3.7-.6 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.7.3-1.6.5-2.8.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2.1-.3-2.8-.6-.7-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.2-1.2-1.9-.3-.7-.5-1.6-.6-2.8-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-2.1.6-2.8.3-.7.6-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.7-.3 1.6-.5 2.8-.6 1.3-.1 1.7-.1 4.9-.1M12 0C8.7 0 8.3 0 7 .1c-1.3.1-2.2.3-3 .6-.8.3-1.5.8-2.2 1.4C1.1 2.8.6 3.5.3 4.3c-.3.8-.5 1.7-.6 3C-.4 8.6-.4 9 0 12.3s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.8 1.5 1.4 2.2.6.6 1.3 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.8 2.2-1.4.6-.6 1.1-1.3 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.8-1.5-1.4-2.2-.6-.6-1.3-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"/><path d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.4" cy="5.6" r="1.4"/></svg></span>
+      </a>
+      <a class="ig-cell" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Ver en Instagram">
+        <img src="assets/img/products/mutany-savage-bielas-negro.jpg" alt="ESCENA BMX en Instagram" loading="lazy" />
+        <span class="overlay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2.1.3 2.8.6.7.3 1.3.6 1.9 1.2.6.6.9 1.2 1.2 1.9.3.7.5 1.6.6 2.8.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2.1-.6 2.8-.3.7-.6 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.7.3-1.6.5-2.8.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2.1-.3-2.8-.6-.7-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.2-1.2-1.9-.3-.7-.5-1.6-.6-2.8-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-2.1.6-2.8.3-.7.6-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.7-.3 1.6-.5 2.8-.6 1.3-.1 1.7-.1 4.9-.1M12 0C8.7 0 8.3 0 7 .1c-1.3.1-2.2.3-3 .6-.8.3-1.5.8-2.2 1.4C1.1 2.8.6 3.5.3 4.3c-.3.8-.5 1.7-.6 3C-.4 8.6-.4 9 0 12.3s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.8 1.5 1.4 2.2.6.6 1.3 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.8 2.2-1.4.6-.6 1.1-1.3 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.8-1.5-1.4-2.2-.6-.6-1.3-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"/><path d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.4" cy="5.6" r="1.4"/></svg></span>
+      </a>
+      <a class="ig-cell" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Ver en Instagram">
+        <img src="assets/img/products/fiend-fiending-stem-morado.jpg" alt="ESCENA BMX en Instagram" loading="lazy" />
+        <span class="overlay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2.1.3 2.8.6.7.3 1.3.6 1.9 1.2.6.6.9 1.2 1.2 1.9.3.7.5 1.6.6 2.8.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2.1-.6 2.8-.3.7-.6 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.7.3-1.6.5-2.8.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2.1-.3-2.8-.6-.7-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.2-1.2-1.9-.3-.7-.5-1.6-.6-2.8-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-2.1.6-2.8.3-.7.6-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.7-.3 1.6-.5 2.8-.6 1.3-.1 1.7-.1 4.9-.1M12 0C8.7 0 8.3 0 7 .1c-1.3.1-2.2.3-3 .6-.8.3-1.5.8-2.2 1.4C1.1 2.8.6 3.5.3 4.3c-.3.8-.5 1.7-.6 3C-.4 8.6-.4 9 0 12.3s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.8 1.5 1.4 2.2.6.6 1.3 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.8 2.2-1.4.6-.6 1.1-1.3 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.8-1.5-1.4-2.2-.6-.6-1.3-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"/><path d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.4" cy="5.6" r="1.4"/></svg></span>
+      </a>
+      <a class="ig-cell" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Ver en Instagram">
+        <img src="assets/img/products/cult-bielas-negro.jpg" alt="ESCENA BMX en Instagram" loading="lazy" />
+        <span class="overlay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2.1.3 2.8.6.7.3 1.3.6 1.9 1.2.6.6.9 1.2 1.2 1.9.3.7.5 1.6.6 2.8.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2.1-.6 2.8-.3.7-.6 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.7.3-1.6.5-2.8.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2.1-.3-2.8-.6-.7-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.2-1.2-1.9-.3-.7-.5-1.6-.6-2.8-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-2.1.6-2.8.3-.7.6-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.7-.3 1.6-.5 2.8-.6 1.3-.1 1.7-.1 4.9-.1M12 0C8.7 0 8.3 0 7 .1c-1.3.1-2.2.3-3 .6-.8.3-1.5.8-2.2 1.4C1.1 2.8.6 3.5.3 4.3c-.3.8-.5 1.7-.6 3C-.4 8.6-.4 9 0 12.3s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.8 1.5 1.4 2.2.6.6 1.3 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.8 2.2-1.4.6-.6 1.1-1.3 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.8-1.5-1.4-2.2-.6-.6-1.3-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"/><path d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle cx="18.4" cy="5.6" r="1.4"/></svg></span>
+      </a>
+    </div>
+    <p style="font-size:.7rem;color:var(--muted);margin-top:1.2rem;text-align:center;">Fotos de referencia — pronto con contenido real de nuestro feed.</p>
+  </div>
+</section>
+
 <!-- ============ FAQ ============ -->
 <section id="faq">
   <div class="wrap">
@@ -622,7 +681,7 @@
       <details><summary>¿Cómo compro?</summary><p>Elegís los productos que quieras, tocás "Pedir por WhatsApp" y se arma un mensaje con tu pedido. Confirmás por chat, coordinamos el pago (Nequi, Daviplata, transferencia o efectivo) y el envío. Así de simple.</p></details>
       <details><summary>¿Qué marcas manejan?</summary><p>Trabajamos con marcas líderes de la escena BMX mundial: Cult, Fiend, Éclat, Volume y Mutany, entre otras. Manejamos stems, bielas, rines y sillines originales.</p></details>
       <details><summary>¿Las partes son originales?</summary><p>Totalmente. Todas nuestras partes son 100% originales de las marcas oficiales. Cada producto pasa por revisión de calidad antes de salir del taller.</p></details>
-      <details><summary>¿Puedo cambiar o devolver una parte?</summary><p>Sí, dentro de los términos de nuestra política. Aplica para defectos de fabricación y errores nuestros. Revisá los detalles en <a href="devoluciones.html" style="color:var(--gold);">Devoluciones y Cambios</a>.</p></details>
+      <details><summary>¿Puedo cambiar o devolver una parte?</summary><p>Sí, dentro de los términos de nuestra política. Aplica para defectos de fabricación y errores nuestros. Revisá los detalles en <a href="devoluciones.html" style="color:var(--ink);text-decoration:underline;">Devoluciones y Cambios</a>.</p></details>
     </div>
   </div>
 </section>
@@ -632,7 +691,7 @@
   <div class="wrap">
     <h2>¿LISTO PARA RODAR?</h2>
     <p>Escríbenos por WhatsApp y armamos tu pedido. Respondemos en horario hábil, de lunes a sábado.</p>
-    <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20armar%20un%20pedido" target="_blank" rel="noopener" class="btn btn-ink">Hablar con ESCENA</a>
+    <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20armar%20un%20pedido" target="_blank" rel="noopener" class="btn btn-primary">Hablar con ESCENA</a>
   </div>
 </section>
 
