@@ -192,11 +192,30 @@
       .hero-copy p.lead { margin-left: auto; margin-right: auto; }
     }
 
-    /* ============ MARQUEE (inverted: black bg / gold text) ============ */
-    .marquee { background: var(--ink); color: var(--gold); overflow: hidden; white-space: nowrap; padding: .6rem 0; font-family: 'Bebas Neue', sans-serif; letter-spacing: .1em; font-size: 1rem; border-top: 1px solid rgba(255,255,255,.08); }
-    .marquee span { display: inline-block; padding-left: 100%; animation: scrollrev 26s linear infinite; }
-    @keyframes scrollrev { from { transform: translateX(0); } to { transform: translateX(-100%); } }
-    .marquee b { margin: 0 1.4rem; opacity: .4; color: #fff; }
+    /* ============ STAMP STRIP (rotating stamped word, replaces old scrolling marquee) ============ */
+    .stamp-strip { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); padding: 1.3rem 0; overflow: hidden; }
+    .stamp-inner { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; align-items: center; gap: .8rem; }
+    .stamp-wrap { position: relative; display: inline-flex; align-items: center; justify-content: center; padding: .2rem 1.2rem; }
+    .stamp-wrap .ring { position: absolute; inset: -8px; border: 2px solid var(--gold); border-radius: 8px; opacity: 0; pointer-events: none; }
+    .stamp-text { font-family: 'Bebas Neue', sans-serif; letter-spacing: .14em; font-size: clamp(1.3rem, 4vw, 2.1rem); color: var(--gold); text-align: center; white-space: nowrap; display: inline-block; }
+    .stamp-wrap.stamping .stamp-text { animation: stampIn .5s cubic-bezier(.2,1.7,.4,1); }
+    .stamp-wrap.stamping .ring { animation: stampRing .5s ease-out; }
+    @keyframes stampIn {
+      0% { opacity: 0; transform: scale(2.3) rotate(-9deg); filter: blur(2px); }
+      55% { opacity: 1; transform: scale(.94) rotate(2deg); filter: blur(0); }
+      78% { transform: scale(1.04) rotate(-1deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+    @keyframes stampRing {
+      0% { opacity: .9; transform: scale(.9) rotate(-4deg); border-width: 3px; }
+      100% { opacity: 0; transform: scale(1.7) rotate(4deg); border-width: 1px; }
+    }
+    .stamp-dots { display: flex; gap: .4rem; }
+    .stamp-dots i { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.25); font-style: normal; transition: background .25s, transform .25s; }
+    .stamp-dots i.active { background: var(--gold); transform: scale(1.35); }
+    @media (prefers-reduced-motion: reduce) {
+      .stamp-wrap.stamping .stamp-text, .stamp-wrap.stamping .ring { animation: none; }
+    }
 
     /* ============ SECTIONS ============ */
     section { padding: 4.5rem 1.5rem; }
@@ -394,9 +413,15 @@
   </div>
 </section>
 
-<!-- ============ MARQUEE ============ -->
-<div class="marquee" aria-hidden="true">
-  <span>CULT <b>×</b> FIEND <b>×</b> ÉCLAT <b>×</b> VOLUME <b>×</b> MUTANY <b>×</b> ENVÍOS A TODO COLOMBIA <b>×</b> PARTES 100% ORIGINALES <b>×</b> CULT <b>×</b> FIEND <b>×</b> ÉCLAT <b>×</b> VOLUME <b>×</b> MUTANY <b>×</b> ENVÍOS A TODO COLOMBIA <b>×</b> PARTES 100% ORIGINALES <b>×</b></span>
+<!-- ============ STAMP STRIP ============ -->
+<div class="stamp-strip" aria-hidden="true">
+  <div class="stamp-inner">
+    <div class="stamp-wrap" id="stampWrap">
+      <span class="ring"></span>
+      <span class="stamp-text" id="stampText">CULT</span>
+    </div>
+    <div class="stamp-dots" id="stampDots"></div>
+  </div>
 </div>
 
 <!-- ============ CÓMO COMPRAR (process band) ============ -->
@@ -711,6 +736,29 @@
   var burger = document.getElementById("burger"), nav = document.getElementById("nav");
   burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
   nav.addEventListener("click", function(e){ if(e.target.tagName==="A") nav.classList.remove("open"); });
+
+  /* ---- Stamp strip rotator ---- */
+  var STAMP_ITEMS = ["CULT", "FIEND", "ÉCLAT", "VOLUME", "MUTANY", "ENVÍOS A TODO COLOMBIA", "PARTES 100% ORIGINALES"];
+  var stampWrap = document.getElementById("stampWrap");
+  var stampText = document.getElementById("stampText");
+  var stampDots = document.getElementById("stampDots");
+  STAMP_ITEMS.forEach(function(_, i){
+    var dot = document.createElement("i");
+    if (i === 0) dot.className = "active";
+    stampDots.appendChild(dot);
+  });
+  var stampIdx = 0;
+  function showStamp(i){
+    stampWrap.classList.remove("stamping");
+    void stampWrap.offsetWidth;
+    stampText.textContent = STAMP_ITEMS[i];
+    stampWrap.classList.add("stamping");
+    stampDots.querySelectorAll("i").forEach(function(d, di){ d.classList.toggle("active", di === i); });
+  }
+  setInterval(function(){
+    stampIdx = (stampIdx + 1) % STAMP_ITEMS.length;
+    showStamp(stampIdx);
+  }, 2200);
 </script>
 </body>
 </html>
