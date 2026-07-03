@@ -201,52 +201,25 @@
       .hero-copy p.lead { margin-left: auto; margin-right: auto; }
     }
 
-    /* ============ IMPACT BAND (skid-slam kinetic type, replaces old scrolling marquee) ============ */
-    .stamp-strip { position: relative; background: var(--ink); padding: 3.4rem 0; overflow: hidden; isolation: isolate; }
-    .stamp-strip::before, .stamp-strip::after {
-      content: ""; position: absolute; left: 0; right: 0; height: 9px;
+    /* ============ BRAND MARQUEE (replaces old impact-band rotator) ============ */
+    .brand-marquee { position: relative; background: var(--ink); padding: 2.6rem 0; overflow: hidden; isolation: isolate; }
+    .brand-marquee::before, .brand-marquee::after {
+      content: ""; position: absolute; left: 0; right: 0; height: 9px; z-index: 2;
       background: repeating-linear-gradient(-45deg, #fff 0 11px, var(--ink) 11px 22px);
     }
-    .stamp-strip::before { top: 0; }
-    .stamp-strip::after { bottom: 0; }
-    .stamp-texture { position: absolute; inset: 0; z-index: 0; opacity: .5; pointer-events: none;
-      background-image: repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0px, rgba(255,255,255,.05) 1px, transparent 1px, transparent 26px); }
-    .stamp-inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
-    .stamp-wrap { position: relative; display: inline-flex; align-items: center; justify-content: center; padding: .3rem 1.6rem; min-height: 3.6rem; }
-    .stamp-text { position: relative; z-index: 2; font-family: 'Bebas Neue', sans-serif; letter-spacing: .14em; font-size: clamp(2.1rem, 7vw, 4.4rem); color: #fff; text-align: center; white-space: nowrap; display: inline-block; text-shadow: 0 6px 18px rgba(0,0,0,.4); }
-    .skid { position: absolute; top: 50%; left: -70%; width: 240%; height: 58%; transform: translateY(-50%) skewX(-16deg); z-index: 1;
-      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.85) 42%, rgba(255,255,255,.85) 58%, transparent 100%);
-      filter: blur(7px); opacity: 0; pointer-events: none; }
-    .stamp-wrap.stamping .skid { animation: skidPass .55s cubic-bezier(.2,.7,.3,1); }
-    .stamp-wrap.stamping .stamp-text { animation: slamIn .58s cubic-bezier(.16,1.6,.3,1); }
-    .stamp-inner.shake { animation: impactShake .32s ease; }
-    @keyframes skidPass {
-      0% { opacity: 0; left: -70%; }
-      30% { opacity: .9; }
-      65% { opacity: .35; }
-      100% { opacity: 0; left: 55%; }
+    .brand-marquee::before { top: 0; }
+    .brand-marquee::after { bottom: 0; }
+    .bm-track { display: flex; width: max-content; animation: bmScroll 75s linear infinite; }
+    .brand-marquee:hover .bm-track { animation-play-state: paused; }
+    .bm-group { display: flex; align-items: center; flex-shrink: 0; }
+    .bm-group .bm-name { font-family: 'Bebas Neue', sans-serif; letter-spacing: .04em; font-size: clamp(1.5rem, 3.4vw, 2.5rem); color: #fff; white-space: nowrap; padding: 0 1.15rem; }
+    .bm-group .bm-dot { color: rgba(255,255,255,.32); font-size: 1rem; }
+    @keyframes bmScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
-    @keyframes slamIn {
-      0% { opacity: 0; transform: scale(3.4) rotate(-7deg); filter: blur(4px); letter-spacing: .5em; }
-      50% { opacity: 1; transform: scale(.92) rotate(1.8deg); filter: blur(0); }
-      72% { transform: scale(1.05) rotate(-.8deg); }
-      100% { opacity: 1; transform: scale(1) rotate(0deg); letter-spacing: .14em; }
-    }
-    @keyframes impactShake {
-      0% { transform: translate(0,0); }
-      18% { transform: translate(-4px, 2px); }
-      36% { transform: translate(4px, -2px); }
-      54% { transform: translate(-3px, 1px); }
-      72% { transform: translate(3px, 0); }
-      100% { transform: translate(0,0); }
-    }
-    .stamp-dots { display: flex; gap: .45rem; }
-    .stamp-dots i { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.25); font-style: normal; transition: background .25s, transform .25s; }
-    .stamp-dots i.active { background: #fff; transform: scale(1.4); }
-    @media (max-width: 640px) { .stamp-strip { padding: 2.4rem 0; } }
-    @media (prefers-reduced-motion: reduce) {
-      .stamp-wrap.stamping .stamp-text, .stamp-wrap.stamping .skid, .stamp-inner.shake { animation: none; }
-    }
+    @media (max-width: 640px) { .brand-marquee { padding: 1.9rem 0; } }
+    @media (prefers-reduced-motion: reduce) { .bm-track { animation: none; } }
 
     /* ============ SECTIONS ============ */
     section { padding: 4.5rem 1.5rem; }
@@ -510,16 +483,11 @@
   </div>
 </section>
 
-<!-- ============ IMPACT BAND ============ -->
-<div class="stamp-strip" aria-hidden="true">
-  <div class="stamp-texture"></div>
-  <div class="stamp-inner" id="stampInner">
-    <div class="stamp-wrap" id="stampWrap">
-      <span class="skid" id="stampSkid"></span>
-      <span class="stamp-text" id="stampText">CULT</span>
-    </div>
-    <div class="stamp-dots" id="stampDots"></div>
-  </div>
+<!-- ============ BRAND MARQUEE ============ -->
+<h2 class="sr-only">Marcas que manejamos</h2>
+<p class="sr-only" id="brandMarqueeSrList"></p>
+<div class="brand-marquee">
+  <div class="bm-track" id="brandMarqueeTrack" aria-hidden="true"></div>
 </div>
 
 <!-- ============ CÓMO COMPRAR (process band) ============ -->
@@ -891,31 +859,16 @@
   burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
   nav.addEventListener("click", function(e){ if(e.target.tagName==="A") nav.classList.remove("open"); });
 
-  /* ---- Impact band rotator (skid + slam + shake) ---- */
-  var STAMP_ITEMS = ["CULT", "FIEND", "ÉCLAT", "VOLUME", "MUTANY", "FEDERAL", "ODYSSEY", "STOLEN", "+100 PARTES EN STOCK", "ENVÍOS A TODO COLOMBIA", "PARTES 100% ORIGINALES"];
-  var stampInner = document.getElementById("stampInner");
-  var stampWrap = document.getElementById("stampWrap");
-  var stampText = document.getElementById("stampText");
-  var stampDots = document.getElementById("stampDots");
-  STAMP_ITEMS.forEach(function(_, i){
-    var dot = document.createElement("i");
-    if (i === 0) dot.className = "active";
-    stampDots.appendChild(dot);
-  });
-  var stampIdx = 0;
-  function showStamp(i){
-    stampWrap.classList.remove("stamping");
-    stampInner.classList.remove("shake");
-    void stampWrap.offsetWidth;
-    stampText.textContent = STAMP_ITEMS[i];
-    stampWrap.classList.add("stamping");
-    stampDots.querySelectorAll("i").forEach(function(d, di){ d.classList.toggle("active", di === i); });
-    setTimeout(function(){ stampInner.classList.add("shake"); }, 290);
+  /* ---- Brand marquee ---- */
+  var BRANDS = ["Mutanty", "Fate", "Cult", "Fiend", "Stolen", "TukanBikes", "Shadow", "Demotilion", "Rant", "Eclat", "Wethepeople", "Brainstorm", "Animal", "BSD", "FOODE", "Ficción bikes", "Federal", "Helio", "Flybikes", "FirBikeCo.", "Merrit", "Kinkbmx", "Oddysey", "OnTrail", "Primo", "Sunday", "Subrosa", "Trueno", "Stranger", "Tall order", "Total", "Volume", "Valkiria", "RedingShoes", "Twin", "S&M", "Odi", "KMC", "GW", "Innova Tire", "Cinema", "Colony", "Profit", "TSG", "Eighthies", "Profile"];
+  var bmTrack = document.getElementById("brandMarqueeTrack");
+  function bmGroupHTML(){
+    return BRANDS.map(function(b){
+      return '<span class="bm-name">' + b.replace(/&/g, "&amp;") + '</span><span class="bm-dot">&bull;</span>';
+    }).join("");
   }
-  setInterval(function(){
-    stampIdx = (stampIdx + 1) % STAMP_ITEMS.length;
-    showStamp(stampIdx);
-  }, 2400);
+  bmTrack.innerHTML = '<div class="bm-group">' + bmGroupHTML() + '</div><div class="bm-group">' + bmGroupHTML() + '</div>';
+  document.getElementById("brandMarqueeSrList").textContent = BRANDS.join(", ");
 
   /* ---- Newsletter popup (once per browser session) ---- */
   var nlOverlay = document.getElementById("nlOverlay");
