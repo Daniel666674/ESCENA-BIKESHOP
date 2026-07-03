@@ -85,27 +85,52 @@
     .inv-note b { color: var(--ink); }
 
     .inv-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
-    table.inv-table { width: 100%; border-collapse: collapse; font-size: .8rem; min-width: 980px; }
+    table.inv-table { width: 100%; border-collapse: collapse; font-size: .8rem; min-width: 860px; }
     table.inv-table th { text-align: left; font-size: .66rem; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: .8rem .7rem; background: var(--panel); border-bottom: 1px solid var(--line); white-space: nowrap; }
-    table.inv-table td { padding: .55rem .7rem; border-bottom: 1px solid var(--line); vertical-align: middle; }
+    table.inv-table td { padding: .55rem .7rem; border-bottom: 1px solid var(--line); vertical-align: middle; white-space: nowrap; }
     table.inv-table tr:last-child td { border-bottom: none; }
-    table.inv-table .thumb { width: 44px; height: 44px; border-radius: 6px; overflow: hidden; background: #0A0A0A; flex-shrink: 0; }
+    table.inv-table .thumb { position: relative; width: 44px; height: 44px; border-radius: 6px; overflow: hidden; background: #0A0A0A; flex-shrink: 0; }
     table.inv-table .thumb img { width: 100%; height: 100%; object-fit: cover; }
-    table.inv-table input[type=text], table.inv-table input[type=number], table.inv-table select {
-      border: 1px solid var(--line); border-radius: 5px; padding: .4rem .5rem; font-size: .78rem; font-family: inherit; width: 100%; min-width: 90px; background: #fff;
-    }
-    table.inv-table input:focus, table.inv-table select:focus { outline: none; border-color: var(--ink); }
-    table.inv-table .col-name { min-width: 170px; }
-    table.inv-table .col-spec { min-width: 190px; }
-    table.inv-table .stock-toggle { display: inline-flex; align-items: center; gap: .4rem; cursor: pointer; font-size: .74rem; font-weight: 600; }
-    table.inv-table .stock-toggle input { width: auto; min-width: 0; }
-    table.inv-table .row-actions { display: flex; gap: .4rem; white-space: nowrap; }
+    table.inv-table .thumb .thumb-count { position: absolute; bottom: 0; right: 0; background: rgba(0,0,0,.75); color: #fff; font-size: .58rem; font-weight: 700; padding: .05rem .3rem; border-top-left-radius: 4px; }
+    table.inv-table .col-name { white-space: normal; min-width: 170px; font-weight: 600; }
+    table.inv-table .col-spec { white-space: normal; min-width: 170px; color: var(--muted); font-size: .76rem; }
+    table.inv-table .sku { font-family: monospace; font-size: .72rem; color: var(--muted); }
+    table.inv-table .units-badge { display: inline-flex; align-items: center; gap: .35rem; font-weight: 700; }
+    table.inv-table .status-badge { display: inline-block; font-size: .64rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; padding: .25rem .55rem; border-radius: 999px; }
+    table.inv-table .status-badge.ok { background: #e5f7ef; color: #1a9c63; }
+    table.inv-table .status-badge.out { background: #fbe9e7; color: #c0392b; }
+    table.inv-table .row-actions { display: flex; gap: .4rem; }
     table.inv-table .row-actions button { background: none; border: 1px solid var(--line); border-radius: 5px; padding: .35rem .6rem; font-size: .68rem; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink); }
     table.inv-table .row-actions button:hover { background: var(--panel); }
     table.inv-table .row-actions .del { color: #c0392b; border-color: #f0d0cc; }
     table.inv-table .row-actions .del:hover { background: #fdf2f0; }
-    .file-input { font-size: .68rem; width: 100%; }
-    .empty-row td { text-align: center; color: var(--muted); padding: 2rem; }
+    .empty-row td { text-align: center; color: var(--muted); padding: 2rem; white-space: normal; }
+
+    /* ---- Product modal (add/edit) ---- */
+    .pmodal-overlay { position: fixed; inset: 0; z-index: 300; background: rgba(10,10,10,.65); display: none; align-items: flex-start; justify-content: center; padding: 3rem 1.5rem; overflow-y: auto; }
+    .pmodal-overlay.show { display: flex; }
+    .pmodal { background: #fff; border-radius: 14px; max-width: 640px; width: 100%; padding: 2rem; position: relative; }
+    .pmodal-close { position: absolute; top: 1rem; right: 1rem; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--ink); }
+    .pmodal-close:hover { background: var(--panel); }
+    .pmodal h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .03em; margin-bottom: 1.3rem; }
+    .pmodal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin-bottom: 1rem; }
+    @media (max-width: 560px) { .pmodal-grid { grid-template-columns: 1fr; } }
+    .pmodal-field { display: flex; flex-direction: column; gap: .35rem; }
+    .pmodal-field.span2 { grid-column: 1 / -1; }
+    .pmodal-field label { font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .pmodal-field input, .pmodal-field select, .pmodal-field textarea {
+      border: 1.5px solid var(--line); border-radius: 8px; padding: .65rem .8rem; font-size: .86rem; font-family: inherit; width: 100%;
+    }
+    .pmodal-field input:focus, .pmodal-field select:focus, .pmodal-field textarea:focus { outline: none; border-color: var(--ink); }
+    .pmodal-photos { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .8rem; }
+    .pmodal-photo { position: relative; width: 72px; height: 72px; border-radius: 8px; overflow: hidden; background: #0A0A0A; }
+    .pmodal-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .pmodal-photo .rm { position: absolute; top: 2px; right: 2px; width: 20px; height: 20px; border-radius: 50%; background: rgba(0,0,0,.7); color: #fff; border: none; font-size: .8rem; cursor: pointer; line-height: 1; }
+    .pmodal-photo .rm:hover { background: #c0392b; }
+    .pmodal-add-photo { width: 72px; height: 72px; border-radius: 8px; border: 1.5px dashed var(--line); background: var(--panel); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: var(--muted); cursor: pointer; }
+    .pmodal-add-photo:hover { border-color: var(--ink); color: var(--ink); }
+    .pmodal-actions { display: flex; gap: .7rem; margin-top: 1.4rem; }
+    .pmodal-actions .btn { flex: 1; }
 
     /* ---- WhatsApp support float ---- */
     .support-float { position: fixed; bottom: 1.4rem; right: 1.4rem; z-index: 200; background: #25D366; color: #fff; display: flex; align-items: center; gap: .6rem; border-radius: 999px; padding: .8rem 1.2rem .8rem .8rem; box-shadow: 0 8px 24px rgba(0,0,0,.25); text-decoration: none; font-size: .78rem; font-weight: 700; }
@@ -187,6 +212,78 @@
         </div>
       </div>
 
+      <!-- ============ GA4 + SEARCH CONSOLE ============ -->
+      <h2 class="section-title">Google Analytics 4<span class="demo-tag">Datos de ejemplo</span></h2>
+      <p class="section-sub">Incluido en los paquetes Premium y Avanzado. Se conecta a la propiedad GA4 real del sitio una vez creada.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="lbl">Sesiones</div>
+          <div class="val">2.340</div>
+          <div class="delta up">▲ 18% vs. mes anterior</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Usuarios</div>
+          <div class="val">1.890</div>
+          <div class="delta up">▲ 15% vs. mes anterior</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Duración promedio</div>
+          <div class="val">2m 14s</div>
+          <div class="delta up">▲ 6% vs. mes anterior</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Tasa de rebote</div>
+          <div class="val">38%</div>
+          <div class="delta up">▼ 4pts vs. mes anterior</div>
+        </div>
+      </div>
+
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Sesiones por semana (GA4)</h3>
+          <svg id="gaChart" viewBox="0 0 640 200" width="100%" height="200" style="overflow:visible;"></svg>
+          <div class="bar-tooltip" id="gaTooltip"></div>
+        </div>
+        <div class="chart-card">
+          <h3>Canal de adquisición</h3>
+          <div class="rank-list" id="channelList"></div>
+        </div>
+      </div>
+
+      <h2 class="section-title">Search Console<span class="demo-tag">Datos de ejemplo</span></h2>
+      <p class="section-sub">Rendimiento en resultados de búsqueda de Google. Incluido en los paquetes Premium y Avanzado.</p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="lbl">Clics</div>
+          <div class="val">612</div>
+          <div class="delta up">▲ 22% vs. mes anterior</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Impresiones</div>
+          <div class="val">18.400</div>
+          <div class="delta up">▲ 9% vs. mes anterior</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">CTR promedio</div>
+          <div class="val">3.3%</div>
+          <div class="delta up">▲ 0.4pts vs. mes anterior</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Posición promedio</div>
+          <div class="val">14.2</div>
+          <div class="delta up">▲ 2.1 vs. mes anterior</div>
+        </div>
+      </div>
+
+      <div class="chart-row">
+        <div class="chart-card" style="grid-column: 1 / -1;">
+          <h3>Búsquedas principales</h3>
+          <div class="rank-list" id="queryList"></div>
+        </div>
+      </div>
+
       <!-- ============ INVENTORY MANAGER ============ -->
       <h2 class="section-title">Inventario<span class="demo-tag">102 productos</span></h2>
       <p class="section-sub">Editá precios, stock y datos del catálogo. Los cambios se guardan en este navegador.</p>
@@ -196,7 +293,7 @@
       </div>
 
       <div class="inv-toolbar">
-        <input type="search" id="invSearch" placeholder="Buscar por nombre, marca o categoría…" />
+        <input type="search" id="invSearch" placeholder="Buscar por nombre, marca, SKU o categoría…" />
         <div class="inv-actions">
           <button type="button" class="btn btn-outline btn-sm" id="invAddBtn">+ Agregar producto</button>
           <button type="button" class="btn btn-outline btn-sm" id="invImportBtn">Importar JSON</button>
@@ -213,11 +310,11 @@
               <th>Foto</th>
               <th>Nombre</th>
               <th>Marca</th>
+              <th>SKU</th>
               <th>Categoría</th>
-              <th>Especificación</th>
               <th>Precio COP</th>
-              <th>Tag</th>
-              <th>Stock</th>
+              <th>Unidades</th>
+              <th>Estado</th>
               <th>Acciones</th>
             </tr>
           </thead>
@@ -226,6 +323,57 @@
       </div>
     </div>
   </main>
+</div>
+
+<!-- ============ PRODUCT MODAL (add/edit) ============ -->
+<div class="pmodal-overlay" id="pmodalOverlay">
+  <div class="pmodal">
+    <button type="button" class="pmodal-close" id="pmodalClose" aria-label="Cerrar">&times;</button>
+    <h3 id="pmodalTitle">Agregar producto</h3>
+    <div class="pmodal-photos" id="pmodalPhotos"></div>
+    <button type="button" class="pmodal-add-photo" id="pmodalAddPhotoBtn" title="Agregar foto">+</button>
+    <input type="file" id="pmodalFileInput" accept="image/*" multiple style="display:none;" />
+    <form id="pmodalForm">
+      <div class="pmodal-grid" style="margin-top:1.2rem;">
+        <div class="pmodal-field span2">
+          <label>Nombre</label>
+          <input type="text" id="pmName" required />
+        </div>
+        <div class="pmodal-field">
+          <label>Marca</label>
+          <input type="text" id="pmBrand" />
+        </div>
+        <div class="pmodal-field">
+          <label>Categoría</label>
+          <select id="pmCat"></select>
+        </div>
+        <div class="pmodal-field span2">
+          <label>Especificación</label>
+          <input type="text" id="pmSpec" placeholder="Ej: Cromoly · 48 spline · Negro" />
+        </div>
+        <div class="pmodal-field">
+          <label>Precio (COP)</label>
+          <input type="number" id="pmPrice" min="0" step="1000" required />
+        </div>
+        <div class="pmodal-field">
+          <label>SKU</label>
+          <input type="text" id="pmSku" />
+        </div>
+        <div class="pmodal-field">
+          <label>Unidades en stock</label>
+          <input type="number" id="pmUnits" min="0" step="1" />
+        </div>
+        <div class="pmodal-field">
+          <label>Tag (opcional)</label>
+          <input type="text" id="pmTag" placeholder="Ej: Nuevo, Top, Edición" />
+        </div>
+      </div>
+      <div class="pmodal-actions">
+        <button type="button" class="btn btn-outline" id="pmodalCancel">Cancelar</button>
+        <button type="submit" class="btn btn-ink">Guardar producto</button>
+      </div>
+    </form>
+  </div>
 </div>
 
 <a class="support-float" href="https://wa.me/573107630504?text=Hola%2C%20tengo%20un%20problema%20con%20el%20panel%20admin%20de%20ESCENA" target="_blank" rel="noopener" aria-label="Soporte por WhatsApp">
@@ -266,11 +414,6 @@
     initDashboard();
     initInventory();
   }
-  if (isAuthed()) {
-    showApp();
-  } else {
-    setTimeout(function () { window.location.href = "index.html?login=1"; }, 1600);
-  }
 
   document.getElementById("adminLogoutBtn").addEventListener("click", function () {
     sessionStorage.removeItem(ADMIN_KEY);
@@ -278,11 +421,9 @@
   });
 
   /* ---- KPI charts (sample data) ---- */
-  function initDashboard() {
-    var weeks = ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8"];
-    var values = [9, 12, 8, 15, 11, 14, 10, 18];
-    var svg = document.getElementById("barChart");
-    var tooltip = document.getElementById("barTooltip");
+  function renderBarChart(svgId, tooltipId, weeks, values, unitLabel) {
+    var svg = document.getElementById(svgId);
+    var tooltip = document.getElementById(tooltipId);
     var max = Math.max.apply(null, values);
     var chartW = 640, chartH = 200, padL = 26, padB = 24, padT = 10;
     var plotW = chartW - padL - 10, plotH = chartH - padB - padT;
@@ -296,7 +437,8 @@
       return e;
     }
 
-    // gridlines
+    svg.innerHTML = "";
+
     [0, 0.5, 1].forEach(function (t) {
       var y = padT + plotH * (1 - t);
       svg.appendChild(el("line", { x1: padL, x2: chartW - 4, y1: y, y2: y, stroke: "#ececeb", "stroke-width": 1 }));
@@ -321,7 +463,7 @@
         var box = svg.getBoundingClientRect();
         tooltip.style.left = (e.clientX - box.left) + "px";
         tooltip.style.top = (e.clientY - box.top) + "px";
-        tooltip.textContent = weeks[i] + ": " + v + " pedidos";
+        tooltip.textContent = weeks[i] + ": " + v + " " + unitLabel;
         tooltip.classList.add("show");
         rect.setAttribute("fill", "#333");
       });
@@ -330,48 +472,89 @@
         rect.setAttribute("fill", "#0A0A0A");
       });
     });
+  }
 
-    var ranked = [
-      { n: "Volume Front Load Stem", v: 23 },
-      { n: "Mutany Savage Bielas 165", v: 19 },
-      { n: "Cult x Vans Pivotal Sillín", v: 17 },
-      { n: "Odyssey Piñón 28T Negro", v: 15 },
-      { n: "Éclat Trippin Rin", v: 12 }
-    ];
-    var rankMax = ranked[0].v;
-    var rankList = document.getElementById("rankList");
-    rankList.innerHTML = ranked.map(function (r, i) {
-      var pct = Math.round((r.v / rankMax) * 100);
+  function renderRankList(elId, items, valueFmt) {
+    var max = items[0].v;
+    var list = document.getElementById(elId);
+    list.innerHTML = items.map(function (r, i) {
+      var pct = Math.round((r.v / max) * 100);
       return '<div class="rank-row">' +
         '<span class="rn">' + (i + 1) + '</span>' +
         '<span class="rbar-track"><span class="rbar-fill" style="width:' + pct + '%;"></span></span>' +
-        '<span class="rval">' + r.v + '</span>' +
+        '<span class="rval">' + (valueFmt ? valueFmt(r.v) : r.v) + '</span>' +
         '<span class="rname">' + r.n + '</span>' +
         '</div>';
     }).join("");
   }
 
+  function initDashboard() {
+    var weeks = ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8"];
+
+    renderBarChart("barChart", "barTooltip", weeks, [9, 12, 8, 15, 11, 14, 10, 18], "pedidos");
+    renderRankList("rankList", [
+      { n: "Volume Front Load Stem", v: 23 },
+      { n: "Mutany Savage Bielas 165", v: 19 },
+      { n: "Cult x Vans Pivotal Sillín", v: 17 },
+      { n: "Odyssey Piñón 28T Negro", v: 15 },
+      { n: "Éclat Trippin Rin", v: 12 }
+    ]);
+
+    renderBarChart("gaChart", "gaTooltip", weeks, [210, 245, 198, 290, 310, 275, 340, 380], "sesiones");
+    renderRankList("channelList", [
+      { n: "Búsqueda orgánica (Google)", v: 46 },
+      { n: "Directo", v: 24 },
+      { n: "Redes sociales (Instagram)", v: 18 },
+      { n: "WhatsApp", v: 8 },
+      { n: "Referencias", v: 4 }
+    ], function (v) { return v + "%"; });
+
+    renderRankList("queryList", [
+      { n: "partes bmx colombia", v: 89 },
+      { n: "tienda bmx bogota", v: 64 },
+      { n: "stem bmx", v: 51 },
+      { n: "comprar bmx partes", v: 43 },
+      { n: "escena bike shop", v: 38 }
+    ], function (v) { return v + " clics"; });
+  }
+
   /* ---- Inventory manager ---- */
-  var catalog = [];
+  var inventoryCatalog = [];
+  var editingIdx = null; // null = adding new product
+  var modalPhotos = [];
 
   function slugOf(p) {
-    return p.img.split("/").pop().replace(/\.[a-zA-Z0-9]+$/, "");
+    return (p.img || p.slug || "").split("/").pop().replace(/\.[a-zA-Z0-9]+$/, "");
+  }
+  function makeSlug(name) {
+    return (name || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  }
+
+  function migrateProduct(p) {
+    var slug = p.slug || slugOf(p) || makeSlug(p.n) || ("producto-" + Date.now());
+    return {
+      slug: slug,
+      n: p.n || "",
+      brand: p.brand || "",
+      cat: p.cat || "piezas",
+      spec: p.spec || "",
+      price: p.price || 0,
+      sku: p.sku || slug.toUpperCase(),
+      units: (typeof p.units === "number") ? p.units : (p.stock === false ? 0 : 12),
+      tag: p.tag || "",
+      imgs: p.imgs || (p.img ? [p.img] : ["assets/img/escena-logo.jpg"])
+    };
   }
 
   function loadCatalog() {
     var saved = localStorage.getItem(CATALOG_KEY);
     if (saved) {
-      try { return JSON.parse(saved); } catch (e) {}
+      try { return JSON.parse(saved).map(migrateProduct); } catch (e) {}
     }
-    return ESCENA_PRODUCTS.map(function (p) {
-      return {
-        slug: slugOf(p), n: p.n, brand: p.brand, cat: p.cat, spec: p.spec,
-        price: p.price, tag: p.tag || "", img: p.img, stock: true
-      };
-    });
+    return ESCENA_PRODUCTS.map(migrateProduct);
   }
   function saveCatalog() {
-    localStorage.setItem(CATALOG_KEY, JSON.stringify(catalog));
+    localStorage.setItem(CATALOG_KEY, JSON.stringify(inventoryCatalog));
   }
 
   function catOptions(selected) {
@@ -381,44 +564,86 @@
   }
 
   function rowHTML(p, idx) {
+    var units = p.units || 0;
+    var statusHTML = units > 0
+      ? '<span class="status-badge ok">En stock</span>'
+      : '<span class="status-badge out">Agotado</span>';
+    var countBadge = p.imgs.length > 1 ? '<span class="thumb-count">+' + (p.imgs.length - 1) + '</span>' : '';
     return '<tr data-idx="' + idx + '">' +
-      '<td><div class="thumb"><img src="' + p.img + '" alt="" loading="lazy" /></div>' +
-        '<input type="file" class="file-input" accept="image/*" data-field="img" /></td>' +
-      '<td class="col-name"><input type="text" data-field="n" value="' + p.n.replace(/"/g, "&quot;") + '" /></td>' +
-      '<td><input type="text" data-field="brand" value="' + (p.brand || "").replace(/"/g, "&quot;") + '" /></td>' +
-      '<td><select data-field="cat">' + catOptions(p.cat) + '</select></td>' +
-      '<td class="col-spec"><input type="text" data-field="spec" value="' + (p.spec || "").replace(/"/g, "&quot;") + '" /></td>' +
-      '<td><input type="number" data-field="price" value="' + p.price + '" min="0" step="1000" /></td>' +
-      '<td><input type="text" data-field="tag" value="' + (p.tag || "").replace(/"/g, "&quot;") + '" /></td>' +
-      '<td><label class="stock-toggle"><input type="checkbox" data-field="stock"' + (p.stock ? " checked" : "") + ' />' + (p.stock ? "En stock" : "Agotado") + '</label></td>' +
-      '<td class="row-actions"><button type="button" class="save">Guardar</button><button type="button" class="del">Eliminar</button></td>' +
+      '<td><div class="thumb"><img src="' + p.imgs[0] + '" alt="" loading="lazy" />' + countBadge + '</div></td>' +
+      '<td class="col-name">' + esc(p.n) + '</td>' +
+      '<td>' + esc(p.brand) + '</td>' +
+      '<td class="sku">' + esc(p.sku) + '</td>' +
+      '<td>' + esc(CATEGORY_LABELS[p.cat] || p.cat) + '</td>' +
+      '<td>' + cop(p.price) + '</td>' +
+      '<td><span class="units-badge">' + units + '</span></td>' +
+      '<td>' + statusHTML + '</td>' +
+      '<td class="row-actions"><button type="button" class="edit">Editar</button><button type="button" class="del">Eliminar</button></td>' +
       '</tr>';
   }
 
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function cop(n) { return "$" + Math.round(n || 0).toLocaleString("es-CO"); }
+
   function renderInventory(filter) {
     var body = document.getElementById("invBody");
-    var items = catalog;
+    var items = inventoryCatalog;
     if (filter) {
       var f = filter.toLowerCase();
-      items = catalog.filter(function (p) {
-        return p.n.toLowerCase().indexOf(f) > -1 || (p.brand || "").toLowerCase().indexOf(f) > -1 || (CATEGORY_LABELS[p.cat] || "").toLowerCase().indexOf(f) > -1;
+      items = inventoryCatalog.filter(function (p) {
+        return p.n.toLowerCase().indexOf(f) > -1 ||
+          (p.brand || "").toLowerCase().indexOf(f) > -1 ||
+          (p.sku || "").toLowerCase().indexOf(f) > -1 ||
+          (CATEGORY_LABELS[p.cat] || "").toLowerCase().indexOf(f) > -1;
       });
     }
     if (items.length === 0) {
-      body.innerHTML = '<tr class="empty-row"><td colspan="9">No se encontraron productos.</td></tr>';
+      body.innerHTML = '<tr class="empty-row"><td colspan="9">No se encontraron productos para "' + esc(filter) + '".</td></tr>';
       return;
     }
     body.innerHTML = items.map(function (p) {
-      return rowHTML(p, catalog.indexOf(p));
+      return rowHTML(p, inventoryCatalog.indexOf(p));
     }).join("");
   }
 
+  /* ---- Product modal ---- */
+  function renderModalPhotos() {
+    var wrap = document.getElementById("pmodalPhotos");
+    wrap.innerHTML = modalPhotos.map(function (src, i) {
+      return '<div class="pmodal-photo"><img src="' + src + '" alt="" /><button type="button" class="rm" data-i="' + i + '">&times;</button></div>';
+    }).join("");
+  }
+
+  function openProductModal(idx) {
+    editingIdx = (typeof idx === "number") ? idx : null;
+    var p = editingIdx !== null ? inventoryCatalog[editingIdx] : null;
+    document.getElementById("pmodalTitle").textContent = p ? "Editar producto" : "Agregar producto";
+    document.getElementById("pmCat").innerHTML = catOptions(p ? p.cat : "piezas");
+    document.getElementById("pmName").value = p ? p.n : "";
+    document.getElementById("pmBrand").value = p ? p.brand : "";
+    document.getElementById("pmSpec").value = p ? p.spec : "";
+    document.getElementById("pmPrice").value = p ? p.price : "";
+    document.getElementById("pmSku").value = p ? p.sku : "";
+    document.getElementById("pmUnits").value = p ? p.units : 0;
+    document.getElementById("pmTag").value = p ? p.tag : "";
+    modalPhotos = p ? p.imgs.slice() : [];
+    renderModalPhotos();
+    document.getElementById("pmodalOverlay").classList.add("show");
+    document.getElementById("pmName").focus();
+  }
+  function closeProductModal() {
+    document.getElementById("pmodalOverlay").classList.remove("show");
+  }
+
   function initInventory() {
-    catalog = loadCatalog();
+    inventoryCatalog = loadCatalog();
+    saveCatalog();
     renderInventory("");
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
-      renderInventory(e.target.value);
+      renderInventory(e.target.value.trim());
     });
 
     document.getElementById("invBody").addEventListener("click", function (e) {
@@ -426,65 +651,92 @@
       if (!tr) return;
       var idx = parseInt(tr.getAttribute("data-idx"), 10);
 
-      if (e.target.classList.contains("save")) {
-        var p = catalog[idx];
-        tr.querySelectorAll("[data-field]").forEach(function (input) {
-          var field = input.getAttribute("data-field");
-          if (field === "img") return;
-          if (field === "stock") { p[field] = input.checked; }
-          else if (field === "price") { p[field] = parseFloat(input.value) || 0; }
-          else { p[field] = input.value; }
-        });
-        saveCatalog();
-        showToast("Producto actualizado");
-        renderInventory(document.getElementById("invSearch").value);
+      if (e.target.classList.contains("edit")) {
+        openProductModal(idx);
       }
-
       if (e.target.classList.contains("del")) {
-        if (confirm("¿Eliminar \"" + catalog[idx].n + "\" del catálogo?")) {
-          catalog.splice(idx, 1);
+        if (confirm("¿Eliminar \"" + inventoryCatalog[idx].n + "\" del catálogo?")) {
+          inventoryCatalog.splice(idx, 1);
           saveCatalog();
           showToast("Producto eliminado");
-          renderInventory(document.getElementById("invSearch").value);
+          renderInventory(document.getElementById("invSearch").value.trim());
         }
       }
     });
 
-    document.getElementById("invBody").addEventListener("change", function (e) {
-      if (e.target.getAttribute("data-field") === "img" && e.target.files[0]) {
-        var tr = e.target.closest("tr[data-idx]");
-        var idx = parseInt(tr.getAttribute("data-idx"), 10);
-        var reader = new FileReader();
-        reader.onload = function () {
-          catalog[idx].img = reader.result;
-          saveCatalog();
-          renderInventory(document.getElementById("invSearch").value);
-          showToast("Imagen actualizada (previsualización local)");
-        };
-        reader.readAsDataURL(e.target.files[0]);
-      }
-      if (e.target.getAttribute("data-field") === "stock") {
-        var label = e.target.closest("label");
-        label.lastChild.textContent = e.target.checked ? "En stock" : "Agotado";
-      }
+    document.getElementById("invAddBtn").addEventListener("click", function () {
+      openProductModal(null);
     });
 
-    document.getElementById("invAddBtn").addEventListener("click", function () {
-      var name = prompt("Nombre del producto nuevo:");
-      if (!name) return;
-      var slug = name.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-      catalog.unshift({
-        slug: slug || ("producto-" + Date.now()), n: name, brand: "", cat: "piezas", spec: "",
-        price: 0, tag: "", img: "assets/img/escena-logo.jpg", stock: true
+    document.getElementById("pmodalClose").addEventListener("click", closeProductModal);
+    document.getElementById("pmodalCancel").addEventListener("click", closeProductModal);
+    document.getElementById("pmodalOverlay").addEventListener("click", function (e) {
+      if (e.target.id === "pmodalOverlay") closeProductModal();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeProductModal();
+    });
+
+    document.getElementById("pmodalAddPhotoBtn").addEventListener("click", function () {
+      document.getElementById("pmodalFileInput").click();
+    });
+    document.getElementById("pmodalFileInput").addEventListener("change", function (e) {
+      var files = Array.prototype.slice.call(e.target.files || []);
+      if (!files.length) return;
+      var remaining = files.length;
+      files.forEach(function (file) {
+        var reader = new FileReader();
+        reader.onload = function () {
+          modalPhotos.push(reader.result);
+          remaining--;
+          if (remaining === 0) renderModalPhotos();
+        };
+        reader.readAsDataURL(file);
       });
+      e.target.value = "";
+    });
+    document.getElementById("pmodalPhotos").addEventListener("click", function (e) {
+      var rm = e.target.closest(".rm");
+      if (!rm) return;
+      modalPhotos.splice(parseInt(rm.getAttribute("data-i"), 10), 1);
+      renderModalPhotos();
+    });
+
+    document.getElementById("pmodalForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = document.getElementById("pmName").value.trim();
+      if (!name) return;
+      var data = {
+        n: name,
+        brand: document.getElementById("pmBrand").value.trim(),
+        cat: document.getElementById("pmCat").value,
+        spec: document.getElementById("pmSpec").value.trim(),
+        price: parseFloat(document.getElementById("pmPrice").value) || 0,
+        sku: document.getElementById("pmSku").value.trim(),
+        units: parseInt(document.getElementById("pmUnits").value, 10) || 0,
+        tag: document.getElementById("pmTag").value.trim(),
+        imgs: modalPhotos.length ? modalPhotos : ["assets/img/escena-logo.jpg"]
+      };
+      if (editingIdx !== null) {
+        var slug = inventoryCatalog[editingIdx].slug;
+        data.slug = slug;
+        if (!data.sku) data.sku = slug.toUpperCase();
+        inventoryCatalog[editingIdx] = data;
+        showToast("Producto actualizado");
+      } else {
+        var newSlug = makeSlug(name) || ("producto-" + Date.now());
+        data.slug = newSlug;
+        if (!data.sku) data.sku = newSlug.toUpperCase();
+        inventoryCatalog.unshift(data);
+        showToast("Producto agregado");
+      }
       saveCatalog();
-      document.getElementById("invSearch").value = "";
-      renderInventory("");
-      showToast("Producto agregado — completá los datos y guardá");
+      closeProductModal();
+      renderInventory(document.getElementById("invSearch").value.trim());
     });
 
     document.getElementById("invExportBtn").addEventListener("click", function () {
-      var blob = new Blob([JSON.stringify(catalog, null, 2)], { type: "application/json" });
+      var blob = new Blob([JSON.stringify(inventoryCatalog, null, 2)], { type: "application/json" });
       var a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
       a.download = "escena-catalogo.json";
@@ -493,12 +745,12 @@
     });
 
     document.getElementById("invExportCsvBtn").addEventListener("click", function () {
-      var headers = ["slug", "n", "brand", "cat", "spec", "price", "tag", "stock", "img"];
+      var headers = ["slug", "n", "brand", "cat", "spec", "price", "sku", "units", "tag", "imgs"];
       var rows = [headers.join(",")];
-      catalog.forEach(function (p) {
+      inventoryCatalog.forEach(function (p) {
         rows.push(headers.map(function (h) {
-          var v = String(p[h] === undefined ? "" : p[h]).replace(/"/g, '""');
-          return '"' + v + '"';
+          var v = h === "imgs" ? p.imgs.join("|") : (p[h] === undefined ? "" : p[h]);
+          return '"' + String(v).replace(/"/g, '""') + '"';
         }).join(","));
       });
       var blob = new Blob([rows.join("\n")], { type: "text/csv" });
@@ -520,8 +772,9 @@
         try {
           var data = JSON.parse(reader.result);
           if (!Array.isArray(data)) throw new Error("formato inválido");
-          catalog = data;
+          inventoryCatalog = data.map(migrateProduct);
           saveCatalog();
+          document.getElementById("invSearch").value = "";
           renderInventory("");
           showToast("Catálogo importado (" + data.length + " productos)");
         } catch (err) {
@@ -531,6 +784,12 @@
       reader.readAsText(file);
       e.target.value = "";
     });
+  }
+
+  if (isAuthed()) {
+    showApp();
+  } else {
+    setTimeout(function () { window.location.href = "index.html?login=1"; }, 1600);
   }
 </script>
 </body>
