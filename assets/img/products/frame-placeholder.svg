@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#0A0A0A"/>
+  <g fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <!-- rear wheel -->
+    <circle cx="95" cy="270" r="52" stroke-width="5" opacity="0.35"/>
+    <!-- front wheel -->
+    <circle cx="305" cy="270" r="52" stroke-width="5" opacity="0.35"/>
+    <!-- head tube -->
+    <line x1="278" y1="150" x2="255" y2="270"/>
+    <!-- top tube -->
+    <line x1="150" y1="150" x2="278" y2="150"/>
+    <!-- down tube -->
+    <line x1="150" y1="150" x2="255" y2="270"/>
+    <!-- seat tube -->
+    <line x1="150" y1="150" x2="95" y2="270"/>
+    <!-- chainstay -->
+    <line x1="95" y1="270" x2="255" y2="270"/>
+    <!-- seatstay -->
+    <line x1="150" y1="150" x2="95" y2="270" opacity="0"/>
+    <line x1="130" y1="188" x2="95" y2="270"/>
+    <!-- fork -->
+    <line x1="278" y1="150" x2="305" y2="270"/>
+    <!-- seat post -->
+    <line x1="150" y1="150" x2="132" y2="108"/>
+    <!-- saddle -->
+    <line x1="112" y1="103" x2="154" y2="103" stroke-width="8"/>
+    <!-- stem + bars -->
+    <line x1="278" y1="150" x2="278" y2="118"/>
+    <line x1="248" y1="112" x2="308" y2="112" stroke-width="8"/>
+  </g>
+</svg>

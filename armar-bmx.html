@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ============ SEO ============ -->
-  <title>Arma tu BMX — Configurador de Partes | ESCENA BIKE SHOP</title>
-  <meta name="description" content="Armá tu BMX pieza por pieza: horquilla, manubrio, stem, bielas, bujes, sillín y más. Elegí entre más de 100 partes en stock y pedí tu build completo por WhatsApp." />
-  <meta name="keywords" content="armar BMX, configurador BMX, build BMX, arma tu bicicleta BMX, partes BMX Colombia, Escena Bike Shop" />
+  <title>Arma tu BMX a tu Medida — Configurador | ESCENA BIKE SHOP</title>
+  <meta name="description" content="No vendemos completas: te ayudamos a construir tu BMX a tu medida. Elegí tu estilo (Street, Park o Dirt), tu talla y armá marco, tenedor, transmisión, ruedas y timón con precio y peso en vivo." />
+  <meta name="keywords" content="armar BMX, configurador BMX, build BMX, arma tu bicicleta BMX, partes BMX Colombia, marco BMX, Escena Bike Shop" />
   <meta name="author" content="ESCENA BIKE SHOP" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0A0A0A" />
@@ -20,13 +20,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ESCENA BIKE SHOP" />
   <meta property="og:locale" content="es_CO" />
-  <meta property="og:title" content="Arma tu BMX — Configurador de Partes | ESCENA BIKE SHOP" />
-  <meta property="og:description" content="Armá tu BMX pieza por pieza y pedí tu build completo por WhatsApp. Más de 100 partes en stock." />
+  <meta property="og:title" content="Arma tu BMX a tu Medida — Configurador | ESCENA BIKE SHOP" />
+  <meta property="og:description" content="Elegí tu estilo, tu talla y armá tu BMX pieza por pieza con precio y peso en vivo. Pedí tu build completo por WhatsApp." />
   <meta property="og:url" content="https://escenabikeshop.com/armar-bmx.html" />
   <meta property="og:image" content="https://escenabikeshop.com/assets/img/escena-logo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Arma tu BMX — Configurador de Partes | ESCENA BIKE SHOP" />
-  <meta name="twitter:description" content="Armá tu BMX pieza por pieza y pedí tu build completo por WhatsApp." />
+  <meta name="twitter:title" content="Arma tu BMX a tu Medida — Configurador | ESCENA BIKE SHOP" />
+  <meta name="twitter:description" content="Elegí tu estilo, tu talla y armá tu BMX pieza por pieza con precio y peso en vivo." />
   <meta name="twitter:image" content="https://escenabikeshop.com/assets/img/escena-logo.jpg" />
 
   <!-- ============ Icons / Manifest ============ -->
@@ -68,8 +68,6 @@
     .btn-outline { background: #fff; color: var(--ink); border: 1.5px solid var(--ink); }
     .btn-outline:hover { background: var(--ink); color: #fff; }
     .btn:disabled { opacity: .35; cursor: not-allowed; transform: none !important; }
-    .btn-text { background: none; border: none; color: var(--muted); font-size: .8rem; text-decoration: underline; cursor: pointer; font-family: inherit; padding: .5rem 0; }
-    .btn-text:hover { color: var(--ink); }
 
     /* ---- utility / nav (shared pattern) ---- */
     .utility { background: var(--ink); color: rgba(255,255,255,.65); font-size: .72rem; letter-spacing: .04em; }
@@ -104,7 +102,6 @@
       .brand img { width: 42px; height: 42px; }
       .brand .name { font-size: 1.5rem; }
       .nav-links { inset: 72px 0 auto 0; }
-      .build-bar { top: 72px; }
     }
 
     .breadcrumb { padding: 1.2rem 1.5rem 0; font-size: .78rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .3rem; max-width: 1180px; margin: 0 auto; }
@@ -113,69 +110,119 @@
     .breadcrumb .sep { opacity: .5; }
     .breadcrumb .current { color: var(--ink); }
 
-    .page-head { max-width: 1180px; margin: 0 auto; padding: 1.2rem 1.5rem 1.6rem; }
-    .page-head .eyebrow { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
-    .page-head h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: .02em; margin: .3rem 0 .6rem; }
-    .page-head p { color: var(--muted); font-size: .95rem; max-width: 640px; }
+    /* ============ BUILDER ZONE ============ */
+    .arm-dark { background: var(--bg); color: var(--ink); margin-top: 1.2rem; }
+    .arm-hero { max-width: 1180px; margin: 0 auto; padding: 2.6rem 1.5rem 1.2rem; }
+    .arm-hero .eyebrow { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .arm-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.8rem); letter-spacing: .02em; margin: .3rem 0 .8rem; }
+    .arm-hero p { color: var(--muted); font-size: .95rem; max-width: 760px; line-height: 1.75; }
 
-    /* ---- build bar ---- */
-    .build-bar { position: sticky; top: 84px; z-index: 90; background: var(--ink); color: #fff; }
-    .build-bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 52px; }
-    .build-bar .bb-info { font-size: .8rem; display: flex; gap: .5rem; align-items: baseline; flex-wrap: wrap; }
-    .build-bar .bb-info .amt { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: .02em; }
-    .build-bar .bb-info .count { color: rgba(255,255,255,.6); font-size: .74rem; }
-    .build-bar button { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 5px; padding: .45rem .9rem; font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; font-family: inherit; transition: background .2s; }
-    .build-bar button:hover { background: rgba(255,255,255,.24); }
+    .arm-section { max-width: 1180px; margin: 0 auto; padding: 2.3rem 1.5rem; border-top: 1px solid var(--line); }
+    .arm-step-label { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .arm-step-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.9rem, 4.4vw, 2.7rem); letter-spacing: .02em; margin: .3rem 0 1.3rem; }
 
-    /* ---- progress ---- */
-    .progress-wrap { max-width: 1180px; margin: 0 auto; padding: 1.4rem 1.5rem 0; }
-    .progress-track { height: 4px; background: var(--line); border-radius: 999px; overflow: hidden; }
-    .progress-fill { height: 100%; background: var(--ink); border-radius: 999px; transition: width .3s ease; }
+    /* style cards */
+    .arm-style-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-bottom: 1.6rem; }
+    @media (max-width: 720px) { .arm-style-grid { grid-template-columns: 1fr; } }
+    .arm-style-card { text-align: left; background: #fff; border: 1.5px solid var(--line); border-radius: 10px; padding: 1.3rem 1.4rem; cursor: pointer; font-family: inherit; color: var(--ink); transition: border-color .15s, box-shadow .15s, transform .15s; }
+    .arm-style-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.08); transform: translateY(-2px); }
+    .arm-style-card.selected { border-color: var(--ink); box-shadow: 0 0 0 1.5px var(--ink); }
+    .arm-style-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: .05em; margin-bottom: .3rem; }
+    .arm-style-card span { font-size: .8rem; color: var(--muted); }
 
-    /* ---- wizard ---- */
-    #wizard { max-width: 1180px; margin: 0 auto; padding: 1.6rem 1.5rem 5rem; scroll-margin-top: 148px; }
-    .step-head { margin-bottom: 1.6rem; }
-    .step-head .step-count { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
-    .step-head h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: .02em; margin: .3rem 0 .5rem; }
-    .step-head p { color: var(--muted); font-size: .9rem; max-width: 560px; }
+    .arm-setup-panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 1.6rem 1.7rem; }
+    .arm-setup-panel h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .03em; margin-bottom: .5rem; }
+    .arm-setup-panel > p { color: var(--muted); font-size: .88rem; line-height: 1.65; margin-bottom: 1.3rem; max-width: 820px; }
+    .arm-spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .9rem; margin-bottom: 1.3rem; }
+    @media (max-width: 720px) { .arm-spec-grid { grid-template-columns: repeat(2, 1fr); } }
+    .arm-spec-cell { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: .85rem 1rem; }
+    .arm-spec-cell .lbl { display: block; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
+    .arm-spec-cell .val { font-size: 1.05rem; font-weight: 700; }
+    .arm-tips { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem 2rem; border-top: 1px solid var(--line); padding-top: 1.1rem; }
+    @media (max-width: 600px) { .arm-tips { grid-template-columns: 1fr; } }
+    .arm-tips-title { grid-column: 1/-1; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .3rem; list-style: none; }
+    .arm-tips li { list-style: none; font-size: .85rem; color: #333; padding: .3rem 0; position: relative; padding-left: 1rem; }
+    .arm-tips li::before { content: "•"; position: absolute; left: 0; color: var(--muted); }
 
-    .opt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; margin-bottom: 2rem; }
-    @media (max-width: 980px) { .opt-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 720px) { .opt-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 440px) { .opt-grid { grid-template-columns: 1fr; } }
-    .opt-card { position: relative; background: #fff; border: 1.5px solid var(--line); border-radius: 12px; overflow: hidden; text-align: left; cursor: pointer; padding: 0; font-family: inherit; transition: border-color .15s, box-shadow .15s, transform .15s; }
-    .opt-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.08); transform: translateY(-3px); }
-    .opt-card.selected { border-color: var(--ink); box-shadow: 0 0 0 1.5px var(--ink); }
-    .opt-ph { aspect-ratio: 1/1; background: #0A0A0A; overflow: hidden; }
-    .opt-ph img { width: 100%; height: 100%; object-fit: cover; }
-    .opt-body { padding: .8rem .9rem 1rem; }
-    .opt-brand { font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
-    .opt-card h3 { font-size: .84rem; font-weight: 600; margin: .2rem 0 .3rem; line-height: 1.3; color: var(--ink); }
-    .opt-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; }
-    .opt-check { position: absolute; top: .6rem; right: .6rem; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 800; }
-    .opt-empty { color: var(--muted); font-size: .88rem; padding: 2rem 0; }
+    /* size / height */
+    .arm-size-intro { color: var(--muted); font-size: .9rem; max-width: 760px; margin-bottom: 1.4rem; line-height: 1.75; }
+    .arm-size-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 1.4rem; align-items: start; }
+    @media (max-width: 820px) { .arm-size-grid { grid-template-columns: 1fr; } }
+    .arm-size-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 1.6rem 1.7rem; }
+    .arm-size-card .lbl { font-size: .8rem; color: var(--muted); }
+    .arm-height-slider { width: 100%; margin: 1.1rem 0 1.5rem; accent-color: var(--ink); }
+    .arm-tt-result .lbl { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .arm-tt-result .val { font-family: 'Bebas Neue', sans-serif; font-size: 2.1rem; margin-top: .2rem; }
+    .arm-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .arm-table th { text-align: left; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding: .8rem 1rem; border-bottom: 1px solid var(--line); }
+    .arm-table td { padding: .8rem 1rem; font-size: .88rem; border-bottom: 1px solid var(--line); }
+    .arm-table tr:last-child td { border-bottom: none; }
+    .arm-table tr.active td { background: var(--panel); font-weight: 700; }
 
-    .step-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
-    .step-nav { display: flex; gap: .8rem; }
+    /* build panel */
+    .arm-control { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.3rem; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 1.3rem 1.5rem; margin-bottom: 1.6rem; }
+    .arm-control-item .lbl { font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .35rem; display: block; }
+    .arm-progress-track { height: 4px; background: var(--line); border-radius: 999px; overflow: hidden; margin-bottom: .45rem; width: 170px; max-width: 40vw; }
+    .arm-progress-fill { height: 100%; background: var(--ink); border-radius: 999px; transition: width .3s; }
+    .arm-control-item .val { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; }
+    .arm-control-actions { display: flex; gap: .6rem; flex-wrap: wrap; }
+    .arm-control-actions button { background: #fff; color: var(--ink); border: 1.5px solid var(--ink); border-radius: 999px; padding: .55rem 1.1rem; font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; font-family: inherit; transition: background .2s, color .2s; }
+    .arm-control-actions button:hover { background: var(--ink); color: #fff; }
 
-    /* ---- summary ---- */
-    .summary-list { border-top: 1px solid var(--line); margin-bottom: 1.5rem; }
-    .summary-row { display: grid; grid-template-columns: 60px 1fr auto auto; gap: 1rem; align-items: center; padding: .9rem 0; border-bottom: 1px solid var(--line); }
-    .summary-row .sr-img { width: 60px; height: 60px; border-radius: 8px; overflow: hidden; background: #0A0A0A; }
-    .summary-row .sr-img img { width: 100%; height: 100%; object-fit: cover; }
-    .summary-row .sr-label { font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
-    .summary-row h4 { font-size: .88rem; font-weight: 600; margin: .1rem 0; }
-    .summary-row .sr-brand { font-size: .74rem; color: var(--muted); }
-    .summary-row .sr-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; white-space: nowrap; }
-    .summary-row .sr-change { background: none; border: none; color: var(--muted); font-size: .74rem; text-decoration: underline; cursor: pointer; font-family: inherit; white-space: nowrap; }
-    .summary-row .sr-change:hover { color: var(--ink); }
-    @media (max-width: 560px) { .summary-row { grid-template-columns: 46px 1fr; } .summary-row .sr-price, .summary-row .sr-change { grid-column: 2; justify-self: start; } }
-    .summary-total { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; border-top: 2px solid var(--ink); margin-bottom: 1.5rem; }
-    .summary-total span:first-child { font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
-    .summary-total .amt { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; }
-    .summary-actions { display: flex; flex-direction: column; gap: .8rem; max-width: 420px; margin-bottom: 1.5rem; }
-    .summary-actions .cart-checkout svg { width: 17px; height: 17px; }
-    .empty-msg { color: var(--muted); font-size: .92rem; padding: 1.5rem 0; }
+    .arm-build-grid { display: grid; grid-template-columns: 1fr 330px; gap: 1.6rem; align-items: start; }
+    @media (max-width: 980px) { .arm-build-grid { grid-template-columns: 1fr; } }
+
+    .arm-tabs { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
+    .arm-tab { display: flex; align-items: center; gap: .55rem; background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem .5rem .5rem; color: var(--ink); font-family: inherit; font-size: .74rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
+    .arm-tab:hover { border-color: var(--ink); }
+    .arm-tab.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .arm-tab .num { width: 22px; height: 22px; border-radius: 50%; background: var(--panel); display: flex; align-items: center; justify-content: center; font-size: .68rem; flex-shrink: 0; }
+    .arm-tab.active .num { background: rgba(255,255,255,.2); }
+    .arm-tab.done:not(.active) .num { background: #25D366; color: #fff; }
+
+    .arm-component-label { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .2rem; }
+    .arm-component-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; letter-spacing: .02em; margin-bottom: 1.2rem; }
+
+    .arm-opt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    @media (max-width: 720px) { .arm-opt-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 460px) { .arm-opt-grid { grid-template-columns: 1fr; } }
+    .arm-opt-card { position: relative; text-align: left; background: #fff; border: 1.5px solid var(--line); border-radius: 10px; overflow: hidden; cursor: pointer; font-family: inherit; color: var(--ink); padding: 0; transition: border-color .15s, box-shadow .15s, transform .15s; }
+    .arm-opt-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.08); transform: translateY(-2px); }
+    .arm-opt-card.selected { border-color: var(--ink); box-shadow: 0 0 0 1.5px var(--ink); }
+    .arm-opt-card.over-budget { opacity: .5; }
+    .arm-opt-ph { aspect-ratio: 1/1; background: #0A0A0A; }
+    .arm-opt-ph img { width: 100%; height: 100%; object-fit: cover; }
+    .arm-opt-none { aspect-ratio: 1/1; border: 1.5px dashed var(--muted); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 1rem; cursor: pointer; background: var(--panel); color: var(--ink); font-family: inherit; transition: border-color .15s, background .15s; }
+    .arm-opt-none:hover { border-color: var(--ink); }
+    .arm-opt-none.selected { border-color: var(--ink); border-style: solid; background: #fff; box-shadow: 0 0 0 1.5px var(--ink); }
+    .arm-opt-none b { font-size: .85rem; letter-spacing: .03em; }
+    .arm-opt-none span { font-size: .72rem; color: var(--muted); margin-top: .35rem; }
+    .arm-opt-body { padding: .75rem .85rem .9rem; }
+    .arm-opt-brand { font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .arm-opt-card h4 { font-size: .82rem; font-weight: 600; margin: .2rem 0 .3rem; line-height: 1.3; }
+    .arm-opt-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; }
+    .arm-opt-budget-flag { font-size: .62rem; color: #b3261e; margin-top: .25rem; }
+    .arm-opt-check { position: absolute; top: .5rem; right: .5rem; width: 24px; height: 24px; border-radius: 50%; background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 800; }
+    .arm-opt-empty { color: var(--muted); font-size: .88rem; padding: 1.5rem 0; }
+
+    .arm-sidebar { position: sticky; top: 100px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 1.5rem; }
+    .arm-sidebar h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .03em; margin-bottom: .9rem; }
+    .arm-chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.1rem; }
+    .arm-chip { font-size: .66rem; letter-spacing: .03em; border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: .3rem .7rem; color: #333; }
+    .arm-sidebar-row { display: flex; justify-content: space-between; align-items: baseline; padding: .6rem 0; border-bottom: 1px solid var(--line); font-size: .82rem; gap: .8rem; }
+    .arm-sidebar-row .k { color: var(--muted); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; flex-shrink: 0; }
+    .arm-sidebar-row .v { text-align: right; }
+    .arm-sidebar-total { display: flex; justify-content: space-between; align-items: baseline; padding: 1rem 0; border-top: 2px solid var(--ink); margin-top: .3rem; }
+    .arm-sidebar-total span:first-child { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+    .arm-sidebar-total .amt { font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; }
+    .arm-budget { margin: 1rem 0 1.2rem; }
+    .arm-budget .lbl { font-size: .78rem; margin-bottom: .5rem; display: block; color: #333; }
+    .arm-budget input[type=range] { width: 100%; accent-color: var(--ink); }
+    .arm-budget .hint { font-size: .68rem; color: var(--muted); margin-top: .3rem; }
+    .arm-sidebar-actions { display: flex; flex-direction: column; gap: .6rem; margin-top: .4rem; }
+    .arm-sidebar-actions .btn { width: 100%; }
+    .arm-sidebar-actions .btn svg { width: 16px; height: 16px; fill: currentColor; }
+    .arm-fine { font-size: .68rem; color: var(--muted); text-align: center; margin-top: .9rem; line-height: 1.6; }
 
     /* ---- footer ---- */
     footer { background: var(--ink); color: rgba(255,255,255,.4); padding: 3.5rem 1.5rem 2rem; }
@@ -217,7 +264,7 @@
     .nl-form button svg { width: 16px; height: 16px; fill: #fff; }
     .nl-skip { margin-top: .9rem; font-size: .76rem; color: var(--muted); text-decoration: underline; cursor: pointer; background: none; border: none; font-family: inherit; }
     .nl-note { font-size: .68rem; color: #999; margin-top: .8rem; }
-    .toast { position: fixed; bottom: 6.5rem; right: 1.4rem; z-index: 250; background: var(--ink); color: #fff; padding: .7rem 1.1rem; border-radius: 8px; font-size: .8rem; opacity: 0; transform: translateY(8px); transition: opacity .2s, transform .2s; pointer-events: none; }
+    .toast { position: fixed; bottom: 6.5rem; right: 1.4rem; z-index: 250; background: #fff; color: var(--ink); border: 1px solid var(--line); padding: .7rem 1.1rem; border-radius: 8px; font-size: .8rem; opacity: 0; transform: translateY(8px); transition: opacity .2s, transform .2s; pointer-events: none; box-shadow: 0 10px 30px rgba(0,0,0,.15); }
     .toast.show { opacity: 1; transform: translateY(0); }
   </style>
 </head>
@@ -278,25 +325,34 @@
   <span class="current">Arma tu BMX</span>
 </nav>
 
-<div class="page-head">
-  <span class="eyebrow">Configurador</span>
-  <h1>ARMA TU BMX</h1>
-  <p>Elegí pieza por pieza — horquilla, manubrio, stem, bielas, bujes, sillín y más — y armá tu build completo. Al final te mandamos todo listo por WhatsApp.</p>
-</div>
-
-<div class="build-bar">
-  <div class="wrap">
-    <div class="bb-info"><span class="amt" id="bbAmt">$0 COP</span><span class="count" id="bbCount">0 piezas seleccionadas</span></div>
-    <button type="button" id="bbSummaryBtn">Ver resumen</button>
+<!-- ============ BUILDER (dark zone) ============ -->
+<div class="arm-dark">
+  <div class="arm-hero">
+    <span class="eyebrow">Configurador</span>
+    <h1>ARMA TU BMX A TU MEDIDA</h1>
+    <p>No vendemos completas: te ayudamos a construir la tuya, perfecta para tu estilo y tu estatura. Marco, tenedor, transmisión, ruedas y timón — con vista previa en vivo y asesoría de riders. Armado y ajuste gratis.</p>
   </div>
-</div>
 
-<div class="progress-wrap">
-  <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
-</div>
+  <div class="arm-section">
+    <div id="armStyleSection"></div>
+  </div>
 
-<div id="wizard">
-  <div id="wizardBody"></div>
+  <div class="arm-section">
+    <div id="armSizeSection"></div>
+  </div>
+
+  <div class="arm-section">
+    <span class="arm-step-label">Paso 3</span>
+    <h2 class="arm-step-title">Arma por componentes</h2>
+    <div class="arm-control" id="armControl"></div>
+    <div class="arm-build-grid">
+      <div>
+        <div class="arm-tabs" id="armTabs"></div>
+        <div id="armComponentArea"></div>
+      </div>
+      <aside class="arm-sidebar" id="armSidebar"></aside>
+    </div>
+  </div>
 </div>
 
 <!-- ============ FOOTER ============ -->
@@ -348,6 +404,7 @@
 <script src="assets/js/products-data.js"></script>
 <script>
 var WA = "573107630504";
+var WA_SVG_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>';
 
 /* ---- Mobile nav ---- */
 var burger = document.getElementById("burger"), nav = document.getElementById("nav");
@@ -384,246 +441,390 @@ function showToast(msg){
 }
 
 /* ============ CONFIGURATOR ============ */
-var WA_SVG_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>';
-
-var STEPS = [
-  { key: "horquillas", label: "Horquilla", cat: "horquillas" },
-  { key: "manubrios", label: "Manubrio", cat: "manubrios" },
-  { key: "stems", label: "Stem", cat: "stems" },
-  { key: "punos", label: "Puños", cat: "punos" },
-  { key: "dc", label: "Dirección y BB", cat: "dc" },
-  { key: "bielas", label: "Bielas", cat: "bielas" },
-  { key: "pinones", label: "Piñón", cat: "pinones" },
-  { key: "buje-d", label: "Buje delantero", cat: "bujes", filter: function(p){ return /delantero/i.test(p.n); } },
-  { key: "buje-t", label: "Buje trasero", cat: "bujes", filter: function(p){ return !/delantero/i.test(p.n); } },
-  { key: "sillines", label: "Sillín", cat: "sillines" },
-  { key: "tijas", label: "Tija", cat: "tijas" },
-  { key: "pedales", label: "Pedales", cat: "pedales" }
+var SLOTS = [
+  { key: "marco", label: "Marco", cat: "marcos" },
+  { key: "tenedor", label: "Tenedor", cat: "horquillas" },
+  { key: "transmision", label: "Transmisión", cat: "bielas" },
+  { key: "ruedas", label: "Ruedas", cat: "bujes" },
+  { key: "timon", label: "Timón", cat: "manubrios" }
 ];
-var EXTRAS_CATS = ["clavijas", "tornilleria", "piezas", "herramientas", "rines"];
-var TOTAL_STEPS = STEPS.length + 2; /* + extras + summary */
+var DEFAULT_SLOT_WEIGHT = { marco: 2.1, tenedor: 0.6, transmision: 1.55, ruedas: 3.2, timon: 0.85 };
+var FIXED_WEIGHT = 2.0; /* headset, sillín + tija, tornillería: no seleccionables por separado aquí */
 
-var state = { picks: {}, extras: [] };
-var currentStep = 0;
+var STYLE_SPECS = {
+  street: {
+    label: "Street", sub: "Ledges, rieles, gaps",
+    desc: "Para todo lo urbano: ledges, rieles, gaps y manuales. Buscás una bici resistente, maniobrable y con buen peso para aguantar impactos.",
+    tt: "20.5\" – 21\"", headAngle: "75°", chainstay: "13\" – 13.5\"", bb: "Media (~11.6\")", drivetrain: "25/9 ó 28/9", offset: "28 – 30 mm",
+    tips: ["Tacos en los 4 ejes para grinds", "Llantas 2.3\"–2.4\" para más agarre", "Freecoaster o cassette, según preferencia", "Timón alto (9.4\"+) para control"]
+  },
+  park: {
+    label: "Park", sub: "Rampas, bowls, cajón",
+    desc: "Para bowls, rampas y cajones. Buscás velocidad, giros rápidos y una bici liviana para trucos técnicos en el aire.",
+    tt: "20.75\" – 21.25\"", headAngle: "75° – 75.5°", chainstay: "13\" – 13.25\"", bb: "Baja (~11.2\")", drivetrain: "25/9", offset: "24 – 26 mm",
+    tips: ["Cassette recomendado para bowl runs", "Llantas 2.4\" para más rodada en transiciones", "Timón medio (8\"–8.5\") para giros rápidos", "Pegs opcionales según tu estilo"]
+  },
+  dirt: {
+    label: "Dirt / Trails", sub: "Saltos de tierra",
+    desc: "Para trails y saltos de tierra. Priorizás estabilidad a velocidad y control en el aire por sobre la maniobrabilidad técnica.",
+    tt: "21\" – 21.5\"", headAngle: "74° – 74.5°", chainstay: "13.25\" – 13.75\"", bb: "Alta (~11.8\")", drivetrain: "25/9", offset: "32 – 35 mm",
+    tips: ["Marco más largo para estabilidad en saltos", "Llantas 2.2\"–2.3\" con buen agarre en tierra", "Timón alto para control aéreo", "Frenos opcionales según preferencia"]
+  }
+};
+
+var TT_BRACKETS = [
+  { max: 160, label: "Menos de 1.60 m", tt: "20.0\" – 20.5\"" },
+  { max: 175, label: "1.60 – 1.75 m", tt: "20.5\" – 20.75\"" },
+  { max: 185, label: "1.75 – 1.85 m", tt: "20.75\" – 21.0\"" },
+  { max: Infinity, label: "Más de 1.85 m", tt: "21.0\" – 21.25\"" }
+];
+function bracketFor(h){
+  for (var i = 0; i < TT_BRACKETS.length; i++) { if (h < TT_BRACKETS[i].max) return TT_BRACKETS[i]; }
+  return TT_BRACKETS[TT_BRACKETS.length - 1];
+}
+
+var state = { style: null, height: 175, activeTab: 0, budget: 3000000, picks: {} };
 
 function cop(n){
   if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
   return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
 }
-function slugOf(p){ return p.img.split("/").pop().replace(/\.[a-zA-Z0-9]+$/, ""); }
-function productsFor(step){
-  return ESCENA_PRODUCTS.filter(function(p){
-    if (p.cat !== step.cat) return false;
-    if (step.filter) return step.filter(p);
-    return true;
+function slugOf(p){ return p.slug || p.img.split("/").pop().replace(/\.[a-zA-Z0-9]+$/, ""); }
+
+function slotProducts(slot){
+  var list = ESCENA_PRODUCTS.filter(function(p){ return p.cat === slot.cat && typeof p.weight === "number"; });
+  if (slot.key === "marco" && state.style) {
+    list = list.filter(function(p){ return p.styles && p.styles.indexOf(state.style) !== -1; });
+  }
+  return list;
+}
+function calcPrice(){
+  var total = 0;
+  SLOTS.forEach(function(s){ var v = state.picks[s.key]; if (v && v !== "none") total += v.price; });
+  return total;
+}
+function calcWeight(){
+  var w = FIXED_WEIGHT;
+  SLOTS.forEach(function(s){
+    var v = state.picks[s.key];
+    w += (v && v !== "none") ? v.weight : DEFAULT_SLOT_WEIGHT[s.key];
   });
+  return w;
 }
-function extrasProducts(){
-  return ESCENA_PRODUCTS.filter(function(p){ return EXTRAS_CATS.indexOf(p.cat) !== -1; });
+function calcProgress(){
+  var n = 0;
+  SLOTS.forEach(function(s){ if (state.picks[s.key] != null) n++; });
+  return n;
 }
-function calcTotal(){
-  var total = 0, count = 0;
-  STEPS.forEach(function(s){ var p = state.picks[s.key]; if (p) { total += p.price; count++; } });
-  state.extras.forEach(function(p){ total += p.price; count++; });
-  return { total: total, count: count };
-}
-function allRows(){
+function pickedRows(){
   var rows = [];
-  STEPS.forEach(function(s, i){
-    var p = state.picks[s.key];
-    if (p) rows.push({ label: s.label, product: p, stepIndex: i });
+  SLOTS.forEach(function(s){
+    var v = state.picks[s.key];
+    if (v && v !== "none") rows.push({ label: s.label, product: v });
   });
-  state.extras.forEach(function(p){ rows.push({ label: "Extra", product: p, stepIndex: STEPS.length }); });
   return rows;
 }
 
-function updateBuildBar(){
-  var calc = calcTotal();
-  document.getElementById("bbAmt").textContent = cop(calc.total);
-  document.getElementById("bbCount").textContent = calc.count + (calc.count === 1 ? " pieza seleccionada" : " piezas seleccionadas");
-  document.getElementById("progressFill").style.width = Math.round(((currentStep + 1) / TOTAL_STEPS) * 100) + "%";
+/* ---- render: style ---- */
+function specCell(lbl, val){
+  return '<div class="arm-spec-cell"><span class="lbl">' + lbl + '</span><span class="val">' + val + '</span></div>';
 }
+function renderStyleSection(){
+  var el = document.getElementById("armStyleSection");
+  var cards = ["street", "park", "dirt"].map(function(key){
+    var sp = STYLE_SPECS[key];
+    return '<button type="button" class="arm-style-card' + (state.style === key ? ' selected' : '') + '" data-style="' + key + '">' +
+      '<h3>' + sp.label.toUpperCase() + '</h3><span>' + sp.sub + '</span></button>';
+  }).join("");
 
-function optCardHTML(p, selected){
-  var slug = slugOf(p);
-  return '<button type="button" class="opt-card' + (selected ? ' selected' : '') + '" data-slug="' + slug + '">' +
-    (selected ? '<span class="opt-check">&#10003;</span>' : '') +
-    '<div class="opt-ph"><img src="' + p.img + '" alt="' + p.n + '" loading="lazy" width="220" height="220"></div>' +
-    '<div class="opt-body"><span class="opt-brand">' + p.brand + '</span><h3>' + p.n + '</h3><div class="opt-price">' + cop(p.price) + '</div></div>' +
-  '</button>';
-}
-
-function renderStep(){
-  var body = document.getElementById("wizardBody");
-  if (currentStep < STEPS.length) {
-    renderPickStep(body, STEPS[currentStep]);
-  } else if (currentStep === STEPS.length) {
-    renderExtrasStep(body);
-  } else {
-    renderSummary(body);
-  }
-  updateBuildBar();
-  var wiz = document.getElementById("wizard");
-  var top = wiz.getBoundingClientRect().top + window.pageYOffset - 140;
-  window.scrollTo({ top: top, behavior: "smooth" });
-}
-
-function goNext(){ if (currentStep < TOTAL_STEPS - 1) { currentStep++; renderStep(); } }
-function goPrev(){ if (currentStep > 0) { currentStep--; renderStep(); } }
-
-function renderPickStep(body, step){
-  var options = productsFor(step);
-  var picked = state.picks[step.key];
-  var html = '<div class="step-head"><span class="step-count">Paso ' + (currentStep + 1) + ' de ' + STEPS.length + '</span>' +
-    '<h2>' + step.label + '</h2>' +
-    '<p>Elegí ' + step.label.toLowerCase() + ' para tu build, o pasá al siguiente paso si no la necesitás.</p></div>';
-
-  if (options.length === 0) {
-    html += '<p class="opt-empty">No hay opciones disponibles en esta categoría por ahora.</p>';
-  } else {
-    html += '<div class="opt-grid">' + options.map(function(p){ return optCardHTML(p, picked && picked.img === p.img); }).join("") + '</div>';
+  var panel = "";
+  if (state.style) {
+    var sp = STYLE_SPECS[state.style];
+    panel = '<div class="arm-setup-panel">' +
+      '<h4>SETUP ' + sp.label.toUpperCase() + '</h4>' +
+      '<p>' + sp.desc + '</p>' +
+      '<div class="arm-spec-grid">' +
+        specCell("Top tube", sp.tt) + specCell("Ángulo de dirección", sp.headAngle) + specCell("Vainas (chainstay)", sp.chainstay) +
+        specCell("Altura de eje (BB)", sp.bb) + specCell("Transmisión", sp.drivetrain) + specCell("Tenedor (offset)", sp.offset) +
+      '</div>' +
+      '<ul class="arm-tips"><li class="arm-tips-title">Tips de montaje</li>' +
+        sp.tips.map(function(t){ return '<li>' + t + '</li>'; }).join("") +
+      '</ul>' +
+    '</div>';
   }
 
-  html += '<div class="step-actions">' +
-    '<button type="button" class="btn-text" id="skipStep">Omitir esta pieza →</button>' +
-    '<div class="step-nav">' +
-      (currentStep > 0 ? '<button type="button" class="btn btn-outline" id="prevStep">← Anterior</button>' : '') +
-      '<button type="button" class="btn btn-ink" id="nextStep">Siguiente →</button>' +
-    '</div>' +
-  '</div>';
-  body.innerHTML = html;
+  el.innerHTML =
+    '<span class="arm-step-label">Paso 1</span><h2 class="arm-step-title">Elige tu estilo</h2>' +
+    '<div class="arm-style-grid">' + cards + '</div>' + panel;
 
-  body.querySelectorAll(".opt-card").forEach(function(card){
-    card.addEventListener("click", function(){
-      var slug = card.getAttribute("data-slug");
-      var product = options.find(function(p){ return slugOf(p) === slug; });
-      if (state.picks[step.key] && state.picks[step.key].img === product.img) {
-        delete state.picks[step.key];
-      } else {
-        state.picks[step.key] = product;
-      }
-      renderPickStep(body, step);
-      updateBuildBar();
-    });
-  });
-  document.getElementById("skipStep").addEventListener("click", goNext);
-  document.getElementById("nextStep").addEventListener("click", goNext);
-  var prevBtn = document.getElementById("prevStep");
-  if (prevBtn) prevBtn.addEventListener("click", goPrev);
-}
-
-function renderExtrasStep(body){
-  var options = extrasProducts();
-  var html = '<div class="step-head"><span class="step-count">Extras</span>' +
-    '<h2>Accesorios y piezas extra</h2>' +
-    '<p>Sumá clavijas, tornillería, rines u otras piezas si las necesitás. Podés elegir varias o ninguna.</p></div>';
-
-  html += '<div class="opt-grid">' + options.map(function(p){
-    var selected = state.extras.some(function(e){ return e.img === p.img; });
-    return optCardHTML(p, selected);
-  }).join("") + '</div>';
-
-  html += '<div class="step-actions">' +
-    '<button type="button" class="btn-text" id="skipStep">Omitir extras →</button>' +
-    '<div class="step-nav">' +
-      '<button type="button" class="btn btn-outline" id="prevStep">← Anterior</button>' +
-      '<button type="button" class="btn btn-ink" id="nextStep">Ver resumen →</button>' +
-    '</div>' +
-  '</div>';
-  body.innerHTML = html;
-
-  body.querySelectorAll(".opt-card").forEach(function(card){
-    card.addEventListener("click", function(){
-      var slug = card.getAttribute("data-slug");
-      var product = options.find(function(p){ return slugOf(p) === slug; });
-      var idx = state.extras.findIndex(function(e){ return e.img === product.img; });
-      if (idx > -1) state.extras.splice(idx, 1);
-      else state.extras.push(product);
-      renderExtrasStep(body);
-      updateBuildBar();
-    });
-  });
-  document.getElementById("skipStep").addEventListener("click", goNext);
-  document.getElementById("nextStep").addEventListener("click", goNext);
-  document.getElementById("prevStep").addEventListener("click", goPrev);
-}
-
-function renderSummary(body){
-  var rows = allRows();
-  var calc = calcTotal();
-  var html = '<div class="step-head"><span class="step-count">Resumen</span><h2>Tu BMX armado</h2><p>Revisá tu selección antes de pedir por WhatsApp.</p></div>';
-
-  if (rows.length === 0) {
-    html += '<p class="empty-msg">No seleccionaste ninguna pieza todavía. Volvé atrás y elegí al menos una para poder pedirla.</p>';
-  } else {
-    html += '<div class="summary-list">' + rows.map(function(r){
-      return '<div class="summary-row">' +
-        '<div class="sr-img"><img src="' + r.product.img + '" alt="' + r.product.n + '" width="60" height="60"></div>' +
-        '<div class="sr-name"><span class="sr-label">' + r.label + '</span><h4>' + r.product.n + '</h4><span class="sr-brand">' + r.product.brand + '</span></div>' +
-        '<div class="sr-price">' + cop(r.product.price) + '</div>' +
-        '<button type="button" class="sr-change" data-step="' + r.stepIndex + '">Cambiar</button>' +
-      '</div>';
-    }).join("") + '</div>';
-  }
-
-  html += '<div class="summary-total"><span>Total estimado</span><span class="amt">' + cop(calc.total) + '</span></div>';
-  html += '<div class="summary-actions">' +
-    '<button type="button" class="btn cart-checkout" id="waOrderBtn"' + (rows.length === 0 ? ' disabled' : '') + '>' + WA_SVG_ICON + 'Pedir armado por WhatsApp</button>' +
-    '<button type="button" class="btn btn-outline" id="addAllCartBtn"' + (rows.length === 0 ? ' disabled' : '') + '>Agregar todo al carrito</button>' +
-  '</div>';
-  html += '<div class="step-actions" style="border-top:none;padding-top:0;">' +
-    '<button type="button" class="btn-text" id="prevStep">← Anterior</button>' +
-    '<button type="button" class="btn-text" id="restartBtn">Empezar de nuevo</button>' +
-  '</div>';
-  body.innerHTML = html;
-
-  body.querySelectorAll(".sr-change").forEach(function(btn){
+  el.querySelectorAll(".arm-style-card").forEach(function(btn){
     btn.addEventListener("click", function(){
-      currentStep = parseInt(btn.getAttribute("data-step"), 10);
-      renderStep();
+      var key = btn.getAttribute("data-style");
+      state.style = (state.style === key) ? null : key;
+      renderAll();
     });
-  });
-
-  var waBtn = document.getElementById("waOrderBtn");
-  if (waBtn && rows.length) {
-    waBtn.addEventListener("click", function(){
-      var lines = [];
-      if (window.EscenaWholesale && window.EscenaWholesale.isActive()) lines.push("🏷️ PEDIDO MAYORISTA (15% aplicado)");
-      lines.push("Hola ESCENA 🐕, quiero armar mi BMX con estas piezas:");
-      rows.forEach(function(r){
-        lines.push("• " + r.label + ": " + r.product.n + " (" + r.product.brand + ") — " + cop(r.product.price));
-      });
-      lines.push("Total estimado: " + cop(calc.total));
-      lines.push("¿Está todo disponible?");
-      var msg = encodeURIComponent(lines.join("\n"));
-      window.open("https://wa.me/" + WA + "?text=" + msg, "_blank", "noopener");
-    });
-  }
-
-  var addAllBtn = document.getElementById("addAllCartBtn");
-  if (addAllBtn && rows.length) {
-    addAllBtn.addEventListener("click", function(){
-      rows.forEach(function(r){
-        window.EscenaCart.add({ slug: slugOf(r.product), n: r.product.n, brand: r.product.brand, price: r.product.price, img: r.product.img }, 1);
-      });
-      showToast("Build agregado al carrito");
-    });
-  }
-
-  document.getElementById("prevStep").addEventListener("click", goPrev);
-  document.getElementById("restartBtn").addEventListener("click", function(){
-    state = { picks: {}, extras: [] };
-    currentStep = 0;
-    renderStep();
   });
 }
 
-document.getElementById("bbSummaryBtn").addEventListener("click", function(){
-  currentStep = TOTAL_STEPS - 1;
-  renderStep();
-});
+/* ---- render: size ---- */
+function renderSizeSection(){
+  var el = document.getElementById("armSizeSection");
+  var bracket = bracketFor(state.height);
+  var rows = TT_BRACKETS.map(function(b){
+    return '<tr class="' + (b === bracket ? "active" : "") + '"><td>' + b.label + '</td><td>' + b.tt + '</td></tr>';
+  }).join("");
 
-renderStep();
+  el.innerHTML =
+    '<span class="arm-step-label">Paso 2</span><h2 class="arm-step-title">Encuentra tu medida</h2>' +
+    '<p class="arm-size-intro">El <b>top tube (TT)</b> es la medida que define cómo te queda la BMX. Guiate por tu estatura — y recordá: en street se suele bajar media pulgada para más maniobra, en dirt se sube para más estabilidad.</p>' +
+    '<div class="arm-size-grid">' +
+      '<div class="arm-size-card">' +
+        '<span class="lbl">Tu estatura: <b id="armHeightVal">' + state.height + ' cm</b></span>' +
+        '<input type="range" min="140" max="200" step="1" value="' + state.height + '" class="arm-height-slider" id="armHeightSlider">' +
+        '<div class="arm-tt-result"><span class="lbl">Top tube recomendado</span><div class="val" id="armTTResult">' + bracket.tt + '</div></div>' +
+      '</div>' +
+      '<table class="arm-table" id="armTTTable"><thead><tr><th>Estatura</th><th>Top tube</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+    '</div>';
+
+  document.getElementById("armHeightSlider").addEventListener("input", function(e){
+    state.height = parseInt(e.target.value, 10);
+    updateHeightDisplay();
+  });
+}
+function updateHeightDisplay(){
+  var bracket = bracketFor(state.height);
+  document.getElementById("armHeightVal").textContent = state.height + " cm";
+  document.getElementById("armTTResult").textContent = bracket.tt;
+  document.querySelectorAll("#armTTTable tbody tr").forEach(function(tr, i){
+    tr.classList.toggle("active", TT_BRACKETS[i] === bracket);
+  });
+  document.querySelectorAll(".arm-chip-tt").forEach(function(el){ el.textContent = "Top tube: " + bracket.tt; });
+  syncURL();
+}
+
+/* ---- render: build panel ---- */
+function renderControl(){
+  var el = document.getElementById("armControl");
+  var progress = calcProgress();
+  el.innerHTML =
+    '<div class="arm-control-item">' +
+      '<span class="lbl">Progreso de tu build</span>' +
+      '<div class="arm-progress-track"><div class="arm-progress-fill" style="width:' + Math.round(progress / 5 * 100) + '%"></div></div>' +
+      '<span class="val">' + progress + ' / 5</span>' +
+    '</div>' +
+    '<div class="arm-control-item"><span class="lbl">Precio en vivo</span><span class="val">' + cop(calcPrice()) + '</span></div>' +
+    '<div class="arm-control-item"><span class="lbl">Peso estimado</span><span class="val">' + calcWeight().toFixed(1) + ' kg</span></div>' +
+    '<div class="arm-control-actions">' +
+      '<button type="button" id="armRandom">Arma al azar</button>' +
+      '<button type="button" id="armCopyLink">Copiar link</button>' +
+      '<button type="button" id="armReset">Reiniciar</button>' +
+    '</div>';
+  document.getElementById("armRandom").addEventListener("click", onRandomize);
+  document.getElementById("armCopyLink").addEventListener("click", onCopyLink);
+  document.getElementById("armReset").addEventListener("click", onReset);
+}
+
+function renderTabs(){
+  var el = document.getElementById("armTabs");
+  el.innerHTML = SLOTS.map(function(s, i){
+    var done = state.picks[s.key] != null;
+    return '<button type="button" class="arm-tab' + (i === state.activeTab ? " active" : "") + (done ? " done" : "") + '" data-i="' + i + '">' +
+      '<span class="num">' + (i + 1) + '</span>' + s.label +
+    '</button>';
+  }).join("");
+  el.querySelectorAll(".arm-tab").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      state.activeTab = parseInt(btn.getAttribute("data-i"), 10);
+      renderTabs();
+      renderComponentArea();
+    });
+  });
+}
+
+function renderComponentArea(){
+  var el = document.getElementById("armComponentArea");
+  var slot = SLOTS[state.activeTab];
+  var options = slotProducts(slot);
+  var picked = state.picks[slot.key];
+  var otherTotal = calcPrice() - ((picked && picked !== "none") ? picked.price : 0);
+  var remaining = state.budget - otherTotal;
+
+  var noneCard = '<button type="button" class="arm-opt-none' + (picked === "none" ? " selected" : "") + '" data-none="1">' +
+    '<b>SIN ' + slot.label.toUpperCase() + '</b><span>Lo elijo después / lo tengo</span></button>';
+
+  var cards = options.map(function(p){
+    var selected = picked && picked !== "none" && slugOf(picked) === slugOf(p);
+    var over = p.price > remaining;
+    return '<button type="button" class="arm-opt-card' + (selected ? " selected" : "") + (over ? " over-budget" : "") + '" data-slug="' + slugOf(p) + '">' +
+      (selected ? '<span class="arm-opt-check">&#10003;</span>' : "") +
+      '<div class="arm-opt-ph"><img src="' + p.img + '" alt="' + p.n + '" loading="lazy" width="220" height="220"></div>' +
+      '<div class="arm-opt-body"><span class="arm-opt-brand">' + p.brand + '</span><h4>' + p.n + '</h4><div class="arm-opt-price">' + cop(p.price) + '</div>' +
+      (over ? '<div class="arm-opt-budget-flag">Excede tu presupuesto</div>' : "") +
+      '</div></button>';
+  }).join("");
+
+  el.innerHTML =
+    '<div class="arm-component-label">Componente ' + (state.activeTab + 1) + ' de 5</div>' +
+    '<h3 class="arm-component-title">Elige tu ' + slot.label.toLowerCase() + '</h3>' +
+    '<div class="arm-opt-grid">' + noneCard + cards + '</div>' +
+    (options.length === 0 ? '<p class="arm-opt-empty">No hay opciones disponibles todavía para este estilo.</p>' : "");
+
+  el.querySelector('[data-none="1"]').addEventListener("click", function(){
+    state.picks[slot.key] = (state.picks[slot.key] === "none") ? null : "none";
+    onPickChange();
+  });
+  el.querySelectorAll(".arm-opt-card").forEach(function(card){
+    card.addEventListener("click", function(){
+      var slug = card.getAttribute("data-slug");
+      var product = options.find(function(p){ return slugOf(p) === slug; });
+      var cur = state.picks[slot.key];
+      if (cur && cur !== "none" && slugOf(cur) === slug) state.picks[slot.key] = null;
+      else state.picks[slot.key] = product;
+      onPickChange();
+    });
+  });
+}
+
+function renderSidebar(){
+  var el = document.getElementById("armSidebar");
+  var bracket = bracketFor(state.height);
+  var chips = '<div class="arm-chips">' +
+    '<span class="arm-chip">Estilo: ' + (state.style ? STYLE_SPECS[state.style].label.toUpperCase() : "—") + '</span>' +
+    '<span class="arm-chip arm-chip-tt">Top tube: ' + bracket.tt + '</span>' +
+    '<span class="arm-chip">Peso: ' + calcWeight().toFixed(1) + ' kg</span>' +
+  '</div>';
+  var rows = SLOTS.map(function(s){
+    var v = state.picks[s.key];
+    var label = (!v) ? "—" : (v === "none" ? ("Sin " + s.label.toLowerCase()) : v.n);
+    return '<div class="arm-sidebar-row"><span class="k">' + s.label + '</span><span class="v">' + label + '</span></div>';
+  }).join("");
+
+  el.innerHTML =
+    '<h3>Tu build</h3>' + chips + rows +
+    '<div class="arm-sidebar-total"><span>Total</span><span class="amt">' + cop(calcPrice()) + '</span></div>' +
+    '<div class="arm-budget">' +
+      '<span class="lbl">Tu presupuesto: <b id="armBudgetVal">' + cop(state.budget) + '</b></span>' +
+      '<input type="range" min="500000" max="5000000" step="50000" value="' + state.budget + '" id="armBudgetSlider">' +
+      '<div class="hint">Mueve el slider a tu presupuesto</div>' +
+    '</div>' +
+    '<div class="arm-sidebar-actions">' +
+      '<button type="button" class="btn btn-ink" id="armAddAllBtn">Agregar todo al carrito</button>' +
+      '<button type="button" class="btn btn-outline" id="armWaBtn">' + WA_SVG_ICON + 'Cotizar por WhatsApp</button>' +
+    '</div>' +
+    '<p class="arm-fine">Armado y ajuste gratis · Asesoría de riders · Envíos a toda Colombia</p>';
+
+  document.getElementById("armBudgetSlider").addEventListener("input", function(e){
+    state.budget = parseInt(e.target.value, 10);
+    document.getElementById("armBudgetVal").textContent = cop(state.budget);
+    renderComponentArea();
+  });
+  document.getElementById("armAddAllBtn").addEventListener("click", onAddAllCart);
+  document.getElementById("armWaBtn").addEventListener("click", onWaQuote);
+}
+
+function onPickChange(){
+  renderControl();
+  renderTabs();
+  renderComponentArea();
+  renderSidebar();
+  syncURL();
+}
+
+function renderBuildSection(){
+  renderControl();
+  renderTabs();
+  renderComponentArea();
+  renderSidebar();
+}
+
+function renderAll(){
+  renderStyleSection();
+  renderSizeSection();
+  renderBuildSection();
+  syncURL();
+}
+
+/* ---- actions ---- */
+function onRandomize(){
+  if (!state.style) state.style = ["street", "park", "dirt"][Math.floor(Math.random() * 3)];
+  SLOTS.forEach(function(s){
+    var pool = slotProducts(s);
+    if (pool.length) state.picks[s.key] = pool[Math.floor(Math.random() * pool.length)];
+  });
+  renderAll();
+  showToast("Build armado al azar");
+}
+function onCopyLink(){
+  syncURL();
+  var url = location.href;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(function(){ showToast("Link copiado"); }).catch(function(){ showToast("No se pudo copiar el link"); });
+  } else {
+    showToast("No se pudo copiar el link");
+  }
+}
+function onReset(){
+  state = { style: null, height: 175, activeTab: 0, budget: 3000000, picks: {} };
+  renderAll();
+  showToast("Build reiniciado");
+}
+function onAddAllCart(){
+  var rows = pickedRows();
+  if (!rows.length) { showToast("Elegí al menos una pieza"); return; }
+  rows.forEach(function(r){
+    window.EscenaCart.add({ slug: slugOf(r.product), n: r.product.n, brand: r.product.brand, price: r.product.price, img: r.product.img }, 1);
+  });
+  showToast("Build agregado al carrito");
+}
+function onWaQuote(){
+  var rows = pickedRows();
+  var lines = [];
+  if (window.EscenaWholesale && window.EscenaWholesale.isActive()) lines.push("🏷️ PEDIDO MAYORISTA (15% aplicado)");
+  lines.push("Hola ESCENA 🐕, quiero armar mi BMX" + (state.style ? (" estilo " + STYLE_SPECS[state.style].label) : "") + ":");
+  lines.push("Estatura: " + state.height + " cm (TT recomendado " + bracketFor(state.height).tt + ")");
+  if (rows.length) {
+    rows.forEach(function(r){ lines.push("• " + r.label + ": " + r.product.n + " (" + r.product.brand + ") — " + cop(r.product.price)); });
+    lines.push("Total estimado: " + cop(calcPrice()));
+  } else {
+    lines.push("Todavía no elegí piezas específicas — quiero asesoría para armar mi build.");
+  }
+  lines.push("¿Está todo disponible?");
+  var msg = encodeURIComponent(lines.join("\n"));
+  window.open("https://wa.me/" + WA + "?text=" + msg, "_blank", "noopener");
+}
+
+/* ---- URL state (copiar link / cargar link) ---- */
+function syncURL(){
+  var params = new URLSearchParams();
+  if (state.style) params.set("style", state.style);
+  params.set("height", state.height);
+  SLOTS.forEach(function(s){
+    var v = state.picks[s.key];
+    if (v === "none") params.set(s.key, "none");
+    else if (v) params.set(s.key, slugOf(v));
+  });
+  var qs = params.toString();
+  history.replaceState(null, "", qs ? ("?" + qs) : location.pathname);
+}
+function loadFromURL(){
+  var params = new URLSearchParams(location.search);
+  var style = params.get("style");
+  if (style && STYLE_SPECS[style]) state.style = style;
+  var h = parseInt(params.get("height"), 10);
+  if (h >= 140 && h <= 200) state.height = h;
+  SLOTS.forEach(function(s){
+    var v = params.get(s.key);
+    if (v === "none") { state.picks[s.key] = "none"; return; }
+    if (v) {
+      var pool = ESCENA_PRODUCTS.filter(function(p){ return p.cat === s.cat; });
+      var found = pool.find(function(p){ return slugOf(p) === v; });
+      if (found) state.picks[s.key] = found;
+    }
+  });
+}
+
+loadFromURL();
+renderAll();
 </script>
 <script>var ESCENA_ROOT = "";</script>
 <script src="assets/js/cart.js"></script>
