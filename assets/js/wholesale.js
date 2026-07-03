@@ -113,6 +113,10 @@
     '.wsale-account-btn.is-active svg { fill: var(--ink); stroke: none; }' +
     '.wsale-account-btn .dot { position: absolute; top: 8px; right: 6px; width: 9px; height: 9px; border-radius: 50%; background: #1baf7a; border: 2px solid #fff; display: none; }' +
     '.wsale-account-btn.is-active .dot { display: block; }' +
+    'header.top-bar .wsale-account-btn { color: #fff !important; }' +
+    'header.top-bar .wsale-account-btn svg { stroke: #fff !important; }' +
+    'header.top-bar .wsale-account-btn.is-active svg { fill: #fff !important; }' +
+    'header.top-bar .nav-cta svg { fill: var(--ink) !important; }' +
     '.nav-cta { display: inline-flex !important; align-items: center; gap: .45rem; }' +
     '.nav-cta svg { width: 15px; height: 15px; fill: #fff; flex-shrink: 0; }' +
     '.wsale-overlay { position: fixed; inset: 0; z-index: 600; background: rgba(10,10,10,.72); display: none; align-items: center; justify-content: center; padding: 1.2rem; }' +

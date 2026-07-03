@@ -39,6 +39,10 @@
 .add-cart-btn:hover { background: var(--ink); color: #fff; }
 .add-cart-btn.added { background: var(--ink); color: #fff; }
 
+header.top-bar .cart-btn { color: #fff; }
+header.top-bar .cart-btn svg { stroke: #fff; }
+header.top-bar .cart-badge { background: #fff; color: var(--ink); }
+
 @media (max-width: 720px) {
   .cart-drawer { width: 100%; }
 }
