@@ -118,17 +118,13 @@
 </head>
 <body>
 
-<!-- ============ LOGIN GATE ============ -->
+<!-- ============ NOT AUTHORIZED ============ -->
 <div class="gate" id="gate">
   <div class="gate-card">
     <img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" />
     <h1>PANEL ADMIN</h1>
-    <p>Acceso interno para el equipo de ESCENA BIKE SHOP.</p>
-    <form id="gateForm">
-      <input type="password" id="gatePw" placeholder="Contraseña de administrador" autocomplete="off" required />
-      <button type="submit" class="btn btn-ink">Entrar</button>
-    </form>
-    <p class="gate-error" id="gateError">Contraseña incorrecta.</p>
+    <p>Necesitás iniciar sesión con una cuenta de administrador. Te llevamos al inicio para iniciar sesión…</p>
+    <a href="index.html?login=1" class="btn btn-ink">Ir a iniciar sesión</a>
   </div>
 </div>
 
@@ -242,7 +238,6 @@
 <script src="assets/js/products-data.js"></script>
 <script>
   var ADMIN_KEY = "escena_admin_auth_v1";
-  var ADMIN_PASSWORD = "ESCENAADMIN2026";
   var CATALOG_KEY = "escena_admin_catalog_v1";
   var CATEGORY_LABELS = {
     stems: "Stems", manubrios: "Manubrios", horquillas: "Horquillas",
@@ -260,11 +255,9 @@
     setTimeout(function () { toast.classList.remove("show"); }, 2200);
   }
 
-  /* ---- Login gate ---- */
+  /* ---- Auth check (login happens via the header modal on index.html) ---- */
   var gate = document.getElementById("gate");
   var adminApp = document.getElementById("adminApp");
-  var gateForm = document.getElementById("gateForm");
-  var gateError = document.getElementById("gateError");
 
   function isAuthed() { return sessionStorage.getItem(ADMIN_KEY) === "1"; }
   function showApp() {
@@ -273,21 +266,15 @@
     initDashboard();
     initInventory();
   }
-  if (isAuthed()) showApp();
+  if (isAuthed()) {
+    showApp();
+  } else {
+    setTimeout(function () { window.location.href = "index.html?login=1"; }, 1600);
+  }
 
-  gateForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var pw = document.getElementById("gatePw").value.trim();
-    if (pw === ADMIN_PASSWORD) {
-      sessionStorage.setItem(ADMIN_KEY, "1");
-      showApp();
-    } else {
-      gateError.style.display = "block";
-    }
-  });
   document.getElementById("adminLogoutBtn").addEventListener("click", function () {
     sessionStorage.removeItem(ADMIN_KEY);
-    window.location.reload();
+    window.location.href = "index.html";
   });
 
   /* ---- KPI charts (sample data) ---- */

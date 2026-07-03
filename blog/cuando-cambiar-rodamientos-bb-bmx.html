@@ -344,14 +344,14 @@
   burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
   nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
 
-  /* ---- Newsletter popup ---- */
+  /* ---- Newsletter popup (once per browser session) ---- */
   var nlOverlay = document.getElementById("nlOverlay");
   var nlClose = document.getElementById("nlClose");
   var nlSkip = document.getElementById("nlSkip");
   var nlForm = document.getElementById("nlForm");
-  function openNL(){ nlOverlay.classList.add("show"); }
+  function openNL(){ nlOverlay.classList.add("show"); sessionStorage.setItem("escena_nl_shown_v1", "1"); }
   function closeNL(){ nlOverlay.classList.remove("show"); }
-  setTimeout(openNL, 900);
+  if (!sessionStorage.getItem("escena_nl_shown_v1")) setTimeout(openNL, 900);
   nlClose.addEventListener("click", closeNL);
   nlSkip.addEventListener("click", closeNL);
   nlOverlay.addEventListener("click", function(e){ if (e.target === nlOverlay) closeNL(); });

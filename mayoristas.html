@@ -34,6 +34,8 @@
   <link rel="apple-touch-icon" href="assets/img/escena-logo.jpg" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="assets/css/cart.css" />
+  <script>var ESCENA_ROOT = "";</script>
+  <script src="assets/js/wholesale.js"></script>
 
   <!-- ============ Fonts ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -132,12 +134,7 @@
     .ws-login-card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 2.4rem 2rem; text-align: center; }
     .ws-login-card h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: .03em; margin-bottom: .5rem; }
     .ws-login-card p { font-size: .86rem; color: var(--muted); margin-bottom: 1.5rem; }
-    #wsaleLoginForm input { width: 100%; border: 1.5px solid var(--line); border-radius: 8px; padding: .9rem 1rem; font-size: .95rem; font-family: inherit; margin-bottom: 1rem; text-align: center; letter-spacing: .05em; }
-    #wsaleLoginForm input:focus { outline: none; border-color: var(--ink); }
-    #wsaleLoginForm .btn { width: 100%; }
-    #wsaleError { display: none; color: #c0392b; font-size: .8rem; margin-top: .9rem; }
-    #wsaleAlready { display: none; }
-    #wsaleAlready .badge { display: inline-block; background: var(--ink); color: #fff; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: .4rem .9rem; border-radius: 999px; margin-bottom: 1rem; }
+    .ws-login-card .btn { width: 100%; }
     .ws-divider { display: flex; align-items: center; gap: .8rem; margin: 1.6rem 0 1.3rem; color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
     .ws-divider::before, .ws-divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
     .ws-request { font-size: .82rem; color: var(--muted); }
@@ -277,21 +274,11 @@
 <section class="ws-login" id="acceso">
   <div class="wrap">
     <div class="ws-login-card">
-      <div id="wsaleAlready">
-        <span class="badge">Acceso mayorista activo</span>
-        <h2>Ya estás adentro</h2>
-        <p>Los precios mayoristas (15% off) ya están aplicados en toda la tienda.</p>
-        <a href="tienda.html" class="btn btn-ink">Ir a la tienda</a>
-      </div>
-      <form id="wsaleLoginForm">
-        <h2>Acceso mayorista</h2>
-        <p>Ingresá tu código de acceso para activar los precios de distribuidor en todo el sitio.</p>
-        <input type="password" id="wsalePw" placeholder="Código de acceso" autocomplete="off" required />
-        <button type="submit" class="btn btn-ink">Activar precios mayoristas</button>
-        <p id="wsaleError">Código incorrecto. Verificá con nuestro equipo por WhatsApp.</p>
-      </form>
+      <h2>Acceso mayorista</h2>
+      <p>Iniciá sesión con tu cuenta de mayorista para activar los precios de distribuidor (15% off) en todo el sitio.</p>
+      <button type="button" class="btn btn-ink" id="mayoristasLoginBtn">Iniciar sesión</button>
       <div class="ws-divider">o</div>
-      <p class="ws-request">¿Todavía no tenés código? <a href="https://wa.me/573107630504?text=Hola%20ESCENA%2C%20tengo%20una%20tienda%20y%20quiero%20info%20sobre%20precios%20mayoristas" target="_blank" rel="noopener">Solicitalo por WhatsApp</a> — te lo asignamos después de validar tu negocio.</p>
+      <p class="ws-request">¿Todavía no tenés cuenta? <a href="https://wa.me/573107630504?text=Hola%20ESCENA%2C%20tengo%20una%20tienda%20y%20quiero%20info%20sobre%20precios%20mayoristas" target="_blank" rel="noopener">Solicitala por WhatsApp</a> — te la creamos después de validar tu negocio.</p>
     </div>
   </div>
 </section>
@@ -349,14 +336,14 @@ var burger = document.getElementById("burger"), nav = document.getElementById("n
 burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
 nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
 
-/* ---- Newsletter popup ---- */
+/* ---- Newsletter popup (once per browser session) ---- */
 var nlOverlay = document.getElementById("nlOverlay");
 var nlClose = document.getElementById("nlClose");
 var nlSkip = document.getElementById("nlSkip");
 var nlForm = document.getElementById("nlForm");
-function openNL(){ nlOverlay.classList.add("show"); }
+function openNL(){ nlOverlay.classList.add("show"); sessionStorage.setItem("escena_nl_shown_v1", "1"); }
 function closeNL(){ nlOverlay.classList.remove("show"); }
-setTimeout(openNL, 900);
+if (!sessionStorage.getItem("escena_nl_shown_v1")) setTimeout(openNL, 900);
 nlClose.addEventListener("click", closeNL);
 nlSkip.addEventListener("click", closeNL);
 nlOverlay.addEventListener("click", function(e){ if (e.target === nlOverlay) closeNL(); });
@@ -369,9 +356,11 @@ nlForm.addEventListener("submit", function(e){
   window.open("https://wa.me/" + WA + "?text=" + msg, "_blank", "noopener");
   closeNL();
 });
+
+document.getElementById("mayoristasLoginBtn").addEventListener("click", function(){
+  window.EscenaWholesale.openLoginModal();
+});
 </script>
-<script>var ESCENA_ROOT = "";</script>
-<script src="assets/js/wholesale.js"></script>
 <script src="assets/js/cart.js"></script>
 </body>
 </html>
