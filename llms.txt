@@ -15,6 +15,7 @@ ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. V
 - Idioma: Español (Colombia)
 
 ## Categorías de producto
+- Marcos / frames (street, park y dirt)
 - Stems (front load y top load)
 - Manubrios (cromoly cross brace)
 - Horquillas (cromoly)
@@ -33,14 +34,15 @@ ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. V
 - Piezas varias: kits de freecoaster, cadenas, ejes, amarres
 
 ## Marcas
-Cult, Fiend, Éclat, Volume, Mutany, Federal, Odyssey, Stolen, Demolition, Animal, Shadow, Colony, BSD, Fit Bike Co, Brainstorm, Wethepeople, Iron Fist, entre otras.
+Mutanty, Fate, Cult, Fiend, Stolen, TukanBikes, Shadow, Demotilion, Rant, Eclat, Wethepeople, Brainstorm, Animal, BSD, FOODE, Ficción bikes, Federal, Helio, Flybikes, FirBikeCo., Merrit, Kinkbmx, Oddysey, OnTrail, Primo, Sunday, Subrosa, Trueno, Stranger, Tall order, Total, Volume, Valkiria, RedingShoes, Twin, S&M, Odi, KMC, GW, Innova Tire, Cinema, Colony, Profit, TSG, Eighthies, Profile.
 
 ## Páginas
 - Inicio: https://escenabikeshop.com/
 - Tienda (catálogo completo, paginado y filtrable por categoría): https://escenabikeshop.com/tienda.html
 - Fichas de producto individuales (una por SKU, con precio, especificaciones y pedido directo): https://escenabikeshop.com/producto/
-- Arma tu BMX (configurador guiado paso a paso para armar una bici completa desde cero): https://escenabikeshop.com/armar-bmx.html
+- Arma tu BMX (configurador guiado para armar una bici completa a tu medida desde cero): https://escenabikeshop.com/armar-bmx.html
 - Blog (guías de compra, mantenimiento y cultura BMX): https://escenabikeshop.com/blog.html
+- Mayoristas (programa de precios al por mayor para tiendas y revendedores): https://escenabikeshop.com/mayoristas.html
 - Envíos: https://escenabikeshop.com/envios.html
 - Devoluciones y cambios: https://escenabikeshop.com/devoluciones.html
 - Términos y condiciones: https://escenabikeshop.com/terminos.html
@@ -48,13 +50,13 @@ Cult, Fiend, Éclat, Volume, Mutany, Federal, Odyssey, Stolen, Demolition, Anima
 - Política de cookies: https://escenabikeshop.com/politica-cookies.html
 
 ## Cómo comprar
-1. El cliente elige los productos en el sitio (filtrando por categoría, buscando en la tienda, o usando el configurador "Arma tu BMX" para armar una bici completa pieza por pieza).
+1. El cliente elige los productos en el sitio (filtrando por categoría, buscando en la tienda, o usando el configurador "Arma tu BMX" para armar una bici completa a su medida).
 2. Puede agregar productos a un carrito de compras (persistente en el navegador) o pedir una pieza individual directamente.
-3. Toca "Pedir por WhatsApp" (o "Finalizar pedido por WhatsApp" / "Pedir armado por WhatsApp") para generar el mensaje del pedido con el detalle completo.
+3. Toca "Pedir por WhatsApp" (o "Finalizar pedido por WhatsApp" / "Cotizar por WhatsApp") para generar el mensaje del pedido con el detalle completo.
 4. Confirma referencias, medidas y dirección por chat.
 5. Coordina el pago y el envío.
 6. Recibe el número de guía para rastrear el pedido.
 
 ## Herramientas del sitio
 - Carrito de compras: acumula productos de cualquier página y arma un solo mensaje de pedido consolidado por WhatsApp.
-- Configurador "Arma tu BMX": guía al usuario categoría por categoría (horquilla, manubrio, stem, puños, dirección/BB, bielas, piñón, bujes, sillín, tija, pedales y extras) para armar una bicicleta completa con precio total estimado.
+- Configurador "Arma tu BMX": guía al usuario en 3 pasos — (1) elegir estilo de manejo (Street, Park o Dirt), con recomendaciones de geometría para cada uno; (2) calcular la talla de marco (top tube) recomendada según la estatura del rider; (3) armar la bici por componente (marco, tenedor, transmisión, ruedas y timón) con precio total y peso estimado en vivo, opción de armar al azar, copiar el link del build y cotizar todo por WhatsApp.
