@@ -172,6 +172,33 @@
     .arm-build-grid { display: grid; grid-template-columns: 1fr 330px; gap: 1.6rem; align-items: start; }
     @media (max-width: 980px) { .arm-build-grid { grid-template-columns: 1fr; } }
 
+    /* build board: fotos reales de cada pieza en su posición */
+    .arm-board { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 12px; margin-bottom: 1.6rem; aspect-ratio: 16 / 7; min-height: 340px; overflow: hidden; }
+    .arm-board-outline { position: absolute; left: 50%; top: 54%; transform: translate(-50%, -50%); width: min(58%, 520px); color: var(--ink); opacity: .05; pointer-events: none; }
+    .arm-board-hint { position: absolute; left: 1rem; top: .8rem; font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); pointer-events: none; }
+    @media (max-width: 860px) { .arm-board-hint { position: static; grid-column: 1 / -1; order: 99; text-align: center; } }
+    .arm-board-slot { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: .3rem; background: none; border: none; cursor: pointer; font-family: inherit; padding: 0; width: 92px; transition: transform .15s; }
+    .arm-board-slot:hover { transform: translate(-50%, -50%) scale(1.06); z-index: 5; }
+    .arm-board-slot.big { width: 128px; }
+    .arm-board-slot .abs-ph { display: block; width: 100%; aspect-ratio: 1 / 1; border-radius: 10px; overflow: hidden; background: var(--panel); border: 1.5px dashed var(--muted); display: flex; align-items: center; justify-content: center; }
+    .arm-board-slot.picked .abs-ph { border: 1.5px solid var(--ink); background: #0A0A0A; box-shadow: 0 8px 22px rgba(0,0,0,.16); }
+    .arm-board-slot.skipped .abs-ph { border-style: solid; border-color: var(--line); }
+    .arm-board-slot .abs-ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .arm-board-slot .abs-mark { font-size: 1.3rem; color: var(--muted); font-weight: 300; }
+    .arm-board-slot .abs-lbl { font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .12rem .5rem; white-space: nowrap; }
+    .arm-board-slot.picked .abs-lbl { background: var(--ink); color: #fff; border-color: var(--ink); }
+    @media (max-width: 860px) {
+      .arm-board { aspect-ratio: auto; min-height: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: .7rem; padding: .9rem .9rem 2rem; }
+      .arm-board-outline { display: none; }
+      .arm-board-slot { position: static; transform: none; width: auto; }
+      .arm-board-slot:hover { transform: none; }
+      .arm-board-slot.big { width: auto; }
+    }
+    @media (max-width: 480px) { .arm-board { grid-template-columns: repeat(3, 1fr); } }
+
+    .arm-sidebar-thumb { width: 30px; height: 30px; border-radius: 6px; object-fit: cover; background: #0A0A0A; flex-shrink: 0; display: block; }
+    .arm-sidebar-thumb.ph { background: var(--panel); border: 1px dashed var(--line); }
+
     .arm-tabs { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
     .arm-tab { display: flex; align-items: center; gap: .55rem; background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem .5rem .5rem; color: var(--ink); font-family: inherit; font-size: .74rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
     .arm-tab:hover { border-color: var(--ink); }
@@ -209,9 +236,9 @@
     .arm-sidebar h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .03em; margin-bottom: .9rem; }
     .arm-chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.1rem; }
     .arm-chip { font-size: .66rem; letter-spacing: .03em; border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: .3rem .7rem; color: #333; }
-    .arm-sidebar-row { display: flex; justify-content: space-between; align-items: baseline; padding: .6rem 0; border-bottom: 1px solid var(--line); font-size: .82rem; gap: .8rem; }
+    .arm-sidebar-row { display: flex; align-items: center; padding: .5rem 0; border-bottom: 1px solid var(--line); font-size: .82rem; gap: .6rem; }
     .arm-sidebar-row .k { color: var(--muted); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; flex-shrink: 0; }
-    .arm-sidebar-row .v { text-align: right; }
+    .arm-sidebar-row .v { text-align: right; margin-left: auto; }
     .arm-sidebar-total { display: flex; justify-content: space-between; align-items: baseline; padding: 1rem 0; border-top: 2px solid var(--ink); margin-top: .3rem; }
     .arm-sidebar-total span:first-child { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
     .arm-sidebar-total .amt { font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; }
@@ -394,6 +421,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     <span class="arm-step-label">Paso 3</span>
     <h2 class="arm-step-title">Arma por componentes</h2>
     <div class="arm-control" id="armControl"></div>
+    <div class="arm-board" id="armBoard"></div>
     <div class="arm-build-grid">
       <div>
         <div class="arm-tabs" id="armTabs"></div>
@@ -498,12 +526,19 @@ function showToast(msg){
 var SLOTS = [
   { key: "marco", label: "Marco", cat: "marcos" },
   { key: "tenedor", label: "Tenedor", cat: "horquillas" },
-  { key: "transmision", label: "Transmisión", cat: "bielas" },
-  { key: "ruedas", label: "Ruedas", cat: "bujes" },
-  { key: "timon", label: "Timón", cat: "manubrios" }
+  { key: "timon", label: "Timón", cat: "manubrios" },
+  { key: "cana", label: "Caña", cat: "stems" },
+  { key: "punos", label: "Puños", cat: "punos" },
+  { key: "bielas", label: "Bielas", cat: "bielas" },
+  { key: "plato", label: "Plato", cat: "pinones" },
+  { key: "manzanas", label: "Manzanas", cat: "bujes" },
+  { key: "silla", label: "Silla", cat: "sillines" },
+  { key: "pedales", label: "Pedales", cat: "pedales" },
+  { key: "clavijas", label: "Clavijas", cat: "clavijas" }
 ];
-var DEFAULT_SLOT_WEIGHT = { marco: 2.1, tenedor: 0.6, transmision: 1.55, ruedas: 3.2, timon: 0.85 };
-var FIXED_WEIGHT = 2.0; /* headset, sillín + tija, tornillería: no seleccionables por separado aquí */
+/* peso base estimado por componente cuando aún no se elige (clavijas: 0 — son opcionales) */
+var DEFAULT_SLOT_WEIGHT = { marco: 2.1, tenedor: 0.62, timon: 0.85, cana: 0.3, punos: 0.1, bielas: 1.55, plato: 0.12, manzanas: 3.2, silla: 0.35, pedales: 0.4, clavijas: 0 };
+var FIXED_WEIGHT = 1.15; /* dirección, tija, cadena, tornillería: no seleccionables por separado aquí */
 
 var STYLE_SPECS = {
   street: {
@@ -546,7 +581,7 @@ function cop(n){
 function slugOf(p){ return p.slug || p.img.split("/").pop().replace(/\.[a-zA-Z0-9]+$/, ""); }
 
 function slotProducts(slot){
-  var list = ESCENA_PRODUCTS.filter(function(p){ return p.cat === slot.cat && typeof p.weight === "number"; });
+  var list = ESCENA_PRODUCTS.filter(function(p){ return p.cat === slot.cat; });
   if (slot.key === "marco" && state.style) {
     list = list.filter(function(p){ return p.styles && p.styles.indexOf(state.style) !== -1; });
   }
@@ -561,7 +596,11 @@ function calcWeight(){
   var w = FIXED_WEIGHT;
   SLOTS.forEach(function(s){
     var v = state.picks[s.key];
-    w += (v && v !== "none") ? v.weight : DEFAULT_SLOT_WEIGHT[s.key];
+    if (v && v !== "none") {
+      w += (typeof v.weight === "number") ? v.weight : (DEFAULT_SLOT_WEIGHT[s.key] || 0.3);
+    } else {
+      w += DEFAULT_SLOT_WEIGHT[s.key];
+    }
   });
   return w;
 }
@@ -663,8 +702,8 @@ function renderControl(){
   el.innerHTML =
     '<div class="arm-control-item">' +
       '<span class="lbl">Progreso de tu build</span>' +
-      '<div class="arm-progress-track"><div class="arm-progress-fill" style="width:' + Math.round(progress / 5 * 100) + '%"></div></div>' +
-      '<span class="val">' + progress + ' / 5</span>' +
+      '<div class="arm-progress-track"><div class="arm-progress-fill" style="width:' + Math.round(progress / SLOTS.length * 100) + '%"></div></div>' +
+      '<span class="val">' + progress + ' / ' + SLOTS.length + '</span>' +
     '</div>' +
     '<div class="arm-control-item"><span class="lbl">Precio en vivo</span><span class="val">' + cop(calcPrice()) + '</span></div>' +
     '<div class="arm-control-item"><span class="lbl">Peso estimado</span><span class="val">' + calcWeight().toFixed(1) + ' kg</span></div>' +
@@ -676,6 +715,67 @@ function renderControl(){
   document.getElementById("armRandom").addEventListener("click", onRandomize);
   document.getElementById("armCopyLink").addEventListener("click", onCopyLink);
   document.getElementById("armReset").addEventListener("click", onReset);
+}
+
+/* ---- render: build board (fotos reales de cada pieza, en posición sobre la bici) ---- */
+var BOARD_POS = {
+  silla:    { l: 17, t: 18 },
+  timon:    { l: 55, t: 14 },
+  cana:     { l: 71, t: 16 },
+  punos:    { l: 87, t: 14 },
+  manzanas: { l: 8,  t: 55 },
+  marco:    { l: 39, t: 52 },
+  tenedor:  { l: 73, t: 54 },
+  bielas:   { l: 25, t: 80 },
+  plato:    { l: 42, t: 82 },
+  pedales:  { l: 59, t: 82 },
+  clavijas: { l: 86, t: 78 }
+};
+var BOARD_OUTLINE_SVG = '<svg class="arm-board-outline" viewBox="0 0 560 340" aria-hidden="true">' +
+  '<g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">' +
+  '<circle cx="150" cy="252" r="74"/><circle cx="412" cy="252" r="74"/>' +
+  '<circle cx="276" cy="252" r="20"/>' +
+  '<path d="M220 150 L368 126 M220 150 L276 252 M368 126 L276 252 M220 150 L150 252 M276 252 L150 252 M368 126 L412 252"/>' +
+  '<path d="M368 126 L358 70 M328 56 L392 62 M334 82 L388 86"/>' +
+  '<path d="M220 150 L214 128 M192 122 L238 122"/>' +
+  '</g></svg>';
+
+function renderBuildBoard(){
+  var el = document.getElementById("armBoard");
+  if (!el) return;
+  var tiles = SLOTS.map(function(s, i){
+    var v = state.picks[s.key];
+    var pos = BOARD_POS[s.key] || { l: 50, t: 50 };
+    var big = s.key === "marco" ? " big" : "";
+    var inner, cls;
+    if (v && v !== "none") {
+      cls = "picked";
+      inner = '<img src="' + v.img + '" alt="' + v.n + '" loading="lazy" width="120" height="120">';
+    } else if (v === "none") {
+      cls = "skipped";
+      inner = '<span class="abs-mark">&mdash;</span>';
+    } else {
+      cls = "empty";
+      inner = '<span class="abs-mark">+</span>';
+    }
+    var title = (v && v !== "none") ? v.n : (v === "none" ? "Sin " + s.label.toLowerCase() : "Elegir " + s.label.toLowerCase());
+    return '<button type="button" class="arm-board-slot ' + cls + big + '" style="left:' + pos.l + '%;top:' + pos.t + '%" data-i="' + i + '" title="' + title + '">' +
+      '<span class="abs-ph">' + inner + '</span>' +
+      '<span class="abs-lbl">' + s.label + '</span>' +
+    '</button>';
+  }).join("");
+  el.innerHTML = BOARD_OUTLINE_SVG +
+    '<span class="arm-board-hint">Fotos reales de cada pieza &middot; toca un espacio para elegirla</span>' + tiles;
+  el.querySelectorAll(".arm-board-slot").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      state.activeTab = parseInt(btn.getAttribute("data-i"), 10);
+      renderTabs();
+      renderComponentArea();
+      var tabs = document.getElementById("armTabs");
+      var top = tabs.getBoundingClientRect().top + window.pageYOffset - 120;
+      window.scrollTo({ top: top, behavior: "smooth" });
+    });
+  });
 }
 
 function renderTabs(){
@@ -718,7 +818,7 @@ function renderComponentArea(){
   }).join("");
 
   el.innerHTML =
-    '<div class="arm-component-label">Componente ' + (state.activeTab + 1) + ' de 5</div>' +
+    '<div class="arm-component-label">Componente ' + (state.activeTab + 1) + ' de ' + SLOTS.length + '</div>' +
     '<h3 class="arm-component-title">Elige tu ' + slot.label.toLowerCase() + '</h3>' +
     '<div class="arm-opt-grid">' + noneCard + cards + '</div>' +
     (options.length === 0 ? '<p class="arm-opt-empty">No hay opciones disponibles todavía para este estilo.</p>' : "");
@@ -750,7 +850,10 @@ function renderSidebar(){
   var rows = SLOTS.map(function(s){
     var v = state.picks[s.key];
     var label = (!v) ? "—" : (v === "none" ? ("Sin " + s.label.toLowerCase()) : v.n);
-    return '<div class="arm-sidebar-row"><span class="k">' + s.label + '</span><span class="v">' + label + '</span></div>';
+    var thumb = (v && v !== "none")
+      ? '<img class="arm-sidebar-thumb" src="' + v.img + '" alt="" loading="lazy" width="30" height="30">'
+      : '<span class="arm-sidebar-thumb ph"></span>';
+    return '<div class="arm-sidebar-row">' + thumb + '<span class="k">' + s.label + '</span><span class="v">' + label + '</span></div>';
   }).join("");
 
   el.innerHTML =
@@ -778,6 +881,7 @@ function renderSidebar(){
 
 function onPickChange(){
   renderControl();
+  renderBuildBoard();
   renderTabs();
   renderComponentArea();
   renderSidebar();
@@ -786,6 +890,7 @@ function onPickChange(){
 
 function renderBuildSection(){
   renderControl();
+  renderBuildBoard();
   renderTabs();
   renderComponentArea();
   renderSidebar();
