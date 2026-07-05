@@ -213,6 +213,10 @@
     .arm-opt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     @media (max-width: 720px) { .arm-opt-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 460px) { .arm-opt-grid { grid-template-columns: 1fr; } }
+    .arm-part-section { margin-bottom: 1.6rem; border-radius: 10px; transition: background-color .3s; }
+    .arm-part-section:last-child { margin-bottom: 0; }
+    .arm-part-title { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); font-weight: 700; margin: 0 0 .6rem; padding-bottom: .4rem; border-bottom: 1px solid var(--line); }
+    .arm-part-section.flash { background-color: #fff6d8; box-shadow: 0 0 0 3px #ffe28a; }
     .arm-opt-card { position: relative; text-align: left; background: #fff; border: 1.5px solid var(--line); border-radius: 10px; overflow: hidden; cursor: pointer; font-family: inherit; color: var(--ink); padding: 0; transition: border-color .15s, box-shadow .15s, transform .15s; }
     .arm-opt-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.08); transform: translateY(-2px); }
     .arm-opt-card.selected { border-color: var(--ink); box-shadow: 0 0 0 1.5px var(--ink); }
@@ -523,22 +527,38 @@ function showToast(msg){
 }
 
 /* ============ CONFIGURATOR ============ */
+/* cada parte es una pieza física independiente (foto/precio/peso propios); "segment" agrupa
+   partes que se eligen juntas en una misma pestaña (ej: dirección + caja de pedalier) */
 var SLOTS = [
-  { key: "marco", label: "Marco", cat: "marcos" },
-  { key: "tenedor", label: "Tenedor", cat: "horquillas" },
-  { key: "timon", label: "Timón", cat: "manubrios" },
-  { key: "cana", label: "Caña", cat: "stems" },
-  { key: "punos", label: "Puños", cat: "punos" },
-  { key: "bielas", label: "Bielas", cat: "bielas" },
-  { key: "plato", label: "Plato", cat: "pinones" },
-  { key: "manzanas", label: "Manzanas", cat: "bujes" },
-  { key: "silla", label: "Silla", cat: "sillines" },
-  { key: "pedales", label: "Pedales", cat: "pedales" },
-  { key: "clavijas", label: "Clavijas", cat: "clavijas" }
+  { key: "marco", label: "Marco", cat: "marcos", segment: "marco", segLabel: "Marco" },
+  { key: "tenedor", label: "Tenedor", cat: "horquillas", segment: "tenedor", segLabel: "Tenedor" },
+  { key: "direccion", label: "Dirección", cat: "dc", match: function(p){ return /dirección/i.test(p.n); }, segment: "dirbb", segLabel: "Dirección y caja de pedalier" },
+  { key: "cajapedalier", label: "Caja de Pedalier", cat: "dc", match: function(p){ return !/dirección/i.test(p.n); }, segment: "dirbb", segLabel: "Dirección y caja de pedalier" },
+  { key: "timon", label: "Timón", cat: "manubrios", segment: "timon", segLabel: "Timón" },
+  { key: "cana", label: "Caña", cat: "stems", segment: "cana", segLabel: "Caña" },
+  { key: "punos", label: "Puños", cat: "punos", segment: "punos", segLabel: "Puños" },
+  { key: "bielas", label: "Bielas", cat: "bielas", segment: "bielas", segLabel: "Bielas" },
+  { key: "plato", label: "Plato", cat: "pinones", segment: "plato", segLabel: "Plato" },
+  { key: "manzanas", label: "Manzanas", cat: "bujes", segment: "manzanas", segLabel: "Manzanas" },
+  { key: "rines", label: "Rines", cat: "rines", segment: "ruedas", segLabel: "Ruedas" },
+  { key: "clavijas", label: "Clavijas", cat: "clavijas", segment: "ruedas", segLabel: "Ruedas" },
+  { key: "tija", label: "Tija", cat: "tijas", segment: "tija", segLabel: "Tija" },
+  { key: "silla", label: "Silla", cat: "sillines", segment: "silla", segLabel: "Silla" },
+  { key: "pedales", label: "Pedales", cat: "pedales", segment: "pedales", segLabel: "Pedales" }
 ];
 /* peso base estimado por componente cuando aún no se elige (clavijas: 0 — son opcionales) */
-var DEFAULT_SLOT_WEIGHT = { marco: 2.1, tenedor: 0.62, timon: 0.85, cana: 0.3, punos: 0.1, bielas: 1.55, plato: 0.12, manzanas: 3.2, silla: 0.35, pedales: 0.4, clavijas: 0 };
-var FIXED_WEIGHT = 1.15; /* dirección, tija, cadena, tornillería: no seleccionables por separado aquí */
+var DEFAULT_SLOT_WEIGHT = { marco: 2.1, tenedor: 0.62, direccion: 0.15, timon: 0.85, cana: 0.3, punos: 0.1, bielas: 1.55, cajapedalier: 0.25, plato: 0.12, manzanas: 3.2, rines: 1.0, tija: 0.25, silla: 0.35, pedales: 0.4, clavijas: 0 };
+var FIXED_WEIGHT = 0.45; /* cadena y tornillería: no seleccionables por separado aquí */
+
+/* pestañas del configurador: agrupan varias partes cuando comparten segmento (ej: dirección + BB) */
+var SEGMENTS = (function(){
+  var segs = [], byKey = {};
+  SLOTS.forEach(function(p){
+    if (!byKey[p.segment]) { byKey[p.segment] = { key: p.segment, label: p.segLabel, parts: [] }; segs.push(byKey[p.segment]); }
+    byKey[p.segment].parts.push(p);
+  });
+  return segs;
+})();
 
 var STYLE_SPECS = {
   street: {
@@ -572,7 +592,7 @@ function bracketFor(h){
   return TT_BRACKETS[TT_BRACKETS.length - 1];
 }
 
-var state = { style: null, height: 175, activeTab: 0, budget: 3000000, picks: {} };
+var state = { style: null, height: 175, activeTab: 0, budget: 3000000, picks: {}, focusPart: null };
 
 function cop(n){
   if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
@@ -582,6 +602,7 @@ function slugOf(p){ return p.slug || p.img.split("/").pop().replace(/\.[a-zA-Z0-
 
 function slotProducts(slot){
   var list = ESCENA_PRODUCTS.filter(function(p){ return p.cat === slot.cat; });
+  if (slot.match) { list = list.filter(slot.match); }
   if (slot.key === "marco" && state.style) {
     list = list.filter(function(p){ return p.styles && p.styles.indexOf(state.style) !== -1; });
   }
@@ -719,17 +740,21 @@ function renderControl(){
 
 /* ---- render: build board (fotos reales de cada pieza, en posición sobre la bici) ---- */
 var BOARD_POS = {
-  silla:    { l: 17, t: 18 },
-  timon:    { l: 55, t: 14 },
-  cana:     { l: 71, t: 16 },
-  punos:    { l: 87, t: 14 },
-  manzanas: { l: 8,  t: 55 },
-  marco:    { l: 39, t: 52 },
-  tenedor:  { l: 73, t: 54 },
-  bielas:   { l: 25, t: 80 },
-  plato:    { l: 42, t: 82 },
-  pedales:  { l: 59, t: 82 },
-  clavijas: { l: 86, t: 78 }
+  silla:        { l: 17, t: 18 },
+  tija:         { l: 24, t: 34 },
+  timon:        { l: 55, t: 14 },
+  cana:         { l: 71, t: 16 },
+  punos:        { l: 87, t: 14 },
+  direccion:    { l: 63, t: 30 },
+  manzanas:     { l: 8,  t: 55 },
+  rines:        { l: 92, t: 38 },
+  marco:        { l: 39, t: 52 },
+  tenedor:      { l: 73, t: 54 },
+  cajapedalier: { l: 12, t: 80 },
+  bielas:       { l: 27, t: 80 },
+  plato:        { l: 42, t: 82 },
+  pedales:      { l: 59, t: 82 },
+  clavijas:     { l: 86, t: 78 }
 };
 var BOARD_OUTLINE_SVG = '<svg class="arm-board-outline" viewBox="0 0 560 340" aria-hidden="true">' +
   '<g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">' +
@@ -740,10 +765,17 @@ var BOARD_OUTLINE_SVG = '<svg class="arm-board-outline" viewBox="0 0 560 340" ar
   '<path d="M220 150 L214 128 M192 122 L238 122"/>' +
   '</g></svg>';
 
+function segmentIndexOfPart(partKey){
+  for (var i = 0; i < SEGMENTS.length; i++) {
+    if (SEGMENTS[i].parts.some(function(p){ return p.key === partKey; })) return i;
+  }
+  return 0;
+}
+
 function renderBuildBoard(){
   var el = document.getElementById("armBoard");
   if (!el) return;
-  var tiles = SLOTS.map(function(s, i){
+  var tiles = SLOTS.map(function(s){
     var v = state.picks[s.key];
     var pos = BOARD_POS[s.key] || { l: 50, t: 50 };
     var big = s.key === "marco" ? " big" : "";
@@ -759,7 +791,7 @@ function renderBuildBoard(){
       inner = '<span class="abs-mark">+</span>';
     }
     var title = (v && v !== "none") ? v.n : (v === "none" ? "Sin " + s.label.toLowerCase() : "Elegir " + s.label.toLowerCase());
-    return '<button type="button" class="arm-board-slot ' + cls + big + '" style="left:' + pos.l + '%;top:' + pos.t + '%" data-i="' + i + '" title="' + title + '">' +
+    return '<button type="button" class="arm-board-slot ' + cls + big + '" style="left:' + pos.l + '%;top:' + pos.t + '%" data-part="' + s.key + '" title="' + title + '">' +
       '<span class="abs-ph">' + inner + '</span>' +
       '<span class="abs-lbl">' + s.label + '</span>' +
     '</button>';
@@ -768,7 +800,9 @@ function renderBuildBoard(){
     '<span class="arm-board-hint">Fotos reales de cada pieza &middot; toca un espacio para elegirla</span>' + tiles;
   el.querySelectorAll(".arm-board-slot").forEach(function(btn){
     btn.addEventListener("click", function(){
-      state.activeTab = parseInt(btn.getAttribute("data-i"), 10);
+      var partKey = btn.getAttribute("data-part");
+      state.activeTab = segmentIndexOfPart(partKey);
+      state.focusPart = partKey;
       renderTabs();
       renderComponentArea();
       var tabs = document.getElementById("armTabs");
@@ -780,15 +814,16 @@ function renderBuildBoard(){
 
 function renderTabs(){
   var el = document.getElementById("armTabs");
-  el.innerHTML = SLOTS.map(function(s, i){
-    var done = state.picks[s.key] != null;
+  el.innerHTML = SEGMENTS.map(function(seg, i){
+    var done = seg.parts.every(function(p){ return state.picks[p.key] != null; });
     return '<button type="button" class="arm-tab' + (i === state.activeTab ? " active" : "") + (done ? " done" : "") + '" data-i="' + i + '">' +
-      '<span class="num">' + (i + 1) + '</span>' + s.label +
+      '<span class="num">' + (i + 1) + '</span>' + seg.label +
     '</button>';
   }).join("");
   el.querySelectorAll(".arm-tab").forEach(function(btn){
     btn.addEventListener("click", function(){
       state.activeTab = parseInt(btn.getAttribute("data-i"), 10);
+      state.focusPart = null;
       renderTabs();
       renderComponentArea();
     });
@@ -797,46 +832,70 @@ function renderTabs(){
 
 function renderComponentArea(){
   var el = document.getElementById("armComponentArea");
-  var slot = SLOTS[state.activeTab];
-  var options = slotProducts(slot);
-  var picked = state.picks[slot.key];
-  var otherTotal = calcPrice() - ((picked && picked !== "none") ? picked.price : 0);
-  var remaining = state.budget - otherTotal;
+  var seg = SEGMENTS[state.activeTab];
+  var multi = seg.parts.length > 1;
 
-  var noneCard = '<button type="button" class="arm-opt-none' + (picked === "none" ? " selected" : "") + '" data-none="1">' +
-    '<b>SIN ' + slot.label.toUpperCase() + '</b><span>Lo elijo después / lo tengo</span></button>';
+  var sections = seg.parts.map(function(slot){
+    var options = slotProducts(slot);
+    var picked = state.picks[slot.key];
+    var otherTotal = calcPrice() - ((picked && picked !== "none") ? picked.price : 0);
+    var remaining = state.budget - otherTotal;
 
-  var cards = options.map(function(p){
-    var selected = picked && picked !== "none" && slugOf(picked) === slugOf(p);
-    var over = p.price > remaining;
-    return '<button type="button" class="arm-opt-card' + (selected ? " selected" : "") + (over ? " over-budget" : "") + '" data-slug="' + slugOf(p) + '">' +
-      (selected ? '<span class="arm-opt-check">&#10003;</span>' : "") +
-      '<div class="arm-opt-ph"><img src="' + p.img + '" alt="' + p.n + '" loading="lazy" width="220" height="220"></div>' +
-      '<div class="arm-opt-body"><span class="arm-opt-brand">' + p.brand + '</span><h4>' + p.n + '</h4><div class="arm-opt-price">' + cop(p.price) + '</div>' +
-      (over ? '<div class="arm-opt-budget-flag">Excede tu presupuesto</div>' : "") +
-      '</div></button>';
+    var noneCard = '<button type="button" class="arm-opt-none' + (picked === "none" ? " selected" : "") + '" data-none="1" data-part="' + slot.key + '">' +
+      '<b>SIN ' + slot.label.toUpperCase() + '</b><span>Lo elijo después / lo tengo</span></button>';
+
+    var cards = options.map(function(p){
+      var selected = picked && picked !== "none" && slugOf(picked) === slugOf(p);
+      var over = p.price > remaining;
+      return '<button type="button" class="arm-opt-card' + (selected ? " selected" : "") + (over ? " over-budget" : "") + '" data-slug="' + slugOf(p) + '" data-part="' + slot.key + '">' +
+        (selected ? '<span class="arm-opt-check">&#10003;</span>' : "") +
+        '<div class="arm-opt-ph"><img src="' + p.img + '" alt="' + p.n + '" loading="lazy" width="220" height="220"></div>' +
+        '<div class="arm-opt-body"><span class="arm-opt-brand">' + p.brand + '</span><h4>' + p.n + '</h4><div class="arm-opt-price">' + cop(p.price) + '</div>' +
+        (over ? '<div class="arm-opt-budget-flag">Excede tu presupuesto</div>' : "") +
+        '</div></button>';
+    }).join("");
+
+    return '<div class="arm-part-section" data-part="' + slot.key + '">' +
+      (multi ? '<h4 class="arm-part-title">' + slot.label + '</h4>' : "") +
+      '<div class="arm-opt-grid">' + noneCard + cards + '</div>' +
+      (options.length === 0 ? '<p class="arm-opt-empty">No hay opciones disponibles todavía para este estilo.</p>' : "") +
+    '</div>';
   }).join("");
 
   el.innerHTML =
-    '<div class="arm-component-label">Componente ' + (state.activeTab + 1) + ' de ' + SLOTS.length + '</div>' +
-    '<h3 class="arm-component-title">Elige tu ' + slot.label.toLowerCase() + '</h3>' +
-    '<div class="arm-opt-grid">' + noneCard + cards + '</div>' +
-    (options.length === 0 ? '<p class="arm-opt-empty">No hay opciones disponibles todavía para este estilo.</p>' : "");
+    '<div class="arm-component-label">Segmento ' + (state.activeTab + 1) + ' de ' + SEGMENTS.length + '</div>' +
+    '<h3 class="arm-component-title">' + (multi ? seg.label : "Elige tu " + seg.label.toLowerCase()) + '</h3>' +
+    sections;
 
-  el.querySelector('[data-none="1"]').addEventListener("click", function(){
-    state.picks[slot.key] = (state.picks[slot.key] === "none") ? null : "none";
-    onPickChange();
-  });
-  el.querySelectorAll(".arm-opt-card").forEach(function(card){
-    card.addEventListener("click", function(){
-      var slug = card.getAttribute("data-slug");
-      var product = options.find(function(p){ return slugOf(p) === slug; });
-      var cur = state.picks[slot.key];
-      if (cur && cur !== "none" && slugOf(cur) === slug) state.picks[slot.key] = null;
-      else state.picks[slot.key] = product;
+  el.querySelectorAll('[data-none="1"]').forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var key = btn.getAttribute("data-part");
+      state.picks[key] = (state.picks[key] === "none") ? null : "none";
       onPickChange();
     });
   });
+  el.querySelectorAll(".arm-opt-card").forEach(function(card){
+    card.addEventListener("click", function(){
+      var key = card.getAttribute("data-part");
+      var slug = card.getAttribute("data-slug");
+      var slot = seg.parts.find(function(p){ return p.key === key; });
+      var options = slotProducts(slot);
+      var product = options.find(function(p){ return slugOf(p) === slug; });
+      var cur = state.picks[key];
+      if (cur && cur !== "none" && slugOf(cur) === slug) state.picks[key] = null;
+      else state.picks[key] = product;
+      onPickChange();
+    });
+  });
+
+  if (state.focusPart) {
+    var target = el.querySelector('.arm-part-section[data-part="' + state.focusPart + '"]');
+    if (target) {
+      target.classList.add("flash");
+      setTimeout(function(){ target.classList.remove("flash"); }, 1200);
+    }
+    state.focusPart = null;
+  }
 }
 
 function renderSidebar(){
@@ -923,7 +982,7 @@ function onCopyLink(){
   }
 }
 function onReset(){
-  state = { style: null, height: 175, activeTab: 0, budget: 3000000, picks: {} };
+  state = { style: null, height: 175, activeTab: 0, budget: 3000000, picks: {}, focusPart: null };
   renderAll();
   showToast("Build reiniciado");
 }
