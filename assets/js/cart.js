@@ -4,7 +4,10 @@
   var WA = "573107630504";
   var ROOT = window.ESCENA_ROOT || "";
 
-  function cop(n) { return "$" + Math.round(n).toLocaleString("es-CO") + " COP"; }
+  function cop(n) {
+    if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
+    return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
+  }
 
   function cartGet() {
     try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
@@ -140,7 +143,9 @@
 
   function buildCheckoutMessage() {
     var items = cartGet();
-    var lines = ["Hola ESCENA 🐕, quiero pedir:"];
+    var lines = [];
+    if (window.EscenaWholesale && window.EscenaWholesale.isActive()) lines.push("🏷️ PEDIDO MAYORISTA (15% aplicado)");
+    lines.push("Hola ESCENA 🐕, quiero pedir:");
     items.forEach(function (i) {
       lines.push("• " + i.qty + "x " + i.n + " (" + i.brand + ") — " + cop(i.price * i.qty));
     });

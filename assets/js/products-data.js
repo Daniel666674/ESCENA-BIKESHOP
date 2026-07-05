@@ -42,7 +42,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · 48 spline · 165mm · Negro",
 "price": 420000,
 "tag": "Top",
-"img": "assets/img/products/mutany-savage-bielas-negro.jpg"
+"img": "assets/img/products/mutany-savage-bielas-negro.jpg",
+"weight": 1.6
 },
 {
 "n": "Fiend Bielas 165",
@@ -51,7 +52,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · 48 spline · 165mm · Negro",
 "price": 390000,
 "tag": "",
-"img": "assets/img/products/fiend-bielas-negro.jpg"
+"img": "assets/img/products/fiend-bielas-negro.jpg",
+"weight": 1.55
 },
 {
 "n": "Cult Bielas 165",
@@ -60,7 +62,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly heat-treated · 165mm · Negro",
 "price": 410000,
 "tag": "",
-"img": "assets/img/products/cult-bielas-negro.jpg"
+"img": "assets/img/products/cult-bielas-negro.jpg",
+"weight": 1.58
 },
 {
 "n": "Éclat Trippin Rin",
@@ -96,7 +99,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · Cross brace · Negro mate",
 "price": 230000,
 "tag": "",
-"img": "assets/img/products/manubrio-cromoly-negro-01.jpg"
+"img": "assets/img/products/manubrio-cromoly-negro-01.jpg",
+"weight": 0.85
 },
 {
 "n": "Manubrio BMX Cromado",
@@ -105,7 +109,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · Cross brace · Plata cromado",
 "price": 240000,
 "tag": "",
-"img": "assets/img/products/manubrio-cromoly-cromado.jpg"
+"img": "assets/img/products/manubrio-cromoly-cromado.jpg",
+"weight": 0.88
 },
 {
 "n": "Manubrio BMX Negro",
@@ -114,7 +119,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · Cross brace · Negro mate",
 "price": 225000,
 "tag": "",
-"img": "assets/img/products/manubrio-cromoly-negro-02.jpg"
+"img": "assets/img/products/manubrio-cromoly-negro-02.jpg",
+"weight": 0.82
 },
 {
 "n": "Manubrio BMX Negro Mate",
@@ -123,7 +129,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · Cross brace · Negro mate",
 "price": 225000,
 "tag": "Nuevo",
-"img": "assets/img/products/manubrio-cromoly-negro-03.jpg"
+"img": "assets/img/products/manubrio-cromoly-negro-03.jpg",
+"weight": 0.83
 },
 {
 "n": "Manubrio BMX Negro Bajo",
@@ -132,7 +139,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · Low rise · Negro mate",
 "price": 220000,
 "tag": "",
-"img": "assets/img/products/manubrio-cromoly-negro-04.jpg"
+"img": "assets/img/products/manubrio-cromoly-negro-04.jpg",
+"weight": 0.78
 },
 {
 "n": "Horquilla Wethepeople Cromada",
@@ -141,7 +149,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · Tubo recto · Cromado",
 "price": 420000,
 "tag": "",
-"img": "assets/img/products/wethepeople-horquilla-cromada.jpg"
+"img": "assets/img/products/wethepeople-horquilla-cromada.jpg",
+"weight": 0.62
 },
 {
 "n": "Horquilla BMX Negra",
@@ -150,7 +159,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · Tubo recto · Negro mate",
 "price": 400000,
 "tag": "",
-"img": "assets/img/products/horquilla-cromoly-negra-01.jpg"
+"img": "assets/img/products/horquilla-cromoly-negra-01.jpg",
+"weight": 0.58
 },
 {
 "n": "Horquilla Federal Cromada",
@@ -159,7 +169,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · Tubo recto · Cromado",
 "price": 430000,
 "tag": "",
-"img": "assets/img/products/federal-horquilla-cromada.jpg"
+"img": "assets/img/products/federal-horquilla-cromada.jpg",
+"weight": 0.64
 },
 {
 "n": "Horquilla BMX Negra Steerer Blanco",
@@ -168,7 +179,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · Steerer blanco · Negro mate",
 "price": 410000,
 "tag": "",
-"img": "assets/img/products/horquilla-cromoly-negra-02.jpg"
+"img": "assets/img/products/horquilla-cromoly-negra-02.jpg",
+"weight": 0.6
 },
 {
 "n": "Horquilla BMX Plateada",
@@ -177,7 +189,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · Tubo recto · Plata pulido",
 "price": 415000,
 "tag": "",
-"img": "assets/img/products/horquilla-cromoly-plateada.jpg"
+"img": "assets/img/products/horquilla-cromoly-plateada.jpg",
+"weight": 0.6
 },
 {
 "n": "Buje Trasero Stolen Negro",
@@ -186,7 +199,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cassette · Freno disponible · Negro",
 "price": 380000,
 "tag": "",
-"img": "assets/img/products/stolen-buje-trasero-cassette-negro.jpg"
+"img": "assets/img/products/stolen-buje-trasero-cassette-negro.jpg",
+"weight": 3.25
 },
 {
 "n": "Buje BMX Negro/Cromado",
@@ -195,7 +209,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cassette · Doble sellado · Negro/Cromado",
 "price": 350000,
 "tag": "",
-"img": "assets/img/products/buje-cassette-negro-cromado.jpg"
+"img": "assets/img/products/buje-cassette-negro-cromado.jpg",
+"weight": 3.1
 },
 {
 "n": "Buje BMX Cassette Negro/Plata",
@@ -204,7 +219,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cassette · Doble sellado · Negro/Plata",
 "price": 340000,
 "tag": "",
-"img": "assets/img/products/buje-cassette-negro-plata.jpg"
+"img": "assets/img/products/buje-cassette-negro-plata.jpg",
+"weight": 3.05
 },
 {
 "n": "Buje Odyssey Cassette Negro",
@@ -213,7 +229,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cassette · Doble sellado · Negro",
 "price": 360000,
 "tag": "",
-"img": "assets/img/products/odyssey-buje-cassette-negro.jpg"
+"img": "assets/img/products/odyssey-buje-cassette-negro.jpg",
+"weight": 3.3
 },
 {
 "n": "Buje Mutany Mercury Elite LHD",
@@ -222,7 +239,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cassette · LHD · Negro",
 "price": 390000,
 "tag": "Top",
-"img": "assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg"
+"img": "assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg",
+"weight": 3.35
 },
 {
 "n": "Buje BMX Negro/Plata",
@@ -231,7 +249,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cassette · Doble sellado · Negro/Plata",
 "price": 335000,
 "tag": "",
-"img": "assets/img/products/buje-cassette-negro-plata-02.jpg"
+"img": "assets/img/products/buje-cassette-negro-plata-02.jpg",
+"weight": 3.05
 },
 {
 "n": "Buje BMX Cassette Negro",
@@ -240,7 +259,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cassette · Doble sellado · Negro",
 "price": 340000,
 "tag": "",
-"img": "assets/img/products/buje-cassette-negro.jpg"
+"img": "assets/img/products/buje-cassette-negro.jpg",
+"weight": 3.15
 },
 {
 "n": "Buje Delantero BMX Negro",
@@ -249,7 +269,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Delantero · Doble sellado · Negro",
 "price": 190000,
 "tag": "",
-"img": "assets/img/products/buje-delantero-negro.jpg"
+"img": "assets/img/products/buje-delantero-negro.jpg",
+"weight": 3.0
 },
 {
 "n": "Buje Delantero Shadow Negro",
@@ -258,7 +279,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Delantero · Doble sellado · Negro",
 "price": 195000,
 "tag": "",
-"img": "assets/img/products/shadow-buje-delantero-negro.jpg"
+"img": "assets/img/products/shadow-buje-delantero-negro.jpg",
+"weight": 3.2
 },
 {
 "n": "Buje Delantero Cromado",
@@ -267,7 +289,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Delantero · Doble sellado · Cromado",
 "price": 185000,
 "tag": "",
-"img": "assets/img/products/buje-delantero-cromado.jpg"
+"img": "assets/img/products/buje-delantero-cromado.jpg",
+"weight": 3.0
 },
 {
 "n": "Kit de Eje y Espaciadores Plata",
@@ -285,7 +308,8 @@ window.ESCENA_PRODUCTS = [
 "spec": "Cromoly · 48 spline · Negro",
 "price": 420000,
 "tag": "Top",
-"img": "assets/img/products/colony-bielas-negro.jpg"
+"img": "assets/img/products/colony-bielas-negro.jpg",
+"weight": 1.62
 },
 {
 "n": "Kit de Hardware Bielas Plata",
@@ -916,5 +940,161 @@ window.ESCENA_PRODUCTS = [
 "price": 70000,
 "tag": "",
 "img": "assets/img/products/llave-y-roja.jpg"
+},
+{
+"n": "Cult Marco Americano",
+"slug": "cult-marco-americano",
+"brand": "Cult",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 21\" · Negro",
+"price": 980000,
+"tag": "Top",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "21",
+"styles": ["street"],
+"weight": 2.05
+},
+{
+"n": "Sunday Marco Cromoly",
+"slug": "sunday-marco-cromoly-bronce",
+"brand": "Sunday",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 20.75\" · Bronce",
+"price": 910000,
+"tag": "",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "20.75",
+"styles": ["street"],
+"weight": 2.1
+},
+{
+"n": "Fate Marco BMX Colombia",
+"slug": "fate-marco-bmx-colombia",
+"brand": "Fate",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 20.5\" · Negro",
+"price": 890000,
+"tag": "Nacional",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "20.5",
+"styles": ["street"],
+"weight": 2.0
+},
+{
+"n": "Total BMX Marco 20.75\"",
+"slug": "total-marco-2075-blanco-azul",
+"brand": "Total",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 20.75\" · Blanco/Azul",
+"price": 1050000,
+"tag": "",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "20.75",
+"styles": ["street"],
+"weight": 2.15
+},
+{
+"n": "Federal Marco Bruno LT",
+"slug": "federal-marco-bruno-lt-blanco",
+"brand": "Federal",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 21\" · Blanco",
+"price": 980000,
+"tag": "",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "21",
+"styles": ["street"],
+"weight": 2.08
+},
+{
+"n": "TukanBikes Marco Local",
+"slug": "tukanbikes-marco-verde",
+"brand": "TukanBikes",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 20.75\" · Verde",
+"price": 850000,
+"tag": "Nacional",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "20.75",
+"styles": ["street"],
+"weight": 2.05
+},
+{
+"n": "Subrosa Marco Park",
+"slug": "subrosa-marco-park-negro",
+"brand": "Subrosa",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 21\" · Negro",
+"price": 920000,
+"tag": "",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "21",
+"styles": ["park"],
+"weight": 2.12
+},
+{
+"n": "S&M Marco Park Pro",
+"slug": "sm-marco-park-pro-cromado",
+"brand": "S&M",
+"cat": "marcos",
+"spec": "Cromoly 4130 · Top tube 21.25\" · Cromado",
+"price": 1080000,
+"tag": "Top",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "21.25",
+"styles": ["park"],
+"weight": 2.2
+},
+{
+"n": "Colony Marco Park",
+"slug": "colony-marco-park-gris",
+"brand": "Colony",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 20.75\" · Gris",
+"price": 960000,
+"tag": "",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "20.75",
+"styles": ["park"],
+"weight": 2.1
+},
+{
+"n": "Stranger Marco Dirt",
+"slug": "stranger-marco-dirt-negro",
+"brand": "Stranger",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 21.25\" · Negro mate",
+"price": 940000,
+"tag": "",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "21.25",
+"styles": ["dirt"],
+"weight": 2.18
+},
+{
+"n": "Tall Order Marco Trail",
+"slug": "tall-order-marco-trail-verde",
+"brand": "Tall order",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 21.5\" · Verde oliva",
+"price": 970000,
+"tag": "",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "21.5",
+"styles": ["dirt"],
+"weight": 2.25
+},
+{
+"n": "Wethepeople Marco Dirt",
+"slug": "wethepeople-marco-dirt-negro",
+"brand": "Wethepeople",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 21\" · Negro",
+"price": 990000,
+"tag": "",
+"img": "assets/img/products/frame-placeholder.svg",
+"size": "21",
+"styles": ["dirt"],
+"weight": 2.15
 }
 ];

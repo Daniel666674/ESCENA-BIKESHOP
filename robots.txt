@@ -1,20 +1,28 @@
 User-agent: *
 Allow: /
+Disallow: /admin.html
 
 # AI / generative engines (GEO)
 User-agent: GPTBot
 Allow: /
+Disallow: /admin.html
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin.html
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin.html
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin.html
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin.html
 User-agent: Claude-Web
 Allow: /
+Disallow: /admin.html
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin.html
 
 Sitemap: https://escenabikeshop.com/sitemap.xml
