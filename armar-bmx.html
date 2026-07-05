@@ -6,7 +6,7 @@
 
   <!-- ============ SEO ============ -->
   <title>Arma tu BMX a tu Medida — Configurador | ESCENA BIKE SHOP</title>
-  <meta name="description" content="No vendemos completas: te ayudamos a construir tu BMX a tu medida. Elegí tu estilo (Street, Park o Dirt), tu talla y armá marco, tenedor, transmisión, ruedas y timón con precio y peso en vivo." />
+  <meta name="description" content="No vendemos completas: te ayudamos a construir tu BMX a tu medida. Elige tu estilo (Street, Park o Dirt), tu talla y arma marco, tenedor, transmisión, ruedas y timón con precio y peso en vivo." />
   <meta name="keywords" content="armar BMX, configurador BMX, build BMX, arma tu bicicleta BMX, partes BMX Colombia, marco BMX, Escena Bike Shop" />
   <meta name="author" content="ESCENA BIKE SHOP" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -21,12 +21,12 @@
   <meta property="og:site_name" content="ESCENA BIKE SHOP" />
   <meta property="og:locale" content="es_CO" />
   <meta property="og:title" content="Arma tu BMX a tu Medida — Configurador | ESCENA BIKE SHOP" />
-  <meta property="og:description" content="Elegí tu estilo, tu talla y armá tu BMX pieza por pieza con precio y peso en vivo. Pedí tu build completo por WhatsApp." />
+  <meta property="og:description" content="Elige tu estilo, tu talla y arma tu BMX pieza por pieza con precio y peso en vivo. Pide tu build completo por WhatsApp." />
   <meta property="og:url" content="https://escenabikeshop.com/armar-bmx.html" />
   <meta property="og:image" content="https://escenabikeshop.com/assets/img/escena-logo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Arma tu BMX a tu Medida — Configurador | ESCENA BIKE SHOP" />
-  <meta name="twitter:description" content="Elegí tu estilo, tu talla y armá tu BMX pieza por pieza con precio y peso en vivo." />
+  <meta name="twitter:description" content="Elige tu estilo, tu talla y arma tu BMX pieza por pieza con precio y peso en vivo." />
   <meta name="twitter:image" content="https://escenabikeshop.com/assets/img/escena-logo.jpg" />
 
   <!-- ============ Icons / Manifest ============ -->
@@ -496,19 +496,19 @@ var FIXED_WEIGHT = 2.0; /* headset, sillín + tija, tornillería: no seleccionab
 var STYLE_SPECS = {
   street: {
     label: "Street", sub: "Ledges, rieles, gaps",
-    desc: "Para todo lo urbano: ledges, rieles, gaps y manuales. Buscás una bici resistente, maniobrable y con buen peso para aguantar impactos.",
+    desc: "Para todo lo urbano: ledges, rieles, gaps y manuales. Buscas una bici resistente, maniobrable y con buen peso para aguantar impactos.",
     tt: "20.5\" – 21\"", headAngle: "75°", chainstay: "13\" – 13.5\"", bb: "Media (~11.6\")", drivetrain: "25/9 ó 28/9", offset: "28 – 30 mm",
     tips: ["Tacos en los 4 ejes para grinds", "Llantas 2.3\"–2.4\" para más agarre", "Freecoaster o cassette, según preferencia", "Timón alto (9.4\"+) para control"]
   },
   park: {
     label: "Park", sub: "Rampas, bowls, cajón",
-    desc: "Para bowls, rampas y cajones. Buscás velocidad, giros rápidos y una bici liviana para trucos técnicos en el aire.",
+    desc: "Para bowls, rampas y cajones. Buscas velocidad, giros rápidos y una bici liviana para trucos técnicos en el aire.",
     tt: "20.75\" – 21.25\"", headAngle: "75° – 75.5°", chainstay: "13\" – 13.25\"", bb: "Baja (~11.2\")", drivetrain: "25/9", offset: "24 – 26 mm",
     tips: ["Cassette recomendado para bowl runs", "Llantas 2.4\" para más rodada en transiciones", "Timón medio (8\"–8.5\") para giros rápidos", "Pegs opcionales según tu estilo"]
   },
   dirt: {
     label: "Dirt / Trails", sub: "Saltos de tierra",
-    desc: "Para trails y saltos de tierra. Priorizás estabilidad a velocidad y control en el aire por sobre la maniobrabilidad técnica.",
+    desc: "Para trails y saltos de tierra. Priorizas estabilidad a velocidad y control en el aire por sobre la maniobrabilidad técnica.",
     tt: "21\" – 21.5\"", headAngle: "74° – 74.5°", chainstay: "13.25\" – 13.75\"", bb: "Alta (~11.8\")", drivetrain: "25/9", offset: "32 – 35 mm",
     tips: ["Marco más largo para estabilidad en saltos", "Llantas 2.2\"–2.3\" con buen agarre en tierra", "Timón alto para control aéreo", "Frenos opcionales según preferencia"]
   }
@@ -618,7 +618,7 @@ function renderSizeSection(){
 
   el.innerHTML =
     '<span class="arm-step-label">Paso 2</span><h2 class="arm-step-title">Encuentra tu medida</h2>' +
-    '<p class="arm-size-intro">El <b>top tube (TT)</b> es la medida que define cómo te queda la BMX. Guiate por tu estatura — y recordá: en street se suele bajar media pulgada para más maniobra, en dirt se sube para más estabilidad.</p>' +
+    '<p class="arm-size-intro">El <b>top tube (TT)</b> es la medida que define cómo te queda la BMX. Guíate por tu estatura — y recuerda: en street se suele bajar media pulgada para más maniobra, en dirt se sube para más estabilidad.</p>' +
     '<div class="arm-size-grid">' +
       '<div class="arm-size-card">' +
         '<span class="lbl">Tu estatura: <b id="armHeightVal">' + state.height + ' cm</b></span>' +

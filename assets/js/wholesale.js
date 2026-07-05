@@ -95,7 +95,7 @@
           '<input type="password" id="wsalePw" placeholder="Contraseña" autocomplete="current-password" required />' +
           '<button type="submit" class="btn btn-ink">Entrar</button>' +
           '<p id="wsaleError">Correo o contraseña incorrectos.</p>' +
-          '<p class="wsale-request">¿Tenés una tienda? <a href="' + ROOT + 'mayoristas.html">Conocé el programa de mayoristas</a></p>' +
+          '<p class="wsale-request">¿Tienes una tienda? <a href="' + ROOT + 'mayoristas.html">Conoce el programa de mayoristas</a></p>' +
         '</form>' +
       '</div>' +
     '</div>';
