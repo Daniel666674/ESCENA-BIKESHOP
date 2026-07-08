@@ -174,32 +174,30 @@
     }
 
     /* ============ HERO (split layout) ============ */
-    .hero { background: var(--ink); padding: 3.2rem 1.5rem; overflow: hidden; }
-    .hero .wrap { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: center; }
+    .hero { position: relative; background: var(--ink); padding: 6rem 1.5rem; overflow: hidden; min-height: 82vh; display: flex; align-items: center; isolation: isolate; }
+    .hero-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; z-index: 0; }
+    .hero-bg-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.72) 38%, rgba(10,10,10,.4) 68%, rgba(10,10,10,.55) 100%); }
+    .hero .wrap { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; width: 100%; }
+    .hero-copy { max-width: 640px; }
     .hero-copy .kicker { color: #fff; font-size: .76rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .9rem; display: block; }
     .hero-copy h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.8rem, 6.5vw, 5rem); line-height: .92; letter-spacing: .02em; }
     .hero-copy h1 .accent-outline { color: transparent; -webkit-text-stroke: 2px #fff; }
     .hero-copy .tagline { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1.1rem, 2.6vw, 1.5rem); letter-spacing: .07em; margin-top: .5rem; opacity: .9; }
-    .hero-copy p.lead { color: rgba(255,255,255,.75); font-size: .98rem; max-width: 480px; margin: 1.1rem 0 1.7rem; font-weight: 300; }
+    .hero-copy p.lead { color: rgba(255,255,255,.8); font-size: .98rem; max-width: 480px; margin: 1.1rem 0 1.7rem; font-weight: 300; }
     .hero-copy .btns { display: flex; gap: .8rem; flex-wrap: wrap; }
     .hero-stats { display: flex; gap: 2.2rem; margin-top: 2.2rem; flex-wrap: wrap; }
     .hero-stats .n { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 2rem; line-height: 1; }
     .hero-stats .l { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-top: .2rem; }
 
-    .hero-media { position: relative; aspect-ratio: 4/5; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); background: #111; }
-    .hero-media video { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
-    .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%); }
-    .hero-media .badge-ring { position: absolute; bottom: 14px; left: 14px; width: 62px; height: 62px; border-radius: 50%; background: #fff; padding: 3px; box-shadow: 0 8px 20px rgba(0,0,0,.4); z-index: 2; }
-    .hero-media .badge-ring img { width: 100%; height: 100%; border-radius: 50%; }
-    .hero-media .pill { position: absolute; top: 14px; right: 14px; background: #fff; color: var(--ink); font-family: 'Bebas Neue', sans-serif; letter-spacing: .08em; font-size: .78rem; padding: .35rem .7rem; border-radius: 999px; transform: rotate(3deg); z-index: 2; }
-
     @media (max-width: 900px) {
-      .hero .wrap { grid-template-columns: 1fr; gap: 1.8rem; text-align: center; }
-      .hero-media { order: -1; aspect-ratio: 16/10; max-width: 480px; margin: 0 auto; width: 100%; }
+      .hero { min-height: 78vh; padding: 5rem 1.5rem; text-align: center; }
+      .hero-bg-overlay { background: linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.75) 65%, rgba(10,10,10,.9) 100%); }
+      .hero-copy { max-width: none; }
       .hero-copy .btns { justify-content: center; }
       .hero-stats { justify-content: center; }
       .hero-copy p.lead { margin-left: auto; margin-right: auto; }
     }
+    @media (prefers-reduced-motion: reduce) { .hero-bg-video { display: none; } }
 
     /* ============ BRAND MARQUEE (replaces old impact-band rotator) ============ */
     .brand-marquee { position: relative; background: var(--ink); padding: 2.6rem 0; overflow: hidden; isolation: isolate; }
@@ -493,6 +491,10 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
 <!-- ============ HERO (split) ============ -->
 <section class="hero">
+  <video class="hero-bg-video" id="heroBgVideo" autoplay muted loop playsinline>
+    <source src="assets/video/video2.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-bg-overlay"></div>
   <div class="wrap">
     <div class="hero-copy">
       <span class="kicker">BMX Shop · Colombia</span>
@@ -508,13 +510,6 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
         <div><div class="n">100%</div><div class="l">Original</div></div>
         <div><div class="n">32</div><div class="l">Depts. Colombia</div></div>
       </div>
-    </div>
-    <div class="hero-media">
-      <video autoplay muted loop playsinline>
-        <source src="assets/video/video2.mp4" type="video/mp4" />
-      </video>
-      <span class="pill">100% Original</span>
-      <div class="badge-ring"><img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" width="62" height="62" /></div>
     </div>
   </div>
 </section>
@@ -599,8 +594,8 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 <section id="escena" class="story">
   <div class="wrap">
     <div class="media">
-      <video autoplay muted loop playsinline poster="assets/img/products/fiend-fiending-stem-negro.jpg">
-        <source src="assets/video/hero.mp4" type="video/mp4" />
+      <video autoplay muted loop playsinline>
+        <source src="assets/video/video1_comprimido.mp4" type="video/mp4" />
       </video>
     </div>
     <div>
@@ -838,6 +833,12 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   var burger = document.getElementById("burger"), nav = document.getElementById("nav");
   burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
   nav.addEventListener("click", function(e){ if(e.target.tagName==="A") nav.classList.remove("open"); });
+
+  /* ---- Respect reduced-motion for hero background video ---- */
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var heroVid = document.getElementById("heroBgVideo");
+    if (heroVid) heroVid.pause();
+  }
 
   /* ---- Brand marquee ---- */
   var BRAND_LOGOS = [
