@@ -22,6 +22,7 @@ ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. V
 - Bielas / cranks (cromoly 48 spline) y hardware de bielas
 - Manzanas / bujes / hubs (cassette, freecoaster, delanteras y traseras)
 - Rines / rims (doble pared)
+- Corazas / llantas / tires
 - Platos / piñones / sprockets y guardas de piñón
 - Pedales (nylon y aluminio)
 - Sillas / sillines / seats (pivotal)
