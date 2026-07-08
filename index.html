@@ -212,8 +212,9 @@
     .bm-track { display: flex; width: max-content; animation: bmScroll 75s linear infinite; }
     .brand-marquee:hover .bm-track { animation-play-state: paused; }
     .bm-group { display: flex; align-items: center; flex-shrink: 0; }
-    .bm-group .bm-name { font-family: 'Bebas Neue', sans-serif; letter-spacing: .04em; font-size: clamp(1.5rem, 3.4vw, 2.5rem); color: #fff; white-space: nowrap; padding: 0 1.15rem; }
-    .bm-group .bm-dot { color: rgba(255,255,255,.32); font-size: 1rem; }
+    .bm-chip { display: flex; align-items: center; justify-content: center; flex-shrink: 0; height: 64px; padding: .5rem 1.4rem; margin: 0 .5rem; background: #fff; border-radius: 10px; }
+    .bm-chip img { display: block; height: 100%; width: auto; max-width: 130px; object-fit: contain; }
+    @media (max-width: 640px) { .bm-chip { height: 46px; padding: .4rem 1rem; } .bm-chip img { max-width: 96px; } }
     @keyframes bmScroll {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
@@ -312,10 +313,10 @@
 
     /* ============ BRANDS STRIP ============ */
     .brands-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2rem 1.5rem; }
-    .brands-row { max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0; }
-    .brands-row span { font-family: 'Bebas Neue', sans-serif; letter-spacing: .1em; font-size: 1.1rem; color: var(--muted); padding: 0 1.4rem; border-right: 1px solid var(--line); transition: color .2s; }
-    .brands-row span:last-child { border-right: none; }
-    .brands-row span:hover { color: var(--ink); }
+    .brands-row { max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .9rem; }
+    .brands-row .bs-chip { display: flex; align-items: center; justify-content: center; height: 46px; padding: .4rem 1rem; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; filter: grayscale(1); opacity: .7; transition: filter .2s, opacity .2s; }
+    .brands-row .bs-chip:hover { filter: grayscale(0); opacity: 1; }
+    .brands-row .bs-chip img { display: block; height: 100%; width: auto; max-width: 110px; object-fit: contain; }
 
     /* ============ INSTAGRAM ============ */
     .ig-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
@@ -695,9 +696,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
 <!-- ============ BRANDS STRIP ============ -->
 <div class="brands-strip">
-  <div class="brands-row">
-    <span>CULT</span><span>FIEND</span><span>ÉCLAT</span><span>VOLUME</span><span>MUTANY</span><span>FEDERAL</span><span>ODYSSEY</span><span>STOLEN</span><span>DEMOLITION</span><span>ANIMAL</span><span>SHADOW</span><span>COLONY</span>
-  </div>
+  <div class="brands-row" id="brandsStripRow"></div>
 </div>
 
 <!-- ============ INSTAGRAM ============ -->
@@ -873,15 +872,41 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   nav.addEventListener("click", function(e){ if(e.target.tagName==="A") nav.classList.remove("open"); });
 
   /* ---- Brand marquee ---- */
-  var BRANDS = ["Mutanty", "Fate", "Cult", "Fiend", "Stolen", "TukanBikes", "Shadow", "Demotilion", "Rant", "Eclat", "Wethepeople", "Brainstorm", "Animal", "BSD", "FOODE", "Ficción bikes", "Federal", "Helio", "Flybikes", "FirBikeCo.", "Merrit", "Kinkbmx", "Oddysey", "OnTrail", "Primo", "Sunday", "Subrosa", "Trueno", "Stranger", "Tall order", "Total", "Volume", "Valkiria", "RedingShoes", "Twin", "S&M", "Odi", "KMC", "GW", "Innova Tire", "Cinema", "Colony", "Profit", "TSG", "Eighthies", "Profile"];
+  var BRAND_LOGOS = [
+    { name: "Mutanty", img: "assets/img/logo_01_Mutanty.png" },
+    { name: "Fate", img: "assets/img/logo_02_Fate.jpeg" },
+    { name: "Cult", img: "assets/img/logo_03_Cult.png" },
+    { name: "Fiend", img: "assets/img/logo_04_Fiend.jpeg" },
+    { name: "Shadow", img: "assets/img/logo_05_Shadow.png" },
+    { name: "Wethepeople", img: "assets/img/logo_06_Wethepeople.png" },
+    { name: "Odyssey", img: "assets/img/logo_07_Odyssey.png" },
+    { name: "BSD", img: "assets/img/logo_08_BSD.png" },
+    { name: "Éclat", img: "assets/img/logo_09_Eclat.png" },
+    { name: "Demolition", img: "assets/img/logo_10_Demolition.png" },
+    { name: "Kink BMX", img: "assets/img/logo_11_KinkBMX.png" },
+    { name: "Federal", img: "assets/img/logo_12_Federal.png" },
+    { name: "Animal", img: "assets/img/logo_13_Animal.png" },
+    { name: "Merritt", img: "assets/img/logo_14_Merritt.jpeg" },
+    { name: "Subrosa", img: "assets/img/logo_15_Subrosa.jpeg" },
+    { name: "Stranger", img: "assets/img/logo_16_Stranger.jpeg" },
+    { name: "Volume", img: "assets/img/logo_17_Volume.jpeg" },
+    { name: "Profile Racing", img: "assets/img/logo_18_ProfileRacing.jpeg" },
+    { name: "Cinema", img: "assets/img/logo_19_Cinema.jpeg" },
+    { name: "Primo", img: "assets/img/logo_20_Primo.jpeg" }
+  ];
   var bmTrack = document.getElementById("brandMarqueeTrack");
   function bmGroupHTML(){
-    return BRANDS.map(function(b){
-      return '<span class="bm-name">' + b.replace(/&/g, "&amp;") + '</span><span class="bm-dot">&bull;</span>';
+    return BRAND_LOGOS.map(function(b){
+      return '<span class="bm-chip"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy" width="140" height="64"></span>';
     }).join("");
   }
   bmTrack.innerHTML = '<div class="bm-group">' + bmGroupHTML() + '</div><div class="bm-group">' + bmGroupHTML() + '</div>';
-  document.getElementById("brandMarqueeSrList").textContent = BRANDS.join(", ");
+  document.getElementById("brandMarqueeSrList").textContent = BRAND_LOGOS.map(function(b){ return b.name; }).join(", ");
+
+  /* ---- Brands strip (before Instagram) ---- */
+  document.getElementById("brandsStripRow").innerHTML = BRAND_LOGOS.map(function(b){
+    return '<span class="bs-chip"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy" width="110" height="46"></span>';
+  }).join("");
 
   /* ---- Newsletter popup (once per browser session) ---- */
   var nlOverlay = document.getElementById("nlOverlay");
