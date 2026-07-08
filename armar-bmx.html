@@ -112,15 +112,10 @@
 
     /* ============ BUILDER ZONE ============ */
     .arm-dark { background: var(--bg); color: var(--ink); margin-top: 1.2rem; }
-    .arm-hero { position: relative; padding: 4.6rem 1.5rem; overflow: hidden; background: var(--ink); isolation: isolate; }
-    .arm-hero-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; z-index: 0; }
-    .arm-hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.7) 42%, rgba(10,10,10,.4) 100%); }
-    .arm-hero-content { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; }
-    .arm-hero .eyebrow { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.65); font-weight: 700; }
-    .arm-hero h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.2rem, 6vw, 3.8rem); letter-spacing: .02em; margin: .3rem 0 .8rem; }
-    .arm-hero p { color: rgba(255,255,255,.75); font-size: .95rem; max-width: 760px; line-height: 1.75; }
-    @media (max-width: 640px) { .arm-hero { padding: 3.4rem 1.5rem; } .arm-hero-overlay { background: rgba(10,10,10,.82); } }
-    @media (prefers-reduced-motion: reduce) { .arm-hero-bg-video { display: none; } }
+    .arm-hero { max-width: 1180px; margin: 0 auto; padding: 2.6rem 1.5rem 1.2rem; }
+    .arm-hero .eyebrow { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .arm-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.8rem); letter-spacing: .02em; margin: .3rem 0 .8rem; }
+    .arm-hero p { color: var(--muted); font-size: .95rem; max-width: 760px; line-height: 1.75; }
 
     .arm-section { max-width: 1180px; margin: 0 auto; padding: 2.3rem 1.5rem; border-top: 1px solid var(--line); }
     .arm-step-label { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
@@ -414,15 +409,9 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 <!-- ============ BUILDER (dark zone) ============ -->
 <div class="arm-dark">
   <div class="arm-hero">
-    <video class="arm-hero-bg-video" id="armHeroBgVideo" autoplay muted loop playsinline>
-      <source src="assets/video/escena-edit.mp4" type="video/mp4" />
-    </video>
-    <div class="arm-hero-overlay"></div>
-    <div class="arm-hero-content">
-      <span class="eyebrow">Configurador</span>
-      <h1>ARMA TU BMX A TU MEDIDA</h1>
-      <p>No vendemos completas: te ayudamos a construir la tuya, perfecta para tu estilo y tu estatura. Marco, tenedor, transmisión, ruedas y timón — con vista previa en vivo y asesoría de riders. Armado y ajuste gratis.</p>
-    </div>
+    <span class="eyebrow">Configurador</span>
+    <h1>ARMA TU BMX A TU MEDIDA</h1>
+    <p>No vendemos completas: te ayudamos a construir la tuya, perfecta para tu estilo y tu estatura. Marco, tenedor, transmisión, ruedas y timón — con vista previa en vivo y asesoría de riders. Armado y ajuste gratis.</p>
   </div>
 
   <div class="arm-section">
@@ -1057,11 +1046,6 @@ function loadFromURL(){
 
 loadFromURL();
 renderAll();
-
-if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  var armHeroVid = document.getElementById("armHeroBgVideo");
-  if (armHeroVid) armHeroVid.pause();
-}
 </script>
 <script>var ESCENA_ROOT = "";</script>
 <script src="assets/js/cart.js"></script>
