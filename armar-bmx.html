@@ -542,13 +542,14 @@ var SLOTS = [
   { key: "plato", label: "Plato", cat: "pinones", segment: "plato", segLabel: "Plato" },
   { key: "manzanas", label: "Manzanas", cat: "bujes", segment: "manzanas", segLabel: "Manzanas" },
   { key: "rines", label: "Rines", cat: "rines", segment: "ruedas", segLabel: "Ruedas" },
+  { key: "corazas", label: "Corazas", cat: "corazas", segment: "ruedas", segLabel: "Ruedas" },
   { key: "clavijas", label: "Pegs", cat: "clavijas", segment: "ruedas", segLabel: "Ruedas" },
   { key: "tija", label: "Tija", cat: "tijas", segment: "tija", segLabel: "Tija" },
   { key: "silla", label: "Silla", cat: "sillines", segment: "silla", segLabel: "Silla" },
   { key: "pedales", label: "Pedales", cat: "pedales", segment: "pedales", segLabel: "Pedales" }
 ];
 /* peso base estimado por componente cuando aún no se elige (clavijas: 0 — son opcionales) */
-var DEFAULT_SLOT_WEIGHT = { marco: 2.1, tenedor: 0.62, direccion: 0.15, timon: 0.85, cana: 0.3, punos: 0.1, bielas: 1.55, cajapedalier: 0.25, plato: 0.12, manzanas: 3.2, rines: 1.0, tija: 0.25, silla: 0.35, pedales: 0.4, clavijas: 0 };
+var DEFAULT_SLOT_WEIGHT = { marco: 2.1, tenedor: 0.62, direccion: 0.15, timon: 0.85, cana: 0.3, punos: 0.1, bielas: 1.55, cajapedalier: 0.25, plato: 0.12, manzanas: 3.2, rines: 1.0, corazas: 0.8, tija: 0.25, silla: 0.35, pedales: 0.4, clavijas: 0 };
 var FIXED_WEIGHT = 0.45; /* cadena y tornillería: no seleccionables por separado aquí */
 
 /* pestañas del configurador: agrupan varias partes cuando comparten segmento (ej: dirección + BB) */
@@ -755,6 +756,7 @@ var BOARD_POS = {
   bielas:       { l: 27, t: 80 },
   plato:        { l: 42, t: 82 },
   pedales:      { l: 59, t: 82 },
+  corazas:      { l: 73, t: 80 },
   clavijas:     { l: 86, t: 78 }
 };
 var BOARD_OUTLINE_SVG = '<svg class="arm-board-outline" viewBox="0 0 560 340" aria-hidden="true">' +
