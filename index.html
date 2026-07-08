@@ -210,11 +210,13 @@
     .brand-marquee::before { top: 0; }
     .brand-marquee::after { bottom: 0; }
     .bm-track { display: flex; width: max-content; animation: bmScroll 75s linear infinite; }
-    .brand-marquee:hover .bm-track { animation-play-state: paused; }
+    @media (hover: hover) and (pointer: fine) { .brand-marquee:hover .bm-track { animation-play-state: paused; } }
     .bm-group { display: flex; align-items: center; flex-shrink: 0; }
-    .bm-chip { display: flex; align-items: center; justify-content: center; flex-shrink: 0; height: 64px; padding: .5rem 1.4rem; margin: 0 .5rem; background: #fff; border-radius: 10px; }
-    .bm-chip img { display: block; height: 100%; width: auto; max-width: 130px; object-fit: contain; }
-    @media (max-width: 640px) { .bm-chip { height: 46px; padding: .4rem 1rem; } .bm-chip img { max-width: 96px; } }
+    .bm-chip { display: flex; align-items: center; justify-content: center; flex-shrink: 0; height: 92px; padding: .9rem 2rem; margin: 0 .7rem; background: #fff; border-radius: 12px; transition: transform .15s; }
+    .bm-chip a { display: flex; align-items: center; justify-content: center; height: 100%; }
+    .bm-chip img { display: block; height: 100%; width: auto; max-width: 190px; object-fit: contain; }
+    @media (hover: hover) and (pointer: fine) { .bm-chip:hover { transform: scale(1.04); } }
+    @media (max-width: 640px) { .bm-chip { height: 46px; padding: .4rem 1rem; margin: 0 .5rem; border-radius: 10px; } .bm-chip img { max-width: 96px; } }
     @keyframes bmScroll {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
@@ -229,15 +231,6 @@
     .sec-head .eyebrow { color: var(--muted); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; display: block; margin-bottom: .5rem; }
     .sec-head h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1; letter-spacing: .03em; }
     .sec-head h2 .bar { color: var(--muted); }
-
-    /* ============ PROCESS BAND ("Cómo comprar") ============ */
-    .process { background: var(--panel); }
-    .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; position: relative; }
-    @media (max-width: 780px) { .steps-row { grid-template-columns: 1fr; } }
-    .step { position: relative; padding-top: .5rem; }
-    .step .stepnum { font-family: 'Bebas Neue', sans-serif; font-size: 4.2rem; line-height: 1; -webkit-text-stroke: 2px var(--ink); color: transparent; }
-    .step h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: .03em; margin: .3rem 0 .5rem; }
-    .step p { font-size: .86rem; color: var(--muted); max-width: 280px; }
 
     /* ============ CATEGORIES (photo cards) ============ */
     .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
@@ -313,10 +306,12 @@
 
     /* ============ BRANDS STRIP ============ */
     .brands-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2rem 1.5rem; }
-    .brands-row { max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .9rem; }
-    .brands-row .bs-chip { display: flex; align-items: center; justify-content: center; height: 46px; padding: .4rem 1rem; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; filter: grayscale(1); opacity: .7; transition: filter .2s, opacity .2s; }
+    .brands-row { max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; }
+    .brands-row .bs-chip { display: flex; align-items: center; justify-content: center; height: 64px; padding: .6rem 1.4rem; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; filter: grayscale(1); opacity: .7; transition: filter .2s, opacity .2s; }
     .brands-row .bs-chip:hover { filter: grayscale(0); opacity: 1; }
-    .brands-row .bs-chip img { display: block; height: 100%; width: auto; max-width: 110px; object-fit: contain; }
+    .brands-row .bs-chip a { display: flex; align-items: center; justify-content: center; height: 100%; }
+    .brands-row .bs-chip img { display: block; height: 100%; width: auto; max-width: 150px; object-fit: contain; }
+    @media (max-width: 640px) { .brands-row .bs-chip { height: 46px; padding: .4rem 1rem; } .brands-row .bs-chip img { max-width: 110px; } }
 
     /* ============ INSTAGRAM ============ */
     .ig-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
@@ -529,33 +524,6 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 <div class="brand-marquee" id="marcas">
   <div class="bm-track" id="brandMarqueeTrack" aria-hidden="true"></div>
 </div>
-
-<!-- ============ CÓMO COMPRAR (process band) ============ -->
-<section id="comprar" class="process">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Sin vueltas</span>
-      <h2>CÓMO <span class="bar">/</span> COMPRAR</h2>
-    </div>
-    <div class="steps-row">
-      <div class="step">
-        <div class="stepnum">01</div>
-        <h3>Eliges tu parte</h3>
-        <p>Miras la tienda y eliges stem, bielas, rines o sillín — filtras por categoría en segundos.</p>
-      </div>
-      <div class="step">
-        <div class="stepnum">02</div>
-        <h3>Pides por WhatsApp</h3>
-        <p>Un toque arma tu pedido en el chat. Coordinamos pago (Nequi, Daviplata, transferencia o efectivo) y envío ahí mismo.</p>
-      </div>
-      <div class="step">
-        <div class="stepnum">03</div>
-        <h3>Ruedas</h3>
-        <p>Te llega a la puerta de tu casa, la montas en tu bici y a rodar. Así de simple.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============ CATEGORIES (photo cards) ============ -->
 <section id="categorias">
@@ -783,7 +751,6 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     </div>
     <div>
       <h4>Tienda</h4>
-      <a href="#comprar">Cómo comprar</a>
       <a href="#categorias">Categorías</a>
       <a href="tienda.html">Componentes</a>
       <a href="armar-bmx.html">Arma tu BMX</a>
@@ -873,7 +840,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
   /* ---- Brand marquee ---- */
   var BRAND_LOGOS = [
-    { name: "Mutanty", img: "assets/img/logo_01_Mutanty.png" },
+    { name: "Mutanty", key: "Mutany", img: "assets/img/logo_01_Mutanty.png" },
     { name: "Fate", img: "assets/img/logo_02_Fate.jpeg" },
     { name: "Cult", img: "assets/img/logo_03_Cult.png" },
     { name: "Fiend", img: "assets/img/logo_04_Fiend.jpeg" },
@@ -897,7 +864,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   var bmTrack = document.getElementById("brandMarqueeTrack");
   function bmGroupHTML(){
     return BRAND_LOGOS.map(function(b){
-      return '<span class="bm-chip"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy" width="140" height="64"></span>';
+      return '<span class="bm-chip"><a href="tienda.html?brand=' + encodeURIComponent(b.key || b.name) + '"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy" width="190" height="92"></a></span>';
     }).join("");
   }
   bmTrack.innerHTML = '<div class="bm-group">' + bmGroupHTML() + '</div><div class="bm-group">' + bmGroupHTML() + '</div>';
@@ -905,7 +872,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
   /* ---- Brands strip (before Instagram) ---- */
   document.getElementById("brandsStripRow").innerHTML = BRAND_LOGOS.map(function(b){
-    return '<span class="bs-chip"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy" width="110" height="46"></span>';
+    return '<span class="bs-chip"><a href="tienda.html?brand=' + encodeURIComponent(b.key || b.name) + '"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy" width="150" height="64"></a></span>';
   }).join("");
 
   /* ---- Newsletter popup (once per browser session) ---- */

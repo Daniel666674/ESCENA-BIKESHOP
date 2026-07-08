@@ -126,6 +126,11 @@
     /* ============ SECTIONS / SHOP ============ */
     section { padding: 3rem 1.5rem 4.5rem; }
     .wrap { max-width: 1180px; margin: 0 auto; }
+    .brand-banner { display: flex; align-items: center; gap: .9rem; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .8rem 1.1rem; margin-bottom: 1.2rem; font-size: .85rem; }
+    .brand-banner[hidden] { display: none; }
+    .brand-banner b { font-family: 'Bebas Neue', sans-serif; letter-spacing: .06em; font-size: 1.05rem; }
+    .brand-banner button { margin-left: auto; background: none; border: 1px solid var(--line); border-radius: 999px; padding: .35rem .9rem; font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; color: var(--muted); cursor: pointer; font-family: inherit; transition: all .15s; }
+    .brand-banner button:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
     .filters { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2rem; }
     .filters button { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; font-weight: 600; color: var(--muted); transition: all .15s; font-family: inherit; }
     .filters button.active, .filters button:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
@@ -323,6 +328,10 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 <!-- ============ SHOP ============ -->
 <section>
   <div class="wrap" id="tiendaTop">
+    <div class="brand-banner" id="brandBanner" hidden>
+      <span>Marca: <b id="brandBannerName"></b></span>
+      <button type="button" id="brandBannerClear">Quitar filtro ✕</button>
+    </div>
     <div class="filters" id="filters">
       <button data-filter="all">Todo</button>
       <button data-filter="stems">Cañas</button>
@@ -368,7 +377,6 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     </div>
     <div>
       <h4>Tienda</h4>
-      <a href="index.html#comprar">Cómo comprar</a>
       <a href="index.html#categorias">Categorías</a>
       <a href="tienda.html">Componentes</a>
       <a href="armar-bmx.html">Arma tu BMX</a>
@@ -513,6 +521,7 @@ var PRODUCTS = [
   var PAGE_SIZE = 12;
   var currentFilter = "all";
   var currentPage = 1;
+  var activeBrand = null;
 
   function cop(n){
     if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
@@ -520,7 +529,11 @@ var PRODUCTS = [
   }
 
   function getFiltered(filter){
-    return PRODUCTS.filter(function(p){ return filter === "all" || p.cat === filter; });
+    return PRODUCTS.filter(function(p){
+      var catOk = filter === "all" || p.cat === filter;
+      var brandOk = !activeBrand || (p.brand && p.brand.toLowerCase() === activeBrand.toLowerCase());
+      return catOk && brandOk;
+    });
   }
 
   function slugOf(p){
@@ -560,7 +573,9 @@ var PRODUCTS = [
 
     var g = document.getElementById("grid");
     if (pageItems.length === 0) {
-      g.innerHTML = '<p class="empty-state">No hay productos en esta categoría todavía.</p>';
+      g.innerHTML = activeBrand
+        ? '<p class="empty-state">Todavía no tenemos partes de ' + activeBrand + ' en esta categoría — pregúntanos por WhatsApp, puede que la consigamos.</p>'
+        : '<p class="empty-state">No hay productos en esta categoría todavía.</p>';
     } else {
       g.innerHTML = pageItems.map(cardHTML).join("");
     }
@@ -606,9 +621,27 @@ var PRODUCTS = [
     history.replaceState(null, "", "tienda.html?" + params.toString());
   });
 
-  /* ---- Init from ?cat= query param ---- */
+  /* ---- Brand banner (?brand= query param) ---- */
+  function showBrandBanner(brand){
+    activeBrand = brand;
+    document.getElementById("brandBannerName").textContent = brand;
+    document.getElementById("brandBanner").hidden = false;
+  }
+  function clearBrandBanner(){
+    activeBrand = null;
+    document.getElementById("brandBanner").hidden = true;
+    var params = new URLSearchParams(window.location.search);
+    params.delete("brand");
+    history.replaceState(null, "", params.toString() ? ("tienda.html?" + params.toString()) : "tienda.html");
+    render(currentFilter, 1);
+  }
+  document.getElementById("brandBannerClear").addEventListener("click", clearBrandBanner);
+
+  /* ---- Init from ?cat= / ?brand= query params ---- */
   var urlParams = new URLSearchParams(window.location.search);
   var initialCat = urlParams.get("cat") || "all";
+  var initialBrand = urlParams.get("brand");
+  if (initialBrand) showBrandBanner(initialBrand);
   var initBtn = document.querySelector('#filters button[data-filter="' + initialCat + '"]') || document.querySelector('#filters button[data-filter="all"]');
   document.querySelectorAll("#filters button").forEach(function(b){ b.classList.remove("active"); });
   initBtn.classList.add("active");
