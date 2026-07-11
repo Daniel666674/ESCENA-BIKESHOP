@@ -276,18 +276,20 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
         <div class="nav-drop-menu">
         <a href="tienda.html?cat=marcos">Marcos</a>
         <a href="tienda.html?cat=stems">Cañas</a>
-        <a href="tienda.html?cat=manubrios">Timones</a>
+        <a href="tienda.html?cat=manubrios">Timón</a>
         <a href="tienda.html?cat=horquillas">Tenedores</a>
         <a href="tienda.html?cat=bielas">Bielas</a>
-        <a href="tienda.html?cat=bujes">Manzanas</a>
+        <a href="tienda.html?cat=manzana-delantera">Manzana Delantera</a>
+        <a href="tienda.html?cat=manzana-trasera">Manzana Trasera</a>
         <a href="tienda.html?cat=rines">Rines</a>
         <a href="tienda.html?cat=corazas">Corazas</a>
-        <a href="tienda.html?cat=pinones">Platos</a>
+        <a href="tienda.html?cat=pinones">Plato</a>
         <a href="tienda.html?cat=pedales">Pedales</a>
         <a href="tienda.html?cat=sillines">Sillas</a>
-        <a href="tienda.html?cat=tijas">Tijas</a>
-        <a href="tienda.html?cat=punos">Puños</a>
-        <a href="tienda.html?cat=dc">Dirección y BB</a>
+        <a href="tienda.html?cat=tijas">Postes</a>
+        <a href="tienda.html?cat=punos">Grips</a>
+        <a href="tienda.html?cat=caja-frente">Caja de Frente</a>
+        <a href="tienda.html?cat=caja-centro">Caja de Centro</a>
         <a href="tienda.html?cat=clavijas">Pegs</a>
         <a href="tienda.html?cat=tornilleria">Tornillería</a>
         <a href="tienda.html?cat=piezas">Piezas varias</a>
@@ -326,19 +328,22 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     </div>
     <div class="filters" id="filters">
       <button data-filter="all">Todo</button>
+      <button data-filter="marcos">Marcos</button>
       <button data-filter="stems">Cañas</button>
-      <button data-filter="manubrios">Timones</button>
+      <button data-filter="manubrios">Timón</button>
       <button data-filter="horquillas">Tenedores</button>
       <button data-filter="bielas">Bielas</button>
-      <button data-filter="bujes">Manzanas</button>
+      <button data-filter="manzana-delantera">Manzana Delantera</button>
+      <button data-filter="manzana-trasera">Manzana Trasera</button>
       <button data-filter="rines">Rines</button>
       <button data-filter="corazas">Corazas</button>
-      <button data-filter="pinones">Platos</button>
+      <button data-filter="pinones">Plato</button>
       <button data-filter="pedales">Pedales</button>
       <button data-filter="sillines">Sillas</button>
-      <button data-filter="tijas">Tijas</button>
-      <button data-filter="punos">Puños</button>
-      <button data-filter="dc">Dirección y BB</button>
+      <button data-filter="tijas">Postes</button>
+      <button data-filter="punos">Grips</button>
+      <button data-filter="caja-frente">Caja de Frente</button>
+      <button data-filter="caja-centro">Caja de Centro</button>
       <button data-filter="clavijas">Pegs</button>
       <button data-filter="tornilleria">Tornillería</button>
       <button data-filter="piezas">Piezas varias</button>
@@ -436,7 +441,7 @@ var PRODUCTS = window.ESCENA_PRODUCTS;  var WA = "573107630504";
   function cardHTML(p){
     var wPrefix = (window.EscenaWholesale && window.EscenaWholesale.isActive()) ? "🏷️ PEDIDO MAYORISTA (15% aplicado)\n" : "";
     var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
-    var hasDetailPage = p.img.indexOf("frame-placeholder") === -1;
+    var hasDetailPage = p.cat !== "marcos" && p.img.indexOf("frame-placeholder") === -1;
     var href = "producto/" + slugOf(p) + ".html";
     return '<article class="card">' +
         (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
