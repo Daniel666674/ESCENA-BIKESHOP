@@ -942,15 +942,15 @@ window.ESCENA_PRODUCTS = [
 "img": "assets/img/products/llave-y-roja.jpg"
 },
 {
-"n": "Cult Marco Americano",
-"slug": "cult-marco-americano",
+"n": "Cult Biggie Jaime Sintes Hammertone Negro",
+"slug": "cult-biggie-jaime-sintes-hammertone-negro",
 "brand": "Cult",
 "cat": "marcos",
-"spec": "Cromoly · Top tube 21\" · Negro",
+"spec": "Cromoly · Top tube 20.5\" · Hammertone Negro",
 "price": 980000,
 "tag": "Top",
-"img": "assets/img/products/frame-placeholder.svg",
-"size": "21",
+"img": "assets/img/products/marco_cult_biggie_hammertone_negro.jpeg",
+"size": "20.5",
 "styles": ["street"],
 "weight": 2.05
 },
@@ -968,15 +968,15 @@ window.ESCENA_PRODUCTS = [
 "weight": 2.1
 },
 {
-"n": "Fate Marco BMX Colombia",
-"slug": "fate-marco-bmx-colombia",
+"n": "Fate Namaste Negro",
+"slug": "fate-namaste-negro",
 "brand": "Fate",
 "cat": "marcos",
-"spec": "Cromoly · Top tube 20.5\" · Negro",
+"spec": "Cromoly · Top tube 20.4\"–20.75\" (dropout ajustable) · Negro",
 "price": 890000,
 "tag": "Nacional",
-"img": "assets/img/products/frame-placeholder.svg",
-"size": "20.5",
+"img": "assets/img/products/marco_fate_negro_namaste_negro.jpeg",
+"size": "20.4 - 20.75",
 "styles": ["street"],
 "weight": 2.0
 },
@@ -1007,15 +1007,15 @@ window.ESCENA_PRODUCTS = [
 "weight": 2.08
 },
 {
-"n": "TukanBikes Marco Local",
-"slug": "tukanbikes-marco-verde",
+"n": "TukanBikes Industrial Raw",
+"slug": "tukanbikes-industrial-raw",
 "brand": "TukanBikes",
 "cat": "marcos",
-"spec": "Cromoly · Top tube 20.75\" · Verde",
+"spec": "Cromoly · Top tube 20.4\"–21\" (dropout ajustable) · Acabado crudo (raw)",
 "price": 850000,
 "tag": "Nacional",
-"img": "assets/img/products/frame-placeholder.svg",
-"size": "20.75",
+"img": "assets/img/products/marco_tukanbikes_industrial.jpeg",
+"size": "20.4 - 21",
 "styles": ["street"],
 "weight": 2.05
 },
@@ -1085,16 +1085,122 @@ window.ESCENA_PRODUCTS = [
 "weight": 2.25
 },
 {
-"n": "Wethepeople Marco Dirt",
-"slug": "wethepeople-marco-dirt-negro",
+"n": "Wethepeople Doomsayer Negro",
+"slug": "wethepeople-doomsayer-negro",
 "brand": "Wethepeople",
 "cat": "marcos",
-"spec": "Cromoly · Top tube 21\" · Negro",
+"spec": "Cromoly · Top tube 20.75\" · Negro",
 "price": 990000,
 "tag": "",
-"img": "assets/img/products/frame-placeholder.svg",
-"size": "21",
+"img": "assets/img/products/marco_wethepeople_doomsayer_negro.jpeg",
+"size": "20.75",
 "styles": ["dirt"],
 "weight": 2.15
+},
+{
+"n": "Cult Haven's Gate Alex Duleba Negro",
+"slug": "cult-havens-gate-alex-duleba-negro",
+"brand": "Cult",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 20.5\" · Negro/Dorado",
+"price": 1020000,
+"tag": "Top",
+"img": "assets/img/products/marco_cult_havens_gate_alex_duleba_negro.jpeg",
+"size": "20.5",
+"styles": ["street"],
+"weight": 2.05
+},
+{
+"n": "Fiend Reynolds V3 Negro",
+"slug": "fiend-reynolds-v3-negro",
+"brand": "Fiend",
+"cat": "marcos",
+"spec": "Cromoly · Top tube 20.75\" · Cola 12.74\" · Negro",
+"price": 970000,
+"tag": "",
+"img": "assets/img/products/marco_fiend_reynolds_v3_negro.jpeg",
+"size": "20.75",
+"styles": ["park"],
+"weight": 2.08
+},
+{
+"n": "Aro Demolition Zero Plus Negro",
+"brand": "Demolition",
+"cat": "rines",
+"spec": "20\" · Doble pared · Negro",
+"price": 260000,
+"tag": "",
+"img": "assets/img/products/aro_demolition_zero_plus_negro.jpeg",
+"weight": 0.55
+},
+{
+"n": "Aro Éclat Bondi Cromado",
+"brand": "Éclat",
+"cat": "rines",
+"spec": "20\" · Doble pared · Cromado",
+"price": 250000,
+"tag": "",
+"img": "assets/img/products/aros_eclat_bondi_cromados.jpeg",
+"weight": 0.55
+},
+{
+"n": "Aro Fate Negro",
+"brand": "Fate",
+"cat": "rines",
+"spec": "20\" · Doble pared · Negro",
+"price": 210000,
+"tag": "Nacional",
+"img": "assets/img/products/aros_fate_negro.jpeg",
+"weight": 0.55
+},
+{
+"n": "Aro Stolen Chamber Cromado",
+"brand": "Stolen",
+"cat": "rines",
+"spec": "20\" · Doble pared · Cromado",
+"price": 245000,
+"tag": "",
+"img": "assets/img/products/aros_stolen_chamber_cromados.jpeg",
+"weight": 0.55
+},
+{
+"n": "Coraza Cult Wafflecup 2.40",
+"brand": "Cult",
+"cat": "corazas",
+"spec": "20 x 2.40\" · Negro",
+"price": 110000,
+"tag": "",
+"img": "assets/img/products/coraza_cult_wafflecup_2.40.jpeg",
+"weight": 0.4
+},
+{
+"n": "Coraza Innova Pro 2.40",
+"brand": "Innova Tire",
+"cat": "corazas",
+"spec": "20 x 2.40\" · Negro · The Big Slick",
+"price": 75000,
+"tag": "",
+"img": "assets/img/products/coraza_innova_pro_2.40.jpeg",
+"weight": 0.4
+},
+{
+"n": "Coraza Odyssey Supercircuit 2.40",
+"brand": "Odyssey",
+"cat": "corazas",
+"spec": "20 x 2.40\" · Negro",
+"price": 120000,
+"tag": "",
+"img": "assets/img/products/coraza_odyssey_supercircuit_2.40.jpeg",
+"weight": 0.4
+},
+{
+"n": "Coraza Primo 555 2.45",
+"brand": "Primo",
+"cat": "corazas",
+"spec": "20 x 2.45\" · Negro",
+"price": 130000,
+"tag": "",
+"img": "assets/img/products/coraza_primo_555_2.45.jpeg",
+"weight": 0.4
 }
 ];
