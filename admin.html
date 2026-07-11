@@ -143,13 +143,31 @@
 </head>
 <body>
 
-<!-- ============ NOT AUTHORIZED ============ -->
+<!-- ============ LOGIN (GitHub token) ============ -->
 <div class="gate" id="gate">
   <div class="gate-card">
     <img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" />
     <h1>PANEL ADMIN</h1>
-    <p>Necesitas iniciar sesión con una cuenta de administrador. Te llevamos al inicio para iniciar sesión…</p>
-    <a href="index.html?login=1" class="btn btn-ink">Ir a iniciar sesión</a>
+    <p>Ingresa con tu token de GitHub para editar el catálogo. Los cambios se publican directo en la tienda.</p>
+    <form id="tokenForm" style="display:flex;flex-direction:column;gap:.7rem;margin-top:.4rem;text-align:left;">
+      <label style="font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);">Token de acceso</label>
+      <input type="password" id="tokenInput" placeholder="github_pat_… o ghp_…" autocomplete="off" required
+        style="border:1.5px solid var(--line);border-radius:8px;padding:.85rem 1rem;font-size:.85rem;font-family:inherit;" />
+      <label style="display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--muted);font-weight:500;letter-spacing:0;text-transform:none;">
+        <input type="checkbox" id="tokenRemember" style="width:auto;" /> Recordar en este navegador
+      </label>
+      <button type="submit" class="btn btn-ink" id="tokenSubmit">Entrar</button>
+      <p id="tokenError" style="display:none;color:#c0392b;font-size:.76rem;margin:0;"></p>
+    </form>
+    <details style="margin-top:1rem;text-align:left;font-size:.72rem;color:var(--muted);">
+      <summary style="cursor:pointer;font-weight:700;">¿Cómo consigo mi token?</summary>
+      <ol style="margin:.6rem 0 0 1rem;line-height:1.6;">
+        <li>GitHub → Settings → Developer settings → <b>Fine-grained tokens</b> → Generate new token.</li>
+        <li>Repository access: <b>solo</b> el repo <b>ESCENA-BIKESHOP</b>.</li>
+        <li>Permisos → Repository → <b>Contents: Read and write</b>.</li>
+        <li>Genera, copia y pégalo aquí. Nunca lo compartas.</li>
+      </ol>
+    </details>
   </div>
 </div>
 
@@ -285,21 +303,23 @@
       </div>
 
       <!-- ============ INVENTORY MANAGER ============ -->
-      <h2 class="section-title">Inventario<span class="demo-tag">102 productos</span></h2>
-      <p class="section-sub">Editá precios, stock y datos del catálogo. Los cambios se guardan en este navegador.</p>
+      <h2 class="section-title">Inventario<span class="demo-tag" id="invCount">0 productos</span></h2>
+      <p class="section-sub">Edita precios, stock y datos del catálogo. Al <b>Publicar</b>, los cambios van directo a la tienda en vivo.</p>
 
-      <div class="inv-note">
-        <b>Cómo publicar cambios:</b> este panel no escribe directamente a la tienda en vivo (el sitio es estático). Editá lo que necesites y tocá <b>“Exportar JSON”</b> — ese archivo se usa para regenerar las páginas reales del sitio.
+      <div class="inv-note" id="pendingNote" style="display:none;">
+        <b>Tienes cambios sin publicar.</b> Toca <b>“Publicar en el sitio”</b> para que aparezcan en la tienda (tarda ~1 minuto en verse).
       </div>
 
       <div class="inv-toolbar">
         <input type="search" id="invSearch" placeholder="Buscar por nombre, marca, SKU o categoría…" />
         <div class="inv-actions">
           <button type="button" class="btn btn-outline btn-sm" id="invAddBtn">+ Agregar producto</button>
-          <button type="button" class="btn btn-outline btn-sm" id="invImportBtn">Importar JSON</button>
-          <input type="file" id="invImportFile" accept=".json" style="display:none;" />
+          <button type="button" class="btn btn-outline btn-sm" id="invBulkBtn">Edición masiva</button>
+          <button type="button" class="btn btn-outline btn-sm" id="invImportBtn">Importar CSV/JSON</button>
+          <input type="file" id="invImportFile" accept=".json,.csv" style="display:none;" />
           <button type="button" class="btn btn-outline btn-sm" id="invExportCsvBtn">Exportar CSV</button>
-          <button type="button" class="btn btn-ink btn-sm" id="invExportBtn">Exportar JSON</button>
+          <button type="button" class="btn btn-outline btn-sm" id="invExportBtn">Exportar JSON</button>
+          <button type="button" class="btn btn-ink btn-sm" id="invPublishBtn">Publicar en el sitio</button>
         </div>
       </div>
 
@@ -385,15 +405,53 @@
 
 <script src="assets/js/products-data.js"></script>
 <script>
-  var ADMIN_KEY = "escena_admin_auth_v1";
-  var CATALOG_KEY = "escena_admin_catalog_v1";
+  /* ============ Config ============ */
+  var GH = { owner: "Daniel666674", repo: "ESCENA-BIKESHOP", branch: "main" };
+  var TOKEN_KEY = "escena_gh_token_v1";
+  var CATALOG_KEY = "escena_admin_catalog_v1"; // local draft cache only
   var CATEGORY_LABELS = {
-    marcos: "Marcos", stems: "Cañas", manubrios: "Timones", horquillas: "Tenedores",
-    bielas: "Bielas", bujes: "Manzanas", rines: "Rines", corazas: "Corazas", pinones: "Platos",
-    pedales: "Pedales", sillines: "Sillas", tijas: "Tijas", punos: "Puños",
-    dc: "Dirección y BB", clavijas: "Pegs", tornilleria: "Tornillería",
-    piezas: "Piezas varias", herramientas: "Herramientas"
+    marcos: "Marcos", stems: "Cañas", manubrios: "Timón", horquillas: "Tenedores",
+    bielas: "Bielas", "manzana-delantera": "Manzana Delantera", "manzana-trasera": "Manzana Trasera",
+    rines: "Rines", corazas: "Corazas", pinones: "Plato",
+    pedales: "Pedales", sillines: "Sillas", tijas: "Postes", punos: "Grips",
+    "caja-frente": "Caja de Frente", "caja-centro": "Caja de Centro", clavijas: "Pegs",
+    tornilleria: "Tornillería", piezas: "Piezas varias", herramientas: "Herramientas"
   };
+  var dirty = false; // unpublished changes exist
+
+  /* ============ GitHub API ============ */
+  function getToken() { return sessionStorage.getItem(TOKEN_KEY) || localStorage.getItem(TOKEN_KEY) || ""; }
+  function b64EncodeUtf8(str) { return btoa(unescape(encodeURIComponent(str))); }
+  function b64DecodeUtf8(b64) { return decodeURIComponent(escape(atob(b64.replace(/\n/g, "")))); }
+  function ghFetch(path, opts) {
+    opts = opts || {};
+    opts.headers = Object.assign({
+      "Authorization": "Bearer " + getToken(),
+      "Accept": "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28"
+    }, opts.headers || {});
+    return fetch("https://api.github.com/repos/" + GH.owner + "/" + GH.repo + path, opts);
+  }
+  function validateToken(tok) {
+    return fetch("https://api.github.com/repos/" + GH.owner + "/" + GH.repo, {
+      headers: { "Authorization": "Bearer " + tok, "Accept": "application/vnd.github+json" }
+    }).then(function (r) { return r.ok; }).catch(function () { return false; });
+  }
+  function ghGetFile(path) {
+    return ghFetch("/contents/" + path + "?ref=" + GH.branch, {}).then(function (r) {
+      if (r.status === 404) return { sha: null, text: null };
+      if (!r.ok) throw new Error("GET " + path + " → " + r.status);
+      return r.json().then(function (j) { return { sha: j.sha, text: b64DecodeUtf8(j.content) }; });
+    });
+  }
+  function ghPutFile(path, text, message, sha, isBase64) {
+    var body = { message: message, content: isBase64 ? text : b64EncodeUtf8(text), branch: GH.branch };
+    if (sha) body.sha = sha;
+    return ghFetch("/contents/" + path, { method: "PUT", body: JSON.stringify(body) }).then(function (r) {
+      if (!r.ok) return r.text().then(function (t) { throw new Error("PUT " + path + " → " + r.status + " " + t.slice(0, 160)); });
+      return r.json();
+    });
+  }
 
   /* ---- Toast ---- */
   var toast = document.getElementById("toast");
@@ -403,20 +461,44 @@
     setTimeout(function () { toast.classList.remove("show"); }, 2200);
   }
 
-  /* ---- Auth check (login happens via the header modal on index.html) ---- */
+  /* ---- Auth (GitHub token) ---- */
   var gate = document.getElementById("gate");
   var adminApp = document.getElementById("adminApp");
+  var appInited = false;
 
-  function isAuthed() { return sessionStorage.getItem(ADMIN_KEY) === "1"; }
   function showApp() {
     gate.style.display = "none";
     adminApp.classList.add("show");
-    initDashboard();
-    initInventory();
+    if (!appInited) { appInited = true; initDashboard(); initInventory(); }
+  }
+  function showGate() {
+    adminApp.classList.remove("show");
+    gate.style.display = "";
   }
 
+  document.getElementById("tokenForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var tok = document.getElementById("tokenInput").value.trim();
+    var remember = document.getElementById("tokenRemember").checked;
+    var err = document.getElementById("tokenError");
+    var btn = document.getElementById("tokenSubmit");
+    err.style.display = "none";
+    if (!tok) return;
+    btn.disabled = true; btn.textContent = "Verificando…";
+    validateToken(tok).then(function (ok) {
+      btn.disabled = false; btn.textContent = "Entrar";
+      if (!ok) { err.textContent = "Token inválido o sin acceso a este repositorio."; err.style.display = "block"; return; }
+      sessionStorage.setItem(TOKEN_KEY, tok);
+      if (remember) localStorage.setItem(TOKEN_KEY, tok);
+      document.getElementById("tokenInput").value = "";
+      showApp();
+    });
+  });
+
   document.getElementById("adminLogoutBtn").addEventListener("click", function () {
-    sessionStorage.removeItem(ADMIN_KEY);
+    if (dirty && !confirm("Tienes cambios sin publicar. ¿Salir de todas formas?")) return;
+    sessionStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem(TOKEN_KEY);
     window.location.href = "index.html";
   });
 
@@ -532,29 +614,129 @@
 
   function migrateProduct(p) {
     var slug = p.slug || slugOf(p) || makeSlug(p.n) || ("producto-" + Date.now());
-    return {
-      slug: slug,
-      n: p.n || "",
-      brand: p.brand || "",
-      cat: p.cat || "piezas",
-      spec: p.spec || "",
-      price: p.price || 0,
-      sku: p.sku || slug.toUpperCase(),
-      units: (typeof p.units === "number") ? p.units : (p.stock === false ? 0 : 12),
-      tag: p.tag || "",
-      imgs: p.imgs || (p.img ? [p.img] : ["assets/img/escena-logo.jpg"])
-    };
+    var m = Object.assign({}, p); // preserve any extra fields (weight, etc.)
+    m.slug = slug;
+    m.n = p.n || "";
+    m.brand = p.brand || "";
+    m.cat = p.cat || "piezas";
+    m.spec = p.spec || "";
+    m.price = p.price || 0;
+    m.sku = p.sku || slug.toUpperCase();
+    m.units = (typeof p.units === "number") ? p.units : (p.stock === false ? 0 : 12);
+    m.tag = p.tag || "";
+    m.published = (p.published === false) ? false : true;
+    m.isNew = p.isNew === true; // added in-panel, no detail page yet
+    m.imgs = p.imgs || (p.img ? [p.img] : ["assets/img/escena-logo.jpg"]);
+    delete m.img; delete m.stock;
+    return m;
   }
 
-  function loadCatalog() {
-    var saved = localStorage.getItem(CATALOG_KEY);
-    if (saved) {
-      try { return JSON.parse(saved).map(migrateProduct); } catch (e) {}
-    }
-    return ESCENA_PRODUCTS.map(migrateProduct);
+  function loadCatalog() { return ESCENA_PRODUCTS.map(migrateProduct); }
+  function cacheDraft() { try { localStorage.setItem(CATALOG_KEY, JSON.stringify(inventoryCatalog)); } catch (e) {} }
+  function clearDraft() { try { localStorage.removeItem(CATALOG_KEY); } catch (e) {} }
+  function saveCatalog() { dirty = true; cacheDraft(); updatePendingUI(); } // now = "mark unpublished"
+  function updatePendingUI() {
+    var note = document.getElementById("pendingNote");
+    if (note) note.style.display = dirty ? "" : "none";
+    var cnt = document.getElementById("invCount");
+    if (cnt) cnt.textContent = inventoryCatalog.length + " productos";
+    var pub = document.getElementById("invPublishBtn");
+    if (pub) { pub.textContent = dirty ? "Publicar en el sitio •" : "Publicar en el sitio"; }
   }
-  function saveCatalog() {
-    localStorage.setItem(CATALOG_KEY, JSON.stringify(inventoryCatalog));
+
+  /* ---- Serialize to site format (preserve all fields, imgs[0] -> img) ---- */
+  function toSiteProduct(p) {
+    var o = Object.assign({}, p);
+    o.img = (p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg";
+    delete o.imgs; delete o.isNew;
+    if (o.published === true) delete o.published; // default; keep only when false
+    if (!o.tag) delete o.tag;
+    return o;
+  }
+
+  /* ---- Guardrails ---- */
+  function validateCatalog() {
+    var errs = [], seen = {};
+    inventoryCatalog.forEach(function (p, i) {
+      var where = '"' + (p.n || ("#" + (i + 1))) + '"';
+      if (!p.n) errs.push("Producto #" + (i + 1) + " sin nombre.");
+      if (!CATEGORY_LABELS[p.cat]) errs.push(where + ": categoría inválida.");
+      if (!(p.price > 0)) errs.push(where + ": el precio debe ser mayor a 0.");
+      if (!p.imgs || !p.imgs.length) errs.push(where + ": falta al menos una foto.");
+      if (seen[p.slug]) errs.push("Código duplicado (" + p.slug + ") en " + where + ".");
+      seen[p.slug] = true;
+    });
+    return errs;
+  }
+
+  /* ---- Image compression (canvas) ---- */
+  function compressDataUri(dataUri, maxDim, quality) {
+    return new Promise(function (resolve) {
+      var img = new Image();
+      img.onload = function () {
+        var w = img.width, h = img.height;
+        if (Math.max(w, h) > maxDim) { var s = maxDim / Math.max(w, h); w = Math.round(w * s); h = Math.round(h * s); }
+        var c = document.createElement("canvas"); c.width = w; c.height = h;
+        c.getContext("2d").drawImage(img, 0, 0, w, h);
+        resolve(c.toDataURL("image/jpeg", quality));
+      };
+      img.onerror = function () { resolve(dataUri); };
+      img.src = dataUri;
+    });
+  }
+
+  /* ---- Publish: commit new photos, then products-data.js ---- */
+  var publishing = false;
+  function publishCatalog() {
+    if (publishing) return;
+    var errs = validateCatalog();
+    if (errs.length) { alert("No se puede publicar:\n\n• " + errs.slice(0, 12).join("\n• ")); return; }
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    publishing = true;
+    var btn = document.getElementById("invPublishBtn");
+    btn.disabled = true; btn.textContent = "Publicando…";
+
+    // 1) find data-URI photos to commit
+    var uploads = [];
+    inventoryCatalog.forEach(function (p) {
+      (p.imgs || []).forEach(function (src, idx) {
+        if (/^data:/.test(src)) uploads.push({ p: p, idx: idx, src: src });
+      });
+    });
+
+    function commitPhotos(i) {
+      if (i >= uploads.length) return Promise.resolve();
+      var u = uploads[i];
+      var name = u.p.slug + (u.idx ? "-" + (u.idx + 1) : "") + ".jpg";
+      var path = "assets/img/products/" + name;
+      return compressDataUri(u.src, 1200, 0.8).then(function (c) {
+        var b64 = c.split(",")[1];
+        return ghGetFile(path).then(function (ex) {
+          return ghPutFile(path, b64, "Add product photo " + name + " (admin)", ex.sha, true);
+        });
+      }).then(function () {
+        u.p.imgs[u.idx] = path; // replace data URI with committed path
+        btn.textContent = "Subiendo fotos… " + (i + 1) + "/" + uploads.length;
+        return commitPhotos(i + 1);
+      });
+    }
+
+    commitPhotos(0).then(function () {
+      var siteArr = inventoryCatalog.map(toSiteProduct);
+      var content = "window.ESCENA_PRODUCTS = " + JSON.stringify(siteArr, null, 1) + ";\n";
+      btn.textContent = "Guardando catálogo…";
+      return ghGetFile("assets/js/products-data.js").then(function (cur) {
+        return ghPutFile("assets/js/products-data.js", content, "Update catalog via admin panel", cur.sha);
+      });
+    }).then(function () {
+      dirty = false; clearDraft(); updatePendingUI();
+      renderInventory(document.getElementById("invSearch").value.trim());
+      showToast("¡Publicado! La tienda se actualiza en ~1 minuto.");
+    }).catch(function (e) {
+      alert("Error al publicar:\n" + e.message + "\n\nNada se dañó — vuelve a intentar.");
+    }).then(function () {
+      publishing = false; btn.disabled = false; updatePendingUI();
+    });
   }
 
   function catOptions(selected) {
@@ -565,9 +747,11 @@
 
   function rowHTML(p, idx) {
     var units = p.units || 0;
-    var statusHTML = units > 0
-      ? '<span class="status-badge ok">En stock</span>'
-      : '<span class="status-badge out">Agotado</span>';
+    var statusHTML = (p.published === false)
+      ? '<span class="status-badge out">Borrador</span>'
+      : (units > 0
+        ? '<span class="status-badge ok">En stock</span>'
+        : '<span class="status-badge out">Agotado</span>');
     var countBadge = p.imgs.length > 1 ? '<span class="thumb-count">+' + (p.imgs.length - 1) + '</span>' : '';
     return '<tr data-idx="' + idx + '">' +
       '<td><div class="thumb"><img src="' + p.imgs[0] + '" alt="" loading="lazy" />' + countBadge + '</div></td>' +
@@ -639,7 +823,16 @@
 
   function initInventory() {
     inventoryCatalog = loadCatalog();
-    saveCatalog();
+    var draft = localStorage.getItem(CATALOG_KEY);
+    if (draft) {
+      try {
+        var d = JSON.parse(draft);
+        if (Array.isArray(d) && d.length && confirm("Tienes cambios sin publicar de una sesión anterior. ¿Restaurarlos?")) {
+          inventoryCatalog = d.map(migrateProduct); dirty = true;
+        } else { clearDraft(); }
+      } catch (e) { clearDraft(); }
+    }
+    updatePendingUI();
     renderInventory("");
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
@@ -706,7 +899,7 @@
       e.preventDefault();
       var name = document.getElementById("pmName").value.trim();
       if (!name) return;
-      var data = {
+      var fields = {
         n: name,
         brand: document.getElementById("pmBrand").value.trim(),
         cat: document.getElementById("pmCat").value,
@@ -718,17 +911,18 @@
         imgs: modalPhotos.length ? modalPhotos : ["assets/img/escena-logo.jpg"]
       };
       if (editingIdx !== null) {
-        var slug = inventoryCatalog[editingIdx].slug;
-        data.slug = slug;
-        if (!data.sku) data.sku = slug.toUpperCase();
-        inventoryCatalog[editingIdx] = data;
+        var cur = inventoryCatalog[editingIdx];
+        Object.assign(cur, fields); // merge -> preserves slug, weight, published, etc.
+        if (!cur.sku) cur.sku = cur.slug.toUpperCase();
         showToast("Producto actualizado");
       } else {
         var newSlug = makeSlug(name) || ("producto-" + Date.now());
-        data.slug = newSlug;
-        if (!data.sku) data.sku = newSlug.toUpperCase();
-        inventoryCatalog.unshift(data);
-        showToast("Producto agregado");
+        fields.slug = newSlug;
+        fields.sku = fields.sku || newSlug.toUpperCase();
+        fields.published = false; // new products stay hidden until their detail page is generated (next update)
+        fields.isNew = true;
+        inventoryCatalog.unshift(fields);
+        showToast("Producto agregado como borrador (oculto en la tienda hasta la próxima versión)");
       }
       saveCatalog();
       closeProductModal();
@@ -767,30 +961,85 @@
     document.getElementById("invImportFile").addEventListener("change", function (e) {
       var file = e.target.files[0];
       if (!file) return;
+      var isCsv = /\.csv$/i.test(file.name);
       var reader = new FileReader();
       reader.onload = function () {
         try {
-          var data = JSON.parse(reader.result);
+          var data = isCsv ? parseCsv(reader.result) : JSON.parse(reader.result);
           if (!Array.isArray(data)) throw new Error("formato inválido");
           inventoryCatalog = data.map(migrateProduct);
           saveCatalog();
           document.getElementById("invSearch").value = "";
           renderInventory("");
-          showToast("Catálogo importado (" + data.length + " productos)");
+          showToast("Importado (" + data.length + " productos) — revisa y Publica");
         } catch (err) {
-          alert("No se pudo leer el archivo JSON: " + err.message);
+          alert("No se pudo leer el archivo: " + err.message);
         }
       };
       reader.readAsText(file);
       e.target.value = "";
     });
+
+    /* ---- Publish to repo ---- */
+    document.getElementById("invPublishBtn").addEventListener("click", publishCatalog);
+
+    /* ---- Bulk price adjust (filtered set) ---- */
+    document.getElementById("invBulkBtn").addEventListener("click", function () {
+      var f = document.getElementById("invSearch").value.trim();
+      var set = f ? inventoryCatalog.filter(matchFilter(f)) : inventoryCatalog;
+      var pct = prompt("Ajustar precio de " + set.length + " producto(s) filtrado(s) en %.\nEj: 10 = subir 10%, -5 = bajar 5%.");
+      if (pct === null || pct === "") return;
+      var f2 = parseFloat(pct);
+      if (isNaN(f2)) { alert("Valor inválido."); return; }
+      set.forEach(function (p) { p.price = Math.max(0, Math.round(p.price * (1 + f2 / 100) / 1000) * 1000); });
+      saveCatalog();
+      renderInventory(f);
+      showToast("Precios ajustados " + (f2 >= 0 ? "+" : "") + f2 + "% — revisa y Publica");
+    });
   }
 
-  if (isAuthed()) {
-    showApp();
-  } else {
-    setTimeout(function () { window.location.href = "index.html?login=1"; }, 1600);
+  function matchFilter(f) {
+    f = f.toLowerCase();
+    return function (p) {
+      return p.n.toLowerCase().indexOf(f) > -1 ||
+        (p.brand || "").toLowerCase().indexOf(f) > -1 ||
+        (p.sku || "").toLowerCase().indexOf(f) > -1 ||
+        (CATEGORY_LABELS[p.cat] || "").toLowerCase().indexOf(f) > -1;
+    };
   }
+
+  function parseCsv(text) {
+    var lines = text.replace(/\r/g, "").split("\n").filter(function (l) { return l.trim(); });
+    var headers = splitCsvLine(lines[0]);
+    return lines.slice(1).map(function (line) {
+      var cells = splitCsvLine(line), o = {};
+      headers.forEach(function (h, i) { o[h] = cells[i]; });
+      if (o.price !== undefined) o.price = parseFloat(o.price) || 0;
+      if (o.units !== undefined) o.units = parseInt(o.units, 10) || 0;
+      if (o.imgs) o.imgs = String(o.imgs).split("|").filter(Boolean);
+      if (o.published !== undefined) o.published = !(o.published === "false" || o.published === false);
+      return o;
+    });
+  }
+  function splitCsvLine(line) {
+    var out = [], cur = "", q = false;
+    for (var i = 0; i < line.length; i++) {
+      var c = line[i];
+      if (q) { if (c === '"') { if (line[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += c; }
+      else { if (c === '"') q = true; else if (c === ",") { out.push(cur); cur = ""; } else cur += c; }
+    }
+    out.push(cur); return out;
+  }
+
+  /* ---- Boot: auto-enter if a valid token is already stored ---- */
+  (function boot() {
+    var tok = getToken();
+    if (!tok) { showGate(); return; }
+    validateToken(tok).then(function (ok) {
+      if (ok) { showApp(); }
+      else { sessionStorage.removeItem(TOKEN_KEY); localStorage.removeItem(TOKEN_KEY); showGate(); }
+    });
+  })();
 </script>
 </body>
 </html>
