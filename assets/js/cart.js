@@ -57,7 +57,7 @@
   /* ---- DOM injection ---- */
   var drawerHTML =
     '<div class="cart-overlay" id="cartOverlay">' +
-      '<div class="cart-drawer">' +
+      '<div class="cart-drawer" role="dialog" aria-modal="true" aria-label="Tu carrito">' +
         '<div class="cart-head"><h3>Tu carrito</h3><button class="cart-close" id="cartClose" aria-label="Cerrar">&times;</button></div>' +
         '<div class="cart-body" id="cartBody"></div>' +
         '<div class="cart-foot">' +
@@ -132,13 +132,20 @@
     }
   }
 
+  var drawerOpenedFrom = null;
   function openDrawer() {
     var ov = document.getElementById("cartOverlay");
-    if (ov) ov.classList.add("show");
+    if (!ov) return;
+    drawerOpenedFrom = document.activeElement;
+    ov.classList.add("show");
+    var closeBtn = document.getElementById("cartClose");
+    if (closeBtn) closeBtn.focus();
   }
   function closeDrawer() {
     var ov = document.getElementById("cartOverlay");
     if (ov) ov.classList.remove("show");
+    if (drawerOpenedFrom && typeof drawerOpenedFrom.focus === "function") drawerOpenedFrom.focus();
+    drawerOpenedFrom = null;
   }
 
   function buildCheckoutMessage() {
