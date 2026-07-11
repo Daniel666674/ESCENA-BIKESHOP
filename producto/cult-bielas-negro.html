@@ -8,6 +8,8 @@
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0A0A0A" />
   <link rel="canonical" href="https://escenabikeshop.com/producto/cult-bielas-negro.html" />
+  <link rel="alternate" hreflang="es-co" href="https://escenabikeshop.com/producto/cult-bielas-negro.html" />
+  <link rel="alternate" hreflang="x-default" href="https://escenabikeshop.com/producto/cult-bielas-negro.html" />
   <meta property="og:type" content="product" />
   <meta property="og:site_name" content="ESCENA BIKE SHOP" />
   <meta property="og:title" content="Cult Bielas 165 — Cult | ESCENA BIKE SHOP" />
@@ -197,7 +199,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 <body>
 
 <div class="nl-overlay" id="nlOverlay">
-  <div class="nl-modal">
+  <div class="nl-modal" role="dialog" aria-modal="true" aria-label="Únete a la escena">
     <button class="nl-close" id="nlClose" aria-label="Cerrar">&times;</button>
     <img src="../assets/img/escena-logo.jpg" alt="ESCENA BMX" />
     <h3>ÚNETE A LA ESCENA</h3>
@@ -330,7 +332,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
         </div>
       </a>
 <a class="r-card" href="kit-eje-espaciadores-plata.html">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/kit-eje-espaciadores-plata.jpg" alt="Kit de Eje y Espaciadores Plata -  BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/kit-eje-espaciadores-plata.jpg" alt="Kit de Eje y Espaciadores Plata BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl"></span>
           <h3>Kit de Eje y Espaciadores Plata</h3>
@@ -409,8 +411,19 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   var nlClose = document.getElementById("nlClose");
   var nlSkip = document.getElementById("nlSkip");
   var nlForm = document.getElementById("nlForm");
-  function openNL(){ nlOverlay.classList.add("show"); sessionStorage.setItem("escena_nl_shown_v1", "1"); }
-  function closeNL(){ nlOverlay.classList.remove("show"); }
+  var nlOpenedFrom = null;
+  function openNL(){
+    nlOpenedFrom = document.activeElement;
+    nlOverlay.classList.add("show");
+    sessionStorage.setItem("escena_nl_shown_v1", "1");
+    var phoneField = document.getElementById("nlPhone");
+    if (phoneField) phoneField.focus();
+  }
+  function closeNL(){
+    nlOverlay.classList.remove("show");
+    if (nlOpenedFrom && typeof nlOpenedFrom.focus === "function") nlOpenedFrom.focus();
+    nlOpenedFrom = null;
+  }
   if (!sessionStorage.getItem("escena_nl_shown_v1")) setTimeout(openNL, 900);
   nlClose.addEventListener("click", closeNL);
   nlSkip.addEventListener("click", closeNL);

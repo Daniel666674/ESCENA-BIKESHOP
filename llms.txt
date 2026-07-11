@@ -6,10 +6,11 @@ ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. V
 
 ## Datos clave
 - Nombre: ESCENA BIKE SHOP
+- Ciudad: Bogotá, Cundinamarca, Colombia
 - País: Colombia
 - Categoría: Tienda de partes y componentes de BMX (BikeStore)
 - Catálogo: más de 100 productos en stock
-- Canal de venta: WhatsApp (pedido directo por chat)
+- Canal de venta: WhatsApp +57 310 763 0504 (pedido directo por chat)
 - Cobertura de envíos: todo Colombia (Interrapidísimo, Servientrega, Coordinadora)
 - Métodos de pago: Nequi, Daviplata, transferencia, efectivo
 - Idioma: Español (Colombia)
@@ -34,7 +35,7 @@ ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. V
 - Piezas varias: kits de freecoaster, cadenas, ejes, amarres
 
 ## Marcas
-Mutanty, Fate, Cult, Fiend, Stolen, TukanBikes, Shadow, Demotilion, Rant, Eclat, Wethepeople, Brainstorm, Animal, BSD, FOODE, Ficción bikes, Federal, Helio, Flybikes, FirBikeCo., Merrit, Kinkbmx, Oddysey, OnTrail, Primo, Sunday, Subrosa, Trueno, Stranger, Tall order, Total, Volume, Valkiria, RedingShoes, Twin, S&M, Odi, KMC, GW, Innova Tire, Cinema, Colony, Profit, TSG, Eighthies, Profile.
+Animal, BSD, Brainstorm, Colony, Cult, Demolition, Éclat, ESCENA, Fate, Federal, Fiend, Fit Bike Co, Iron Fist, Mutany, Odyssey, S&M, Shadow, Stolen, Stranger, Subrosa, Sunday, Tall Order, Total, TukanBikes, Volume, Wethepeople.
 
 ## Páginas
 - Inicio: https://escenabikeshop.com/

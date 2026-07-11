@@ -78,7 +78,7 @@
       '</div>' +
     '</div>' +
     '<div class="wsale-overlay" id="wsaleOverlay">' +
-      '<div class="wsale-modal">' +
+      '<div class="wsale-modal" role="dialog" aria-modal="true" aria-label="Iniciar sesión mayorista">' +
         '<button class="wsale-close" id="wsaleClose" aria-label="Cerrar">&times;</button>' +
         '<div id="wsaleLoggedView" class="wsale-logged-view">' +
           '<span class="wsale-badge">Sesión activa</span>' +
@@ -151,6 +151,7 @@
     document.head.appendChild(style);
   }
 
+  var modalOpenedFrom = null;
   function openModal() {
     var overlay = document.getElementById("wsaleOverlay");
     if (!overlay) return;
@@ -164,13 +165,18 @@
       loggedView.style.display = "none";
       form.style.display = "flex";
     }
+    modalOpenedFrom = document.activeElement;
     overlay.classList.add("show");
+    var firstField = isActive() ? document.getElementById("wsaleGoTienda") : document.getElementById("wsaleEmail");
+    if (firstField) firstField.focus();
   }
   function closeModal() {
     var overlay = document.getElementById("wsaleOverlay");
     if (overlay) overlay.classList.remove("show");
     var err = document.getElementById("wsaleError");
     if (err) err.style.display = "none";
+    if (modalOpenedFrom && typeof modalOpenedFrom.focus === "function") modalOpenedFrom.focus();
+    modalOpenedFrom = null;
   }
 
   function renderBanner() {
