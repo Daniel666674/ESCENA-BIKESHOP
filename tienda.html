@@ -422,6 +422,7 @@ var PRODUCTS = window.ESCENA_PRODUCTS;  var WA = "573107630504";
   }
 
   function slugOf(p){
+    if (p.slug) return p.slug;
     var file = p.img.split("/").pop();
     return file.replace(/\.[a-zA-Z0-9]+$/, "");
   }
@@ -429,15 +430,16 @@ var PRODUCTS = window.ESCENA_PRODUCTS;  var WA = "573107630504";
   function cardHTML(p){
     var wPrefix = (window.EscenaWholesale && window.EscenaWholesale.isActive()) ? "🏷️ PEDIDO MAYORISTA (15% aplicado)\n" : "";
     var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
+    var hasDetailPage = p.img.indexOf("frame-placeholder") === -1;
     var href = "producto/" + slugOf(p) + ".html";
     return '<article class="card">' +
-        '<a class="ph-link" href="'+href+'">' +
+        (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
           '<div class="ph">' + (p.tag ? '<span class="tag">'+p.tag+'</span>' : '') +
             '<img src="'+p.img+'" alt="'+p.n+' - '+p.brand+' BMX" loading="lazy" width="400" height="400"></div>' +
-        '</a>' +
+        (hasDetailPage ? '</a>' : '</div>') +
         '<div class="body">' +
           '<span class="brand-lbl">'+p.brand+'</span>' +
-          '<h3><a class="title-link" href="'+href+'">'+p.n+'</a></h3>' +
+          '<h3>' + (hasDetailPage ? '<a class="title-link" href="'+href+'">'+p.n+'</a>' : p.n) + '</h3>' +
           '<p class="spec">'+p.spec+'</p>' +
           '<div class="price">'+cop(p.price)+'</div>' +
           '<div class="card-actions">' +
