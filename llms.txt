@@ -17,19 +17,20 @@ ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. V
 
 ## Categorías de producto
 - Marcos / frames (street, park y dirt)
-- Stems (front load y top load)
-- Manubrios (cromoly cross brace)
-- Horquillas (cromoly)
+- Cañas / stems (front load y top load)
+- Timones / manubrios (cromoly cross brace)
+- Tenedores / horquillas (cromoly)
 - Bielas / cranks (cromoly 48 spline) y hardware de bielas
-- Bujes / hubs (cassette, freecoaster y delanteros)
+- Manzanas / bujes / hubs (cassette, freecoaster, delanteras y traseras)
 - Rines / rims (doble pared)
-- Piñones / sprockets y guardas de piñón
+- Corazas / llantas / tires
+- Platos / piñones / sprockets y guardas de piñón
 - Pedales (nylon y aluminio)
-- Sillines / seats (pivotal)
+- Sillas / sillines / seats (pivotal)
 - Tijas / seatposts
 - Puños / grips
 - Dirección (headsets) y caja de pedalier (bottom bracket)
-- Clavijas / pegs
+- Pegs
 - Tornillería (incluye titanio)
 - Herramientas (multiherramientas, llaves)
 - Piezas varias: kits de freecoaster, cadenas, ejes, amarres
@@ -60,4 +61,4 @@ Animal, BSD, Brainstorm, Colony, Cult, Demolition, Éclat, ESCENA, Fate, Federal
 
 ## Herramientas del sitio
 - Carrito de compras: acumula productos de cualquier página y arma un solo mensaje de pedido consolidado por WhatsApp.
-- Configurador "Arma tu BMX": guía al usuario en 3 pasos — (1) elegir estilo de manejo (Street, Park o Dirt), con recomendaciones de geometría para cada uno; (2) calcular la talla de marco (top tube) recomendada según la estatura del rider; (3) armar la bici por componente (marco, tenedor, transmisión, ruedas y timón) con precio total y peso estimado en vivo, opción de armar al azar, copiar el link del build y cotizar todo por WhatsApp.
+- Configurador "Arma tu BMX": guía al usuario en 3 pasos — (1) elegir estilo de manejo (Street, Park o Dirt), con recomendaciones de geometría para cada uno; (2) calcular la talla de marco (top tube) recomendada según la estatura del rider; (3) armar la bici componente por componente (marco, tenedor, dirección, timón, caña, puños, bielas, caja de pedalier, plato, manzanas, rines, corazas, tija, silla, pedales y pegs) con un tablero visual que muestra la foto real de cada pieza elegida, precio total y peso estimado en vivo, opción de armar al azar, copiar el link del build y cotizar todo por WhatsApp.
