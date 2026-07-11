@@ -11,10 +11,11 @@
   <meta name="author" content="ESCENA BIKE SHOP" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0A0A0A" />
-  <meta name="geo.region" content="CO" />
-  <meta name="geo.placename" content="Colombia" />
+  <meta name="geo.region" content="CO-DC" />
+  <meta name="geo.placename" content="Bogotá, Colombia" />
   <link rel="canonical" href="https://escenabikeshop.com/tienda.html" />
   <link rel="alternate" hreflang="es-co" href="https://escenabikeshop.com/tienda.html" />
+  <link rel="alternate" hreflang="x-default" href="https://escenabikeshop.com/tienda.html" />
 
   <!-- ============ Open Graph / Social ============ -->
   <meta property="og:type" content="website" />
@@ -241,7 +242,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
 <!-- ============ NEWSLETTER MODAL ============ -->
 <div class="nl-overlay" id="nlOverlay">
-  <div class="nl-modal">
+  <div class="nl-modal" role="dialog" aria-modal="true" aria-label="Únete a la escena">
     <button class="nl-close" id="nlClose" aria-label="Cerrar">&times;</button>
     <img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" />
     <h3>ÚNETE A LA ESCENA</h3>
@@ -435,7 +436,7 @@ var PRODUCTS = window.ESCENA_PRODUCTS;  var WA = "573107630504";
     return '<article class="card">' +
         (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
           '<div class="ph">' + (p.tag ? '<span class="tag">'+p.tag+'</span>' : '') +
-            '<img src="'+p.img+'" alt="'+p.n+' - '+p.brand+' BMX" loading="lazy" width="400" height="400"></div>' +
+            '<img src="'+p.img+'" alt="'+p.n+(p.brand ? ' - '+p.brand : '')+' BMX" loading="lazy" width="400" height="400"></div>' +
         (hasDetailPage ? '</a>' : '</div>') +
         '<div class="body">' +
           '<span class="brand-lbl">'+p.brand+'</span>' +
@@ -524,8 +525,19 @@ var PRODUCTS = window.ESCENA_PRODUCTS;  var WA = "573107630504";
   var nlClose = document.getElementById("nlClose");
   var nlSkip = document.getElementById("nlSkip");
   var nlForm = document.getElementById("nlForm");
-  function openNL(){ nlOverlay.classList.add("show"); sessionStorage.setItem("escena_nl_shown_v1", "1"); }
-  function closeNL(){ nlOverlay.classList.remove("show"); }
+  var nlOpenedFrom = null;
+  function openNL(){
+    nlOpenedFrom = document.activeElement;
+    nlOverlay.classList.add("show");
+    sessionStorage.setItem("escena_nl_shown_v1", "1");
+    var phoneField = document.getElementById("nlPhone");
+    if (phoneField) phoneField.focus();
+  }
+  function closeNL(){
+    nlOverlay.classList.remove("show");
+    if (nlOpenedFrom && typeof nlOpenedFrom.focus === "function") nlOpenedFrom.focus();
+    nlOpenedFrom = null;
+  }
   if (!sessionStorage.getItem("escena_nl_shown_v1")) setTimeout(openNL, 900);
   nlClose.addEventListener("click", closeNL);
   nlSkip.addEventListener("click", closeNL);

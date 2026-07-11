@@ -11,10 +11,11 @@
   <meta name="author" content="ESCENA BIKE SHOP" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0A0A0A" />
-  <meta name="geo.region" content="CO" />
-  <meta name="geo.placename" content="Colombia" />
+  <meta name="geo.region" content="CO-DC" />
+  <meta name="geo.placename" content="Bogotá, Colombia" />
   <link rel="canonical" href="https://escenabikeshop.com/" />
   <link rel="alternate" hreflang="es-co" href="https://escenabikeshop.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://escenabikeshop.com/" />
 
   <!-- ============ Open Graph / Social ============ -->
   <meta property="og:type" content="website" />
@@ -424,7 +425,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
 <!-- ============ NEWSLETTER MODAL ============ -->
 <div class="nl-overlay" id="nlOverlay">
-  <div class="nl-modal">
+  <div class="nl-modal" role="dialog" aria-modal="true" aria-label="Únete a la escena">
     <button class="nl-close" id="nlClose" aria-label="Cerrar">&times;</button>
     <img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" />
     <h3>ÚNETE A LA ESCENA</h3>
@@ -498,7 +499,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <span class="kicker">BMX Shop · Colombia</span>
+      <span class="kicker">BMX Shop · Bogotá, Colombia</span>
       <h1>ESCENA <span class="accent-outline">BMX</span></h1>
       <p class="tagline">Partes que aguantan calle</p>
       <p class="lead">Más de 100 partes originales de las marcas que mueven la escena: stems, manubrios, horquillas, bielas, bujes, piñones, pedales, sillines y más. Directo de la tienda a tu bici — pides por WhatsApp, montas y ruedas.</p>
@@ -634,7 +635,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     <div>
       <span class="eyebrow" style="color:#fff;letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;">Somos ESCENA</span>
       <h2>NO ES UNA TIENDA.<br />ES LA <span class="accent-outline">ESCENA</span>.</h2>
-      <p>ESCENA Bike Shop nació de rodar. Somos riders montando una tienda para riders: partes que probamos, marcas en las que confiamos y precios sin vueltas. Acá no vendemos cualquier cosa — vendemos lo que nos montaríamos nosotros.</p>
+      <p>ESCENA Bike Shop nació de rodar en Bogotá. Somos riders montando una tienda para riders: partes que probamos, marcas en las que confiamos y precios sin vueltas. Acá no vendemos cualquier cosa — vendemos lo que nos montaríamos nosotros.</p>
       <p>Del street al park, del primer 180 al bunny hop de tu vida: si la calle te llama, nosotros te montamos la bici.</p>
       <div class="stats">
         <div><div class="n">100+</div><div class="l">Partes en stock</div></div>
@@ -888,8 +889,19 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   var nlClose = document.getElementById("nlClose");
   var nlSkip = document.getElementById("nlSkip");
   var nlForm = document.getElementById("nlForm");
-  function openNL(){ nlOverlay.classList.add("show"); sessionStorage.setItem("escena_nl_shown_v1", "1"); }
-  function closeNL(){ nlOverlay.classList.remove("show"); }
+  var nlOpenedFrom = null;
+  function openNL(){
+    nlOpenedFrom = document.activeElement;
+    nlOverlay.classList.add("show");
+    sessionStorage.setItem("escena_nl_shown_v1", "1");
+    var phoneField = document.getElementById("nlPhone");
+    if (phoneField) phoneField.focus();
+  }
+  function closeNL(){
+    nlOverlay.classList.remove("show");
+    if (nlOpenedFrom && typeof nlOpenedFrom.focus === "function") nlOpenedFrom.focus();
+    nlOpenedFrom = null;
+  }
   if (!sessionStorage.getItem("escena_nl_shown_v1")) setTimeout(openNL, 900);
   nlClose.addEventListener("click", closeNL);
   nlSkip.addEventListener("click", closeNL);
