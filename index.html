@@ -36,6 +36,7 @@
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="assets/css/cart.css" />
   <script src="assets/js/wholesale.js"></script>
+  <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Date.now()+'"><\/scr'+'ipt>');</script>
 
   <!-- ============ Fonts ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -779,7 +780,9 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
 <script>
   /* ---- Featured products (full catalog lives on tienda.html) ---- */
-  var FEATURED = [
+  /* Curated featured set — resolved to LIVE catalog data by stable slug so
+     price/name/photo/stock always match what the admin publishes. */
+  var FEATURED_FALLBACK = [
     { n:"Caña Volume Front Load", brand:"Volume", spec:"Front load · 48mm · Aluminio pulido plata", price:210000, tag:"Nuevo", img:"assets/img/products/volume-stem-front-load-plata.jpg" },
     { n:"Tenedor Wethepeople Cromado", brand:"Wethepeople", spec:"Cromoly · Tubo recto · Cromado", price:420000, tag:"", img:"assets/img/products/wethepeople-horquilla-cromada.jpg" },
     { n:"Bielas Mutanty Savage 165", brand:"Mutanty", spec:"Cromoly · 48 spline · 165mm · Negro", price:420000, tag:"Top", img:"assets/img/products/mutany-savage-bielas-negro.jpg" },
@@ -789,6 +792,19 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     { n:"Silla Cult x Vans Pivotal", brand:"Cult", spec:"Pivotal slim · Cordura · Negro", price:185000, tag:"Colab", img:"assets/img/products/cult-vans-sillin-negro.jpg" },
     { n:"Pedales Demolition Rosa", brand:"Demolition", spec:"Plataforma nylon · Rosa", price:100000, tag:"", img:"assets/img/products/demolition-pedales-rosa.jpg" }
   ];
+  function _slugFromImg(img){ return (img||"").split("/").pop().replace(/\.[a-zA-Z0-9]+$/, ""); }
+  var _CATALOG = window.ESCENA_PRODUCTS || [];
+  function _findLive(slug){
+    for (var i=0;i<_CATALOG.length;i++){ var p=_CATALOG[i]; if ((p.slug||_slugFromImg(p.img))===slug) return p; }
+    return null;
+  }
+  var FEATURED = FEATURED_FALLBACK.map(function(fb){
+    var live = _findLive(_slugFromImg(fb.img));
+    if (live && live.published !== false) {
+      return { n:live.n, brand:live.brand, spec:live.spec, price:live.price, tag:live.tag||"", img:live.img||fb.img, units:live.units };
+    }
+    return fb;
+  });
   var WA = "573107630504";
   function cop(n){
     if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
