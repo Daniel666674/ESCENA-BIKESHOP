@@ -413,7 +413,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
 <script src="assets/js/products-data.js"></script>
 <script>
-var PRODUCTS = window.ESCENA_PRODUCTS;  var WA = "573107630504";
+var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.published !== false; });  var WA = "573107630504";
   var PAGE_SIZE = 12;
   var currentFilter = "all";
   var currentPage = 1;
@@ -443,9 +443,11 @@ var PRODUCTS = window.ESCENA_PRODUCTS;  var WA = "573107630504";
     var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
     var hasDetailPage = p.cat !== "marcos" && p.img.indexOf("frame-placeholder") === -1;
     var href = "producto/" + slugOf(p) + ".html";
-    return '<article class="card">' +
+    var agotado = (typeof p.units === "number" && p.units <= 0);
+    var tagHTML = agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+p.tag+'</span>' : '');
+    return '<article class="card' + (agotado ? ' is-agotado' : '') + '">' +
         (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
-          '<div class="ph">' + (p.tag ? '<span class="tag">'+p.tag+'</span>' : '') +
+          '<div class="ph">' + tagHTML +
             '<img src="'+p.img+'" alt="'+p.n+(p.brand ? ' - '+p.brand : '')+' BMX" loading="lazy" width="400" height="400"></div>' +
         (hasDetailPage ? '</a>' : '</div>') +
         '<div class="body">' +
@@ -454,8 +456,10 @@ var PRODUCTS = window.ESCENA_PRODUCTS;  var WA = "573107630504";
           '<p class="spec">'+p.spec+'</p>' +
           '<div class="price">'+cop(p.price)+'</div>' +
           '<div class="card-actions">' +
-            '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
-            '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+p.n+'" data-brand="'+p.brand+'" data-price="'+p.price+'" data-img="'+p.img+'">Agregar al carrito</button>' +
+            (agotado
+              ? '<span class="buy" style="opacity:.5;pointer-events:none;text-align:center;">Agotado</span>'
+              : '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
+                '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+p.n+'" data-brand="'+p.brand+'" data-price="'+p.price+'" data-img="'+p.img+'">Agregar al carrito</button>') +
           '</div>' +
         '</div>' +
       '</article>';

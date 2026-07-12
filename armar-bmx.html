@@ -607,7 +607,7 @@ function cop(n){
 function slugOf(p){ return p.slug || p.img.split("/").pop().replace(/\.[a-zA-Z0-9]+$/, ""); }
 
 function slotProducts(slot){
-  var list = ESCENA_PRODUCTS.filter(function(p){ return p.cat === slot.cat; });
+  var list = ESCENA_PRODUCTS.filter(function(p){ return p.cat === slot.cat && p.published !== false; });
   if (slot.match) { list = list.filter(slot.match); }
   if (slot.key === "marco" && state.style) {
     list = list.filter(function(p){ return p.styles && p.styles.indexOf(state.style) !== -1; });
@@ -1041,7 +1041,7 @@ function loadFromURL(){
     var v = params.get(s.key);
     if (v === "none") { state.picks[s.key] = "none"; return; }
     if (v) {
-      var pool = ESCENA_PRODUCTS.filter(function(p){ return p.cat === s.cat; });
+      var pool = ESCENA_PRODUCTS.filter(function(p){ return p.cat === s.cat && p.published !== false; });
       var found = pool.find(function(p){ return slugOf(p) === v; });
       if (found) state.picks[s.key] = found;
     }
