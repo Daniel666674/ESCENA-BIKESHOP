@@ -1,28 +1,36 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
+Disallow: /producto/_template.html
 
 # AI / generative engines (GEO)
 User-agent: GPTBot
 Allow: /
 Disallow: /admin.html
+Disallow: /producto/_template.html
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /admin.html
+Disallow: /producto/_template.html
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /admin.html
+Disallow: /producto/_template.html
 User-agent: PerplexityBot
 Allow: /
 Disallow: /admin.html
+Disallow: /producto/_template.html
 User-agent: ClaudeBot
 Allow: /
 Disallow: /admin.html
+Disallow: /producto/_template.html
 User-agent: Claude-Web
 Allow: /
 Disallow: /admin.html
+Disallow: /producto/_template.html
 User-agent: Google-Extended
 Allow: /
 Disallow: /admin.html
+Disallow: /producto/_template.html
 
 Sitemap: https://escenabikeshop.com/sitemap.xml
