@@ -628,7 +628,6 @@
     m.units = (typeof p.units === "number") ? p.units : (p.stock === false ? 0 : 12);
     m.tag = p.tag || "";
     m.published = (p.published === false) ? false : true;
-    m.isNew = p.isNew === true; // added in-panel, no detail page yet
     m.imgs = p.imgs || (p.img ? [p.img] : ["assets/img/escena-logo.jpg"]);
     delete m.img; delete m.stock;
     return m;
@@ -651,7 +650,7 @@
   function toSiteProduct(p) {
     var o = Object.assign({}, p);
     o.img = (p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg";
-    delete o.imgs; delete o.isNew;
+    delete o.imgs;
     if (o.published === true) delete o.published; // default; keep only when false
     if (!o.tag) delete o.tag;
     return o;
@@ -704,7 +703,7 @@
   }
   function relatedFor(p) {
     var rel = inventoryCatalog.filter(function (q) {
-      return q !== p && q.cat === p.cat && q.published !== false && !q.isNew && q.cat !== "marcos" &&
+      return q !== p && q.cat === p.cat && q.published !== false && q.cat !== "marcos" &&
         (q.imgs && q.imgs[0] && q.imgs[0].indexOf("frame-placeholder") === -1 && q.imgs[0].indexOf("data:") !== 0);
     }).slice(0, 4);
     if (!rel.length) return "";
@@ -766,9 +765,12 @@
       });
     }
 
-    // products needing a generated detail page (added in-panel, real photo, not frames)
+    // Products still needing onboarding (not frames): driven by the durable
+    // `published` flag, not a client-only flag, so a product that didn't
+    // finish onboarding in an earlier session (page-gen skipped, tab closed,
+    // etc.) is retried automatically on every publish until it succeeds.
     var newPages = inventoryCatalog.filter(function (p) {
-      return p.isNew && p.cat !== "marcos" && p.imgs && p.imgs[0] && p.imgs[0].indexOf("frame-placeholder") === -1;
+      return p.published === false && p.cat !== "marcos" && p.imgs && p.imgs[0] && p.imgs[0].indexOf("frame-placeholder") === -1;
     });
     var createdSlugs = [];
 
@@ -792,8 +794,8 @@
         return makePage(0);
       });
     }).then(function () {
-      // mark newly-paged products live
-      inventoryCatalog.forEach(function (p) { if (p.isNew && (p.cat === "marcos" || createdSlugs.indexOf(p.slug) > -1)) { p.published = true; p.isNew = false; } });
+      // mark newly-paged (or frame) products live
+      inventoryCatalog.forEach(function (p) { if (p.published === false && (p.cat === "marcos" || createdSlugs.indexOf(p.slug) > -1)) { p.published = true; } });
       // add new pages to sitemap.xml
       if (!createdSlugs.length) return Promise.resolve();
       return ghGetFile("sitemap.xml").then(function (sm) {
@@ -1000,7 +1002,6 @@
         fields.slug = newSlug;
         fields.sku = fields.sku || newSlug.toUpperCase();
         fields.published = false; // goes live when Publicar generates its page
-        fields.isNew = true;
         inventoryCatalog.unshift(fields);
         showToast("Producto agregado. Al Publicar se crea su página y aparece en la tienda.");
       }
