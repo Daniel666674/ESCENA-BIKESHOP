@@ -23,14 +23,14 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg"
  },
  {
-  "n": "Caña Fiend Fiending Negra",
+  "n": "Silla Fiend Fiending Negra",
   "brand": "Fiend",
-  "cat": "stems",
-  "spec": "Front load · Negro mate",
+  "cat": "sillines",
+  "spec": "Negro",
   "price": 195000,
   "slug": "fiend-fiending-stem-negro",
-  "sku": "FIEND-FIENDING-STEM-NEGRO",
-  "units": 12,
+  "sku": "FIEND-FIENDING-SILLA-NEGRO",
+  "units": 3,
   "img": "assets/img/products/fiend-fiending-stem-negro.jpg"
  },
  {
