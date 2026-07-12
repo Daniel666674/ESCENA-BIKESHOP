@@ -194,7 +194,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Wethepeople",
   "cat": "horquillas",
   "spec": "Cromoly · Tubo recto · Cromado",
-  "price": 420000,
+  "price": 800000,
   "weight": 0.62,
   "slug": "wethepeople-horquilla-cromada",
   "sku": "WETHEPEOPLE-HORQUILLA-CROMADA",
