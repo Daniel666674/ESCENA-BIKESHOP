@@ -23,14 +23,14 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg"
  },
  {
-  "n": "Silla Fiend Fiending Negra",
+  "n": "Caña Fiend Fiending Negra",
   "brand": "Fiend",
-  "cat": "sillines",
-  "spec": "Negro",
+  "cat": "stems",
+  "spec": "Front load · Negro mate",
   "price": 195000,
   "slug": "fiend-fiending-stem-negro",
-  "sku": "FIEND-FIENDING-SILLA-NEGRO",
-  "units": 3,
+  "sku": "FIEND-FIENDING-STEM-NEGRO",
+  "units": 12,
   "img": "assets/img/products/fiend-fiending-stem-negro.jpg"
  },
  {
@@ -202,15 +202,15 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/horquilla-cromoly-negra-01.jpg"
  },
  {
-  "n": "Tenedor Federal Cromado",
+  "n": "Tenedor Federal Assault – Cromado",
   "brand": "Federal",
   "cat": "horquillas",
-  "spec": "Cromoly · Tubo recto · Cromado",
-  "price": 430000,
+  "spec": "Material Full Cr-mo Tratado al calor Garantía de 1 Año Incluye tapón en aluminio Peso: 932 Gramos Disponible este color",
+  "price": 690000,
   "weight": 0.64,
   "slug": "federal-horquilla-cromada",
   "sku": "FEDERAL-HORQUILLA-CROMADA",
-  "units": 12,
+  "units": 3,
   "img": "assets/img/products/federal-horquilla-cromada.jpg"
  },
  {
