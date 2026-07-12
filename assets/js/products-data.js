@@ -9,7 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "slug": "tenedor-cult-sect-v4-cromado-18mm",
   "published": false,
-  "img": "assets/img/escena-logo.jpg"
+  "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg"
  },
  {
   "n": "Caña Volume Front Load",
