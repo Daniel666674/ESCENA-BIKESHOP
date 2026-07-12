@@ -178,11 +178,11 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg"
  },
  {
-  "n": "Timón Negro Bajo",
-  "brand": "",
+  "n": "Timón Mutanty Radical 9.25\" Negro",
+  "brand": "Mutanty",
   "cat": "manubrios",
-  "spec": "Cromoly · Low rise · Negro mate",
-  "price": 220000,
+  "spec": "Timón Mutanty Radical 9.5\" Negro",
+  "price": 165000,
   "weight": 0.78,
   "slug": "manubrio-cromoly-negro-04",
   "sku": "MANUBRIO-CROMOLY-NEGRO-04",
