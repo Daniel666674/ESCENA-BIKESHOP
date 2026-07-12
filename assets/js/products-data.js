@@ -129,10 +129,10 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cult-sillin-cuadros.jpg"
  },
  {
-  "n": "Timón Cromoly Negro",
-  "brand": "",
+  "n": "Timón Cult Devon 9.5\" Negro",
+  "brand": "Cult",
   "cat": "manubrios",
-  "spec": "Cromoly · Cross brace · Negro mate",
+  "spec": "Timón Cult Devon 9.5\" Negro",
   "price": 370000,
   "weight": 0.85,
   "slug": "manubrio-cromoly-negro-01",
@@ -141,8 +141,8 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg"
  },
  {
-  "n": "Timón Cromado",
-  "brand": "",
+  "n": "Timón Cult Devon 9.5\" Cromado",
+  "brand": "Cult",
   "cat": "manubrios",
   "spec": "Timon Cult Devon 9.5\" Cromado",
   "price": 390000,
