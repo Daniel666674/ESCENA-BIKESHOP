@@ -688,6 +688,48 @@
     });
   }
 
+  /* ---- Product-page generation ---- */
+  function copFmt(n) { return "$" + Math.round(n || 0).toLocaleString("es-CO"); }
+  function jsonEsc(s) { return JSON.stringify(String(s == null ? "" : s)).slice(1, -1); }
+  function specRows(spec, catLabel, brand) {
+    var parts = (spec || "").split("·").map(function (x) { return x.trim(); }).filter(Boolean);
+    var r = parts.map(function (v, i) { return '<div class="spec-row"><div class="k">Detalle ' + (i + 1) + '</div><div class="v">' + esc(v) + '</div></div>'; });
+    r.push('<div class="spec-row"><div class="k">Categoría</div><div class="v">' + esc(catLabel) + '</div></div>');
+    if (brand) r.push('<div class="spec-row"><div class="k">Marca</div><div class="v">' + esc(brand) + '</div></div>');
+    return r.join('\n');
+  }
+  function waHrefFor(p) {
+    var t = "Hola ESCENA 🐕, quiero pedir: " + p.n + (p.brand ? " (" + p.brand + ")" : "") + " — " + copFmt(p.price) + " COP. ¿Está disponible?";
+    return "https://wa.me/573107630504?text=" + encodeURIComponent(t);
+  }
+  function relatedFor(p) {
+    var rel = inventoryCatalog.filter(function (q) {
+      return q !== p && q.cat === p.cat && q.published !== false && !q.isNew && q.cat !== "marcos" &&
+        (q.imgs && q.imgs[0] && q.imgs[0].indexOf("frame-placeholder") === -1 && q.imgs[0].indexOf("data:") !== 0);
+    }).slice(0, 4);
+    if (!rel.length) return "";
+    var cards = rel.map(function (q) {
+      var img = "../" + ((q.imgs && q.imgs[0]) || ("assets/img/products/" + q.slug + ".jpg"));
+      var tag = q.tag ? '<span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">' + esc(q.tag) + '</span>' : '';
+      return '<a class="r-card" href="' + q.slug + '.html">\n        <div class="ph" style="position:relative;">' + tag + '<img src="' + img + '" alt="' + esc(q.n) + (q.brand ? ' - ' + esc(q.brand) : '') + ' BMX" loading="lazy" width="300" height="300" /></div>\n        <div class="body">\n          <span class="brand-lbl">' + esc(q.brand || "") + '</span>\n          <h3>' + esc(q.n) + '</h3>\n          <div class="price">' + copFmt(q.price) + ' COP</div>\n        </div>\n      </a>';
+    });
+    return '<div class="related">\n  <h2>También te puede gustar</h2>\n  <div class="related-grid">\n    ' + cards.join('\n') + '\n  </div>\n</div>';
+  }
+  function genPage(p, tmpl) {
+    var catLabel = CATEGORY_LABELS[p.cat] || p.cat, sku = p.sku || p.slug.toUpperCase();
+    var m = {
+      NAME: esc(p.n), BRAND: esc(p.brand || ""), PRICE: String(p.price), PRICE_FMT: copFmt(p.price),
+      SPEC: esc(p.spec || ""), SLUG: p.slug, CAT_SLUG: p.cat, CAT_LABEL: esc(catLabel), SKU: esc(sku),
+      TAG_SPAN: p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '',
+      SPEC_ROWS: specRows(p.spec, catLabel, p.brand), WA_HREF: waHrefFor(p), RELATED_SECTION: relatedFor(p),
+      NAME_JSON: jsonEsc(p.n), BRAND_JSON: jsonEsc(p.brand || ""), SPEC_JSON: jsonEsc(p.spec || ""),
+      CAT_LABEL_JSON: jsonEsc(catLabel), SKU_JSON: jsonEsc(sku)
+    };
+    var out = tmpl;
+    Object.keys(m).forEach(function (k) { out = out.split('{{' + k + '}}').join(m[k]); });
+    return out;
+  }
+
   /* ---- Publish: commit new photos, then products-data.js ---- */
   var publishing = false;
   function publishCatalog() {
@@ -724,7 +766,47 @@
       });
     }
 
+    // products needing a generated detail page (added in-panel, real photo, not frames)
+    var newPages = inventoryCatalog.filter(function (p) {
+      return p.isNew && p.cat !== "marcos" && p.imgs && p.imgs[0] && p.imgs[0].indexOf("frame-placeholder") === -1;
+    });
+    var createdSlugs = [];
+
     commitPhotos(0).then(function () {
+      if (!newPages.length) return Promise.resolve();
+      btn.textContent = "Creando páginas…";
+      return ghGetFile("producto/_template.html").then(function (tf) {
+        if (!tf.text) throw new Error("Falta la plantilla producto/_template.html");
+        function makePage(i) {
+          if (i >= newPages.length) return Promise.resolve();
+          var p = newPages[i];
+          var html = genPage(p, tf.text);
+          return ghGetFile("producto/" + p.slug + ".html").then(function (ex) {
+            return ghPutFile("producto/" + p.slug + ".html", html, "Add product page " + p.slug + " (admin)", ex.sha);
+          }).then(function () {
+            createdSlugs.push(p.slug);
+            btn.textContent = "Creando páginas… " + (i + 1) + "/" + newPages.length;
+            return makePage(i + 1);
+          });
+        }
+        return makePage(0);
+      });
+    }).then(function () {
+      // mark newly-paged products live
+      inventoryCatalog.forEach(function (p) { if (p.isNew && (p.cat === "marcos" || createdSlugs.indexOf(p.slug) > -1)) { p.published = true; p.isNew = false; } });
+      // add new pages to sitemap.xml
+      if (!createdSlugs.length) return Promise.resolve();
+      return ghGetFile("sitemap.xml").then(function (sm) {
+        if (!sm.text) return;
+        var today = new Date().toISOString().slice(0, 10);
+        var adds = createdSlugs.filter(function (s) { return sm.text.indexOf("/producto/" + s + ".html") === -1; }).map(function (s) {
+          return "  <url>\n    <loc>https://escenabikeshop.com/producto/" + s + ".html</loc>\n    <lastmod>" + today + "</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>";
+        });
+        if (!adds.length) return;
+        var xml = sm.text.replace("</urlset>", adds.join("\n") + "\n</urlset>");
+        return ghPutFile("sitemap.xml", xml, "Add " + adds.length + " product page(s) to sitemap (admin)", sm.sha);
+      });
+    }).then(function () {
       var siteArr = inventoryCatalog.map(toSiteProduct);
       var content = "window.ESCENA_PRODUCTS = " + JSON.stringify(siteArr, null, 1) + ";\n";
       btn.textContent = "Guardando catálogo…";
@@ -917,10 +999,10 @@
         var newSlug = makeSlug(name) || ("producto-" + Date.now());
         fields.slug = newSlug;
         fields.sku = fields.sku || newSlug.toUpperCase();
-        fields.published = false; // new products stay hidden until their detail page is generated (next update)
+        fields.published = false; // goes live when Publicar generates its page
         fields.isNew = true;
         inventoryCatalog.unshift(fields);
-        showToast("Producto agregado como borrador (oculto en la tienda hasta la próxima versión)");
+        showToast("Producto agregado. Al Publicar se crea su página y aparece en la tienda.");
       }
       saveCatalog();
       closeProductModal();
