@@ -319,6 +319,7 @@
           <input type="file" id="invImportFile" accept=".json,.csv" style="display:none;" />
           <button type="button" class="btn btn-outline btn-sm" id="invExportCsvBtn">Exportar CSV</button>
           <button type="button" class="btn btn-outline btn-sm" id="invExportBtn">Exportar JSON</button>
+          <button type="button" class="btn btn-outline btn-sm" id="invDiscardBtn">Descartar cambios</button>
           <button type="button" class="btn btn-ink btn-sm" id="invPublishBtn">Publicar en el sitio</button>
         </div>
       </div>
@@ -619,6 +620,8 @@
     m.n = p.n || "";
     m.brand = p.brand || "";
     m.cat = p.cat || "piezas";
+    var LEGACY_CAT = { bujes: "manzana-trasera", dc: "caja-centro" };
+    if (LEGACY_CAT[m.cat]) m.cat = LEGACY_CAT[m.cat];
     m.spec = p.spec || "";
     m.price = p.price || 0;
     m.sku = p.sku || slug.toUpperCase();
@@ -822,16 +825,11 @@
   }
 
   function initInventory() {
+    // Always load the live catalog fresh from the repo. Never restore an old
+    // cross-session draft — a stale copy can silently revert live changes.
+    clearDraft();
     inventoryCatalog = loadCatalog();
-    var draft = localStorage.getItem(CATALOG_KEY);
-    if (draft) {
-      try {
-        var d = JSON.parse(draft);
-        if (Array.isArray(d) && d.length && confirm("Tienes cambios sin publicar de una sesión anterior. ¿Restaurarlos?")) {
-          inventoryCatalog = d.map(migrateProduct); dirty = true;
-        } else { clearDraft(); }
-      } catch (e) { clearDraft(); }
-    }
+    dirty = false;
     updatePendingUI();
     renderInventory("");
 
@@ -983,6 +981,13 @@
     /* ---- Publish to repo ---- */
     document.getElementById("invPublishBtn").addEventListener("click", publishCatalog);
 
+    /* ---- Discard local (unpublished) changes -> reload live catalog ---- */
+    document.getElementById("invDiscardBtn").addEventListener("click", function () {
+      if (!dirty || confirm("Descartar los cambios sin publicar y recargar el catálogo del sitio?")) {
+        clearDraft(); dirty = false; window.location.reload();
+      }
+    });
+
     /* ---- Bulk price adjust (filtered set) ---- */
     document.getElementById("invBulkBtn").addEventListener("click", function () {
       var f = document.getElementById("invSearch").value.trim();
@@ -1030,6 +1035,11 @@
     }
     out.push(cur); return out;
   }
+
+  /* ---- Warn before leaving with unpublished changes ---- */
+  window.addEventListener("beforeunload", function (e) {
+    if (dirty) { e.preventDefault(); e.returnValue = ""; }
+  });
 
   /* ---- Boot: auto-enter if a valid token is already stored ---- */
   (function boot() {
