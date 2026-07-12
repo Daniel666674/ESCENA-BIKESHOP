@@ -58,11 +58,11 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/fiend-fiending-stem-morado.jpg"
  },
  {
-  "n": "Bielas Mutanty Savage 165",
+  "n": "Bielas Mutanty Savage 170MM",
   "brand": "Mutanty",
   "cat": "bielas",
-  "spec": "Cromoly · 48 spline · 165mm · Negro",
-  "price": 420000,
+  "spec": "Cromoly · 48 spline · 170mm · Negro",
+  "price": 590000,
   "tag": "Top",
   "weight": 1.6,
   "slug": "mutany-savage-bielas-negro",
@@ -71,11 +71,11 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/mutany-savage-bielas-negro.jpg"
  },
  {
-  "n": "Bielas Fiend 165",
+  "n": "Bielas Fiend Segment Negras 165MM",
   "brand": "Fiend",
   "cat": "bielas",
   "spec": "Cromoly · 48 spline · 165mm · Negro",
-  "price": 390000,
+  "price": 870000,
   "weight": 1.55,
   "slug": "fiend-bielas-negro",
   "sku": "FIEND-BIELAS-NEGRO",
@@ -83,11 +83,11 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/fiend-bielas-negro.jpg"
  },
  {
-  "n": "Bielas Cult 165",
+  "n": "Bielas Cult Hawk 165",
   "brand": "Cult",
   "cat": "bielas",
   "spec": "Cromoly heat-treated · 165mm · Negro",
-  "price": 410000,
+  "price": 790000,
   "weight": 1.58,
   "slug": "cult-bielas-negro",
   "sku": "CULT-BIELAS-NEGRO",
