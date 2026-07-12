@@ -450,14 +450,13 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/stem-plata-pulido.jpg"
  },
  {
-  "n": "Caña ESCENA Grabada",
-  "brand": "ESCENA",
+  "n": "Caña Shadow",
+  "brand": "shadow",
   "cat": "stems",
   "spec": "Top load CNC",
   "price": 250000,
-  "tag": "Edición",
   "slug": "escena-stem-grabado-plata",
-  "sku": "ESCENA-STEM-GRABADO-PLATA",
+  "sku": "SHADOW-STEM-CHULA",
   "units": 12,
   "img": "assets/img/products/escena-stem-grabado-plata.jpg"
  },
