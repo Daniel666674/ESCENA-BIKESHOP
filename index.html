@@ -177,8 +177,14 @@
 
     /* ============ HERO (split layout) ============ */
     .hero { position: relative; background: var(--ink); padding: 6rem 1.5rem; overflow: hidden; min-height: 82vh; display: flex; align-items: center; isolation: isolate; }
-    .hero-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; z-index: 0; }
+    .hero-carousel { position: absolute; inset: 0; z-index: 0; }
+    .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center 35%; opacity: 0; transition: opacity 1.1s ease; }
+    .hero-slide.is-active { opacity: 1; }
     .hero-bg-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.72) 38%, rgba(10,10,10,.4) 68%, rgba(10,10,10,.55) 100%); }
+    .hero-dots { position: absolute; z-index: 2; left: 50%; bottom: 1.6rem; transform: translateX(-50%); display: flex; gap: .5rem; }
+    .hero-dots button { width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(255,255,255,.6); background: rgba(255,255,255,.25); padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
+    .hero-dots button.is-active { background: #fff; transform: scale(1.25); }
+    @media (max-width: 900px) { .hero-dots { bottom: 1rem; } }
     .hero .wrap { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; width: 100%; }
     .hero-copy { max-width: 640px; }
     .hero-copy .kicker { color: #fff; font-size: .76rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .9rem; display: block; }
@@ -193,14 +199,14 @@
 
     @media (max-width: 900px) {
       .hero { min-height: 62vh; padding: 3.6rem 1.5rem; text-align: center; }
-      .hero-bg-video { object-position: center 22%; }
+      .hero-slide { background-position: center 22%; }
       .hero-bg-overlay { background: linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.75) 65%, rgba(10,10,10,.9) 100%); }
       .hero-copy { max-width: none; }
       .hero-copy .btns { justify-content: center; }
       .hero-stats { justify-content: center; }
       .hero-copy p.lead { margin-left: auto; margin-right: auto; }
     }
-    @media (prefers-reduced-motion: reduce) { .hero-bg-video { display: none; } }
+    @media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }
 
     /* ============ BRAND MARQUEE (replaces old impact-band rotator) ============ */
     .brand-marquee { position: relative; background: var(--ink); padding: 2.6rem 0 0; overflow: hidden; isolation: isolate; }
@@ -482,10 +488,15 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
 <!-- ============ HERO (split) ============ -->
 <section class="hero">
-  <video class="hero-bg-video" id="heroBgVideo" autoplay muted loop playsinline>
-    <source src="assets/video/video2.mp4" type="video/mp4" />
-  </video>
+  <div class="hero-carousel" id="heroCarousel" aria-hidden="true">
+    <div class="hero-slide is-active" style="background-image:url('assets/img/products/federal-horquilla-cromada.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/products/eclat-trippin-rin-negro.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/products/cult-bielas-negro.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/products/bsd-stem-negro.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/products/odyssey-buje-cassette-negro.jpg')"></div>
+  </div>
   <div class="hero-bg-overlay"></div>
+  <div class="hero-dots" id="heroDots" role="tablist" aria-label="Fotos destacadas"></div>
   <div class="wrap">
     <div class="hero-copy">
       <span class="kicker">BMX Shop · Bogotá, Colombia</span>
@@ -848,11 +859,59 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
   nav.addEventListener("click", function(e){ if(e.target.tagName==="A") nav.classList.remove("open"); });
 
-  /* ---- Respect reduced-motion for hero background video ---- */
-  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    var heroVid = document.getElementById("heroBgVideo");
-    if (heroVid) heroVid.pause();
-  }
+  /* ---- Hero image carousel ---- */
+  (function heroCarousel(){
+    var wrap = document.getElementById("heroCarousel");
+    var dotsWrap = document.getElementById("heroDots");
+    if (!wrap || !dotsWrap) return;
+    var slides = Array.prototype.slice.call(wrap.querySelectorAll(".hero-slide"));
+    if (slides.length < 2) return;
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var idx = 0, timer = null;
+
+    dotsWrap.innerHTML = slides.map(function(_, i){
+      return '<button type="button" class="' + (i === 0 ? 'is-active' : '') + '" data-i="' + i + '" aria-label="Foto ' + (i + 1) + '"></button>';
+    }).join("");
+    var dots = Array.prototype.slice.call(dotsWrap.querySelectorAll("button"));
+
+    function show(i){
+      idx = (i + slides.length) % slides.length;
+      slides.forEach(function(s, n){ s.classList.toggle("is-active", n === idx); });
+      dots.forEach(function(d, n){ d.classList.toggle("is-active", n === idx); });
+    }
+    function next(){ show(idx + 1); }
+    function start(){
+      if (reduceMotion) return;
+      stop();
+      timer = setInterval(next, 5000);
+    }
+    function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+
+    dotsWrap.addEventListener("click", function(e){
+      var btn = e.target.closest("button[data-i]");
+      if (!btn) return;
+      show(parseInt(btn.getAttribute("data-i"), 10));
+      start();
+    });
+
+    var heroEl = wrap.closest(".hero");
+    if (heroEl) {
+      heroEl.addEventListener("mouseenter", stop);
+      heroEl.addEventListener("mouseleave", start);
+    }
+
+    var touchStartX = null;
+    wrap.addEventListener("touchstart", function(e){ touchStartX = e.touches[0].clientX; stop(); }, { passive: true });
+    wrap.addEventListener("touchend", function(e){
+      if (touchStartX === null) return;
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) show(idx + (dx < 0 ? 1 : -1));
+      touchStartX = null;
+      start();
+    }, { passive: true });
+
+    start();
+  })();
 
   /* ---- Brand marquee ---- */
   var BRAND_LOGOS = [
