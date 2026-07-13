@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "{{NAME_JSON}}", "image": "https://escenabikeshop.com/assets/img/products/{{SLUG}}.jpg", "description": "{{NAME_JSON}} ({{BRAND_JSON}}) — {{SPEC_JSON}}.", "sku": "{{SKU_JSON}}", "brand": {"@type": "Brand", "name": "{{BRAND_JSON}}"}, "category": "{{CAT_LABEL_JSON}}", "offers": {"@type": "Offer", "url": "https://escenabikeshop.com/producto/{{SLUG}}.html", "priceCurrency": "COP", "price": "{{PRICE}}", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "seller": {"@type": "Organization", "name": "ESCENA BIKE SHOP"}}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "{{NAME_JSON}}", "image": "https://escenabikeshop.com/assets/img/products/{{SLUG}}.jpg", "description": "{{NAME_JSON}} ({{BRAND_JSON}}) — {{SPEC_JSON}}.", "sku": "{{SKU_JSON}}", "brand": {"@type": "Brand", "name": "{{BRAND_JSON}}"}, "category": "{{CAT_LABEL_JSON}}", "offers": {"@type": "Offer", "url": "https://escenabikeshop.com/producto/{{SLUG}}.html", "priceCurrency": "COP", "price": "{{PRICE}}", "availability": "{{AVAILABILITY}}", "itemCondition": "https://schema.org/NewCondition", "seller": {"@type": "Organization", "name": "ESCENA BIKE SHOP"}}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://escenabikeshop.com/"}, {"@type": "ListItem", "position": 2, "name": "Tienda", "item": "https://escenabikeshop.com/tienda.html"}, {"@type": "ListItem", "position": 3, "name": "{{CAT_LABEL_JSON}}", "item": "https://escenabikeshop.com/tienda.html?cat={{CAT_SLUG}}"}, {"@type": "ListItem", "position": 4, "name": "{{NAME_JSON}}", "item": "https://escenabikeshop.com/producto/{{SLUG}}.html"}]}</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -92,8 +92,14 @@
     .pdp-image .tag { position: absolute; top: .9rem; left: .9rem; background: #fff; color: var(--ink); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .32rem .6rem; border-radius: 3px; }
     .pdp-info .brand-lbl { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
     .pdp-info h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: .02em; margin: .35rem 0 1rem; line-height: 1.05; }
-    .pdp-price { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: .02em; margin-bottom: 1.4rem; }
+    .pdp-price { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: .02em; margin-bottom: .5rem; }
+    .pdp-stock-hint { font-size: .78rem; font-weight: 700; margin: 0 0 .9rem; min-height: 1em; }
+    .pdp-stock-hint:empty { margin: 0 0 1.4rem; }
+    .pdp-stock-hint.is-low { color: #c0392b; }
+    .pdp-stock-hint.is-out { color: #c0392b; text-transform: uppercase; letter-spacing: .04em; }
     .pdp-actions { display: flex; flex-direction: column; gap: .7rem; max-width: 340px; margin-bottom: 1.6rem; }
+    .pdp-actions.is-agotado .add-cart-btn, .pdp-actions.is-agotado .pdp-qty { opacity: .5; }
+    .add-cart-btn:disabled { cursor: not-allowed; }
     .pdp-qty { display: inline-flex; align-items: center; gap: .4rem; border: 1.5px solid var(--line); border-radius: 6px; padding: .2rem .3rem; align-self: flex-start; }
     .pdp-qty button { width: 28px; height: 28px; border: none; background: none; cursor: pointer; font-size: 1.1rem; color: var(--ink); line-height: 1; }
     .pdp-qty input { width: 34px; text-align: center; border: none; font-family: inherit; font-size: .9rem; color: var(--ink); }
@@ -276,14 +282,15 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     <span class="brand-lbl">{{BRAND}}</span>
     <h1>{{NAME}}</h1>
     <div class="pdp-price">{{PRICE_FMT}} COP</div>
-    <div class="pdp-actions">
+    <p class="pdp-stock-hint" id="pdpStockHint" data-units="{{UNITS}}"></p>
+    <div class="pdp-actions" id="pdpActions">
       <a class="btn btn-ink" href="{{WA_HREF}}" target="_blank" rel="noopener">Pedir por WhatsApp</a>
       <div class="pdp-qty">
         <button type="button" id="qtyDec" aria-label="Reducir cantidad">&minus;</button>
-        <input type="number" class="qty-input" id="qtyInput" value="1" min="1" />
+        <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="{{UNITS}}" />
         <button type="button" id="qtyInc" aria-label="Aumentar cantidad">+</button>
       </div>
-      <button type="button" class="add-cart-btn" data-slug="{{SLUG}}" data-n="{{NAME}}" data-brand="{{BRAND}}" data-price="{{PRICE}}" data-img="assets/img/products/{{SLUG}}.jpg">Agregar al carrito</button>
+      <button type="button" class="add-cart-btn" data-slug="{{SLUG}}" data-n="{{NAME}}" data-brand="{{BRAND}}" data-price="{{PRICE}}" data-img="assets/img/products/{{SLUG}}.jpg" data-units="{{UNITS}}">Agregar al carrito</button>
     </div>
     <div class="pdp-share">
       <span>Compartir</span>
@@ -406,13 +413,33 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     });
   }
 
-  /* ---- Qty stepper ---- */
+  /* ---- Qty stepper (capped at units in stock) ---- */
   var qtyInput = document.getElementById("qtyInput");
   var qtyDec = document.getElementById("qtyDec");
   var qtyInc = document.getElementById("qtyInc");
-  if (qtyInput) {
+  var stockHint = document.getElementById("pdpStockHint");
+  var pdpActions = document.getElementById("pdpActions");
+  var addCartBtn = pdpActions ? pdpActions.querySelector(".add-cart-btn") : null;
+  var unitsAvail = parseInt((stockHint && stockHint.getAttribute("data-units")) || "12", 10);
+  if (isNaN(unitsAvail)) unitsAvail = 12;
+
+  if (unitsAvail <= 0) {
+    if (pdpActions) pdpActions.classList.add("is-agotado");
+    if (addCartBtn) { addCartBtn.disabled = true; addCartBtn.textContent = "Agotado"; }
+    if (qtyInput) { qtyInput.disabled = true; if (qtyDec) qtyDec.disabled = true; if (qtyInc) qtyInc.disabled = true; }
+    if (stockHint) { stockHint.textContent = "Agotado"; stockHint.classList.add("is-out"); }
+  } else if (unitsAvail === 1 && stockHint) {
+    stockHint.textContent = "¡Última unidad!";
+    stockHint.classList.add("is-low");
+  }
+
+  if (qtyInput && unitsAvail > 0) {
     qtyDec.addEventListener("click", function(){ qtyInput.value = Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1); });
-    qtyInc.addEventListener("click", function(){ qtyInput.value = (parseInt(qtyInput.value, 10) || 1) + 1; });
+    qtyInc.addEventListener("click", function(){ qtyInput.value = Math.min(unitsAvail, (parseInt(qtyInput.value, 10) || 1) + 1); });
+    qtyInput.addEventListener("change", function(){
+      var v = parseInt(qtyInput.value, 10) || 1;
+      qtyInput.value = Math.min(unitsAvail, Math.max(1, v));
+    });
   }
 </script>
 <script>var ESCENA_ROOT = "../";</script>

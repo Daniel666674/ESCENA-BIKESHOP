@@ -17,13 +17,22 @@
     localStorage.setItem(CART_KEY, JSON.stringify(items));
     renderBadge();
   }
-  function cartAdd(item, qty) {
+  function cartAdd(item, qty, maxUnits) {
     qty = qty || 1;
     var items = cartGet();
     var existing = null;
     for (var i = 0; i < items.length; i++) { if (items[i].slug === item.slug) { existing = items[i]; break; } }
-    if (existing) { existing.qty += qty; }
-    else { items.push({ slug: item.slug, n: item.n, brand: item.brand, price: item.price, img: item.img, qty: qty }); }
+    var cap = (typeof maxUnits === "number" && !isNaN(maxUnits)) ? maxUnits : null;
+    if (existing) {
+      existing.qty += qty;
+      if (cap !== null) existing.max = cap;
+      if (typeof existing.max === "number") existing.qty = Math.min(existing.qty, existing.max);
+    } else {
+      var newItem = { slug: item.slug, n: item.n, brand: item.brand, price: item.price, img: item.img, qty: qty };
+      if (cap !== null) newItem.max = cap;
+      if (cap !== null) newItem.qty = Math.min(newItem.qty, cap);
+      items.push(newItem);
+    }
     cartSave(items);
     renderDrawer();
   }
@@ -36,7 +45,9 @@
     var items = cartGet();
     for (var i = 0; i < items.length; i++) {
       if (items[i].slug === slug) {
-        items[i].qty = Math.max(1, qty);
+        var q = Math.max(1, qty);
+        if (typeof items[i].max === "number") q = Math.min(q, Math.max(1, items[i].max));
+        items[i].qty = q;
         break;
       }
     }
@@ -219,9 +230,12 @@
           price: parseFloat(addBtn.getAttribute("data-price")),
           img: addBtn.getAttribute("data-img")
         };
+        var unitsAttr = addBtn.getAttribute("data-units");
+        var maxUnits = (unitsAttr !== null && unitsAttr !== "") ? parseInt(unitsAttr, 10) : NaN;
         var qtyInput = addBtn.closest("form, .pdp-actions, article") ? addBtn.closest("form, .pdp-actions, article").querySelector(".qty-input") : null;
         var qty = qtyInput ? Math.max(1, parseInt(qtyInput.value, 10) || 1) : 1;
-        cartAdd(item, qty);
+        if (!isNaN(maxUnits)) qty = Math.min(qty, Math.max(1, maxUnits));
+        cartAdd(item, qty, maxUnits);
         showToast(item.n + " agregado al carrito");
         var origText = addBtn.textContent;
         addBtn.classList.add("added");
