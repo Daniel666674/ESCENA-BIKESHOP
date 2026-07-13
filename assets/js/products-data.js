@@ -3,13 +3,12 @@ window.ESCENA_PRODUCTS = [
   "n": "Tenedor Cult Sect V4 Cromado 18MM",
   "brand": "Cult",
   "cat": "horquillas",
-  "spec": "LONG 32mm / welded dropout  Standard 28mm / investment casted dropout  Standard 23mm / welded dropout  STEEP 18mm/ investment casted dropout  STEEPER 14mm / welded dropout",
-  "price": 810000,
-  "sku": "CULT-HORQUILLA-CROMADA",
+  "spec": "",
+  "price": 830000,
+  "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 2,
   "slug": "tenedor-cult-sect-v4-cromado-18mm",
-  "published": false,
-  "img": "assets/img/escena-logo.jpg"
+  "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg"
  },
  {
   "n": "Caña Volume Front Load",
