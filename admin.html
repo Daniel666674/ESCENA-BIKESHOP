@@ -107,9 +107,11 @@
     table.inv-table .status-badge.ok { background: #e5f7ef; color: #1a9c63; }
     table.inv-table .status-badge.warn { background: #fff4de; color: #b5750a; }
     table.inv-table .status-badge.out { background: #fbe9e7; color: #c0392b; }
-    table.inv-table .row-actions { display: flex; gap: .4rem; }
+    table.inv-table .row-actions { display: flex; gap: .4rem; flex-wrap: wrap; }
     table.inv-table .row-actions button { background: none; border: 1px solid var(--line); border-radius: 5px; padding: .35rem .6rem; font-size: .68rem; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink); }
     table.inv-table .row-actions button:hover { background: var(--panel); }
+    table.inv-table .row-actions .sell { color: #1a9c63; border-color: #cdeee0; }
+    table.inv-table .row-actions .sell:hover { background: #e5f7ef; }
     table.inv-table .row-actions .del { color: #c0392b; border-color: #f0d0cc; }
     table.inv-table .row-actions .del:hover { background: #fdf2f0; }
     .empty-row td { text-align: center; color: var(--muted); padding: 2rem; white-space: normal; }
@@ -219,41 +221,39 @@
 
   <main>
     <div class="wrap">
-      <!-- ============ KPI DASHBOARD ============ -->
-      <h2 class="section-title">Resumen<span class="demo-tag">Datos de ejemplo</span></h2>
-      <p class="section-sub">Vista previa de cómo se vería un panel de analítica real una vez conectado a pedidos y visitas del sitio.</p>
+      <!-- ============ SALES SUMMARY (real data, logged manually) ============ -->
+      <h2 class="section-title">Resumen de ventas<span class="demo-tag" id="salesCount" style="background:#e5f7ef;color:#1a9c63;">0 ventas registradas</span></h2>
+      <p class="section-sub">Como los pedidos se cierran por WhatsApp (sin pasarela de pagos), registra cada venta desde <b>Inventario</b> con el botón <b>Registrar venta</b>. Estos números son reales, no una demo.</p>
 
-      <div class="kpi-row">
+      <div class="kpi-row" id="salesKpiRow">
         <div class="kpi">
-          <div class="lbl">Ventas este mes</div>
-          <div class="val">$18.450.000</div>
-          <div class="delta up">▲ 12% vs. mes anterior</div>
+          <div class="lbl">Ventas totales</div>
+          <div class="val" id="kpiSalesTotal">$0</div>
         </div>
         <div class="kpi">
-          <div class="lbl">Pedidos</div>
-          <div class="val">87</div>
-          <div class="delta up">▲ 9% vs. mes anterior</div>
+          <div class="lbl">Pedidos registrados</div>
+          <div class="val" id="kpiOrdersCount">0</div>
         </div>
         <div class="kpi">
           <div class="lbl">Ticket promedio</div>
-          <div class="val">$212.000</div>
-          <div class="delta up">▲ 3% vs. mes anterior</div>
+          <div class="val" id="kpiTicketAvg">$0</div>
         </div>
         <div class="kpi">
-          <div class="lbl">Producto más pedido</div>
-          <div class="val" style="font-size:1.1rem;">Caña Volume Front Load</div>
-          <div class="delta">23 unidades</div>
+          <div class="lbl">Producto más vendido</div>
+          <div class="val" id="kpiTopProduct" style="font-size:1.1rem;">—</div>
+          <div class="delta" id="kpiTopProductQty"></div>
         </div>
       </div>
+      <p class="section-sub" id="salesEmptyNote" style="display:none;">Aún no hay ventas registradas. Cuando cierres un pedido por WhatsApp, regístralo desde <b>Inventario → Registrar venta</b> para que estos números y el gráfico se actualicen.</p>
 
-      <div class="chart-row">
+      <div class="chart-row" id="salesChartRow">
         <div class="chart-card">
-          <h3>Pedidos por semana</h3>
+          <h3>Unidades vendidas por semana</h3>
           <svg id="barChart" viewBox="0 0 640 200" width="100%" height="200" style="overflow:visible;"></svg>
           <div class="bar-tooltip" id="barTooltip"></div>
         </div>
         <div class="chart-card">
-          <h3>Productos más pedidos</h3>
+          <h3>Productos más vendidos</h3>
           <div class="rank-list" id="rankList"></div>
         </div>
       </div>
@@ -457,6 +457,44 @@
   </div>
 </div>
 
+<!-- ============ SELL MODAL (register a manual WhatsApp sale) ============ -->
+<div class="pmodal-overlay" id="smodalOverlay">
+  <div class="pmodal" style="max-width:420px;">
+    <button type="button" class="pmodal-close" id="smodalClose" aria-label="Cerrar">&times;</button>
+    <h3>Registrar venta</h3>
+    <p style="font-size:.8rem;color:var(--muted);margin:.3rem 0 1rem;" id="smodalProductName"></p>
+    <form id="smodalForm">
+      <div class="pmodal-grid">
+        <div class="pmodal-field">
+          <label>Cantidad vendida</label>
+          <input type="number" id="smQty" min="1" step="1" value="1" required />
+        </div>
+        <div class="pmodal-field">
+          <label>Precio unitario (COP)</label>
+          <input type="number" id="smPrice" min="0" step="1000" required />
+        </div>
+        <div class="pmodal-field">
+          <label>Comprador (opcional)</label>
+          <input type="text" id="smBuyer" placeholder="Nombre o @instagram" />
+        </div>
+        <div class="pmodal-field">
+          <label>Total</label>
+          <div class="pmodal-margin-readout" id="smTotalReadout">$0</div>
+        </div>
+        <div class="pmodal-field span2">
+          <label>Notas (opcional)</label>
+          <input type="text" id="smNotes" placeholder="Ej: WhatsApp, envío a Medellín" />
+        </div>
+      </div>
+      <p style="font-size:.72rem;color:var(--muted);margin:0 0 1rem;">Esto descuenta el stock automáticamente. Recuerda <b>Publicar</b> para que el stock actualizado se vea en la tienda.</p>
+      <div class="pmodal-actions">
+        <button type="button" class="btn btn-outline" id="smodalCancel">Cancelar</button>
+        <button type="submit" class="btn btn-ink">Registrar venta</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <a class="support-float" href="https://wa.me/573136662777?text=Hola%2C%20tengo%20un%20problema%20con%20el%20panel%20admin%20de%20ESCENA" target="_blank" rel="noopener" aria-label="Soporte por WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
   Soporte
@@ -465,6 +503,7 @@
 <div class="toast" id="toast"></div>
 
 <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Date.now()+'"><\/scr'+'ipt>');</script>
+<script>document.write('<scr'+'ipt src="assets/js/sales-log.js?v='+Date.now()+'"><\/scr'+'ipt>');</script>
 <script>
   /* ============ Config ============ */
   var GH = { owner: "Daniel666674", repo: "ESCENA-BIKESHOP", branch: "main" };
@@ -574,7 +613,7 @@
   function renderBarChart(svgId, tooltipId, weeks, values, unitLabel) {
     var svg = document.getElementById(svgId);
     var tooltip = document.getElementById(tooltipId);
-    var max = Math.max.apply(null, values);
+    var max = Math.max.apply(null, values) || 1;
     var chartW = 640, chartH = 200, padL = 26, padB = 24, padT = 10;
     var plotW = chartW - padL - 10, plotH = chartH - padB - padT;
     var barGap = 10;
@@ -638,17 +677,60 @@
     }).join("");
   }
 
+  /* ---- Sales summary (real data from the manually-logged sales log) ---- */
+  function renderSalesSummary() {
+    var countEl = document.getElementById("salesCount");
+    var emptyNote = document.getElementById("salesEmptyNote");
+    var chartRow = document.getElementById("salesChartRow");
+    if (countEl) countEl.textContent = salesLog.length + (salesLog.length === 1 ? " venta registrada" : " ventas registradas");
+
+    var totalRevenue = salesLog.reduce(function (s, r) { return s + (r.total || 0); }, 0);
+    var orders = salesLog.length;
+    document.getElementById("kpiSalesTotal").textContent = cop(totalRevenue);
+    document.getElementById("kpiOrdersCount").textContent = String(orders);
+    document.getElementById("kpiTicketAvg").textContent = cop(orders ? totalRevenue / orders : 0);
+
+    var byProduct = {};
+    salesLog.forEach(function (r) {
+      var key = r.slug || r.n;
+      if (!byProduct[key]) byProduct[key] = { n: r.n, v: 0 };
+      byProduct[key].v += r.qty || 0;
+    });
+    var topList = Object.keys(byProduct).map(function (k) { return byProduct[k]; }).sort(function (a, b) { return b.v - a.v; });
+
+    var topEl = document.getElementById("kpiTopProduct");
+    var topQtyEl = document.getElementById("kpiTopProductQty");
+    if (topList.length) {
+      topEl.textContent = topList[0].n;
+      topQtyEl.textContent = topList[0].v + (topList[0].v === 1 ? " unidad" : " unidades");
+    } else {
+      topEl.textContent = "—";
+      topQtyEl.textContent = "";
+    }
+
+    if (emptyNote) emptyNote.style.display = orders ? "none" : "";
+    if (chartRow) chartRow.style.display = orders ? "" : "none";
+    if (!orders) return;
+
+    // last 8 weeks (7-day buckets ending today), oldest first
+    var now = new Date();
+    var weekLabels = [], weekTotals = [];
+    for (var w = 7; w >= 0; w--) {
+      var end = new Date(now); end.setDate(end.getDate() - w * 7);
+      var start = new Date(end); start.setDate(start.getDate() - 6);
+      weekLabels.push("S" + (8 - w));
+      var sum = salesLog.reduce(function (s, r) {
+        var d = new Date(r.date);
+        return (d >= start && d <= end) ? s + (r.qty || 0) : s;
+      }, 0);
+      weekTotals.push(sum);
+    }
+    renderBarChart("barChart", "barTooltip", weekLabels, weekTotals, "unidades");
+    renderRankList("rankList", topList.slice(0, 5));
+  }
+
   function initDashboard() {
     var weeks = ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8"];
-
-    renderBarChart("barChart", "barTooltip", weeks, [9, 12, 8, 15, 11, 14, 10, 18], "pedidos");
-    renderRankList("rankList", [
-      { n: "Caña Volume Front Load", v: 23 },
-      { n: "Bielas Mutanty Savage 165", v: 19 },
-      { n: "Silla Cult x Vans Pivotal", v: 17 },
-      { n: "Odyssey Piñón 28T Negro", v: 15 },
-      { n: "Éclat Trippin Rin", v: 12 }
-    ]);
 
     renderBarChart("gaChart", "gaTooltip", weeks, [210, 245, 198, 290, 310, 275, 340, 380], "sesiones");
     renderRankList("channelList", [
@@ -671,6 +753,8 @@
   /* ---- Inventory manager ---- */
   var inventoryCatalog = [];
   var editingIdx = null; // null = adding new product
+  var salesLog = [];
+  var salesDirty = false; // unpublished sale records exist
   var modalPhotos = [];
 
   function slugOf(p) {
@@ -899,6 +983,13 @@
         return ghPutFile("assets/js/products-data.js", content, "Update catalog via admin panel", cur.sha);
       });
     }).then(function () {
+      if (!salesDirty) return Promise.resolve();
+      var content = "window.ESCENA_SALES = " + JSON.stringify(salesLog, null, 1) + ";\n";
+      btn.textContent = "Guardando ventas…";
+      return ghGetFile("assets/js/sales-log.js").then(function (cur) {
+        return ghPutFile("assets/js/sales-log.js", content, "Update sales log via admin panel", cur.sha);
+      }).then(function () { salesDirty = false; });
+    }).then(function () {
       dirty = false; clearDraft(); updatePendingUI();
       renderInventory(document.getElementById("invSearch").value.trim());
       showToast("¡Publicado! La tienda se actualiza en ~1 minuto.");
@@ -934,7 +1025,7 @@
       '<td data-label="Precio">' + cop(p.price) + '</td>' +
       '<td data-label="Unidades"><span class="units-badge">' + units + '</span></td>' +
       '<td data-label="Estado">' + statusHTML + '</td>' +
-      '<td class="row-actions" data-label="Acciones"><button type="button" class="edit">Editar</button><button type="button" class="del">Eliminar</button></td>' +
+      '<td class="row-actions" data-label="Acciones"><button type="button" class="sell">Registrar venta</button><button type="button" class="edit">Editar</button><button type="button" class="del">Eliminar</button></td>' +
       '</tr>';
   }
 
@@ -1037,6 +1128,36 @@
     document.getElementById("pmodalOverlay").classList.remove("show");
   }
 
+  /* ---- Sell modal (register a manual sale + decrement stock) ---- */
+  var sellingIdx = null;
+  function updateSellTotal() {
+    var qty = parseInt(document.getElementById("smQty").value, 10) || 0;
+    var price = parseFloat(document.getElementById("smPrice").value) || 0;
+    document.getElementById("smTotalReadout").textContent = cop(qty * price);
+  }
+  function openSellModal(idx) {
+    sellingIdx = idx;
+    var p = inventoryCatalog[idx];
+    var units = p.units || 0;
+    document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock";
+    document.getElementById("smQty").value = units > 0 ? 1 : 0;
+    document.getElementById("smQty").max = units;
+    document.getElementById("smPrice").value = p.price || 0;
+    document.getElementById("smBuyer").value = "";
+    document.getElementById("smNotes").value = "";
+    var submitBtn = document.querySelector("#smodalForm button[type=submit]");
+    document.getElementById("smQty").disabled = units <= 0;
+    submitBtn.disabled = units <= 0;
+    submitBtn.textContent = units <= 0 ? "Sin stock para vender" : "Registrar venta";
+    updateSellTotal();
+    document.getElementById("smodalOverlay").classList.add("show");
+    document.getElementById("smQty").focus();
+  }
+  function closeSellModal() {
+    document.getElementById("smodalOverlay").classList.remove("show");
+    sellingIdx = null;
+  }
+
   function initInventory() {
     // Always load the live catalog fresh from the repo. Never restore an old
     // cross-session draft — a stale copy can silently revert live changes.
@@ -1045,6 +1166,9 @@
     dirty = false;
     updatePendingUI();
     renderInventory("");
+    salesLog = (window.ESCENA_SALES || []).slice();
+    salesDirty = false;
+    renderSalesSummary();
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
       renderInventory(e.target.value.trim());
@@ -1065,6 +1189,9 @@
       if (!tr) return;
       var idx = parseInt(tr.getAttribute("data-idx"), 10);
 
+      if (e.target.classList.contains("sell")) {
+        openSellModal(idx);
+      }
       if (e.target.classList.contains("edit")) {
         openProductModal(idx);
       }
@@ -1088,7 +1215,38 @@
       if (e.target.id === "pmodalOverlay") closeProductModal();
     });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeProductModal();
+      if (e.key === "Escape") { closeProductModal(); closeSellModal(); }
+    });
+
+    document.getElementById("smodalClose").addEventListener("click", closeSellModal);
+    document.getElementById("smodalCancel").addEventListener("click", closeSellModal);
+    document.getElementById("smodalOverlay").addEventListener("click", function (e) {
+      if (e.target.id === "smodalOverlay") closeSellModal();
+    });
+    document.getElementById("smQty").addEventListener("input", updateSellTotal);
+    document.getElementById("smPrice").addEventListener("input", updateSellTotal);
+    document.getElementById("smodalForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (sellingIdx === null) return;
+      var p = inventoryCatalog[sellingIdx];
+      var qty = parseInt(document.getElementById("smQty").value, 10) || 0;
+      var price = parseFloat(document.getElementById("smPrice").value) || 0;
+      if (qty < 1) return;
+      if (qty > (p.units || 0)) { alert("Solo hay " + (p.units || 0) + " en stock — no puedes registrar una venta de " + qty + "."); return; }
+      p.units = (p.units || 0) - qty;
+      salesLog.push({
+        date: new Date().toISOString(),
+        slug: p.slug, n: p.n, sku: p.sku, brand: p.brand,
+        qty: qty, unitPrice: price, total: qty * price,
+        buyer: document.getElementById("smBuyer").value.trim(),
+        notes: document.getElementById("smNotes").value.trim()
+      });
+      salesDirty = true;
+      saveCatalog();
+      renderSalesSummary();
+      showToast("Venta registrada. Publica para actualizar el stock en la tienda.");
+      closeSellModal();
+      renderInventory(document.getElementById("invSearch").value.trim());
     });
 
     document.getElementById("pmPrice").addEventListener("input", updateMarginReadout);
