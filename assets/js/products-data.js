@@ -6,7 +6,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 830000,
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
-  "units": 2,
+  "units": 1,
   "slug": "tenedor-cult-sect-v4-cromado-18mm",
   "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg"
  },
