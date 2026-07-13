@@ -820,9 +820,11 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
       var wPrefix = (window.EscenaWholesale && window.EscenaWholesale.isActive()) ? "🏷️ PEDIDO MAYORISTA (15% aplicado)\n" : "";
       var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
       var href = "producto/" + slugOf(p) + ".html";
-      return '<article class="card">' +
+      var agotado = (typeof p.units === "number" && p.units <= 0);
+      var tagHTML = agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+p.tag+'</span>' : '');
+      return '<article class="card'+(agotado ? ' is-agotado' : '')+'">' +
           '<a class="ph-link" href="'+href+'">' +
-            '<div class="ph">' + (p.tag ? '<span class="tag">'+p.tag+'</span>' : '') +
+            '<div class="ph">' + tagHTML +
               '<img src="'+p.img+'" alt="'+p.n+' - '+p.brand+' BMX" loading="lazy" width="400" height="400"></div>' +
           '</a>' +
           '<div class="body">' +
@@ -831,8 +833,10 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
             '<p class="spec">'+p.spec+'</p>' +
             '<div class="price">'+cop(p.price)+'</div>' +
             '<div class="card-actions">' +
-              '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
-              '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+p.n+'" data-brand="'+p.brand+'" data-price="'+p.price+'" data-img="'+p.img+'">Agregar al carrito</button>' +
+              (agotado
+                ? '<span class="buy" style="opacity:.5;pointer-events:none;text-align:center;">Agotado</span>'
+                : '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
+                  '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+p.n+'" data-brand="'+p.brand+'" data-price="'+p.price+'" data-img="'+p.img+'" data-units="'+(typeof p.units === "number" ? p.units : "")+'">Agregar al carrito</button>') +
             '</div>' +
           '</div>' +
         '</article>';

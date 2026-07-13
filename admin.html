@@ -736,6 +736,8 @@
     var m = {
       NAME: esc(p.n), BRAND: esc(p.brand || ""), PRICE: String(p.price), PRICE_FMT: copFmt(p.price),
       SPEC: esc(p.spec || ""), SLUG: p.slug, CAT_SLUG: p.cat, CAT_LABEL: esc(catLabel), SKU: esc(sku),
+      UNITS: String(typeof p.units === "number" ? p.units : 12),
+      AVAILABILITY: (typeof p.units === "number" && p.units <= 0) ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
       TAG_SPAN: p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '',
       SPEC_ROWS: specRows(p.spec, catLabel, p.brand), WA_HREF: waHrefFor(p), RELATED_SECTION: relatedFor(p),
       NAME_JSON: jsonEsc(p.n), BRAND_JSON: jsonEsc(p.brand || ""), SPEC_JSON: jsonEsc(p.spec || ""),
