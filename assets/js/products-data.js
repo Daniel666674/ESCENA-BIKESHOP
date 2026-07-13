@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Caña S&M enduro 40MM Negra",
+  "brand": "S&M",
+  "cat": "stems",
+  "spec": "",
+  "price": 350000,
+  "sku": "S&MENDURO40",
+  "units": 2,
+  "slug": "cana-s-m-enduro-40mm-negra",
+  "img": "assets/img/products/cana-s-m-enduro-40mm-negra.jpg"
+ },
+ {
   "n": "Tenedor Cult Sect V4 Cromado 18MM",
   "brand": "Cult",
   "cat": "horquillas",
