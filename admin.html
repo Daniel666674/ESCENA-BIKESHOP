@@ -353,7 +353,8 @@
     <h3 id="pmodalTitle">Agregar producto</h3>
     <div class="pmodal-photos" id="pmodalPhotos"></div>
     <button type="button" class="pmodal-add-photo" id="pmodalAddPhotoBtn" title="Agregar foto">+</button>
-    <input type="file" id="pmodalFileInput" accept="image/*" multiple style="display:none;" />
+    <p style="font-size:.72rem;color:var(--muted);margin:.4rem 0 0;">Foto en <b>JPG</b> o <b>PNG</b>. Se comprime automáticamente al publicar.</p>
+    <input type="file" id="pmodalFileInput" accept="image/jpeg,image/png,image/webp,image/*" multiple style="display:none;" />
     <form id="pmodalForm">
       <div class="pmodal-grid" style="margin-top:1.2rem;">
         <div class="pmodal-field span2">
@@ -442,7 +443,14 @@
     return ghFetch("/contents/" + path + "?ref=" + GH.branch, {}).then(function (r) {
       if (r.status === 404) return { sha: null, text: null };
       if (!r.ok) throw new Error("GET " + path + " → " + r.status);
-      return r.json().then(function (j) { return { sha: j.sha, text: b64DecodeUtf8(j.content) }; });
+      return r.json().then(function (j) {
+        // Decode as text only for text files; binary files (images) can't be
+        // decoded as UTF-8 and would throw "URI malformed". We only need .sha
+        // for those, so swallow the decode error and return text:null.
+        var text = null;
+        try { text = b64DecodeUtf8(j.content); } catch (e) { text = null; }
+        return { sha: j.sha, text: text };
+      });
     });
   }
   function ghPutFile(path, text, message, sha, isBase64) {
@@ -673,16 +681,25 @@
 
   /* ---- Image compression (canvas) ---- */
   function compressDataUri(dataUri, maxDim, quality) {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       var img = new Image();
       img.onload = function () {
-        var w = img.width, h = img.height;
-        if (Math.max(w, h) > maxDim) { var s = maxDim / Math.max(w, h); w = Math.round(w * s); h = Math.round(h * s); }
-        var c = document.createElement("canvas"); c.width = w; c.height = h;
-        c.getContext("2d").drawImage(img, 0, 0, w, h);
-        resolve(c.toDataURL("image/jpeg", quality));
+        try {
+          var w = img.width, h = img.height;
+          if (!w || !h) { reject(new Error("imagen sin dimensiones")); return; }
+          if (Math.max(w, h) > maxDim) { var s = maxDim / Math.max(w, h); w = Math.round(w * s); h = Math.round(h * s); }
+          var c = document.createElement("canvas"); c.width = w; c.height = h;
+          c.getContext("2d").drawImage(img, 0, 0, w, h);
+          var out = c.toDataURL("image/jpeg", quality);
+          // A real JPEG data URI is well over a few dozen bytes; anything tiny
+          // means the encode produced nothing usable.
+          if (out.indexOf("data:image/jpeg") !== 0 || out.length < 100) { reject(new Error("no se pudo convertir a JPEG")); return; }
+          resolve(out);
+        } catch (e) { reject(e); }
       };
-      img.onerror = function () { resolve(dataUri); };
+      // Browser could not decode the file at all (e.g. an unsupported HEIC on a
+      // non-Safari browser, or a corrupt file). Don't commit undecodable bytes.
+      img.onerror = function () { reject(new Error("formato de imagen no soportado")); };
       img.src = dataUri;
     });
   }
@@ -753,7 +770,9 @@
       var u = uploads[i];
       var name = u.p.slug + (u.idx ? "-" + (u.idx + 1) : "") + ".jpg";
       var path = "assets/img/products/" + name;
-      return compressDataUri(u.src, 1200, 0.8).then(function (c) {
+      return compressDataUri(u.src, 1200, 0.8).catch(function (e) {
+        throw new Error("No pude procesar la foto de \"" + (u.p.n || u.p.slug) + "\" (" + e.message + "). Probá con una foto en formato JPG o PNG.");
+      }).then(function (c) {
         var b64 = c.split(",")[1];
         return ghGetFile(path).then(function (ex) {
           return ghPutFile(path, b64, "Add product photo " + name + " (admin)", ex.sha, true);
