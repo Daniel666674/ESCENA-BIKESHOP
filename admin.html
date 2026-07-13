@@ -7,6 +7,8 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0A0A0A" />
   <link rel="icon" type="image/svg+xml" href="assets/img/escena-logo.svg" />
+  <link rel="manifest" href="admin.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/img/escena-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -87,6 +89,11 @@
     .inv-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
     table.inv-table { width: 100%; border-collapse: collapse; font-size: .8rem; min-width: 860px; }
     table.inv-table th { text-align: left; font-size: .66rem; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: .8rem .7rem; background: var(--panel); border-bottom: 1px solid var(--line); white-space: nowrap; }
+    table.inv-table th.sortable { cursor: pointer; user-select: none; }
+    table.inv-table th.sortable:hover { color: var(--ink); }
+    table.inv-table th.sortable::after { content: "⇅"; margin-left: .3rem; opacity: .4; }
+    table.inv-table th.sortable.sort-asc::after { content: "↑"; opacity: 1; }
+    table.inv-table th.sortable.sort-desc::after { content: "↓"; opacity: 1; }
     table.inv-table td { padding: .55rem .7rem; border-bottom: 1px solid var(--line); vertical-align: middle; white-space: nowrap; }
     table.inv-table tr:last-child td { border-bottom: none; }
     table.inv-table .thumb { position: relative; width: 44px; height: 44px; border-radius: 6px; overflow: hidden; background: #0A0A0A; flex-shrink: 0; }
@@ -98,6 +105,7 @@
     table.inv-table .units-badge { display: inline-flex; align-items: center; gap: .35rem; font-weight: 700; }
     table.inv-table .status-badge { display: inline-block; font-size: .64rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; padding: .25rem .55rem; border-radius: 999px; }
     table.inv-table .status-badge.ok { background: #e5f7ef; color: #1a9c63; }
+    table.inv-table .status-badge.warn { background: #fff4de; color: #b5750a; }
     table.inv-table .status-badge.out { background: #fbe9e7; color: #c0392b; }
     table.inv-table .row-actions { display: flex; gap: .4rem; }
     table.inv-table .row-actions button { background: none; border: 1px solid var(--line); border-radius: 5px; padding: .35rem .6rem; font-size: .68rem; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink); }
@@ -105,6 +113,25 @@
     table.inv-table .row-actions .del { color: #c0392b; border-color: #f0d0cc; }
     table.inv-table .row-actions .del:hover { background: #fdf2f0; }
     .empty-row td { text-align: center; color: var(--muted); padding: 2rem; white-space: normal; }
+
+    /* ---- Mobile: table -> stacked cards ---- */
+    @media (max-width: 700px) {
+      .inv-table-wrap { overflow-x: visible; border: none; }
+      table.inv-table { min-width: 0; }
+      table.inv-table thead { display: none; }
+      table.inv-table, table.inv-table tbody, table.inv-table tr, table.inv-table td { display: block; width: 100%; }
+      table.inv-table tr { border: 1px solid var(--line); border-radius: 12px; padding: .8rem .9rem; margin-bottom: .8rem; }
+      table.inv-table tr.empty-row { border: none; padding: 0; }
+      table.inv-table td { white-space: normal; border-bottom: none; padding: .3rem 0; display: flex; align-items: center; gap: .6rem; }
+      table.inv-table td[data-label]::before { content: attr(data-label); flex: 0 0 92px; font-size: .64rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+      table.inv-table td[data-label="Foto"]::before { display: none; }
+      table.inv-table td.row-actions { gap: .5rem; }
+      table.inv-table td.row-actions::before { display: none; }
+      table.inv-table .row-actions button { flex: 1; padding: .6rem; }
+      .inv-toolbar { flex-direction: column; align-items: stretch; }
+      .inv-actions { flex-wrap: wrap; }
+      .inv-actions .btn { flex: 1 1 calc(50% - .4rem); }
+    }
 
     /* ---- Product modal (add/edit) ---- */
     .pmodal-overlay { position: fixed; inset: 0; z-index: 300; background: rgba(10,10,10,.65); display: none; align-items: flex-start; justify-content: center; padding: 3rem 1.5rem; overflow-y: auto; }
@@ -122,6 +149,7 @@
       border: 1.5px solid var(--line); border-radius: 8px; padding: .65rem .8rem; font-size: .86rem; font-family: inherit; width: 100%;
     }
     .pmodal-field input:focus, .pmodal-field select:focus, .pmodal-field textarea:focus { outline: none; border-color: var(--ink); }
+    .pmodal-margin-readout { border: 1.5px solid var(--line); border-radius: 8px; padding: .65rem .8rem; font-size: .86rem; font-weight: 700; background: var(--panel); }
     .pmodal-photos { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .8rem; }
     .pmodal-photo { position: relative; width: 72px; height: 72px; border-radius: 8px; overflow: hidden; background: #0A0A0A; }
     .pmodal-photo img { width: 100%; height: 100%; object-fit: cover; }
@@ -306,6 +334,25 @@
       <h2 class="section-title">Inventario<span class="demo-tag" id="invCount">0 productos</span></h2>
       <p class="section-sub">Edita precios, stock y datos del catálogo. Al <b>Publicar</b>, los cambios van directo a la tienda en vivo.</p>
 
+      <div class="kpi-row" id="invKpiRow">
+        <div class="kpi">
+          <div class="lbl">Valor del inventario</div>
+          <div class="val" id="kpiInvValue">$0</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Unidades totales</div>
+          <div class="val" id="kpiUnitsTotal">0</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Bajo stock (1-3)</div>
+          <div class="val" id="kpiLowStock">0</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Agotados</div>
+          <div class="val" id="kpiOutStock">0</div>
+        </div>
+      </div>
+
       <div class="inv-note" id="pendingNote" style="display:none;">
         <b>Tienes cambios sin publicar.</b> Toca <b>“Publicar en el sitio”</b> para que aparezcan en la tienda (tarda ~1 minuto en verse).
       </div>
@@ -329,12 +376,12 @@
           <thead>
             <tr>
               <th>Foto</th>
-              <th>Nombre</th>
-              <th>Marca</th>
+              <th class="sortable" data-sort="n">Nombre</th>
+              <th class="sortable" data-sort="brand">Marca</th>
               <th>SKU</th>
-              <th>Categoría</th>
-              <th>Precio COP</th>
-              <th>Unidades</th>
+              <th class="sortable" data-sort="cat">Categoría</th>
+              <th class="sortable" data-sort="price">Precio COP</th>
+              <th class="sortable" data-sort="units">Unidades</th>
               <th>Estado</th>
               <th>Acciones</th>
             </tr>
@@ -388,6 +435,18 @@
         <div class="pmodal-field">
           <label>Tag (opcional)</label>
           <input type="text" id="pmTag" placeholder="Ej: Nuevo, Top, Edición" />
+        </div>
+        <div class="pmodal-field">
+          <label>Costo (COP, interno)</label>
+          <input type="number" id="pmCost" min="0" step="1000" />
+        </div>
+        <div class="pmodal-field">
+          <label>Margen</label>
+          <div class="pmodal-margin-readout" id="pmMarginReadout">—</div>
+        </div>
+        <div class="pmodal-field span2">
+          <label>Notas internas (no se publican)</label>
+          <textarea id="pmNotes" rows="2" placeholder="Proveedor, recordatorio de reabastecimiento, etc."></textarea>
         </div>
       </div>
       <div class="pmodal-actions">
@@ -634,6 +693,8 @@
     m.price = p.price || 0;
     m.sku = p.sku || slug.toUpperCase();
     m.units = (typeof p.units === "number") ? p.units : (p.stock === false ? 0 : 12);
+    m.cost = (typeof p.cost === "number") ? p.cost : 0;
+    m.notes = p.notes || "";
     m.tag = p.tag || "";
     m.published = (p.published === false) ? false : true;
     m.imgs = p.imgs || (p.img ? [p.img] : ["assets/img/escena-logo.jpg"]);
@@ -661,6 +722,7 @@
     delete o.imgs;
     if (o.published === true) delete o.published; // default; keep only when false
     if (!o.tag) delete o.tag;
+    delete o.cost; delete o.notes; // internal-only, never published
     return o;
   }
 
@@ -857,20 +919,22 @@
     var units = p.units || 0;
     var statusHTML = (p.published === false)
       ? '<span class="status-badge out">Borrador</span>'
-      : (units > 0
-        ? '<span class="status-badge ok">En stock</span>'
-        : '<span class="status-badge out">Agotado</span>');
+      : (units <= 0
+        ? '<span class="status-badge out">Agotado</span>'
+        : (units <= 3
+          ? '<span class="status-badge warn">Bajo stock</span>'
+          : '<span class="status-badge ok">En stock</span>'));
     var countBadge = p.imgs.length > 1 ? '<span class="thumb-count">+' + (p.imgs.length - 1) + '</span>' : '';
     return '<tr data-idx="' + idx + '">' +
-      '<td><div class="thumb"><img src="' + p.imgs[0] + '" alt="" loading="lazy" />' + countBadge + '</div></td>' +
-      '<td class="col-name">' + esc(p.n) + '</td>' +
-      '<td>' + esc(p.brand) + '</td>' +
-      '<td class="sku">' + esc(p.sku) + '</td>' +
-      '<td>' + esc(CATEGORY_LABELS[p.cat] || p.cat) + '</td>' +
-      '<td>' + cop(p.price) + '</td>' +
-      '<td><span class="units-badge">' + units + '</span></td>' +
-      '<td>' + statusHTML + '</td>' +
-      '<td class="row-actions"><button type="button" class="edit">Editar</button><button type="button" class="del">Eliminar</button></td>' +
+      '<td data-label="Foto"><div class="thumb"><img src="' + p.imgs[0] + '" alt="" loading="lazy" />' + countBadge + '</div></td>' +
+      '<td class="col-name" data-label="Nombre">' + esc(p.n) + '</td>' +
+      '<td data-label="Marca">' + esc(p.brand) + '</td>' +
+      '<td class="sku" data-label="SKU">' + esc(p.sku) + '</td>' +
+      '<td data-label="Categoría">' + esc(CATEGORY_LABELS[p.cat] || p.cat) + '</td>' +
+      '<td data-label="Precio">' + cop(p.price) + '</td>' +
+      '<td data-label="Unidades"><span class="units-badge">' + units + '</span></td>' +
+      '<td data-label="Estado">' + statusHTML + '</td>' +
+      '<td class="row-actions" data-label="Acciones"><button type="button" class="edit">Editar</button><button type="button" class="del">Eliminar</button></td>' +
       '</tr>';
   }
 
@@ -879,7 +943,29 @@
   }
   function cop(n) { return "$" + Math.round(n || 0).toLocaleString("es-CO"); }
 
+  var sortState = { key: null, dir: 1 };
+  function renderInvKpis() {
+    var value = 0, unitsTotal = 0, low = 0, out = 0;
+    inventoryCatalog.forEach(function (p) {
+      var u = p.units || 0;
+      value += u * (p.price || 0);
+      unitsTotal += u;
+      if (p.published !== false) {
+        if (u <= 0) out++; else if (u <= 3) low++;
+      }
+    });
+    var elValue = document.getElementById("kpiInvValue");
+    var elUnits = document.getElementById("kpiUnitsTotal");
+    var elLow = document.getElementById("kpiLowStock");
+    var elOut = document.getElementById("kpiOutStock");
+    if (elValue) elValue.textContent = cop(value);
+    if (elUnits) elUnits.textContent = String(unitsTotal);
+    if (elLow) elLow.textContent = String(low);
+    if (elOut) elOut.textContent = String(out);
+  }
+
   function renderInventory(filter) {
+    renderInvKpis();
     var body = document.getElementById("invBody");
     var items = inventoryCatalog;
     if (filter) {
@@ -889,6 +975,17 @@
           (p.brand || "").toLowerCase().indexOf(f) > -1 ||
           (p.sku || "").toLowerCase().indexOf(f) > -1 ||
           (CATEGORY_LABELS[p.cat] || "").toLowerCase().indexOf(f) > -1;
+      });
+    }
+    if (sortState.key) {
+      items = items.slice().sort(function (a, b) {
+        var k = sortState.key;
+        var av = k === "cat" ? (CATEGORY_LABELS[a.cat] || a.cat) : a[k];
+        var bv = k === "cat" ? (CATEGORY_LABELS[b.cat] || b.cat) : b[k];
+        if (typeof av === "string") { av = av.toLowerCase(); bv = (bv || "").toLowerCase(); }
+        if (av < bv) return -1 * sortState.dir;
+        if (av > bv) return 1 * sortState.dir;
+        return 0;
       });
     }
     if (items.length === 0) {
@@ -920,10 +1017,21 @@
     document.getElementById("pmSku").value = p ? p.sku : "";
     document.getElementById("pmUnits").value = p ? p.units : 0;
     document.getElementById("pmTag").value = p ? p.tag : "";
+    document.getElementById("pmCost").value = p && p.cost ? p.cost : "";
+    document.getElementById("pmNotes").value = p ? p.notes : "";
+    updateMarginReadout();
     modalPhotos = p ? p.imgs.slice() : [];
     renderModalPhotos();
     document.getElementById("pmodalOverlay").classList.add("show");
     document.getElementById("pmName").focus();
+  }
+  function updateMarginReadout() {
+    var el = document.getElementById("pmMarginReadout");
+    var price = parseFloat(document.getElementById("pmPrice").value) || 0;
+    var cost = parseFloat(document.getElementById("pmCost").value) || 0;
+    if (!price || !cost) { el.textContent = "—"; return; }
+    var margin = ((price - cost) / price) * 100;
+    el.textContent = margin.toFixed(0) + "% (" + cop(price - cost) + ")";
   }
   function closeProductModal() {
     document.getElementById("pmodalOverlay").classList.remove("show");
@@ -940,6 +1048,16 @@
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
       renderInventory(e.target.value.trim());
+    });
+
+    document.querySelectorAll("th.sortable").forEach(function (th) {
+      th.addEventListener("click", function () {
+        var key = th.getAttribute("data-sort");
+        if (sortState.key === key) { sortState.dir *= -1; } else { sortState.key = key; sortState.dir = 1; }
+        document.querySelectorAll("th.sortable").forEach(function (t) { t.classList.remove("sort-asc", "sort-desc"); });
+        th.classList.add(sortState.dir === 1 ? "sort-asc" : "sort-desc");
+        renderInventory(document.getElementById("invSearch").value.trim());
+      });
     });
 
     document.getElementById("invBody").addEventListener("click", function (e) {
@@ -973,6 +1091,8 @@
       if (e.key === "Escape") closeProductModal();
     });
 
+    document.getElementById("pmPrice").addEventListener("input", updateMarginReadout);
+    document.getElementById("pmCost").addEventListener("input", updateMarginReadout);
     document.getElementById("pmodalAddPhotoBtn").addEventListener("click", function () {
       document.getElementById("pmodalFileInput").click();
     });
@@ -1011,6 +1131,8 @@
         sku: document.getElementById("pmSku").value.trim(),
         units: parseInt(document.getElementById("pmUnits").value, 10) || 0,
         tag: document.getElementById("pmTag").value.trim(),
+        cost: parseFloat(document.getElementById("pmCost").value) || 0,
+        notes: document.getElementById("pmNotes").value.trim(),
         imgs: modalPhotos.length ? modalPhotos : ["assets/img/escena-logo.jpg"]
       };
       if (editingIdx !== null) {
@@ -1154,6 +1276,13 @@
       else { sessionStorage.removeItem(TOKEN_KEY); localStorage.removeItem(TOKEN_KEY); showGate(); }
     });
   })();
+
+  /* ---- PWA: app-shell service worker (installability + fast repeat loads) ---- */
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw-admin.js").catch(function () {});
+    });
+  }
 </script>
 </body>
 </html>

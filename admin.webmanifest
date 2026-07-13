@@ -1,0 +1,23 @@
+{
+  "name": "ESCENA Admin",
+  "short_name": "ESCENA Admin",
+  "description": "Panel interno de inventario y ventas de ESCENA BIKE SHOP.",
+  "lang": "es-CO",
+  "start_url": "admin.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "icons": [
+    {
+      "src": "assets/img/escena-logo.jpg",
+      "sizes": "378x370",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/img/escena-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
