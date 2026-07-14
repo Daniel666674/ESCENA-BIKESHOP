@@ -52,7 +52,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Alcance 53mm",
   "price": 200000,
   "sku": "STEAM",
-  "units": 0,
+  "units": 1,
   "tag": "Edicion Especial 🔥!",
   "imgs": [
    "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805",
@@ -63,7 +63,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "53mm",
-    "units": 0
+    "units": 1
    }
   ],
   "slug": "cana-shadow-ravage-topload",
