@@ -4,7 +4,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "CULT",
   "cat": "marcos",
   "spec": "Frente 20.5",
-  "price": 17900000,
+  "price": 1790000,
   "sku": "1112",
   "units": 10,
   "imgs": [
