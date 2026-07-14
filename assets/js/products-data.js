@@ -1,5 +1,78 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Caña Shadow Ravage - TopLoad",
+  "brand": "Shadow",
+  "cat": "stems",
+  "spec": "Alcance 53mm",
+  "price": 200000,
+  "sku": "STEAM",
+  "units": 0,
+  "tag": "Edicion Especial 🔥!",
+  "imgs": [
+   "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805",
+   "assets/img/products/cana-shadow-ravage-topload-2.jpg?v=1784071870336",
+   "assets/img/products/cana-shadow-ravage-topload-3.jpg?v=1784071871854",
+   "assets/img/products/cana-shadow-ravage-topload-4.jpg?v=1784071873929"
+  ],
+  "sizes": [
+   {
+    "label": "53mm",
+    "units": 0
+   }
+  ],
+  "slug": "cana-shadow-ravage-topload",
+  "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805"
+ },
+ {
+  "n": "Caña Cult Salvation V4 Negra - TopLoad",
+  "brand": "Cult",
+  "cat": "stems",
+  "spec": "Alcance: 46mm",
+  "price": 320000,
+  "sku": "STEAM",
+  "units": 1,
+  "tag": "Nuevo!",
+  "imgs": [
+   "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1784071875410",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1784071876760",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-3.jpg?v=1784071878302",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-4.jpg?v=1784071879688",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-5.jpg?v=1784071881412"
+  ],
+  "sizes": [
+   {
+    "label": "46mm x",
+    "units": 1
+   }
+  ],
+  "slug": "cana-cult-salvation-v4-negra-topload",
+  "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1784071875410"
+ },
+ {
+  "n": "Caña Volume Bison Negra - FrontLoad",
+  "brand": "Volume",
+  "cat": "stems",
+  "spec": "Alcance: 50mm",
+  "price": 330000,
+  "sku": "STEAM",
+  "units": 1,
+  "tag": "Descuento 💸!",
+  "imgs": [
+   "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322",
+   "assets/img/products/cana-volume-bison-negra-frontload-2.jpg?v=1784071885806",
+   "assets/img/products/cana-volume-bison-negra-frontload-3.jpg?v=1784071889009",
+   "assets/img/products/cana-volume-bison-negra-frontload-4.jpg?v=1784071891487"
+  ],
+  "sizes": [
+   {
+    "label": "50mm",
+    "units": 1
+   }
+  ],
+  "slug": "cana-volume-bison-negra-frontload",
+  "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322"
+ },
+ {
   "n": "Caña Fiend Mills Negra - TopLoad",
   "brand": "Fiend Mills",
   "cat": "stems",
