@@ -135,9 +135,6 @@
     .brand-banner button:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
     /* ============ CATEGORY SIDEBAR ============ */
     .tienda-layout { display: grid; grid-template-columns: 232px 1fr; gap: 2.2rem; align-items: start; }
-    .cat-toggle { display: none; }
-    .cat-sidebar-overlay { display: none; }
-    .cat-sidebar-head { display: none; }
     .cat-sidebar { position: sticky; top: 88px; align-self: start; }
     .cat-sidebar-label { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .85rem; padding-left: .2rem; }
     .filters { display: flex; flex-direction: column; gap: .15rem; margin-bottom: 0; }
@@ -169,36 +166,29 @@
 
     @media (max-width: 900px) {
       .tienda-layout { display: block; }
-      .cat-toggle {
-        display: inline-flex; align-items: center; gap: .5rem;
-        background: #fff; border: 1px solid var(--line); border-radius: 999px;
-        padding: .65rem 1.15rem; font-size: .76rem; letter-spacing: .06em; text-transform: uppercase;
-        font-weight: 700; color: var(--ink); font-family: inherit; cursor: pointer;
-        margin-bottom: 1.4rem; transition: box-shadow .2s, transform .15s;
-      }
-      .cat-toggle:hover { box-shadow: 0 6px 18px rgba(0,0,0,.1); }
-      .cat-toggle:active { transform: scale(.97); }
-      .cat-toggle svg { width: 15px; height: 15px; }
-      .cat-sidebar-overlay {
-        display: block; position: fixed; inset: 0; z-index: 600;
-        background: rgba(10,10,10,.55); opacity: 0; pointer-events: none;
-        transition: opacity .25s ease;
-      }
-      .cat-sidebar-overlay.show { opacity: 1; pointer-events: auto; }
       .cat-sidebar {
-        position: fixed; top: 0; left: 0; bottom: 0; z-index: 601;
-        width: min(300px, 84%); background: #fff;
-        padding: 1.3rem 1.1rem 2rem; overflow-y: auto;
-        transform: translateX(-100%); transition: transform .32s cubic-bezier(.32,.72,0,1);
-        box-shadow: 20px 0 60px rgba(0,0,0,.25);
+        position: relative; top: auto; margin: 0 0 1.6rem;
       }
-      .cat-sidebar.show { transform: translateX(0); }
-      .cat-sidebar-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-      .cat-sidebar-head span { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: .05em; }
-      .cat-sidebar-close { background: none; border: 1px solid var(--line); border-radius: 50%; width: 34px; height: 34px; font-size: 1.1rem; cursor: pointer; color: var(--ink); display: flex; align-items: center; justify-content: center; }
-      .cat-sidebar-close:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
-      .filters button { padding: .8rem .2rem .8rem 1rem; font-size: .88rem; }
-      .filters button:hover, .filters button.active { padding-left: 1.3rem; }
+      .cat-sidebar-label { margin: 0 0 .55rem .2rem; }
+      .cat-sidebar::after {
+        content: ""; position: absolute; right: 0; top: 1.9rem; bottom: .5rem; width: 34px;
+        background: linear-gradient(to right, rgba(255,255,255,0), var(--bg) 75%);
+        pointer-events: none;
+      }
+      .filters {
+        display: flex; flex-direction: row; flex-wrap: nowrap; gap: .55rem;
+        overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity;
+        margin: 0 -1.5rem; padding: .1rem 1.5rem .5rem;
+        scrollbar-width: none;
+      }
+      .filters::-webkit-scrollbar { display: none; }
+      .filters button {
+        flex: 0 0 auto; scroll-snap-align: start;
+        background: #fff; border: 1px solid var(--line); border-radius: 999px;
+        padding: .6rem 1.15rem; font-size: .8rem; white-space: nowrap;
+      }
+      .filters button::before { display: none; }
+      .filters button:hover, .filters button.active { background: var(--ink); color: #fff; border-color: var(--ink); padding-left: 1.15rem; }
     }
     .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .15s; }
     .card:hover { box-shadow: 0 14px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
@@ -296,8 +286,22 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   .nav-drop-menu a:hover { background: var(--panel) !important; color: var(--ink) !important; }
 }
 @media (max-width: 980px) {
-  .nav-drop-menu { display: block !important; position: static; background: none; border: none; box-shadow: none; padding: 0 0 .4rem 1rem; }
-  .nav-drop-menu a { border-bottom: none !important; padding: .55rem .2rem !important; font-size: .82rem !important; color: var(--muted) !important; }
+  .nav-drop-menu {
+    display: grid !important; grid-template-columns: repeat(2, 1fr); gap: .5rem;
+    position: static; background: var(--panel); border: none; box-shadow: none;
+    border-radius: 10px; padding: .9rem .8rem .8rem; margin: .3rem 0 .9rem;
+  }
+  .nav-drop-menu::before {
+    content: "Categorías"; grid-column: 1 / -1; display: block;
+    font-size: .64rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--muted); font-weight: 700; margin-bottom: .2rem;
+  }
+  .nav-drop-menu a {
+    border-bottom: none !important; background: #fff !important; border-radius: 7px;
+    padding: .62rem .6rem !important; font-size: .78rem !important; font-weight: 600 !important;
+    color: var(--ink) !important; text-align: center; transition: background .15s, color .15s;
+  }
+  .nav-drop-menu a:hover, .nav-drop-menu a:active { background: var(--ink) !important; color: #fff !important; }
 }
 
 .u-link-ico { display: inline-flex; align-items: center; gap: .35rem; }
@@ -387,18 +391,8 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
       <span>Marca: <b id="brandBannerName"></b></span>
       <button type="button" id="brandBannerClear">Quitar filtro ✕</button>
     </div>
-    <button type="button" class="cat-toggle" id="catToggle" aria-expanded="false" aria-controls="catSidebar">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="12" y2="18"/></svg>
-      Categorías
-    </button>
-
     <div class="tienda-layout">
-      <div class="cat-sidebar-overlay" id="catSidebarOverlay"></div>
       <aside class="cat-sidebar" id="catSidebar">
-        <div class="cat-sidebar-head">
-          <span>Categorías</span>
-          <button type="button" class="cat-sidebar-close" id="catSidebarClose" aria-label="Cerrar categorías">&times;</button>
-        </div>
         <p class="cat-sidebar-label">Categorías</p>
         <div class="filters" id="filters">
           <button data-filter="all">Todo</button>
@@ -599,35 +593,7 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
     var params = new URLSearchParams(window.location.search);
     params.set("cat", e.target.dataset.filter);
     history.replaceState(null, "", "tienda.html?" + params.toString());
-    closeCatSidebar();
   });
-
-  /* ---- Category sidebar (mobile off-canvas drawer) ---- */
-  var catToggle = document.getElementById("catToggle");
-  var catSidebar = document.getElementById("catSidebar");
-  var catSidebarOverlay = document.getElementById("catSidebarOverlay");
-  var catSidebarClose = document.getElementById("catSidebarClose");
-  var catOpenedFrom = null;
-  function openCatSidebar(){
-    catOpenedFrom = document.activeElement;
-    catSidebar.classList.add("show");
-    catSidebarOverlay.classList.add("show");
-    catToggle.setAttribute("aria-expanded", "true");
-    document.body.style.overflow = "hidden";
-  }
-  function closeCatSidebar(){
-    if (!catSidebar.classList.contains("show")) return;
-    catSidebar.classList.remove("show");
-    catSidebarOverlay.classList.remove("show");
-    catToggle.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
-    if (catOpenedFrom && typeof catOpenedFrom.focus === "function") catOpenedFrom.focus();
-    catOpenedFrom = null;
-  }
-  catToggle.addEventListener("click", openCatSidebar);
-  catSidebarClose.addEventListener("click", closeCatSidebar);
-  catSidebarOverlay.addEventListener("click", closeCatSidebar);
-  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeCatSidebar(); });
 
   /* ---- Brand banner (?brand= query param) ---- */
   function showBrandBanner(brand){
