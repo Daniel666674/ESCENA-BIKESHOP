@@ -1614,15 +1614,37 @@
     document.getElementById("pmodalFileInput").addEventListener("change", function (e) {
       var files = Array.prototype.slice.call(e.target.files || []);
       if (!files.length) return;
-      var remaining = files.length;
+      var addBtn = document.getElementById("pmodalAddPhotoBtn");
+      var originalLabel = addBtn.textContent;
+      addBtn.disabled = true;
+      // Compress each photo (resize + JPEG re-encode) right away, one at a time,
+      // instead of holding the raw multi-MB camera file in memory until Publish.
+      // Keeping uncompressed data URIs around (rendered as thumbnails + re-JSON.
+      // stringified into localStorage on every saveCatalog()) is what was crashing
+      // mobile Safari on real iPhone photos.
+      var chain = Promise.resolve();
       files.forEach(function (file) {
-        var reader = new FileReader();
-        reader.onload = function () {
-          modalPhotos.push(reader.result);
-          remaining--;
-          if (remaining === 0) renderModalPhotos();
-        };
-        reader.readAsDataURL(file);
+        chain = chain.then(function () {
+          addBtn.textContent = "Procesando foto…";
+          return new Promise(function (resolve) {
+            var reader = new FileReader();
+            reader.onload = function () { resolve(reader.result); };
+            reader.onerror = function () { resolve(null); };
+            reader.readAsDataURL(file);
+          });
+        }).then(function (raw) {
+          if (!raw) return;
+          return compressDataUri(raw, 1200, 0.8).then(function (compressed) {
+            modalPhotos.push(compressed);
+          }).catch(function () {
+            showToast('No se pudo procesar "' + file.name + '" — probá con una foto en JPG o PNG.');
+          });
+        });
+      });
+      chain.then(function () {
+        addBtn.disabled = false;
+        addBtn.textContent = originalLabel;
+        renderModalPhotos();
       });
       e.target.value = "";
     });
