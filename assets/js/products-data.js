@@ -1,5 +1,29 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Marco Cult Biggie Jaume Sintes Hammertone",
+  "brand": "Cult Biggie Jaume Sintes Hammertone",
+  "cat": "marcos",
+  "spec": "20.5",
+  "price": 1790000,
+  "sku": "MRC",
+  "units": 1,
+  "tag": "Edición Especial",
+  "imgs": [
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210",
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-2.jpg?v=1784061950852",
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-3.jpg?v=1784061955010",
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-4.jpg?v=1784061958723",
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-5.jpg?v=1784061968324",
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-6.jpg?v=1784061976283",
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-7.jpg?v=1784061981933",
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-8.jpg?v=1784061986562",
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-9.jpg?v=1784061991001",
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784061998108"
+  ],
+  "slug": "marco-cult-biggie-jaume-sintes-hammertone",
+  "img": "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210"
+ },
+ {
   "n": "Pedales Odyssey",
   "brand": "Odyssey",
   "cat": "pedales",
