@@ -17,11 +17,14 @@
     localStorage.setItem(CART_KEY, JSON.stringify(items));
     renderBadge();
   }
+  function sameLine(i, slug, variant) {
+    return i.slug === slug && (i.variant || "") === (variant || "");
+  }
   function cartAdd(item, qty, maxUnits) {
     qty = qty || 1;
     var items = cartGet();
     var existing = null;
-    for (var i = 0; i < items.length; i++) { if (items[i].slug === item.slug) { existing = items[i]; break; } }
+    for (var i = 0; i < items.length; i++) { if (sameLine(items[i], item.slug, item.variant)) { existing = items[i]; break; } }
     var cap = (typeof maxUnits === "number" && !isNaN(maxUnits)) ? maxUnits : null;
     if (existing) {
       existing.qty += qty;
@@ -29,6 +32,7 @@
       if (typeof existing.max === "number") existing.qty = Math.min(existing.qty, existing.max);
     } else {
       var newItem = { slug: item.slug, n: item.n, brand: item.brand, price: item.price, img: item.img, qty: qty };
+      if (item.variant) newItem.variant = item.variant;
       if (cap !== null) newItem.max = cap;
       if (cap !== null) newItem.qty = Math.min(newItem.qty, cap);
       items.push(newItem);
@@ -36,15 +40,15 @@
     cartSave(items);
     renderDrawer();
   }
-  function cartRemove(slug) {
-    var items = cartGet().filter(function (i) { return i.slug !== slug; });
+  function cartRemove(slug, variant) {
+    var items = cartGet().filter(function (i) { return !sameLine(i, slug, variant); });
     cartSave(items);
     renderDrawer();
   }
-  function cartSetQty(slug, qty) {
+  function cartSetQty(slug, variant, qty) {
     var items = cartGet();
     for (var i = 0; i < items.length; i++) {
-      if (items[i].slug === slug) {
+      if (sameLine(items[i], slug, variant)) {
         var q = Math.max(1, qty);
         if (typeof items[i].max === "number") q = Math.min(q, Math.max(1, items[i].max));
         items[i].qty = q;
@@ -100,11 +104,12 @@
     var imgSrc = /^https?:\/\//.test(item.img) ? item.img : ROOT + item.img;
     var href = ROOT + "producto/" + item.slug + ".html";
     return (
-      '<div class="cart-item" data-slug="' + item.slug + '">' +
+      '<div class="cart-item" data-slug="' + item.slug + '" data-variant="' + (item.variant || "") + '">' +
         '<a class="ci-img" href="' + href + '"><img src="' + imgSrc + '" alt="' + item.n + '" loading="lazy" width="62" height="62"></a>' +
         '<div class="ci-info">' +
           '<span class="ci-brand">' + item.brand + '</span>' +
           '<h4 class="ci-name"><a href="' + href + '" style="color:inherit;text-decoration:none;">' + item.n + '</a></h4>' +
+          (item.variant ? '<span class="ci-variant">' + item.variant + '</span>' : '') +
           '<span class="ci-qty">' +
             '<button type="button" class="ci-dec" aria-label="Reducir cantidad">&minus;</button>' +
             '<span>' + item.qty + '</span>' +
@@ -165,7 +170,7 @@
     if (window.EscenaWholesale && window.EscenaWholesale.isActive()) lines.push("🏷️ PEDIDO MAYORISTA (15% aplicado)");
     lines.push("Hola ESCENA 🐕, quiero pedir:");
     items.forEach(function (i) {
-      lines.push("• " + i.qty + "x " + i.n + " (" + i.brand + ") — " + cop(i.price * i.qty));
+      lines.push("• " + i.qty + "x " + i.n + " (" + i.brand + ")" + (i.variant ? " [" + i.variant + "]" : "") + " — " + cop(i.price * i.qty));
     });
     lines.push("Total: " + cop(cartTotal()));
     lines.push("¿Está todo disponible?");
@@ -189,27 +194,29 @@
 
       var incBtn = e.target.closest(".ci-inc");
       if (incBtn) {
-        var slugInc = incBtn.closest(".cart-item").getAttribute("data-slug");
+        var incRow = incBtn.closest(".cart-item");
+        var slugInc = incRow.getAttribute("data-slug"), variantInc = incRow.getAttribute("data-variant");
         var itemsInc = cartGet();
-        var curInc = itemsInc.find(function (i) { return i.slug === slugInc; });
-        if (curInc) cartSetQty(slugInc, curInc.qty + 1);
+        var curInc = itemsInc.find(function (i) { return sameLine(i, slugInc, variantInc); });
+        if (curInc) cartSetQty(slugInc, variantInc, curInc.qty + 1);
         return;
       }
       var decBtn = e.target.closest(".ci-dec");
       if (decBtn) {
-        var slugDec = decBtn.closest(".cart-item").getAttribute("data-slug");
+        var decRow = decBtn.closest(".cart-item");
+        var slugDec = decRow.getAttribute("data-slug"), variantDec = decRow.getAttribute("data-variant");
         var itemsDec = cartGet();
-        var curDec = itemsDec.find(function (i) { return i.slug === slugDec; });
+        var curDec = itemsDec.find(function (i) { return sameLine(i, slugDec, variantDec); });
         if (curDec) {
-          if (curDec.qty <= 1) cartRemove(slugDec);
-          else cartSetQty(slugDec, curDec.qty - 1);
+          if (curDec.qty <= 1) cartRemove(slugDec, variantDec);
+          else cartSetQty(slugDec, variantDec, curDec.qty - 1);
         }
         return;
       }
       var removeBtn = e.target.closest(".ci-remove");
       if (removeBtn) {
-        var slugRem = removeBtn.closest(".cart-item").getAttribute("data-slug");
-        cartRemove(slugRem);
+        var remRow = removeBtn.closest(".cart-item");
+        cartRemove(remRow.getAttribute("data-slug"), remRow.getAttribute("data-variant"));
         return;
       }
       var checkoutBtn = e.target.closest("#cartCheckout");
@@ -228,7 +235,8 @@
           n: addBtn.getAttribute("data-n"),
           brand: addBtn.getAttribute("data-brand"),
           price: parseFloat(addBtn.getAttribute("data-price")),
-          img: addBtn.getAttribute("data-img")
+          img: addBtn.getAttribute("data-img"),
+          variant: addBtn.getAttribute("data-variant") || ""
         };
         var unitsAttr = addBtn.getAttribute("data-units");
         var maxUnits = (unitsAttr !== null && unitsAttr !== "") ? parseInt(unitsAttr, 10) : NaN;

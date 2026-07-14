@@ -229,7 +229,21 @@
     document.querySelectorAll(".pay-row").forEach(function (el) { el.innerHTML = html; });
   }
 
-  /* ---- Rewrite prices/links baked as static HTML on product detail pages ---- */
+  /* ---- Category-dependent variant selector (LHD/RHD, crank size, etc.) ---- */
+  function pdpVariantSuffix() {
+    var group = document.getElementById("pdpVariant");
+    if (!group) return "";
+    var active = group.querySelector("button.is-active");
+    var prefix = group.getAttribute("data-prefix") || "";
+    if (!active || !prefix) return "";
+    return " " + prefix + ": " + active.getAttribute("data-value") + ".";
+  }
+
+  /* ---- Rewrite prices/links baked as static HTML on product detail pages ----
+     Also the single place that rebuilds the WhatsApp link's message, so it stays
+     correct whether or not wholesale pricing is active and whether or not the
+     product has a variant selector — the variant selector calls this again
+     (via refreshPDP) instead of maintaining its own copy of this message. */
   function rewriteStaticPDP() {
     var btn = document.querySelector(".pdp-actions .add-cart-btn[data-price]");
     if (!btn) return;
@@ -246,7 +260,7 @@
       }
     }
 
-    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA 🐕, quiero pedir: " + n + " (" + brand + ") — " + cop(applyDiscount(raw)) + ". ¿Está disponible?");
+    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA 🐕, quiero pedir: " + n + " (" + brand + ") — " + cop(applyDiscount(raw)) + "." + pdpVariantSuffix() + " ¿Está disponible?");
     var href = "https://wa.me/" + WA + "?text=" + msg;
     var buyLink = document.querySelector(".pdp-actions .btn-ink[href*=\"wa.me\"]");
     if (buyLink) buyLink.href = href;
@@ -320,6 +334,7 @@
     applyDiscount: applyDiscount,
     cop: cop,
     mayoristaPrefix: mayoristaPrefix,
+    refreshPDP: rewriteStaticPDP,
     openLoginModal: function () {
       if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", openModal);
