@@ -2,7 +2,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Marco Cult Biggie Hammertone",
   "brand": "Cult",
-  "cat": "marcos",
+  "cat": "horquillas",
   "spec": "",
   "price": 1790000,
   "sku": "biggie hammertoe",
