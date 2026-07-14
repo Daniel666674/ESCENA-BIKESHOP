@@ -163,6 +163,14 @@
     }
     .pmodal-field input:focus, .pmodal-field select:focus, .pmodal-field textarea:focus { outline: none; border-color: var(--ink); }
     .pmodal-margin-readout { border: 1.5px solid var(--line); border-radius: 8px; padding: .65rem .8rem; font-size: .86rem; font-weight: 700; background: var(--panel); }
+    .pmodal-sizes-row { display: grid; grid-template-columns: 1fr 110px auto; gap: .5rem; align-items: center; margin-bottom: .5rem; }
+    .pmodal-sizes-row input { border: 1.5px solid var(--line); border-radius: 8px; padding: .6rem .7rem; font-size: .84rem; font-family: inherit; width: 100%; }
+    .pmodal-sizes-row input:focus { outline: none; border-color: var(--ink); }
+    .pmodal-sizes-row .pmodal-size-rm { width: 32px; height: 32px; border-radius: 8px; border: 1.5px solid var(--line); background: #fff; color: var(--muted); font-size: 1rem; cursor: pointer; line-height: 1; }
+    .pmodal-sizes-row .pmodal-size-rm:hover { background: var(--panel); color: var(--ink); }
+    .pmodal-sizes-add { background: none; border: 1.5px dashed var(--line); border-radius: 8px; padding: .55rem .9rem; font-size: .78rem; font-weight: 700; color: var(--muted); cursor: pointer; font-family: inherit; width: 100%; margin-top: .2rem; }
+    .pmodal-sizes-add:hover { border-color: var(--ink); color: var(--ink); }
+    .pmodal-sizes-total { font-size: .74rem; color: var(--muted); margin-top: .5rem; }
     .pmodal-photos { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .8rem; }
     .pmodal-photo { position: relative; width: 72px; height: 72px; border-radius: 8px; overflow: hidden; background: #0A0A0A; }
     .pmodal-photo img { width: 100%; height: 100%; object-fit: cover; }
@@ -466,9 +474,15 @@
           <label>SKU</label>
           <input type="text" id="pmSku" />
         </div>
-        <div class="pmodal-field">
+        <div class="pmodal-field" id="pmUnitsField">
           <label>Unidades en stock</label>
           <input type="number" id="pmUnits" min="0" step="1" />
+        </div>
+        <div class="pmodal-field span2" id="pmSizesField" style="display:none;">
+          <label>Tallas y stock por talla</label>
+          <div id="pmSizesRows"></div>
+          <button type="button" class="pmodal-sizes-add" id="pmSizesAddBtn">+ Añadir talla</button>
+          <p class="pmodal-sizes-total" id="pmSizesTotal"></p>
         </div>
         <div class="pmodal-field">
           <label>Tag (opcional)</label>
@@ -503,6 +517,10 @@
     <p style="font-size:.8rem;color:var(--muted);margin:.3rem 0 1rem;" id="smodalProductName"></p>
     <form id="smodalForm">
       <div class="pmodal-grid">
+        <div class="pmodal-field span2" id="smSizeField" style="display:none;">
+          <label>Talla vendida</label>
+          <select id="smSize"></select>
+        </div>
         <div class="pmodal-field">
           <label>Cantidad vendida</label>
           <input type="number" id="smQty" min="1" step="1" value="1" required />
@@ -556,6 +574,15 @@
     tornilleria: "Tornillería", piezas: "Piezas varias", herramientas: "Herramientas"
   };
   var dirty = false; // unpublished changes exist
+  // Categories where one product commonly comes in multiple physical sizes,
+  // each with its own stock count (crank length, sprocket teeth, frame top-tube,
+  // stem length, bar width). p.sizes = [{label, units}]; p.units is kept as the
+  // maintained sum of p.sizes[].units so every existing units-based consumer
+  // (KPI totals, low-stock badges, CSV export, bulk price adjust) keeps working
+  // unchanged. Everything else stays on the plain flat p.units field.
+  var SIZE_CATEGORIES = { bielas: 1, pinones: 1, marcos: 1, stems: 1, manubrios: 1 };
+  function isSizeCat(cat) { return !!SIZE_CATEGORIES[cat]; }
+  function sizesTotal(sizes) { return (sizes || []).reduce(function (s, x) { return s + (x.units || 0); }, 0); }
 
   /* ============ GitHub API ============ */
   function getToken() { return sessionStorage.getItem(TOKEN_KEY) || localStorage.getItem(TOKEN_KEY) || ""; }
@@ -840,6 +867,7 @@
   var salesDirty = false; // unpublished sale records exist
   var salesBaselineCount = 0; // salesLog.length at last successful publish/load — everything past this is "mine, not yet committed"
   var modalPhotos = [];
+  var modalSizes = [];
   // Multiple devices can publish close together. products-data.js and
   // sales-log.js are shared single-file catalogs, so a blind "overwrite with my
   // whole in-memory copy" silently reverts whatever another device already
@@ -877,13 +905,22 @@
     m.published = (p.published === false) ? false : true;
     m.imgs = p.imgs || (p.img ? [p.img] : ["assets/img/escena-logo.jpg"]);
     delete m.img; delete m.stock;
+    if (isSizeCat(m.cat)) {
+      var validSizes = Array.isArray(p.sizes) && p.sizes.length
+        ? p.sizes.map(function (s) { return { label: String((s && s.label) || "").trim(), units: (s && typeof s.units === "number") ? s.units : 0 }; }).filter(function (s) { return s.label; })
+        : null;
+      m.sizes = validSizes && validSizes.length ? validSizes : [{ label: "Única", units: m.units }];
+      m.units = sizesTotal(m.sizes); // aggregate always derived from sizes, never trusted stale
+    } else {
+      delete m.sizes;
+    }
     return m;
   }
 
   // Fields that actually feed genPage() — a change to any of these means the
   // product's static detail page is out of date and needs regenerating.
   function pageSnapshotOf(p) {
-    return JSON.stringify([p.n, p.brand, p.cat, p.spec, p.price, p.sku, p.tag, p.units, p.imgs]);
+    return JSON.stringify([p.n, p.brand, p.cat, p.spec, p.price, p.sku, p.tag, p.units, p.imgs, p.sizes]);
   }
   function pageNeedsRegen(p) {
     return pageSnapshotOf(p) !== p._pageSnapshot;
@@ -958,6 +995,7 @@
       if (!CATEGORY_LABELS[p.cat]) errs.push(where + ": categoría inválida.");
       if (!(p.price > 0)) errs.push(where + ": el precio debe ser mayor a 0.");
       if (!p.imgs || !p.imgs.length) errs.push(where + ": falta al menos una foto.");
+      if (isSizeCat(p.cat) && (!p.sizes || !p.sizes.length)) errs.push(where + ": agrega al menos una talla.");
       if (seen[p.slug]) errs.push("Código duplicado (" + p.slug + ") en " + where + ".");
       seen[p.slug] = true;
     });
@@ -1005,22 +1043,35 @@
   function waHrefFor(p) {
     return "https://wa.me/573107630504?text=" + encodeURIComponent(waMsgFor(p) + " ¿Está disponible?");
   }
-  // "marcos" (frames) intentionally excluded — frame products don't get a
-  // standalone product page (see `eligible` in publishCatalog / `hasDetailPage`
-  // in tienda.html), they route through the Arma tu BMX builder instead.
+  // Cosmetic-only selector: no per-option stock, just tags the WhatsApp/cart
+  // message. Real inventory-backed sizes (crank length, sprocket teeth, frame
+  // top-tube, stem length, bar width — see SIZE_CATEGORIES/p.sizes) go through
+  // variantHtmlFor()'s other branch below instead.
   var VARIANT_CONFIG = {
-    "manzana-trasera": { label: "Lado (rueda trasera)", prefix: "Lado", options: ["LHD", "RHD"] },
-    "bielas": { label: "Talla de bielas", prefix: "Talla de bielas", options: ["160mm", "165mm", "170mm"] }
+    "manzana-trasera": { label: "Lado (rueda trasera)", prefix: "Lado", options: ["LHD", "RHD"] }
   };
   function variantHtmlFor(p) {
+    if (p.sizes && p.sizes.length > 1) {
+      var withStock = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
+      var activeLabel = (withStock[0] || p.sizes[0]).label;
+      var opts = p.sizes.map(function (s) {
+        var out = (s.units || 0) <= 0;
+        return '<button type="button" data-value="' + esc(s.label) + '" data-units="' + (s.units || 0) + '"' +
+          (s.label === activeLabel ? ' class="is-active"' : '') + (out ? ' disabled' : '') + '>' + esc(s.label) + '</button>';
+      }).join("");
+      return '<div class="pdp-variant" id="pdpVariant" data-prefix="Talla">\n' +
+        '      <span class="pdp-variant-label">Talla</span>\n' +
+        '      <div class="pdp-variant-options">' + opts + '</div>\n' +
+        '    </div>';
+    }
     var cfg = VARIANT_CONFIG[p.cat];
     if (!cfg) return "";
-    var opts = cfg.options.map(function (v, i) {
+    var opts2 = cfg.options.map(function (v, i) {
       return '<button type="button" data-value="' + esc(v) + '"' + (i === 0 ? ' class="is-active"' : '') + '>' + esc(v) + '</button>';
     }).join("");
     return '<div class="pdp-variant" id="pdpVariant" data-prefix="' + esc(cfg.prefix) + '">\n' +
       '      <span class="pdp-variant-label">' + esc(cfg.label) + '</span>\n' +
-      '      <div class="pdp-variant-options">' + opts + '</div>\n' +
+      '      <div class="pdp-variant-options">' + opts2 + '</div>\n' +
       '    </div>';
   }
   function relatedFor(p) {
@@ -1054,10 +1105,19 @@
   function genPage(p, tmpl) {
     var catLabel = CATEGORY_LABELS[p.cat] || p.cat, sku = p.sku || p.slug.toUpperCase();
     var gallery = galleryHtmlFor(p);
+    // UNITS drives the qty stepper's initial cap. For multi-size products that's
+    // the default-selected size's own stock, not the aggregate across all sizes
+    // — the client-side selector re-caps it per size after that (see the
+    // variant-selector script in producto/_template.html).
+    var initialUnits = p.units;
+    if (p.sizes && p.sizes.length > 1) {
+      var withStock = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
+      initialUnits = (withStock[0] || p.sizes[0] || { units: 0 }).units || 0;
+    }
     var m = {
       NAME: esc(p.n), BRAND: esc(p.brand || ""), PRICE: String(p.price), PRICE_FMT: copFmt(p.price),
       SPEC: esc(p.spec || ""), SLUG: p.slug, CAT_SLUG: p.cat, CAT_LABEL: esc(catLabel), SKU: esc(sku),
-      UNITS: String(typeof p.units === "number" ? p.units : 12),
+      UNITS: String(typeof initialUnits === "number" ? initialUnits : 12),
       AVAILABILITY: (typeof p.units === "number" && p.units <= 0) ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
       TAG_SPAN: p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '',
       SPEC_ROWS: specRows(p.spec, catLabel, p.brand), WA_HREF: waHrefFor(p), RELATED_SECTION: relatedFor(p),
@@ -1228,7 +1288,7 @@
       '<td class="sku" data-label="SKU">' + esc(p.sku) + '</td>' +
       '<td data-label="Categoría">' + esc(CATEGORY_LABELS[p.cat] || p.cat) + '</td>' +
       '<td data-label="Precio">' + cop(p.price) + '</td>' +
-      '<td data-label="Unidades"><span class="units-badge">' + units + '</span></td>' +
+      '<td data-label="Unidades"><span class="units-badge">' + units + '</span>' + (p.sizes && p.sizes.length ? ' <span style="display:inline-block;background:var(--panel);color:var(--muted);font-size:.62rem;font-weight:700;padding:.1rem .4rem;border-radius:4px;margin-left:.3rem;">' + p.sizes.length + ' talla' + (p.sizes.length > 1 ? "s" : "") + '</span>' : '') + '</td>' +
       '<td data-label="Estado">' + statusHTML + '</td>' +
       '<td class="row-actions" data-label="Acciones"><button type="button" class="sell">Registrar venta</button><button type="button" class="edit">Editar</button><button type="button" class="del">Eliminar</button></td>' +
       '</tr>';
@@ -1318,11 +1378,31 @@
     }).join("");
   }
 
+  function renderModalSizes() {
+    var wrap = document.getElementById("pmSizesRows");
+    wrap.innerHTML = modalSizes.map(function (s, i) {
+      return '<div class="pmodal-sizes-row">' +
+        '<input type="text" placeholder="Ej: 28T, 48mm, 20.75&quot;, 9.5&quot;" data-i="' + i + '" data-f="label" value="' + esc(s.label || "") + '" />' +
+        '<input type="number" min="0" step="1" placeholder="Stock" data-i="' + i + '" data-f="units" value="' + (typeof s.units === "number" ? s.units : "") + '" />' +
+        '<button type="button" class="pmodal-size-rm" data-i="' + i + '" aria-label="Quitar talla">&times;</button>' +
+        '</div>';
+    }).join("");
+    var total = sizesTotal(modalSizes);
+    document.getElementById("pmSizesTotal").textContent = modalSizes.length ? "Total: " + total + " unidades en " + modalSizes.length + " talla(s)." : "Sin tallas todavía.";
+  }
+  function toggleUnitsVsSizes(cat) {
+    var isSizes = isSizeCat(cat);
+    document.getElementById("pmUnitsField").style.display = isSizes ? "none" : "";
+    document.getElementById("pmSizesField").style.display = isSizes ? "" : "none";
+    if (isSizes && !modalSizes.length) { modalSizes = [{ label: "", units: 0 }]; renderModalSizes(); }
+  }
+
   function openProductModal(idx) {
     editingIdx = (typeof idx === "number") ? idx : null;
     var p = editingIdx !== null ? inventoryCatalog[editingIdx] : null;
+    var cat = p ? p.cat : "piezas";
     document.getElementById("pmodalTitle").textContent = p ? "Editar producto" : "Agregar producto";
-    document.getElementById("pmCat").innerHTML = catOptions(p ? p.cat : "piezas");
+    document.getElementById("pmCat").innerHTML = catOptions(cat);
     document.getElementById("pmName").value = p ? p.n : "";
     document.getElementById("pmBrand").value = p ? p.brand : "";
     document.getElementById("pmSpec").value = p ? p.spec : "";
@@ -1335,6 +1415,9 @@
     updateMarginReadout();
     modalPhotos = p ? p.imgs.slice() : [];
     renderModalPhotos();
+    modalSizes = p && p.sizes ? p.sizes.map(function (s) { return { label: s.label, units: s.units }; }) : [];
+    renderModalSizes();
+    toggleUnitsVsSizes(cat);
     document.getElementById("pmodalOverlay").classList.add("show");
     document.getElementById("pmName").focus();
   }
@@ -1357,21 +1440,45 @@
     var price = parseFloat(document.getElementById("smPrice").value) || 0;
     document.getElementById("smTotalReadout").textContent = cop(qty * price);
   }
+  function sellSelectedSize() {
+    var p = inventoryCatalog[sellingIdx];
+    if (!p || !p.sizes || !p.sizes.length) return null;
+    var sel = document.getElementById("smSize").value;
+    return p.sizes.filter(function (x) { return x.label === sel; })[0] || null;
+  }
+  function applySellUnitsLimit() {
+    var p = inventoryCatalog[sellingIdx];
+    var size = sellSelectedSize();
+    var units = size ? (size.units || 0) : (p ? (p.units || 0) : 0);
+    var qtyEl = document.getElementById("smQty");
+    var submitBtn = document.querySelector("#smodalForm button[type=submit]");
+    qtyEl.max = units;
+    qtyEl.value = units > 0 ? Math.min(parseInt(qtyEl.value, 10) || 1, units) : 0;
+    qtyEl.disabled = units <= 0;
+    submitBtn.disabled = units <= 0;
+    submitBtn.textContent = units <= 0 ? (size ? "Sin stock para esta talla" : "Sin stock para vender") : "Registrar venta";
+    updateSellTotal();
+  }
   function openSellModal(idx) {
     sellingIdx = idx;
     var p = inventoryCatalog[idx];
+    var hasSizes = p.sizes && p.sizes.length > 0;
+    var sizeField = document.getElementById("smSizeField");
+    sizeField.style.display = hasSizes ? "" : "none";
+    if (hasSizes) {
+      document.getElementById("smSize").innerHTML = p.sizes.map(function (s) {
+        var out = (s.units || 0) <= 0;
+        return '<option value="' + esc(s.label) + '"' + (out ? " disabled" : "") + '>' + esc(s.label) + " — " + (s.units || 0) + " en stock" + (out ? " (agotado)" : "") + "</option>";
+      }).join("");
+      var withStock = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
+      document.getElementById("smSize").value = (withStock[0] || p.sizes[0]).label;
+    }
     var units = p.units || 0;
-    document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock";
-    document.getElementById("smQty").value = units > 0 ? 1 : 0;
-    document.getElementById("smQty").max = units;
+    document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock" + (hasSizes ? " (todas las tallas)" : "");
     document.getElementById("smPrice").value = p.price || 0;
     document.getElementById("smBuyer").value = "";
     document.getElementById("smNotes").value = "";
-    var submitBtn = document.querySelector("#smodalForm button[type=submit]");
-    document.getElementById("smQty").disabled = units <= 0;
-    submitBtn.disabled = units <= 0;
-    submitBtn.textContent = units <= 0 ? "Sin stock para vender" : "Registrar venta";
-    updateSellTotal();
+    applySellUnitsLimit();
     document.getElementById("smodalOverlay").classList.add("show");
     document.getElementById("smQty").focus();
   }
@@ -1466,23 +1573,31 @@
     });
     document.getElementById("smQty").addEventListener("input", updateSellTotal);
     document.getElementById("smPrice").addEventListener("input", updateSellTotal);
+    document.getElementById("smSize").addEventListener("change", applySellUnitsLimit);
     document.getElementById("smodalForm").addEventListener("submit", function (e) {
       e.preventDefault();
       if (sellingIdx === null) return;
       var p = inventoryCatalog[sellingIdx];
       var qty = parseInt(document.getElementById("smQty").value, 10) || 0;
       var price = parseFloat(document.getElementById("smPrice").value) || 0;
+      var size = sellSelectedSize();
+      var available = size ? (size.units || 0) : (p.units || 0);
       if (qty < 1) return;
-      if (qty > (p.units || 0)) { alert("Solo hay " + (p.units || 0) + " en stock — no puedes registrar una venta de " + qty + "."); return; }
-      p.units = (p.units || 0) - qty;
+      if (qty > available) { alert("Solo hay " + available + " en stock" + (size ? " para la talla " + size.label : "") + " — no puedes registrar una venta de " + qty + "."); return; }
+      if (size) {
+        size.units -= qty;
+        p.units = sizesTotal(p.sizes);
+      } else {
+        p.units = (p.units || 0) - qty;
+      }
       markDirty(p.slug);
-      salesLog.push({
+      salesLog.push(Object.assign({
         date: new Date().toISOString(),
         slug: p.slug, n: p.n, sku: p.sku, brand: p.brand,
         qty: qty, unitPrice: price, total: qty * price,
         buyer: document.getElementById("smBuyer").value.trim(),
         notes: document.getElementById("smNotes").value.trim()
-      });
+      }, size ? { size: size.label } : {}));
       salesDirty = true;
       saveCatalog();
       renderSalesSummary();
@@ -1518,14 +1633,39 @@
       renderModalPhotos();
     });
 
+    document.getElementById("pmCat").addEventListener("change", function () {
+      toggleUnitsVsSizes(this.value);
+    });
+    document.getElementById("pmSizesAddBtn").addEventListener("click", function () {
+      modalSizes.push({ label: "", units: 0 });
+      renderModalSizes();
+      var inputs = document.querySelectorAll('#pmSizesRows input[data-f="label"]');
+      if (inputs.length) inputs[inputs.length - 1].focus();
+    });
+    document.getElementById("pmSizesRows").addEventListener("input", function (e) {
+      var i = e.target.getAttribute("data-i"), f = e.target.getAttribute("data-f");
+      if (i === null || !f) return;
+      i = parseInt(i, 10);
+      if (!modalSizes[i]) return;
+      modalSizes[i][f] = f === "units" ? (parseInt(e.target.value, 10) || 0) : e.target.value;
+      document.getElementById("pmSizesTotal").textContent = "Total: " + sizesTotal(modalSizes) + " unidades en " + modalSizes.length + " talla(s).";
+    });
+    document.getElementById("pmSizesRows").addEventListener("click", function (e) {
+      var rm = e.target.closest(".pmodal-size-rm");
+      if (!rm) return;
+      modalSizes.splice(parseInt(rm.getAttribute("data-i"), 10), 1);
+      renderModalSizes();
+    });
+
     document.getElementById("pmodalForm").addEventListener("submit", function (e) {
       e.preventDefault();
       var name = document.getElementById("pmName").value.trim();
       if (!name) return;
+      var catVal = document.getElementById("pmCat").value;
       var fields = {
         n: name,
         brand: document.getElementById("pmBrand").value.trim(),
-        cat: document.getElementById("pmCat").value,
+        cat: catVal,
         spec: document.getElementById("pmSpec").value.trim(),
         price: parseFloat(document.getElementById("pmPrice").value) || 0,
         sku: document.getElementById("pmSku").value.trim(),
@@ -1535,9 +1675,16 @@
         notes: document.getElementById("pmNotes").value.trim(),
         imgs: modalPhotos.length ? modalPhotos : ["assets/img/escena-logo.jpg"]
       };
+      if (isSizeCat(catVal)) {
+        fields.sizes = modalSizes
+          .map(function (s) { return { label: (s.label || "").trim(), units: s.units || 0 }; })
+          .filter(function (s) { return s.label; });
+        fields.units = sizesTotal(fields.sizes);
+      }
       if (editingIdx !== null) {
         var cur = inventoryCatalog[editingIdx];
         Object.assign(cur, fields); // merge -> preserves slug, weight, published, etc.
+        if (!isSizeCat(catVal)) delete cur.sizes; // category changed away from a size-category
         if (!cur.sku) cur.sku = cur.slug.toUpperCase();
         markDirty(cur.slug);
         showToast("Producto actualizado");
@@ -1565,11 +1712,13 @@
     });
 
     document.getElementById("invExportCsvBtn").addEventListener("click", function () {
-      var headers = ["slug", "n", "brand", "cat", "spec", "price", "sku", "units", "tag", "imgs"];
+      var headers = ["slug", "n", "brand", "cat", "spec", "price", "sku", "units", "tag", "imgs", "sizes"];
       var rows = [headers.join(",")];
       inventoryCatalog.forEach(function (p) {
         rows.push(headers.map(function (h) {
-          var v = h === "imgs" ? p.imgs.join("|") : (p[h] === undefined ? "" : p[h]);
+          var v = h === "imgs" ? p.imgs.join("|")
+            : h === "sizes" ? (p.sizes || []).map(function (s) { return s.label + ":" + s.units; }).join("|")
+            : (p[h] === undefined ? "" : p[h]);
           return '"' + String(v).replace(/"/g, '""') + '"';
         }).join(","));
       });
@@ -1661,6 +1810,14 @@
       if (o.price !== undefined) o.price = parseFloat(o.price) || 0;
       if (o.units !== undefined) o.units = parseInt(o.units, 10) || 0;
       if (o.imgs) o.imgs = String(o.imgs).split("|").filter(Boolean);
+      if (o.sizes) {
+        o.sizes = String(o.sizes).split("|").filter(Boolean).map(function (s) {
+          var parts = s.split(":");
+          return { label: parts[0], units: parseInt(parts[1], 10) || 0 };
+        });
+      } else if (o.sizes === "") {
+        delete o.sizes;
+      }
       if (o.published !== undefined) o.published = !(o.published === "false" || o.published === false);
       return o;
     });
