@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Odyssey",
+  "brand": "Odyssey",
+  "cat": "pedales",
+  "spec": "Twist Pro Morado",
+  "price": 95000,
+  "sku": "PDL",
+  "units": 2,
+  "tag": "Caliente 🔥",
+  "imgs": [
+   "assets/img/products/pedales-odyssey.jpg?v=1784059906159",
+   "assets/img/products/pedales-odyssey-2.jpg?v=1784059908763"
+  ],
+  "slug": "pedales-odyssey",
+  "img": "assets/img/products/pedales-odyssey.jpg?v=1784059906159"
+ },
+ {
   "n": "Pedales Demolition",
   "brand": "Demolition",
   "cat": "pedales",
