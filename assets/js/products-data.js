@@ -768,7 +768,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/direccion-negra.jpg"
  },
  {
-  "n": "Caja de Frente Demolition Negra",
+  "n": "Cajas de Frente Demolition Negra",
   "brand": "Demolition",
   "cat": "caja-frente",
   "spec": "Frente Integrado · Rodamientos sellados",
