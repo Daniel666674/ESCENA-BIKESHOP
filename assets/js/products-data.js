@@ -7,6 +7,7 @@ window.ESCENA_PRODUCTS = [
   "price": 330000,
   "sku": "STEAM",
   "units": 1,
+  "tag": "Descuento 💸!",
   "imgs": [
    "assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954",
    "assets/img/products/cana-volume-bison-frontload-2.jpg?v=1784069578394",
