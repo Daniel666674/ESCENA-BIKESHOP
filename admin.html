@@ -366,6 +366,7 @@
           <input type="file" id="invImportFile" accept=".json,.csv" style="display:none;" />
           <button type="button" class="btn btn-outline btn-sm" id="invExportCsvBtn">Exportar CSV</button>
           <button type="button" class="btn btn-outline btn-sm" id="invExportBtn">Exportar JSON</button>
+          <button type="button" class="btn btn-outline btn-sm" id="invRegenBtn" title="Regenera la página de cada producto con la plantilla actual — úsalo una vez después de un cambio de plantilla.">Regenerar todas las páginas</button>
           <button type="button" class="btn btn-outline btn-sm" id="invDiscardBtn">Descartar cambios</button>
           <button type="button" class="btn btn-ink btn-sm" id="invPublishBtn">Publicar en el sitio</button>
         </div>
@@ -786,7 +787,25 @@
     return m;
   }
 
-  function loadCatalog() { return ESCENA_PRODUCTS.map(migrateProduct); }
+  // Fields that actually feed genPage() — a change to any of these means the
+  // product's static detail page is out of date and needs regenerating.
+  function pageSnapshotOf(p) {
+    return JSON.stringify([p.n, p.brand, p.cat, p.spec, p.price, p.sku, p.tag, p.units]);
+  }
+  function pageNeedsRegen(p) {
+    return pageSnapshotOf(p) !== p._pageSnapshot;
+  }
+
+  // Only the initial load from the live catalog gets a "this is what's already
+  // published" baseline snapshot — imported/pasted data has no such baseline, so
+  // pageNeedsRegen() correctly treats it as needing regeneration (safer default
+  // than silently skipping a page that may have actually changed).
+  function loadCatalog() {
+    return ESCENA_PRODUCTS.map(migrateProduct).map(function (p) {
+      p._pageSnapshot = pageSnapshotOf(p);
+      return p;
+    });
+  }
   function cacheDraft() { try { localStorage.setItem(CATALOG_KEY, JSON.stringify(inventoryCatalog)); } catch (e) {} }
   function clearDraft() { try { localStorage.removeItem(CATALOG_KEY); } catch (e) {} }
   function saveCatalog() { dirty = true; cacheDraft(); updatePendingUI(); } // now = "mark unpublished"
@@ -807,6 +826,7 @@
     if (o.published === true) delete o.published; // default; keep only when false
     if (!o.tag) delete o.tag;
     delete o.cost; delete o.notes; // internal-only, never published
+    delete o._pageSnapshot; // internal-only, drives static page regeneration
     return o;
   }
 
@@ -896,7 +916,7 @@
 
   /* ---- Publish: commit new photos, then products-data.js ---- */
   var publishing = false;
-  function publishCatalog() {
+  function publishCatalog(forceRegenAll) {
     if (publishing) return;
     var errs = validateCatalog();
     if (errs.length) { alert("No se puede publicar:\n\n• " + errs.slice(0, 12).join("\n• ")); return; }
@@ -932,29 +952,37 @@
       });
     }
 
-    // Products still needing onboarding (not frames): driven by the durable
-    // `published` flag, not a client-only flag, so a product that didn't
-    // finish onboarding in an earlier session (page-gen skipped, tab closed,
-    // etc.) is retried automatically on every publish until it succeeds.
-    var newPages = inventoryCatalog.filter(function (p) {
-      return p.published === false && p.cat !== "marcos" && p.imgs && p.imgs[0] && p.imgs[0].indexOf("frame-placeholder") === -1;
+    // A product's static page needs (re)generating when: it's still onboarding
+    // (published === false, driven by the durable flag so an interrupted onboarding
+    // retries automatically), its templated fields changed since it was loaded
+    // (name/price/units/etc — including a stock decrement from "Registrar venta"),
+    // or the owner explicitly asked to regenerate everything (one-time maintenance
+    // action, e.g. after a template change).
+    var eligible = function (p) { return p.cat !== "marcos" && p.imgs && p.imgs[0] && p.imgs[0].indexOf("frame-placeholder") === -1; };
+    var pagesToGenerate = inventoryCatalog.filter(function (p) {
+      if (!eligible(p)) return false;
+      if (p.published === false) return true;
+      if (forceRegenAll) return true;
+      return pageNeedsRegen(p);
     });
-    var createdSlugs = [];
+    var createdSlugs = []; // newly-onboarded (published flips true, added to sitemap)
 
     commitPhotos(0).then(function () {
-      if (!newPages.length) return Promise.resolve();
+      if (!pagesToGenerate.length) return Promise.resolve();
       btn.textContent = "Creando páginas…";
       return ghGetFile("producto/_template.html").then(function (tf) {
         if (!tf.text) throw new Error("Falta la plantilla producto/_template.html");
         function makePage(i) {
-          if (i >= newPages.length) return Promise.resolve();
-          var p = newPages[i];
+          if (i >= pagesToGenerate.length) return Promise.resolve();
+          var p = pagesToGenerate[i];
+          var wasOnboarding = p.published === false;
           var html = genPage(p, tf.text);
           return ghGetFile("producto/" + p.slug + ".html").then(function (ex) {
-            return ghPutFile("producto/" + p.slug + ".html", html, "Add product page " + p.slug + " (admin)", ex.sha);
+            return ghPutFile("producto/" + p.slug + ".html", html, "Update product page " + p.slug + " (admin)", ex.sha);
           }).then(function () {
-            createdSlugs.push(p.slug);
-            btn.textContent = "Creando páginas… " + (i + 1) + "/" + newPages.length;
+            if (wasOnboarding) createdSlugs.push(p.slug);
+            p._pageSnapshot = pageSnapshotOf(p);
+            btn.textContent = "Creando páginas… " + (i + 1) + "/" + pagesToGenerate.length;
             return makePage(i + 1);
           });
         }
@@ -976,19 +1004,22 @@
         return ghPutFile("sitemap.xml", xml, "Add " + adds.length + " product page(s) to sitemap (admin)", sm.sha);
       });
     }).then(function () {
-      var siteArr = inventoryCatalog.map(toSiteProduct);
-      var content = "window.ESCENA_PRODUCTS = " + JSON.stringify(siteArr, null, 1) + ";\n";
-      btn.textContent = "Guardando catálogo…";
-      return ghGetFile("assets/js/products-data.js").then(function (cur) {
-        return ghPutFile("assets/js/products-data.js", content, "Update catalog via admin panel", cur.sha);
-      });
-    }).then(function () {
+      // Commit the sales log before the catalog: if a later step fails, the sale
+      // record (revenue accounting) is already safely committed, and the retry on
+      // the next publish only needs to re-land the catalog/stock update.
       if (!salesDirty) return Promise.resolve();
       var content = "window.ESCENA_SALES = " + JSON.stringify(salesLog, null, 1) + ";\n";
       btn.textContent = "Guardando ventas…";
       return ghGetFile("assets/js/sales-log.js").then(function (cur) {
         return ghPutFile("assets/js/sales-log.js", content, "Update sales log via admin panel", cur.sha);
       }).then(function () { salesDirty = false; });
+    }).then(function () {
+      var siteArr = inventoryCatalog.map(toSiteProduct);
+      var content = "window.ESCENA_PRODUCTS = " + JSON.stringify(siteArr, null, 1) + ";\n";
+      btn.textContent = "Guardando catálogo…";
+      return ghGetFile("assets/js/products-data.js").then(function (cur) {
+        return ghPutFile("assets/js/products-data.js", content, "Update catalog via admin panel", cur.sha);
+      });
     }).then(function () {
       dirty = false; clearDraft(); updatePendingUI();
       renderInventory(document.getElementById("invSearch").value.trim());
@@ -1363,7 +1394,14 @@
     });
 
     /* ---- Publish to repo ---- */
-    document.getElementById("invPublishBtn").addEventListener("click", publishCatalog);
+    document.getElementById("invPublishBtn").addEventListener("click", function () { publishCatalog(false); });
+
+    /* ---- One-time: regenerate every product's static page from the current template ---- */
+    document.getElementById("invRegenBtn").addEventListener("click", function () {
+      if (confirm("Esto vuelve a generar la página de cada producto con la plantilla actual y las publica. Puede tardar varios minutos con catálogos grandes. ¿Continuar?")) {
+        publishCatalog(true);
+      }
+    });
 
     /* ---- Discard local (unpublished) changes -> reload live catalog ---- */
     document.getElementById("invDiscardBtn").addEventListener("click", function () {
