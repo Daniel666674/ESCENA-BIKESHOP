@@ -114,6 +114,12 @@
     .pdp-stock-hint:empty { margin: 0 0 1.4rem; }
     .pdp-stock-hint.is-low { color: #c0392b; }
     .pdp-stock-hint.is-out { color: #c0392b; text-transform: uppercase; letter-spacing: .04em; }
+    .pdp-variant { margin: 0 0 1.3rem; }
+    .pdp-variant-label { display: block; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .55rem; }
+    .pdp-variant-options { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .pdp-variant-options button { background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .8rem; font-weight: 600; color: var(--ink); cursor: pointer; font-family: inherit; transition: all .15s; }
+    .pdp-variant-options button:hover { border-color: var(--ink); }
+    .pdp-variant-options button.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
     .pdp-actions { display: flex; flex-direction: column; gap: .7rem; max-width: 340px; margin-bottom: 1.6rem; }
     .pdp-actions.is-agotado .add-cart-btn, .pdp-actions.is-agotado .pdp-qty { opacity: .5; }
     .add-cart-btn:disabled { cursor: not-allowed; }
@@ -305,14 +311,15 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     <h1>Marco Cult Biggie Hammertone</h1>
     <div class="pdp-price">$1.790.000 COP</div>
     <p class="pdp-stock-hint" id="pdpStockHint" data-units="2"></p>
+    
     <div class="pdp-actions" id="pdpActions">
-      <a class="btn btn-ink" href="https://wa.me/573107630504?text=Hola%20ESCENA%20%F0%9F%90%95%2C%20quiero%20pedir%3A%20Marco%20Cult%20Biggie%20Hammertone%20(Cult)%20%E2%80%94%20%241.790.000%20COP.%20%C2%BFEst%C3%A1%20disponible%3F" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      <a class="btn btn-ink" id="pdpWaLink" href="https://wa.me/573107630504?text=Hola%20ESCENA%20%F0%9F%90%95%2C%20quiero%20pedir%3A%20Marco%20Cult%20Biggie%20Hammertone%20(Cult)%20%E2%80%94%20%241.790.000%20COP.%20%C2%BFEst%C3%A1%20disponible%3F" target="_blank" rel="noopener">Pedir por WhatsApp</a>
       <div class="pdp-qty">
         <button type="button" id="qtyDec" aria-label="Reducir cantidad">&minus;</button>
         <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="2" />
         <button type="button" id="qtyInc" aria-label="Aumentar cantidad">+</button>
       </div>
-      <button type="button" class="add-cart-btn" data-slug="marco-cult-biggie-hammertone" data-n="Marco Cult Biggie Hammertone" data-brand="Cult" data-price="1790000" data-img="assets/img/products/marco-cult-biggie-hammertone.jpg" data-units="2">Agregar al carrito</button>
+      <button type="button" class="add-cart-btn" data-slug="marco-cult-biggie-hammertone" data-n="Marco Cult Biggie Hammertone" data-brand="Cult" data-price="1790000" data-img="assets/img/products/marco-cult-biggie-hammertone.jpg" data-units="2" data-variant="">Agregar al carrito</button>
     </div>
     <div class="pdp-share">
       <span>Compartir</span>
@@ -597,6 +604,32 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
       qtyInput.value = Math.min(unitsAvail, Math.max(1, v));
     });
   }
+
+  /* ---- Variant selector (LHD/RHD, crank size — category-dependent) ----
+     The actual WhatsApp message (price, wholesale discount, variant note) is
+     rebuilt by wholesale.js's refreshPDP(), the single place that owns that
+     link so it stays correct whether or not wholesale pricing is active. */
+  (function () {
+    var group = document.getElementById("pdpVariant");
+    if (!group) return;
+
+    function applyValue(val) {
+      group.querySelectorAll("button").forEach(function (b) {
+        b.classList.toggle("is-active", b.getAttribute("data-value") === val);
+      });
+      if (addCartBtn) addCartBtn.setAttribute("data-variant", val);
+      if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
+    }
+
+    group.addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-value]");
+      if (!btn) return;
+      applyValue(btn.getAttribute("data-value"));
+    });
+
+    var firstBtn = group.querySelector("button[data-value]");
+    if (firstBtn) applyValue(firstBtn.getAttribute("data-value"));
+  })();
 </script>
 <script>var ESCENA_ROOT = "../";</script>
 <script src="../assets/js/cart.js"></script>
