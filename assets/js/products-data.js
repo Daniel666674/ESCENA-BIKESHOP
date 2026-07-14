@@ -1,24 +1,20 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Too short",
-  "brand": "CULT",
-  "cat": "horquillas",
-  "spec": "Frente 20.5",
-  "price": 1790000,
-  "sku": "1112",
-  "units": 10,
+  "n": "Caña Shadow Chula 48mm",
+  "brand": "Shadow",
+  "cat": "stems",
+  "spec": "Aluminio CNC",
+  "price": 250000,
+  "sku": "Shadow chula",
+  "units": 1,
+  "tag": "TOP🔥",
   "imgs": [
-   "assets/img/products/too-short-3.jpg?v=1784052247222",
-   "assets/img/products/too-short-4.jpg?v=1784052248858",
-   "assets/img/products/too-short-5.jpg?v=1784052250495",
-   "assets/img/products/too-short-6.jpg?v=1784052252236",
-   "assets/img/products/too-short-7.jpg?v=1784052253979",
-   "assets/img/products/too-short-8.jpg?v=1784052256025",
-   "assets/img/products/too-short-9.jpg?v=1784052257969",
-   "assets/img/products/too-short-10.jpg?v=1784052260530"
+   "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105",
+   "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1784053122690",
+   "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583"
   ],
-  "slug": "too-short",
-  "img": "assets/img/products/too-short-3.jpg?v=1784052247222"
+  "slug": "cana-shadow-chula-48mm",
+  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105"
  },
  {
   "n": "Marco Cult Biggie Hammertone",
