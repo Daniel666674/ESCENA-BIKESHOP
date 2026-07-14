@@ -965,7 +965,7 @@
   }
   function relatedFor(p) {
     var rel = inventoryCatalog.filter(function (q) {
-      return q !== p && q.cat === p.cat && q.published !== false && q.cat !== "marcos" &&
+      return q !== p && q.cat === p.cat && q.published !== false &&
         (q.imgs && q.imgs[0] && q.imgs[0].indexOf("frame-placeholder") === -1 && q.imgs[0].indexOf("data:") !== 0);
     }).slice(0, 4);
     if (!rel.length) return "";
@@ -1059,7 +1059,7 @@
     // (name/price/units/etc — including a stock decrement from "Registrar venta"),
     // or the owner explicitly asked to regenerate everything (one-time maintenance
     // action, e.g. after a template change).
-    var eligible = function (p) { return p.cat !== "marcos" && p.imgs && p.imgs[0] && p.imgs[0].indexOf("frame-placeholder") === -1; };
+    var eligible = function (p) { return p.imgs && p.imgs[0] && p.imgs[0].indexOf("frame-placeholder") === -1; };
     var pagesToGenerate = inventoryCatalog.filter(function (p) {
       if (!eligible(p)) return false;
       if (p.published === false) return true;
@@ -1090,8 +1090,8 @@
         return makePage(0);
       });
     }).then(function () {
-      // mark newly-paged (or frame) products live
-      inventoryCatalog.forEach(function (p) { if (p.published === false && (p.cat === "marcos" || createdSlugs.indexOf(p.slug) > -1)) { p.published = true; } });
+      // mark newly-paged products live
+      inventoryCatalog.forEach(function (p) { if (p.published === false && createdSlugs.indexOf(p.slug) > -1) { p.published = true; } });
       // add new pages to sitemap.xml
       if (!createdSlugs.length) return Promise.resolve();
       return ghGetFile("sitemap.xml").then(function (sm) {

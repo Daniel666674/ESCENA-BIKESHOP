@@ -1,5 +1,38 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Aros Rant Cromados",
+  "brand": "Rant",
+  "cat": "rines",
+  "spec": "Cromado",
+  "price": 150000,
+  "sku": "Ppf",
+  "units": 2,
+  "tag": "Nuevo 🔥!",
+  "imgs": [
+   "assets/img/products/aros-rant-cromados.jpg?v=1784052307262",
+   "assets/img/products/aros-rant-cromados-2.jpg?v=1784052308894"
+  ],
+  "slug": "aros-rant-cromados",
+  "img": "assets/img/products/aros-rant-cromados.jpg?v=1784052307262"
+ },
+ {
+  "n": "Caña Shadow Chula 48mm",
+  "brand": "Shadow",
+  "cat": "stems",
+  "spec": "Aluminio CNC",
+  "price": 250000,
+  "sku": "Shadow chula",
+  "units": 1,
+  "tag": "TOP🔥",
+  "imgs": [
+   "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105",
+   "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1784053122690",
+   "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583"
+  ],
+  "slug": "cana-shadow-chula-48mm",
+  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105"
+ },
+ {
   "n": "Casco TSG Evolution Verde",
   "brand": "TSG",
   "cat": "stems",
@@ -1264,6 +1297,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.1,
   "sku": "SUNDAY-MARCO-CROMOLY-BRONCE",
   "units": 12,
+  "published": false,
   "img": "assets/img/products/frame-placeholder.svg"
  },
  {
@@ -1297,6 +1331,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.15,
   "sku": "TOTAL-MARCO-2075-BLANCO-AZUL",
   "units": 12,
+  "published": false,
   "img": "assets/img/products/frame-placeholder.svg"
  },
  {
@@ -1313,6 +1348,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.08,
   "sku": "FEDERAL-MARCO-BRUNO-LT-BLANCO",
   "units": 12,
+  "published": false,
   "img": "assets/img/products/frame-placeholder.svg"
  },
  {
@@ -1346,6 +1382,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.12,
   "sku": "SUBROSA-MARCO-PARK-NEGRO",
   "units": 12,
+  "published": false,
   "img": "assets/img/products/frame-placeholder.svg"
  },
  {
@@ -1363,6 +1400,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.2,
   "sku": "SM-MARCO-PARK-PRO-CROMADO",
   "units": 12,
+  "published": false,
   "img": "assets/img/products/frame-placeholder.svg"
  },
  {
@@ -1379,6 +1417,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.1,
   "sku": "COLONY-MARCO-PARK-GRIS",
   "units": 12,
+  "published": false,
   "img": "assets/img/products/frame-placeholder.svg"
  },
  {
@@ -1395,6 +1434,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.18,
   "sku": "STRANGER-MARCO-DIRT-NEGRO",
   "units": 12,
+  "published": false,
   "img": "assets/img/products/frame-placeholder.svg"
  },
  {
@@ -1411,6 +1451,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.25,
   "sku": "TALL-ORDER-MARCO-TRAIL-VERDE",
   "units": 12,
+  "published": false,
   "img": "assets/img/products/frame-placeholder.svg"
  },
  {
