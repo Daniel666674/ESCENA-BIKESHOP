@@ -116,15 +116,15 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/eclat-trippin-rin-negro.jpg"
  },
  {
-  "n": "Silla Cult x Vans Pivotal",
-  "brand": "Cult",
-  "cat": "sillines",
-  "spec": "Pivotal slim · Cordura · Negro",
+  "n": "Caña Fiend Mills Top Load Negra",
+  "brand": "Fiend",
+  "cat": "stems",
+  "spec": "Caña Fiend Mills Negra 50MM",
   "price": 185000,
   "tag": "Colab",
   "slug": "cult-vans-sillin-negro",
   "sku": "CULT-VANS-SILLIN-NEGRO",
-  "units": 12,
+  "units": 2,
   "img": "assets/img/products/cult-vans-sillin-negro.jpg"
  },
  {
