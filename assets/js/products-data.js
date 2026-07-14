@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Stolen",
+  "brand": "Stolen",
+  "cat": "pedales",
+  "spec": "Verde, Azul, AguaMarina, Rojo, Amarillo Florecente.",
+  "price": 75000,
+  "sku": "PDL",
+  "units": 5,
+  "tag": "Colorido 🌈!",
+  "imgs": [
+   "assets/img/products/pedales-stolen.jpg?v=1784058795983",
+   "assets/img/products/pedales-stolen-2.jpg?v=1784058798429",
+   "assets/img/products/pedales-stolen-3.jpg?v=1784058800908",
+   "assets/img/products/pedales-stolen-4.jpg?v=1784058803539",
+   "assets/img/products/pedales-stolen-5.jpg?v=1784058805501",
+   "assets/img/products/pedales-stolen-6.jpg?v=1784058808108"
+  ],
+  "slug": "pedales-stolen",
+  "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983"
+ },
+ {
   "n": "Caña Odyssey CFL3",
   "brand": "Odyssey",
   "cat": "stems",
