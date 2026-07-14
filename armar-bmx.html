@@ -93,7 +93,7 @@
     .cart-btn svg { width: 26px; height: 26px; }
     .burger { display: none; background: none; border: 0; color: var(--ink); font-size: 1.9rem; cursor: pointer; line-height: 1; }
     @media (max-width: 980px) {
-      .nav-links { position: fixed; inset: 68px 0 auto 0; background: #fff; flex-direction: column; gap: 0; padding: .5rem 1.8rem 1.8rem; transform: translateY(-120%); transition: transform .3s; border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0,0,0,.06); align-items: stretch; }
+      .nav-links { position: fixed; inset: 68px 0 0 0; overflow-y: auto; -webkit-overflow-scrolling: touch; background: #fff; flex-direction: column; gap: 0; padding: .5rem 1.8rem 1.8rem; transform: translateY(-120%); transition: transform .3s; border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0,0,0,.06); align-items: stretch; }
       .nav-links.open { transform: translateY(0); }
       .nav-links a { padding: 1.05rem .2rem; border-bottom: 1px solid var(--line); width: 100%; color: var(--ink); border-radius: 0; font-size: .88rem; }
       .nav-cta { text-align: center; margin-top: .9rem; margin-left: 0; }
@@ -103,7 +103,7 @@
       header.top-bar { height: 58px; padding: 0 1.1rem; }
       .brand img { width: 36px; height: 36px; }
       .brand .name { font-size: 1.5rem; }
-      .nav-links { inset: 58px 0 auto 0; }
+      .nav-links { inset: 58px 0 0 0; }
     }
 
     .breadcrumb { padding: 1.2rem 1.5rem 0; font-size: .78rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .3rem; max-width: 1180px; margin: 0 auto; }
