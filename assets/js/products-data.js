@@ -1,5 +1,46 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Caña Volume Bison - FrontLoad",
+  "brand": "Volume",
+  "cat": "stems",
+  "spec": "Alcance 50 mm.",
+  "price": 330000,
+  "sku": "STEAM",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954",
+   "assets/img/products/cana-volume-bison-frontload-2.jpg?v=1784069578394",
+   "assets/img/products/cana-volume-bison-frontload-3.jpg?v=1784069579944",
+   "assets/img/products/cana-volume-bison-frontload-4.jpg?v=1784069581279",
+   "assets/img/products/cana-volume-bison-frontload-5.jpg?v=1784069582905",
+   "assets/img/products/cana-volume-bison-frontload-6.jpg?v=1784069584354"
+  ],
+  "sizes": [
+   {
+    "label": "50 mm",
+    "units": 1
+   }
+  ],
+  "slug": "cana-volume-bison-frontload",
+  "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954"
+ },
+ {
+  "n": "Plato Fitbikeco",
+  "brand": "Fitbikeco",
+  "cat": "piezas",
+  "spec": "Negro Guardia 28T",
+  "price": 340000,
+  "sku": "PLT",
+  "units": 1,
+  "tag": "Top",
+  "imgs": [
+   "assets/img/products/plato-fitbikeco.jpg?v=1784069585656",
+   "assets/img/products/plato-fitbikeco-2.jpg?v=1784069586958"
+  ],
+  "slug": "plato-fitbikeco",
+  "img": "assets/img/products/plato-fitbikeco.jpg?v=1784069585656"
+ },
+ {
   "n": "Marco Fitbikeco STR Negro",
   "brand": "Fitbikeco",
   "cat": "marcos",
