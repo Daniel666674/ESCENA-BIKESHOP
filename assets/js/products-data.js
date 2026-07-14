@@ -1,5 +1,26 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Marco Cult Biggie Hammertone",
+  "brand": "Cult",
+  "cat": "marcos",
+  "spec": "",
+  "price": 1790000,
+  "sku": "biggie hammertoe",
+  "units": 2,
+  "tag": "Nuevo",
+  "imgs": [
+   "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779",
+   "assets/img/products/marco-cult-biggie-hammertone-2.jpg?v=1784048461580",
+   "assets/img/products/marco-cult-biggie-hammertone-3.jpg?v=1784048463198",
+   "assets/img/products/marco-cult-biggie-hammertone-4.jpg?v=1784048464803",
+   "assets/img/products/marco-cult-biggie-hammertone-5.jpg?v=1784048466711",
+   "assets/img/products/marco-cult-biggie-hammertone-6.jpg?v=1784048468587",
+   "assets/img/products/marco-cult-biggie-hammertone-7.jpg?v=1784048470248"
+  ],
+  "slug": "marco-cult-biggie-hammertone",
+  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779"
+ },
+ {
   "n": "Caña S&M enduro 40MM Negra",
   "brand": "S&M",
   "cat": "stems",
