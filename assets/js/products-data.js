@@ -1321,16 +1321,26 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "marcos",
   "spec": "Cromoly · Top tube 20.5\" · Hammertone Negro",
-  "price": 980000,
-  "tag": "Top",
+  "price": 1790000,
+  "tag": "Top 🔥",
   "size": "20.5",
   "styles": [
    "street"
   ],
   "weight": 2.05,
   "sku": "CULT-BIGGIE-JAIME-SINTES-HAMMERTONE-NEGRO",
-  "units": 12,
-  "img": "assets/img/products/marco_cult_biggie_hammertone_negro.jpeg"
+  "units": 1,
+  "imgs": [
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1784060861700",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-3.jpg?v=1784060863489",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-4.jpg?v=1784060866186",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-5.jpg?v=1784060868553",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-6.jpg?v=1784060871314",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-7.jpg?v=1784060874032",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-8.jpg?v=1784060881652"
+  ],
+  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068"
  },
  {
   "n": "Fate Namaste Negro",
@@ -1436,16 +1446,26 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "marcos",
   "spec": "Cromoly · Top tube 20.5\" · Negro/Dorado",
-  "price": 1020000,
-  "tag": "Top",
+  "price": 1790000,
+  "tag": "Top 🔥",
   "size": "20.5",
   "styles": [
    "street"
   ],
   "weight": 2.05,
   "sku": "CULT-HAVENS-GATE-ALEX-DULEBA-NEGRO",
-  "units": 12,
-  "img": "assets/img/products/marco_cult_havens_gate_alex_duleba_negro.jpeg"
+  "units": 1,
+  "imgs": [
+   "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784060884027",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-2.jpg?v=1784060886227",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-3.jpg?v=1784060888675",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-4.jpg?v=1784060891771",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-5.jpg?v=1784060896113",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-6.jpg?v=1784060902105",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-7.jpg?v=1784060906713",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-8.jpg?v=1784060912378"
+  ],
+  "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784060884027"
  },
  {
   "n": "Fiend Reynolds V3 Negro",
