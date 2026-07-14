@@ -89,7 +89,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 1.55,
   "slug": "fiend-bielas-negro",
   "sku": "FIEND-BIELAS-NEGRO",
-  "units": 12,
+  "units": 1,
   "img": "assets/img/products/fiend-bielas-negro.jpg"
  },
  {
@@ -101,7 +101,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 1.58,
   "slug": "cult-bielas-negro",
   "sku": "CULT-BIELAS-NEGRO",
-  "units": 12,
+  "units": 1,
   "img": "assets/img/products/cult-bielas-negro.jpg"
  },
  {
@@ -388,7 +388,7 @@ window.ESCENA_PRODUCTS = [
   "price": 930000,
   "slug": "kit-eje-espaciadores-plata",
   "sku": "KIT-EJE-ESPACIADORES-PLATA",
-  "units": 12,
+  "units": 1,
   "img": "assets/img/products/kit-eje-espaciadores-plata.jpg"
  },
  {
@@ -401,7 +401,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 1.62,
   "slug": "colony-bielas-negro",
   "sku": "COLONY-BIELAS-NEGRO",
-  "units": 12,
+  "units": 2,
   "img": "assets/img/products/colony-bielas-negro.jpg"
  },
  {
@@ -412,7 +412,7 @@ window.ESCENA_PRODUCTS = [
   "price": 930000,
   "slug": "kit-hardware-bielas-plata",
   "sku": "KIT-HARDWARE-BIELAS-PLATA",
-  "units": 12,
+  "units": 2,
   "img": "assets/img/products/kit-hardware-bielas-plata.jpg"
  },
  {
@@ -423,7 +423,7 @@ window.ESCENA_PRODUCTS = [
   "price": 890000,
   "slug": "kit-hardware-bielas-negro",
   "sku": "KIT-HARDWARE-BIELAS-NEGRO",
-  "units": 12,
+  "units": 2,
   "img": "assets/img/products/kit-hardware-bielas-negro.jpg"
  },
  {
