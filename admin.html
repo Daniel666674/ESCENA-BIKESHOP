@@ -593,8 +593,33 @@
     var body = { message: message, content: isBase64 ? text : b64EncodeUtf8(text), branch: GH.branch };
     if (sha) body.sha = sha;
     return ghFetch("/contents/" + path, { method: "PUT", body: JSON.stringify(body) }).then(function (r) {
-      if (!r.ok) return r.text().then(function (t) { throw new Error("PUT " + path + " → " + r.status + " " + t.slice(0, 160)); });
+      if (!r.ok) return r.text().then(function (t) {
+        var err = new Error("PUT " + path + " → " + r.status + " " + t.slice(0, 160));
+        err.status = r.status;
+        throw err;
+      });
       return r.json();
+    });
+  }
+  // Two devices publishing close together can race: this device reads a file's
+  // sha, another device commits to that same file, then this device's write is
+  // rejected with 409 (sha no longer matches). buildContent gets the freshly
+  // re-fetched remote content/sha on every attempt (including the first), so a
+  // retry always writes on top of whatever is actually live right now instead of
+  // blindly reapplying a stale snapshot. Return null from buildContent to skip
+  // the write entirely (e.g. "nothing changed").
+  function ghPutWithRetry(path, message, buildContent, isBase64, attempt) {
+    attempt = attempt || 0;
+    return ghGetFile(path).then(function (cur) {
+      var content = buildContent(cur.text, cur.sha);
+      if (content === null) return null;
+      return ghPutFile(path, content, message, cur.sha, isBase64).catch(function (e) {
+        if (e.status === 409 && attempt < 4) {
+          return new Promise(function (resolve) { setTimeout(resolve, 350 * (attempt + 1)); })
+            .then(function () { return ghPutWithRetry(path, message, buildContent, isBase64, attempt + 1); });
+        }
+        throw e;
+      });
     });
   }
 
@@ -813,7 +838,18 @@
   var editingIdx = null; // null = adding new product
   var salesLog = [];
   var salesDirty = false; // unpublished sale records exist
+  var salesBaselineCount = 0; // salesLog.length at last successful publish/load — everything past this is "mine, not yet committed"
   var modalPhotos = [];
+  // Multiple devices can publish close together. products-data.js and
+  // sales-log.js are shared single-file catalogs, so a blind "overwrite with my
+  // whole in-memory copy" silently reverts whatever another device already
+  // committed. dirtySlugs/deletedSlugs track exactly which products THIS
+  // session actually changed, so publish can merge those onto the freshest
+  // remote copy instead of overwriting it wholesale (see mergeCatalog()).
+  var dirtySlugs = {};
+  var deletedSlugs = {};
+  function markDirty(slug) { if (slug) dirtySlugs[slug] = true; }
+  function markDeleted(slug) { if (slug) { deletedSlugs[slug] = true; delete dirtySlugs[slug]; } }
 
   function slugOf(p) {
     return (p.img || p.slug || "").split("/").pop().replace(/\.[a-zA-Z0-9]+$/, "");
@@ -887,6 +923,30 @@
     delete o.cost; delete o.notes; // internal-only, never published
     delete o._pageSnapshot; // internal-only, drives static page regeneration
     return o;
+  }
+  function parseRemoteArray(text, varName) {
+    if (!text) return [];
+    var m = text.match(new RegExp("window\\." + varName + "\\s*=\\s*(\\[[\\s\\S]*\\])\\s*;?\\s*$"));
+    if (!m) throw new Error("No se pudo leer " + varName + " remoto");
+    return JSON.parse(m[1]);
+  }
+  // Merges this session's actual changes onto whatever products-data.js looks
+  // like right now on the server, instead of overwriting the whole file with a
+  // stale in-memory snapshot — see dirtySlugs/deletedSlugs above for why.
+  function mergeCatalog(remoteArr, localCatalog, dirty, deleted) {
+    var localBySlug = {};
+    localCatalog.forEach(function (p) { localBySlug[p.slug] = p; });
+    var seen = {};
+    var merged = remoteArr.filter(function (r) { return !deleted[r.slug]; }).map(function (r) {
+      seen[r.slug] = true;
+      if (dirty[r.slug] && localBySlug[r.slug]) return toSiteProduct(localBySlug[r.slug]);
+      return r; // untouched locally this session -> keep the server's current version verbatim
+    });
+    var newEntries = [];
+    localCatalog.forEach(function (p) {
+      if (!seen[p.slug] && dirty[p.slug] && !deleted[p.slug]) newEntries.push(toSiteProduct(p));
+    });
+    return newEntries.concat(merged); // new products first, matching the existing unshift-on-add order
   }
 
   /* ---- Guardrails ---- */
@@ -1040,14 +1100,13 @@
         throw new Error("No pude procesar la foto de \"" + (u.p.n || u.p.slug) + "\" (" + e.message + "). Probá con una foto en formato JPG o PNG.");
       }).then(function (c) {
         var b64 = c.split(",")[1];
-        return ghGetFile(path).then(function (ex) {
-          return ghPutFile(path, b64, "Add product photo " + name + " (admin)", ex.sha, true);
-        });
+        return ghPutWithRetry(path, "Add product photo " + name + " (admin)", function () { return b64; }, true);
       }).then(function () {
         // Cache-bust: the same path gets overwritten when a photo is replaced, and
         // browsers/CDNs otherwise keep serving the old bytes at that stable URL
         // (unlike products-data.js, which already busts via its own ?v= loader).
         u.p.imgs[u.idx] = path + "?v=" + Date.now();
+        markDirty(u.p.slug);
         btn.textContent = "Subiendo fotos… " + (i + 1) + "/" + uploads.length;
         return commitPhotos(i + 1);
       });
@@ -1078,9 +1137,7 @@
           var p = pagesToGenerate[i];
           var wasOnboarding = p.published === false;
           var html = genPage(p, tf.text);
-          return ghGetFile("producto/" + p.slug + ".html").then(function (ex) {
-            return ghPutFile("producto/" + p.slug + ".html", html, "Update product page " + p.slug + " (admin)", ex.sha);
-          }).then(function () {
+          return ghPutWithRetry("producto/" + p.slug + ".html", "Update product page " + p.slug + " (admin)", function () { return html; }, false).then(function () {
             if (wasOnboarding) createdSlugs.push(p.slug);
             p._pageSnapshot = pageSnapshotOf(p);
             btn.textContent = "Creando páginas… " + (i + 1) + "/" + pagesToGenerate.length;
@@ -1091,38 +1148,54 @@
       });
     }).then(function () {
       // mark newly-paged products live
-      inventoryCatalog.forEach(function (p) { if (p.published === false && createdSlugs.indexOf(p.slug) > -1) { p.published = true; } });
-      // add new pages to sitemap.xml
+      inventoryCatalog.forEach(function (p) {
+        if (p.published === false && createdSlugs.indexOf(p.slug) > -1) { p.published = true; markDirty(p.slug); }
+      });
+      // add new pages to sitemap.xml — recomputed against the freshest remote
+      // sitemap on every attempt, so a retry never reapplies a stale insert.
       if (!createdSlugs.length) return Promise.resolve();
-      return ghGetFile("sitemap.xml").then(function (sm) {
-        if (!sm.text) return;
+      return ghPutWithRetry("sitemap.xml", "Add " + createdSlugs.length + " product page(s) to sitemap (admin)", function (remoteText) {
+        if (!remoteText) return null;
         var today = new Date().toISOString().slice(0, 10);
-        var adds = createdSlugs.filter(function (s) { return sm.text.indexOf("/producto/" + s + ".html") === -1; }).map(function (s) {
+        var adds = createdSlugs.filter(function (s) { return remoteText.indexOf("/producto/" + s + ".html") === -1; }).map(function (s) {
           return "  <url>\n    <loc>https://escenabikeshop.com/producto/" + s + ".html</loc>\n    <lastmod>" + today + "</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>";
         });
-        if (!adds.length) return;
-        var xml = sm.text.replace("</urlset>", adds.join("\n") + "\n</urlset>");
-        return ghPutFile("sitemap.xml", xml, "Add " + adds.length + " product page(s) to sitemap (admin)", sm.sha);
-      });
+        if (!adds.length) return null;
+        return remoteText.replace("</urlset>", adds.join("\n") + "\n</urlset>");
+      }, false);
     }).then(function () {
       // Commit the sales log before the catalog: if a later step fails, the sale
       // record (revenue accounting) is already safely committed, and the retry on
       // the next publish only needs to re-land the catalog/stock update.
+      //
+      // Sales are pure-additive (never edited/deleted after creation), so the
+      // safe merge is simple: append only what THIS session added since it last
+      // loaded/published (salesLog beyond salesBaselineCount) onto whatever's
+      // actually live right now — never overwrite the whole file with this
+      // session's in-memory copy, which could silently drop another device's
+      // already-committed sale.
       if (!salesDirty) return Promise.resolve();
-      var content = "window.ESCENA_SALES = " + JSON.stringify(salesLog, null, 1) + ";\n";
       btn.textContent = "Guardando ventas…";
-      return ghGetFile("assets/js/sales-log.js").then(function (cur) {
-        return ghPutFile("assets/js/sales-log.js", content, "Update sales log via admin panel", cur.sha);
-      }).then(function () { salesDirty = false; });
+      var newSales = salesLog.slice(salesBaselineCount);
+      if (!newSales.length) { salesDirty = false; return Promise.resolve(); }
+      return ghPutWithRetry("assets/js/sales-log.js", "Update sales log via admin panel", function (remoteText) {
+        var remoteSales = parseRemoteArray(remoteText, "ESCENA_SALES");
+        var merged = remoteSales.concat(newSales);
+        return "window.ESCENA_SALES = " + JSON.stringify(merged, null, 1) + ";\n";
+      }, false).then(function () { salesDirty = false; salesBaselineCount = salesLog.length; });
     }).then(function () {
-      var siteArr = inventoryCatalog.map(toSiteProduct);
-      var content = "window.ESCENA_PRODUCTS = " + JSON.stringify(siteArr, null, 1) + ";\n";
+      // See dirtySlugs/deletedSlugs + mergeCatalog(): only this session's actual
+      // changes get applied, on top of whatever's live right now — never a blind
+      // overwrite with this session's full in-memory snapshot.
       btn.textContent = "Guardando catálogo…";
-      return ghGetFile("assets/js/products-data.js").then(function (cur) {
-        return ghPutFile("assets/js/products-data.js", content, "Update catalog via admin panel", cur.sha);
-      });
+      return ghPutWithRetry("assets/js/products-data.js", "Update catalog via admin panel", function (remoteText) {
+        var remoteArr = parseRemoteArray(remoteText, "ESCENA_PRODUCTS");
+        var merged = mergeCatalog(remoteArr, inventoryCatalog, dirtySlugs, deletedSlugs);
+        return "window.ESCENA_PRODUCTS = " + JSON.stringify(merged, null, 1) + ";\n";
+      }, false);
     }).then(function () {
       dirty = false; clearDraft(); updatePendingUI();
+      dirtySlugs = {}; deletedSlugs = {};
       renderInventory(document.getElementById("invSearch").value.trim());
       showToast("¡Publicado! La tienda se actualiza en ~1 minuto.");
     }).catch(function (e) {
@@ -1319,6 +1392,8 @@
     renderInventory("");
     salesLog = (window.ESCENA_SALES || []).slice();
     salesDirty = false;
+    salesBaselineCount = salesLog.length;
+    dirtySlugs = {}; deletedSlugs = {};
     renderSalesSummary();
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
@@ -1362,6 +1437,7 @@
       }
       if (e.target.classList.contains("del")) {
         if (confirm("¿Eliminar \"" + inventoryCatalog[idx].n + "\" del catálogo?")) {
+          markDeleted(inventoryCatalog[idx].slug);
           inventoryCatalog.splice(idx, 1);
           saveCatalog();
           showToast("Producto eliminado");
@@ -1399,6 +1475,7 @@
       if (qty < 1) return;
       if (qty > (p.units || 0)) { alert("Solo hay " + (p.units || 0) + " en stock — no puedes registrar una venta de " + qty + "."); return; }
       p.units = (p.units || 0) - qty;
+      markDirty(p.slug);
       salesLog.push({
         date: new Date().toISOString(),
         slug: p.slug, n: p.n, sku: p.sku, brand: p.brand,
@@ -1462,6 +1539,7 @@
         var cur = inventoryCatalog[editingIdx];
         Object.assign(cur, fields); // merge -> preserves slug, weight, published, etc.
         if (!cur.sku) cur.sku = cur.slug.toUpperCase();
+        markDirty(cur.slug);
         showToast("Producto actualizado");
       } else {
         var newSlug = makeSlug(name) || ("producto-" + Date.now());
@@ -1469,6 +1547,7 @@
         fields.sku = fields.sku || newSlug.toUpperCase();
         fields.published = false; // goes live when Publicar generates its page
         inventoryCatalog.unshift(fields);
+        markDirty(fields.slug);
         showToast("Producto agregado. Al Publicar se crea su página y aparece en la tienda.");
       }
       saveCatalog();
@@ -1514,7 +1593,11 @@
         try {
           var data = isCsv ? parseCsv(reader.result) : JSON.parse(reader.result);
           if (!Array.isArray(data)) throw new Error("formato inválido");
+          var beforeSlugs = inventoryCatalog.map(function (p) { return p.slug; });
           inventoryCatalog = data.map(migrateProduct);
+          var afterSlugs = {};
+          inventoryCatalog.forEach(function (p) { afterSlugs[p.slug] = true; markDirty(p.slug); });
+          beforeSlugs.forEach(function (s) { if (!afterSlugs[s]) markDeleted(s); });
           saveCatalog();
           document.getElementById("invSearch").value = "";
           renderInventory("");
@@ -1552,7 +1635,7 @@
       if (pct === null || pct === "") return;
       var f2 = parseFloat(pct);
       if (isNaN(f2)) { alert("Valor inválido."); return; }
-      set.forEach(function (p) { p.price = Math.max(0, Math.round(p.price * (1 + f2 / 100) / 1000) * 1000); });
+      set.forEach(function (p) { p.price = Math.max(0, Math.round(p.price * (1 + f2 / 100) / 1000) * 1000); markDirty(p.slug); });
       saveCatalog();
       renderInventory(f);
       showToast("Precios ajustados " + (f2 >= 0 ? "+" : "") + f2 + "% — revisa y Publica");
