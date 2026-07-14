@@ -229,14 +229,18 @@
     document.querySelectorAll(".pay-row").forEach(function (el) { el.innerHTML = html; });
   }
 
-  /* ---- Category-dependent variant selector (LHD/RHD, crank size, etc.) ---- */
+  /* ---- Category-dependent variant selector(s) (LHD/RHD, talla, color, etc.)
+     A page can have more than one independent selector group (e.g. talla and
+     color at once) — collect a suffix from each that has an active option. ---- */
   function pdpVariantSuffix() {
-    var group = document.getElementById("pdpVariant");
-    if (!group) return "";
-    var active = group.querySelector("button.is-active");
-    var prefix = group.getAttribute("data-prefix") || "";
-    if (!active || !prefix) return "";
-    return " " + prefix + ": " + active.getAttribute("data-value") + ".";
+    var groups = document.querySelectorAll(".pdp-variant[data-prefix]");
+    var out = "";
+    groups.forEach(function (group) {
+      var active = group.querySelector("button.is-active");
+      var prefix = group.getAttribute("data-prefix") || "";
+      if (active && prefix) out += " " + prefix + ": " + active.getAttribute("data-value") + ".";
+    });
+    return out;
   }
 
   /* ---- Rewrite prices/links baked as static HTML on product detail pages ----
