@@ -24,6 +24,7 @@
   <link rel="apple-touch-icon" href="../assets/img/escena-logo.jpg" />
   <link rel="manifest" href="../site.webmanifest" />
   <link rel="stylesheet" href="../assets/css/cart.css" />
+  <link rel="stylesheet" href="../assets/css/cookie-consent.css" />
   <script>var ESCENA_ROOT = "../";</script>
   <script src="../assets/js/wholesale.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -87,9 +88,25 @@
 
     .pdp { max-width: 1180px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
     @media (max-width: 860px) { .pdp { grid-template-columns: 1fr; gap: 1.5rem; } }
-    .pdp-image { position: relative; aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #0A0A0A; }
-    .pdp-image img { width: 100%; height: 100%; object-fit: cover; }
-    .pdp-image .tag { position: absolute; top: .9rem; left: .9rem; background: #fff; color: var(--ink); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .32rem .6rem; border-radius: 3px; }
+    .pdp-image { position: relative; aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #0A0A0A; cursor: zoom-in; }
+    .pdp-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pdp-image .tag { position: absolute; top: .9rem; left: .9rem; background: #fff; color: var(--ink); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .32rem .6rem; border-radius: 3px; z-index: 2; }
+    .pdp-zoom-btn { position: absolute; bottom: .9rem; right: .9rem; z-index: 2; width: 38px; height: 38px; border-radius: 50%; border: none; background: rgba(10,10,10,.55); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px); }
+    .pdp-zoom-btn svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; }
+    .pdp-dots { position: absolute; z-index: 2; left: 50%; bottom: .9rem; transform: translateX(-50%); display: flex; gap: .4rem; }
+    .pdp-dots button { width: 7px; height: 7px; border-radius: 50%; border: 1px solid rgba(255,255,255,.7); background: rgba(255,255,255,.25); padding: 0; cursor: pointer; }
+    .pdp-dots button.is-active { background: #fff; }
+    .pdp-thumbs { display: flex; gap: .6rem; margin-top: .8rem; flex-wrap: wrap; }
+    .pdp-thumbs button { width: 64px; height: 64px; border-radius: 8px; overflow: hidden; padding: 0; border: 2px solid transparent; cursor: pointer; background: #0A0A0A; }
+    .pdp-thumbs button.is-active { border-color: var(--ink); }
+    .pdp-thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pdp-lightbox { position: fixed; inset: 0; z-index: 900; background: rgba(10,10,10,.94); display: none; align-items: center; justify-content: center; padding: 2rem; }
+    .pdp-lightbox.show { display: flex; }
+    .pdp-lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .pdp-lightbox-close { position: absolute; top: 1.2rem; right: 1.4rem; width: 42px; height: 42px; border-radius: 50%; border: none; background: rgba(255,255,255,.12); color: #fff; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+    .pdp-lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: none; background: rgba(255,255,255,.12); color: #fff; font-size: 1.3rem; cursor: pointer; }
+    .pdp-lightbox-nav.prev { left: 1.2rem; }
+    .pdp-lightbox-nav.next { right: 1.2rem; }
     .pdp-info .brand-lbl { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
     .pdp-info h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: .02em; margin: .35rem 0 1rem; line-height: 1.05; }
     .pdp-price { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: .02em; margin-bottom: .5rem; }
@@ -97,6 +114,12 @@
     .pdp-stock-hint:empty { margin: 0 0 1.4rem; }
     .pdp-stock-hint.is-low { color: #c0392b; }
     .pdp-stock-hint.is-out { color: #c0392b; text-transform: uppercase; letter-spacing: .04em; }
+    .pdp-variant { margin: 0 0 1.3rem; }
+    .pdp-variant-label { display: block; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .55rem; }
+    .pdp-variant-options { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .pdp-variant-options button { background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .8rem; font-weight: 600; color: var(--ink); cursor: pointer; font-family: inherit; transition: all .15s; }
+    .pdp-variant-options button:hover { border-color: var(--ink); }
+    .pdp-variant-options button.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
     .pdp-actions { display: flex; flex-direction: column; gap: .7rem; max-width: 340px; margin-bottom: 1.6rem; }
     .pdp-actions.is-agotado .add-cart-btn, .pdp-actions.is-agotado .pdp-qty { opacity: .5; }
     .add-cart-btn:disabled { cursor: not-allowed; }
@@ -274,23 +297,29 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 </nav>
 
 <div class="pdp">
-  <div class="pdp-image">
-    
-    <img src="../assets/img/products/shadow-buje-delantero-negro.jpg" alt="Manzana Delantera Stolenbikes Negra - Stolen BMX" width="700" height="700" />
+  <div>
+    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/shadow-buje-delantero-negro.jpg&quot;]">
+      
+      <img id="pdpMainImg" src="../assets/img/products/shadow-buje-delantero-negro.jpg" alt="Manzana Delantera Stolenbikes Negra - Stolen BMX" width="700" height="700" />
+      <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Ampliar imagen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
+      <div class="pdp-dots" id="pdpDots"></div>
+    </div>
+    <div class="pdp-thumbs" id="pdpThumbs"></div>
   </div>
   <div class="pdp-info">
     <span class="brand-lbl">Stolen</span>
     <h1>Manzana Delantera Stolenbikes Negra</h1>
     <div class="pdp-price">$270.000 COP</div>
     <p class="pdp-stock-hint" id="pdpStockHint" data-units="1"></p>
+    
     <div class="pdp-actions" id="pdpActions">
-      <a class="btn btn-ink" href="https://wa.me/573107630504?text=Hola%20ESCENA%20%F0%9F%90%95%2C%20quiero%20pedir%3A%20Manzana%20Delantera%20Stolenbikes%20Negra%20(Stolen)%20%E2%80%94%20%24270.000%20COP.%20%C2%BFEst%C3%A1%20disponible%3F" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      <a class="btn btn-ink" id="pdpWaLink" href="https://wa.me/573107630504?text=Hola%20ESCENA%20%F0%9F%90%95%2C%20quiero%20pedir%3A%20Manzana%20Delantera%20Stolenbikes%20Negra%20(Stolen)%20%E2%80%94%20%24270.000%20COP.%20%C2%BFEst%C3%A1%20disponible%3F" target="_blank" rel="noopener">Pedir por WhatsApp</a>
       <div class="pdp-qty">
         <button type="button" id="qtyDec" aria-label="Reducir cantidad">&minus;</button>
         <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="1" />
         <button type="button" id="qtyInc" aria-label="Aumentar cantidad">+</button>
       </div>
-      <button type="button" class="add-cart-btn" data-slug="shadow-buje-delantero-negro" data-n="Manzana Delantera Stolenbikes Negra" data-brand="Stolen" data-price="270000" data-img="assets/img/products/shadow-buje-delantero-negro.jpg" data-units="1">Agregar al carrito</button>
+      <button type="button" class="add-cart-btn" data-slug="shadow-buje-delantero-negro" data-n="Manzana Delantera Stolenbikes Negra" data-brand="Stolen" data-price="270000" data-img="assets/img/products/shadow-buje-delantero-negro.jpg" data-units="1" data-variant="">Agregar al carrito</button>
     </div>
     <div class="pdp-share">
       <span>Compartir</span>
@@ -379,6 +408,13 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
 <div class="toast" id="toast"></div>
 
+<div class="pdp-lightbox" id="pdpLightbox">
+  <button type="button" class="pdp-lightbox-close" id="pdpLightboxClose" aria-label="Cerrar">&times;</button>
+  <button type="button" class="pdp-lightbox-nav prev" id="pdpLightboxPrev" aria-label="Foto anterior" style="display:none;">&lsaquo;</button>
+  <img id="pdpLightboxImg" src="" alt="" />
+  <button type="button" class="pdp-lightbox-nav next" id="pdpLightboxNext" aria-label="Foto siguiente" style="display:none;">&rsaquo;</button>
+</div>
+
 <script>document.write('<scr'+'ipt src="../assets/js/products-data.js?v='+Date.now()+'"><\/scr'+'ipt>');</script>
 <script>
   var WA = "573107630504";
@@ -438,6 +474,85 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     });
   }
 
+  /* ---- Product photo gallery (slides + zoom) ---- */
+  (function pdpGallery(){
+    var wrap = document.getElementById("pdpGallery");
+    if (!wrap) return;
+    var imgs = [];
+    try { imgs = JSON.parse(wrap.getAttribute("data-imgs") || "[]"); } catch (e) { imgs = []; }
+    if (!imgs.length) return;
+    var mainImg = document.getElementById("pdpMainImg");
+    var dotsWrap = document.getElementById("pdpDots");
+    var thumbsWrap = document.getElementById("pdpThumbs");
+    var idx = 0;
+
+    function show(i){
+      idx = (i + imgs.length) % imgs.length;
+      mainImg.src = imgs[idx];
+      var dots = dotsWrap ? dotsWrap.querySelectorAll("button") : [];
+      for (var d = 0; d < dots.length; d++) dots[d].classList.toggle("is-active", d === idx);
+      var thumbs = thumbsWrap ? thumbsWrap.querySelectorAll("button") : [];
+      for (var t = 0; t < thumbs.length; t++) thumbs[t].classList.toggle("is-active", t === idx);
+    }
+
+    if (imgs.length > 1) {
+      if (dotsWrap) {
+        dotsWrap.addEventListener("click", function(e){
+          var btn = e.target.closest("button[data-i]");
+          if (btn) show(parseInt(btn.getAttribute("data-i"), 10));
+        });
+      }
+      if (thumbsWrap) {
+        thumbsWrap.addEventListener("click", function(e){
+          var btn = e.target.closest("button[data-i]");
+          if (btn) show(parseInt(btn.getAttribute("data-i"), 10));
+        });
+      }
+      var touchStartX = null;
+      wrap.addEventListener("touchstart", function(e){ touchStartX = e.touches[0].clientX; }, { passive: true });
+      wrap.addEventListener("touchend", function(e){
+        if (touchStartX === null) return;
+        var dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) show(idx + (dx < 0 ? 1 : -1));
+        touchStartX = null;
+      }, { passive: true });
+    }
+
+    /* ---- Lightbox zoom ---- */
+    var lightbox = document.getElementById("pdpLightbox");
+    var lbImg = document.getElementById("pdpLightboxImg");
+    var lbPrev = document.getElementById("pdpLightboxPrev");
+    var lbNext = document.getElementById("pdpLightboxNext");
+    var lbOpenedFrom = null;
+    function openLightbox(){
+      lbOpenedFrom = document.activeElement;
+      lbImg.src = imgs[idx];
+      lbImg.alt = mainImg.alt;
+      if (imgs.length > 1) { lbPrev.style.display = ""; lbNext.style.display = ""; }
+      lightbox.classList.add("show");
+      document.getElementById("pdpLightboxClose").focus();
+    }
+    function closeLightbox(){
+      lightbox.classList.remove("show");
+      if (lbOpenedFrom && typeof lbOpenedFrom.focus === "function") lbOpenedFrom.focus();
+      lbOpenedFrom = null;
+    }
+    function lbShow(i){ show(i); lbImg.src = imgs[idx]; }
+    wrap.addEventListener("click", function(e){
+      if (e.target.closest(".pdp-zoom-btn") || e.target === mainImg) openLightbox();
+    });
+    document.getElementById("pdpLightboxClose").addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", function(e){ if (e.target === lightbox) closeLightbox(); });
+    lbPrev.addEventListener("click", function(){ lbShow(idx - 1); });
+    lbNext.addEventListener("click", function(){ lbShow(idx + 1); });
+    document.addEventListener("keydown", function(e){
+      if (!lightbox.classList.contains("show")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") lbShow(idx - 1);
+      if (e.key === "ArrowRight") lbShow(idx + 1);
+    });
+  })();
+
   /* ---- Qty stepper (capped at units in stock) ---- */
   var qtyInput = document.getElementById("qtyInput");
   var qtyDec = document.getElementById("qtyDec");
@@ -476,8 +591,35 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
       qtyInput.value = Math.min(unitsAvail, Math.max(1, v));
     });
   }
+
+  /* ---- Variant selector (LHD/RHD, crank size — category-dependent) ----
+     The actual WhatsApp message (price, wholesale discount, variant note) is
+     rebuilt by wholesale.js's refreshPDP(), the single place that owns that
+     link so it stays correct whether or not wholesale pricing is active. */
+  (function () {
+    var group = document.getElementById("pdpVariant");
+    if (!group) return;
+
+    function applyValue(val) {
+      group.querySelectorAll("button").forEach(function (b) {
+        b.classList.toggle("is-active", b.getAttribute("data-value") === val);
+      });
+      if (addCartBtn) addCartBtn.setAttribute("data-variant", val);
+      if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
+    }
+
+    group.addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-value]");
+      if (!btn) return;
+      applyValue(btn.getAttribute("data-value"));
+    });
+
+    var firstBtn = group.querySelector("button[data-value]");
+    if (firstBtn) applyValue(firstBtn.getAttribute("data-value"));
+  })();
 </script>
 <script>var ESCENA_ROOT = "../";</script>
 <script src="../assets/js/cart.js"></script>
+<script src="../assets/js/cookie-consent.js"></script>
 </body>
 </html>
