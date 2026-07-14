@@ -11,8 +11,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cana-odyssey-cfl3.jpg?v=1784057862077",
    "assets/img/products/cana-odyssey-cfl3-2.jpg?v=1784057865975",
    "assets/img/products/cana-odyssey-cfl3-3.jpg?v=1784057869004",
-   "assets/img/products/cana-odyssey-cfl3-4.jpg?v=1784057872537",
-   "assets/img/products/cana-odyssey-cfl3-5.jpg?v=1784057874891"
+   "assets/img/products/cana-odyssey-cfl3-4.jpg?v=1784057872537"
   ],
   "slug": "cana-odyssey-cfl3",
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784057862077"
