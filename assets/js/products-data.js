@@ -77,7 +77,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 1.6,
   "slug": "mutany-savage-bielas-negro",
   "sku": "MUTANY-SAVAGE-BIELAS-NEGRO",
-  "units": 12,
+  "units": 1,
   "img": "assets/img/products/mutany-savage-bielas-negro.jpg"
  },
  {
