@@ -21,7 +21,13 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784061998108"
   ],
   "slug": "marco-cult-biggie-jaume-sintes-hammertone",
-  "img": "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210"
+  "img": "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210",
+  "sizes": [
+   {
+    "label": "20.5\"",
+    "units": 1
+   }
+  ]
  },
  {
   "n": "Pedales Odyssey",
@@ -104,7 +110,13 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cana-odyssey-cfl3-5.jpg?v=1784057874891"
   ],
   "slug": "cana-odyssey-cfl3",
-  "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784057862077"
+  "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784057862077",
+  "sizes": [
+   {
+    "label": "50mm",
+    "units": 1
+   }
+  ]
  },
  {
   "n": "Caña Shadow Chula 48mm",
@@ -121,7 +133,13 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583"
   ],
   "slug": "cana-shadow-chula-48mm",
-  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105"
+  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105",
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 1
+   }
+  ]
  },
  {
   "n": "Marco Cult Biggie Hammertone",
@@ -142,7 +160,13 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/marco-cult-biggie-hammertone-7.jpg?v=1784048470248"
   ],
   "slug": "marco-cult-biggie-hammertone",
-  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779"
+  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 2
+   }
+  ]
  },
  {
   "n": "Caña S&M enduro 40MM Negra",
@@ -153,7 +177,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "S&MENDURO40",
   "units": 2,
   "slug": "cana-s-m-enduro-40mm-negra",
-  "img": "assets/img/products/cana-s-m-enduro-40mm-negra.jpg"
+  "img": "assets/img/products/cana-s-m-enduro-40mm-negra.jpg",
+  "sizes": [
+   {
+    "label": "40mm",
+    "units": 2
+   }
+  ]
  },
  {
   "n": "Tenedor Cult Sect V4 Cromado 18MM",
@@ -176,7 +206,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "volume-stem-front-load-plata",
   "sku": "VOLUME-STEM-FRONT-LOAD-PLATA",
   "units": 12,
-  "img": "assets/img/products/volume-stem-front-load-plata.jpg"
+  "img": "assets/img/products/volume-stem-front-load-plata.jpg",
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Caña Mutanty Savage V2",
@@ -187,7 +223,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "mutanty-savage-v2-stem-plata",
   "sku": "MUTANTY-SAVAGE-V2-STEM-PLATA",
   "units": 12,
-  "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg"
+  "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Silla Fiend Negra",
@@ -210,7 +252,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "fiend-fiending-stem-morado",
   "sku": "FIEND-FIENDING-STEM-MORADO",
   "units": 12,
-  "img": "assets/img/products/fiend-fiending-stem-morado.jpg"
+  "img": "assets/img/products/fiend-fiending-stem-morado.jpg",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Bielas Mutanty Savage 170MM",
@@ -223,7 +271,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "mutany-savage-bielas-negro",
   "sku": "MUTANY-SAVAGE-BIELAS-NEGRO",
   "units": 1,
-  "img": "assets/img/products/mutany-savage-bielas-negro.jpg"
+  "img": "assets/img/products/mutany-savage-bielas-negro.jpg",
+  "sizes": [
+   {
+    "label": "170mm",
+    "units": 1
+   }
+  ]
  },
  {
   "n": "Bielas Fiend Segment Negras 165MM",
@@ -235,7 +289,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "fiend-bielas-negro",
   "sku": "FIEND-BIELAS-NEGRO",
   "units": 1,
-  "img": "assets/img/products/fiend-bielas-negro.jpg"
+  "img": "assets/img/products/fiend-bielas-negro.jpg",
+  "sizes": [
+   {
+    "label": "165mm",
+    "units": 1
+   }
+  ]
  },
  {
   "n": "Bielas Cult Hawk 165",
@@ -247,7 +307,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "cult-bielas-negro",
   "sku": "CULT-BIELAS-NEGRO",
   "units": 1,
-  "img": "assets/img/products/cult-bielas-negro.jpg"
+  "img": "assets/img/products/cult-bielas-negro.jpg",
+  "sizes": [
+   {
+    "label": "165mm",
+    "units": 1
+   }
+  ]
  },
  {
   "n": "Éclat Trippin Rin",
@@ -270,7 +336,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "cult-vans-sillin-negro",
   "sku": "CULT-VANS-SILLIN-NEGRO",
   "units": 2,
-  "img": "assets/img/products/cult-vans-sillin-negro.jpg"
+  "img": "assets/img/products/cult-vans-sillin-negro.jpg",
+  "sizes": [
+   {
+    "label": "50mm",
+    "units": 2
+   }
+  ]
  },
  {
   "n": "Silla Cult Pivotal Cuadros",
@@ -293,7 +365,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "manubrio-cromoly-negro-01",
   "sku": "MANUBRIO-CROMOLY-NEGRO-01",
   "units": 12,
-  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg"
+  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg",
+  "sizes": [
+   {
+    "label": "9.5\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Timón Cult Devon 9.5\" Cromado",
@@ -305,7 +383,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "manubrio-cromoly-cromado",
   "sku": "MANUBRIO-CROMOLY-CROMADO",
   "units": 12,
-  "img": "assets/img/products/manubrio-cromoly-cromado.jpg"
+  "img": "assets/img/products/manubrio-cromoly-cromado.jpg",
+  "sizes": [
+   {
+    "label": "9.5\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Timón Cult Crew 9.35\" Negro",
@@ -317,7 +401,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "manubrio-cromoly-negro-02",
   "sku": "MANUBRIO-CROMOLY-NEGRO-02",
   "units": 12,
-  "img": "assets/img/products/manubrio-cromoly-negro-02.jpg"
+  "img": "assets/img/products/manubrio-cromoly-negro-02.jpg",
+  "sizes": [
+   {
+    "label": "9.35\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Timón Colony Guardian 9.4\" Negro Mate",
@@ -330,7 +420,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "manubrio-cromoly-negro-03",
   "sku": "MANUBRIO-CROMOLY-NEGRO-03",
   "units": 12,
-  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg"
+  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg",
+  "sizes": [
+   {
+    "label": "9.4\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Timón Mutanty Radical 9.25\" Negro",
@@ -342,7 +438,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "manubrio-cromoly-negro-04",
   "sku": "MANUBRIO-CROMOLY-NEGRO-04",
   "units": 12,
-  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg"
+  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg",
+  "sizes": [
+   {
+    "label": "9.25\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Tenedor Wethepeople Cromado",
@@ -544,7 +646,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "kit-eje-espaciadores-plata",
   "sku": "KIT-EJE-ESPACIADORES-PLATA",
   "units": 1,
-  "img": "assets/img/products/kit-eje-espaciadores-plata.jpg"
+  "img": "assets/img/products/kit-eje-espaciadores-plata.jpg",
+  "sizes": [
+   {
+    "label": "165mm",
+    "units": 1
+   }
+  ]
  },
  {
   "n": "Bielas Colony Venator Negra",
@@ -557,7 +665,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "colony-bielas-negro",
   "sku": "COLONY-BIELAS-NEGRO",
   "units": 2,
-  "img": "assets/img/products/colony-bielas-negro.jpg"
+  "img": "assets/img/products/colony-bielas-negro.jpg",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 2
+   }
+  ]
  },
  {
   "n": "Bielas Federal Vice Cromadas 160MM - 165MM - 170MM",
@@ -568,7 +682,21 @@ window.ESCENA_PRODUCTS = [
   "slug": "kit-hardware-bielas-plata",
   "sku": "KIT-HARDWARE-BIELAS-PLATA",
   "units": 2,
-  "img": "assets/img/products/kit-hardware-bielas-plata.jpg"
+  "img": "assets/img/products/kit-hardware-bielas-plata.jpg",
+  "sizes": [
+   {
+    "label": "160mm",
+    "units": 2
+   },
+   {
+    "label": "165mm",
+    "units": 0
+   },
+   {
+    "label": "170mm",
+    "units": 0
+   }
+  ]
  },
  {
   "n": "Bielas Federal Vice Negras 160MM - 165MM - 170MM",
@@ -579,7 +707,21 @@ window.ESCENA_PRODUCTS = [
   "slug": "kit-hardware-bielas-negro",
   "sku": "KIT-HARDWARE-BIELAS-NEGRO",
   "units": 2,
-  "img": "assets/img/products/kit-hardware-bielas-negro.jpg"
+  "img": "assets/img/products/kit-hardware-bielas-negro.jpg",
+  "sizes": [
+   {
+    "label": "160mm",
+    "units": 2
+   },
+   {
+    "label": "165mm",
+    "units": 0
+   },
+   {
+    "label": "170mm",
+    "units": 0
+   }
+  ]
  },
  {
   "n": "Caña BSD Negra",
@@ -590,7 +732,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "bsd-stem-negro",
   "sku": "BSD-STEM-NEGRO",
   "units": 12,
-  "img": "assets/img/products/bsd-stem-negro.jpg"
+  "img": "assets/img/products/bsd-stem-negro.jpg",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Caña Volume Biston Negra",
@@ -601,7 +749,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "volume-stem-negro",
   "sku": "VOLUME-STEM-NEGRO",
   "units": 12,
-  "img": "assets/img/products/volume-stem-negro.jpg"
+  "img": "assets/img/products/volume-stem-negro.jpg",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Caña Caña Demolition Josh Dave Cromada",
@@ -612,7 +766,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "stem-plata-pulido",
   "sku": "STEM-PLATA-PULIDO",
   "units": 12,
-  "img": "assets/img/products/stem-plata-pulido.jpg"
+  "img": "assets/img/products/stem-plata-pulido.jpg",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Caña Shadow",
@@ -623,7 +783,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "escena-stem-grabado-plata",
   "sku": "SHADOW-STEM-CHULA",
   "units": 12,
-  "img": "assets/img/products/escena-stem-grabado-plata.jpg"
+  "img": "assets/img/products/escena-stem-grabado-plata.jpg",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Caña Federal Plata",
@@ -634,7 +800,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "federal-stem-plata",
   "sku": "FEDERAL-STEM-PLATA",
   "units": 5,
-  "img": "assets/img/products/federal-stem-plata.jpg"
+  "img": "assets/img/products/federal-stem-plata.jpg",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 5
+   }
+  ]
  },
  {
   "n": "Caña Federal Negra",
@@ -645,7 +817,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "federal-stem-negro",
   "sku": "FEDERAL-STEM-NEGRO",
   "units": 12,
-  "img": "assets/img/products/federal-stem-negro.jpg"
+  "img": "assets/img/products/federal-stem-negro.jpg",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Silla Fiend Mills Blanca",
@@ -814,7 +992,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "PLATO-EIGHTIES-28T",
   "units": 2,
   "tag": "NUEVO",
-  "img": "assets/img/products/pinon-snowflake-plata.jpg"
+  "img": "assets/img/products/pinon-snowflake-plata.jpg",
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 2
+   }
+  ]
  },
  {
   "n": "Plato Cult Conviction Negro 28T",
@@ -826,7 +1010,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "CULT-PINON-NEGRO",
   "units": 5,
   "tag": "TOP",
-  "img": "assets/img/products/cult-pinon-negro.jpg"
+  "img": "assets/img/products/cult-pinon-negro.jpg",
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 5
+   }
+  ]
  },
  {
   "n": "Plato Odyssey Utility Pro 28T",
@@ -837,7 +1027,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "odyssey-pinon-28t-negro",
   "sku": "ODYSSEY-PLATO-28T-NEGRO",
   "units": 1,
-  "img": "assets/img/products/odyssey-pinon-28t-negro.jpg"
+  "img": "assets/img/products/odyssey-pinon-28t-negro.jpg",
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1
+   }
+  ]
  },
  {
   "n": "Plato Fiend Palmare Con Guardia Negro 25T",
@@ -848,7 +1044,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "fiend-pinon-25t-negro",
   "sku": "FIEND-PINON-25T-NEGRO",
   "units": 2,
-  "img": "assets/img/products/fiend-pinon-25t-negro.jpg"
+  "img": "assets/img/products/fiend-pinon-25t-negro.jpg",
+  "sizes": [
+   {
+    "label": "25T",
+    "units": 2
+   }
+  ]
  },
  {
   "n": "Plato Federal Guardia Negro 28T",
@@ -859,7 +1061,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "federal-pinon-gris",
   "sku": "FEDERAL-PINON-GRIS",
   "units": 2,
-  "img": "assets/img/products/federal-pinon-gris.jpg"
+  "img": "assets/img/products/federal-pinon-gris.jpg",
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 2
+   }
+  ]
  },
  {
   "n": "Protector Primo DSG En Aluminio Negro",
@@ -1364,7 +1572,13 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-7.jpg?v=1784060874032",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-8.jpg?v=1784060881652"
   ],
-  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068"
+  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068",
+  "sizes": [
+   {
+    "label": "20.5\"",
+    "units": 1
+   }
+  ]
  },
  {
   "n": "Fate Namaste Negro",
@@ -1381,7 +1595,13 @@ window.ESCENA_PRODUCTS = [
   "weight": 2,
   "sku": "FATE-NAMASTE-NEGRO",
   "units": 12,
-  "img": "assets/img/products/marco_fate_negro_namaste_negro.jpeg"
+  "img": "assets/img/products/marco_fate_negro_namaste_negro.jpeg",
+  "sizes": [
+   {
+    "label": "20.4\"-20.75\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Total BMX Marco 20.75\"",
@@ -1397,7 +1617,13 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.15,
   "sku": "TOTAL-MARCO-2075-BLANCO-AZUL",
   "units": 12,
-  "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
+  "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787",
+  "sizes": [
+   {
+    "label": "20.75\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Federal Marco Bruno LT",
@@ -1413,7 +1639,13 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.08,
   "sku": "FEDERAL-MARCO-BRUNO-LT-BLANCO",
   "units": 12,
-  "img": "assets/img/products/frame-placeholder.svg"
+  "img": "assets/img/products/frame-placeholder.svg",
+  "sizes": [
+   {
+    "label": "21\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "TukanBikes Industrial Raw",
@@ -1430,7 +1662,13 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.05,
   "sku": "TUKANBIKES-INDUSTRIAL-RAW",
   "units": 12,
-  "img": "assets/img/products/marco_tukanbikes_industrial.jpeg"
+  "img": "assets/img/products/marco_tukanbikes_industrial.jpeg",
+  "sizes": [
+   {
+    "label": "20.4\"-21\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Colony Marco Park",
@@ -1446,7 +1684,13 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.1,
   "sku": "COLONY-MARCO-PARK-GRIS",
   "units": 12,
-  "img": "assets/img/products/frame-placeholder.svg"
+  "img": "assets/img/products/frame-placeholder.svg",
+  "sizes": [
+   {
+    "label": "20.75\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Wethepeople Doomsayer Negro",
@@ -1462,7 +1706,13 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.15,
   "sku": "WETHEPEOPLE-DOOMSAYER-NEGRO",
   "units": 12,
-  "img": "assets/img/products/marco_wethepeople_doomsayer_negro.jpeg"
+  "img": "assets/img/products/marco_wethepeople_doomsayer_negro.jpeg",
+  "sizes": [
+   {
+    "label": "20.75\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Cult Haven's Gate Alex Duleba Negro",
@@ -1489,7 +1739,13 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cult-havens-gate-alex-duleba-negro-7.jpg?v=1784060906713",
    "assets/img/products/cult-havens-gate-alex-duleba-negro-8.jpg?v=1784060912378"
   ],
-  "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784060884027"
+  "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784060884027",
+  "sizes": [
+   {
+    "label": "20.5\"",
+    "units": 1
+   }
+  ]
  },
  {
   "n": "Fiend Reynolds V3 Negro",
@@ -1505,7 +1761,13 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.08,
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
   "units": 12,
-  "img": "assets/img/products/marco_fiend_reynolds_v3_negro.jpeg"
+  "img": "assets/img/products/marco_fiend_reynolds_v3_negro.jpeg",
+  "sizes": [
+   {
+    "label": "20.75\"",
+    "units": 12
+   }
+  ]
  },
  {
   "n": "Aro Demolition Zero Plus Negro",

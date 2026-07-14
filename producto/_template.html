@@ -120,6 +120,8 @@
     .pdp-variant-options button { background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .8rem; font-weight: 600; color: var(--ink); cursor: pointer; font-family: inherit; transition: all .15s; }
     .pdp-variant-options button:hover { border-color: var(--ink); }
     .pdp-variant-options button.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .pdp-variant-options button:disabled { opacity: .4; cursor: not-allowed; text-decoration: line-through; }
+    .pdp-variant-options button:disabled:hover { border-color: var(--line); }
     .pdp-actions { display: flex; flex-direction: column; gap: .7rem; max-width: 340px; margin-bottom: 1.6rem; }
     .pdp-actions.is-agotado .add-cart-btn, .pdp-actions.is-agotado .pdp-qty { opacity: .5; }
     .add-cart-btn:disabled { cursor: not-allowed; }
@@ -538,28 +540,49 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   var addCartBtn = pdpActions ? pdpActions.querySelector(".add-cart-btn") : null;
   var unitsAvail = parseInt((stockHint && stockHint.getAttribute("data-units")) || "12", 10);
   if (isNaN(unitsAvail)) unitsAvail = 12;
+
+  // Applies a stock count to the whole buy UI — called once at load, and again
+  // whenever a real (inventory-backed) size button is picked, since each size
+  // has its own count. qtyDec/qtyInc/qtyInput below read `unitsAvail` through
+  // closure, so mutating it here is enough to keep them in sync.
+  function applyStock(units) {
+    unitsAvail = units;
+    if (stockHint) stockHint.setAttribute("data-units", String(unitsAvail));
+    if (addCartBtn) addCartBtn.setAttribute("data-units", String(unitsAvail));
+    if (qtyInput) qtyInput.max = String(unitsAvail);
+    if (stockHint) stockHint.classList.remove("is-low", "is-out");
+    if (unitsAvail <= 0) {
+      if (pdpActions) pdpActions.classList.add("is-agotado");
+      if (addCartBtn) { addCartBtn.disabled = true; addCartBtn.textContent = "Agotado"; }
+      if (qtyInput) { qtyInput.value = "1"; qtyInput.disabled = true; if (qtyDec) qtyDec.disabled = true; if (qtyInc) qtyInc.disabled = true; }
+      if (stockHint) { stockHint.textContent = "Agotado"; stockHint.classList.add("is-out"); }
+    } else {
+      if (pdpActions) pdpActions.classList.remove("is-agotado");
+      if (addCartBtn) { addCartBtn.disabled = false; addCartBtn.textContent = "Agregar al carrito"; }
+      if (qtyInput) {
+        qtyInput.disabled = false; if (qtyDec) qtyDec.disabled = false; if (qtyInc) qtyInc.disabled = false;
+        qtyInput.value = String(Math.min(Math.max(parseInt(qtyInput.value, 10) || 1, 1), unitsAvail));
+      }
+      if (stockHint) {
+        if (unitsAvail === 1) { stockHint.textContent = "¡Última unidad!"; stockHint.classList.add("is-low"); }
+        else stockHint.textContent = "";
+      }
+    }
+  }
+
   // Prefer the live catalog's stock over the value baked into this page at
   // publish time — a sale (or any stock edit) must be reflected immediately,
   // not just the next time this specific page happens to get regenerated.
+  var liveProduct = null;
   if (window.ESCENA_PRODUCTS) {
-    var liveProduct = window.ESCENA_PRODUCTS.filter(function (x) { return x.slug === "{{SLUG}}"; })[0];
-    if (liveProduct && typeof liveProduct.units === "number") unitsAvail = liveProduct.units;
+    liveProduct = window.ESCENA_PRODUCTS.filter(function (x) { return x.slug === "{{SLUG}}"; })[0] || null;
+    if (liveProduct && typeof liveProduct.units === "number" && !(liveProduct.sizes && liveProduct.sizes.length > 1)) {
+      unitsAvail = liveProduct.units;
+    }
   }
-  if (stockHint) stockHint.setAttribute("data-units", String(unitsAvail));
-  if (addCartBtn) addCartBtn.setAttribute("data-units", String(unitsAvail));
-  if (qtyInput) qtyInput.max = String(unitsAvail);
+  applyStock(unitsAvail);
 
-  if (unitsAvail <= 0) {
-    if (pdpActions) pdpActions.classList.add("is-agotado");
-    if (addCartBtn) { addCartBtn.disabled = true; addCartBtn.textContent = "Agotado"; }
-    if (qtyInput) { qtyInput.disabled = true; if (qtyDec) qtyDec.disabled = true; if (qtyInc) qtyInc.disabled = true; }
-    if (stockHint) { stockHint.textContent = "Agotado"; stockHint.classList.add("is-out"); }
-  } else if (unitsAvail === 1 && stockHint) {
-    stockHint.textContent = "¡Última unidad!";
-    stockHint.classList.add("is-low");
-  }
-
-  if (qtyInput && unitsAvail > 0) {
+  if (qtyInput) {
     qtyDec.addEventListener("click", function(){ qtyInput.value = Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1); });
     qtyInc.addEventListener("click", function(){ qtyInput.value = Math.min(unitsAvail, (parseInt(qtyInput.value, 10) || 1) + 1); });
     qtyInput.addEventListener("change", function(){
@@ -568,29 +591,61 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     });
   }
 
-  /* ---- Variant selector (LHD/RHD, crank size — category-dependent) ----
-     The actual WhatsApp message (price, wholesale discount, variant note) is
-     rebuilt by wholesale.js's refreshPDP(), the single place that owns that
-     link so it stays correct whether or not wholesale pricing is active. */
+  /* ---- Variant selector ----
+     Two kinds share the same markup/id: a cosmetic one (LHD/RHD) that only
+     tags the WhatsApp message, and a real inventory-backed one (talla) whose
+     buttons carry data-units — picking one of those also re-caps the qty
+     stepper via applyStock() using that size's own stock (preferring the live
+     catalog's current count over what was baked in at publish time, same as
+     the base stock above). The WhatsApp message itself (price, wholesale
+     discount, variant/size note) is rebuilt by wholesale.js's refreshPDP(),
+     the single place that owns that link so it stays correct whether or not
+     wholesale pricing is active. */
   (function () {
     var group = document.getElementById("pdpVariant");
     if (!group) return;
+    var isRealSize = !!group.querySelector("button[data-units]");
+
+    // Sync each size button's stock/disabled state from the live catalog —
+    // a size could have sold out (or come back) since this page was last
+    // generated, independent of any full page regeneration.
+    if (isRealSize && liveProduct && liveProduct.sizes) {
+      group.querySelectorAll("button[data-value]").forEach(function (b) {
+        var live = liveProduct.sizes.filter(function (s) { return s.label === b.getAttribute("data-value"); })[0];
+        if (!live) return;
+        b.setAttribute("data-units", String(live.units || 0));
+        b.disabled = (live.units || 0) <= 0;
+      });
+    }
 
     function applyValue(val) {
       group.querySelectorAll("button").forEach(function (b) {
         b.classList.toggle("is-active", b.getAttribute("data-value") === val);
       });
       if (addCartBtn) addCartBtn.setAttribute("data-variant", val);
+      if (isRealSize) {
+        var units = null;
+        if (liveProduct && liveProduct.sizes) {
+          var live = liveProduct.sizes.filter(function (s) { return s.label === val; })[0];
+          if (live) units = live.units || 0;
+        }
+        if (units === null) {
+          var btn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+          units = btn ? (parseInt(btn.getAttribute("data-units"), 10) || 0) : 0;
+        }
+        applyStock(units);
+      }
       if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
     }
 
     group.addEventListener("click", function (e) {
       var btn = e.target.closest("button[data-value]");
-      if (!btn) return;
+      if (!btn || btn.disabled) return;
       applyValue(btn.getAttribute("data-value"));
     });
 
-    var firstBtn = group.querySelector("button[data-value]");
+    var preferred = group.querySelector("button.is-active[data-value]:not(:disabled)");
+    var firstBtn = preferred || group.querySelector("button[data-value]:not(:disabled)") || group.querySelector("button[data-value]");
     if (firstBtn) applyValue(firstBtn.getAttribute("data-value"));
   })();
 </script>
