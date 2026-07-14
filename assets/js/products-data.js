@@ -6,7 +6,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Única medida 20.75 x 12.6 cola",
   "price": 650000,
   "sku": "MRC",
-  "units": 0,
+  "units": 1,
   "tag": "Nuevo!",
   "imgs": [
    "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784067916412",
@@ -20,7 +20,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.75 x 12.6",
-    "units": 0
+    "units": 1
    }
   ],
   "slug": "marco-fitbikeco-str-negro",
