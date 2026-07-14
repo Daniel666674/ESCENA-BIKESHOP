@@ -825,14 +825,14 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/kit-rodamientos-bb-generico.jpg"
  },
  {
-  "n": "Pegs Odyssey Negro (Par)",
+  "n": "Cajas de Frente Odyssey Negra",
   "brand": "Odyssey",
-  "cat": "clavijas",
+  "cat": "caja-frente",
   "spec": "Aluminio CNC · Par · Negro",
-  "price": 160000,
+  "price": 140000,
   "slug": "odyssey-clavijas-negro-par",
-  "sku": "ODYSSEY-CLAVIJAS-NEGRO-PAR",
-  "units": 12,
+  "sku": "ODYSSEY-CAJAS-NEGRO-",
+  "units": 2,
   "img": "assets/img/products/odyssey-clavijas-negro-par.jpg"
  },
  {
