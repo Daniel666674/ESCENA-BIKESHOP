@@ -1,20 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Caña Shadow Chula 48mm",
-  "brand": "Shadow",
+  "n": "Casco TSG Evolution Verde",
+  "brand": "TSG",
   "cat": "stems",
-  "spec": "Aluminio CNC",
-  "price": 250000,
-  "sku": "Shadow chula",
+  "spec": "Talla S/M",
+  "price": 350000,
+  "sku": "TSGVERDE1",
   "units": 1,
-  "tag": "TOP🔥",
+  "tag": "Nuevo 🔥",
   "imgs": [
-   "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105",
-   "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1784053122690",
-   "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583"
+   "assets/img/products/casco-tsg-evolution-verde.jpg?v=1784052945001",
+   "assets/img/products/casco-tsg-evolution-verde-2.jpg?v=1784052946536",
+   "assets/img/products/casco-tsg-evolution-verde-3.jpg?v=1784052948173",
+   "assets/img/products/casco-tsg-evolution-verde-4.jpg?v=1784052949710"
   ],
-  "slug": "cana-shadow-chula-48mm",
-  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105"
+  "slug": "casco-tsg-evolution-verde",
+  "img": "assets/img/products/casco-tsg-evolution-verde.jpg?v=1784052945001"
  },
  {
   "n": "Marco Cult Biggie Hammertone",
