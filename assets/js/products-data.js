@@ -58,7 +58,12 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805",
    "assets/img/products/cana-shadow-ravage-topload-2.jpg?v=1784071870336",
    "assets/img/products/cana-shadow-ravage-topload-3.jpg?v=1784071871854",
-   "assets/img/products/cana-shadow-ravage-topload-4.jpg?v=1784071873929"
+   "assets/img/products/cana-shadow-ravage-topload-4.jpg?v=1784073506014",
+   "assets/img/products/cana-shadow-ravage-topload-5.jpg?v=1784073507334",
+   "assets/img/products/cana-shadow-ravage-topload-6.jpg?v=1784073508588",
+   "assets/img/products/cana-shadow-ravage-topload-7.jpg?v=1784073509808",
+   "assets/img/products/cana-shadow-ravage-topload-8.jpg?v=1784073511154",
+   "assets/img/products/cana-shadow-ravage-topload-9.jpg?v=1784073512562"
   ],
   "sizes": [
    {
@@ -67,6 +72,20 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-shadow-ravage-topload",
+  "colors": [
+   {
+    "label": "Morada",
+    "units": 1
+   },
+   {
+    "label": "Cromada",
+    "units": 1
+   },
+   {
+    "label": "Azul",
+    "units": 1
+   }
+  ],
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805"
  },
  {
