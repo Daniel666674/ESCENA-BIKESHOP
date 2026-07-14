@@ -939,9 +939,29 @@
     if (brand) r.push('<div class="spec-row"><div class="k">Marca</div><div class="v">' + esc(brand) + '</div></div>');
     return r.join('\n');
   }
+  function waMsgFor(p) {
+    return "Hola ESCENA 🐕, quiero pedir: " + p.n + (p.brand ? " (" + p.brand + ")" : "") + " — " + copFmt(p.price) + " COP.";
+  }
   function waHrefFor(p) {
-    var t = "Hola ESCENA 🐕, quiero pedir: " + p.n + (p.brand ? " (" + p.brand + ")" : "") + " — " + copFmt(p.price) + " COP. ¿Está disponible?";
-    return "https://wa.me/573107630504?text=" + encodeURIComponent(t);
+    return "https://wa.me/573107630504?text=" + encodeURIComponent(waMsgFor(p) + " ¿Está disponible?");
+  }
+  // "marcos" (frames) intentionally excluded — frame products don't get a
+  // standalone product page (see `eligible` in publishCatalog / `hasDetailPage`
+  // in tienda.html), they route through the Arma tu BMX builder instead.
+  var VARIANT_CONFIG = {
+    "manzana-trasera": { label: "Lado (rueda trasera)", prefix: "Lado", options: ["LHD", "RHD"] },
+    "bielas": { label: "Talla de bielas", prefix: "Talla de bielas", options: ["160mm", "165mm", "170mm"] }
+  };
+  function variantHtmlFor(p) {
+    var cfg = VARIANT_CONFIG[p.cat];
+    if (!cfg) return "";
+    var opts = cfg.options.map(function (v, i) {
+      return '<button type="button" data-value="' + esc(v) + '"' + (i === 0 ? ' class="is-active"' : '') + '>' + esc(v) + '</button>';
+    }).join("");
+    return '<div class="pdp-variant" id="pdpVariant" data-prefix="' + esc(cfg.prefix) + '">\n' +
+      '      <span class="pdp-variant-label">' + esc(cfg.label) + '</span>\n' +
+      '      <div class="pdp-variant-options">' + opts + '</div>\n' +
+      '    </div>';
   }
   function relatedFor(p) {
     var rel = inventoryCatalog.filter(function (q) {
@@ -984,7 +1004,8 @@
       PRIMARY_IMG: esc("../" + ((p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg")),
       GALLERY_JSON: gallery.json, GALLERY_DOTS: gallery.dots, GALLERY_THUMBS: gallery.thumbs,
       NAME_JSON: jsonEsc(p.n), BRAND_JSON: jsonEsc(p.brand || ""), SPEC_JSON: jsonEsc(p.spec || ""),
-      CAT_LABEL_JSON: jsonEsc(catLabel), SKU_JSON: jsonEsc(sku)
+      CAT_LABEL_JSON: jsonEsc(catLabel), SKU_JSON: jsonEsc(sku),
+      VARIANT_SECTION: variantHtmlFor(p)
     };
     var out = tmpl;
     Object.keys(m).forEach(function (k) { out = out.split('{{' + k + '}}').join(m[k]); });
