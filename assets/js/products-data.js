@@ -21,13 +21,13 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784061998108"
   ],
   "slug": "marco-cult-biggie-jaume-sintes-hammertone",
-  "img": "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210",
   "sizes": [
    {
     "label": "20.5\"",
     "units": 1
    }
-  ]
+  ],
+  "img": "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210"
  },
  {
   "n": "Pedales Odyssey",
