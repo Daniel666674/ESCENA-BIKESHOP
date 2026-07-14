@@ -1,21 +1,5 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Pedales Odyssey",
-  "brand": "Odyssey",
-  "cat": "pedales",
-  "spec": "Negro Aluminio",
-  "price": 170000,
-  "sku": "PDL",
-  "units": 1,
-  "tag": "Top 🔥!",
-  "imgs": [
-   "assets/img/products/pedales-odyssey.jpg?v=1784057816677",
-   "assets/img/products/pedales-odyssey-2.jpg?v=1784057823405"
-  ],
-  "slug": "pedales-odyssey",
-  "img": "assets/img/products/pedales-odyssey.jpg?v=1784057816677"
- },
- {
   "n": "Caña Odyssey CFL3",
   "brand": "Odyssey",
   "cat": "stems",
@@ -23,8 +7,15 @@ window.ESCENA_PRODUCTS = [
   "price": 340000,
   "sku": "Odysseycfl3",
   "units": 1,
+  "imgs": [
+   "assets/img/products/cana-odyssey-cfl3.jpg?v=1784057862077",
+   "assets/img/products/cana-odyssey-cfl3-2.jpg?v=1784057865975",
+   "assets/img/products/cana-odyssey-cfl3-3.jpg?v=1784057869004",
+   "assets/img/products/cana-odyssey-cfl3-4.jpg?v=1784057872537",
+   "assets/img/products/cana-odyssey-cfl3-5.jpg?v=1784057874891"
+  ],
   "slug": "cana-odyssey-cfl3",
-  "img": "assets/img/escena-logo.jpg"
+  "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784057862077"
  },
  {
   "n": "Caña Shadow Chula 48mm",
