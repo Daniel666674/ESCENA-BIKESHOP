@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Odyssey",
+  "brand": "Odyssey",
+  "cat": "pedales",
+  "spec": "Negro Aluminio",
+  "price": 170000,
+  "sku": "PDL",
+  "units": 1,
+  "tag": "Top 🔥!",
+  "imgs": [
+   "assets/img/products/pedales-odyssey.jpg?v=1784057816677",
+   "assets/img/products/pedales-odyssey-2.jpg?v=1784057823405"
+  ],
+  "slug": "pedales-odyssey",
+  "img": "assets/img/products/pedales-odyssey.jpg?v=1784057816677"
+ },
+ {
   "n": "Caña Odyssey CFL3",
   "brand": "Odyssey",
   "cat": "stems",
