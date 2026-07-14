@@ -273,7 +273,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/stolen-buje-trasero-cassette-negro.jpg"
  },
  {
-  "n": "Freecoaster Odyssey Clutch V2",
+  "n": "Freecoaster Odyssey Clutch V2 Derecho",
   "brand": "Odyssey",
   "cat": "manzana-trasera",
   "spec": "Drive 9T - Derecho - Peso 623 g",
@@ -282,6 +282,7 @@ window.ESCENA_PRODUCTS = [
   "slug": "buje-cassette-negro-cromado",
   "sku": "FREECOASTER ODYSSEY-NEGRO-CROMADO",
   "units": 2,
+  "tag": "RHD",
   "img": "assets/img/products/buje-cassette-negro-cromado.jpg"
  },
  {
