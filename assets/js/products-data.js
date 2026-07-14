@@ -1,5 +1,32 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Marco Fitbikeco STR Negro",
+  "brand": "Fitbikeco",
+  "cat": "marcos",
+  "spec": "Única medida 20.75 x 12.6 cola",
+  "price": 650000,
+  "sku": "MRC",
+  "units": 0,
+  "tag": "Nuevo!",
+  "imgs": [
+   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784067378798",
+   "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784067381676",
+   "assets/img/products/marco-fitbikeco-str-negro-3.jpg?v=1784067383692",
+   "assets/img/products/marco-fitbikeco-str-negro-4.jpg?v=1784067386021",
+   "assets/img/products/marco-fitbikeco-str-negro-5.jpg?v=1784067387455",
+   "assets/img/products/marco-fitbikeco-str-negro-6.jpg?v=1784067389258",
+   "assets/img/products/marco-fitbikeco-str-negro-7.jpg?v=1784067391094"
+  ],
+  "sizes": [
+   {
+    "label": "20.75 x 12.6",
+    "units": 0
+   }
+  ],
+  "slug": "marco-fitbikeco-str-negro",
+  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784067378798"
+ },
+ {
   "n": "Marco Cult Biggie Jaume Sintes Hammertone",
   "brand": "Cult Biggie Jaume Sintes Hammertone",
   "cat": "marcos",
