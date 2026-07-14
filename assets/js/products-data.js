@@ -1333,22 +1333,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/marco_cult_biggie_hammertone_negro.jpeg"
  },
  {
-  "n": "Sunday Marco Cromoly",
-  "slug": "sunday-marco-cromoly-bronce",
-  "brand": "Sunday",
-  "cat": "marcos",
-  "spec": "Cromoly · Top tube 20.75\" · Bronce",
-  "price": 910000,
-  "size": "20.75",
-  "styles": [
-   "street"
-  ],
-  "weight": 2.1,
-  "sku": "SUNDAY-MARCO-CROMOLY-BRONCE",
-  "units": 12,
-  "img": "assets/img/products/frame-placeholder.svg"
- },
- {
   "n": "Fate Namaste Negro",
   "slug": "fate-namaste-negro",
   "brand": "Fate",
@@ -1371,7 +1355,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Total",
   "cat": "marcos",
   "spec": "Cromoly · Top tube 20.75\" · Blanco/Azul",
-  "price": 1050000,
+  "price": 1450000,
   "size": "20.75",
   "styles": [
    "street"
@@ -1379,7 +1363,7 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.15,
   "sku": "TOTAL-MARCO-2075-BLANCO-AZUL",
   "units": 12,
-  "img": "assets/img/products/frame-placeholder.svg"
+  "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
  },
  {
   "n": "Federal Marco Bruno LT",
@@ -1415,39 +1399,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/marco_tukanbikes_industrial.jpeg"
  },
  {
-  "n": "Subrosa Marco Park",
-  "slug": "subrosa-marco-park-negro",
-  "brand": "Subrosa",
-  "cat": "marcos",
-  "spec": "Cromoly · Top tube 21\" · Negro",
-  "price": 920000,
-  "size": "21",
-  "styles": [
-   "park"
-  ],
-  "weight": 2.12,
-  "sku": "SUBROSA-MARCO-PARK-NEGRO",
-  "units": 12,
-  "img": "assets/img/products/frame-placeholder.svg"
- },
- {
-  "n": "S&M Marco Park Pro",
-  "slug": "sm-marco-park-pro-cromado",
-  "brand": "S&M",
-  "cat": "marcos",
-  "spec": "Cromoly 4130 · Top tube 21.25\" · Cromado",
-  "price": 1080000,
-  "tag": "Top",
-  "size": "21.25",
-  "styles": [
-   "park"
-  ],
-  "weight": 2.2,
-  "sku": "SM-MARCO-PARK-PRO-CROMADO",
-  "units": 12,
-  "img": "assets/img/products/frame-placeholder.svg"
- },
- {
   "n": "Colony Marco Park",
   "slug": "colony-marco-park-gris",
   "brand": "Colony",
@@ -1460,38 +1411,6 @@ window.ESCENA_PRODUCTS = [
   ],
   "weight": 2.1,
   "sku": "COLONY-MARCO-PARK-GRIS",
-  "units": 12,
-  "img": "assets/img/products/frame-placeholder.svg"
- },
- {
-  "n": "Stranger Marco Dirt",
-  "slug": "stranger-marco-dirt-negro",
-  "brand": "Stranger",
-  "cat": "marcos",
-  "spec": "Cromoly · Top tube 21.25\" · Negro mate",
-  "price": 940000,
-  "size": "21.25",
-  "styles": [
-   "dirt"
-  ],
-  "weight": 2.18,
-  "sku": "STRANGER-MARCO-DIRT-NEGRO",
-  "units": 12,
-  "img": "assets/img/products/frame-placeholder.svg"
- },
- {
-  "n": "Tall Order Marco Trail",
-  "slug": "tall-order-marco-trail-verde",
-  "brand": "Tall Order",
-  "cat": "marcos",
-  "spec": "Cromoly · Top tube 21.5\" · Verde oliva",
-  "price": 970000,
-  "size": "21.5",
-  "styles": [
-   "dirt"
-  ],
-  "weight": 2.25,
-  "sku": "TALL-ORDER-MARCO-TRAIL-VERDE",
   "units": 12,
   "img": "assets/img/products/frame-placeholder.svg"
  },
