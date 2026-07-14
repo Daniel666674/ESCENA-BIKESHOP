@@ -385,24 +385,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/fiend-fiending-stem-negro.jpg"
  },
  {
-  "n": "Caña Fiend Mills Morada",
-  "brand": "Fiend",
-  "cat": "stems",
-  "spec": "Top load",
-  "price": 320000,
-  "tag": "Edición",
-  "slug": "fiend-fiending-stem-morado",
-  "sku": "FIEND-FIENDING-STEM-MORADO",
-  "units": 12,
-  "img": "assets/img/products/fiend-fiending-stem-morado.jpg",
-  "sizes": [
-   {
-    "label": "Única",
-    "units": 12
-   }
-  ]
- },
- {
   "n": "Bielas Mutanty Savage 170MM",
   "brand": "Mutanty",
   "cat": "bielas",
@@ -467,24 +449,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "ECLAT-TRIPPIN-RIN-NEGRO",
   "units": 12,
   "img": "assets/img/products/eclat-trippin-rin-negro.jpg"
- },
- {
-  "n": "Caña Fiend Mills Top Load Negra",
-  "brand": "Fiend",
-  "cat": "stems",
-  "spec": "Caña Fiend Mills Negra 50MM",
-  "price": 185000,
-  "tag": "Colab",
-  "slug": "cult-vans-sillin-negro",
-  "sku": "CULT-VANS-SILLIN-NEGRO",
-  "units": 2,
-  "img": "assets/img/products/cult-vans-sillin-negro.jpg",
-  "sizes": [
-   {
-    "label": "50mm",
-    "units": 2
-   }
-  ]
  },
  {
   "n": "Silla Cult Pivotal Cuadros",
