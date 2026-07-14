@@ -133,13 +133,73 @@
     .brand-banner b { font-family: 'Bebas Neue', sans-serif; letter-spacing: .06em; font-size: 1.05rem; }
     .brand-banner button { margin-left: auto; background: none; border: 1px solid var(--line); border-radius: 999px; padding: .35rem .9rem; font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; color: var(--muted); cursor: pointer; font-family: inherit; transition: all .15s; }
     .brand-banner button:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
-    .filters { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2rem; }
-    .filters button { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; font-weight: 600; color: var(--muted); transition: all .15s; font-family: inherit; }
-    .filters button.active, .filters button:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
-    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
-    @media (max-width: 980px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    /* ============ CATEGORY SIDEBAR ============ */
+    .tienda-layout { display: grid; grid-template-columns: 232px 1fr; gap: 2.2rem; align-items: start; }
+    .cat-toggle { display: none; }
+    .cat-sidebar-overlay { display: none; }
+    .cat-sidebar-head { display: none; }
+    .cat-sidebar { position: sticky; top: 88px; align-self: start; }
+    .cat-sidebar-label { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .85rem; padding-left: .2rem; }
+    .filters { display: flex; flex-direction: column; gap: .15rem; margin-bottom: 0; }
+    .filters button {
+      position: relative;
+      background: transparent; border: none; text-align: left;
+      padding: .62rem .2rem .62rem 1rem;
+      font-size: .82rem; letter-spacing: .01em; text-transform: none;
+      cursor: pointer; font-weight: 600; color: var(--muted);
+      font-family: inherit; border-radius: 7px;
+      transition: color .2s ease, background .25s ease, padding-left .2s ease;
+      overflow: hidden;
+    }
+    .filters button::before {
+      content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+      width: 3px; height: 0; background: var(--ink); border-radius: 0 3px 3px 0;
+      transition: height .22s ease;
+    }
+    .filters button:hover { color: var(--ink); background: var(--panel); padding-left: 1.3rem; }
+    .filters button:hover::before { height: 55%; }
+    .filters button.active { color: var(--ink); background: var(--panel); font-weight: 800; padding-left: 1.3rem; }
+    .filters button.active::before { height: 70%; background: var(--ink); }
+    @keyframes catPop { from { transform: scale(.97); opacity: .6; } to { transform: scale(1); opacity: 1; } }
+    .filters button.active { animation: catPop .22s ease; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+    @media (min-width: 1300px) { .grid { grid-template-columns: repeat(4, 1fr); } }
     @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 440px) { .grid { grid-template-columns: 1fr; } }
+
+    @media (max-width: 900px) {
+      .tienda-layout { display: block; }
+      .cat-toggle {
+        display: inline-flex; align-items: center; gap: .5rem;
+        background: #fff; border: 1px solid var(--line); border-radius: 999px;
+        padding: .65rem 1.15rem; font-size: .76rem; letter-spacing: .06em; text-transform: uppercase;
+        font-weight: 700; color: var(--ink); font-family: inherit; cursor: pointer;
+        margin-bottom: 1.4rem; transition: box-shadow .2s, transform .15s;
+      }
+      .cat-toggle:hover { box-shadow: 0 6px 18px rgba(0,0,0,.1); }
+      .cat-toggle:active { transform: scale(.97); }
+      .cat-toggle svg { width: 15px; height: 15px; }
+      .cat-sidebar-overlay {
+        display: block; position: fixed; inset: 0; z-index: 600;
+        background: rgba(10,10,10,.55); opacity: 0; pointer-events: none;
+        transition: opacity .25s ease;
+      }
+      .cat-sidebar-overlay.show { opacity: 1; pointer-events: auto; }
+      .cat-sidebar {
+        position: fixed; top: 0; left: 0; bottom: 0; z-index: 601;
+        width: min(300px, 84%); background: #fff;
+        padding: 1.3rem 1.1rem 2rem; overflow-y: auto;
+        transform: translateX(-100%); transition: transform .32s cubic-bezier(.32,.72,0,1);
+        box-shadow: 20px 0 60px rgba(0,0,0,.25);
+      }
+      .cat-sidebar.show { transform: translateX(0); }
+      .cat-sidebar-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+      .cat-sidebar-head span { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: .05em; }
+      .cat-sidebar-close { background: none; border: 1px solid var(--line); border-radius: 50%; width: 34px; height: 34px; font-size: 1.1rem; cursor: pointer; color: var(--ink); display: flex; align-items: center; justify-content: center; }
+      .cat-sidebar-close:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+      .filters button { padding: .8rem .2rem .8rem 1rem; font-size: .88rem; }
+      .filters button:hover, .filters button.active { padding-left: 1.3rem; }
+    }
     .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .15s; }
     .card:hover { box-shadow: 0 14px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
     .card .ph-link { display: block; }
@@ -327,37 +387,54 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
       <span>Marca: <b id="brandBannerName"></b></span>
       <button type="button" id="brandBannerClear">Quitar filtro ✕</button>
     </div>
-    <div class="filters" id="filters">
-      <button data-filter="all">Todo</button>
-      <button data-filter="marcos">Marcos</button>
-      <button data-filter="stems">Cañas</button>
-      <button data-filter="manubrios">Timón</button>
-      <button data-filter="horquillas">Tenedores</button>
-      <button data-filter="bielas">Bielas</button>
-      <button data-filter="manzana-delantera">Manzana Delantera</button>
-      <button data-filter="manzana-trasera">Manzana Trasera</button>
-      <button data-filter="rines">Rines</button>
-      <button data-filter="corazas">Corazas</button>
-      <button data-filter="pinones">Plato</button>
-      <button data-filter="pedales">Pedales</button>
-      <button data-filter="sillines">Sillas</button>
-      <button data-filter="tijas">Postes</button>
-      <button data-filter="punos">Grips</button>
-      <button data-filter="caja-frente">Caja de Frente</button>
-      <button data-filter="caja-centro">Caja de Centro</button>
-      <button data-filter="clavijas">Pegs</button>
-      <button data-filter="tornilleria">Tornillería</button>
-      <button data-filter="piezas">Piezas varias</button>
-      <button data-filter="herramientas">Herramientas</button>
-    </div>
+    <button type="button" class="cat-toggle" id="catToggle" aria-expanded="false" aria-controls="catSidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="12" y2="18"/></svg>
+      Categorías
+    </button>
 
-    <div class="grid" id="grid"><!-- products injected by JS --></div>
-    <p class="page-info" id="pageInfo"></p>
+    <div class="tienda-layout">
+      <div class="cat-sidebar-overlay" id="catSidebarOverlay"></div>
+      <aside class="cat-sidebar" id="catSidebar">
+        <div class="cat-sidebar-head">
+          <span>Categorías</span>
+          <button type="button" class="cat-sidebar-close" id="catSidebarClose" aria-label="Cerrar categorías">&times;</button>
+        </div>
+        <p class="cat-sidebar-label">Categorías</p>
+        <div class="filters" id="filters">
+          <button data-filter="all">Todo</button>
+          <button data-filter="marcos">Marcos</button>
+          <button data-filter="stems">Cañas</button>
+          <button data-filter="manubrios">Timón</button>
+          <button data-filter="horquillas">Tenedores</button>
+          <button data-filter="bielas">Bielas</button>
+          <button data-filter="manzana-delantera">Manzana Delantera</button>
+          <button data-filter="manzana-trasera">Manzana Trasera</button>
+          <button data-filter="rines">Rines</button>
+          <button data-filter="corazas">Corazas</button>
+          <button data-filter="pinones">Plato</button>
+          <button data-filter="pedales">Pedales</button>
+          <button data-filter="sillines">Sillas</button>
+          <button data-filter="tijas">Postes</button>
+          <button data-filter="punos">Grips</button>
+          <button data-filter="caja-frente">Caja de Frente</button>
+          <button data-filter="caja-centro">Caja de Centro</button>
+          <button data-filter="clavijas">Pegs</button>
+          <button data-filter="tornilleria">Tornillería</button>
+          <button data-filter="piezas">Piezas varias</button>
+          <button data-filter="herramientas">Herramientas</button>
+        </div>
+      </aside>
 
-    <div class="pagination" id="pagination">
-      <button class="page-btn" id="prevBtn">‹ Anterior</button>
-      <div class="page-numbers" id="pageNumbers"></div>
-      <button class="page-btn" id="nextBtn">Siguiente ›</button>
+      <div class="tienda-main">
+        <div class="grid" id="grid"><!-- products injected by JS --></div>
+        <p class="page-info" id="pageInfo"></p>
+
+        <div class="pagination" id="pagination">
+          <button class="page-btn" id="prevBtn">‹ Anterior</button>
+          <div class="page-numbers" id="pageNumbers"></div>
+          <button class="page-btn" id="nextBtn">Siguiente ›</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -522,7 +599,35 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
     var params = new URLSearchParams(window.location.search);
     params.set("cat", e.target.dataset.filter);
     history.replaceState(null, "", "tienda.html?" + params.toString());
+    closeCatSidebar();
   });
+
+  /* ---- Category sidebar (mobile off-canvas drawer) ---- */
+  var catToggle = document.getElementById("catToggle");
+  var catSidebar = document.getElementById("catSidebar");
+  var catSidebarOverlay = document.getElementById("catSidebarOverlay");
+  var catSidebarClose = document.getElementById("catSidebarClose");
+  var catOpenedFrom = null;
+  function openCatSidebar(){
+    catOpenedFrom = document.activeElement;
+    catSidebar.classList.add("show");
+    catSidebarOverlay.classList.add("show");
+    catToggle.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+  function closeCatSidebar(){
+    if (!catSidebar.classList.contains("show")) return;
+    catSidebar.classList.remove("show");
+    catSidebarOverlay.classList.remove("show");
+    catToggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+    if (catOpenedFrom && typeof catOpenedFrom.focus === "function") catOpenedFrom.focus();
+    catOpenedFrom = null;
+  }
+  catToggle.addEventListener("click", openCatSidebar);
+  catSidebarClose.addEventListener("click", closeCatSidebar);
+  catSidebarOverlay.addEventListener("click", closeCatSidebar);
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeCatSidebar(); });
 
   /* ---- Brand banner (?brand= query param) ---- */
   function showBrandBanner(brand){
