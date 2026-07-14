@@ -1,5 +1,34 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Demolition",
+  "brand": "Demolition",
+  "cat": "pedales",
+  "spec": "Azul con blanco , Rojo con blanco , Gris con Blanco, Negro, Morado con blanco, Morado con Amarillo.",
+  "price": 95000,
+  "sku": "PDL",
+  "units": 10,
+  "tag": "Top 🔥",
+  "imgs": [
+   "assets/img/products/pedales-demolition.jpg?v=1784059551908",
+   "assets/img/products/pedales-demolition-2.jpg?v=1784059553615",
+   "assets/img/products/pedales-demolition-3.jpg?v=1784059555139",
+   "assets/img/products/pedales-demolition-4.jpg?v=1784059556618",
+   "assets/img/products/pedales-demolition-5.jpg?v=1784059558102",
+   "assets/img/products/pedales-demolition-6.jpg?v=1784059559776",
+   "assets/img/products/pedales-demolition-7.jpg?v=1784059561416",
+   "assets/img/products/pedales-demolition-8.jpg?v=1784059563785",
+   "assets/img/products/pedales-demolition-9.jpg?v=1784059565238",
+   "assets/img/products/pedales-demolition-10.jpg?v=1784059566652",
+   "assets/img/products/pedales-demolition-11.jpg?v=1784059568136",
+   "assets/img/products/pedales-demolition-12.jpg?v=1784059569860",
+   "assets/img/products/pedales-demolition-13.jpg?v=1784059571375",
+   "assets/img/products/pedales-demolition-14.jpg?v=1784059573260",
+   "assets/img/products/pedales-demolition-15.jpg?v=1784059575864"
+  ],
+  "slug": "pedales-demolition",
+  "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908"
+ },
+ {
   "n": "Pedales Stolen",
   "brand": "Stolen",
   "cat": "pedales",
