@@ -1,19 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Aros Rant Cromados",
-  "brand": "Rant",
-  "cat": "rines",
-  "spec": "Cromado",
-  "price": 150000,
-  "sku": "Ppf",
-  "units": 2,
-  "tag": "Nuevo 🔥!",
+  "n": "Too short",
+  "brand": "CULT",
+  "cat": "marcos",
+  "spec": "Frente 20.5",
+  "price": 17900000,
+  "sku": "1112",
+  "units": 10,
   "imgs": [
-   "assets/img/products/aros-rant-cromados.jpg?v=1784052307262",
-   "assets/img/products/aros-rant-cromados-2.jpg?v=1784052308894"
+   "assets/img/products/too-short-3.jpg?v=1784052247222",
+   "assets/img/products/too-short-4.jpg?v=1784052248858",
+   "assets/img/products/too-short-5.jpg?v=1784052250495",
+   "assets/img/products/too-short-6.jpg?v=1784052252236",
+   "assets/img/products/too-short-7.jpg?v=1784052253979",
+   "assets/img/products/too-short-8.jpg?v=1784052256025",
+   "assets/img/products/too-short-9.jpg?v=1784052257969",
+   "assets/img/products/too-short-10.jpg?v=1784052260530"
   ],
-  "slug": "aros-rant-cromados",
-  "img": "assets/img/products/aros-rant-cromados.jpg?v=1784052307262"
+  "slug": "too-short",
+  "img": "assets/img/products/too-short-3.jpg?v=1784052247222"
  },
  {
   "n": "Marco Cult Biggie Hammertone",
