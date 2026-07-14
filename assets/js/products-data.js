@@ -878,14 +878,14 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/federal-clavija-negro.jpg"
  },
  {
-  "n": "Grips Cult Negro",
+  "n": "Funda De Plastipeg Fate",
   "brand": "Cult",
-  "cat": "punos",
+  "cat": "clavijas",
   "spec": "Espuma/goma · Negro",
-  "price": 55000,
+  "price": 22000,
   "slug": "cult-punos-negro",
-  "sku": "CULT-PUNOS-NEGRO",
-  "units": 12,
+  "sku": "FUNDA-PEGS-FATE",
+  "units": 10,
   "img": "assets/img/products/cult-punos-negro.jpg"
  },
  {
@@ -893,8 +893,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "punos",
   "spec": "Goma · Rojo/Amarillo/Verde",
-  "price": 58000,
-  "tag": "Edición",
+  "price": 55000,
   "slug": "cult-punos-rasta",
   "sku": "CULT-PUNOS-RASTA",
   "units": 12,
