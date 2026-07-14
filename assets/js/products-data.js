@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tenedor mutanty",
+  "brand": "Mutanty",
+  "cat": "horquillas",
+  "spec": "15mm",
+  "price": 3600000,
+  "sku": "Djskxkxkz",
+  "units": 2,
+  "slug": "tenedor-mutanty",
+  "img": "assets/img/products/tenedor-mutanty.jpg?v=1784049880738"
+ },
+ {
   "n": "Marco Cult Biggie Hammertone",
   "brand": "Cult",
   "cat": "horquillas",
