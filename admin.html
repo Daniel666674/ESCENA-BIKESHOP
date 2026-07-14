@@ -174,10 +174,11 @@
     .pmodal-photos { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .8rem; }
     .pmodal-photo { position: relative; width: 72px; height: 72px; border-radius: 8px; overflow: hidden; background: #0A0A0A; }
     .pmodal-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .pmodal-photo .rm, .pmodal-photo .mv { -webkit-appearance: none; appearance: none; font-family: inherit; box-sizing: border-box; }
     .pmodal-photo .rm { position: absolute; top: 2px; right: 2px; width: 20px; height: 20px; border-radius: 50%; background: rgba(0,0,0,.7); color: #fff; border: none; font-size: .8rem; cursor: pointer; line-height: 1; z-index: 2; }
     .pmodal-photo .rm:hover { background: #c0392b; }
     .pmodal-photo .cover-badge { position: absolute; top: 2px; left: 2px; background: #fff; color: #0A0A0A; font-size: .52rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: .1rem .3rem; border-radius: 3px; z-index: 2; }
-    .pmodal-photo .mv { position: absolute; bottom: 0; width: 50%; height: 22px; background: rgba(0,0,0,.55); color: #fff; border: none; font-size: .8rem; cursor: pointer; line-height: 1; }
+    .pmodal-photo .mv { position: absolute; bottom: 0; width: 50%; height: 22px; max-height: 22px; background: rgba(0,0,0,.55); color: #fff; border: none; font-size: .8rem; cursor: pointer; line-height: 22px; display: flex; align-items: center; justify-content: center; }
     .pmodal-photo .mv:disabled { opacity: .3; cursor: not-allowed; }
     .pmodal-photo .mv-l { left: 0; border-radius: 0 0 0 8px; }
     .pmodal-photo .mv-r { right: 0; border-radius: 0 0 8px 0; }
@@ -489,6 +490,13 @@
           <button type="button" class="pmodal-sizes-add" id="pmSizesAddBtn">+ Añadir talla</button>
           <p class="pmodal-sizes-total" id="pmSizesTotal"></p>
         </div>
+        <div class="pmodal-field span2">
+          <label>Colores y stock por color (opcional)</label>
+          <div id="pmColorsRows"></div>
+          <button type="button" class="pmodal-sizes-add" id="pmColorsAddBtn">+ Añadir color</button>
+          <p class="pmodal-sizes-total" id="pmColorsTotal"></p>
+          <p class="pmodal-sizes-total" id="pmColorsHint"></p>
+        </div>
         <div class="pmodal-field">
           <label>Tag (opcional)</label>
           <input type="text" id="pmTag" placeholder="Ej: Nuevo, Top, Edición" />
@@ -523,7 +531,7 @@
     <form id="smodalForm">
       <div class="pmodal-grid">
         <div class="pmodal-field span2" id="smSizeField" style="display:none;">
-          <label>Talla vendida</label>
+          <label id="smSizeLabel">Talla vendida</label>
           <select id="smSize"></select>
         </div>
         <div class="pmodal-field">
@@ -588,6 +596,13 @@
   var SIZE_CATEGORIES = { bielas: 1, pinones: 1, marcos: 1, stems: 1, manubrios: 1 };
   function isSizeCat(cat) { return !!SIZE_CATEGORIES[cat]; }
   function sizesTotal(sizes) { return (sizes || []).reduce(function (s, x) { return s + (x.units || 0); }, 0); }
+  // Colors work the same way as sizes (p.colors = [{label, units}]) but are
+  // available on every category, independent of talla. A product tracks real,
+  // per-unit stock through at most ONE of these two dimensions at a time —
+  // sizes wins when both are present (a size-category's sizes already own the
+  // real stock, so any colors added there are cosmetic-only, same pattern as
+  // the old manzana-trasera LHD/RHD selector: tags the message, no own stock).
+  function isColorReal(p) { return !isSizeCat(p.cat) && p.colors && p.colors.length > 1; }
 
   /* ============ GitHub API ============ */
   function getToken() { return sessionStorage.getItem(TOKEN_KEY) || localStorage.getItem(TOKEN_KEY) || ""; }
@@ -873,6 +888,7 @@
   var salesBaselineCount = 0; // salesLog.length at last successful publish/load — everything past this is "mine, not yet committed"
   var modalPhotos = [];
   var modalSizes = [];
+  var modalColors = [];
   // Multiple devices can publish close together. products-data.js and
   // sales-log.js are shared single-file catalogs, so a blind "overwrite with my
   // whole in-memory copy" silently reverts whatever another device already
@@ -919,13 +935,22 @@
     } else {
       delete m.sizes;
     }
+    var validColors = Array.isArray(p.colors) && p.colors.length
+      ? p.colors.map(function (c) { return { label: String((c && c.label) || "").trim(), units: (c && typeof c.units === "number") ? c.units : 0 }; }).filter(function (c) { return c.label; })
+      : null;
+    if (validColors && validColors.length) {
+      m.colors = validColors;
+      if (isColorReal(m)) m.units = sizesTotal(m.colors); // colors only drive the aggregate when they're the real dimension (see isColorReal)
+    } else {
+      delete m.colors;
+    }
     return m;
   }
 
   // Fields that actually feed genPage() — a change to any of these means the
   // product's static detail page is out of date and needs regenerating.
   function pageSnapshotOf(p) {
-    return JSON.stringify([p.n, p.brand, p.cat, p.spec, p.price, p.sku, p.tag, p.units, p.imgs, p.sizes]);
+    return JSON.stringify([p.n, p.brand, p.cat, p.spec, p.price, p.sku, p.tag, p.units, p.imgs, p.sizes, p.colors]);
   }
   function pageNeedsRegen(p) {
     return pageSnapshotOf(p) !== p._pageSnapshot;
@@ -1055,7 +1080,7 @@
   var VARIANT_CONFIG = {
     "manzana-trasera": { label: "Lado (rueda trasera)", prefix: "Lado", options: ["LHD", "RHD"] }
   };
-  function variantHtmlFor(p) {
+  function sizeVariantHtmlFor(p) {
     if (p.sizes && p.sizes.length > 1) {
       var withStock = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
       var activeLabel = (withStock[0] || p.sizes[0]).label;
@@ -1078,6 +1103,28 @@
       '      <span class="pdp-variant-label">' + esc(cfg.label) + '</span>\n' +
       '      <div class="pdp-variant-options">' + opts2 + '</div>\n' +
       '    </div>';
+  }
+  // Independent second selector: real inventory-backed when the category has
+  // no mandatory size (isColorReal), cosmetic tag-only otherwise (a size
+  // product's talla already owns the real stock — see isColorReal).
+  function colorVariantHtmlFor(p) {
+    if (!p.colors || p.colors.length < 2) return "";
+    var real = isColorReal(p);
+    var withStock = real ? p.colors.filter(function (c) { return (c.units || 0) > 0; }) : [];
+    var activeLabel = (real ? (withStock[0] || p.colors[0]) : p.colors[0]).label;
+    var opts = p.colors.map(function (c) {
+      var out = real && (c.units || 0) <= 0;
+      return '<button type="button" data-value="' + esc(c.label) + '"' +
+        (real ? ' data-units="' + (c.units || 0) + '"' : '') +
+        (c.label === activeLabel ? ' class="is-active"' : '') + (out ? ' disabled' : '') + '>' + esc(c.label) + '</button>';
+    }).join("");
+    return '<div class="pdp-variant" id="pdpVariantColor" data-prefix="Color">\n' +
+      '      <span class="pdp-variant-label">Color</span>\n' +
+      '      <div class="pdp-variant-options">' + opts + '</div>\n' +
+      '    </div>';
+  }
+  function variantHtmlFor(p) {
+    return sizeVariantHtmlFor(p) + colorVariantHtmlFor(p);
   }
   function relatedFor(p) {
     var rel = inventoryCatalog.filter(function (q) {
@@ -1118,6 +1165,9 @@
     if (p.sizes && p.sizes.length > 1) {
       var withStock = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
       initialUnits = (withStock[0] || p.sizes[0] || { units: 0 }).units || 0;
+    } else if (isColorReal(p)) {
+      var withStockC = p.colors.filter(function (c) { return (c.units || 0) > 0; });
+      initialUnits = (withStockC[0] || p.colors[0] || { units: 0 }).units || 0;
     }
     var m = {
       NAME: esc(p.n), BRAND: esc(p.brand || ""), PRICE: String(p.price), PRICE_FMT: copFmt(p.price),
@@ -1293,7 +1343,7 @@
       '<td class="sku" data-label="SKU">' + esc(p.sku) + '</td>' +
       '<td data-label="Categoría">' + esc(CATEGORY_LABELS[p.cat] || p.cat) + '</td>' +
       '<td data-label="Precio">' + cop(p.price) + '</td>' +
-      '<td data-label="Unidades"><span class="units-badge">' + units + '</span>' + (p.sizes && p.sizes.length ? ' <span style="display:inline-block;background:var(--panel);color:var(--muted);font-size:.62rem;font-weight:700;padding:.1rem .4rem;border-radius:4px;margin-left:.3rem;">' + p.sizes.length + ' talla' + (p.sizes.length > 1 ? "s" : "") + '</span>' : '') + '</td>' +
+      '<td data-label="Unidades"><span class="units-badge">' + units + '</span>' + (p.sizes && p.sizes.length ? ' <span style="display:inline-block;background:var(--panel);color:var(--muted);font-size:.62rem;font-weight:700;padding:.1rem .4rem;border-radius:4px;margin-left:.3rem;">' + p.sizes.length + ' talla' + (p.sizes.length > 1 ? "s" : "") + '</span>' : '') + (p.colors && p.colors.length ? ' <span style="display:inline-block;background:var(--panel);color:var(--muted);font-size:.62rem;font-weight:700;padding:.1rem .4rem;border-radius:4px;margin-left:.3rem;">' + p.colors.length + ' color' + (p.colors.length > 1 ? "es" : "") + '</span>' : '') + '</td>' +
       '<td data-label="Estado">' + statusHTML + '</td>' +
       '<td class="row-actions" data-label="Acciones"><button type="button" class="sell">Registrar venta</button><button type="button" class="edit">Editar</button><button type="button" class="del">Eliminar</button></td>' +
       '</tr>';
@@ -1407,6 +1457,32 @@
     document.getElementById("pmUnitsField").style.display = isSizes ? "none" : "";
     document.getElementById("pmSizesField").style.display = isSizes ? "" : "none";
     if (isSizes && !modalSizes.length) { modalSizes = [{ label: "", units: 0 }]; renderModalSizes(); }
+    renderModalColorsHint(cat);
+  }
+
+  function renderModalColors() {
+    var wrap = document.getElementById("pmColorsRows");
+    wrap.innerHTML = modalColors.map(function (c, i) {
+      return '<div class="pmodal-sizes-row">' +
+        '<input type="text" placeholder="Ej: Negro, Cromado, Azul" data-i="' + i + '" data-f="label" value="' + esc(c.label || "") + '" />' +
+        '<input type="number" min="0" step="1" placeholder="Stock" data-i="' + i + '" data-f="units" value="' + (typeof c.units === "number" ? c.units : "") + '" />' +
+        '<button type="button" class="pmodal-size-rm" data-i="' + i + '" aria-label="Quitar color">&times;</button>' +
+        '</div>';
+    }).join("");
+    var total = sizesTotal(modalColors);
+    document.getElementById("pmColorsTotal").textContent = modalColors.length ? "Total: " + total + " unidades en " + modalColors.length + " color(es)." : "";
+    renderModalColorsHint(document.getElementById("pmCat").value);
+  }
+  function renderModalColorsHint(cat) {
+    var hint = document.getElementById("pmColorsHint");
+    if (!hint) return;
+    if (modalColors.length > 1 && isSizeCat(cat)) {
+      hint.textContent = "Este producto ya tiene tallas con stock propio — el color queda solo informativo, sin stock propio.";
+    } else if (modalColors.length > 1) {
+      hint.textContent = "El stock total se calcula sumando cada color (reemplaza el campo de Unidades).";
+    } else {
+      hint.textContent = "Dejalo vacío si el producto no tiene variantes de color.";
+    }
   }
 
   function openProductModal(idx) {
@@ -1429,6 +1505,8 @@
     renderModalPhotos();
     modalSizes = p && p.sizes ? p.sizes.map(function (s) { return { label: s.label, units: s.units }; }) : [];
     renderModalSizes();
+    modalColors = p && p.colors ? p.colors.map(function (c) { return { label: c.label, units: c.units }; }) : [];
+    renderModalColors();
     toggleUnitsVsSizes(cat);
     document.getElementById("pmodalOverlay").classList.add("show");
     document.getElementById("pmName").focus();
@@ -1452,41 +1530,52 @@
     var price = parseFloat(document.getElementById("smPrice").value) || 0;
     document.getElementById("smTotalReadout").textContent = cop(qty * price);
   }
-  function sellSelectedSize() {
+  // A product tracks real stock through at most one variant dimension at a
+  // time: sizes (multi-size product) or colors (isColorReal — colors as the
+  // real dimension on a non-size category). Never both on the same product.
+  function sellVariantKind(p) {
+    if (p && p.sizes && p.sizes.length > 1) return "sizes";
+    if (p && isColorReal(p)) return "colors";
+    return null;
+  }
+  function sellSelectedVariant() {
     var p = inventoryCatalog[sellingIdx];
-    if (!p || !p.sizes || !p.sizes.length) return null;
+    var kind = sellVariantKind(p);
+    if (!kind) return null;
     var sel = document.getElementById("smSize").value;
-    return p.sizes.filter(function (x) { return x.label === sel; })[0] || null;
+    return p[kind].filter(function (x) { return x.label === sel; })[0] || null;
   }
   function applySellUnitsLimit() {
     var p = inventoryCatalog[sellingIdx];
-    var size = sellSelectedSize();
-    var units = size ? (size.units || 0) : (p ? (p.units || 0) : 0);
+    var variant = sellSelectedVariant();
+    var units = variant ? (variant.units || 0) : (p ? (p.units || 0) : 0);
     var qtyEl = document.getElementById("smQty");
     var submitBtn = document.querySelector("#smodalForm button[type=submit]");
     qtyEl.max = units;
     qtyEl.value = units > 0 ? Math.min(parseInt(qtyEl.value, 10) || 1, units) : 0;
     qtyEl.disabled = units <= 0;
     submitBtn.disabled = units <= 0;
-    submitBtn.textContent = units <= 0 ? (size ? "Sin stock para esta talla" : "Sin stock para vender") : "Registrar venta";
+    submitBtn.textContent = units <= 0 ? (variant ? "Sin stock para esta opción" : "Sin stock para vender") : "Registrar venta";
     updateSellTotal();
   }
   function openSellModal(idx) {
     sellingIdx = idx;
     var p = inventoryCatalog[idx];
-    var hasSizes = p.sizes && p.sizes.length > 0;
+    var kind = sellVariantKind(p);
+    var list = kind ? p[kind] : null;
     var sizeField = document.getElementById("smSizeField");
-    sizeField.style.display = hasSizes ? "" : "none";
-    if (hasSizes) {
-      document.getElementById("smSize").innerHTML = p.sizes.map(function (s) {
+    sizeField.style.display = list ? "" : "none";
+    if (list) {
+      document.getElementById("smSizeLabel").textContent = kind === "sizes" ? "Talla vendida" : "Color vendido";
+      document.getElementById("smSize").innerHTML = list.map(function (s) {
         var out = (s.units || 0) <= 0;
         return '<option value="' + esc(s.label) + '"' + (out ? " disabled" : "") + '>' + esc(s.label) + " — " + (s.units || 0) + " en stock" + (out ? " (agotado)" : "") + "</option>";
       }).join("");
-      var withStock = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
-      document.getElementById("smSize").value = (withStock[0] || p.sizes[0]).label;
+      var withStock = list.filter(function (s) { return (s.units || 0) > 0; });
+      document.getElementById("smSize").value = (withStock[0] || list[0]).label;
     }
     var units = p.units || 0;
-    document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock" + (hasSizes ? " (todas las tallas)" : "");
+    document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock" + (list ? (kind === "sizes" ? " (todas las tallas)" : " (todos los colores)") : "");
     document.getElementById("smPrice").value = p.price || 0;
     document.getElementById("smBuyer").value = "";
     document.getElementById("smNotes").value = "";
@@ -1592,13 +1681,14 @@
       var p = inventoryCatalog[sellingIdx];
       var qty = parseInt(document.getElementById("smQty").value, 10) || 0;
       var price = parseFloat(document.getElementById("smPrice").value) || 0;
-      var size = sellSelectedSize();
-      var available = size ? (size.units || 0) : (p.units || 0);
+      var kind = sellVariantKind(p);
+      var variant = sellSelectedVariant();
+      var available = variant ? (variant.units || 0) : (p.units || 0);
       if (qty < 1) return;
-      if (qty > available) { alert("Solo hay " + available + " en stock" + (size ? " para la talla " + size.label : "") + " — no puedes registrar una venta de " + qty + "."); return; }
-      if (size) {
-        size.units -= qty;
-        p.units = sizesTotal(p.sizes);
+      if (qty > available) { alert("Solo hay " + available + " en stock" + (variant ? " para " + (kind === "sizes" ? "la talla " : "el color ") + variant.label : "") + " — no puedes registrar una venta de " + qty + "."); return; }
+      if (variant) {
+        variant.units -= qty;
+        p.units = sizesTotal(p[kind]);
       } else {
         p.units = (p.units || 0) - qty;
       }
@@ -1609,7 +1699,7 @@
         qty: qty, unitPrice: price, total: qty * price,
         buyer: document.getElementById("smBuyer").value.trim(),
         notes: document.getElementById("smNotes").value.trim()
-      }, size ? { size: size.label } : {}));
+      }, variant ? (kind === "sizes" ? { size: variant.label } : { color: variant.label }) : {}));
       salesDirty = true;
       saveCatalog();
       renderSalesSummary();
@@ -1700,6 +1790,27 @@
       modalSizes.splice(parseInt(rm.getAttribute("data-i"), 10), 1);
       renderModalSizes();
     });
+    document.getElementById("pmColorsAddBtn").addEventListener("click", function () {
+      modalColors.push({ label: "", units: 0 });
+      renderModalColors();
+      var inputs = document.querySelectorAll('#pmColorsRows input[data-f="label"]');
+      if (inputs.length) inputs[inputs.length - 1].focus();
+    });
+    document.getElementById("pmColorsRows").addEventListener("input", function (e) {
+      var i = e.target.getAttribute("data-i"), f = e.target.getAttribute("data-f");
+      if (i === null || !f) return;
+      i = parseInt(i, 10);
+      if (!modalColors[i]) return;
+      modalColors[i][f] = f === "units" ? (parseInt(e.target.value, 10) || 0) : e.target.value;
+      document.getElementById("pmColorsTotal").textContent = "Total: " + sizesTotal(modalColors) + " unidades en " + modalColors.length + " color(es).";
+      renderModalColorsHint(document.getElementById("pmCat").value);
+    });
+    document.getElementById("pmColorsRows").addEventListener("click", function (e) {
+      var rm = e.target.closest(".pmodal-size-rm");
+      if (!rm) return;
+      modalColors.splice(parseInt(rm.getAttribute("data-i"), 10), 1);
+      renderModalColors();
+    });
 
     document.getElementById("pmodalForm").addEventListener("submit", function (e) {
       e.preventDefault();
@@ -1725,10 +1836,21 @@
           .filter(function (s) { return s.label; });
         fields.units = sizesTotal(fields.sizes);
       }
+      var validColorsInput = modalColors
+        .map(function (c) { return { label: (c.label || "").trim(), units: c.units || 0 }; })
+        .filter(function (c) { return c.label; });
+      if (validColorsInput.length) {
+        fields.colors = validColorsInput;
+        // Colors only drive the units aggregate when they're the real dimension
+        // (non-size categories) — on a size-category they're cosmetic-only,
+        // sizes already own the real stock (see isColorReal).
+        if (!isSizeCat(catVal) && validColorsInput.length > 1) fields.units = sizesTotal(validColorsInput);
+      }
       if (editingIdx !== null) {
         var cur = inventoryCatalog[editingIdx];
         Object.assign(cur, fields); // merge -> preserves slug, weight, published, etc.
         if (!isSizeCat(catVal)) delete cur.sizes; // category changed away from a size-category
+        if (!fields.colors) delete cur.colors; // admin cleared all color rows
         if (!cur.sku) cur.sku = cur.slug.toUpperCase();
         markDirty(cur.slug);
         showToast("Producto actualizado");
@@ -1756,12 +1878,13 @@
     });
 
     document.getElementById("invExportCsvBtn").addEventListener("click", function () {
-      var headers = ["slug", "n", "brand", "cat", "spec", "price", "sku", "units", "tag", "imgs", "sizes"];
+      var headers = ["slug", "n", "brand", "cat", "spec", "price", "sku", "units", "tag", "imgs", "sizes", "colors"];
       var rows = [headers.join(",")];
       inventoryCatalog.forEach(function (p) {
         rows.push(headers.map(function (h) {
           var v = h === "imgs" ? p.imgs.join("|")
             : h === "sizes" ? (p.sizes || []).map(function (s) { return s.label + ":" + s.units; }).join("|")
+            : h === "colors" ? (p.colors || []).map(function (c) { return c.label + ":" + c.units; }).join("|")
             : (p[h] === undefined ? "" : p[h]);
           return '"' + String(v).replace(/"/g, '""') + '"';
         }).join(","));
@@ -1861,6 +1984,14 @@
         });
       } else if (o.sizes === "") {
         delete o.sizes;
+      }
+      if (o.colors) {
+        o.colors = String(o.colors).split("|").filter(Boolean).map(function (c) {
+          var parts = c.split(":");
+          return { label: parts[0], units: parseInt(parts[1], 10) || 0 };
+        });
+      } else if (o.colors === "") {
+        delete o.colors;
       }
       if (o.published !== undefined) o.published = !(o.published === "false" || o.published === false);
       return o;
