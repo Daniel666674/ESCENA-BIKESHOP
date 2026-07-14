@@ -1,21 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Casco TSG Evolution Verde",
-  "brand": "TSG",
-  "cat": "piezas",
-  "spec": "",
-  "price": 350000,
-  "sku": "TSGVERDE",
-  "units": 1,
-  "tag": "Nuevo 🔥",
+  "n": "Too short",
+  "brand": "CULT",
+  "cat": "horquillas",
+  "spec": "Frente 20.5",
+  "price": 1790000,
+  "sku": "1112",
+  "units": 10,
   "imgs": [
-   "assets/img/products/casco-tsg-evolution-verde.jpg?v=1784052447955",
-   "assets/img/products/casco-tsg-evolution-verde-2.jpg?v=1784052449388",
-   "assets/img/products/casco-tsg-evolution-verde-3.jpg?v=1784052451129",
-   "assets/img/products/casco-tsg-evolution-verde-4.jpg?v=1784052452767"
+   "assets/img/products/too-short-3.jpg?v=1784052247222",
+   "assets/img/products/too-short-4.jpg?v=1784052248858",
+   "assets/img/products/too-short-5.jpg?v=1784052250495",
+   "assets/img/products/too-short-6.jpg?v=1784052252236",
+   "assets/img/products/too-short-7.jpg?v=1784052253979",
+   "assets/img/products/too-short-8.jpg?v=1784052256025",
+   "assets/img/products/too-short-9.jpg?v=1784052257969",
+   "assets/img/products/too-short-10.jpg?v=1784052260530"
   ],
-  "slug": "casco-tsg-evolution-verde",
-  "img": "assets/img/products/casco-tsg-evolution-verde.jpg?v=1784052447955"
+  "slug": "too-short",
+  "img": "assets/img/products/too-short-3.jpg?v=1784052247222"
  },
  {
   "n": "Marco Cult Biggie Hammertone",
