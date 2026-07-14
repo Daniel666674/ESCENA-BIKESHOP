@@ -81,7 +81,7 @@
         '</div>' +
       '</div>' +
     '</div>' +
-    '<div class="toast" id="cartToast" style="position:fixed;top:1.2rem;right:1.4rem;z-index:650;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#0A0A0A;padding:.45rem .8rem;border-radius:999px;border:1px solid rgba(0,0,0,.07);box-shadow:0 6px 20px rgba(0,0,0,.12);font-size:.74rem;font-weight:600;opacity:0;transform:translateY(-6px);transition:opacity .2s, transform .2s;pointer-events:none;max-width:min(300px, calc(100vw - 2.8rem));"></div>';
+    '<div class="cart-toast" id="cartToast" style="position:fixed;top:1.2rem;right:1.4rem;z-index:650;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#0A0A0A;padding:.45rem .8rem;border-radius:999px;border:1px solid rgba(0,0,0,.07);box-shadow:0 6px 20px rgba(0,0,0,.12);font-size:.74rem;font-weight:600;opacity:0;transform:translateY(-6px);transition:opacity .2s, transform .2s;pointer-events:none;max-width:min(300px, calc(100vw - 2.8rem));"></div>';
 
   function showToast(msg) {
     var t = document.getElementById("cartToast");

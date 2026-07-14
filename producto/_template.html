@@ -355,6 +355,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
 <div class="toast" id="toast"></div>
 
+<script>document.write('<scr'+'ipt src="../assets/js/products-data.js?v='+Date.now()+'"><\/scr'+'ipt>');</script>
 <script>
   var WA = "573107630504";
 
@@ -422,6 +423,16 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   var addCartBtn = pdpActions ? pdpActions.querySelector(".add-cart-btn") : null;
   var unitsAvail = parseInt((stockHint && stockHint.getAttribute("data-units")) || "12", 10);
   if (isNaN(unitsAvail)) unitsAvail = 12;
+  // Prefer the live catalog's stock over the value baked into this page at
+  // publish time — a sale (or any stock edit) must be reflected immediately,
+  // not just the next time this specific page happens to get regenerated.
+  if (window.ESCENA_PRODUCTS) {
+    var liveProduct = window.ESCENA_PRODUCTS.filter(function (x) { return x.slug === "{{SLUG}}"; })[0];
+    if (liveProduct && typeof liveProduct.units === "number") unitsAvail = liveProduct.units;
+  }
+  if (stockHint) stockHint.setAttribute("data-units", String(unitsAvail));
+  if (addCartBtn) addCartBtn.setAttribute("data-units", String(unitsAvail));
+  if (qtyInput) qtyInput.max = String(unitsAvail);
 
   if (unitsAvail <= 0) {
     if (pdpActions) pdpActions.classList.add("is-agotado");
