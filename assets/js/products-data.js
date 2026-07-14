@@ -1,5 +1,51 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Caña Fiend Mills - TopLoad",
+  "brand": "Fiend",
+  "cat": "stems",
+  "spec": "TopLoad, Aluminio CNC, Alcance: 48mm",
+  "price": 320000,
+  "sku": "STEAM",
+  "units": 1,
+  "tag": "Edición Especial!",
+  "imgs": [
+   "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486",
+   "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784072401934",
+   "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1784072403563",
+   "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1784072404971",
+   "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1784072406365",
+   "assets/img/products/cana-fiend-mills-topload-6.jpg?v=1784072407845",
+   "assets/img/products/cana-fiend-mills-topload-7.jpg?v=1784072409612",
+   "assets/img/products/cana-fiend-mills-topload-8.jpg?v=1784072411172",
+   "assets/img/products/cana-fiend-mills-topload-9.jpg?v=1784072412987",
+   "assets/img/products/cana-fiend-mills-topload-10.jpg?v=1784072414581",
+   "assets/img/products/cana-fiend-mills-topload-11.jpg?v=1784072416122",
+   "assets/img/products/cana-fiend-mills-topload-12.jpg?v=1784072417456"
+  ],
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Morada",
+    "units": 1
+   },
+   {
+    "label": "Dorada",
+    "units": 1
+   },
+   {
+    "label": "Negro",
+    "units": 1
+   }
+  ],
+  "slug": "cana-fiend-mills-topload",
+  "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486"
+ },
+ {
   "n": "Caña Shadow Ravage - TopLoad",
   "brand": "Shadow",
   "cat": "stems",
