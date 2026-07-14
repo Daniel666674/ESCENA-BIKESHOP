@@ -526,7 +526,7 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
   function cardHTML(p){
     var wPrefix = (window.EscenaWholesale && window.EscenaWholesale.isActive()) ? "🏷️ PEDIDO MAYORISTA (15% aplicado)\n" : "";
     var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
-    var hasDetailPage = p.cat !== "marcos" && p.img.indexOf("frame-placeholder") === -1;
+    var hasDetailPage = p.img.indexOf("frame-placeholder") === -1;
     var href = "producto/" + slugOf(p) + ".html";
     var agotado = (typeof p.units === "number" && p.units <= 0);
     var tagHTML = agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+p.tag+'</span>' : '');
