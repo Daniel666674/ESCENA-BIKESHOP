@@ -9,12 +9,13 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "tag": "Nuevo!",
   "imgs": [
-   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784067738441",
-   "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784067741649",
-   "assets/img/products/marco-fitbikeco-str-negro-3.jpg?v=1784067743450",
-   "assets/img/products/marco-fitbikeco-str-negro-4.jpg?v=1784067745216",
-   "assets/img/products/marco-fitbikeco-str-negro-5.jpg?v=1784067747001",
-   "assets/img/products/marco-fitbikeco-str-negro-6.jpg?v=1784067749609"
+   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784067916412",
+   "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784067918547",
+   "assets/img/products/marco-fitbikeco-str-negro-3.jpg?v=1784067920230",
+   "assets/img/products/marco-fitbikeco-str-negro-4.jpg?v=1784067922518",
+   "assets/img/products/marco-fitbikeco-str-negro-5.jpg?v=1784067926343",
+   "assets/img/products/marco-fitbikeco-str-negro-6.jpg?v=1784067929321",
+   "assets/img/products/marco-fitbikeco-str-negro-7.jpg?v=1784067933081"
   ],
   "sizes": [
    {
@@ -23,7 +24,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-fitbikeco-str-negro",
-  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784067738441"
+  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784067916412"
  },
  {
   "n": "Marco Cult Biggie Jaume Sintes Hammertone",
