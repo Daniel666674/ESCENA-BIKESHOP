@@ -308,6 +308,10 @@ window.ESCENA_PRODUCTS = [
   "slug": "odyssey-buje-cassette-negro",
   "sku": "ODYSSEY-BUJE-CASSETTE-NEGRO",
   "units": 1,
+  "imgs": [
+   "assets/img/products/odyssey-buje-cassette-negro.jpg",
+   "assets/img/products/odyssey-buje-cassette-negro-2.jpg?v=1784026964585"
+  ],
   "img": "assets/img/products/odyssey-buje-cassette-negro.jpg"
  },
  {
