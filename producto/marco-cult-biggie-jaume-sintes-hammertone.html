@@ -120,6 +120,8 @@
     .pdp-variant-options button { background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .8rem; font-weight: 600; color: var(--ink); cursor: pointer; font-family: inherit; transition: all .15s; }
     .pdp-variant-options button:hover { border-color: var(--ink); }
     .pdp-variant-options button.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .pdp-variant-options button:disabled { opacity: .4; cursor: not-allowed; text-decoration: line-through; }
+    .pdp-variant-options button:disabled:hover { border-color: var(--line); }
     .pdp-actions { display: flex; flex-direction: column; gap: .7rem; max-width: 340px; margin-bottom: 1.6rem; }
     .pdp-actions.is-agotado .add-cart-btn, .pdp-actions.is-agotado .pdp-qty { opacity: .5; }
     .add-cart-btn:disabled { cursor: not-allowed; }
@@ -298,13 +300,13 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 
 <div class="pdp">
   <div>
-    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-2.jpg?v=1784061950852&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-3.jpg?v=1784061955010&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-4.jpg?v=1784061958723&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-5.jpg?v=1784061968324&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-6.jpg?v=1784061976283&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-7.jpg?v=1784061981933&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-8.jpg?v=1784061986562&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-9.jpg?v=1784061991001&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784061998108&quot;]">
+    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-2.jpg?v=1784061950852&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-3.jpg?v=1784061955010&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-4.jpg?v=1784061958723&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-5.jpg?v=1784061968324&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-6.jpg?v=1784061976283&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-7.jpg?v=1784061981933&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-8.jpg?v=1784061986562&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-9.jpg?v=1784061991001&quot;,&quot;../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784087359163&quot;]">
       <span class="tag">Edición Especial</span>
       <img id="pdpMainImg" src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210" alt="Marco Cult Biggie Jaume Sintes Hammertone - Cult Biggie Jaume Sintes Hammertone BMX" width="700" height="700" />
       <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Ampliar imagen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
       <div class="pdp-dots" id="pdpDots"><button type="button" data-i="0" class="is-active" aria-label="Foto 1"></button><button type="button" data-i="1" aria-label="Foto 2"></button><button type="button" data-i="2" aria-label="Foto 3"></button><button type="button" data-i="3" aria-label="Foto 4"></button><button type="button" data-i="4" aria-label="Foto 5"></button><button type="button" data-i="5" aria-label="Foto 6"></button><button type="button" data-i="6" aria-label="Foto 7"></button><button type="button" data-i="7" aria-label="Foto 8"></button><button type="button" data-i="8" aria-label="Foto 9"></button><button type="button" data-i="9" aria-label="Foto 10"></button></div>
     </div>
-    <div class="pdp-thumbs" id="pdpThumbs"><button type="button" data-i="0" class="is-active" aria-label="Ver foto 1"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 1" loading="lazy" /></button><button type="button" data-i="1" aria-label="Ver foto 2"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-2.jpg?v=1784061950852" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 2" loading="lazy" /></button><button type="button" data-i="2" aria-label="Ver foto 3"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-3.jpg?v=1784061955010" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 3" loading="lazy" /></button><button type="button" data-i="3" aria-label="Ver foto 4"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-4.jpg?v=1784061958723" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 4" loading="lazy" /></button><button type="button" data-i="4" aria-label="Ver foto 5"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-5.jpg?v=1784061968324" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 5" loading="lazy" /></button><button type="button" data-i="5" aria-label="Ver foto 6"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-6.jpg?v=1784061976283" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 6" loading="lazy" /></button><button type="button" data-i="6" aria-label="Ver foto 7"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-7.jpg?v=1784061981933" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 7" loading="lazy" /></button><button type="button" data-i="7" aria-label="Ver foto 8"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-8.jpg?v=1784061986562" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 8" loading="lazy" /></button><button type="button" data-i="8" aria-label="Ver foto 9"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-9.jpg?v=1784061991001" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 9" loading="lazy" /></button><button type="button" data-i="9" aria-label="Ver foto 10"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784061998108" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 10" loading="lazy" /></button></div>
+    <div class="pdp-thumbs" id="pdpThumbs"><button type="button" data-i="0" class="is-active" aria-label="Ver foto 1"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 1" loading="lazy" /></button><button type="button" data-i="1" aria-label="Ver foto 2"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-2.jpg?v=1784061950852" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 2" loading="lazy" /></button><button type="button" data-i="2" aria-label="Ver foto 3"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-3.jpg?v=1784061955010" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 3" loading="lazy" /></button><button type="button" data-i="3" aria-label="Ver foto 4"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-4.jpg?v=1784061958723" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 4" loading="lazy" /></button><button type="button" data-i="4" aria-label="Ver foto 5"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-5.jpg?v=1784061968324" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 5" loading="lazy" /></button><button type="button" data-i="5" aria-label="Ver foto 6"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-6.jpg?v=1784061976283" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 6" loading="lazy" /></button><button type="button" data-i="6" aria-label="Ver foto 7"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-7.jpg?v=1784061981933" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 7" loading="lazy" /></button><button type="button" data-i="7" aria-label="Ver foto 8"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-8.jpg?v=1784061986562" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 8" loading="lazy" /></button><button type="button" data-i="8" aria-label="Ver foto 9"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-9.jpg?v=1784061991001" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 9" loading="lazy" /></button><button type="button" data-i="9" aria-label="Ver foto 10"><img src="../assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784087359163" alt="Marco Cult Biggie Jaume Sintes Hammertone foto 10" loading="lazy" /></button></div>
   </div>
   <div class="pdp-info">
     <span class="brand-lbl">Cult Biggie Jaume Sintes Hammertone</span>
@@ -341,7 +343,15 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 <div class="related">
   <h2>También te puede gustar</h2>
   <div class="related-grid">
-    <a class="r-card" href="marco-cult-biggie-hammertone.html">
+    <a class="r-card" href="marco-fitbikeco-str-negro.html">
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Nuevo!</span><img src="../assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011" alt="Marco Fitbikeco STR Negro - Fitbikeco BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Fitbikeco</span>
+          <h3>Marco Fitbikeco STR Negro</h3>
+          <div class="price">$650.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="marco-cult-biggie-hammertone.html">
         <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Nuevo</span><img src="../assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779" alt="Marco Cult Biggie Hammertone - Cult BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Cult</span>
@@ -358,19 +368,11 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
         </div>
       </a>
 <a class="r-card" href="fate-namaste-negro.html">
-        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Nacional</span><img src="../assets/img/products/marco_fate_negro_namaste_negro.jpeg" alt="Fate Namaste Negro - Fate BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Nacional</span><img src="../assets/img/products/fate-namaste-negro.jpg?v=1784087360390" alt="Fate Namaste Negro - Fate BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Fate</span>
           <h3>Fate Namaste Negro</h3>
           <div class="price">$890.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="total-marco-2075-blanco-azul.html">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787" alt="Total BMX Marco 20.75&quot; - Total BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Total</span>
-          <h3>Total BMX Marco 20.75&quot;</h3>
-          <div class="price">$1.450.000 COP</div>
         </div>
       </a>
   </div>
@@ -576,28 +578,50 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   var addCartBtn = pdpActions ? pdpActions.querySelector(".add-cart-btn") : null;
   var unitsAvail = parseInt((stockHint && stockHint.getAttribute("data-units")) || "12", 10);
   if (isNaN(unitsAvail)) unitsAvail = 12;
+
+  // Applies a stock count to the whole buy UI — called once at load, and again
+  // whenever a real (inventory-backed) size button is picked, since each size
+  // has its own count. qtyDec/qtyInc/qtyInput below read `unitsAvail` through
+  // closure, so mutating it here is enough to keep them in sync.
+  function applyStock(units) {
+    unitsAvail = units;
+    if (stockHint) stockHint.setAttribute("data-units", String(unitsAvail));
+    if (addCartBtn) addCartBtn.setAttribute("data-units", String(unitsAvail));
+    if (qtyInput) qtyInput.max = String(unitsAvail);
+    if (stockHint) stockHint.classList.remove("is-low", "is-out");
+    if (unitsAvail <= 0) {
+      if (pdpActions) pdpActions.classList.add("is-agotado");
+      if (addCartBtn) { addCartBtn.disabled = true; addCartBtn.textContent = "Agotado"; }
+      if (qtyInput) { qtyInput.value = "1"; qtyInput.disabled = true; if (qtyDec) qtyDec.disabled = true; if (qtyInc) qtyInc.disabled = true; }
+      if (stockHint) { stockHint.textContent = "Agotado"; stockHint.classList.add("is-out"); }
+    } else {
+      if (pdpActions) pdpActions.classList.remove("is-agotado");
+      if (addCartBtn) { addCartBtn.disabled = false; addCartBtn.textContent = "Agregar al carrito"; }
+      if (qtyInput) {
+        qtyInput.disabled = false; if (qtyDec) qtyDec.disabled = false; if (qtyInc) qtyInc.disabled = false;
+        qtyInput.value = String(Math.min(Math.max(parseInt(qtyInput.value, 10) || 1, 1), unitsAvail));
+      }
+      if (stockHint) {
+        if (unitsAvail === 1) { stockHint.textContent = "¡Última unidad!"; stockHint.classList.add("is-low"); }
+        else stockHint.textContent = "";
+      }
+    }
+  }
+
   // Prefer the live catalog's stock over the value baked into this page at
   // publish time — a sale (or any stock edit) must be reflected immediately,
   // not just the next time this specific page happens to get regenerated.
+  var liveProduct = null;
   if (window.ESCENA_PRODUCTS) {
-    var liveProduct = window.ESCENA_PRODUCTS.filter(function (x) { return x.slug === "marco-cult-biggie-jaume-sintes-hammertone"; })[0];
-    if (liveProduct && typeof liveProduct.units === "number") unitsAvail = liveProduct.units;
+    liveProduct = window.ESCENA_PRODUCTS.filter(function (x) { return x.slug === "marco-cult-biggie-jaume-sintes-hammertone"; })[0] || null;
+    var hasRealVariant = liveProduct && ((liveProduct.sizes && liveProduct.sizes.length > 1) || (liveProduct.colors && liveProduct.colors.length > 1 && !(liveProduct.sizes && liveProduct.sizes.length > 1)));
+    if (liveProduct && typeof liveProduct.units === "number" && !hasRealVariant) {
+      unitsAvail = liveProduct.units;
+    }
   }
-  if (stockHint) stockHint.setAttribute("data-units", String(unitsAvail));
-  if (addCartBtn) addCartBtn.setAttribute("data-units", String(unitsAvail));
-  if (qtyInput) qtyInput.max = String(unitsAvail);
+  applyStock(unitsAvail);
 
-  if (unitsAvail <= 0) {
-    if (pdpActions) pdpActions.classList.add("is-agotado");
-    if (addCartBtn) { addCartBtn.disabled = true; addCartBtn.textContent = "Agotado"; }
-    if (qtyInput) { qtyInput.disabled = true; if (qtyDec) qtyDec.disabled = true; if (qtyInc) qtyInc.disabled = true; }
-    if (stockHint) { stockHint.textContent = "Agotado"; stockHint.classList.add("is-out"); }
-  } else if (unitsAvail === 1 && stockHint) {
-    stockHint.textContent = "¡Última unidad!";
-    stockHint.classList.add("is-low");
-  }
-
-  if (qtyInput && unitsAvail > 0) {
+  if (qtyInput) {
     qtyDec.addEventListener("click", function(){ qtyInput.value = Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1); });
     qtyInc.addEventListener("click", function(){ qtyInput.value = Math.min(unitsAvail, (parseInt(qtyInput.value, 10) || 1) + 1); });
     qtyInput.addEventListener("change", function(){
@@ -606,30 +630,77 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     });
   }
 
-  /* ---- Variant selector (LHD/RHD, crank size — category-dependent) ----
-     The actual WhatsApp message (price, wholesale discount, variant note) is
-     rebuilt by wholesale.js's refreshPDP(), the single place that owns that
-     link so it stays correct whether or not wholesale pricing is active. */
+  /* ---- Variant selector(s) ----
+     A page can have up to two independent groups: #pdpVariant (talla, or the
+     legacy cosmetic LHD/RHD selector) and #pdpVariantColor (color). Each is
+     either cosmetic (tags the WhatsApp message only) or real inventory-backed
+     (buttons carry data-units — picking one re-caps the qty stepper via
+     applyStock() using that option's own stock, preferring the live catalog's
+     current count over what was baked in at publish time). A product tracks
+     real stock through at most one group at a time (see isColorReal in
+     admin.html), so at most one group here ever has data-units. The combined
+     selection across all groups feeds the cart's data-variant (joined with
+     " / "); the WhatsApp message itself is rebuilt by wholesale.js's
+     refreshPDP(), the single place that owns that link so it stays correct
+     whether or not wholesale pricing is active. */
   (function () {
-    var group = document.getElementById("pdpVariant");
-    if (!group) return;
+    var GROUP_LIVE_KEY = { pdpVariant: "sizes", pdpVariantColor: "colors" };
+    var groups = Array.prototype.slice.call(document.querySelectorAll(".pdp-variant"));
+    if (!groups.length) return;
+    var selected = {};
 
-    function applyValue(val) {
-      group.querySelectorAll("button").forEach(function (b) {
-        b.classList.toggle("is-active", b.getAttribute("data-value") === val);
-      });
-      if (addCartBtn) addCartBtn.setAttribute("data-variant", val);
-      if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
+    function combinedVariant() {
+      return groups.map(function (g) { return selected[g.id]; }).filter(Boolean).join(" / ");
     }
 
-    group.addEventListener("click", function (e) {
-      var btn = e.target.closest("button[data-value]");
-      if (!btn) return;
-      applyValue(btn.getAttribute("data-value"));
-    });
+    groups.forEach(function (group) {
+      var isRealSize = !!group.querySelector("button[data-units]");
+      var liveKey = GROUP_LIVE_KEY[group.id];
+      var liveList = (liveProduct && liveKey) ? liveProduct[liveKey] : null;
 
-    var firstBtn = group.querySelector("button[data-value]");
-    if (firstBtn) applyValue(firstBtn.getAttribute("data-value"));
+      // Sync each button's stock/disabled state from the live catalog — an
+      // option could have sold out (or come back) since this page was last
+      // generated, independent of any full page regeneration.
+      if (isRealSize && liveList) {
+        group.querySelectorAll("button[data-value]").forEach(function (b) {
+          var live = liveList.filter(function (s) { return s.label === b.getAttribute("data-value"); })[0];
+          if (!live) return;
+          b.setAttribute("data-units", String(live.units || 0));
+          b.disabled = (live.units || 0) <= 0;
+        });
+      }
+
+      function applyValue(val) {
+        group.querySelectorAll("button").forEach(function (b) {
+          b.classList.toggle("is-active", b.getAttribute("data-value") === val);
+        });
+        selected[group.id] = val;
+        if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
+        if (isRealSize) {
+          var units = null;
+          if (liveList) {
+            var live = liveList.filter(function (s) { return s.label === val; })[0];
+            if (live) units = live.units || 0;
+          }
+          if (units === null) {
+            var btn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+            units = btn ? (parseInt(btn.getAttribute("data-units"), 10) || 0) : 0;
+          }
+          applyStock(units);
+        }
+        if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
+      }
+
+      group.addEventListener("click", function (e) {
+        var btn = e.target.closest("button[data-value]");
+        if (!btn || btn.disabled) return;
+        applyValue(btn.getAttribute("data-value"));
+      });
+
+      var preferred = group.querySelector("button.is-active[data-value]:not(:disabled)");
+      var firstBtn = preferred || group.querySelector("button[data-value]:not(:disabled)") || group.querySelector("button[data-value]");
+      if (firstBtn) applyValue(firstBtn.getAttribute("data-value"));
+    });
   })();
 </script>
 <script>var ESCENA_ROOT = "../";</script>
