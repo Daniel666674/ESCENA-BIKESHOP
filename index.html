@@ -150,6 +150,10 @@
     /* Row 1: brand + actions */
     .header-brand-row { position: relative; display: flex; align-items: center; justify-content: center; padding: .95rem 1.5rem .55rem; }
     .brand { display: inline-flex; flex-direction: column; align-items: center; gap: .18rem; text-decoration: none; }
+    /* Optically re-center the brand: the emblem sits left of the wordmark, so the
+       group's visual weight lands right of true center. Nudge it left on desktop
+       (mobile keeps the burger on the left, which already balances it). */
+    @media (min-width: 981px) { .brand { transform: translateX(-28px); } }
     .brand-logo-row { display: flex; align-items: center; gap: .7rem; }
     .brand img { width: 48px; height: 48px; border-radius: 50%; background: #fff; border: 1px solid var(--line); }
     .brand .name { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: 2.1rem; letter-spacing: .1em; line-height: 1; }
