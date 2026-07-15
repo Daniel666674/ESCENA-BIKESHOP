@@ -338,7 +338,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
 <div class="pdp">
   <div>
     <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/mutany-savage-bielas-negro.jpg&quot;]">
-      <span class="tag">Top</span>
+      <span class="tag">Nacional</span>
       <img id="pdpMainImg" src="../assets/img/products/mutany-savage-bielas-negro.jpg" alt="Bielas Mutanty Savage 170MM - Mutanty BMX" width="700" height="700" />
       <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Ampliar imagen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
       <div class="pdp-dots" id="pdpDots"></div>
@@ -387,7 +387,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   <h2>También te puede gustar</h2>
   <div class="related-grid">
     <a class="r-card" href="fiend-bielas-negro.html">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/fiend-bielas-negro.jpg" alt="Bielas Fiend Segment Negras 165MM - Fiend BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Top</span><img src="../assets/img/products/fiend-bielas-negro.jpg" alt="Bielas Fiend Segment Negras 165MM - Fiend BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Fiend</span>
           <h3>Bielas Fiend Segment Negras 165MM</h3>
@@ -395,7 +395,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
         </div>
       </a>
 <a class="r-card" href="cult-bielas-negro.html">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/cult-bielas-negro.jpg" alt="Bielas Cult Hawk 165 - Cult BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Top 🔥</span><img src="../assets/img/products/cult-bielas-negro.jpg" alt="Bielas Cult Hawk 165 - Cult BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Cult</span>
           <h3>Bielas Cult Hawk 165</h3>
@@ -481,6 +481,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   /* ---- Mobile nav ---- */
   var burger = document.getElementById("burger"), nav = document.getElementById("nav");
   burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
+  nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
 
   /* ---- Category submenu accordion (mobile) ---- */
   document.querySelectorAll(".nav-drop-toggle").forEach(function(btn){
@@ -491,7 +492,6 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
       if (menu) menu.classList.toggle("open", !open);
     });
   });
-  nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
 
   /* ---- Newsletter popup (once per browser session) ---- */
   var nlOverlay = document.getElementById("nlOverlay");
@@ -544,6 +544,10 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   }
 
   /* ---- Product photo gallery (slides + zoom) ---- */
+  // Reassigned by pdpGallery() below (if a gallery exists on this page) to
+  // actually filter the thumbnails/dots to a color's photos; called by the
+  // color variant selector further down. No-op otherwise.
+  var pdpFilterGallery = function(){};
   (function pdpGallery(){
     var wrap = document.getElementById("pdpGallery");
     if (!wrap) return;
@@ -563,6 +567,22 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
       var thumbs = thumbsWrap ? thumbsWrap.querySelectorAll("button") : [];
       for (var t = 0; t < thumbs.length; t++) thumbs[t].classList.toggle("is-active", t === idx);
     }
+
+    // Shows only the given photo indices (thumbs + dots); null/empty = show
+    // all. Jumps the main image to the first allowed index if the current one
+    // isn't in the new set.
+    pdpFilterGallery = function(indices){
+      var allow = (indices && indices.length) ? indices : null;
+      [dotsWrap, thumbsWrap].forEach(function (list) {
+        if (!list) return;
+        var btns = list.querySelectorAll("button[data-i]");
+        for (var k = 0; k < btns.length; k++) {
+          var i2 = parseInt(btns[k].getAttribute("data-i"), 10);
+          btns[k].style.display = (!allow || allow.indexOf(i2) !== -1) ? "" : "none";
+        }
+      });
+      if (allow && allow.indexOf(idx) === -1) show(allow[0]);
+    };
 
     if (imgs.length > 1) {
       if (dotsWrap) {
@@ -711,6 +731,15 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
       var liveKey = GROUP_LIVE_KEY[group.id];
       var liveList = (liveProduct && liveKey) ? liveProduct[liveKey] : null;
 
+      // Color group only: maps a color label to the subset of gallery photo
+      // indices that show that color (baked in at publish time from the
+      // admin panel's per-photo color tags). Absent when no photo was tagged.
+      var imgMap = null;
+      if (group.id === "pdpVariantColor") {
+        var rawImgMap = group.getAttribute("data-img-map");
+        if (rawImgMap) { try { imgMap = JSON.parse(rawImgMap); } catch (e) { imgMap = null; } }
+      }
+
       // Sync each button's stock/disabled state from the live catalog — an
       // option could have sold out (or come back) since this page was last
       // generated, independent of any full page regeneration.
@@ -741,6 +770,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
           }
           applyStock(units);
         }
+        if (imgMap) pdpFilterGallery(imgMap[val] || null);
         if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
       }
 
