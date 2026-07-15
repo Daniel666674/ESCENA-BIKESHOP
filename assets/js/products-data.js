@@ -1,5 +1,73 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Coraza Innova Tire 20 x 2.40",
+  "brand": "Innova",
+  "cat": "corazas",
+  "spec": "20 x 2.40”",
+  "price": 80000,
+  "sku": "CORAZA-INNOVA-TIRE-20-X-2-40",
+  "units": 8,
+  "tag": "Nacional",
+  "imgs": [
+   "assets/img/products/coraza-innova-tire-20-x-2-40.jpg?v=1784157072000",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-2.jpg?v=1784157073737",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-3.jpg?v=1784157075872",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-4.jpg?v=1784157077937",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-5.jpg?v=1784157080542",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-6.jpg?v=1784157082277",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-7.jpg?v=1784157087859",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-8.jpg?v=1784157091309",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-9.jpg?v=1784157093598",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-10.jpg?v=1784157095792",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-11.jpg?v=1784157099437",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-12.jpg?v=1784157101441",
+   "assets/img/products/coraza-innova-tire-20-x-2-40-13.jpg?v=1784157104156"
+  ],
+  "colors": [
+   {
+    "label": "Camuflada Negro Gris",
+    "units": 2
+   },
+   {
+    "label": "Camuflada Lila",
+    "units": 2
+   },
+   {
+    "label": "Camuflada Gris",
+    "units": 2
+   },
+   {
+    "label": "Camuflada Azul",
+    "units": 2
+   }
+  ],
+  "imgColorMap": {
+   "Camuflada Negro Gris": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "Camuflada Lila": [
+    4,
+    5,
+    6
+   ],
+   "Camuflada Gris": [
+    7,
+    8,
+    9
+   ],
+   "Camuflada Azul": [
+    10,
+    11,
+    12
+   ]
+  },
+  "slug": "coraza-innova-tire-20-x-2-40",
+  "img": "assets/img/products/coraza-innova-tire-20-x-2-40.jpg?v=1784157072000"
+ },
+ {
   "n": "Caña Volume Bison Negra - FrontLoad",
   "brand": "Volume",
   "cat": "stems",
