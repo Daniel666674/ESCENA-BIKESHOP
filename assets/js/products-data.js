@@ -164,12 +164,12 @@ window.ESCENA_PRODUCTS = [
   "units": 4,
   "tag": "Top 🔥!",
   "imgs": [
+   "assets/img/products/grips-s-m-mike-hoder-3.jpg?v=1784138431279",
    "assets/img/products/grips-s-m-mike-hoder.jpg?v=1784138425397",
    "assets/img/products/grips-s-m-mike-hoder-2.jpg?v=1784138428356",
-   "assets/img/products/grips-s-m-mike-hoder-3.jpg?v=1784138431279",
    "assets/img/products/grips-s-m-mike-hoder-4.jpg?v=1784138433639",
    "assets/img/products/grips-s-m-mike-hoder-5.jpg?v=1784138435832",
-   "assets/img/products/grips-s-m-mike-hoder-6.jpg?v=1784138437959"
+   "assets/img/products/grips-s-m-mike-hoder-6.jpg?v=1784139904191"
   ],
   "colors": [
    {
@@ -182,7 +182,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "grips-s-m-mike-hoder",
-  "img": "assets/img/products/grips-s-m-mike-hoder.jpg?v=1784138425397"
+  "img": "assets/img/products/grips-s-m-mike-hoder-3.jpg?v=1784138431279"
  },
  {
   "n": "Silla Pivotal Fitbikeco Negra",
