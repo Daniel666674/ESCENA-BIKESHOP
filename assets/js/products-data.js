@@ -411,14 +411,14 @@ window.ESCENA_PRODUCTS = [
   "tag": "Nuevo",
   "slug": "volume-stem-front-load-plata",
   "sku": "VOLUME-STEM-FRONT-LOAD-PLATA",
-  "units": 12,
-  "img": "assets/img/products/volume-stem-front-load-plata.jpg",
+  "units": 1,
   "sizes": [
    {
     "label": "48mm",
-    "units": 12
+    "units": 1
    }
-  ]
+  ],
+  "img": "assets/img/products/volume-stem-front-load-plata.jpg"
  },
  {
   "n": "Caña Mutanty Savage V2",
@@ -428,14 +428,14 @@ window.ESCENA_PRODUCTS = [
   "price": 220000,
   "slug": "mutanty-savage-v2-stem-plata",
   "sku": "MUTANTY-SAVAGE-V2-STEM-PLATA",
-  "units": 12,
-  "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg",
+  "units": 1,
   "sizes": [
    {
     "label": "Única",
-    "units": 12
+    "units": 1
    }
-  ]
+  ],
+  "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg"
  },
  {
   "n": "Silla Fiend Negra",
@@ -445,7 +445,7 @@ window.ESCENA_PRODUCTS = [
   "price": 195000,
   "slug": "fiend-fiending-stem-negro",
   "sku": "FIEND-FIENDING-SILLA-NEGRO",
-  "units": 12,
+  "units": 1,
   "img": "assets/img/products/fiend-fiending-stem-negro.jpg"
  },
  {
