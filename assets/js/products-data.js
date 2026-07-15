@@ -1,5 +1,29 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Caña Volume Bison Negra - FrontLoad",
+  "brand": "Volume",
+  "cat": "stems",
+  "spec": "Alcance: 50mm",
+  "price": 330000,
+  "sku": "STEAM",
+  "units": 1,
+  "tag": "Descuento",
+  "imgs": [
+   "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322",
+   "assets/img/products/cana-volume-bison-negra-frontload-2.jpg?v=1784071885806",
+   "assets/img/products/cana-volume-bison-negra-frontload-3.jpg?v=1784071889009",
+   "assets/img/products/cana-volume-bison-negra-frontload-4.jpg?v=1784071891487"
+  ],
+  "sizes": [
+   {
+    "label": "50mm",
+    "units": 1
+   }
+  ],
+  "slug": "cana-volume-bison-negra-frontload",
+  "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322"
+ },
+ {
   "n": "Pedales Wellgo Negro",
   "brand": "Wellgo",
   "cat": "pedales",
@@ -539,7 +563,7 @@ window.ESCENA_PRODUCTS = [
   "price": 320000,
   "sku": "STEAM",
   "units": 1,
-  "tag": "Edición Especial!",
+  "tag": "Edición Especial",
   "imgs": [
    "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486",
    "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784072401934",
@@ -585,7 +609,7 @@ window.ESCENA_PRODUCTS = [
   "price": 200000,
   "sku": "STEAM",
   "units": 1,
-  "tag": "Edicion Especial 🔥!",
+  "tag": "Edicion Especial 🔥",
   "imgs": [
    "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805",
    "assets/img/products/cana-shadow-ravage-topload-2.jpg?v=1784071870336",
@@ -628,7 +652,7 @@ window.ESCENA_PRODUCTS = [
   "price": 320000,
   "sku": "STEAM",
   "units": 1,
-  "tag": "Nuevo!",
+  "tag": "Nuevo",
   "imgs": [
    "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1784071875410",
    "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1784087352916",
@@ -653,7 +677,7 @@ window.ESCENA_PRODUCTS = [
   "price": 330000,
   "sku": "STEAM",
   "units": 1,
-  "tag": "Descuento 💸!",
+  "tag": "Descuento 💸",
   "imgs": [
    "assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954",
    "assets/img/products/cana-volume-bison-frontload-2.jpg?v=1784069578394",
@@ -695,7 +719,7 @@ window.ESCENA_PRODUCTS = [
   "price": 650000,
   "sku": "MRC",
   "units": 1,
-  "tag": "Nuevo!",
+  "tag": "Nuevo",
   "imgs": [
    "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011",
    "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784067918547",
@@ -797,7 +821,7 @@ window.ESCENA_PRODUCTS = [
   "price": 75000,
   "sku": "PDL",
   "units": 5,
-  "tag": "Colorido 🌈!",
+  "tag": "Colorido 🌈",
   "imgs": [
    "assets/img/products/pedales-stolen.jpg?v=1784058795983",
    "assets/img/products/pedales-stolen-2.jpg?v=1784058798429",
@@ -830,6 +854,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "tag": "Top 🔥",
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784068154674"
  },
  {
@@ -840,20 +865,20 @@ window.ESCENA_PRODUCTS = [
   "price": 250000,
   "sku": "Shadow chula",
   "units": 1,
-  "tag": "TOP🔥",
+  "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105",
    "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1784053122690",
    "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583"
   ],
   "slug": "cana-shadow-chula-48mm",
-  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105",
   "sizes": [
    {
     "label": "48mm",
     "units": 1
    }
-  ]
+  ],
+  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105"
  },
  {
   "n": "Marco Cult Biggie Hammertone",
@@ -891,13 +916,14 @@ window.ESCENA_PRODUCTS = [
   "sku": "S&MENDURO40",
   "units": 2,
   "slug": "cana-s-m-enduro-40mm-negra",
-  "img": "assets/img/products/cana-s-m-enduro-40mm-negra.jpg",
   "sizes": [
    {
     "label": "40mm",
     "units": 2
    }
-  ]
+  ],
+  "tag": "Nuevo",
+  "img": "assets/img/products/cana-s-m-enduro-40mm-negra.jpg"
  },
  {
   "n": "Tenedor Cult Sect V4 Cromado 18MM",
@@ -908,6 +934,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 1,
   "slug": "tenedor-cult-sect-v4-cromado-18mm",
+  "tag": "Nuev",
   "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg"
  },
  {
@@ -936,6 +963,7 @@ window.ESCENA_PRODUCTS = [
   "slug": "fiend-fiending-stem-negro",
   "sku": "FIEND-FIENDING-SILLA-NEGRO",
   "units": 1,
+  "tag": "Nacional",
   "img": "assets/img/products/fiend-fiending-stem-negro.jpg"
  },
  {
@@ -944,7 +972,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "bielas",
   "spec": "Cromoly · 48 spline · 170mm · Negro",
   "price": 590000,
-  "tag": "Top",
+  "tag": "Nacional",
   "weight": 1.6,
   "slug": "mutany-savage-bielas-negro",
   "sku": "MUTANY-SAVAGE-BIELAS-NEGRO",
@@ -975,13 +1003,14 @@ window.ESCENA_PRODUCTS = [
   "slug": "fiend-bielas-negro",
   "sku": "FIEND-BIELAS-NEGRO",
   "units": 1,
-  "img": "assets/img/products/fiend-bielas-negro.jpg",
   "sizes": [
    {
     "label": "165mm",
     "units": 1
    }
-  ]
+  ],
+  "tag": "Top",
+  "img": "assets/img/products/fiend-bielas-negro.jpg"
  },
  {
   "n": "Bielas Cult Hawk 165",
@@ -993,13 +1022,14 @@ window.ESCENA_PRODUCTS = [
   "slug": "cult-bielas-negro",
   "sku": "CULT-BIELAS-NEGRO",
   "units": 1,
-  "img": "assets/img/products/cult-bielas-negro.jpg",
   "sizes": [
    {
     "label": "165mm",
     "units": 1
    }
-  ]
+  ],
+  "tag": "Top 🔥",
+  "img": "assets/img/products/cult-bielas-negro.jpg"
  },
  {
   "n": "Éclat Trippin Rin",
@@ -1010,6 +1040,7 @@ window.ESCENA_PRODUCTS = [
   "slug": "eclat-trippin-rin-negro",
   "sku": "ECLAT-TRIPPIN-RIN-NEGRO",
   "units": 12,
+  "tag": "Top 🔥",
   "img": "assets/img/products/eclat-trippin-rin-negro.jpg"
  },
  {
@@ -1021,6 +1052,7 @@ window.ESCENA_PRODUCTS = [
   "slug": "cult-sillin-cuadros",
   "sku": "CULT-SILLIN-CUADROS",
   "units": 12,
+  "tag": "Edición Especial",
   "img": "assets/img/products/cult-sillin-cuadros.jpg"
  },
  {
@@ -1039,6 +1071,7 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
+  "tag": "Top 🔥",
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728"
  },
  {
@@ -1057,6 +1090,7 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
+  "tag": "Top 🔥",
   "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495"
  },
  {
@@ -1075,6 +1109,7 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
+  "tag": "Top 🔥",
   "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784083427771"
  },
  {
@@ -2284,13 +2319,14 @@ window.ESCENA_PRODUCTS = [
   ],
   "weight": 2.15,
   "sku": "TOTAL-MARCO-2075-BLANCO-AZUL",
-  "units": 1,
+  "units": 12,
   "sizes": [
    {
     "label": "20.75\"",
-    "units": 1
+    "units": 12
    }
   ],
+  "tag": "Nuevo",
   "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
  },
  {
