@@ -33,4 +33,4 @@ Allow: /
 Disallow: /admin.html
 Disallow: /producto/_template.html
 
-Sitemap: https://escenabikeshop.com/sitemap.xml
+Sitemap: https://escenabmx.com/sitemap.xml
