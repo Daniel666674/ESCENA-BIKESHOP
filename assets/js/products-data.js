@@ -189,8 +189,12 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "grips-s-m-mike-hoder",
   "imgColorMap": {
+   "Negro": [
+    0,
+    1,
+    2
+   ],
    "Morado": [
-    2,
     3,
     4,
     5
