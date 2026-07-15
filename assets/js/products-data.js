@@ -2014,7 +2014,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/llave-y-roja.jpg"
  },
  {
-  "n": "Cult Biggie Jaime Sintes Hammertone Negro",
+  "n": "Cult 25 Short Industrial",
   "slug": "cult-biggie-jaime-sintes-hammertone-negro",
   "brand": "Cult",
   "cat": "marcos",
@@ -2026,25 +2026,25 @@ window.ESCENA_PRODUCTS = [
    "street"
   ],
   "weight": 2.05,
-  "sku": "CULT-BIGGIE-JAIME-SINTES-HAMMERTONE-NEGRO",
+  "sku": "CULT-SHORT",
   "units": 1,
   "imgs": [
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1784060861700",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-3.jpg?v=1784060863489",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-3.jpg?v=1784150822577",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-4.jpg?v=1784060866186",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-5.jpg?v=1784060868553",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-6.jpg?v=1784060871314",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-7.jpg?v=1784060874032",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-8.jpg?v=1784060881652"
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-8.jpg?v=1784150824939"
   ],
-  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068",
   "sizes": [
    {
     "label": "20.5\"",
     "units": 1
    }
-  ]
+  ],
+  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068"
  },
  {
   "n": "Fate Namaste Negro",
