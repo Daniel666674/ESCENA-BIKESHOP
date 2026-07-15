@@ -459,13 +459,21 @@ window.ESCENA_PRODUCTS = [
   "slug": "mutany-savage-bielas-negro",
   "sku": "MUTANY-SAVAGE-BIELAS-NEGRO",
   "units": 1,
-  "img": "assets/img/products/mutany-savage-bielas-negro.jpg",
   "sizes": [
    {
     "label": "170mm",
     "units": 1
+   },
+   {
+    "label": "165mm",
+    "units": 0
+   },
+   {
+    "label": "160mm",
+    "units": 0
    }
-  ]
+  ],
+  "img": "assets/img/products/mutany-savage-bielas-negro.jpg"
  },
  {
   "n": "Bielas Fiend Segment Negras 165MM",
