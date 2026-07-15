@@ -2246,36 +2246,39 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/federal-tornillos-negro.jpg"
  },
  {
-  "n": "Poste Negro",
-  "brand": "",
+  "n": "Poste GW Extralargo Negro Recto",
+  "brand": "GW",
   "cat": "tijas",
   "spec": "Aluminio · 25.4mm · Negro",
   "price": 75000,
   "slug": "tija-negra-01",
   "sku": "TIJA-NEGRA-01",
   "units": 12,
+  "tag": "Nacional",
   "img": "assets/img/products/tija-negra-01.jpg"
  },
  {
-  "n": "Poste Negro Recto",
-  "brand": "",
+  "n": "Poste Colony Negro Recto",
+  "brand": "Colony",
   "cat": "tijas",
   "spec": "Aluminio · 25.4mm · Negro",
   "price": 75000,
   "slug": "tija-negra-02",
   "sku": "TIJA-NEGRA-02",
-  "units": 12,
+  "units": 3,
+  "tag": "Top 🔥",
   "img": "assets/img/products/tija-negra-02.jpg"
  },
  {
-  "n": "Poste Negro Curvo",
-  "brand": "",
+  "n": "Poste Eighties Negro Recto",
+  "brand": "Eighties",
   "cat": "tijas",
   "spec": "Aluminio · 25.4mm · Negro",
   "price": 78000,
   "slug": "tija-negra-curva",
   "sku": "TIJA-NEGRA-CURVA",
   "units": 12,
+  "tag": "Top 🔥",
   "img": "assets/img/products/tija-negra-curva.jpg"
  },
  {
