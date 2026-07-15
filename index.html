@@ -175,10 +175,11 @@
     .world-tab.is-active { color: var(--ink); border-bottom-color: var(--gold); }
     .world-sep { width: 1px; height: 15px; background: var(--line); }
 
-    /* Row 3: category bar (dark band) */
-    header.site-header .nav-links { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .1rem; background: var(--ink); padding: 0 1rem; }
-    header.site-header .nav-links a { color: rgba(255,255,255,.82); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; padding: .85rem .95rem; border-radius: 0; transition: color .2s, background .2s; }
-    header.site-header .nav-links a:hover, header.site-header .nav-links a.active { color: #fff; background: rgba(255,255,255,.13); }
+    /* Row 3: category bar (white band) */
+    header.site-header .nav-links { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .1rem; background: #fff; border-top: 1px solid var(--line); padding: 0 1rem; }
+    header.site-header .nav-links a { color: var(--ink); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; padding: .85rem .95rem; border-radius: 0; border-bottom: 2.5px solid transparent; transition: color .2s, background .2s, border-color .2s; }
+    header.site-header .nav-links a:hover { background: var(--panel); }
+    header.site-header .nav-links a.active { color: var(--ink); border-bottom-color: var(--gold); }
 
     /* Category dropdown ("Partes") */
     .nav-drop { position: relative; }
@@ -206,14 +207,14 @@
         max-height: calc(100vh - 100px); overflow-y: auto; -webkit-overflow-scrolling: touch;
       }
       header.site-header .nav-links.open { transform: translateY(0); }
-      header.site-header .nav-links > a, .nav-drop > a { width: 100%; padding: 1.05rem .2rem !important; border-bottom: 1px solid rgba(255,255,255,.1); font-size: .9rem !important; }
+      header.site-header .nav-links > a, .nav-drop > a { width: 100%; padding: 1.05rem .2rem !important; border-bottom: 1px solid var(--line); font-size: .9rem !important; }
       .nav-drop { width: 100%; }
       .nav-drop > a { padding-right: 3rem !important; }
       .nav-drop > a .caret { display: none; }
       .nav-drop-toggle {
         display: flex; align-items: center; justify-content: center;
         position: absolute; top: 0; right: 0; width: 52px; height: 3.4rem;
-        background: none; border: none; padding: 0; margin: 0; cursor: pointer; color: rgba(255,255,255,.82);
+        background: none; border: none; padding: 0; margin: 0; cursor: pointer; color: var(--ink);
       }
       .nav-drop-toggle .caret { display: inline-block; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); transition: transform .25s ease; }
       .nav-drop-toggle[aria-expanded="true"] .caret { transform: rotate(-135deg); }
@@ -226,9 +227,9 @@
       .nav-drop-menu a {
         display: block; border-bottom: none !important; background: none !important;
         padding: .6rem .2rem !important; font-size: .8rem !important; letter-spacing: .04em !important;
-        text-transform: uppercase !important; font-weight: 700 !important; color: rgba(255,255,255,.82) !important;
+        text-transform: uppercase !important; font-weight: 700 !important; color: var(--ink) !important;
       }
-      .nav-drop-menu a:hover, .nav-drop-menu a:active { color: #fff !important; }
+      .nav-drop-menu a:hover, .nav-drop-menu a:active { color: var(--muted) !important; }
     }
     @media (max-width: 480px) {
       .brand img { width: 40px; height: 40px; }
