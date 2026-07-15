@@ -120,6 +120,8 @@
     .pdp-variant-options button { background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .8rem; font-weight: 600; color: var(--ink); cursor: pointer; font-family: inherit; transition: all .15s; }
     .pdp-variant-options button:hover { border-color: var(--ink); }
     .pdp-variant-options button.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .pdp-variant-options button:disabled { opacity: .4; cursor: not-allowed; text-decoration: line-through; }
+    .pdp-variant-options button:disabled:hover { border-color: var(--line); }
     .pdp-actions { display: flex; flex-direction: column; gap: .7rem; max-width: 340px; margin-bottom: 1.6rem; }
     .pdp-actions.is-agotado .add-cart-btn, .pdp-actions.is-agotado .pdp-qty { opacity: .5; }
     .add-cart-btn:disabled { cursor: not-allowed; }
@@ -335,16 +337,16 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     <span class="brand-lbl">Fiend</span>
     <h1>Silla Fiend Negra</h1>
     <div class="pdp-price">$195.000 COP</div>
-    <p class="pdp-stock-hint" id="pdpStockHint" data-units="12"></p>
+    <p class="pdp-stock-hint" id="pdpStockHint" data-units="1"></p>
     
     <div class="pdp-actions" id="pdpActions">
       <a class="btn btn-ink" id="pdpWaLink" href="https://wa.me/573107630504?text=Hola%20ESCENA%20%F0%9F%90%95%2C%20quiero%20pedir%3A%20Silla%20Fiend%20Negra%20(Fiend)%20%E2%80%94%20%24195.000%20COP.%20%C2%BFEst%C3%A1%20disponible%3F" target="_blank" rel="noopener">Pedir por WhatsApp</a>
       <div class="pdp-qty">
         <button type="button" id="qtyDec" aria-label="Reducir cantidad">&minus;</button>
-        <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="12" />
+        <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="1" />
         <button type="button" id="qtyInc" aria-label="Aumentar cantidad">+</button>
       </div>
-      <button type="button" class="add-cart-btn" data-slug="fiend-fiending-stem-negro" data-n="Silla Fiend Negra" data-brand="Fiend" data-price="195000" data-img="assets/img/products/fiend-fiending-stem-negro.jpg" data-units="12" data-variant="">Agregar al carrito</button>
+      <button type="button" class="add-cart-btn" data-slug="fiend-fiending-stem-negro" data-n="Silla Fiend Negra" data-brand="Fiend" data-price="195000" data-img="assets/img/products/fiend-fiending-stem-negro.jpg" data-units="1" data-variant="">Agregar al carrito</button>
     </div>
     <div class="pdp-share">
       <span>Compartir</span>
@@ -461,6 +463,7 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   /* ---- Mobile nav ---- */
   var burger = document.getElementById("burger"), nav = document.getElementById("nav");
   burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
+  nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
 
   /* ---- Category submenu accordion (mobile) ---- */
   document.querySelectorAll(".nav-drop-toggle").forEach(function(btn){
@@ -471,7 +474,6 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
       if (menu) menu.classList.toggle("open", !open);
     });
   });
-  nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
 
   /* ---- Newsletter popup (once per browser session) ---- */
   var nlOverlay = document.getElementById("nlOverlay");
@@ -611,28 +613,50 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
   var addCartBtn = pdpActions ? pdpActions.querySelector(".add-cart-btn") : null;
   var unitsAvail = parseInt((stockHint && stockHint.getAttribute("data-units")) || "12", 10);
   if (isNaN(unitsAvail)) unitsAvail = 12;
+
+  // Applies a stock count to the whole buy UI — called once at load, and again
+  // whenever a real (inventory-backed) size button is picked, since each size
+  // has its own count. qtyDec/qtyInc/qtyInput below read `unitsAvail` through
+  // closure, so mutating it here is enough to keep them in sync.
+  function applyStock(units) {
+    unitsAvail = units;
+    if (stockHint) stockHint.setAttribute("data-units", String(unitsAvail));
+    if (addCartBtn) addCartBtn.setAttribute("data-units", String(unitsAvail));
+    if (qtyInput) qtyInput.max = String(unitsAvail);
+    if (stockHint) stockHint.classList.remove("is-low", "is-out");
+    if (unitsAvail <= 0) {
+      if (pdpActions) pdpActions.classList.add("is-agotado");
+      if (addCartBtn) { addCartBtn.disabled = true; addCartBtn.textContent = "Agotado"; }
+      if (qtyInput) { qtyInput.value = "1"; qtyInput.disabled = true; if (qtyDec) qtyDec.disabled = true; if (qtyInc) qtyInc.disabled = true; }
+      if (stockHint) { stockHint.textContent = "Agotado"; stockHint.classList.add("is-out"); }
+    } else {
+      if (pdpActions) pdpActions.classList.remove("is-agotado");
+      if (addCartBtn) { addCartBtn.disabled = false; addCartBtn.textContent = "Agregar al carrito"; }
+      if (qtyInput) {
+        qtyInput.disabled = false; if (qtyDec) qtyDec.disabled = false; if (qtyInc) qtyInc.disabled = false;
+        qtyInput.value = String(Math.min(Math.max(parseInt(qtyInput.value, 10) || 1, 1), unitsAvail));
+      }
+      if (stockHint) {
+        if (unitsAvail === 1) { stockHint.textContent = "¡Última unidad!"; stockHint.classList.add("is-low"); }
+        else stockHint.textContent = "";
+      }
+    }
+  }
+
   // Prefer the live catalog's stock over the value baked into this page at
   // publish time — a sale (or any stock edit) must be reflected immediately,
   // not just the next time this specific page happens to get regenerated.
+  var liveProduct = null;
   if (window.ESCENA_PRODUCTS) {
-    var liveProduct = window.ESCENA_PRODUCTS.filter(function (x) { return x.slug === "fiend-fiending-stem-negro"; })[0];
-    if (liveProduct && typeof liveProduct.units === "number") unitsAvail = liveProduct.units;
+    liveProduct = window.ESCENA_PRODUCTS.filter(function (x) { return x.slug === "fiend-fiending-stem-negro"; })[0] || null;
+    var hasRealVariant = liveProduct && ((liveProduct.sizes && liveProduct.sizes.length > 1) || (liveProduct.colors && liveProduct.colors.length > 1 && !(liveProduct.sizes && liveProduct.sizes.length > 1)));
+    if (liveProduct && typeof liveProduct.units === "number" && !hasRealVariant) {
+      unitsAvail = liveProduct.units;
+    }
   }
-  if (stockHint) stockHint.setAttribute("data-units", String(unitsAvail));
-  if (addCartBtn) addCartBtn.setAttribute("data-units", String(unitsAvail));
-  if (qtyInput) qtyInput.max = String(unitsAvail);
+  applyStock(unitsAvail);
 
-  if (unitsAvail <= 0) {
-    if (pdpActions) pdpActions.classList.add("is-agotado");
-    if (addCartBtn) { addCartBtn.disabled = true; addCartBtn.textContent = "Agotado"; }
-    if (qtyInput) { qtyInput.disabled = true; if (qtyDec) qtyDec.disabled = true; if (qtyInc) qtyInc.disabled = true; }
-    if (stockHint) { stockHint.textContent = "Agotado"; stockHint.classList.add("is-out"); }
-  } else if (unitsAvail === 1 && stockHint) {
-    stockHint.textContent = "¡Última unidad!";
-    stockHint.classList.add("is-low");
-  }
-
-  if (qtyInput && unitsAvail > 0) {
+  if (qtyInput) {
     qtyDec.addEventListener("click", function(){ qtyInput.value = Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1); });
     qtyInc.addEventListener("click", function(){ qtyInput.value = Math.min(unitsAvail, (parseInt(qtyInput.value, 10) || 1) + 1); });
     qtyInput.addEventListener("change", function(){
@@ -641,30 +665,77 @@ header.top-bar .brand img { border-color: rgba(255,255,255,.22); }
     });
   }
 
-  /* ---- Variant selector (LHD/RHD, crank size — category-dependent) ----
-     The actual WhatsApp message (price, wholesale discount, variant note) is
-     rebuilt by wholesale.js's refreshPDP(), the single place that owns that
-     link so it stays correct whether or not wholesale pricing is active. */
+  /* ---- Variant selector(s) ----
+     A page can have up to two independent groups: #pdpVariant (talla, or the
+     legacy cosmetic LHD/RHD selector) and #pdpVariantColor (color). Each is
+     either cosmetic (tags the WhatsApp message only) or real inventory-backed
+     (buttons carry data-units — picking one re-caps the qty stepper via
+     applyStock() using that option's own stock, preferring the live catalog's
+     current count over what was baked in at publish time). A product tracks
+     real stock through at most one group at a time (see isColorReal in
+     admin.html), so at most one group here ever has data-units. The combined
+     selection across all groups feeds the cart's data-variant (joined with
+     " / "); the WhatsApp message itself is rebuilt by wholesale.js's
+     refreshPDP(), the single place that owns that link so it stays correct
+     whether or not wholesale pricing is active. */
   (function () {
-    var group = document.getElementById("pdpVariant");
-    if (!group) return;
+    var GROUP_LIVE_KEY = { pdpVariant: "sizes", pdpVariantColor: "colors" };
+    var groups = Array.prototype.slice.call(document.querySelectorAll(".pdp-variant"));
+    if (!groups.length) return;
+    var selected = {};
 
-    function applyValue(val) {
-      group.querySelectorAll("button").forEach(function (b) {
-        b.classList.toggle("is-active", b.getAttribute("data-value") === val);
-      });
-      if (addCartBtn) addCartBtn.setAttribute("data-variant", val);
-      if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
+    function combinedVariant() {
+      return groups.map(function (g) { return selected[g.id]; }).filter(Boolean).join(" / ");
     }
 
-    group.addEventListener("click", function (e) {
-      var btn = e.target.closest("button[data-value]");
-      if (!btn) return;
-      applyValue(btn.getAttribute("data-value"));
-    });
+    groups.forEach(function (group) {
+      var isRealSize = !!group.querySelector("button[data-units]");
+      var liveKey = GROUP_LIVE_KEY[group.id];
+      var liveList = (liveProduct && liveKey) ? liveProduct[liveKey] : null;
 
-    var firstBtn = group.querySelector("button[data-value]");
-    if (firstBtn) applyValue(firstBtn.getAttribute("data-value"));
+      // Sync each button's stock/disabled state from the live catalog — an
+      // option could have sold out (or come back) since this page was last
+      // generated, independent of any full page regeneration.
+      if (isRealSize && liveList) {
+        group.querySelectorAll("button[data-value]").forEach(function (b) {
+          var live = liveList.filter(function (s) { return s.label === b.getAttribute("data-value"); })[0];
+          if (!live) return;
+          b.setAttribute("data-units", String(live.units || 0));
+          b.disabled = (live.units || 0) <= 0;
+        });
+      }
+
+      function applyValue(val) {
+        group.querySelectorAll("button").forEach(function (b) {
+          b.classList.toggle("is-active", b.getAttribute("data-value") === val);
+        });
+        selected[group.id] = val;
+        if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
+        if (isRealSize) {
+          var units = null;
+          if (liveList) {
+            var live = liveList.filter(function (s) { return s.label === val; })[0];
+            if (live) units = live.units || 0;
+          }
+          if (units === null) {
+            var btn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+            units = btn ? (parseInt(btn.getAttribute("data-units"), 10) || 0) : 0;
+          }
+          applyStock(units);
+        }
+        if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
+      }
+
+      group.addEventListener("click", function (e) {
+        var btn = e.target.closest("button[data-value]");
+        if (!btn || btn.disabled) return;
+        applyValue(btn.getAttribute("data-value"));
+      });
+
+      var preferred = group.querySelector("button.is-active[data-value]:not(:disabled)");
+      var firstBtn = preferred || group.querySelector("button[data-value]:not(:disabled)") || group.querySelector("button[data-value]");
+      if (firstBtn) applyValue(firstBtn.getAttribute("data-value"));
+    });
   })();
 </script>
 <script>var ESCENA_ROOT = "../";</script>
