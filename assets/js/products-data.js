@@ -541,7 +541,7 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083425257"
+  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728"
  },
  {
   "n": "Timón Cult Devon 9.5\" Cromado",
