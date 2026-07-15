@@ -426,30 +426,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1784071875410"
  },
  {
-  "n": "Caña Volume Bison Negra - FrontLoad",
-  "brand": "Volume",
-  "cat": "stems",
-  "spec": "Alcance: 50mm",
-  "price": 330000,
-  "sku": "STEAM",
-  "units": 1,
-  "tag": "Descuento 💸!",
-  "imgs": [
-   "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322",
-   "assets/img/products/cana-volume-bison-negra-frontload-2.jpg?v=1784071885806",
-   "assets/img/products/cana-volume-bison-negra-frontload-3.jpg?v=1784071889009",
-   "assets/img/products/cana-volume-bison-negra-frontload-4.jpg?v=1784071891487"
-  ],
-  "sizes": [
-   {
-    "label": "50mm",
-    "units": 1
-   }
-  ],
-  "slug": "cana-volume-bison-negra-frontload",
-  "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322"
- },
- {
   "n": "Caña Volume Bison - FrontLoad",
   "brand": "Volume",
   "cat": "stems",
@@ -713,24 +689,6 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "slug": "tenedor-cult-sect-v4-cromado-18mm",
   "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg"
- },
- {
-  "n": "Caña Volume Front Load",
-  "brand": "Volume",
-  "cat": "stems",
-  "spec": "Front load · 48mm · Aluminio pulido plata",
-  "price": 320000,
-  "tag": "Nuevo",
-  "slug": "volume-stem-front-load-plata",
-  "sku": "VOLUME-STEM-FRONT-LOAD-PLATA",
-  "units": 1,
-  "sizes": [
-   {
-    "label": "48mm",
-    "units": 1
-   }
-  ],
-  "img": "assets/img/products/volume-stem-front-load-plata.jpg"
  },
  {
   "n": "Caña Mutanty Savage V2",
