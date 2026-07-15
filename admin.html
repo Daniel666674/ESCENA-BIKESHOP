@@ -1282,7 +1282,7 @@
         if (!remoteText) return null;
         var today = new Date().toISOString().slice(0, 10);
         var adds = createdSlugs.filter(function (s) { return remoteText.indexOf("/producto/" + s + ".html") === -1; }).map(function (s) {
-          return "  <url>\n    <loc>https://escenabikeshop.com/producto/" + s + ".html</loc>\n    <lastmod>" + today + "</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>";
+          return "  <url>\n    <loc>https://escenabmx.com/producto/" + s + ".html</loc>\n    <lastmod>" + today + "</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>";
         });
         if (!adds.length) return null;
         return remoteText.replace("</urlset>", adds.join("\n") + "\n</urlset>");
