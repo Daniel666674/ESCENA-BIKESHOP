@@ -144,7 +144,7 @@ window.ESCENA_PRODUCTS = [
   "price": 250000,
   "sku": "MRC",
   "units": 1,
-  "tag": "Nuevo!",
+  "tag": "Nuevo",
   "imgs": [
    "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784153777781",
    "assets/img/products/marco-gw-destructor-tornasol-2.jpg?v=1784153779601",
@@ -2356,8 +2356,8 @@ window.ESCENA_PRODUCTS = [
   "slug": "tukanbikes-industrial-raw",
   "brand": "TukanBikes",
   "cat": "marcos",
-  "spec": "Cromoly · Top tube 20.4\"–21\" (dropout ajustable) · Acabado crudo (raw)",
-  "price": 850000,
+  "spec": "Cromoly  • Soldadura TIC - MIG •Top tube 20.4” - 20.75” - 21”",
+  "price": 360000,
   "tag": "Nacional",
   "size": "20.4 - 21",
   "styles": [
@@ -2365,14 +2365,48 @@ window.ESCENA_PRODUCTS = [
   ],
   "weight": 2.05,
   "sku": "TUKANBIKES-INDUSTRIAL-RAW",
-  "units": 12,
-  "img": "assets/img/products/marco_tukanbikes_industrial.jpeg",
+  "units": 4,
   "sizes": [
    {
-    "label": "20.4\"-21\"",
-    "units": 12
+    "label": "20.4\" - 20.75” - 21”",
+    "units": 4
    }
-  ]
+  ],
+  "imgs": [
+   "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784156626862",
+   "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1784156628659",
+   "assets/img/products/tukanbikes-industrial-raw-3.jpg?v=1784156630219",
+   "assets/img/products/tukanbikes-industrial-raw-4.jpg?v=1784156632133",
+   "assets/img/products/tukanbikes-industrial-raw-5.jpg?v=1784156634301",
+   "assets/img/products/tukanbikes-industrial-raw-6.jpg?v=1784156636091",
+   "assets/img/products/tukanbikes-industrial-raw-7.jpg?v=1784156637637",
+   "assets/img/products/tukanbikes-industrial-raw-8.jpg?v=1784156639341"
+  ],
+  "colors": [
+   {
+    "label": "Azul / Industrial",
+    "units": 2
+   },
+   {
+    "label": "Morado / Industrial",
+    "units": 2
+   }
+  ],
+  "imgColorMap": {
+   "Azul / Industrial": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "Morado / Industrial": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "img": "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784156626862"
  },
  {
   "n": "Wethepeople Doomsayer Negro",
@@ -2444,13 +2478,23 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.08,
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
   "units": 12,
-  "img": "assets/img/products/marco_fiend_reynolds_v3_negro.jpeg",
   "sizes": [
    {
     "label": "20.75\"",
     "units": 12
    }
-  ]
+  ],
+  "tag": "Top 🔥",
+  "imgs": [
+   "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784156641557",
+   "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1784156643892",
+   "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1784156646261",
+   "assets/img/products/fiend-reynolds-v3-negro-4.jpg?v=1784156648375",
+   "assets/img/products/fiend-reynolds-v3-negro-5.jpg?v=1784156650039",
+   "assets/img/products/fiend-reynolds-v3-negro-6.jpg?v=1784156652101",
+   "assets/img/products/fiend-reynolds-v3-negro-7.jpg?v=1784156653909"
+  ],
+  "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784156641557"
  },
  {
   "n": "Aro Demolition Zero Plus Negro",
