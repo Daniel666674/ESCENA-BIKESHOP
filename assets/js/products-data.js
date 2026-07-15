@@ -2284,14 +2284,14 @@ window.ESCENA_PRODUCTS = [
   ],
   "weight": 2.15,
   "sku": "TOTAL-MARCO-2075-BLANCO-AZUL",
-  "units": 12,
-  "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787",
+  "units": 1,
   "sizes": [
    {
     "label": "20.75\"",
-    "units": 12
+    "units": 1
    }
-  ]
+  ],
+  "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
  },
  {
   "n": "Federal Marco Bruno LT",
@@ -2352,13 +2352,14 @@ window.ESCENA_PRODUCTS = [
   "weight": 2.15,
   "sku": "WETHEPEOPLE-DOOMSAYER-NEGRO",
   "units": 12,
-  "img": "assets/img/products/marco_wethepeople_doomsayer_negro.jpeg",
   "sizes": [
    {
     "label": "20.75\"",
     "units": 12
    }
-  ]
+  ],
+  "tag": "Top",
+  "img": "assets/img/products/wethepeople-doomsayer-negro.jpg?v=1784154923513"
  },
  {
   "n": "Cult Haven's Gate Alex Duleba Negro",
