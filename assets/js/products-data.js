@@ -99,8 +99,8 @@ window.ESCENA_PRODUCTS = [
   "tag": "Nuevo!",
   "imgs": [
    "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1784071875410",
-   "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1784071876760",
-   "assets/img/products/cana-cult-salvation-v4-negra-topload-3.jpg?v=1784071878302",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1784087352916",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-3.jpg?v=1784087354660",
    "assets/img/products/cana-cult-salvation-v4-negra-topload-4.jpg?v=1784071879688",
    "assets/img/products/cana-cult-salvation-v4-negra-topload-5.jpg?v=1784071881412"
   ],
@@ -189,7 +189,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Nuevo!",
   "imgs": [
-   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784067916412",
+   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011",
    "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784067918547",
    "assets/img/products/marco-fitbikeco-str-negro-3.jpg?v=1784067920230",
    "assets/img/products/marco-fitbikeco-str-negro-4.jpg?v=1784067922518",
@@ -204,7 +204,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-fitbikeco-str-negro",
-  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784067916412"
+  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011"
  },
  {
   "n": "Marco Cult Biggie Jaume Sintes Hammertone",
@@ -225,7 +225,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-7.jpg?v=1784061981933",
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-8.jpg?v=1784061986562",
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-9.jpg?v=1784061991001",
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784061998108"
+   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784087359163"
   ],
   "slug": "marco-cult-biggie-jaume-sintes-hammertone",
   "sizes": [
@@ -458,11 +458,11 @@ window.ESCENA_PRODUCTS = [
   "weight": 1.6,
   "slug": "mutany-savage-bielas-negro",
   "sku": "MUTANY-SAVAGE-BIELAS-NEGRO",
-  "units": 1,
+  "units": 2,
   "sizes": [
    {
     "label": "170mm",
-    "units": 1
+    "units": 2
    },
    {
     "label": "165mm",
@@ -1773,13 +1773,13 @@ window.ESCENA_PRODUCTS = [
   "weight": 2,
   "sku": "FATE-NAMASTE-NEGRO",
   "units": 12,
-  "img": "assets/img/products/marco_fate_negro_namaste_negro.jpeg",
   "sizes": [
    {
     "label": "20.4\"-20.75\"",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784087360390"
  },
  {
   "n": "Total BMX Marco 20.75\"",
@@ -1844,28 +1844,6 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.4\"-21\"",
-    "units": 12
-   }
-  ]
- },
- {
-  "n": "Colony Marco Park",
-  "slug": "colony-marco-park-gris",
-  "brand": "Colony",
-  "cat": "marcos",
-  "spec": "Cromoly · Top tube 20.75\" · Gris",
-  "price": 960000,
-  "size": "20.75",
-  "styles": [
-   "park"
-  ],
-  "weight": 2.1,
-  "sku": "COLONY-MARCO-PARK-GRIS",
-  "units": 12,
-  "img": "assets/img/products/frame-placeholder.svg",
-  "sizes": [
-   {
-    "label": "20.75\"",
     "units": 12
    }
   ]
