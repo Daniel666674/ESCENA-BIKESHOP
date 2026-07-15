@@ -55,6 +55,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://escenabmx.com/ropa.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://escenabmx.com/seguridad.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://escenabmx.com/tenis.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://escenabmx.com/blog.html</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>weekly</changefreq>
