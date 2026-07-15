@@ -1,5 +1,112 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Grips Fiend Flangeless",
+  "brand": "Fiend",
+  "cat": "punos",
+  "spec": "Flangeless",
+  "price": 50000,
+  "sku": "GRIPS",
+  "units": 4,
+  "tag": "Top!",
+  "imgs": [
+   "assets/img/products/grips-fiend-flangeless.jpg?v=1784139481764",
+   "assets/img/products/grips-fiend-flangeless-2.jpg?v=1784139483401"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 2
+   },
+   {
+    "label": "Rojo",
+    "units": 2
+   }
+  ],
+  "slug": "grips-fiend-flangeless",
+  "img": "assets/img/products/grips-fiend-flangeless.jpg?v=1784139481764"
+ },
+ {
+  "n": "Grips Fiend Palmere",
+  "brand": "Fiend",
+  "cat": "punos",
+  "spec": "Palmere",
+  "price": 50000,
+  "sku": "GRIPS",
+  "units": 2,
+  "tag": "Nuevo!",
+  "imgs": [
+   "assets/img/products/grips-fiend-palmere.jpg?v=1784139484875",
+   "assets/img/products/grips-fiend-palmere-2.jpg?v=1784139486656"
+  ],
+  "slug": "grips-fiend-palmere",
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1
+   },
+   {
+    "label": "Morado",
+    "units": 1
+   }
+  ],
+  "img": "assets/img/products/grips-fiend-palmere.jpg?v=1784139484875"
+ },
+ {
+  "n": "Grips Federal Command Negro",
+  "brand": "Federal",
+  "cat": "punos",
+  "spec": "Signature Command • Negro",
+  "price": 50000,
+  "sku": "GRIPS",
+  "units": 2,
+  "tag": "Top!",
+  "imgs": [
+   "assets/img/products/grips-federal-command-negro.jpg?v=1784139488275",
+   "assets/img/products/grips-federal-command-negro-2.jpg?v=1784139489794"
+  ],
+  "slug": "grips-federal-command-negro",
+  "img": "assets/img/products/grips-federal-command-negro.jpg?v=1784139488275"
+ },
+ {
+  "n": "Plato Fate Guardia Negro 28T.",
+  "brand": "Fate",
+  "cat": "pinones",
+  "spec": "Guardia • Negro • 28T",
+  "price": 230000,
+  "sku": "PLT",
+  "units": 1,
+  "tag": "Top!",
+  "imgs": [
+   "assets/img/products/plato-fate-guardia-negro-28t.jpg?v=1784139491454",
+   "assets/img/products/plato-fate-guardia-negro-28t-2.jpg?v=1784139492852"
+  ],
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1
+   }
+  ],
+  "slug": "plato-fate-guardia-negro-28t",
+  "img": "assets/img/products/plato-fate-guardia-negro-28t.jpg?v=1784139491454"
+ },
+ {
+  "n": "Pedales Fate Negro",
+  "brand": "Fate",
+  "cat": "pedales",
+  "spec": "Negro",
+  "price": 65000,
+  "sku": "PDL",
+  "units": 2,
+  "tag": "Nuevo 🔥!",
+  "imgs": [
+   "assets/img/products/pedales-fate-negro.jpg?v=1784139495189",
+   "assets/img/products/pedales-fate-negro-2.jpg?v=1784139497268",
+   "assets/img/products/pedales-fate-negro-3.jpg?v=1784139498920"
+  ],
+  "slug": "pedales-fate-negro",
+  "img": "assets/img/products/pedales-fate-negro.jpg?v=1784139495189"
+ },
+ {
   "n": "Silla Pivotal Fiend Reynolds V2  Zebra",
   "brand": "Fiend",
   "cat": "sillines",
