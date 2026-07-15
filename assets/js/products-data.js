@@ -535,13 +535,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "manubrio-cromoly-negro-01",
   "sku": "MANUBRIO-CROMOLY-NEGRO-01",
   "units": 12,
-  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg",
   "sizes": [
    {
     "label": "9.5\"",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083425257"
  },
  {
   "n": "Timón Cult Devon 9.5\" Cromado",
@@ -553,13 +553,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "manubrio-cromoly-cromado",
   "sku": "MANUBRIO-CROMOLY-CROMADO",
   "units": 12,
-  "img": "assets/img/products/manubrio-cromoly-cromado.jpg",
   "sizes": [
    {
     "label": "9.5\"",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495"
  },
  {
   "n": "Timón Cult Crew 9.35\" Negro",
@@ -571,13 +571,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "manubrio-cromoly-negro-02",
   "sku": "MANUBRIO-CROMOLY-NEGRO-02",
   "units": 12,
-  "img": "assets/img/products/manubrio-cromoly-negro-02.jpg",
   "sizes": [
    {
     "label": "9.35\"",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784083427771"
  },
  {
   "n": "Timón Colony Guardian 9.4\" Negro Mate",
@@ -590,13 +590,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "manubrio-cromoly-negro-03",
   "sku": "MANUBRIO-CROMOLY-NEGRO-03",
   "units": 12,
-  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg",
   "sizes": [
    {
     "label": "9.4\"",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784083429077"
  },
  {
   "n": "Timón Mutanty Radical 9.25\" Negro",
@@ -608,13 +608,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "manubrio-cromoly-negro-04",
   "sku": "MANUBRIO-CROMOLY-NEGRO-04",
   "units": 12,
-  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg",
   "sizes": [
    {
     "label": "9.25\"",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1784083430350"
  },
  {
   "n": "Tenedor Wethepeople Cromado",
