@@ -1,5 +1,35 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Eighties Zebra",
+  "brand": "Eighties",
+  "cat": "sillines",
+  "spec": "Pivotal • Zebra",
+  "price": 180000,
+  "sku": "SLA",
+  "units": 4,
+  "tag": "Edición Especial!",
+  "imgs": [
+   "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1784139733693",
+   "assets/img/products/silla-pivotal-eighties-zebra-2.jpg?v=1784139735530",
+   "assets/img/products/silla-pivotal-eighties-zebra-3.jpg?v=1784139737122",
+   "assets/img/products/silla-pivotal-eighties-zebra-4.jpg?v=1784139738941",
+   "assets/img/products/silla-pivotal-eighties-zebra-5.jpg?v=1784139740476",
+   "assets/img/products/silla-pivotal-eighties-zebra-6.jpg?v=1784139742076"
+  ],
+  "colors": [
+   {
+    "label": "Blanco/Negro",
+    "units": 2
+   },
+   {
+    "label": "Morado/Negro",
+    "units": 2
+   }
+  ],
+  "slug": "silla-pivotal-eighties-zebra",
+  "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1784139733693"
+ },
+ {
   "n": "Grips Fiend Flangeless",
   "brand": "Fiend",
   "cat": "punos",
