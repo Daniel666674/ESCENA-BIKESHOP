@@ -1,5 +1,180 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Fiend Reynolds V2  Zebra",
+  "brand": "Fiend",
+  "cat": "sillines",
+  "spec": "Pivotal • Zebra • Base reforzada anti-flexión",
+  "price": 205000,
+  "sku": "SLA",
+  "units": 1,
+  "tag": "Edición Especial 🔥!",
+  "imgs": [
+   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1784138416524",
+   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-2.jpg?v=1784138418470",
+   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-3.jpg?v=1784138420747",
+   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-4.jpg?v=1784138422794"
+  ],
+  "slug": "silla-pivotal-fiend-reynolds-v2-zebra",
+  "img": "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1784138416524"
+ },
+ {
+  "n": "Grips S&M Mike Hoder",
+  "brand": "S&M",
+  "cat": "punos",
+  "spec": "Mike Hoder",
+  "price": 50000,
+  "sku": "GRIPS",
+  "units": 4,
+  "tag": "Top 🔥!",
+  "imgs": [
+   "assets/img/products/grips-s-m-mike-hoder.jpg?v=1784138425397",
+   "assets/img/products/grips-s-m-mike-hoder-2.jpg?v=1784138428356",
+   "assets/img/products/grips-s-m-mike-hoder-3.jpg?v=1784138431279",
+   "assets/img/products/grips-s-m-mike-hoder-4.jpg?v=1784138433639",
+   "assets/img/products/grips-s-m-mike-hoder-5.jpg?v=1784138435832",
+   "assets/img/products/grips-s-m-mike-hoder-6.jpg?v=1784138437959"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 2
+   },
+   {
+    "label": "Morado",
+    "units": 2
+   }
+  ],
+  "slug": "grips-s-m-mike-hoder",
+  "img": "assets/img/products/grips-s-m-mike-hoder.jpg?v=1784138425397"
+ },
+ {
+  "n": "Silla Pivotal Fitbikeco Negra",
+  "brand": "Fitbikeco",
+  "cat": "sillines",
+  "spec": "Pivotal • Negro",
+  "price": 160000,
+  "sku": "SLA",
+  "units": 1,
+  "tag": "Nuevo 🔥!",
+  "imgs": [
+   "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1784138439638",
+   "assets/img/products/silla-pivotal-fitbikeco-negra-2.jpg?v=1784138441275",
+   "assets/img/products/silla-pivotal-fitbikeco-negra-3.jpg?v=1784138443126"
+  ],
+  "slug": "silla-pivotal-fitbikeco-negra",
+  "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1784138439638"
+ },
+ {
+  "n": "Caña Shadow Finest Negra TopLoad",
+  "brand": "Shadow",
+  "cat": "stems",
+  "spec": "Top Load • Negro • 48mm",
+  "price": 310000,
+  "sku": "STEAM",
+  "units": 1,
+  "tag": "Top🔥!",
+  "imgs": [
+   "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784138444730",
+   "assets/img/products/cana-shadow-finest-negra-topload-2.jpg?v=1784138447031",
+   "assets/img/products/cana-shadow-finest-negra-topload-3.jpg?v=1784138449080",
+   "assets/img/products/cana-shadow-finest-negra-topload-4.jpg?v=1784138450830"
+  ],
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 1
+   }
+  ],
+  "slug": "cana-shadow-finest-negra-topload",
+  "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784138444730"
+ },
+ {
+  "n": "Silla Pivotal Fate Negra",
+  "brand": "Fate",
+  "cat": "sillines",
+  "spec": "Pivotal",
+  "price": 130000,
+  "sku": "SLA",
+  "units": 2,
+  "tag": "Nuevo 🔥!",
+  "imgs": [
+   "assets/img/products/silla-pivotal-fate-negra.jpg?v=1784138452598",
+   "assets/img/products/silla-pivotal-fate-negra-2.jpg?v=1784138454479",
+   "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1784138456279"
+  ],
+  "slug": "silla-pivotal-fate-negra",
+  "img": "assets/img/products/silla-pivotal-fate-negra.jpg?v=1784138452598"
+ },
+ {
+  "n": "Silla Pivotal Fiend Reynolds Negra",
+  "brand": "Fiend",
+  "cat": "sillines",
+  "spec": "Pivotal Negra",
+  "price": 205000,
+  "sku": "SLA",
+  "units": 1,
+  "tag": "Top 🔥!",
+  "imgs": [
+   "assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1784138458192",
+   "assets/img/products/silla-pivotal-fiend-reynolds-negra-2.jpg?v=1784138459718",
+   "assets/img/products/silla-pivotal-fiend-reynolds-negra-3.jpg?v=1784138461542"
+  ],
+  "slug": "silla-pivotal-fiend-reynolds-negra",
+  "img": "assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1784138458192"
+ },
+ {
+  "n": "Silla Pivotal Fiend Mills",
+  "brand": "Fiend",
+  "cat": "sillines",
+  "spec": "Pivotal",
+  "price": 200000,
+  "sku": "SLA",
+  "units": 3,
+  "tag": "Nuevo 🔥!",
+  "imgs": [
+   "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1784138463438",
+   "assets/img/products/silla-pivotal-fiend-mills-2.jpg?v=1784138465233",
+   "assets/img/products/silla-pivotal-fiend-mills-3.jpg?v=1784138467195"
+  ],
+  "colors": [
+   {
+    "label": "Blanco",
+    "units": 3
+   }
+  ],
+  "slug": "silla-pivotal-fiend-mills",
+  "img": "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1784138463438"
+ },
+ {
+  "n": "Plato Odyssey Big Boyd 28T",
+  "brand": "Odyssey",
+  "cat": "pinones",
+  "spec": "SIGNATURE BOYD HILDER 28T NEGRO",
+  "price": 240000,
+  "sku": "PLT",
+  "units": 1,
+  "tag": "Top 🔥",
+  "imgs": [
+   "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1784138469320",
+   "assets/img/products/plato-odyssey-big-boyd-28t-2.jpg?v=1784138471751",
+   "assets/img/products/plato-odyssey-big-boyd-28t-3.jpg?v=1784138474184"
+  ],
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1
+   }
+  ],
+  "slug": "plato-odyssey-big-boyd-28t",
+  "img": "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1784138469320"
+ },
+ {
   "n": "Caña Fiend Mills - TopLoad",
   "brand": "Fiend",
   "cat": "stems",
