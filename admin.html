@@ -108,7 +108,7 @@
     table.inv-table td { padding: .55rem .7rem; border-bottom: 1px solid var(--line); vertical-align: middle; white-space: nowrap; }
     table.inv-table tr:last-child td { border-bottom: none; }
     table.inv-table .thumb { position: relative; width: 44px; height: 44px; border-radius: 6px; overflow: hidden; background: #0A0A0A; flex-shrink: 0; }
-    table.inv-table .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    table.inv-table .thumb img { width: 100%; height: 100%; object-fit: contain; }
     table.inv-table .thumb .thumb-count { position: absolute; bottom: 0; right: 0; background: rgba(0,0,0,.75); color: #fff; font-size: .58rem; font-weight: 700; padding: .05rem .3rem; border-top-left-radius: 4px; }
     table.inv-table .col-name { white-space: normal; min-width: 170px; font-weight: 600; }
     table.inv-table .col-spec { white-space: normal; min-width: 170px; color: var(--muted); font-size: .76rem; }
@@ -182,15 +182,17 @@
     .pmodal-sizes-total { font-size: .74rem; color: var(--muted); margin-top: .5rem; }
     .pmodal-photos { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .8rem; }
     .pmodal-photo { position: relative; width: 72px; height: 72px; border-radius: 8px; overflow: hidden; background: #0A0A0A; }
-    .pmodal-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .pmodal-photo img { width: 100%; height: 100%; object-fit: contain; }
     .pmodal-photo .rm, .pmodal-photo .mv { -webkit-appearance: none; appearance: none; font-family: inherit; box-sizing: border-box; }
     .pmodal-photo .rm { position: absolute; top: 2px; right: 2px; width: 20px; height: 20px; border-radius: 50%; background: rgba(0,0,0,.7); color: #fff; border: none; font-size: .8rem; cursor: pointer; line-height: 1; z-index: 2; }
     .pmodal-photo .rm:hover { background: #c0392b; }
     .pmodal-photo .cover-badge { position: absolute; top: 2px; left: 2px; background: #fff; color: #0A0A0A; font-size: .52rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: .1rem .3rem; border-radius: 3px; z-index: 2; }
-    .pmodal-photo .mv { position: absolute; bottom: 0; width: 50%; height: 22px; max-height: 22px; background: rgba(0,0,0,.55); color: #fff; border: none; font-size: .8rem; cursor: pointer; line-height: 22px; display: flex; align-items: center; justify-content: center; }
+    .pmodal-photo .mv-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 22px; display: flex; }
+    .pmodal-photo .mv { flex: 1; background: rgba(0,0,0,.55); color: #fff; border: none; font-size: .78rem; cursor: pointer; line-height: 1; display: flex; align-items: center; justify-content: center; }
     .pmodal-photo .mv:disabled { opacity: .3; cursor: not-allowed; }
-    .pmodal-photo .mv-l { left: 0; border-radius: 0 0 0 8px; }
-    .pmodal-photo .mv-r { right: 0; border-radius: 0 0 8px 0; }
+    .pmodal-photo .mv-bar .mv:first-child { border-radius: 0 0 0 8px; }
+    .pmodal-photo .mv-bar .mv:last-child { border-radius: 0 0 8px 0; }
+    .pmodal-photo .mv-rot { font-size: .9rem; }
     .pmodal-add-photo { width: 72px; height: 72px; border-radius: 8px; border: 1.5px dashed var(--line); background: var(--panel); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: var(--muted); cursor: pointer; }
     .pmodal-add-photo:hover { border-color: var(--ink); color: var(--ink); }
     .pmodal-actions { display: flex; gap: .7rem; margin-top: 1.4rem; }
@@ -461,7 +463,7 @@
     <h3 id="pmodalTitle">Agregar producto</h3>
     <div class="pmodal-photos" id="pmodalPhotos"></div>
     <button type="button" class="pmodal-add-photo" id="pmodalAddPhotoBtn" title="Agregar foto">+</button>
-    <p style="font-size:.72rem;color:var(--muted);margin:.4rem 0 0;">Foto en <b>JPG</b> o <b>PNG</b>. Se comprime automáticamente al subirla. Usá &lsaquo; &rsaquo; para ordenarlas — la primera ("Portada") es la que se muestra en la tienda.</p>
+    <p style="font-size:.72rem;color:var(--muted);margin:.4rem 0 0;">Foto en <b>JPG</b> o <b>PNG</b>. Se comprime automáticamente al subirla. Usá &lsaquo; &rsaquo; para ordenarlas (la primera, "Portada", es la que se muestra en la tienda) y &#8635; para rotarlas 90° si quedaron torcidas.</p>
     <input type="file" id="pmodalFileInput" accept="image/jpeg,image/png,image/webp,image/*" multiple style="display:none;" />
     <form id="pmodalForm">
       <div class="pmodal-grid" style="margin-top:1.2rem;">
@@ -1066,6 +1068,31 @@
     });
   }
 
+  // Rotates an already-compressed photo 90° clockwise per call (repeat clicks
+  // cycle through 180°/270°/back to 0°) — fixes phone photos that came out
+  // sideways/upside-down. Re-encodes at the same quality used at upload time;
+  // dimensions are already small by this point so this stays cheap.
+  function rotateDataUri(dataUri) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image();
+      img.onload = function () {
+        try {
+          var w = img.width, h = img.height;
+          var c = document.createElement("canvas"); c.width = h; c.height = w;
+          var ctx = c.getContext("2d");
+          ctx.translate(h / 2, w / 2);
+          ctx.rotate(Math.PI / 2);
+          ctx.drawImage(img, -w / 2, -h / 2);
+          var out = c.toDataURL("image/jpeg", 0.85);
+          if (out.indexOf("data:image/jpeg") !== 0 || out.length < 100) { reject(new Error("no se pudo rotar")); return; }
+          resolve(out);
+        } catch (e) { reject(e); }
+      };
+      img.onerror = function () { reject(new Error("no se pudo rotar")); };
+      img.src = dataUri;
+    });
+  }
+
   /* ---- Product-page generation ---- */
   function copFmt(n) { return "$" + Math.round(n || 0).toLocaleString("es-CO"); }
   function jsonEsc(s) { return JSON.stringify(String(s == null ? "" : s)).slice(1, -1); }
@@ -1443,8 +1470,11 @@
         (i === 0 ? '<span class="cover-badge">Portada</span>' : '') +
         '<img src="' + src + '" alt="" />' +
         '<button type="button" class="rm" data-i="' + i + '" aria-label="Quitar foto">&times;</button>' +
+        '<div class="mv-bar">' +
         '<button type="button" class="mv mv-l" data-i="' + i + '" data-dir="-1"' + (i === 0 ? ' disabled' : '') + ' aria-label="Mover a la izquierda">&#8249;</button>' +
+        '<button type="button" class="mv mv-rot" data-i="' + i + '" data-deg="90" aria-label="Rotar 90°">&#8635;</button>' +
         '<button type="button" class="mv mv-r" data-i="' + i + '" data-dir="1"' + (i === n - 1 ? ' disabled' : '') + ' aria-label="Mover a la derecha">&#8250;</button>' +
+        '</div>' +
         '</div>';
     }).join("");
   }
@@ -1764,6 +1794,19 @@
       if (rm) {
         modalPhotos.splice(parseInt(rm.getAttribute("data-i"), 10), 1);
         renderModalPhotos();
+        return;
+      }
+      var rot = e.target.closest(".mv-rot");
+      if (rot) {
+        var ri = parseInt(rot.getAttribute("data-i"), 10);
+        rot.disabled = true;
+        rotateDataUri(modalPhotos[ri]).then(function (out) {
+          modalPhotos[ri] = out;
+          renderModalPhotos();
+        }).catch(function () {
+          showToast("No se pudo rotar esta foto.");
+          rot.disabled = false;
+        });
         return;
       }
       var mv = e.target.closest(".mv");
