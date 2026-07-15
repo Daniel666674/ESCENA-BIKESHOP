@@ -182,6 +182,14 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "grips-s-m-mike-hoder",
+  "imgColorMap": {
+   "Morado": [
+    2,
+    3,
+    4,
+    5
+   ]
+  },
   "img": "assets/img/products/grips-s-m-mike-hoder-3.jpg?v=1784138431279"
  },
  {
