@@ -193,6 +193,9 @@
     .pmodal-photo .mv-bar .mv:first-child { border-radius: 0 0 0 8px; }
     .pmodal-photo .mv-bar .mv:last-child { border-radius: 0 0 8px 0; }
     .pmodal-photo .mv-rot { font-size: .9rem; }
+    .pmodal-photo-item { display: flex; flex-direction: column; gap: .3rem; width: 72px; }
+    .pmodal-photo-color { width: 72px; font-size: .6rem; border: 1.5px solid var(--line); border-radius: 6px; padding: .2rem .15rem; font-family: inherit; color: var(--muted); background: #fff; }
+    .pmodal-photo-color:focus { outline: none; border-color: var(--ink); }
     .pmodal-add-photo { width: 72px; height: 72px; border-radius: 8px; border: 1.5px dashed var(--line); background: var(--panel); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: var(--muted); cursor: pointer; }
     .pmodal-add-photo:hover { border-color: var(--ink); color: var(--ink); }
     .pmodal-actions { display: flex; gap: .7rem; margin-top: 1.4rem; }
@@ -902,6 +905,10 @@
   var salesDirty = false; // unpublished sale records exist
   var salesBaselineCount = 0; // salesLog.length at last successful publish/load — everything past this is "mine, not yet committed"
   var modalPhotos = [];
+  // Parallel to modalPhotos: modalPhotoColors[i] is the color label that photo
+  // i belongs to ("" = shown for every color, the default). Only meaningful
+  // when the product has 2+ colors defined; drives imgColorMap on submit.
+  var modalPhotoColors = [];
   var modalSizes = [];
   var modalColors = [];
   // Multiple devices can publish close together. products-data.js and
@@ -965,7 +972,7 @@
   // Fields that actually feed genPage() — a change to any of these means the
   // product's static detail page is out of date and needs regenerating.
   function pageSnapshotOf(p) {
-    return JSON.stringify([p.n, p.brand, p.cat, p.spec, p.price, p.sku, p.tag, p.units, p.imgs, p.sizes, p.colors]);
+    return JSON.stringify([p.n, p.brand, p.cat, p.spec, p.price, p.sku, p.tag, p.units, p.imgs, p.sizes, p.colors, p.imgColorMap]);
   }
   function pageNeedsRegen(p) {
     return pageSnapshotOf(p) !== p._pageSnapshot;
@@ -1158,7 +1165,9 @@
         (real ? ' data-units="' + (c.units || 0) + '"' : '') +
         (c.label === activeLabel ? ' class="is-active"' : '') + (out ? ' disabled' : '') + '>' + esc(c.label) + '</button>';
     }).join("");
-    return '<div class="pdp-variant" id="pdpVariantColor" data-prefix="Color">\n' +
+    var imgMapAttr = (p.imgColorMap && Object.keys(p.imgColorMap).length)
+      ? ' data-img-map="' + esc(JSON.stringify(p.imgColorMap)) + '"' : '';
+    return '<div class="pdp-variant" id="pdpVariantColor" data-prefix="Color"' + imgMapAttr + '>\n' +
       '      <span class="pdp-variant-label">Color</span>\n' +
       '      <div class="pdp-variant-options">' + opts + '</div>\n' +
       '    </div>';
@@ -1469,8 +1478,19 @@
   function renderModalPhotos() {
     var wrap = document.getElementById("pmodalPhotos");
     var n = modalPhotos.length;
+    var colorLabels = modalColors.map(function (c) { return (c.label || "").trim(); }).filter(Boolean);
+    var showColorPicker = colorLabels.length > 1;
     wrap.innerHTML = modalPhotos.map(function (src, i) {
-      return '<div class="pmodal-photo">' +
+      var picker = showColorPicker
+        ? '<select class="pmodal-photo-color" data-i="' + i + '" aria-label="Color de esta foto">' +
+          '<option value="">Todos los colores</option>' +
+          colorLabels.map(function (lbl) {
+            return '<option value="' + esc(lbl) + '"' + (modalPhotoColors[i] === lbl ? ' selected' : '') + '>' + esc(lbl) + '</option>';
+          }).join("") +
+          '</select>'
+        : '';
+      return '<div class="pmodal-photo-item">' +
+        '<div class="pmodal-photo">' +
         (i === 0 ? '<span class="cover-badge">Portada</span>' : '') +
         '<img src="' + src + '" alt="" />' +
         '<button type="button" class="rm" data-i="' + i + '" aria-label="Quitar foto">&times;</button>' +
@@ -1479,6 +1499,7 @@
         '<button type="button" class="mv mv-rot" data-i="' + i + '" data-deg="90" aria-label="Rotar 90°">&#8635;</button>' +
         '<button type="button" class="mv mv-r" data-i="' + i + '" data-dir="1"' + (i === n - 1 ? ' disabled' : '') + ' aria-label="Mover a la derecha">&#8250;</button>' +
         '</div>' +
+        '</div>' + picker +
         '</div>';
     }).join("");
   }
@@ -1515,6 +1536,7 @@
     var total = sizesTotal(modalColors);
     document.getElementById("pmColorsTotal").textContent = modalColors.length ? "Total: " + total + " unidades en " + modalColors.length + " color(es)." : "";
     renderModalColorsHint(document.getElementById("pmCat").value);
+    renderModalPhotos();
   }
   function renderModalColorsHint(cat) {
     var hint = document.getElementById("pmColorsHint");
@@ -1545,7 +1567,15 @@
     document.getElementById("pmNotes").value = p ? p.notes : "";
     updateMarginReadout();
     modalPhotos = p ? p.imgs.slice() : [];
-    renderModalPhotos();
+    // Reverse p.imgColorMap ({label: [indices]}) into one label per photo index.
+    modalPhotoColors = modalPhotos.map(function () { return ""; });
+    if (p && p.imgColorMap) {
+      Object.keys(p.imgColorMap).forEach(function (label) {
+        (p.imgColorMap[label] || []).forEach(function (i) {
+          if (modalPhotoColors[i] !== undefined) modalPhotoColors[i] = label;
+        });
+      });
+    }
     modalSizes = p && p.sizes ? p.sizes.map(function (s) { return { label: s.label, units: s.units }; }) : [];
     renderModalSizes();
     modalColors = p && p.colors ? p.colors.map(function (c) { return { label: c.label, units: c.units }; }) : [];
@@ -1781,6 +1811,7 @@
           if (!raw) return;
           return compressDataUri(raw, 1200, 0.8).then(function (compressed) {
             modalPhotos.push(compressed);
+            modalPhotoColors.push("");
           }).catch(function () {
             showToast('No se pudo procesar "' + file.name + '" — probá con una foto en JPG o PNG.');
           });
@@ -1796,7 +1827,9 @@
     document.getElementById("pmodalPhotos").addEventListener("click", function (e) {
       var rm = e.target.closest(".rm");
       if (rm) {
-        modalPhotos.splice(parseInt(rm.getAttribute("data-i"), 10), 1);
+        var rmI = parseInt(rm.getAttribute("data-i"), 10);
+        modalPhotos.splice(rmI, 1);
+        modalPhotoColors.splice(rmI, 1);
         renderModalPhotos();
         return;
       }
@@ -1819,8 +1852,14 @@
         var j = i + parseInt(mv.getAttribute("data-dir"), 10);
         if (j < 0 || j >= modalPhotos.length) return;
         var tmp = modalPhotos[i]; modalPhotos[i] = modalPhotos[j]; modalPhotos[j] = tmp;
+        var tmpC = modalPhotoColors[i]; modalPhotoColors[i] = modalPhotoColors[j]; modalPhotoColors[j] = tmpC;
         renderModalPhotos();
       }
+    });
+    document.getElementById("pmodalPhotos").addEventListener("change", function (e) {
+      var sel = e.target.closest(".pmodal-photo-color");
+      if (!sel) return;
+      modalPhotoColors[parseInt(sel.getAttribute("data-i"), 10)] = sel.value;
     });
 
     document.getElementById("pmCat").addEventListener("change", function () {
@@ -1860,6 +1899,7 @@
       modalColors[i][f] = f === "units" ? (parseInt(e.target.value, 10) || 0) : e.target.value;
       document.getElementById("pmColorsTotal").textContent = "Total: " + sizesTotal(modalColors) + " unidades en " + modalColors.length + " color(es).";
       renderModalColorsHint(document.getElementById("pmCat").value);
+      if (f === "label") renderModalPhotos();
     });
     document.getElementById("pmColorsRows").addEventListener("click", function (e) {
       var rm = e.target.closest(".pmodal-size-rm");
@@ -1902,11 +1942,27 @@
         // sizes already own the real stock (see isColorReal).
         if (!isSizeCat(catVal) && validColorsInput.length > 1) fields.units = sizesTotal(validColorsInput);
       }
+      // Build imgColorMap ({label: [photo indices]}) from the per-photo color
+      // pickers — only for labels that are still valid colors on this product.
+      // A product with no per-photo tagging at all gets no map, so its gallery
+      // just shows every photo regardless of the color picked (unchanged
+      // behavior).
+      if (validColorsInput.length > 1) {
+        var validLabels = validColorsInput.map(function (c) { return c.label; });
+        var imgColorMap = {};
+        modalPhotoColors.forEach(function (label, i) {
+          if (!label || validLabels.indexOf(label) === -1) return;
+          if (!imgColorMap[label]) imgColorMap[label] = [];
+          imgColorMap[label].push(i);
+        });
+        if (Object.keys(imgColorMap).length) fields.imgColorMap = imgColorMap;
+      }
       if (editingIdx !== null) {
         var cur = inventoryCatalog[editingIdx];
         Object.assign(cur, fields); // merge -> preserves slug, weight, published, etc.
         if (!isSizeCat(catVal)) delete cur.sizes; // category changed away from a size-category
         if (!fields.colors) delete cur.colors; // admin cleared all color rows
+        if (!fields.imgColorMap) delete cur.imgColorMap; // admin cleared all photo color tags
         if (!cur.sku) cur.sku = cur.slug.toUpperCase();
         markDirty(cur.slug);
         showToast("Producto actualizado");
