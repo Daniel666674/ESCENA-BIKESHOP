@@ -27,6 +27,12 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "silla-pivotal-eighties-zebra",
+  "imgColorMap": {
+   "Morado/Negro": [
+    4,
+    5
+   ]
+  },
   "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1784139733693"
  },
  {
