@@ -149,15 +149,8 @@
 
     /* Row 1: brand + actions */
     .header-brand-row { position: relative; display: flex; align-items: center; justify-content: center; padding: .95rem 1.5rem .55rem; }
-    .brand { display: inline-flex; flex-direction: row; align-items: center; gap: .7rem; text-decoration: none; }
-    /* Emblem sits to the left of a stacked text block; the wordmark and tagline
-       share the same centered column so they line up under each other. The whole
-       group's weight lands right of true center (emblem on the left), so nudge it
-       left on desktop (mobile keeps the burger on the left, which balances it). */
-    @media (min-width: 981px) { .brand { transform: translateX(-30px); } }
-    .brand-text { display: inline-flex; flex-direction: column; align-items: center; gap: .12rem; }
-    .brand img { width: 48px; height: 48px; border-radius: 50%; background: #fff; border: 1px solid var(--line); }
-    .brand .name { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: 2.1rem; letter-spacing: .1em; line-height: 1; }
+    .brand { display: inline-flex; flex-direction: column; align-items: center; gap: .3rem; text-decoration: none; }
+    .brand-logo { height: 40px; width: auto; max-width: 66vw; display: block; }
     .brand-tagline { color: var(--gold); font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: .22em; text-transform: uppercase; line-height: 1; }
 
     .header-actions { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .7rem; }
@@ -232,9 +225,8 @@
       .nav-drop-menu a:hover, .nav-drop-menu a:active { color: var(--muted) !important; }
     }
     @media (max-width: 480px) {
-      .brand img { width: 40px; height: 40px; }
-      .brand .name { font-size: 1.7rem; }
-      .brand-tagline { font-size: .82rem; letter-spacing: .18em; }
+      .brand-logo { height: 32px; }
+      .brand-tagline { font-size: .8rem; letter-spacing: .16em; }
       .header-brand-row { padding-left: 3.4rem; padding-right: 3.4rem; }
       .header-actions { right: 1rem; }
       .burger { left: 1rem; }
@@ -482,11 +474,8 @@
   <div class="header-brand-row">
     <button class="burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="nav">☰</button>
     <a href="index.html" class="brand" aria-label="ESCENA BMX - Inicio">
-      <img src="assets/img/escena-logo.jpg" alt="Logo ESCENA BMX" width="48" height="48" />
-      <span class="brand-text">
-        <span class="name">ESCENA BMX</span>
-        <span class="brand-tagline">La Gran Familia BMX</span>
-      </span>
+      <img class="brand-logo" src="assets/img/escena-wordmark.png" alt="ESCENA BMX — La Gran Familia BMX" width="167" height="34" />
+      <span class="brand-tagline">La Gran Familia BMX</span>
     </a>
     <div class="header-actions">
       <a class="wa-link" href="https://wa.me/573107630504" target="_blank" rel="noopener" aria-label="WhatsApp">
