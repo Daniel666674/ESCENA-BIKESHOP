@@ -146,6 +146,10 @@
       table.inv-table td.row-actions { gap: .5rem; }
       table.inv-table td.row-actions::before { display: none; }
       table.inv-table .row-actions button { flex: 1; padding: .6rem; }
+      /* The desktop table caps Marca/SKU to keep one long value from blowing out
+         that column for every row — not a problem in this stacked-card layout,
+         where each field gets its own full-width row, so let them wrap freely. */
+      table.inv-table .col-brand, table.inv-table .sku { max-width: none; overflow: visible; text-overflow: clip; white-space: normal; word-break: break-word; }
       .inv-toolbar { flex-direction: column; align-items: stretch; }
       .inv-actions { flex-wrap: wrap; }
       .inv-actions .btn { flex: 1 1 calc(50% - .4rem); }
