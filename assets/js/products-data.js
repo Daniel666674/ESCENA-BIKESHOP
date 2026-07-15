@@ -1,5 +1,171 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Wellgo Negro",
+  "brand": "Wellgo",
+  "cat": "pedales",
+  "spec": "• Negro •",
+  "price": 60000,
+  "sku": "PDL",
+  "units": 2,
+  "tag": "Top!",
+  "imgs": [
+   "assets/img/products/pedales-wellgo-negro.jpg?v=1784153746515",
+   "assets/img/products/pedales-wellgo-negro-2.jpg?v=1784153748363",
+   "assets/img/products/pedales-wellgo-negro-3.jpg?v=1784153750038"
+  ],
+  "slug": "pedales-wellgo-negro",
+  "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1784153746515"
+ },
+ {
+  "n": "Tenedor GW Destructor Tornasol",
+  "brand": "GW",
+  "cat": "horquillas",
+  "spec": "• Tornasol •",
+  "price": 86000,
+  "sku": "TND",
+  "units": 2,
+  "tag": "Nuevo!",
+  "imgs": [
+   "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784153752086",
+   "assets/img/products/tenedor-gw-destructor-tornasol-2.jpg?v=1784153753998",
+   "assets/img/products/tenedor-gw-destructor-tornasol-3.jpg?v=1784153755990",
+   "assets/img/products/tenedor-gw-destructor-tornasol-4.jpg?v=1784153757901"
+  ],
+  "colors": [
+   {
+    "label": "Tornasol",
+    "units": 2
+   }
+  ],
+  "slug": "tenedor-gw-destructor-tornasol",
+  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784153752086"
+ },
+ {
+  "n": "Grips Dailygrind",
+  "brand": "Dailygrind",
+  "cat": "punos",
+  "spec": "• Negro • Café • Lava •",
+  "price": 50000,
+  "sku": "GRIP",
+  "units": 6,
+  "tag": "Top!",
+  "imgs": [
+   "assets/img/products/grips-dailygrind.jpg?v=1784153759831",
+   "assets/img/products/grips-dailygrind-2.jpg?v=1784153761769",
+   "assets/img/products/grips-dailygrind-3.jpg?v=1784153763408",
+   "assets/img/products/grips-dailygrind-4.jpg?v=1784153765072",
+   "assets/img/products/grips-dailygrind-5.jpg?v=1784153766719",
+   "assets/img/products/grips-dailygrind-6.jpg?v=1784153768081"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 2
+   },
+   {
+    "label": "Café",
+    "units": 2
+   },
+   {
+    "label": "Lava",
+    "units": 2
+   }
+  ],
+  "imgColorMap": {
+   "Negro": [
+    0,
+    1
+   ],
+   "Café": [
+    2,
+    3
+   ],
+   "Lava": [
+    4,
+    5
+   ]
+  },
+  "slug": "grips-dailygrind",
+  "img": "assets/img/products/grips-dailygrind.jpg?v=1784153759831"
+ },
+ {
+  "n": "Plato Volume Guardia 28T",
+  "brand": "Volume",
+  "cat": "pinones",
+  "spec": "• Guardia • 28T •",
+  "price": 270000,
+  "sku": "PLT",
+  "units": 1,
+  "tag": "Top!",
+  "imgs": [
+   "assets/img/products/plato-volume-guardia-28t.jpg?v=1784153770220",
+   "assets/img/products/plato-volume-guardia-28t-2.jpg?v=1784153772660",
+   "assets/img/products/plato-volume-guardia-28t-3.jpg?v=1784153774585",
+   "assets/img/products/plato-volume-guardia-28t-4.jpg?v=1784153776104"
+  ],
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1
+   }
+  ],
+  "slug": "plato-volume-guardia-28t",
+  "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1784153770220"
+ },
+ {
+  "n": "Marco GW Destructor Tornasol",
+  "brand": "GW",
+  "cat": "marcos",
+  "spec": "• Tornasol • Medida: “20.5”",
+  "price": 250000,
+  "sku": "MRC",
+  "units": 1,
+  "tag": "Nuevo!",
+  "imgs": [
+   "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784153777781",
+   "assets/img/products/marco-gw-destructor-tornasol-2.jpg?v=1784153779601",
+   "assets/img/products/marco-gw-destructor-tornasol-3.jpg?v=1784153781303",
+   "assets/img/products/marco-gw-destructor-tornasol-4.jpg?v=1784153783138",
+   "assets/img/products/marco-gw-destructor-tornasol-5.jpg?v=1784153784773",
+   "assets/img/products/marco-gw-destructor-tornasol-6.jpg?v=1784153786580",
+   "assets/img/products/marco-gw-destructor-tornasol-7.jpg?v=1784153788418",
+   "assets/img/products/marco-gw-destructor-tornasol-8.jpg?v=1784153790163",
+   "assets/img/products/marco-gw-destructor-tornasol-9.jpg?v=1784153791900"
+  ],
+  "sizes": [
+   {
+    "label": "• “20.5” •",
+    "units": 1
+   }
+  ],
+  "slug": "marco-gw-destructor-tornasol",
+  "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784153777781"
+ },
+ {
+  "n": "Timón GW Destructor Tornasol",
+  "brand": "GW",
+  "cat": "manubrios",
+  "spec": "Tornasol • Acero GW • Medida: 10",
+  "price": 80000,
+  "sku": "TMN",
+  "units": 0,
+  "tag": "Nuevo!",
+  "imgs": [
+   "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919",
+   "assets/img/products/timon-gw-destructor-tornasol-2.jpg?v=1784153795741",
+   "assets/img/products/timon-gw-destructor-tornasol-3.jpg?v=1784153797741",
+   "assets/img/products/timon-gw-destructor-tornasol-4.jpg?v=1784153799765"
+  ],
+  "sizes": [
+   {
+    "label": "• “10” •",
+    "units": 0
+   }
+  ],
+  "slug": "timon-gw-destructor-tornasol",
+  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919"
+ },
+ {
   "n": "Timón Cult Heavens Gate 4P Cromado",
   "brand": "Cult",
   "cat": "manubrios",
