@@ -1,5 +1,41 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timón Cult Heavens Gate 4P Cromado",
+  "brand": "Cult",
+  "cat": "manubrios",
+  "spec": "Cromado • “9.42 - 9.65",
+  "price": 400000,
+  "sku": "TMN",
+  "units": 4,
+  "tag": "Top 🔥!",
+  "imgs": [
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784151306441",
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1784151307956",
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado-3.jpg?v=1784151309438",
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado-4.jpg?v=1784151310946",
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado-5.jpg?v=1784151312449",
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado-6.jpg?v=1784151313853"
+  ],
+  "sizes": [
+   {
+    "label": "• “9.42” • “9.65”",
+    "units": 4
+   }
+  ],
+  "slug": "timon-cult-heavens-gate-4p-cromado",
+  "colors": [
+   {
+    "label": "Cromado",
+    "units": 2
+   },
+   {
+    "label": "Negro",
+    "units": 2
+   }
+  ],
+  "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784151306441"
+ },
+ {
   "n": "Silla Pivotal Eighties Zebra",
   "brand": "Eighties",
   "cat": "sillines",
