@@ -1,5 +1,87 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Marco GW Destructor Azul 20.5”",
+  "brand": "GW",
+  "cat": "marcos",
+  "spec": "Nacional • Azul • 20.5”",
+  "price": 180000,
+  "sku": "MRC",
+  "units": 1,
+  "tag": "Nacional",
+  "imgs": [
+   "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069",
+   "assets/img/products/marco-gw-destructor-azul-20-5-2.jpg?v=1784157840425",
+   "assets/img/products/marco-gw-destructor-azul-20-5-3.jpg?v=1784157841860",
+   "assets/img/products/marco-gw-destructor-azul-20-5-4.jpg?v=1784157843230",
+   "assets/img/products/marco-gw-destructor-azul-20-5-5.jpg?v=1784157844826",
+   "assets/img/products/marco-gw-destructor-azul-20-5-6.jpg?v=1784157846889"
+  ],
+  "sizes": [
+   {
+    "label": "20.5”",
+    "units": 1
+   }
+  ],
+  "slug": "marco-gw-destructor-azul-20-5",
+  "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069"
+ },
+ {
+  "n": "Marco Federal Command Negro 20.5” x Cola 12.5”",
+  "brand": "Federal",
+  "cat": "marcos",
+  "spec": "Negro • 20.5” x 12.5”",
+  "price": 1660000,
+  "sku": "MRC",
+  "units": 1,
+  "tag": "Edición Especial",
+  "imgs": [
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784157848220",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784157849695",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-3.jpg?v=1784157850967",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-4.jpg?v=1784157852335",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-5.jpg?v=1784157853865",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-6.jpg?v=1784157855331",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-7.jpg?v=1784157856973"
+  ],
+  "sizes": [
+   {
+    "label": "20.5 x 12.5",
+    "units": 1
+   }
+  ],
+  "slug": "marco-federal-command-negro-20-5-x-cola-12-5",
+  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784157848220"
+ },
+ {
+  "n": "Marco Federal Chiller 20.75” Cola 12.7”",
+  "brand": "Federal",
+  "cat": "marcos",
+  "spec": "Negro • 20.75” • Cola 12.7”",
+  "price": 1660000,
+  "sku": "MRC",
+  "units": 1,
+  "tag": "Edición Especial",
+  "imgs": [
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784157860339",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1784157862260",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-3.jpg?v=1784157864500",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-4.jpg?v=1784157866335",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-5.jpg?v=1784157868021",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-6.jpg?v=1784157869778",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-7.jpg?v=1784157871541",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-8.jpg?v=1784157873619",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-9.jpg?v=1784157875566"
+  ],
+  "sizes": [
+   {
+    "label": "“20.75 x 12.7”",
+    "units": 1
+   }
+  ],
+  "slug": "marco-federal-chiller-20-75-cola-12-7",
+  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784157860339"
+ },
+ {
   "n": "Coraza Innova Tire 20 x 2.40",
   "brand": "Innova",
   "cat": "corazas",
