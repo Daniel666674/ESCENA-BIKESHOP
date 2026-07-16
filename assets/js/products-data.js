@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cassette Profle Mini Derecho",
+  "brand": "Profile",
+  "cat": "manzana-trasera",
+  "spec": "9T",
+  "price": 1300000,
+  "sku": "sahsadhjfhjas",
+  "units": 2,
+  "slug": "cassette-profle-mini-derecho",
+  "img": "assets/img/products/cassette-profle-mini-derecho.jpg?v=1784164462529"
+ },
+ {
   "n": "Cassette Profile Mini Derecho",
   "brand": "Profile",
   "cat": "manzana-trasera",
