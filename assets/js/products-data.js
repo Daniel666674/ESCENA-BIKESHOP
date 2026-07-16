@@ -1,5 +1,26 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cassette Profile Mini Derecho",
+  "brand": "Profile",
+  "cat": "manzana-trasera",
+  "spec": "",
+  "price": 1300000,
+  "sku": "CASSETTE-PROFILE-MINI-DERECHO",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/cassette-profile-mini-derecho.jpg?v=1784164362390",
+   "assets/img/products/cassette-profile-mini-derecho-2.jpg?v=1784164363786"
+  ],
+  "colors": [
+   {
+    "label": "Azul",
+    "units": 1
+   }
+  ],
+  "slug": "cassette-profile-mini-derecho",
+  "img": "assets/img/products/cassette-profile-mini-derecho.jpg?v=1784164362390"
+ },
+ {
   "n": "Marco GW Destructor Azul 20.5”",
   "brand": "GW",
   "cat": "marcos",
