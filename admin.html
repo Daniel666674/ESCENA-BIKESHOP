@@ -491,8 +491,8 @@
           <input type="number" id="pmPrice" min="0" step="1000" required />
         </div>
         <div class="pmodal-field">
-          <label>SKU</label>
-          <input type="text" id="pmSku" />
+          <label>SKU <span style="color:var(--muted);font-weight:400;">(automático — puedes editarlo)</span></label>
+          <input type="text" id="pmSku" placeholder="CAT-MARCA-000" />
         </div>
         <div class="pmodal-field" id="pmUnitsField">
           <label>Unidades en stock</label>
@@ -614,6 +614,52 @@
   // unchanged. Everything else stays on the plain flat p.units field.
   var SIZE_CATEGORIES = { bielas: 1, pinones: 1, marcos: 1, stems: 1, manubrios: 1 };
   function isSizeCat(cat) { return !!SIZE_CATEGORIES[cat]; }
+
+  /* ---- Automated SKU generator: CAT-BRD-NNN (e.g. MRC-FED-001) ----
+     Category + brand map to fixed 3-letter codes; the sequence is the next free
+     number within a CAT-BRD prefix, scanned live from the catalog so two products
+     can never land on the same SKU. Assigned once and stored on the product —
+     never regenerated on edit, so a SKU stays stable for the product's life. */
+  var SKU_CAT_CODE = {
+    marcos: "MRC", stems: "CAN", manubrios: "TMN", horquillas: "TEN", bielas: "BIE",
+    "manzana-delantera": "MZD", "manzana-trasera": "MZT", rines: "RIN", corazas: "COR",
+    pinones: "PLT", pedales: "PED", sillines: "SIL", tijas: "PST", punos: "GRP",
+    "caja-frente": "CJF", "caja-centro": "CJC", clavijas: "PEG", tornilleria: "TOR",
+    piezas: "PZA", herramientas: "HER",
+    camisetas: "CAM", gorros: "GOR", gorras: "GRA", hoodies: "HOO", chaquetas: "CHA",
+    pantalones: "PAN", medias: "MED",
+    cascos: "CAS", guantes: "GUA", rodilleras: "ROD", canilleras: "CNL", tobilleras: "TOB",
+    "rodi-cani-tobilleras": "RCT", tenis: "TNS"
+  };
+  var SKU_BRAND_CODE = {
+    cult: "CLT", fiend: "FND", federal: "FED", odyssey: "ODY", demolition: "DMO",
+    mutanty: "MUT", mutany: "MUT", gw: "GWB", fate: "FAT", stolen: "STL", volume: "VOL",
+    fitbikeco: "FIT", "fit bike co": "FIT", shadow: "SHW", colony: "CLN", brainstorm: "BRN",
+    eighties: "EGT", "s&m": "SNM", "éclat": "ECL", eclat: "ECL", wethepeople: "WTP", bsd: "BSD",
+    animal: "ANM", primo: "PRM", profile: "PRO", innova: "INN", "innova tire": "INN",
+    wellgo: "WLG", dailygrind: "DGR", trueno: "TRU", rant: "RNT", "iron fist": "IRF",
+    total: "TOT", tukanbikes: "TKN"
+  };
+  function skuCatCode(cat) { return SKU_CAT_CODE[cat] || "XXX"; }
+  function skuBrandCode(brand) {
+    var b = (brand || "").trim().toLowerCase();
+    if (!b || b === "otro" || b === "sin marca" || b === "(sin marca)" || b === "-") return "GEN";
+    if (SKU_BRAND_CODE[b]) return SKU_BRAND_CODE[b];
+    if (b.indexOf("cult") === 0) return "CLT"; // messy brand fields that start with a known brand
+    var ascii = b.normalize ? b.normalize("NFKD").replace(/[\u0300-\u036f]/g, "") : b;
+    var alnum = ascii.replace(/[^a-z0-9]/g, "");
+    return (alnum.slice(0, 3).toUpperCase() || "GEN");
+  }
+  function pad3(n) { var s = String(n); while (s.length < 3) s = "0" + s; return s; }
+  // Next free CAT-BRD-NNN. `used` defaults to every SKU currently in the catalog.
+  function genSku(cat, brand, used) {
+    if (!used) { used = {}; inventoryCatalog.forEach(function (p) { if (p.sku) used[p.sku] = 1; }); }
+    var prefix = skuCatCode(cat) + "-" + skuBrandCode(brand);
+    var n = 1, sku;
+    do { sku = prefix + "-" + pad3(n); n++; } while (used[sku]);
+    return sku;
+  }
+  var skuAuto = false; // true while the product modal is auto-filling SKU for a new product
   // Which department page (breadcrumb + "Volver a la tienda" link) a category's
   // product page belongs to. Falls back to tienda.html for every BMX-parts
   // category so this only needs an entry when a category lives on its own
@@ -995,7 +1041,17 @@
   // pageNeedsRegen() correctly treats it as needing regeneration (safer default
   // than silently skipping a page that may have actually changed).
   function loadCatalog() {
-    return ESCENA_PRODUCTS.map(migrateProduct).map(function (p) {
+    var cat = ESCENA_PRODUCTS.map(migrateProduct);
+    // Legacy data shipped with missing / duplicated placeholder SKUs. Give every
+    // product a unique CAT-BRD-NNN in memory so the uniqueness guardrail never
+    // false-trips on old data; the real backfill to the live file happens when the
+    // owner imports the SKU'd CSV or edits + publishes a product.
+    var usedSku = {};
+    cat.forEach(function (p) {
+      if (!p.sku || usedSku[p.sku]) p.sku = genSku(p.cat, p.brand, usedSku);
+      usedSku[p.sku] = 1;
+    });
+    return cat.map(function (p) {
       p._pageSnapshot = pageSnapshotOf(p);
       return p;
     });
@@ -1052,7 +1108,7 @@
 
   /* ---- Guardrails ---- */
   function validateCatalog() {
-    var errs = [], seen = {};
+    var errs = [], seen = {}, seenSku = {};
     inventoryCatalog.forEach(function (p, i) {
       var where = '"' + (p.n || ("#" + (i + 1))) + '"';
       if (!p.n) errs.push("Producto #" + (i + 1) + " sin nombre.");
@@ -1062,6 +1118,7 @@
       if (isSizeCat(p.cat) && (!p.sizes || !p.sizes.length)) errs.push(where + ": agrega al menos una talla.");
       if (seen[p.slug]) errs.push("Código duplicado (" + p.slug + ") en " + where + ".");
       seen[p.slug] = true;
+      if (p.sku) { if (seenSku[p.sku]) errs.push(where + ": SKU duplicado (" + p.sku + ")."); seenSku[p.sku] = true; }
     });
     return errs;
   }
@@ -1119,11 +1176,13 @@
   /* ---- Product-page generation ---- */
   function copFmt(n) { return "$" + Math.round(n || 0).toLocaleString("es-CO"); }
   function jsonEsc(s) { return JSON.stringify(String(s == null ? "" : s)).slice(1, -1); }
-  function specRows(spec, catLabel, brand) {
-    var parts = (spec || "").split("·").map(function (x) { return x.trim(); }).filter(Boolean);
-    var r = parts.map(function (v, i) { return '<div class="spec-row"><div class="k">Detalle ' + (i + 1) + '</div><div class="v">' + esc(v) + '</div></div>'; });
-    r.push('<div class="spec-row"><div class="k">Categoría</div><div class="v">' + esc(catLabel) + '</div></div>');
-    if (brand) r.push('<div class="spec-row"><div class="k">Marca</div><div class="v">' + esc(brand) + '</div></div>');
+  // Each "·"/"•"-separated spec segment becomes its own line; category and brand
+  // follow as muted meta rows. Rendered inside <ul class="spec-list"> on the page.
+  function specItems(spec, catLabel, brand) {
+    var parts = (spec || "").split(/[·•]/).map(function (x) { return x.trim(); }).filter(Boolean);
+    var r = parts.map(function (v) { return '<li>' + esc(v) + '</li>'; });
+    r.push('<li class="meta"><span>Categoría</span><span>' + esc(catLabel) + '</span></li>');
+    if (brand) r.push('<li class="meta"><span>Marca</span><span>' + esc(brand) + '</span></li>');
     return r.join('\n');
   }
   function waMsgFor(p) {
@@ -1238,7 +1297,7 @@
       UNITS: String(typeof initialUnits === "number" ? initialUnits : 12),
       AVAILABILITY: (typeof p.units === "number" && p.units <= 0) ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
       TAG_SPAN: p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '',
-      SPEC_ROWS: specRows(p.spec, catLabel, p.brand), WA_HREF: waHrefFor(p), RELATED_SECTION: relatedFor(p),
+      SPEC_ITEMS: specItems(p.spec, catLabel, p.brand), WA_HREF: waHrefFor(p), RELATED_SECTION: relatedFor(p),
       PRIMARY_IMG: esc("../" + ((p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg")),
       GALLERY_JSON: gallery.json, GALLERY_DOTS: gallery.dots, GALLERY_THUMBS: gallery.thumbs,
       NAME_JSON: jsonEsc(p.n), BRAND_JSON: jsonEsc(p.brand || ""), SPEC_JSON: jsonEsc(p.spec || ""),
@@ -1574,7 +1633,8 @@
     document.getElementById("pmBrand").value = p ? p.brand : "";
     document.getElementById("pmSpec").value = p ? p.spec : "";
     document.getElementById("pmPrice").value = p ? p.price : "";
-    document.getElementById("pmSku").value = p ? p.sku : "";
+    skuAuto = !p; // new product -> auto-generate SKU as brand/category are filled in
+    document.getElementById("pmSku").value = p ? (p.sku || "") : genSku(cat, "");
     document.getElementById("pmUnits").value = p ? p.units : 0;
     document.getElementById("pmTag").value = p ? p.tag : "";
     document.getElementById("pmCost").value = p && p.cost ? p.cost : "";
@@ -1797,6 +1857,17 @@
 
     document.getElementById("pmPrice").addEventListener("input", updateMarginReadout);
     document.getElementById("pmCost").addEventListener("input", updateMarginReadout);
+    // Auto-fill SKU (new products only) as brand/category are entered; stop the
+    // moment the user types their own SKU so a manual value is never overwritten.
+    function refreshAutoSku() {
+      if (editingIdx !== null || !skuAuto) return;
+      document.getElementById("pmSku").value = genSku(
+        document.getElementById("pmCat").value,
+        document.getElementById("pmBrand").value.trim()
+      );
+    }
+    document.getElementById("pmBrand").addEventListener("input", refreshAutoSku);
+    document.getElementById("pmSku").addEventListener("input", function () { skuAuto = false; });
     document.getElementById("pmodalAddPhotoBtn").addEventListener("click", function () {
       document.getElementById("pmodalFileInput").click();
     });
@@ -1878,6 +1949,7 @@
 
     document.getElementById("pmCat").addEventListener("change", function () {
       toggleUnitsVsSizes(this.value);
+      refreshAutoSku();
     });
     document.getElementById("pmSizesAddBtn").addEventListener("click", function () {
       modalSizes.push({ label: "", units: 0 });
@@ -1977,13 +2049,13 @@
         if (!isSizeCat(catVal)) delete cur.sizes; // category changed away from a size-category
         if (!fields.colors) delete cur.colors; // admin cleared all color rows
         if (!fields.imgColorMap) delete cur.imgColorMap; // admin cleared all photo color tags
-        if (!cur.sku) cur.sku = cur.slug.toUpperCase();
+        if (!cur.sku) cur.sku = genSku(cur.cat, cur.brand);
         markDirty(cur.slug);
         showToast("Producto actualizado");
       } else {
         var newSlug = makeSlug(name) || ("producto-" + Date.now());
         fields.slug = newSlug;
-        fields.sku = fields.sku || newSlug.toUpperCase();
+        fields.sku = fields.sku || genSku(catVal, fields.brand);
         fields.published = false; // goes live when Publicar generates its page
         inventoryCatalog.unshift(fields);
         markDirty(fields.slug);
