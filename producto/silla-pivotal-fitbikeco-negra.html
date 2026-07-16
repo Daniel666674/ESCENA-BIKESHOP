@@ -388,36 +388,36 @@ header.top-bar .brand .name { color: #fff; }
 <div class="related">
   <h2>También te puede gustar</h2>
   <div class="related-grid">
-    <a class="r-card" href="fiend-fiending-stem-negro.html">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/fiend-fiending-stem-negro.jpg" alt="Silla Fiend Negra - Fiend BMX" loading="lazy" width="300" height="300" /></div>
+    <a class="r-card" href="silla-pivotal-eighties-zebra.html">
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Edición Especial!</span><img src="../assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1784139733693" alt="Silla Pivotal Eighties Zebra - Eighties BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
-          <span class="brand-lbl">Fiend</span>
-          <h3>Silla Fiend Negra</h3>
-          <div class="price">$195.000 COP</div>
+          <span class="brand-lbl">Eighties</span>
+          <h3>Silla Pivotal Eighties Zebra</h3>
+          <div class="price">$180.000 COP</div>
         </div>
       </a>
-<a class="r-card" href="cult-sillin-cuadros.html">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/cult-sillin-cuadros.jpg" alt="Silla Cult Pivotal Cuadros - Cult BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Cult</span>
-          <h3>Silla Cult Pivotal Cuadros</h3>
-          <div class="price">$175.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="fiend-mills-sillin-blanco.html">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/fiend-mills-sillin-blanco.jpg" alt="Silla Fiend Mills Blanca - Fiend BMX" loading="lazy" width="300" height="300" /></div>
+<a class="r-card" href="silla-pivotal-fiend-reynolds-v2-zebra.html">
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Edición Especial 🔥!</span><img src="../assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1784138416524" alt="Silla Pivotal Fiend Reynolds V2  Zebra - Fiend BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Fiend</span>
-          <h3>Silla Fiend Mills Blanca</h3>
-          <div class="price">$175.000 COP</div>
+          <h3>Silla Pivotal Fiend Reynolds V2  Zebra</h3>
+          <div class="price">$205.000 COP</div>
         </div>
       </a>
-<a class="r-card" href="fiend-mills-sillin-negro.html">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/fiend-mills-sillin-negro.jpg" alt="Silla Fiend Mills Negra - Fiend BMX" loading="lazy" width="300" height="300" /></div>
+<a class="r-card" href="silla-pivotal-fate-negra.html">
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Nuevo 🔥!</span><img src="../assets/img/products/silla-pivotal-fate-negra.jpg?v=1784138452598" alt="Silla Pivotal Fate Negra - Fate BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Fate</span>
+          <h3>Silla Pivotal Fate Negra</h3>
+          <div class="price">$130.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="silla-pivotal-fiend-reynolds-negra.html">
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Top 🔥!</span><img src="../assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1784138458192" alt="Silla Pivotal Fiend Reynolds Negra - Fiend BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Fiend</span>
-          <h3>Silla Fiend Mills Negra</h3>
-          <div class="price">$175.000 COP</div>
+          <h3>Silla Pivotal Fiend Reynolds Negra</h3>
+          <div class="price">$205.000 COP</div>
         </div>
       </a>
   </div>
@@ -546,6 +546,10 @@ header.top-bar .brand .name { color: #fff; }
   }
 
   /* ---- Product photo gallery (slides + zoom) ---- */
+  // Reassigned by pdpGallery() below (if a gallery exists on this page) to
+  // actually filter the thumbnails/dots to a color's photos; called by the
+  // color variant selector further down. No-op otherwise.
+  var pdpFilterGallery = function(){};
   (function pdpGallery(){
     var wrap = document.getElementById("pdpGallery");
     if (!wrap) return;
@@ -565,6 +569,22 @@ header.top-bar .brand .name { color: #fff; }
       var thumbs = thumbsWrap ? thumbsWrap.querySelectorAll("button") : [];
       for (var t = 0; t < thumbs.length; t++) thumbs[t].classList.toggle("is-active", t === idx);
     }
+
+    // Shows only the given photo indices (thumbs + dots); null/empty = show
+    // all. Jumps the main image to the first allowed index if the current one
+    // isn't in the new set.
+    pdpFilterGallery = function(indices){
+      var allow = (indices && indices.length) ? indices : null;
+      [dotsWrap, thumbsWrap].forEach(function (list) {
+        if (!list) return;
+        var btns = list.querySelectorAll("button[data-i]");
+        for (var k = 0; k < btns.length; k++) {
+          var i2 = parseInt(btns[k].getAttribute("data-i"), 10);
+          btns[k].style.display = (!allow || allow.indexOf(i2) !== -1) ? "" : "none";
+        }
+      });
+      if (allow && allow.indexOf(idx) === -1) show(allow[0]);
+    };
 
     if (imgs.length > 1) {
       if (dotsWrap) {
@@ -713,6 +733,15 @@ header.top-bar .brand .name { color: #fff; }
       var liveKey = GROUP_LIVE_KEY[group.id];
       var liveList = (liveProduct && liveKey) ? liveProduct[liveKey] : null;
 
+      // Color group only: maps a color label to the subset of gallery photo
+      // indices that show that color (baked in at publish time from the
+      // admin panel's per-photo color tags). Absent when no photo was tagged.
+      var imgMap = null;
+      if (group.id === "pdpVariantColor") {
+        var rawImgMap = group.getAttribute("data-img-map");
+        if (rawImgMap) { try { imgMap = JSON.parse(rawImgMap); } catch (e) { imgMap = null; } }
+      }
+
       // Sync each button's stock/disabled state from the live catalog — an
       // option could have sold out (or come back) since this page was last
       // generated, independent of any full page regeneration.
@@ -743,6 +772,7 @@ header.top-bar .brand .name { color: #fff; }
           }
           applyStock(units);
         }
+        if (imgMap) pdpFilterGallery(imgMap[val] || null);
         if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
       }
 
