@@ -1,20 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "slug": "cassette-profle-mini-derecho",
   "n": "Cassette Profle Mini Derecho",
   "brand": "Profile",
   "cat": "manzana-trasera",
-  "spec": "9T",
+  "spec": "9T · Cassette · 36H · Aluminio 6061 · Derecho",
   "price": 1300000,
   "sku": "sahsadhjfhjas",
   "units": 2,
-  "slug": "cassette-profle-mini-derecho",
   "img": "assets/img/products/cassette-profle-mini-derecho.jpg?v=1784164462529"
  },
  {
+  "slug": "marco-gw-destructor-azul-20-5",
   "n": "Marco GW Destructor Azul 20.5”",
   "brand": "GW",
   "cat": "marcos",
-  "spec": "Nacional • Azul • 20.5”",
+  "spec": "Acero · 20.5\" · Azul",
   "price": 180000,
   "sku": "MRC",
   "units": 1,
@@ -33,14 +34,14 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "marco-gw-destructor-azul-20-5",
   "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069"
  },
  {
+  "slug": "marco-federal-command-negro-20-5-x-cola-12-5",
   "n": "Marco Federal Command Negro 20.5” x Cola 12.5”",
   "brand": "Federal",
   "cat": "marcos",
-  "spec": "Negro • 20.5” x 12.5”",
+  "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.5\" · Negro",
   "price": 1660000,
   "sku": "MRC",
   "units": 1,
@@ -60,14 +61,14 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "marco-federal-command-negro-20-5-x-cola-12-5",
   "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784157848220"
  },
  {
+  "slug": "marco-federal-chiller-20-75-cola-12-7",
   "n": "Marco Federal Chiller 20.75” Cola 12.7”",
   "brand": "Federal",
   "cat": "marcos",
-  "spec": "Negro • 20.75” • Cola 12.7”",
+  "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.7\" · Negro",
   "price": 1660000,
   "sku": "MRC",
   "units": 1,
@@ -89,10 +90,10 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "marco-federal-chiller-20-75-cola-12-7",
   "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784157860339"
  },
  {
+  "slug": "coraza-innova-tire-20-x-2-40",
   "n": "Coraza Innova Tire 20 x 2.40",
   "brand": "Innova",
   "cat": "corazas",
@@ -134,37 +135,14 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "imgColorMap": {
-   "Camuflada Negro Gris": [
-    0,
-    1,
-    2,
-    3
-   ],
-   "Camuflada Lila": [
-    4,
-    5,
-    6
-   ],
-   "Camuflada Gris": [
-    7,
-    8,
-    9
-   ],
-   "Camuflada Azul": [
-    10,
-    11,
-    12
-   ]
-  },
-  "slug": "coraza-innova-tire-20-x-2-40",
   "img": "assets/img/products/coraza-innova-tire-20-x-2-40.jpg?v=1784157072000"
  },
  {
+  "slug": "cana-volume-bison-negra-frontload",
   "n": "Caña Volume Bison Negra - FrontLoad",
   "brand": "Volume",
   "cat": "stems",
-  "spec": "Alcance: 50mm",
+  "spec": "Carga frontal · Alcance 50mm · Aluminio CNC",
   "price": 330000,
   "sku": "STEAM",
   "units": 1,
@@ -181,14 +159,14 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "cana-volume-bison-negra-frontload",
   "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322"
  },
  {
+  "slug": "pedales-wellgo-negro",
   "n": "Pedales Wellgo Negro",
   "brand": "Wellgo",
   "cat": "pedales",
-  "spec": "• Negro •",
+  "spec": "Plataforma aluminio · 9/16\" · Negro",
   "price": 60000,
   "sku": "PDL",
   "units": 2,
@@ -198,10 +176,10 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1784153748363",
    "assets/img/products/pedales-wellgo-negro-3.jpg?v=1784153750038"
   ],
-  "slug": "pedales-wellgo-negro",
   "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1784153746515"
  },
  {
+  "slug": "tenedor-gw-destructor-tornasol",
   "n": "Tenedor GW Destructor Tornasol",
   "brand": "GW",
   "cat": "horquillas",
@@ -222,14 +200,14 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "slug": "tenedor-gw-destructor-tornasol",
   "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784153752086"
  },
  {
+  "slug": "grips-dailygrind",
   "n": "Grips Dailygrind",
   "brand": "Dailygrind",
   "cat": "punos",
-  "spec": "• Negro • Café • Lava •",
+  "spec": "Goma · 160mm · 30.5mm · acanalado hongo",
   "price": 50000,
   "sku": "GRIP",
   "units": 6,
@@ -256,28 +234,14 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "imgColorMap": {
-   "Negro": [
-    0,
-    1
-   ],
-   "Café": [
-    2,
-    3
-   ],
-   "Lava": [
-    4,
-    5
-   ]
-  },
-  "slug": "grips-dailygrind",
   "img": "assets/img/products/grips-dailygrind.jpg?v=1784153759831"
  },
  {
+  "slug": "plato-volume-guardia-28t",
   "n": "Plato Volume Guardia 28T",
   "brand": "Volume",
   "cat": "pinones",
-  "spec": "• Guardia • 28T •",
+  "spec": "28T · Aluminio CNC 7075 · Guardia · 24mm",
   "price": 270000,
   "sku": "PLT",
   "units": 1,
@@ -294,14 +258,14 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "plato-volume-guardia-28t",
   "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1784153770220"
  },
  {
+  "slug": "marco-gw-destructor-tornasol",
   "n": "Marco GW Destructor Tornasol",
   "brand": "GW",
   "cat": "marcos",
-  "spec": "• Tornasol • Medida: “20.5”",
+  "spec": "Acero · 20.5\" · Tornasol",
   "price": 250000,
   "sku": "MRC",
   "units": 1,
@@ -323,10 +287,10 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "marco-gw-destructor-tornasol",
   "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784153777781"
  },
  {
+  "slug": "timon-gw-destructor-tornasol",
   "n": "Timón GW Destructor Tornasol",
   "brand": "GW",
   "cat": "manubrios",
@@ -347,14 +311,14 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "slug": "timon-gw-destructor-tornasol",
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919"
  },
  {
+  "slug": "timon-cult-heavens-gate-4p-cromado",
   "n": "Timón Cult Heavens Gate 4P Cromado",
   "brand": "Cult",
   "cat": "manubrios",
-  "spec": "Cromado • “9.42 - 9.65",
+  "spec": "Cromoly tratado al calor · 28\" ancho · Cromado · 11.5° retroceso · 3° elevación",
   "price": 400000,
   "sku": "TMN",
   "units": 4,
@@ -373,7 +337,6 @@ window.ESCENA_PRODUCTS = [
     "units": 4
    }
   ],
-  "slug": "timon-cult-heavens-gate-4p-cromado",
   "colors": [
    {
     "label": "Cromado",
@@ -387,6 +350,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784151306441"
  },
  {
+  "slug": "silla-pivotal-eighties-zebra",
   "n": "Silla Pivotal Eighties Zebra",
   "brand": "Eighties",
   "cat": "sillines",
@@ -413,20 +377,14 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "slug": "silla-pivotal-eighties-zebra",
-  "imgColorMap": {
-   "Morado/Negro": [
-    4,
-    5
-   ]
-  },
   "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1784139733693"
  },
  {
+  "slug": "grips-fiend-flangeless",
   "n": "Grips Fiend Flangeless",
   "brand": "Fiend",
   "cat": "punos",
-  "spec": "Flangeless",
+  "spec": "Goma · 147mm · Flangeless · patrón de nervadura angular",
   "price": 50000,
   "sku": "GRIPS",
   "units": 4,
@@ -445,14 +403,14 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "slug": "grips-fiend-flangeless",
   "img": "assets/img/products/grips-fiend-flangeless.jpg?v=1784139481764"
  },
  {
+  "slug": "grips-fiend-palmere",
   "n": "Grips Fiend Palmere",
   "brand": "Fiend",
   "cat": "punos",
-  "spec": "Palmere",
+  "spec": "Goma · 153mm · Flangeless · nervadura tetraédrica",
   "price": 50000,
   "sku": "GRIPS",
   "units": 2,
@@ -461,7 +419,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/grips-fiend-palmere.jpg?v=1784139484875",
    "assets/img/products/grips-fiend-palmere-2.jpg?v=1784139486656"
   ],
-  "slug": "grips-fiend-palmere",
   "colors": [
    {
     "label": "Negro",
@@ -475,10 +432,11 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/grips-fiend-palmere.jpg?v=1784139484875"
  },
  {
+  "slug": "grips-federal-command-negro",
   "n": "Grips Federal Command Negro",
   "brand": "Federal",
   "cat": "punos",
-  "spec": "Signature Command • Negro",
+  "spec": "Goma · 168mm · 32mm · acanalado multidireccional",
   "price": 50000,
   "sku": "GRIPS",
   "units": 2,
@@ -487,10 +445,10 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/grips-federal-command-negro.jpg?v=1784139488275",
    "assets/img/products/grips-federal-command-negro-2.jpg?v=1784139489794"
   ],
-  "slug": "grips-federal-command-negro",
   "img": "assets/img/products/grips-federal-command-negro.jpg?v=1784139488275"
  },
  {
+  "slug": "plato-fate-guardia-negro-28t",
   "n": "Plato Fate Guardia Negro 28T.",
   "brand": "Fate",
   "cat": "pinones",
@@ -509,10 +467,10 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "plato-fate-guardia-negro-28t",
   "img": "assets/img/products/plato-fate-guardia-negro-28t.jpg?v=1784139491454"
  },
  {
+  "slug": "pedales-fate-negro",
   "n": "Pedales Fate Negro",
   "brand": "Fate",
   "cat": "pedales",
@@ -526,14 +484,14 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-fate-negro-2.jpg?v=1784139497268",
    "assets/img/products/pedales-fate-negro-3.jpg?v=1784139498920"
   ],
-  "slug": "pedales-fate-negro",
   "img": "assets/img/products/pedales-fate-negro.jpg?v=1784139495189"
  },
  {
+  "slug": "silla-pivotal-fiend-reynolds-v2-zebra",
   "n": "Silla Pivotal Fiend Reynolds V2  Zebra",
   "brand": "Fiend",
   "cat": "sillines",
-  "spec": "Pivotal • Zebra • Base reforzada anti-flexión",
+  "spec": "Pivotal · Lona Zebra · Base reforzada · Relleno grueso",
   "price": 205000,
   "sku": "SLA",
   "units": 1,
@@ -544,14 +502,14 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-3.jpg?v=1784138420747",
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-4.jpg?v=1784138422794"
   ],
-  "slug": "silla-pivotal-fiend-reynolds-v2-zebra",
   "img": "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1784138416524"
  },
  {
+  "slug": "grips-s-m-mike-hoder",
   "n": "Grips S&M Mike Hoder",
   "brand": "S&M",
   "cat": "punos",
-  "spec": "Mike Hoder",
+  "spec": "Goma · 160mm · 31.5mm · Super suave",
   "price": 50000,
   "sku": "GRIPS",
   "units": 4,
@@ -574,22 +532,10 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "slug": "grips-s-m-mike-hoder",
-  "imgColorMap": {
-   "Negro": [
-    0,
-    1,
-    2
-   ],
-   "Morado": [
-    3,
-    4,
-    5
-   ]
-  },
   "img": "assets/img/products/grips-s-m-mike-hoder-3.jpg?v=1784138431279"
  },
  {
+  "slug": "silla-pivotal-fitbikeco-negra",
   "n": "Silla Pivotal Fitbikeco Negra",
   "brand": "Fitbikeco",
   "cat": "sillines",
@@ -603,14 +549,14 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fitbikeco-negra-2.jpg?v=1784138441275",
    "assets/img/products/silla-pivotal-fitbikeco-negra-3.jpg?v=1784138443126"
   ],
-  "slug": "silla-pivotal-fitbikeco-negra",
   "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1784138439638"
  },
  {
+  "slug": "cana-shadow-finest-negra-topload",
   "n": "Caña Shadow Finest Negra TopLoad",
   "brand": "Shadow",
   "cat": "stems",
-  "spec": "Top Load • Negro • 48mm",
+  "spec": "Carga superior · Alcance 48mm · Aluminio CNC",
   "price": 310000,
   "sku": "STEAM",
   "units": 1,
@@ -627,10 +573,10 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "cana-shadow-finest-negra-topload",
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784138444730"
  },
  {
+  "slug": "silla-pivotal-fate-negra",
   "n": "Silla Pivotal Fate Negra",
   "brand": "Fate",
   "cat": "sillines",
@@ -644,14 +590,14 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fate-negra-2.jpg?v=1784138454479",
    "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1784138456279"
   ],
-  "slug": "silla-pivotal-fate-negra",
   "img": "assets/img/products/silla-pivotal-fate-negra.jpg?v=1784138452598"
  },
  {
+  "slug": "silla-pivotal-fiend-reynolds-negra",
   "n": "Silla Pivotal Fiend Reynolds Negra",
   "brand": "Fiend",
   "cat": "sillines",
-  "spec": "Pivotal Negra",
+  "spec": "Pivotal · Cuero sintético · Base reforzada",
   "price": 205000,
   "sku": "SLA",
   "units": 1,
@@ -661,14 +607,14 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fiend-reynolds-negra-2.jpg?v=1784138459718",
    "assets/img/products/silla-pivotal-fiend-reynolds-negra-3.jpg?v=1784138461542"
   ],
-  "slug": "silla-pivotal-fiend-reynolds-negra",
   "img": "assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1784138458192"
  },
  {
+  "slug": "silla-pivotal-fiend-mills",
   "n": "Silla Pivotal Fiend Mills",
   "brand": "Fiend",
   "cat": "sillines",
-  "spec": "Pivotal",
+  "spec": "Pivotal · Cuero · Base reforzada · 3 piezas",
   "price": 200000,
   "sku": "SLA",
   "units": 3,
@@ -684,14 +630,14 @@ window.ESCENA_PRODUCTS = [
     "units": 3
    }
   ],
-  "slug": "silla-pivotal-fiend-mills",
   "img": "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1784138463438"
  },
  {
+  "slug": "plato-odyssey-big-boyd-28t",
   "n": "Plato Odyssey Big Boyd 28T",
   "brand": "Odyssey",
   "cat": "pinones",
-  "spec": "SIGNATURE BOYD HILDER 28T NEGRO",
+  "spec": "28T · Aluminio 7075-T6 · 5 Radios · Negro",
   "price": 240000,
   "sku": "PLT",
   "units": 1,
@@ -713,14 +659,14 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "plato-odyssey-big-boyd-28t",
   "img": "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1784138469320"
  },
  {
+  "slug": "cana-fiend-mills-topload",
   "n": "Caña Fiend Mills - TopLoad",
   "brand": "Fiend",
   "cat": "stems",
-  "spec": "TopLoad, Aluminio CNC, Alcance: 48mm",
+  "spec": "Carga superior · Alcance 48mm · Aluminio CNC",
   "price": 320000,
   "sku": "STEAM",
   "units": 1,
@@ -759,14 +705,14 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "cana-fiend-mills-topload",
   "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486"
  },
  {
+  "slug": "cana-shadow-ravage-topload",
   "n": "Caña Shadow Ravage - TopLoad",
   "brand": "Shadow",
   "cat": "stems",
-  "spec": "Alcance 53mm",
+  "spec": "Carga superior · Alcance 53mm · Aluminio CNC",
   "price": 200000,
   "sku": "STEAM",
   "units": 1,
@@ -788,7 +734,6 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "cana-shadow-ravage-topload",
   "colors": [
    {
     "label": "Morada",
@@ -806,10 +751,11 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805"
  },
  {
+  "slug": "cana-cult-salvation-v4-negra-topload",
   "n": "Caña Cult Salvation V4 Negra - TopLoad",
   "brand": "Cult",
   "cat": "stems",
-  "spec": "Alcance: 46mm",
+  "spec": "Carga superior · Alcance 46mm · Aluminio CNC",
   "price": 320000,
   "sku": "STEAM",
   "units": 1,
@@ -827,14 +773,14 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "cana-cult-salvation-v4-negra-topload",
   "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1784071875410"
  },
  {
+  "slug": "cana-volume-bison-frontload",
   "n": "Caña Volume Bison - FrontLoad",
   "brand": "Volume",
   "cat": "stems",
-  "spec": "Alcance 50 mm.",
+  "spec": "Carga frontal · Alcance 50mm · Aluminio CNC",
   "price": 330000,
   "sku": "STEAM",
   "units": 1,
@@ -853,10 +799,10 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "cana-volume-bison-frontload",
   "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954"
  },
  {
+  "slug": "plato-fitbikeco",
   "n": "Plato Fitbikeco",
   "brand": "Fitbikeco",
   "cat": "piezas",
@@ -869,14 +815,14 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/plato-fitbikeco.jpg?v=1784069585656",
    "assets/img/products/plato-fitbikeco-2.jpg?v=1784069586958"
   ],
-  "slug": "plato-fitbikeco",
   "img": "assets/img/products/plato-fitbikeco.jpg?v=1784069585656"
  },
  {
+  "slug": "marco-fitbikeco-str-negro",
   "n": "Marco Fitbikeco STR Negro",
   "brand": "Fitbikeco",
   "cat": "marcos",
-  "spec": "Única medida 20.75 x 12.6 cola",
+  "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.6\" · Negro",
   "price": 650000,
   "sku": "MRC",
   "units": 1,
@@ -896,14 +842,14 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "slug": "marco-fitbikeco-str-negro",
   "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011"
  },
  {
+  "slug": "marco-cult-biggie-jaume-sintes-hammertone",
   "n": "Marco Cult Biggie Jaume Sintes Hammertone",
   "brand": "Cult Biggie Jaume Sintes Hammertone",
   "cat": "marcos",
-  "spec": "20.5",
+  "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.9\" · Hammertone",
   "price": 1790000,
   "sku": "MRC",
   "units": 1,
@@ -920,7 +866,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-9.jpg?v=1784061991001",
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784087359163"
   ],
-  "slug": "marco-cult-biggie-jaume-sintes-hammertone",
   "sizes": [
    {
     "label": "20.5\"",
@@ -930,10 +875,11 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210"
  },
  {
+  "slug": "pedales-odyssey",
   "n": "Pedales Odyssey",
   "brand": "Odyssey",
   "cat": "pedales",
-  "spec": "Twist Pro Morado",
+  "spec": "Plataforma nylon · 12 pines · Morado",
   "price": 95000,
   "sku": "PDL",
   "units": 2,
@@ -942,14 +888,14 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-odyssey.jpg?v=1784059906159",
    "assets/img/products/pedales-odyssey-2.jpg?v=1784059908763"
   ],
-  "slug": "pedales-odyssey",
   "img": "assets/img/products/pedales-odyssey.jpg?v=1784059906159"
  },
  {
+  "slug": "pedales-demolition",
   "n": "Pedales Demolition",
   "brand": "Demolition",
   "cat": "pedales",
-  "spec": "Azul con blanco , Rojo con blanco , Gris con Blanco, Negro, Morado con blanco, Morado con Amarillo.",
+  "spec": "Plataforma nylon · 10 pines · Azul con blanco · Rojo con blanco · Negro · Morado con blanco",
   "price": 95000,
   "sku": "PDL",
   "units": 10,
@@ -971,14 +917,14 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-demolition-14.jpg?v=1784059573260",
    "assets/img/products/pedales-demolition-15.jpg?v=1784059575864"
   ],
-  "slug": "pedales-demolition",
   "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908"
  },
  {
+  "slug": "pedales-stolen",
   "n": "Pedales Stolen",
   "brand": "Stolen",
   "cat": "pedales",
-  "spec": "Verde, Azul, AguaMarina, Rojo, Amarillo Florecente.",
+  "spec": "Plataforma nylon · 12 pines · Verde · Azul · Rojo · Amarillo",
   "price": 75000,
   "sku": "PDL",
   "units": 5,
@@ -991,34 +937,34 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-stolen-5.jpg?v=1784058805501",
    "assets/img/products/pedales-stolen-6.jpg?v=1784058808108"
   ],
-  "slug": "pedales-stolen",
   "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983"
  },
  {
+  "slug": "cana-odyssey-cfl3",
   "n": "Caña Odyssey CFL3",
   "brand": "Odyssey",
   "cat": "stems",
-  "spec": "Aluminio CNC - 50mm - Front Load",
+  "spec": "Carga frontal · Alcance 50mm · Aluminio CNC",
   "price": 340000,
   "sku": "Odysseycfl3",
   "units": 1,
+  "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/cana-odyssey-cfl3.jpg?v=1784068154674",
    "assets/img/products/cana-odyssey-cfl3-2.jpg?v=1784068157052",
    "assets/img/products/cana-odyssey-cfl3-3.jpg?v=1784068159027",
    "assets/img/products/cana-odyssey-cfl3-4.jpg?v=1784068161154"
   ],
-  "slug": "cana-odyssey-cfl3",
   "sizes": [
    {
     "label": "50mm",
     "units": 1
    }
   ],
-  "tag": "Top 🔥",
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784068154674"
  },
  {
+  "slug": "cana-shadow-chula-48mm",
   "n": "Caña Shadow Chula 48mm",
   "brand": "Shadow",
   "cat": "stems",
@@ -1032,7 +978,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1784053122690",
    "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583"
   ],
-  "slug": "cana-shadow-chula-48mm",
   "sizes": [
    {
     "label": "48mm",
@@ -1042,10 +987,11 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105"
  },
  {
+  "slug": "marco-cult-biggie-hammertone",
   "n": "Marco Cult Biggie Hammertone",
   "brand": "Cult",
   "cat": "marcos",
-  "spec": "",
+  "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.9\" · Hammertone",
   "price": 1790000,
   "sku": "biggie hammertoe",
   "units": 2,
@@ -1059,52 +1005,51 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/marco-cult-biggie-hammertone-6.jpg?v=1784048468587",
    "assets/img/products/marco-cult-biggie-hammertone-7.jpg?v=1784048470248"
   ],
-  "slug": "marco-cult-biggie-hammertone",
-  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779",
   "sizes": [
    {
     "label": "Única",
     "units": 2
    }
-  ]
+  ],
+  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779"
  },
  {
+  "slug": "cana-s-m-enduro-40mm-negra",
   "n": "Caña S&M enduro 40MM Negra",
   "brand": "S&M",
   "cat": "stems",
-  "spec": "",
+  "spec": "Carga superior · Alcance 40mm · Aluminio CNC",
   "price": 350000,
   "sku": "S&MENDURO40",
   "units": 2,
-  "slug": "cana-s-m-enduro-40mm-negra",
+  "tag": "Nuevo",
   "sizes": [
    {
     "label": "40mm",
     "units": 2
    }
   ],
-  "tag": "Nuevo",
   "img": "assets/img/products/cana-s-m-enduro-40mm-negra.jpg"
  },
  {
+  "slug": "tenedor-cult-sect-v4-cromado-18mm",
   "n": "Tenedor Cult Sect V4 Cromado 18MM",
   "brand": "Cult",
   "cat": "horquillas",
-  "spec": "",
+  "spec": "Cromoly · 18mm offset · Cromado · Tubo recto",
   "price": 830000,
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 1,
-  "slug": "tenedor-cult-sect-v4-cromado-18mm",
   "tag": "Nuev",
   "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg"
  },
  {
+  "slug": "mutanty-savage-v2-stem-plata",
   "n": "Caña Mutanty Savage V2",
   "brand": "Mutanty",
   "cat": "stems",
-  "spec": "Front load · Aluminio CNC",
+  "spec": "Carga frontal · Aluminio CNC",
   "price": 220000,
-  "slug": "mutanty-savage-v2-stem-plata",
   "sku": "MUTANTY-SAVAGE-V2-STEM-PLATA",
   "units": 1,
   "sizes": [
@@ -1116,28 +1061,27 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg"
  },
  {
+  "slug": "fiend-fiending-stem-negro",
   "n": "Silla Fiend Negra",
   "brand": "Fiend",
   "cat": "sillines",
   "spec": "Silla Fiend Negra",
   "price": 195000,
-  "slug": "fiend-fiending-stem-negro",
   "sku": "FIEND-FIENDING-SILLA-NEGRO",
   "units": 1,
   "tag": "Nacional",
   "img": "assets/img/products/fiend-fiending-stem-negro.jpg"
  },
  {
+  "slug": "mutany-savage-bielas-negro",
   "n": "Bielas Mutanty Savage 170MM",
   "brand": "Mutanty",
   "cat": "bielas",
-  "spec": "Cromoly · 48 spline · 170mm · Negro",
+  "spec": "Cromoly · 48 estrías · 170mm · Negro",
   "price": 590000,
-  "tag": "Nacional",
-  "weight": 1.6,
-  "slug": "mutany-savage-bielas-negro",
   "sku": "MUTANY-SAVAGE-BIELAS-NEGRO",
   "units": 2,
+  "tag": "Nacional",
   "sizes": [
    {
     "label": "170mm",
@@ -1155,135 +1099,129 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/mutany-savage-bielas-negro.jpg"
  },
  {
+  "slug": "fiend-bielas-negro",
   "n": "Bielas Fiend Segment Negras 165MM",
   "brand": "Fiend",
   "cat": "bielas",
-  "spec": "Cromoly · 48 spline · 165mm · Negro",
+  "spec": "Cromoly · 48 estrías · 22mm hueco eje · 165mm · Negro · 3pc",
   "price": 870000,
-  "weight": 1.55,
-  "slug": "fiend-bielas-negro",
   "sku": "FIEND-BIELAS-NEGRO",
   "units": 1,
+  "tag": "Top",
   "sizes": [
    {
     "label": "165mm",
     "units": 1
    }
   ],
-  "tag": "Top",
   "img": "assets/img/products/fiend-bielas-negro.jpg"
  },
  {
+  "slug": "cult-bielas-negro",
   "n": "Bielas Cult Hawk 165",
   "brand": "Cult",
   "cat": "bielas",
-  "spec": "Cromoly heat-treated · 165mm · Negro",
+  "spec": "Cromoly tratado al calor · 22mm eje · 48 estrías · 165mm · Negro",
   "price": 790000,
-  "weight": 1.58,
-  "slug": "cult-bielas-negro",
   "sku": "CULT-BIELAS-NEGRO",
   "units": 1,
+  "tag": "Top 🔥",
   "sizes": [
    {
     "label": "165mm",
     "units": 1
    }
   ],
-  "tag": "Top 🔥",
   "img": "assets/img/products/cult-bielas-negro.jpg"
  },
  {
+  "slug": "eclat-trippin-rin-negro",
   "n": "Éclat Trippin Rin",
   "brand": "Éclat",
   "cat": "rines",
   "spec": "20\" · Doble pared · 36H · Negro",
   "price": 240000,
-  "slug": "eclat-trippin-rin-negro",
   "sku": "ECLAT-TRIPPIN-RIN-NEGRO",
   "units": 12,
   "tag": "Top 🔥",
   "img": "assets/img/products/eclat-trippin-rin-negro.jpg"
  },
  {
+  "slug": "cult-sillin-cuadros",
   "n": "Silla Cult Pivotal Cuadros",
   "brand": "Cult",
   "cat": "sillines",
-  "spec": "Pivotal slim · Checkerboard B/N",
+  "spec": "Pivotal slim · cuadros B/N · Denim",
   "price": 175000,
-  "slug": "cult-sillin-cuadros",
   "sku": "CULT-SILLIN-CUADROS",
   "units": 12,
   "tag": "Edición Especial",
   "img": "assets/img/products/cult-sillin-cuadros.jpg"
  },
  {
+  "slug": "manubrio-cromoly-negro-01",
   "n": "Timón Cult Devon 9.5\" Negro",
   "brand": "Cult",
   "cat": "manubrios",
-  "spec": "Timón Cult Devon 9.5\" Negro",
+  "spec": "Cromoly · 28\" ancho · Negro · 10.5° retroceso · 3° elevación",
   "price": 370000,
-  "weight": 0.85,
-  "slug": "manubrio-cromoly-negro-01",
   "sku": "MANUBRIO-CROMOLY-NEGRO-01",
   "units": 12,
+  "tag": "Top 🔥",
   "sizes": [
    {
     "label": "9.5\"",
     "units": 12
    }
   ],
-  "tag": "Top 🔥",
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728"
  },
  {
+  "slug": "manubrio-cromoly-cromado",
   "n": "Timón Cult Devon 9.5\" Cromado",
   "brand": "Cult",
   "cat": "manubrios",
-  "spec": "Timon Cult Devon 9.5\" Cromado",
+  "spec": "Cromoly · 28\" ancho · Cromado · 10.5° retroceso · 3° elevación",
   "price": 390000,
-  "weight": 0.88,
-  "slug": "manubrio-cromoly-cromado",
   "sku": "MANUBRIO-CROMOLY-CROMADO",
   "units": 12,
+  "tag": "Top 🔥",
   "sizes": [
    {
     "label": "9.5\"",
     "units": 12
    }
   ],
-  "tag": "Top 🔥",
   "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495"
  },
  {
+  "slug": "manubrio-cromoly-negro-02",
   "n": "Timón Cult Crew 9.35\" Negro",
   "brand": "Cult",
   "cat": "manubrios",
-  "spec": "",
+  "spec": "Cromoly · 30\" ancho · Negro · 12° retroceso · 2° elevación",
   "price": 380000,
-  "weight": 0.82,
-  "slug": "manubrio-cromoly-negro-02",
   "sku": "MANUBRIO-CROMOLY-NEGRO-02",
   "units": 12,
+  "tag": "Top 🔥",
   "sizes": [
    {
     "label": "9.35\"",
     "units": 12
    }
   ],
-  "tag": "Top 🔥",
   "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784083427771"
  },
  {
+  "slug": "manubrio-cromoly-negro-03",
   "n": "Timón Colony Guardian 9.4\" Negro Mate",
   "brand": "Colony",
   "cat": "manubrios",
-  "spec": "Timón Colony Guardian 9.4\" Negro Mate",
+  "spec": "Cromoly · 29\" ancho · Negro mate · 12° retroceso · 1.5° elevación",
   "price": 380000,
-  "tag": "Nuevo",
-  "weight": 0.83,
-  "slug": "manubrio-cromoly-negro-03",
   "sku": "MANUBRIO-CROMOLY-NEGRO-03",
   "units": 12,
+  "tag": "Nuevo",
   "sizes": [
    {
     "label": "9.4\"",
@@ -1293,13 +1231,12 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784083429077"
  },
  {
+  "slug": "manubrio-cromoly-negro-04",
   "n": "Timón Mutanty Radical 9.25\" Negro",
   "brand": "Mutanty",
   "cat": "manubrios",
   "spec": "Timón Mutanty Radical 9.5\" Negro",
   "price": 165000,
-  "weight": 0.78,
-  "slug": "manubrio-cromoly-negro-04",
   "sku": "MANUBRIO-CROMOLY-NEGRO-04",
   "units": 12,
   "sizes": [
@@ -1311,112 +1248,103 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1784083430350"
  },
  {
+  "slug": "wethepeople-horquilla-cromada",
   "n": "Tenedor Wethepeople Cromado",
   "brand": "Wethepeople",
   "cat": "horquillas",
   "spec": "Cromoly · Tubo recto · Cromado",
   "price": 800000,
-  "weight": 0.62,
-  "slug": "wethepeople-horquilla-cromada",
   "sku": "WETHEPEOPLE-HORQUILLA-CROMADA",
   "units": 12,
   "img": "assets/img/products/wethepeople-horquilla-cromada.jpg"
  },
  {
+  "slug": "horquilla-cromoly-negra-01",
   "n": "Tenedor Negro",
   "brand": "",
   "cat": "horquillas",
   "spec": "Cromoly · Tubo recto · Negro mate",
   "price": 400000,
-  "weight": 0.58,
-  "slug": "horquilla-cromoly-negra-01",
   "sku": "HORQUILLA-CROMOLY-NEGRA-01",
   "units": 12,
   "img": "assets/img/products/horquilla-cromoly-negra-01.jpg"
  },
  {
+  "slug": "federal-horquilla-cromada",
   "n": "Tenedor Federal Assault – Cromado",
   "brand": "Federal",
   "cat": "horquillas",
-  "spec": "Material Full Cr-mo Tratado al calor Garantía de 1 Año Incluye tapón en aluminio Peso: 932 Gramos Disponible este color",
+  "spec": "Cromoly · 22mm offset · Cromado · 4130 tratado al calor",
   "price": 690000,
-  "weight": 0.64,
-  "slug": "federal-horquilla-cromada",
   "sku": "FEDERAL-HORQUILLA-CROMADA",
   "units": 3,
   "img": "assets/img/products/federal-horquilla-cromada.jpg"
  },
  {
+  "slug": "horquilla-cromoly-negra-02",
   "n": "Tenedor Negro Steerer Blanco",
   "brand": "",
   "cat": "horquillas",
   "spec": "Cromoly · Steerer blanco · Negro mate",
   "price": 410000,
-  "weight": 0.6,
-  "slug": "horquilla-cromoly-negra-02",
   "sku": "HORQUILLA-CROMOLY-NEGRA-02",
   "units": 12,
   "img": "assets/img/products/horquilla-cromoly-negra-02.jpg"
  },
  {
+  "slug": "horquilla-cromoly-plateada",
   "n": "Tenedor Plateado",
   "brand": "",
   "cat": "horquillas",
   "spec": "Cromoly · Tubo recto · Plata pulido",
   "price": 415000,
-  "weight": 0.6,
-  "slug": "horquilla-cromoly-plateada",
   "sku": "HORQUILLA-CROMOLY-PLATEADA",
   "units": 12,
   "img": "assets/img/products/horquilla-cromoly-plateada.jpg"
  },
  {
+  "slug": "stolen-buje-trasero-cassette-negro",
   "n": "Freecoaster StolenBikes Negro Derecho",
   "brand": "Stolen",
   "cat": "manzana-trasera",
-  "spec": "Freecoaster 9T RHD",
+  "spec": "Freecoaster · 9T · Cromoly 14mm · Derecho · Negro",
   "price": 600000,
-  "weight": 3.25,
-  "slug": "stolen-buje-trasero-cassette-negro",
   "sku": "STOLEN-BUJE-TRASERO-CASSETTE-NEGRO",
   "units": 1,
   "tag": "RHD",
   "img": "assets/img/products/stolen-buje-trasero-cassette-negro.jpg"
  },
  {
+  "slug": "buje-cassette-negro-cromado",
   "n": "Freecoaster Odyssey Clutch V2 Derecho",
   "brand": "Odyssey",
   "cat": "manzana-trasera",
-  "spec": "Drive 9T - Derecho - Peso 623 g",
+  "spec": "Freecoaster · 9T · Cromoly 14mm · Derecho · Peso 623g · Negro",
   "price": 760000,
-  "weight": 3.1,
-  "slug": "buje-cassette-negro-cromado",
   "sku": "FREECOASTER ODYSSEY-NEGRO-CROMADO",
   "units": 2,
   "tag": "RHD",
   "img": "assets/img/products/buje-cassette-negro-cromado.jpg"
  },
  {
+  "slug": "buje-cassette-negro-plata",
   "n": "Freecoaster Shadow Optimized Izquierdo",
   "brand": "Shadow",
   "cat": "manzana-trasera",
-  "spec": "Izquierdo - Drive 9T -  Incluye Proyector",
+  "spec": "Freecoaster · 9T · Aluminio CNC 6061 · Izquierdo · Peso 25.8oz",
   "price": 650000,
-  "weight": 3.05,
-  "slug": "buje-cassette-negro-plata",
   "sku": "BUJE-CASSETTE-NEGRO-PLATA",
   "units": 1,
   "tag": "LHD",
   "img": "assets/img/products/buje-cassette-negro-plata.jpg"
  },
  {
+  "slug": "odyssey-buje-cassette-negro",
   "n": "Cassette Odyssey C5 Bidireccional",
   "brand": "Odyssey",
   "cat": "manzana-trasera",
-  "spec": "Cassette · 9T · Negro - Bidireccional",
+  "spec": "Cassette · 9T · Cromoly 14mm · Bidireccional · Negro · Aluminio 6061 T6",
   "price": 650000,
-  "weight": 3.3,
-  "slug": "odyssey-buje-cassette-negro",
   "sku": "ODYSSEY-BUJE-CASSETTE-NEGRO",
   "units": 1,
   "imgs": [
@@ -1426,127 +1354,119 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/odyssey-buje-cassette-negro.jpg"
  },
  {
+  "slug": "mutany-mercury-elite-lhd-buje-negro",
   "n": "Cassette Mutanty Mercury Elite LHD-RHD",
   "brand": "Mutanty",
   "cat": "manzana-trasera",
   "spec": "Cassette · 9T · Negro",
   "price": 550000,
-  "tag": "RHD-LHD",
-  "weight": 3.35,
-  "slug": "mutany-mercury-elite-lhd-buje-negro",
   "sku": "MUTANY-MERCURY-ELITE-LHD-BUJE-NEGRO",
   "units": 5,
+  "tag": "RHD-LHD",
   "img": "assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg"
  },
  {
+  "slug": "buje-cassette-negro-plata-02",
   "n": "Cassette Mutanty Mercury Elite LHD-RHD",
   "brand": "Mutanty",
   "cat": "manzana-trasera",
   "spec": "Cassette · 9T · Negro",
   "price": 550000,
-  "weight": 3.05,
-  "slug": "buje-cassette-negro-plata-02",
   "sku": "MUTANY-MERCURY-ELITE-LHD-BUJE-NEGRO",
   "units": 5,
   "tag": "RHD+LHD",
   "img": "assets/img/products/buje-cassette-negro-plata-02.jpg"
  },
  {
+  "slug": "buje-cassette-negro",
   "n": "Cassette Trueno V2 Negro",
   "brand": "Trueno",
   "cat": "manzana-trasera",
   "spec": "Cassette · 9T · Negro",
   "price": 380000,
-  "weight": 3.15,
-  "slug": "buje-cassette-negro",
   "sku": "BUJE-CASSETTE-NEGRO",
   "units": 5,
   "tag": "RHD-LHD",
   "img": "assets/img/products/buje-cassette-negro.jpg"
  },
  {
+  "slug": "buje-delantero-negro",
   "n": "Manzana Colony Wasp Delantera Negra",
   "brand": "Colony",
   "cat": "manzana-delantera",
-  "spec": "Delantero · Doble sellado · Negro",
+  "spec": "Delantero · Doble sellado · Negro · 3/8\" eje · 14mm",
   "price": 300000,
-  "weight": 3,
-  "slug": "buje-delantero-negro",
   "sku": "BUJE-DELANTERO-NEGRO",
   "units": 3,
   "tag": "TOP",
   "img": "assets/img/products/buje-delantero-negro.jpg"
  },
  {
+  "slug": "shadow-buje-delantero-negro",
   "n": "Manzana Delantera Stolenbikes Negra",
   "brand": "Stolen",
   "cat": "manzana-delantera",
-  "spec": "Delantero ·  Negro ·  Protectores incluidos",
+  "spec": "Delantero · Negro · Doble sellado · Protectores incluidos · 3/8\" eje",
   "price": 270000,
-  "weight": 3.2,
-  "slug": "shadow-buje-delantero-negro",
   "sku": "SHADOW-BUJE-DELANTERO-NEGRO",
   "units": 1,
   "img": "assets/img/products/shadow-buje-delantero-negro.jpg"
  },
  {
+  "slug": "buje-delantero-cromado",
   "n": "Manzana Delantera Shadow Symbol Cromada",
   "brand": "shadow",
   "cat": "manzana-delantera",
-  "spec": "Delantero · Cromado · Protectores Incluidos",
+  "spec": "Delantero · Cromado · Doble sellado · 14mm Cromoly eje · Protectores incluidos",
   "price": 330000,
-  "weight": 3,
-  "slug": "buje-delantero-cromado",
   "sku": "BUJE-DELANTERO-CROMADO",
   "units": 2,
   "img": "assets/img/products/buje-delantero-cromado.jpg"
  },
  {
+  "slug": "kit-eje-espaciadores-plata",
   "n": "Bielas Fitbikeco Blunt Cromadas 165MM",
   "brand": "Fitbikeco",
   "cat": "bielas",
-  "spec": "Eje 22mm · Espaciadores · Plata",
+  "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Cromoly · Plata",
   "price": 930000,
-  "slug": "kit-eje-espaciadores-plata",
   "sku": "KIT-EJE-ESPACIADORES-PLATA",
   "units": 1,
-  "img": "assets/img/products/kit-eje-espaciadores-plata.jpg",
   "sizes": [
    {
     "label": "165mm",
     "units": 1
    }
-  ]
+  ],
+  "img": "assets/img/products/kit-eje-espaciadores-plata.jpg"
  },
  {
+  "slug": "colony-bielas-negro",
   "n": "Bielas Colony Venator Negra",
   "brand": "Colony",
   "cat": "bielas",
-  "spec": "Cromoly · 48 spline · Negro",
+  "spec": "Cromoly tratado al calor · 22mm · 48 estrías · Negro · 165mm disponible",
   "price": 880000,
-  "tag": "Top",
-  "weight": 1.62,
-  "slug": "colony-bielas-negro",
   "sku": "COLONY-BIELAS-NEGRO",
   "units": 2,
-  "img": "assets/img/products/colony-bielas-negro.jpg",
+  "tag": "Top",
   "sizes": [
    {
     "label": "Única",
     "units": 2
    }
-  ]
+  ],
+  "img": "assets/img/products/colony-bielas-negro.jpg"
  },
  {
+  "slug": "kit-hardware-bielas-plata",
   "n": "Bielas Federal Vice Cromadas 160MM - 165MM - 170MM",
   "brand": "Federal",
   "cat": "bielas",
-  "spec": "Eje, espaciadores y tapas · Plata",
+  "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Tapas · Plata · Cromoly tratado al calor",
   "price": 930000,
-  "slug": "kit-hardware-bielas-plata",
   "sku": "KIT-HARDWARE-BIELAS-PLATA",
   "units": 2,
-  "img": "assets/img/products/kit-hardware-bielas-plata.jpg",
   "sizes": [
    {
     "label": "160mm",
@@ -1560,18 +1480,18 @@ window.ESCENA_PRODUCTS = [
     "label": "170mm",
     "units": 0
    }
-  ]
+  ],
+  "img": "assets/img/products/kit-hardware-bielas-plata.jpg"
  },
  {
+  "slug": "kit-hardware-bielas-negro",
   "n": "Bielas Federal Vice Negras 160MM - 165MM - 170MM",
   "brand": "Federal",
   "cat": "bielas",
-  "spec": "Eje, espaciadores y tapas · Negro",
+  "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Tapas · Negro · Cromoly tratado al calor",
   "price": 890000,
-  "slug": "kit-hardware-bielas-negro",
   "sku": "KIT-HARDWARE-BIELAS-NEGRO",
   "units": 2,
-  "img": "assets/img/products/kit-hardware-bielas-negro.jpg",
   "sizes": [
    {
     "label": "160mm",
@@ -1585,850 +1505,846 @@ window.ESCENA_PRODUCTS = [
     "label": "170mm",
     "units": 0
    }
-  ]
+  ],
+  "img": "assets/img/products/kit-hardware-bielas-negro.jpg"
  },
  {
+  "slug": "bsd-stem-negro",
   "n": "Caña BSD Negra",
   "brand": "BSD",
   "cat": "stems",
-  "spec": "Front load · Negro mate",
+  "spec": "Carga frontal · Negro mate",
   "price": 300000,
-  "slug": "bsd-stem-negro",
   "sku": "BSD-STEM-NEGRO",
   "units": 12,
-  "img": "assets/img/products/bsd-stem-negro.jpg",
   "sizes": [
    {
     "label": "Única",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/bsd-stem-negro.jpg"
  },
  {
+  "slug": "volume-stem-negro",
   "n": "Caña Volume Biston Negra",
   "brand": "Volume",
   "cat": "stems",
-  "spec": "Front load · Negro",
+  "spec": "Carga frontal · Negro",
   "price": 330000,
-  "slug": "volume-stem-negro",
   "sku": "VOLUME-STEM-NEGRO",
   "units": 12,
-  "img": "assets/img/products/volume-stem-negro.jpg",
   "sizes": [
    {
     "label": "Única",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/volume-stem-negro.jpg"
  },
  {
+  "slug": "stem-plata-pulido",
   "n": "Caña Caña Demolition Josh Dave Cromada",
   "brand": "Demolition",
   "cat": "stems",
-  "spec": "Front load",
+  "spec": "Carga frontal",
   "price": 330000,
-  "slug": "stem-plata-pulido",
   "sku": "STEM-PLATA-PULIDO",
   "units": 12,
-  "img": "assets/img/products/stem-plata-pulido.jpg",
   "sizes": [
    {
     "label": "Única",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/stem-plata-pulido.jpg"
  },
  {
+  "slug": "escena-stem-grabado-plata",
   "n": "Caña Shadow",
   "brand": "shadow",
   "cat": "stems",
-  "spec": "Top load CNC",
+  "spec": "Carga superior CNC",
   "price": 250000,
-  "slug": "escena-stem-grabado-plata",
   "sku": "SHADOW-STEM-CHULA",
   "units": 12,
-  "img": "assets/img/products/escena-stem-grabado-plata.jpg",
   "sizes": [
    {
     "label": "Única",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/escena-stem-grabado-plata.jpg"
  },
  {
+  "slug": "federal-stem-plata",
   "n": "Caña Federal Plata",
   "brand": "Federal",
   "cat": "stems",
-  "spec": "Front load · Aluminio plata pulido",
+  "spec": "Carga frontal · Alcance 50mm · Aluminio plata pulido",
   "price": 210000,
-  "slug": "federal-stem-plata",
   "sku": "FEDERAL-STEM-PLATA",
   "units": 5,
-  "img": "assets/img/products/federal-stem-plata.jpg",
   "sizes": [
    {
     "label": "Única",
     "units": 5
    }
-  ]
+  ],
+  "img": "assets/img/products/federal-stem-plata.jpg"
  },
  {
+  "slug": "federal-stem-negro",
   "n": "Caña Federal Negra",
   "brand": "Federal",
   "cat": "stems",
-  "spec": "Front load · Negro mate",
+  "spec": "Carga frontal · Alcance 50mm · Negro mate",
   "price": 210000,
-  "slug": "federal-stem-negro",
   "sku": "FEDERAL-STEM-NEGRO",
   "units": 12,
-  "img": "assets/img/products/federal-stem-negro.jpg",
   "sizes": [
    {
     "label": "Única",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/federal-stem-negro.jpg"
  },
  {
+  "slug": "fiend-mills-sillin-blanco",
   "n": "Silla Fiend Mills Blanca",
   "brand": "Fiend",
   "cat": "sillines",
-  "spec": "Pivotal slim · Blanco",
+  "spec": "Pivotal · Cuero · Blanco · 3 piezas",
   "price": 175000,
-  "slug": "fiend-mills-sillin-blanco",
   "sku": "FIEND-MILLS-SILLIN-BLANCO",
   "units": 12,
   "img": "assets/img/products/fiend-mills-sillin-blanco.jpg"
  },
  {
+  "slug": "fiend-mills-sillin-negro",
   "n": "Silla Fiend Mills Negra",
   "brand": "Fiend",
   "cat": "sillines",
-  "spec": "Pivotal slim · Negro",
+  "spec": "Pivotal · Cuero · Negro · 3 piezas",
   "price": 175000,
-  "slug": "fiend-mills-sillin-negro",
   "sku": "FIEND-MILLS-SILLIN-NEGRO",
   "units": 12,
   "img": "assets/img/products/fiend-mills-sillin-negro.jpg"
  },
  {
+  "slug": "cult-sillin-negro",
   "n": "Silla Cult Negra",
   "brand": "Cult",
   "cat": "sillines",
-  "spec": "Pivotal slim · Negro",
+  "spec": "Pivotal slim · Negro · Tela militar",
   "price": 180000,
-  "slug": "cult-sillin-negro",
   "sku": "CULT-SILLIN-NEGRO",
   "units": 12,
   "img": "assets/img/products/cult-sillin-negro.jpg"
  },
  {
+  "slug": "odyssey-sillin-floral",
   "n": "Silla Odyssey Floral",
   "brand": "Odyssey",
   "cat": "sillines",
-  "spec": "Pivotal slim · Estampado floral",
+  "spec": "Pivotal slim · Bordado floral · Denim",
   "price": 185000,
-  "tag": "Edición",
-  "slug": "odyssey-sillin-floral",
   "sku": "ODYSSEY-SILLIN-FLORAL",
   "units": 12,
+  "tag": "Edición",
   "img": "assets/img/products/odyssey-sillin-floral.jpg"
  },
  {
+  "slug": "animal-sillin-camuflado",
   "n": "Silla Animal Camuflada",
   "brand": "Animal",
   "cat": "sillines",
-  "spec": "Pivotal slim · Camuflado",
+  "spec": "Pivotal · Camuflado · Kevlar · Bordado",
   "price": 180000,
-  "slug": "animal-sillin-camuflado",
   "sku": "ANIMAL-SILLIN-CAMUFLADO",
   "units": 12,
   "img": "assets/img/products/animal-sillin-camuflado.jpg"
  },
  {
+  "slug": "fit-sillin-diamante-negro",
   "n": "Silla Fit Bike Co Negra",
   "brand": "Fit Bike Co",
   "cat": "sillines",
-  "spec": "Pivotal slim · Textura diamante · Negro",
+  "spec": "Pivotal slim · Textura · Negro",
   "price": 175000,
-  "slug": "fit-sillin-diamante-negro",
   "sku": "FIT-SILLIN-DIAMANTE-NEGRO",
   "units": 12,
   "img": "assets/img/products/fit-sillin-diamante-negro.jpg"
  },
  {
+  "slug": "stolen-sillin-negro",
   "n": "Silla Stolen Negra",
   "brand": "Stolen",
   "cat": "sillines",
-  "spec": "Pivotal slim · Textura · Negro",
+  "spec": "Pivotal slim · Textura vinilo · Negro",
   "price": 178000,
-  "slug": "stolen-sillin-negro",
   "sku": "STOLEN-SILLIN-NEGRO",
   "units": 12,
   "img": "assets/img/products/stolen-sillin-negro.jpg"
  },
  {
+  "slug": "pedales-plataforma-negro-01",
   "n": "Pedales Plataforma Negro",
   "brand": "",
   "cat": "pedales",
-  "spec": "Plataforma nylon · Negro",
+  "spec": "Plataforma nylon · 12 pines · Negro",
   "price": 95000,
-  "slug": "pedales-plataforma-negro-01",
   "sku": "PEDALES-PLATAFORMA-NEGRO-01",
   "units": 12,
   "img": "assets/img/products/pedales-plataforma-negro-01.jpg"
  },
  {
+  "slug": "demolition-pedales-rosa",
   "n": "Pedales Demolition Rosa",
   "brand": "Demolition",
   "cat": "pedales",
-  "spec": "Plataforma nylon · Rosa",
+  "spec": "Plataforma nylon · 10 pines · Rosa",
   "price": 100000,
-  "slug": "demolition-pedales-rosa",
   "sku": "DEMOLITION-PEDALES-ROSA",
   "units": 12,
   "img": "assets/img/products/demolition-pedales-rosa.jpg"
  },
  {
+  "slug": "pedales-metal-negro-01",
   "n": "Pedales Plataforma Metal Negro",
   "brand": "",
   "cat": "pedales",
-  "spec": "Plataforma aluminio · Negro",
+  "spec": "Plataforma aluminio · 8 pines · Negro",
   "price": 130000,
-  "slug": "pedales-metal-negro-01",
   "sku": "PEDALES-METAL-NEGRO-01",
   "units": 12,
   "img": "assets/img/products/pedales-metal-negro-01.jpg"
  },
  {
+  "slug": "pedales-metal-negro-02",
   "n": "Pedales Plataforma Metal Negro Par",
   "brand": "",
   "cat": "pedales",
-  "spec": "Plataforma aluminio · Negro",
+  "spec": "Plataforma aluminio · 8 pines · Negro",
   "price": 135000,
-  "slug": "pedales-metal-negro-02",
   "sku": "PEDALES-METAL-NEGRO-02",
   "units": 12,
   "img": "assets/img/products/pedales-metal-negro-02.jpg"
  },
  {
+  "slug": "pedales-metal-negro-03",
   "n": "Pedales Plataforma Metal Angular",
   "brand": "",
   "cat": "pedales",
-  "spec": "Plataforma aluminio · Perfil bajo · Negro",
+  "spec": "Plataforma aluminio · 8 pines · Perfil bajo · Negro",
   "price": 135000,
-  "slug": "pedales-metal-negro-03",
   "sku": "PEDALES-METAL-NEGRO-03",
   "units": 12,
   "img": "assets/img/products/pedales-metal-negro-03.jpg"
  },
  {
+  "slug": "demolition-pedales-splash-blanco",
   "n": "Pedales Demolition Blanco/Negro",
   "brand": "Demolition",
   "cat": "pedales",
-  "spec": "Plataforma nylon · Splash blanco/negro",
+  "spec": "Plataforma nylon · 10 pines · Splash blanco/negro",
   "price": 105000,
-  "tag": "Edición",
-  "slug": "demolition-pedales-splash-blanco",
   "sku": "DEMOLITION-PEDALES-SPLASH-BLANCO",
   "units": 12,
+  "tag": "Edición",
   "img": "assets/img/products/demolition-pedales-splash-blanco.jpg"
  },
  {
+  "slug": "demolition-pedales-splash-rojo",
   "n": "Pedales Demolition Rojo/Blanco",
   "brand": "Demolition",
   "cat": "pedales",
-  "spec": "Plataforma nylon · Splash rojo/blanco",
+  "spec": "Plataforma nylon · 10 pines · Splash rojo/blanco",
   "price": 105000,
-  "tag": "Edición",
-  "slug": "demolition-pedales-splash-rojo",
   "sku": "DEMOLITION-PEDALES-SPLASH-ROJO",
   "units": 12,
+  "tag": "Edición",
   "img": "assets/img/products/demolition-pedales-splash-rojo.jpg"
  },
  {
+  "slug": "pinon-snowflake-plata",
   "n": "Plato Eighties BodyGuard 28T",
   "brand": "Eighties",
   "cat": "pinones",
-  "spec": "28T · Aluminio CNC",
+  "spec": "28T · Aluminio CNC 7075 · Guardia · Peso 110g",
   "price": 140000,
-  "slug": "pinon-snowflake-plata",
   "sku": "PLATO-EIGHTIES-28T",
   "units": 2,
   "tag": "NUEVO",
-  "img": "assets/img/products/pinon-snowflake-plata.jpg",
   "sizes": [
    {
     "label": "28T",
     "units": 2
    }
-  ]
+  ],
+  "img": "assets/img/products/pinon-snowflake-plata.jpg"
  },
  {
+  "slug": "cult-pinon-negro",
   "n": "Plato Cult Conviction Negro 28T",
   "brand": "Cult",
   "cat": "pinones",
-  "spec": "28T · Aluminio CNC · Negro",
+  "spec": "28T · Aluminio 7075 · Guardia Nylon · Negro",
   "price": 230000,
-  "slug": "cult-pinon-negro",
   "sku": "CULT-PINON-NEGRO",
   "units": 5,
   "tag": "TOP",
-  "img": "assets/img/products/cult-pinon-negro.jpg",
   "sizes": [
    {
     "label": "28T",
     "units": 5
    }
-  ]
+  ],
+  "img": "assets/img/products/cult-pinon-negro.jpg"
  },
  {
+  "slug": "odyssey-pinon-28t-negro",
   "n": "Plato Odyssey Utility Pro 28T",
   "brand": "Odyssey",
   "cat": "pinones",
-  "spec": "28T · Aluminio CNC · Negro",
+  "spec": "28T · Aluminio CNC 7075 · 8mm · Guardia Removible · Negro",
   "price": 340000,
-  "slug": "odyssey-pinon-28t-negro",
   "sku": "ODYSSEY-PLATO-28T-NEGRO",
   "units": 1,
-  "img": "assets/img/products/odyssey-pinon-28t-negro.jpg",
   "sizes": [
    {
     "label": "28T",
     "units": 1
    }
-  ]
+  ],
+  "img": "assets/img/products/odyssey-pinon-28t-negro.jpg"
  },
  {
+  "slug": "fiend-pinon-25t-negro",
   "n": "Plato Fiend Palmare Con Guardia Negro 25T",
   "brand": "Fiend",
   "cat": "pinones",
-  "spec": "25T · Aluminio CNC · Negro",
+  "spec": "25T · Aluminio CNC 6061 · Guardia Nylon · Negro · Peso 86g",
   "price": 290000,
-  "slug": "fiend-pinon-25t-negro",
   "sku": "FIEND-PINON-25T-NEGRO",
   "units": 2,
-  "img": "assets/img/products/fiend-pinon-25t-negro.jpg",
   "sizes": [
    {
     "label": "25T",
     "units": 2
    }
-  ]
+  ],
+  "img": "assets/img/products/fiend-pinon-25t-negro.jpg"
  },
  {
+  "slug": "federal-pinon-gris",
   "n": "Plato Federal Guardia Negro 28T",
   "brand": "Federal",
   "cat": "pinones",
-  "spec": "28T · Aluminio CNC · Negro",
+  "spec": "28T · Aluminio 6061 T6 · 6mm · Guardia Nylon · Negro",
   "price": 200000,
-  "slug": "federal-pinon-gris",
   "sku": "FEDERAL-PINON-GRIS",
   "units": 2,
-  "img": "assets/img/products/federal-pinon-gris.jpg",
   "sizes": [
    {
     "label": "28T",
     "units": 2
    }
-  ]
+  ],
+  "img": "assets/img/products/federal-pinon-gris.jpg"
  },
  {
+  "slug": "bsd-guarda-pinon-negro",
   "n": "Protector Primo DSG En Aluminio Negro",
   "brand": "Primo",
   "cat": "manzana-trasera",
-  "spec": "Protector Para Drive · Nylon reforzado · Negro",
+  "spec": "Protector Drive · Aluminio Forjado · Negro",
   "price": 70000,
-  "slug": "bsd-guarda-pinon-negro",
   "sku": "BSD-GUARDA-PINON-NEGRO",
   "units": 6,
   "img": "assets/img/products/bsd-guarda-pinon-negro.jpg"
  },
  {
+  "slug": "mutany-guarda-pinon-negro",
   "n": "Protector Mutanty Immortal Negro en Cromo",
   "brand": "Mutanty",
   "cat": "manzana-trasera",
   "spec": "Cromo 4140 · Nylon reforzado · Negro",
   "price": 95000,
-  "slug": "mutany-guarda-pinon-negro",
   "sku": "MUTANY-GUARDA-PINON-NEGRO",
   "units": 2,
   "img": "assets/img/products/mutany-guarda-pinon-negro.jpg"
  },
  {
+  "slug": "caja-pedalier-negra-01",
   "n": "Cajas de Frente Cult Crew Negra",
   "brand": "Cult",
   "cat": "caja-frente",
-  "spec": "Frente Integrado ·  Rodamientos sellados",
+  "spec": "Integrada · Rodamientos sellados · Aluminio · Negro",
   "price": 120000,
-  "slug": "caja-pedalier-negra-01",
   "sku": "CAJA-PEDALIER-NEGRA-01",
   "units": 4,
   "img": "assets/img/products/caja-pedalier-negra-01.jpg"
  },
  {
+  "slug": "direccion-negra-set",
   "n": "Cajas de Frente BSD",
   "brand": "BSD",
   "cat": "caja-frente",
   "spec": "Integrada · Rodamientos sellados · Negro o Cromado",
   "price": 130000,
-  "slug": "direccion-negra-set",
   "sku": "DIRECCION-NEGRA-BSD",
   "units": 2,
   "img": "assets/img/products/direccion-negra-set.jpg"
  },
  {
+  "slug": "direccion-negra",
   "n": "Cajas de Frente Shadow Negra",
   "brand": "shadow",
   "cat": "caja-frente",
-  "spec": "Frente Integrado · Rodamientos sellados · Negro",
+  "spec": "Integrada · Rodamientos sellados · Negro",
   "price": 135000,
-  "slug": "direccion-negra",
   "sku": "DIRECCION-NEGRA",
   "units": 8,
   "img": "assets/img/products/direccion-negra.jpg"
  },
  {
+  "slug": "demolition-caja-pedalier-negra",
   "n": "Cajas de Frente Demolition Negra",
   "brand": "Demolition",
   "cat": "caja-frente",
-  "spec": "Frente Integrado · Rodamientos sellados",
+  "spec": "Integrada · Rodamientos sellados · Negro",
   "price": 125000,
-  "slug": "demolition-caja-pedalier-negra",
   "sku": "DEMOLITION-CAJA-PEDALIER-NEGRA",
   "units": 3,
   "img": "assets/img/products/demolition-caja-pedalier-negra.jpg"
  },
  {
+  "slug": "cult-kit-rodamientos-bb",
   "n": "Cajas de Centro Cult Crew Negra",
   "brand": "Cult",
   "cat": "caja-centro",
-  "spec": "Rodamientos de alto rodaje e impacto ·  Buje y tapas en aluminio",
+  "spec": "Rodamientos sellados MID · Tapas aluminio · 22mm",
   "price": 120000,
-  "slug": "cult-kit-rodamientos-bb",
   "sku": "CULT-KIT-RODAMIENTOS-BB",
   "units": 4,
   "tag": "19mm-22mm",
   "img": "assets/img/products/cult-kit-rodamientos-bb.jpg"
  },
  {
+  "slug": "odyssey-kit-rodamientos-bb",
   "n": "Cajas de Centro Odyssey Negra 22mm",
   "brand": "Odyssey",
   "cat": "caja-centro",
-  "spec": "Rodamientos de alto rodaje e impacto · Buje y tapas en aluminio",
+  "spec": "Rodamientos sellados MID · Tapas aluminio · 22mm",
   "price": 120000,
-  "slug": "odyssey-kit-rodamientos-bb",
   "sku": "ODYSSEY-KIT-RODAMIENTOS-BB",
   "units": 3,
   "tag": "22mm",
   "img": "assets/img/products/odyssey-kit-rodamientos-bb.jpg"
  },
  {
+  "slug": "animal-kit-rodamientos-bb",
   "n": "Cajas De Centro Animal Negra 22mm",
   "brand": "Animal",
   "cat": "caja-centro",
-  "spec": "Rodamientos de alto rodaje e impacto · Buje y tapas en aluminio",
+  "spec": "Rodamientos sellados MID · Tapas aluminio · 22mm",
   "price": 130000,
-  "slug": "animal-kit-rodamientos-bb",
   "sku": "ANIMAL-KIT-RODAMIENTOS-BB",
   "units": 4,
   "img": "assets/img/products/animal-kit-rodamientos-bb.jpg"
  },
  {
+  "slug": "kit-rodamientos-bb-generico",
   "n": "Cajas De Centro Rant Cromada 22mm",
   "brand": "Rant",
   "cat": "caja-centro",
-  "spec": "Rodamientos de alto rodaje e impacto · Buje y tapas en aluminio",
+  "spec": "Rodamientos sellados R12 · MID · Tapas aluminio",
   "price": 50000,
-  "slug": "kit-rodamientos-bb-generico",
   "sku": "KIT-RODAMIENTOS-BB-GENERICO",
   "units": 2,
   "img": "assets/img/products/kit-rodamientos-bb-generico.jpg"
  },
  {
+  "slug": "odyssey-clavijas-negro-par",
   "n": "Cajas de Frente Odyssey Negra",
   "brand": "Odyssey",
   "cat": "caja-frente",
-  "spec": "Aluminio CNC · Par · Negro",
+  "spec": "Aluminio CNC · Integrada · Negro",
   "price": 140000,
-  "slug": "odyssey-clavijas-negro-par",
   "sku": "ODYSSEY-CAJAS-NEGRO-",
   "units": 2,
   "img": "assets/img/products/odyssey-clavijas-negro-par.jpg"
  },
  {
+  "slug": "clavijas-negro-par",
   "n": "Pegs Negro (Par)",
   "brand": "",
   "cat": "clavijas",
   "spec": "Aluminio CNC · Par · Negro",
   "price": 150000,
-  "slug": "clavijas-negro-par",
   "sku": "CLAVIJAS-NEGRO-PAR",
   "units": 12,
   "img": "assets/img/products/clavijas-negro-par.jpg"
  },
  {
+  "slug": "cult-clavija-negro",
   "n": "Peg Cult Negro",
   "brand": "Cult",
   "cat": "clavijas",
   "spec": "Aluminio CNC · Unidad · Negro",
   "price": 80000,
-  "slug": "cult-clavija-negro",
   "sku": "CULT-CLAVIJA-NEGRO",
   "units": 12,
   "img": "assets/img/products/cult-clavija-negro.jpg"
  },
  {
+  "slug": "clavija-negro",
   "n": "Peg Negro",
   "brand": "",
   "cat": "clavijas",
   "spec": "Aluminio CNC · Unidad · Negro",
   "price": 78000,
-  "slug": "clavija-negro",
   "sku": "CLAVIJA-NEGRO",
   "units": 12,
   "img": "assets/img/products/clavija-negro.jpg"
  },
  {
+  "slug": "federal-clavija-negro",
   "n": "Peg Federal Negro",
   "brand": "Federal",
   "cat": "clavijas",
-  "spec": "Aluminio CNC · Unidad · Negro",
+  "spec": "Aluminio · Funda de nylon · 4.5 pulgadas · Negro",
   "price": 80000,
-  "slug": "federal-clavija-negro",
   "sku": "FEDERAL-CLAVIJA-NEGRO",
   "units": 12,
   "img": "assets/img/products/federal-clavija-negro.jpg"
  },
  {
+  "slug": "cult-punos-negro",
   "n": "Funda De Plastipeg Fate",
   "brand": "Cult",
   "cat": "clavijas",
   "spec": "Espuma/goma · Negro",
   "price": 22000,
-  "slug": "cult-punos-negro",
   "sku": "FUNDA-PEGS-FATE",
   "units": 10,
   "img": "assets/img/products/cult-punos-negro.jpg"
  },
  {
+  "slug": "cult-punos-rasta",
   "n": "Grips Cult Rasta",
   "brand": "Cult",
   "cat": "punos",
-  "spec": "Goma · Rojo/Amarillo/Verde",
+  "spec": "Goma · 167mm · 32mm · Rojo/Amarillo/Verde",
   "price": 55000,
-  "slug": "cult-punos-rasta",
   "sku": "CULT-PUNOS-RASTA",
   "units": 12,
   "img": "assets/img/products/cult-punos-rasta.jpg"
  },
  {
+  "slug": "odyssey-punos-negro-gris",
   "n": "Grips Odyssey Negro/Gris",
   "brand": "Odyssey",
   "cat": "punos",
   "spec": "Goma · Negro/Gris",
   "price": 55000,
-  "slug": "odyssey-punos-negro-gris",
   "sku": "ODYSSEY-PUNOS-NEGRO-GRIS",
   "units": 12,
   "img": "assets/img/products/odyssey-punos-negro-gris.jpg"
  },
  {
+  "slug": "federal-punos-gris",
   "n": "Grips Federal Gris",
   "brand": "Federal",
   "cat": "punos",
-  "spec": "Goma · Gris",
+  "spec": "Goma · 168mm · 32mm · Gris marble",
   "price": 55000,
-  "slug": "federal-punos-gris",
   "sku": "FEDERAL-PUNOS-GRIS",
   "units": 12,
   "img": "assets/img/products/federal-punos-gris.jpg"
  },
  {
+  "slug": "fiend-punos-negro",
   "n": "Grips Fiend Negro",
   "brand": "Fiend",
   "cat": "punos",
-  "spec": "Goma · Negro",
+  "spec": "Goma · 147mm · nervadura angular · Negro",
   "price": 55000,
-  "slug": "fiend-punos-negro",
   "sku": "FIEND-PUNOS-NEGRO",
   "units": 12,
   "img": "assets/img/products/fiend-punos-negro.jpg"
  },
  {
+  "slug": "fiend-punos-rojo-blanco",
   "n": "Grips Fiend Rojo/Blanco",
   "brand": "Fiend",
   "cat": "punos",
   "spec": "Goma · Rojo/Blanco splash",
   "price": 58000,
-  "tag": "Edición",
-  "slug": "fiend-punos-rojo-blanco",
   "sku": "FIEND-PUNOS-ROJO-BLANCO",
   "units": 12,
+  "tag": "Edición",
   "img": "assets/img/products/fiend-punos-rojo-blanco.jpg"
  },
  {
+  "slug": "demolition-punos-rojo-negro",
   "n": "Grips Demolition Rojo/Negro",
   "brand": "Demolition",
   "cat": "punos",
-  "spec": "Goma · Rojo/Negro",
+  "spec": "Goma · 149mm-155mm · patrón hongo · Rojo/Negro",
   "price": 56000,
-  "slug": "demolition-punos-rojo-negro",
   "sku": "DEMOLITION-PUNOS-ROJO-NEGRO",
   "units": 12,
   "img": "assets/img/products/demolition-punos-rojo-negro.jpg"
  },
  {
+  "slug": "cult-vans-punos-morado",
   "n": "Grips Cult x Vans Morado",
   "brand": "Cult",
   "cat": "punos",
   "spec": "Goma · Colab Vans · Morado",
   "price": 62000,
-  "tag": "Colab",
-  "slug": "cult-vans-punos-morado",
   "sku": "CULT-VANS-PUNOS-MORADO",
   "units": 12,
+  "tag": "Colab",
   "img": "assets/img/products/cult-vans-punos-morado.jpg"
  },
  {
+  "slug": "tornillos-titanio-arcoiris-01",
   "n": "Tornillos Titanio Arcoíris",
   "brand": "",
   "cat": "tornilleria",
-  "spec": "Titanio · Set · Multicolor",
+  "spec": "Titanio Grado 5 · Set · Arcoíris · M8x1.25mm",
   "price": 65000,
-  "slug": "tornillos-titanio-arcoiris-01",
   "sku": "TORNILLOS-TITANIO-ARCOIRIS-01",
   "units": 12,
   "img": "assets/img/products/tornillos-titanio-arcoiris-01.jpg"
  },
  {
+  "slug": "tornillos-titanio-plata",
   "n": "Tornillos Titanio Plata",
   "brand": "",
   "cat": "tornilleria",
-  "spec": "Titanio · Set · Plata",
+  "spec": "Titanio Grado 5 · Set · Plata · M8x1.25mm",
   "price": 60000,
-  "slug": "tornillos-titanio-plata",
   "sku": "TORNILLOS-TITANIO-PLATA",
   "units": 12,
   "img": "assets/img/products/tornillos-titanio-plata.jpg"
  },
  {
+  "slug": "tornillos-titanio-sillin-arcoiris",
   "n": "Tornillos Titanio Sillín Arcoíris",
   "brand": "",
   "cat": "tornilleria",
-  "spec": "Titanio · Sillín · Multicolor",
+  "spec": "Titanio Grado 5 · Sillín · Arcoíris · M6x1mm",
   "price": 40000,
-  "slug": "tornillos-titanio-sillin-arcoiris",
   "sku": "TORNILLOS-TITANIO-SILLIN-ARCOIRIS",
   "units": 12,
   "img": "assets/img/products/tornillos-titanio-sillin-arcoiris.jpg"
  },
  {
+  "slug": "tornillos-titanio-morado",
   "n": "Tornillos Titanio Morado",
   "brand": "",
   "cat": "tornilleria",
   "spec": "Titanio · Set · Morado/Negro",
   "price": 62000,
-  "slug": "tornillos-titanio-morado",
   "sku": "TORNILLOS-TITANIO-MORADO",
   "units": 12,
   "img": "assets/img/products/tornillos-titanio-morado.jpg"
  },
  {
+  "slug": "mutany-tornillos-negro",
   "n": "Tornillos Mutanty Negro",
   "brand": "Mutanty",
   "cat": "tornilleria",
   "spec": "Acero · Set · Negro",
   "price": 25000,
-  "slug": "mutany-tornillos-negro",
   "sku": "MUTANY-TORNILLOS-NEGRO",
   "units": 12,
   "img": "assets/img/products/mutany-tornillos-negro.jpg"
  },
  {
+  "slug": "federal-tornillos-negro",
   "n": "Tornillos Federal Negro",
   "brand": "Federal",
   "cat": "tornilleria",
   "spec": "Acero · Set · Negro",
   "price": 25000,
-  "slug": "federal-tornillos-negro",
   "sku": "FEDERAL-TORNILLOS-NEGRO",
   "units": 12,
   "img": "assets/img/products/federal-tornillos-negro.jpg"
  },
  {
+  "slug": "tija-negra-01",
   "n": "Poste GW Extralargo Negro Recto",
   "brand": "GW",
   "cat": "tijas",
-  "spec": "Aluminio · 25.4mm · Negro",
+  "spec": "Aluminio · 25.4mm · 350mm · Negro",
   "price": 50000,
-  "slug": "tija-negra-01",
   "sku": "TIJA-NEGRA-01",
   "units": 12,
   "tag": "Nacional",
   "img": "assets/img/products/tija-negra-01.jpg"
  },
  {
+  "slug": "tija-negra-02",
   "n": "Poste Colony Negro Recto",
   "brand": "Colony",
   "cat": "tijas",
-  "spec": "Aluminio · 25.4mm · Negro",
+  "spec": "Aluminio · 25.4mm · 330mm · Negro",
   "price": 160000,
-  "slug": "tija-negra-02",
   "sku": "TIJA-NEGRA-02",
   "units": 3,
   "tag": "Top 🔥",
   "img": "assets/img/products/tija-negra-02.jpg"
  },
  {
+  "slug": "tija-negra-curva",
   "n": "Poste Eighties Negro Recto",
   "brand": "Eighties",
   "cat": "tijas",
   "spec": "Aluminio · 25.4mm · Negro",
   "price": 150000,
-  "slug": "tija-negra-curva",
   "sku": "TIJA-NEGRA-CURVA",
   "units": 12,
   "tag": "Top 🔥",
   "img": "assets/img/products/tija-negra-curva.jpg"
  },
  {
+  "slug": "brainstorm-freecoaster-kit-01",
   "n": "Kit Freecoaster Brainstorm",
   "brand": "Brainstorm",
   "cat": "piezas",
   "spec": "Kit de conversión freecoaster · Negro",
   "price": 220000,
-  "tag": "Top",
-  "slug": "brainstorm-freecoaster-kit-01",
   "sku": "BRAINSTORM-FREECOASTER-KIT-01",
   "units": 12,
+  "tag": "Top",
   "img": "assets/img/products/brainstorm-freecoaster-kit-01.jpg"
  },
  {
+  "slug": "brainstorm-freecoaster-kit-02",
   "n": "Kit Freecoaster Brainstorm II",
   "brand": "Brainstorm",
   "cat": "piezas",
   "spec": "Kit de conversión freecoaster · Negro",
   "price": 220000,
-  "slug": "brainstorm-freecoaster-kit-02",
   "sku": "BRAINSTORM-FREECOASTER-KIT-02",
   "units": 12,
   "img": "assets/img/products/brainstorm-freecoaster-kit-02.jpg"
  },
  {
+  "slug": "brainstorm-freecoaster-kit-03",
   "n": "Kit Freecoaster Brainstorm III",
   "brand": "Brainstorm",
   "cat": "piezas",
   "spec": "Kit de conversión freecoaster · Negro",
   "price": 220000,
-  "slug": "brainstorm-freecoaster-kit-03",
   "sku": "BRAINSTORM-FREECOASTER-KIT-03",
   "units": 12,
   "img": "assets/img/products/brainstorm-freecoaster-kit-03.jpg"
  },
  {
+  "slug": "brainstorm-freecoaster-kit-04",
   "n": "Kit Freecoaster Brainstorm Par",
   "brand": "Brainstorm",
   "cat": "piezas",
   "spec": "Kit de conversión freecoaster · Negro",
   "price": 230000,
-  "slug": "brainstorm-freecoaster-kit-04",
   "sku": "BRAINSTORM-FREECOASTER-KIT-04",
   "units": 12,
   "img": "assets/img/products/brainstorm-freecoaster-kit-04.jpg"
  },
  {
+  "slug": "eslabones-cadena-sueltos",
   "n": "Eslabones de Cadena Sueltos",
   "brand": "",
   "cat": "piezas",
   "spec": "Media caña · Acero negro",
   "price": 30000,
-  "slug": "eslabones-cadena-sueltos",
   "sku": "ESLABONES-CADENA-SUELTOS",
   "units": 12,
   "img": "assets/img/products/eslabones-cadena-sueltos.jpg"
  },
  {
+  "slug": "odyssey-cadena-caja",
   "n": "Kit De Despinche",
   "brand": "otro",
   "cat": "piezas",
   "spec": "Kit de despinche",
   "price": 15000,
-  "slug": "odyssey-cadena-caja",
   "sku": "KIT-DESPINCHE",
   "units": 12,
   "img": "assets/img/products/odyssey-cadena-caja.jpg"
  },
  {
+  "slug": "mutany-eje-pedalier-p25",
   "n": "Eje de Pedalier Mutanty P25",
   "brand": "Mutanty",
   "cat": "piezas",
   "spec": "Eje 22mm · P25 · Negro",
   "price": 70000,
-  "slug": "mutany-eje-pedalier-p25",
   "sku": "MUTANY-EJE-PEDALIER-P25",
   "units": 12,
   "img": "assets/img/products/mutany-eje-pedalier-p25.jpg"
  },
  {
+  "slug": "iron-fist-amarres-cable",
   "n": "Amarres de Cable Iron Fist",
   "brand": "Iron Fist",
   "cat": "piezas",
   "spec": "Cinchos plásticos · Set",
   "price": 20000,
-  "slug": "iron-fist-amarres-cable",
   "sku": "IRON-FIST-AMARRES-CABLE",
   "units": 12,
   "img": "assets/img/products/iron-fist-amarres-cable.jpg"
  },
  {
+  "slug": "cult-multiherramienta-01",
   "n": "Multiherramienta Cult",
   "brand": "Cult",
   "cat": "herramientas",
-  "spec": "Multiherramienta plegable BMX",
+  "spec": "Multiherramienta plegable · 6mm · 8mm · dado 17mm",
   "price": 110000,
-  "slug": "cult-multiherramienta-01",
   "sku": "CULT-MULTIHERRAMIENTA-01",
   "units": 12,
   "img": "assets/img/products/cult-multiherramienta-01.jpg"
  },
  {
+  "slug": "cult-multiherramienta-02",
   "n": "Multiherramienta Cult (Empaque)",
   "brand": "Cult",
   "cat": "herramientas",
-  "spec": "Multiherramienta plegable BMX",
+  "spec": "Multiherramienta plegable · 6mm · 8mm · dado 17mm",
   "price": 110000,
-  "slug": "cult-multiherramienta-02",
   "sku": "CULT-MULTIHERRAMIENTA-02",
   "units": 12,
   "img": "assets/img/products/cult-multiherramienta-02.jpg"
  },
  {
+  "slug": "llave-y-roja",
   "n": "Llave Y Roja",
   "brand": "",
   "cat": "herramientas",
   "spec": "Llave allen tipo Y · 3 puntas",
   "price": 70000,
-  "slug": "llave-y-roja",
   "sku": "LLAVE-Y-ROJA",
   "units": 12,
   "img": "assets/img/products/llave-y-roja.jpg"
  },
  {
-  "n": "Cult 25 Short Industrial",
   "slug": "cult-biggie-jaime-sintes-hammertone-negro",
+  "n": "Cult 25 Short Industrial",
   "brand": "Cult",
   "cat": "marcos",
-  "spec": "Cromoly · Top tube 20.5\" · Hammertone Negro",
+  "spec": "Cromoly · Tubo superior 20.5\" · Hammertone Negro",
   "price": 1790000,
-  "tag": "Top 🔥",
-  "size": "20.5",
-  "styles": [
-   "street"
-  ],
-  "weight": 2.05,
   "sku": "CULT-SHORT",
   "units": 1,
+  "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1784060861700",
@@ -2448,20 +2364,15 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068"
  },
  {
-  "n": "Fate Namaste Negro",
   "slug": "fate-namaste-negro",
+  "n": "Fate Namaste Negro",
   "brand": "Fate",
   "cat": "marcos",
-  "spec": "Cromoly · Top tube 20.4\"–20.75\" (dropout ajustable) · Negro",
+  "spec": "Cromoly · Tubo superior 20.4\"–20.75\" (dropout ajustable) · Negro",
   "price": 890000,
-  "tag": "Nacional",
-  "size": "20.4 - 20.75",
-  "styles": [
-   "street"
-  ],
-  "weight": 2,
   "sku": "FATE-NAMASTE-NEGRO",
   "units": 12,
+  "tag": "Nacional",
   "sizes": [
    {
     "label": "20.4\"-20.75\"",
@@ -2471,71 +2382,50 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/fate-namaste-negro.jpg?v=1784087360390"
  },
  {
-  "n": "Total BMX Marco 20.75\"",
   "slug": "total-marco-2075-blanco-azul",
+  "n": "Total BMX Marco 20.75\"",
   "brand": "Total",
   "cat": "marcos",
-  "spec": "Cromoly · Top tube 20.75\" · Blanco/Azul",
+  "spec": "Cromoly · Tubo superior 20.75\" · Blanco/Azul",
   "price": 1450000,
-  "size": "20.75",
-  "styles": [
-   "street"
-  ],
-  "weight": 2.15,
   "sku": "TOTAL-MARCO-2075-BLANCO-AZUL",
   "units": 12,
+  "tag": "Nuevo",
   "sizes": [
    {
     "label": "20.75\"",
     "units": 12
    }
   ],
-  "tag": "Nuevo",
   "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
  },
  {
-  "n": "Federal Marco Bruno LT",
   "slug": "federal-marco-bruno-lt-blanco",
+  "n": "Federal Marco Bruno LT",
   "brand": "Federal",
   "cat": "marcos",
-  "spec": "Cromoly · Top tube 21\" · Blanco",
+  "spec": "Cromoly · Tubo superior 21\" · Cola 13.6\" · Negro",
   "price": 980000,
-  "size": "21",
-  "styles": [
-   "street"
-  ],
-  "weight": 2.08,
   "sku": "FEDERAL-MARCO-BRUNO-LT-BLANCO",
   "units": 12,
-  "img": "assets/img/products/frame-placeholder.svg",
   "sizes": [
    {
     "label": "21\"",
     "units": 12
    }
-  ]
+  ],
+  "img": "assets/img/products/frame-placeholder.svg"
  },
  {
-  "n": "TukanBikes Industrial Raw",
   "slug": "tukanbikes-industrial-raw",
+  "n": "TukanBikes Industrial Raw",
   "brand": "TukanBikes",
   "cat": "marcos",
-  "spec": "Cromoly  • Soldadura TIC - MIG •Top tube 20.4” - 20.75” - 21”",
+  "spec": "Cromoly · Soldadura TIC - MIG · Tubo superior 20.4\" - 20.75\" - 21\"",
   "price": 360000,
-  "tag": "Nacional",
-  "size": "20.4 - 21",
-  "styles": [
-   "street"
-  ],
-  "weight": 2.05,
   "sku": "TUKANBIKES-INDUSTRIAL-RAW",
   "units": 4,
-  "sizes": [
-   {
-    "label": "20.4\" - 20.75” - 21”",
-    "units": 4
-   }
-  ],
+  "tag": "Nacional",
   "imgs": [
    "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784156626862",
    "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1784156628659",
@@ -2545,6 +2435,12 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/tukanbikes-industrial-raw-6.jpg?v=1784156636091",
    "assets/img/products/tukanbikes-industrial-raw-7.jpg?v=1784156637637",
    "assets/img/products/tukanbikes-industrial-raw-8.jpg?v=1784156639341"
+  ],
+  "sizes": [
+   {
+    "label": "20.4\" - 20.75” - 21”",
+    "units": 4
+   }
   ],
   "colors": [
    {
@@ -2556,60 +2452,36 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "imgColorMap": {
-   "Azul / Industrial": [
-    0,
-    1,
-    2,
-    3
-   ],
-   "Morado / Industrial": [
-    4,
-    5,
-    6,
-    7
-   ]
-  },
   "img": "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784156626862"
  },
  {
-  "n": "Wethepeople Doomsayer Negro",
   "slug": "wethepeople-doomsayer-negro",
+  "n": "Wethepeople Doomsayer Negro",
   "brand": "Wethepeople",
   "cat": "marcos",
-  "spec": "Cromoly · Top tube 20.75\" · Negro",
+  "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.9\" · Negro",
   "price": 990000,
-  "size": "20.75",
-  "styles": [
-   "dirt"
-  ],
-  "weight": 2.15,
   "sku": "WETHEPEOPLE-DOOMSAYER-NEGRO",
   "units": 12,
+  "tag": "Top",
   "sizes": [
    {
     "label": "20.75\"",
     "units": 12
    }
   ],
-  "tag": "Top",
   "img": "assets/img/products/wethepeople-doomsayer-negro.jpg?v=1784154923513"
  },
  {
-  "n": "Cult Haven's Gate Alex Duleba Negro",
   "slug": "cult-havens-gate-alex-duleba-negro",
+  "n": "Cult Haven's Gate Alex Duleba Negro",
   "brand": "Cult",
   "cat": "marcos",
-  "spec": "Cromoly · Top tube 20.5\" · Negro/Dorado",
+  "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.8\" · Negro",
   "price": 1790000,
-  "tag": "Top 🔥",
-  "size": "20.5",
-  "styles": [
-   "street"
-  ],
-  "weight": 2.05,
   "sku": "CULT-HAVENS-GATE-ALEX-DULEBA-NEGRO",
   "units": 1,
+  "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784060884027",
    "assets/img/products/cult-havens-gate-alex-duleba-negro-2.jpg?v=1784060886227",
@@ -2620,34 +2492,23 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cult-havens-gate-alex-duleba-negro-7.jpg?v=1784060906713",
    "assets/img/products/cult-havens-gate-alex-duleba-negro-8.jpg?v=1784060912378"
   ],
-  "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784060884027",
   "sizes": [
    {
     "label": "20.5\"",
     "units": 1
    }
-  ]
+  ],
+  "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784060884027"
  },
  {
-  "n": "Fiend Reynolds V3 Negro",
   "slug": "fiend-reynolds-v3-negro",
+  "n": "Fiend Reynolds V3 Negro",
   "brand": "Fiend",
   "cat": "marcos",
-  "spec": "Cromoly · Top tube 20.75\" · Cola 12.74\" · Negro",
+  "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.75\" · Negro",
   "price": 970000,
-  "size": "20.75",
-  "styles": [
-   "park"
-  ],
-  "weight": 2.08,
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
   "units": 12,
-  "sizes": [
-   {
-    "label": "20.75\"",
-    "units": 12
-   }
-  ],
   "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784156641557",
@@ -2658,101 +2519,99 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/fiend-reynolds-v3-negro-6.jpg?v=1784156652101",
    "assets/img/products/fiend-reynolds-v3-negro-7.jpg?v=1784156653909"
   ],
+  "sizes": [
+   {
+    "label": "20.75\"",
+    "units": 12
+   }
+  ],
   "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784156641557"
  },
  {
+  "slug": "aro_demolition_zero_plus_negro",
   "n": "Aro Demolition Zero Plus Negro",
   "brand": "Demolition",
   "cat": "rines",
-  "spec": "20\" · Doble pared · Negro",
+  "spec": "20\" · Doble pared · 36H · Negro",
   "price": 260000,
-  "weight": 0.55,
-  "slug": "aro_demolition_zero_plus_negro",
   "sku": "ARO_DEMOLITION_ZERO_PLUS_NEGRO",
   "units": 12,
   "img": "assets/img/products/aro_demolition_zero_plus_negro.jpeg"
  },
  {
+  "slug": "aros_eclat_bondi_cromados",
   "n": "Aro Éclat Bondi Cromado",
   "brand": "Éclat",
   "cat": "rines",
-  "spec": "20\" · Doble pared · Cromado",
+  "spec": "20\" · Pared simple · 36H · Cromado",
   "price": 250000,
-  "weight": 0.55,
-  "slug": "aros_eclat_bondi_cromados",
   "sku": "AROS_ECLAT_BONDI_CROMADOS",
   "units": 12,
   "img": "assets/img/products/aros_eclat_bondi_cromados.jpeg"
  },
  {
+  "slug": "aros_fate_negro",
   "n": "Aro Fate Negro",
   "brand": "Fate",
   "cat": "rines",
   "spec": "20\" · Doble pared · Negro",
   "price": 210000,
-  "tag": "Nacional",
-  "weight": 0.55,
-  "slug": "aros_fate_negro",
   "sku": "AROS_FATE_NEGRO",
   "units": 12,
+  "tag": "Nacional",
   "img": "assets/img/products/aros_fate_negro.jpeg"
  },
  {
+  "slug": "aros_stolen_chamber_cromados",
   "n": "Aro Stolen Chamber Cromado",
   "brand": "Stolen",
   "cat": "rines",
-  "spec": "20\" · Doble pared · Cromado",
+  "spec": "20\" · Cámara séxtuple · 36H · Cromado",
   "price": 245000,
-  "weight": 0.55,
-  "slug": "aros_stolen_chamber_cromados",
   "sku": "AROS_STOLEN_CHAMBER_CROMADOS",
   "units": 12,
   "img": "assets/img/products/aros_stolen_chamber_cromados.jpeg"
  },
  {
+  "slug": "coraza_cult_wafflecup_2.40",
   "n": "Coraza Cult Wafflecup 2.40",
   "brand": "Cult",
   "cat": "corazas",
-  "spec": "20 x 2.40\" · Negro",
+  "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 110000,
-  "weight": 0.4,
-  "slug": "coraza_cult_wafflecup_2.40",
   "sku": "CORAZA_CULT_WAFFLECUP_2.40",
   "units": 12,
   "img": "assets/img/products/coraza_cult_wafflecup_2.40.jpeg"
  },
  {
+  "slug": "coraza_innova_pro_2.40",
   "n": "Coraza Innova Pro 2.40",
   "brand": "Innova Tire",
   "cat": "corazas",
   "spec": "20 x 2.40\" · Negro · The Big Slick",
   "price": 75000,
-  "weight": 0.4,
-  "slug": "coraza_innova_pro_2.40",
   "sku": "CORAZA_INNOVA_PRO_2.40",
   "units": 12,
   "img": "assets/img/products/coraza_innova_pro_2.40.jpeg"
  },
  {
+  "slug": "coraza_odyssey_supercircuit_2.40",
   "n": "Coraza Odyssey Supercircuit 2.40",
   "brand": "Odyssey",
   "cat": "corazas",
-  "spec": "20 x 2.40\" · Negro",
+  "spec": "20 x 2.40\" · Banda direccional · Negro",
   "price": 120000,
-  "weight": 0.4,
-  "slug": "coraza_odyssey_supercircuit_2.40",
   "sku": "CORAZA_ODYSSEY_SUPERCIRCUIT_2.40",
   "units": 12,
   "img": "assets/img/products/coraza_odyssey_supercircuit_2.40.jpeg"
  },
  {
+  "slug": "coraza_primo_555_2.45",
   "n": "Coraza Primo 555 2.45",
   "brand": "Primo",
   "cat": "corazas",
-  "spec": "20 x 2.45\" · Negro",
+  "spec": "20 x 2.45\" · Banda direccional profundo · Negro",
   "price": 130000,
-  "weight": 0.4,
-  "slug": "coraza_primo_555_2.45",
   "sku": "CORAZA_PRIMO_555_2.45",
   "units": 12,
   "img": "assets/img/products/coraza_primo_555_2.45.jpeg"
