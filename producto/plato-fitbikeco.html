@@ -483,6 +483,7 @@ header.top-bar .brand .name { color: #fff; }
   /* ---- Mobile nav ---- */
   var burger = document.getElementById("burger"), nav = document.getElementById("nav");
   burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
+  nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
 
   /* ---- Category submenu accordion (mobile) ---- */
   document.querySelectorAll(".nav-drop-toggle").forEach(function(btn){
@@ -493,7 +494,6 @@ header.top-bar .brand .name { color: #fff; }
       if (menu) menu.classList.toggle("open", !open);
     });
   });
-  nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
 
   /* ---- Newsletter popup (once per browser session) ---- */
   var nlOverlay = document.getElementById("nlOverlay");
@@ -546,6 +546,10 @@ header.top-bar .brand .name { color: #fff; }
   }
 
   /* ---- Product photo gallery (slides + zoom) ---- */
+  // Reassigned by pdpGallery() below (if a gallery exists on this page) to
+  // actually filter the thumbnails/dots to a color's photos; called by the
+  // color variant selector further down. No-op otherwise.
+  var pdpFilterGallery = function(){};
   (function pdpGallery(){
     var wrap = document.getElementById("pdpGallery");
     if (!wrap) return;
@@ -565,6 +569,22 @@ header.top-bar .brand .name { color: #fff; }
       var thumbs = thumbsWrap ? thumbsWrap.querySelectorAll("button") : [];
       for (var t = 0; t < thumbs.length; t++) thumbs[t].classList.toggle("is-active", t === idx);
     }
+
+    // Shows only the given photo indices (thumbs + dots); null/empty = show
+    // all. Jumps the main image to the first allowed index if the current one
+    // isn't in the new set.
+    pdpFilterGallery = function(indices){
+      var allow = (indices && indices.length) ? indices : null;
+      [dotsWrap, thumbsWrap].forEach(function (list) {
+        if (!list) return;
+        var btns = list.querySelectorAll("button[data-i]");
+        for (var k = 0; k < btns.length; k++) {
+          var i2 = parseInt(btns[k].getAttribute("data-i"), 10);
+          btns[k].style.display = (!allow || allow.indexOf(i2) !== -1) ? "" : "none";
+        }
+      });
+      if (allow && allow.indexOf(idx) === -1) show(allow[0]);
+    };
 
     if (imgs.length > 1) {
       if (dotsWrap) {
@@ -669,7 +689,8 @@ header.top-bar .brand .name { color: #fff; }
   var liveProduct = null;
   if (window.ESCENA_PRODUCTS) {
     liveProduct = window.ESCENA_PRODUCTS.filter(function (x) { return x.slug === "plato-fitbikeco"; })[0] || null;
-    if (liveProduct && typeof liveProduct.units === "number" && !(liveProduct.sizes && liveProduct.sizes.length > 1)) {
+    var hasRealVariant = liveProduct && ((liveProduct.sizes && liveProduct.sizes.length > 1) || (liveProduct.colors && liveProduct.colors.length > 1 && !(liveProduct.sizes && liveProduct.sizes.length > 1)));
+    if (liveProduct && typeof liveProduct.units === "number" && !hasRealVariant) {
       unitsAvail = liveProduct.units;
     }
   }
@@ -684,62 +705,87 @@ header.top-bar .brand .name { color: #fff; }
     });
   }
 
-  /* ---- Variant selector ----
-     Two kinds share the same markup/id: a cosmetic one (LHD/RHD) that only
-     tags the WhatsApp message, and a real inventory-backed one (talla) whose
-     buttons carry data-units — picking one of those also re-caps the qty
-     stepper via applyStock() using that size's own stock (preferring the live
-     catalog's current count over what was baked in at publish time, same as
-     the base stock above). The WhatsApp message itself (price, wholesale
-     discount, variant/size note) is rebuilt by wholesale.js's refreshPDP(),
-     the single place that owns that link so it stays correct whether or not
-     wholesale pricing is active. */
+  /* ---- Variant selector(s) ----
+     A page can have up to two independent groups: #pdpVariant (talla, or the
+     legacy cosmetic LHD/RHD selector) and #pdpVariantColor (color). Each is
+     either cosmetic (tags the WhatsApp message only) or real inventory-backed
+     (buttons carry data-units — picking one re-caps the qty stepper via
+     applyStock() using that option's own stock, preferring the live catalog's
+     current count over what was baked in at publish time). A product tracks
+     real stock through at most one group at a time (see isColorReal in
+     admin.html), so at most one group here ever has data-units. The combined
+     selection across all groups feeds the cart's data-variant (joined with
+     " / "); the WhatsApp message itself is rebuilt by wholesale.js's
+     refreshPDP(), the single place that owns that link so it stays correct
+     whether or not wholesale pricing is active. */
   (function () {
-    var group = document.getElementById("pdpVariant");
-    if (!group) return;
-    var isRealSize = !!group.querySelector("button[data-units]");
+    var GROUP_LIVE_KEY = { pdpVariant: "sizes", pdpVariantColor: "colors" };
+    var groups = Array.prototype.slice.call(document.querySelectorAll(".pdp-variant"));
+    if (!groups.length) return;
+    var selected = {};
 
-    // Sync each size button's stock/disabled state from the live catalog —
-    // a size could have sold out (or come back) since this page was last
-    // generated, independent of any full page regeneration.
-    if (isRealSize && liveProduct && liveProduct.sizes) {
-      group.querySelectorAll("button[data-value]").forEach(function (b) {
-        var live = liveProduct.sizes.filter(function (s) { return s.label === b.getAttribute("data-value"); })[0];
-        if (!live) return;
-        b.setAttribute("data-units", String(live.units || 0));
-        b.disabled = (live.units || 0) <= 0;
-      });
+    function combinedVariant() {
+      return groups.map(function (g) { return selected[g.id]; }).filter(Boolean).join(" / ");
     }
 
-    function applyValue(val) {
-      group.querySelectorAll("button").forEach(function (b) {
-        b.classList.toggle("is-active", b.getAttribute("data-value") === val);
-      });
-      if (addCartBtn) addCartBtn.setAttribute("data-variant", val);
-      if (isRealSize) {
-        var units = null;
-        if (liveProduct && liveProduct.sizes) {
-          var live = liveProduct.sizes.filter(function (s) { return s.label === val; })[0];
-          if (live) units = live.units || 0;
-        }
-        if (units === null) {
-          var btn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
-          units = btn ? (parseInt(btn.getAttribute("data-units"), 10) || 0) : 0;
-        }
-        applyStock(units);
+    groups.forEach(function (group) {
+      var isRealSize = !!group.querySelector("button[data-units]");
+      var liveKey = GROUP_LIVE_KEY[group.id];
+      var liveList = (liveProduct && liveKey) ? liveProduct[liveKey] : null;
+
+      // Color group only: maps a color label to the subset of gallery photo
+      // indices that show that color (baked in at publish time from the
+      // admin panel's per-photo color tags). Absent when no photo was tagged.
+      var imgMap = null;
+      if (group.id === "pdpVariantColor") {
+        var rawImgMap = group.getAttribute("data-img-map");
+        if (rawImgMap) { try { imgMap = JSON.parse(rawImgMap); } catch (e) { imgMap = null; } }
       }
-      if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
-    }
 
-    group.addEventListener("click", function (e) {
-      var btn = e.target.closest("button[data-value]");
-      if (!btn || btn.disabled) return;
-      applyValue(btn.getAttribute("data-value"));
+      // Sync each button's stock/disabled state from the live catalog — an
+      // option could have sold out (or come back) since this page was last
+      // generated, independent of any full page regeneration.
+      if (isRealSize && liveList) {
+        group.querySelectorAll("button[data-value]").forEach(function (b) {
+          var live = liveList.filter(function (s) { return s.label === b.getAttribute("data-value"); })[0];
+          if (!live) return;
+          b.setAttribute("data-units", String(live.units || 0));
+          b.disabled = (live.units || 0) <= 0;
+        });
+      }
+
+      function applyValue(val) {
+        group.querySelectorAll("button").forEach(function (b) {
+          b.classList.toggle("is-active", b.getAttribute("data-value") === val);
+        });
+        selected[group.id] = val;
+        if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
+        if (isRealSize) {
+          var units = null;
+          if (liveList) {
+            var live = liveList.filter(function (s) { return s.label === val; })[0];
+            if (live) units = live.units || 0;
+          }
+          if (units === null) {
+            var btn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+            units = btn ? (parseInt(btn.getAttribute("data-units"), 10) || 0) : 0;
+          }
+          applyStock(units);
+        }
+        if (imgMap) pdpFilterGallery(imgMap[val] || null);
+        if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
+      }
+
+      group.addEventListener("click", function (e) {
+        var btn = e.target.closest("button[data-value]");
+        if (!btn || btn.disabled) return;
+        applyValue(btn.getAttribute("data-value"));
+      });
+
+      var preferred = group.querySelector("button.is-active[data-value]:not(:disabled)");
+      var firstBtn = preferred || group.querySelector("button[data-value]:not(:disabled)") || group.querySelector("button[data-value]");
+      if (firstBtn) applyValue(firstBtn.getAttribute("data-value"));
     });
-
-    var preferred = group.querySelector("button.is-active[data-value]:not(:disabled)");
-    var firstBtn = preferred || group.querySelector("button[data-value]:not(:disabled)") || group.querySelector("button[data-value]");
-    if (firstBtn) applyValue(firstBtn.getAttribute("data-value"));
   })();
 </script>
 <script>var ESCENA_ROOT = "../";</script>
