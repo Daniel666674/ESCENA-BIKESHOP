@@ -855,9 +855,9 @@ window.ESCENA_PRODUCTS = [
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.9\" · Hammertone",
   "price": 1790000,
-  "sku": "MRC",
-  "units": 1,
-  "tag": "Edición Especial",
+  "sku": "MRC-CLT-001",
+  "units": 2,
+  "tag": "Nuevo 🔥",
   "imgs": [
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210",
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-2.jpg?v=1784061950852",
@@ -873,6 +873,10 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.5\"",
+    "units": 1
+   },
+   {
+    "label": "20.75\"",
     "units": 1
    }
   ],
