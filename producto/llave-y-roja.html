@@ -133,10 +133,9 @@
     .pdp-share button { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .45rem .9rem; font-size: .74rem; font-weight: 600; cursor: pointer; font-family: inherit; color: var(--ink); transition: all .15s; }
     .pdp-share button:hover { border-color: var(--ink); }
     .pdp-desc { font-size: .92rem; color: #333; margin-bottom: 1.6rem; max-width: 480px; }
-    .spec-table { border-top: 1px solid var(--line); margin-bottom: 1.6rem; }
-    .spec-row { display: grid; grid-template-columns: 140px 1fr; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid var(--line); font-size: .86rem; }
-    .spec-row .k { color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-size: .72rem; align-self: center; }
-    .spec-row .v { color: var(--ink); }
+    .spec-list { list-style: none; padding: 0; margin: 0 0 1.6rem; border-top: 1px solid var(--line); }
+    .spec-list li { padding: .8rem .1rem; border-bottom: 1px solid var(--line); font-size: .9rem; color: var(--ink); }
+    .spec-list li.meta { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-size: .72rem; }
     .pdp-meta { font-size: .82rem; color: var(--muted); }
     .pdp-meta p { margin-bottom: .4rem; }
     .pdp-meta b { color: var(--ink); }
@@ -372,12 +371,12 @@ header.top-bar .brand .name { color: #fff; }
       <span>Compartir</span>
       <button id="shareBtn" type="button">Copiar enlace</button>
     </div>
-    <p class="pdp-desc">Llave Y Roja de . Llave allen tipo Y · 3 puntas.</p>
-    <div class="spec-table">
-      <div class="spec-row"><div class="k">Detalle 1</div><div class="v">Llave allen tipo Y</div></div>
-<div class="spec-row"><div class="k">Detalle 2</div><div class="v">3 puntas</div></div>
-<div class="spec-row"><div class="k">Categoría</div><div class="v">Herramientas</div></div>
-    </div>
+    <p class="pdp-desc">Llave Y Roja de .</p>
+    <ul class="spec-list">
+      <li>Llave allen tipo Y</li>
+<li>3 puntas</li>
+<li class="meta"><span>Categoría</span><span>Herramientas</span></li>
+    </ul>
     <div class="pdp-meta">
       <p><b>Envíos a toda Colombia</b> · coordinados por WhatsApp</p>
       <p><b>SKU:</b> LLAVE-Y-ROJA</p>
