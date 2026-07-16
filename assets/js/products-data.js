@@ -30,7 +30,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "20.5”",
+    "label": "20.5\"",
     "units": 1
    }
   ],
@@ -86,7 +86,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "“20.75 x 12.7”",
+    "label": "20.75 x 12.7\"",
     "units": 1
    }
   ],
@@ -283,7 +283,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "• “20.5” •",
+    "label": "20.5\"",
     "units": 1
    }
   ],
@@ -307,7 +307,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "• “10” •",
+    "label": "10\"",
     "units": 0
    }
   ],
@@ -333,8 +333,12 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "• “9.42” • “9.65”",
-    "units": 4
+    "label": "9.42\"",
+    "units": 2
+   },
+   {
+    "label": "9.65\"",
+    "units": 2
    }
   ],
   "colors": [
@@ -769,7 +773,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "46mm x",
+    "label": "46mm",
     "units": 1
    }
   ],
@@ -795,7 +799,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "50 mm",
+    "label": "50mm",
     "units": 1
    }
   ],
@@ -917,7 +921,25 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-demolition-14.jpg?v=1784059573260",
    "assets/img/products/pedales-demolition-15.jpg?v=1784059575864"
   ],
-  "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908"
+  "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908",
+  "colors": [
+   {
+    "label": "Azul con blanco",
+    "units": 3
+   },
+   {
+    "label": "Rojo con blanco",
+    "units": 3
+   },
+   {
+    "label": "Negro",
+    "units": 2
+   },
+   {
+    "label": "Morado con blanco",
+    "units": 2
+   }
+  ]
  },
  {
   "slug": "pedales-stolen",
@@ -937,7 +959,25 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-stolen-5.jpg?v=1784058805501",
    "assets/img/products/pedales-stolen-6.jpg?v=1784058808108"
   ],
-  "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983"
+  "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983",
+  "colors": [
+   {
+    "label": "Verde",
+    "units": 2
+   },
+   {
+    "label": "Azul",
+    "units": 1
+   },
+   {
+    "label": "Rojo",
+    "units": 1
+   },
+   {
+    "label": "Amarillo",
+    "units": 1
+   }
+  ]
  },
  {
   "slug": "cana-odyssey-cfl3",
@@ -1896,7 +1936,17 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "DIRECCION-NEGRA-BSD",
   "units": 2,
-  "img": "assets/img/products/direccion-negra-set.jpg"
+  "img": "assets/img/products/direccion-negra-set.jpg",
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1
+   },
+   {
+    "label": "Cromado",
+    "units": 1
+   }
+  ]
  },
  {
   "slug": "direccion-negra",
@@ -2438,7 +2488,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "20.4\" - 20.75” - 21”",
+    "label": "20.4\" - 20.75\" - 21\"",
     "units": 4
    }
   ],
