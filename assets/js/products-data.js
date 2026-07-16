@@ -1206,13 +1206,21 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · 28\" ancho · Negro · 10.5° retroceso · 3° elevación",
   "price": 370000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-01",
-  "units": 12,
+  "units": 2,
   "tag": "Top 🔥",
   "sizes": [
    {
     "label": "9.5\"",
-    "units": 12
+    "units": 2
    }
+  ],
+  "imgs": [
+   "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728",
+   "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1784211849883",
+   "assets/img/products/manubrio-cromoly-negro-01-3.jpg?v=1784211851445",
+   "assets/img/products/manubrio-cromoly-negro-01-4.jpg?v=1784211853668",
+   "assets/img/products/manubrio-cromoly-negro-01-5.jpg?v=1784211855102",
+   "assets/img/products/manubrio-cromoly-negro-01-6.jpg?v=1784211856740"
   ],
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728"
  },
@@ -1231,6 +1239,12 @@ window.ESCENA_PRODUCTS = [
     "label": "9.5\"",
     "units": 12
    }
+  ],
+  "imgs": [
+   "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495",
+   "assets/img/products/manubrio-cromoly-cromado-2.jpg?v=1784211858378",
+   "assets/img/products/manubrio-cromoly-cromado-3.jpg?v=1784211859914",
+   "assets/img/products/manubrio-cromoly-cromado-4.jpg?v=1784211861349"
   ],
   "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495"
  },
