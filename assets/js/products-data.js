@@ -620,8 +620,8 @@ window.ESCENA_PRODUCTS = [
   "cat": "sillines",
   "spec": "Pivotal · Cuero · Base reforzada · 3 piezas",
   "price": 200000,
-  "sku": "SLA",
-  "units": 3,
+  "sku": "SIL-FND-003",
+  "units": 2,
   "tag": "Nuevo 🔥!",
   "imgs": [
    "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1784138463438",
@@ -828,9 +828,9 @@ window.ESCENA_PRODUCTS = [
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.6\" · Negro",
   "price": 650000,
-  "sku": "MRC",
+  "sku": "MRC-FIT-001",
   "units": 1,
-  "tag": "Nuevo",
+  "tag": "Nuevo 🔥",
   "imgs": [
    "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011",
    "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784067918547",
@@ -842,7 +842,11 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "20.75 x 12.6",
+    "label": "20.5\"",
+    "units": 0
+   },
+   {
+    "label": "20.75\"",
     "units": 1
    }
   ],
