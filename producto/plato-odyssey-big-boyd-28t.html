@@ -595,7 +595,7 @@ header.top-bar .brand .name { color: #fff; }
     // square with the whole photo + blurred fill.
     var fitMode = wrap.getAttribute("data-fit") || "auto";
     var blurEl = document.getElementById("pdpBlur");
-    var AR_LO = 0.78, AR_HI = 1.6, arSet = false;
+    var AR_LO = 0.6, AR_HI = 2.0, arSet = false;
     function applyFit(){
       if (fitMode === "cover") { wrap.classList.add("fit-cover"); return; }
       wrap.classList.remove("fit-cover");
