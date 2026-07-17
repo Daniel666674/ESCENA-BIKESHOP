@@ -38,7 +38,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "marco-federal-command-negro-20-5-x-cola-12-5",
-  "n": "Marco Federal Command Negro 20.5” x Cola 12.5”",
+  "n": "Marco Federal Command Negro",
   "brand": "Federal",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.5\" · Negro",
@@ -60,7 +60,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "marco-federal-chiller-20-75-cola-12-7",
-  "n": "Marco Federal Chiller 20.75” Cola 12.7”",
+  "n": "Marco Federal Chiller",
   "brand": "Federal",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.7\" · Negro",
@@ -2543,7 +2543,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "total-marco-2075-blanco-azul",
-  "n": "Total BMX Marco 20.75\"",
+  "n": "Total BMX Marco",
   "brand": "Total",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Blanco/Azul",
