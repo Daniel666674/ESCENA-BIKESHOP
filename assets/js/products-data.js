@@ -898,7 +898,8 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Nuevo 🔥",
   "imgs": [
-   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784312560084",
+   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784324392434",
+   "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784324393580",
    "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784312562003",
    "assets/img/products/marco-fitbikeco-str-negro-3.jpg?v=1784312563404",
    "assets/img/products/marco-fitbikeco-str-negro-4.jpg?v=1784312564916",
@@ -914,8 +915,8 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "imgFit": "contain",
-  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784312560084"
+  "imgFit": "cover",
+  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784324392434"
  },
  {
   "slug": "pedales-odyssey",
