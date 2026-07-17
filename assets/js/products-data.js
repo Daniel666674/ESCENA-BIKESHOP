@@ -2642,8 +2642,8 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315105751",
-   "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1784315106858",
+   "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315393093",
+   "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1784315394267",
    "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1784315108223",
    "assets/img/products/fiend-reynolds-v3-negro-4.jpg?v=1784315109553",
    "assets/img/products/fiend-reynolds-v3-negro-5.jpg?v=1784315110904"
@@ -2654,7 +2654,7 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315105751"
+  "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315393093"
  },
  {
   "slug": "aro_demolition_zero_plus_negro",
