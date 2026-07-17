@@ -9,7 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgs": [
    "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1784332431720",
-   "assets/img/products/cana-cult-mind-control-rasta-front-load-2.jpg?v=1784332433000"
+   "assets/img/products/cana-cult-mind-control-rasta-front-load-2.jpg?v=1784332549561"
   ],
   "sizes": [
    {
