@@ -510,6 +510,14 @@
     <div class="pmodal-photos" id="pmodalPhotos"></div>
     <button type="button" class="pmodal-add-photo" id="pmodalAddPhotoBtn" title="Agregar foto">+</button>
     <p style="font-size:.72rem;color:var(--muted);margin:.4rem 0 0;">Foto en <b>JPG</b> o <b>PNG</b>. Se comprime automáticamente al subirla. Usá &lsaquo; &rsaquo; para ordenarlas (la primera, "Portada", es la que se muestra en la tienda) y &#8635; para rotarlas 90° si quedaron torcidas.</p>
+    <div class="pmodal-field" style="margin-top:.7rem;">
+      <label>Ajuste de la foto en la página <span style="color:var(--muted);font-weight:400;">(cómo se ve en la tienda)</span></label>
+      <select id="pmImgFit">
+        <option value="auto">Automático (recomendado)</option>
+        <option value="contain">Mostrar completa — sin recortar</option>
+        <option value="cover">Rellenar el cuadro — puede recortar bordes</option>
+      </select>
+    </div>
     <input type="file" id="pmodalFileInput" accept="image/jpeg,image/png,image/webp,image/*" multiple style="display:none;" />
     <form id="pmodalForm">
       <div class="pmodal-grid" style="margin-top:1.2rem;">
@@ -1132,6 +1140,7 @@
     m.units = (typeof p.units === "number") ? p.units : (p.stock === false ? 0 : 12);
     m.cost = (typeof p.cost === "number") ? p.cost : 0;
     m.notes = p.notes || "";
+    m.imgFit = (p.imgFit === "contain" || p.imgFit === "cover") ? p.imgFit : "auto";
     m.tag = p.tag || "";
     m.published = (p.published === false) ? false : true;
     m.imgs = p.imgs || (p.img ? [p.img] : ["assets/img/escena-logo.jpg"]);
@@ -1160,7 +1169,7 @@
   // Fields that actually feed genPage() — a change to any of these means the
   // product's static detail page is out of date and needs regenerating.
   function pageSnapshotOf(p) {
-    return JSON.stringify([p.n, p.brand, p.cat, p.spec, p.price, p.sku, p.tag, p.units, p.imgs, p.sizes, p.colors, p.imgColorMap]);
+    return JSON.stringify([p.n, p.brand, p.cat, p.spec, p.price, p.sku, p.tag, p.units, p.imgs, p.sizes, p.colors, p.imgColorMap, p.imgFit]);
   }
   function pageNeedsRegen(p) {
     return pageSnapshotOf(p) !== p._pageSnapshot;
@@ -1208,6 +1217,7 @@
     if (o.published === true) delete o.published; // default; keep only when false
     if (!o.tag) delete o.tag;
     delete o.cost; delete o.notes; // internal-only, never published
+    if (o.imgFit === "auto" || !o.imgFit) delete o.imgFit; // default; keep only an explicit override
     delete o._pageSnapshot; // internal-only, drives static page regeneration
     return o;
   }
@@ -1429,6 +1439,7 @@
       TAG_SPAN: p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '',
       SPEC_ITEMS: specItems(p.spec, catLabel, p.brand), WA_HREF: waHrefFor(p), RELATED_SECTION: relatedFor(p),
       PRIMARY_IMG: esc("../" + ((p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg")),
+      IMG_FIT: (p.imgFit || "auto"),
       GALLERY_JSON: gallery.json, GALLERY_DOTS: gallery.dots, GALLERY_THUMBS: gallery.thumbs,
       NAME_JSON: jsonEsc(p.n), BRAND_JSON: jsonEsc(p.brand || ""), SPEC_JSON: jsonEsc(p.spec || ""),
       CAT_LABEL_JSON: jsonEsc(catLabel), SKU_JSON: jsonEsc(sku),
@@ -1769,6 +1780,7 @@
     document.getElementById("pmTag").value = p ? p.tag : "";
     document.getElementById("pmCost").value = p && p.cost ? p.cost : "";
     document.getElementById("pmNotes").value = p ? p.notes : "";
+    document.getElementById("pmImgFit").value = (p && p.imgFit) ? p.imgFit : "auto";
     updateMarginReadout();
     modalPhotos = p ? p.imgs.slice() : [];
     // Reverse p.imgColorMap ({label: [indices]}) into one label per photo index.
@@ -2162,6 +2174,7 @@
         tag: document.getElementById("pmTag").value.trim(),
         cost: parseFloat(document.getElementById("pmCost").value) || 0,
         notes: document.getElementById("pmNotes").value.trim(),
+        imgFit: document.getElementById("pmImgFit").value,
         imgs: modalPhotos.length ? modalPhotos : ["assets/img/escena-logo.jpg"]
       };
       if (isSizeCat(catVal)) {
@@ -2228,7 +2241,7 @@
     });
 
     document.getElementById("invExportCsvBtn").addEventListener("click", function () {
-      var headers = ["slug", "n", "brand", "cat", "spec", "price", "sku", "units", "tag", "imgs", "sizes", "colors"];
+      var headers = ["slug", "n", "brand", "cat", "spec", "price", "sku", "units", "tag", "imgs", "sizes", "colors", "imgFit"];
       var rows = [headers.join(",")];
       inventoryCatalog.forEach(function (p) {
         rows.push(headers.map(function (h) {
