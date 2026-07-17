@@ -515,7 +515,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "punos",
   "spec": "Goma · 160mm · 31.5mm · Super suave",
   "price": 50000,
-  "sku": "GRIPS",
+  "sku": "GRP-SNM-001",
   "units": 4,
   "tag": "Top 🔥!",
   "imgs": [
@@ -536,6 +536,18 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0,
+    1,
+    2
+   ],
+   "Morado": [
+    3,
+    4,
+    5
+   ]
+  },
   "img": "assets/img/products/grips-s-m-mike-hoder-3.jpg?v=1784138431279"
  },
  {
