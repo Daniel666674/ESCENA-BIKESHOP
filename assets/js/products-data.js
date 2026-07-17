@@ -312,14 +312,14 @@ window.ESCENA_PRODUCTS = [
   "price": 80000,
   "sku": "TMN",
   "units": 0,
-  "tag": "Nacional",
+  "tag": "Nuevo",
   "sizes": [
    {
     "label": "10\"",
     "units": 0
    }
   ],
-  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784310304888"
+  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784310412205"
  },
  {
   "slug": "timon-cult-heavens-gate-4p-cromado",
