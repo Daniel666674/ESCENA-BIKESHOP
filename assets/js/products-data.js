@@ -1124,13 +1124,11 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "tag": "Nuevo",
   "imgs": [
-   "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779",
-   "assets/img/products/marco-cult-biggie-hammertone-2.jpg?v=1784048461580",
-   "assets/img/products/marco-cult-biggie-hammertone-3.jpg?v=1784048463198",
-   "assets/img/products/marco-cult-biggie-hammertone-4.jpg?v=1784048464803",
-   "assets/img/products/marco-cult-biggie-hammertone-5.jpg?v=1784048466711",
-   "assets/img/products/marco-cult-biggie-hammertone-6.jpg?v=1784048468587",
-   "assets/img/products/marco-cult-biggie-hammertone-7.jpg?v=1784048470248"
+   "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784313915335",
+   "assets/img/products/marco-cult-biggie-hammertone-2.jpg?v=1784313916815",
+   "assets/img/products/marco-cult-biggie-hammertone-3.jpg?v=1784313918454",
+   "assets/img/products/marco-cult-biggie-hammertone-4.jpg?v=1784313919935",
+   "assets/img/products/marco-cult-biggie-hammertone-5.jpg?v=1784313921292"
   ],
   "sizes": [
    {
@@ -1142,7 +1140,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779"
+  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784313915335"
  },
  {
   "slug": "cana-s-m-enduro-40mm-negra",
@@ -2496,14 +2494,11 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1784060861700",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-3.jpg?v=1784150822577",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-4.jpg?v=1784060866186",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-5.jpg?v=1784060868553",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-6.jpg?v=1784060871314",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-7.jpg?v=1784060874032",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-8.jpg?v=1784150824939"
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784313922616",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1784313923821",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-3.jpg?v=1784313925313",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-4.jpg?v=1784313926605",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-5.jpg?v=1784313928050"
   ],
   "sizes": [
    {
@@ -2511,7 +2506,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068"
+  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784313922616"
  },
  {
   "slug": "fate-namaste-negro",
