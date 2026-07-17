@@ -700,7 +700,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1784072403563",
+   "assets/img/products/cana-fiend-mills-topload.jpg?v=1784330118079",
    "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784072401934",
    "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1784072406365",
    "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1784072404971",
@@ -743,7 +743,7 @@ window.ESCENA_PRODUCTS = [
     6
    ]
   },
-  "img": "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1784072403563"
+  "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784330118079"
  },
  {
   "slug": "cana-shadow-ravage-topload",
