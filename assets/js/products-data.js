@@ -319,7 +319,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784310412205"
+  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784310632125"
  },
  {
   "slug": "timon-cult-heavens-gate-4p-cromado",
