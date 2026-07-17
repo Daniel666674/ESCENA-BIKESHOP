@@ -20,21 +20,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "MRC",
   "units": 1,
   "tag": "Nacional",
-  "imgs": [
-   "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069",
-   "assets/img/products/marco-gw-destructor-azul-20-5-2.jpg?v=1784157840425",
-   "assets/img/products/marco-gw-destructor-azul-20-5-3.jpg?v=1784157841860",
-   "assets/img/products/marco-gw-destructor-azul-20-5-4.jpg?v=1784157843230",
-   "assets/img/products/marco-gw-destructor-azul-20-5-5.jpg?v=1784157844826",
-   "assets/img/products/marco-gw-destructor-azul-20-5-6.jpg?v=1784157846889"
-  ],
   "sizes": [
    {
     "label": "20.5\"",
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069"
+  "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784311585087"
  },
  {
   "slug": "marco-federal-command-negro-20-5-x-cola-12-5",
@@ -43,17 +35,12 @@ window.ESCENA_PRODUCTS = [
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.5\" · Negro",
   "price": 1660000,
-  "sku": "MRC",
+  "sku": "MRC-FED-001",
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784157848220",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784157849695",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-3.jpg?v=1784157850967",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-4.jpg?v=1784157852335",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-5.jpg?v=1784157853865",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-6.jpg?v=1784157855331",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-7.jpg?v=1784157856973"
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784311586478",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784311588157"
   ],
   "sizes": [
    {
@@ -61,7 +48,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784157848220"
+  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784311586478"
  },
  {
   "slug": "marco-federal-chiller-20-75-cola-12-7",
@@ -70,19 +57,18 @@ window.ESCENA_PRODUCTS = [
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.7\" · Negro",
   "price": 1660000,
-  "sku": "MRC",
+  "sku": "MRC-FED-002",
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784157860339",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1784157862260",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-3.jpg?v=1784157864500",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-4.jpg?v=1784157866335",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-5.jpg?v=1784157868021",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-6.jpg?v=1784157869778",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-7.jpg?v=1784157871541",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-8.jpg?v=1784157873619",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-9.jpg?v=1784157875566"
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784311589670",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1784311591232",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-3.jpg?v=1784311593072",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-4.jpg?v=1784311594918",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-5.jpg?v=1784311596562",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-6.jpg?v=1784311598078",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-7.jpg?v=1784311599759",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-8.jpg?v=1784311601505"
   ],
   "sizes": [
    {
@@ -90,7 +76,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784157860339"
+  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784311589670"
  },
  {
   "slug": "coraza-innova-tire-20-x-2-40",
