@@ -2617,14 +2617,11 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784060884027",
-   "assets/img/products/cult-havens-gate-alex-duleba-negro-2.jpg?v=1784060886227",
-   "assets/img/products/cult-havens-gate-alex-duleba-negro-3.jpg?v=1784060888675",
-   "assets/img/products/cult-havens-gate-alex-duleba-negro-4.jpg?v=1784060891771",
-   "assets/img/products/cult-havens-gate-alex-duleba-negro-5.jpg?v=1784060896113",
-   "assets/img/products/cult-havens-gate-alex-duleba-negro-6.jpg?v=1784060902105",
-   "assets/img/products/cult-havens-gate-alex-duleba-negro-7.jpg?v=1784060906713",
-   "assets/img/products/cult-havens-gate-alex-duleba-negro-8.jpg?v=1784060912378"
+   "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784315099008",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-2.jpg?v=1784315100361",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-3.jpg?v=1784315101700",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-4.jpg?v=1784315103015",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro-5.jpg?v=1784315104643"
   ],
   "sizes": [
    {
@@ -2632,7 +2629,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784060884027"
+  "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784315099008"
  },
  {
   "slug": "fiend-reynolds-v3-negro",
@@ -2645,13 +2642,11 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784156641557",
-   "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1784156643892",
-   "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1784156646261",
-   "assets/img/products/fiend-reynolds-v3-negro-4.jpg?v=1784156648375",
-   "assets/img/products/fiend-reynolds-v3-negro-5.jpg?v=1784156650039",
-   "assets/img/products/fiend-reynolds-v3-negro-6.jpg?v=1784156652101",
-   "assets/img/products/fiend-reynolds-v3-negro-7.jpg?v=1784156653909"
+   "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315105751",
+   "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1784315106858",
+   "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1784315108223",
+   "assets/img/products/fiend-reynolds-v3-negro-4.jpg?v=1784315109553",
+   "assets/img/products/fiend-reynolds-v3-negro-5.jpg?v=1784315110904"
   ],
   "sizes": [
    {
@@ -2659,7 +2654,7 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784156641557"
+  "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315105751"
  },
  {
   "slug": "aro_demolition_zero_plus_negro",
