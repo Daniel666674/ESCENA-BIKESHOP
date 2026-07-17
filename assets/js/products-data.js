@@ -911,51 +911,93 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/pedales-odyssey.jpg?v=1784059906159"
  },
  {
-  "slug": "pedales-demolition",
   "n": "Pedales Demolition",
   "brand": "Demolition",
   "cat": "pedales",
-  "spec": "Plataforma nylon · 10 pines · Azul con blanco · Rojo con blanco · Negro · Morado con blanco",
+  "spec": "Azul con blanco , Rojo con blanco , Gris con Blanco, Negro, Morado con blanco, Morado con Amarillo.",
   "price": 95000,
   "sku": "PDL",
-  "units": 10,
+  "units": 14,
   "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/pedales-demolition.jpg?v=1784059551908",
    "assets/img/products/pedales-demolition-2.jpg?v=1784059553615",
+   "assets/img/products/pedales-demolition-3.jpg?v=1784262238206",
    "assets/img/products/pedales-demolition-3.jpg?v=1784059555139",
    "assets/img/products/pedales-demolition-4.jpg?v=1784059556618",
    "assets/img/products/pedales-demolition-5.jpg?v=1784059558102",
-   "assets/img/products/pedales-demolition-6.jpg?v=1784059559776",
+   "assets/img/products/pedales-demolition-12.jpg?v=1784059569860",
    "assets/img/products/pedales-demolition-7.jpg?v=1784059561416",
    "assets/img/products/pedales-demolition-8.jpg?v=1784059563785",
    "assets/img/products/pedales-demolition-9.jpg?v=1784059565238",
+   "assets/img/products/pedales-demolition-11.jpg?v=1784262240124",
    "assets/img/products/pedales-demolition-10.jpg?v=1784059566652",
-   "assets/img/products/pedales-demolition-11.jpg?v=1784059568136",
-   "assets/img/products/pedales-demolition-12.jpg?v=1784059569860",
-   "assets/img/products/pedales-demolition-13.jpg?v=1784059571375",
    "assets/img/products/pedales-demolition-14.jpg?v=1784059573260",
+   "assets/img/products/pedales-demolition-11.jpg?v=1784059568136",
    "assets/img/products/pedales-demolition-15.jpg?v=1784059575864"
   ],
-  "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908",
+  "slug": "pedales-demolition",
   "colors": [
    {
-    "label": "Azul con blanco",
-    "units": 3
-   },
-   {
-    "label": "Rojo con blanco",
-    "units": 3
+    "label": "Rojo Azul",
+    "units": 2
    },
    {
     "label": "Negro",
     "units": 2
    },
    {
-    "label": "Morado con blanco",
+    "label": "Blanco Negro",
+    "units": 2
+   },
+   {
+    "label": "Morado Amarillo",
+    "units": 2
+   },
+   {
+    "label": "Blanco Lila",
+    "units": 2
+   },
+   {
+    "label": "Azul Blanco",
+    "units": 2
+   },
+   {
+    "label": "Rojo Blanco",
     "units": 2
    }
-  ]
+  ],
+  "imgColorMap": {
+   "Rojo Azul": [
+    0,
+    1
+   ],
+   "Negro": [
+    2,
+    3
+   ],
+   "Blanco Negro": [
+    4,
+    5
+   ],
+   "Morado Amarillo": [
+    6,
+    7
+   ],
+   "Blanco Lila": [
+    8,
+    9
+   ],
+   "Azul Blanco": [
+    10,
+    11
+   ],
+   "Rojo Blanco": [
+    12,
+    13
+   ]
+  },
+  "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908"
  },
  {
   "n": "Pedales Stolen",
