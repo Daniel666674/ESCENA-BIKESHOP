@@ -185,19 +185,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "TND",
   "units": 2,
   "tag": "Nuevo!",
-  "imgs": [
-   "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784153752086",
-   "assets/img/products/tenedor-gw-destructor-tornasol-2.jpg?v=1784153753998",
-   "assets/img/products/tenedor-gw-destructor-tornasol-3.jpg?v=1784153755990",
-   "assets/img/products/tenedor-gw-destructor-tornasol-4.jpg?v=1784153757901"
-  ],
   "colors": [
    {
     "label": "Tornasol",
     "units": 2
    }
   ],
-  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784153752086"
+  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784327049926"
  },
  {
   "slug": "grips-dailygrind",
@@ -1187,7 +1181,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 1,
   "tag": "Nuev",
-  "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg"
+  "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1784327051012"
  },
  {
   "slug": "mutanty-savage-v2-stem-plata",
@@ -1404,25 +1398,26 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "wethepeople-horquilla-cromada",
-  "n": "Tenedor Wethepeople Battleship Cromado",
+  "n": "Tenedor Wethepeople Cromado",
   "brand": "Wethepeople",
   "cat": "horquillas",
   "spec": "Cromoly · Tubo recto · Cromado",
   "price": 800000,
   "sku": "WETHEPEOPLE-HORQUILLA-CROMADA",
-  "units": 0,
-  "img": "assets/img/products/wethepeople-horquilla-cromada.jpg"
+  "units": 12,
+  "img": "assets/img/products/wethepeople-horquilla-cromada.jpg?v=1784327052116"
  },
  {
   "slug": "horquilla-cromoly-negra-01",
-  "n": "Tenedor Negro",
-  "brand": "",
+  "n": "Tenedor Rant Twin Peaks",
+  "brand": "Rant",
   "cat": "horquillas",
   "spec": "Cromoly · Tubo recto · Negro mate",
   "price": 400000,
   "sku": "HORQUILLA-CROMOLY-NEGRA-01",
   "units": 12,
-  "img": "assets/img/products/horquilla-cromoly-negra-01.jpg"
+  "tag": "Top",
+  "img": "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1784327053231"
  },
  {
   "slug": "federal-horquilla-cromada",
@@ -1433,7 +1428,13 @@ window.ESCENA_PRODUCTS = [
   "price": 690000,
   "sku": "FEDERAL-HORQUILLA-CROMADA",
   "units": 3,
-  "img": "assets/img/products/federal-horquilla-cromada.jpg"
+  "tag": "Top",
+  "imgs": [
+   "assets/img/products/federal-horquilla-cromada.jpg?v=1784327054447",
+   "assets/img/products/federal-horquilla-cromada-2.jpg?v=1784327055487",
+   "assets/img/products/federal-horquilla-cromada-3.jpg?v=1784327056588"
+  ],
+  "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1784327054447"
  },
  {
   "slug": "horquilla-cromoly-negra-02",
