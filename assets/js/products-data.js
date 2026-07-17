@@ -594,14 +594,12 @@ window.ESCENA_PRODUCTS = [
   "cat": "stems",
   "spec": "Carga superior · Alcance 48mm · Aluminio CNC",
   "price": 310000,
-  "sku": "STEAM",
+  "sku": "CAN-SHW-001",
   "units": 1,
-  "tag": "Top🔥!",
   "imgs": [
-   "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784138444730",
-   "assets/img/products/cana-shadow-finest-negra-topload-2.jpg?v=1784138447031",
-   "assets/img/products/cana-shadow-finest-negra-topload-3.jpg?v=1784138449080",
-   "assets/img/products/cana-shadow-finest-negra-topload-4.jpg?v=1784138450830"
+   "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784327000115",
+   "assets/img/products/cana-shadow-finest-negra-topload-2.jpg?v=1784327001811",
+   "assets/img/products/cana-shadow-finest-negra-topload-3.jpg?v=1784327003589"
   ],
   "sizes": [
    {
@@ -609,7 +607,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784138444730"
+  "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784327000115"
  },
  {
   "slug": "silla-pivotal-fate-negra",
