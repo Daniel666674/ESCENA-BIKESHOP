@@ -203,15 +203,14 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784153752086"
  },
  {
-  "slug": "grips-dailygrind",
   "n": "Grips Dailygrind",
   "brand": "Dailygrind",
   "cat": "punos",
-  "spec": "Goma · 160mm · 30.5mm · acanalado hongo",
+  "spec": "• Negro • Café • Lava •",
   "price": 50000,
   "sku": "GRIP",
   "units": 6,
-  "tag": "Top!",
+  "tag": "Top",
   "imgs": [
    "assets/img/products/grips-dailygrind.jpg?v=1784153759831",
    "assets/img/products/grips-dailygrind-2.jpg?v=1784153761769",
@@ -234,6 +233,21 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0,
+    1
+   ],
+   "Café": [
+    2,
+    3
+   ],
+   "Lava": [
+    4,
+    5
+   ]
+  },
+  "slug": "grips-dailygrind",
   "img": "assets/img/products/grips-dailygrind.jpg?v=1784153759831"
  },
  {
@@ -928,31 +942,26 @@ window.ESCENA_PRODUCTS = [
   ]
  },
  {
-  "slug": "pedales-stolen",
   "n": "Pedales Stolen",
   "brand": "Stolen",
   "cat": "pedales",
-  "spec": "Plataforma nylon · 12 pines · Verde · Azul · Rojo · Amarillo",
+  "spec": "Verde, Azul, AguaMarina, Rojo, Amarillo Florecente.",
   "price": 75000,
   "sku": "PDL",
   "units": 5,
   "tag": "Colorido 🌈",
   "imgs": [
    "assets/img/products/pedales-stolen.jpg?v=1784058795983",
-   "assets/img/products/pedales-stolen-2.jpg?v=1784058798429",
    "assets/img/products/pedales-stolen-3.jpg?v=1784058800908",
    "assets/img/products/pedales-stolen-4.jpg?v=1784058803539",
    "assets/img/products/pedales-stolen-5.jpg?v=1784058805501",
-   "assets/img/products/pedales-stolen-6.jpg?v=1784058808108"
+   "assets/img/products/pedales-stolen-6.jpg?v=1784058808108",
+   "assets/img/products/pedales-stolen-2.jpg?v=1784058798429"
   ],
-  "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983",
+  "slug": "pedales-stolen",
   "colors": [
    {
     "label": "Verde",
-    "units": 2
-   },
-   {
-    "label": "Azul",
     "units": 1
    },
    {
@@ -960,10 +969,36 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    },
    {
+    "label": "Azul Aguamarina",
+    "units": 1
+   },
+   {
     "label": "Amarillo",
     "units": 1
+   },
+   {
+    "label": "Azul",
+    "units": 1
    }
-  ]
+  ],
+  "imgColorMap": {
+   "Verde": [
+    0
+   ],
+   "Rojo": [
+    1
+   ],
+   "Azul Aguamarina": [
+    2
+   ],
+   "Amarillo": [
+    3
+   ],
+   "Azul": [
+    4
+   ]
+  },
+  "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983"
  },
  {
   "slug": "cana-odyssey-cfl3",
