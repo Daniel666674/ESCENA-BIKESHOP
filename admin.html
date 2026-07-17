@@ -561,6 +561,21 @@
           <input type="text" id="smBuyer" placeholder="Nombre o @instagram" />
         </div>
         <div class="pmodal-field">
+          <label>Celular (opcional)</label>
+          <input type="tel" id="smPhone" inputmode="tel" placeholder="Ej: 300 123 4567" />
+        </div>
+        <div class="pmodal-field">
+          <label>Método de pago</label>
+          <select id="smPayment">
+            <option value="Efectivo">Efectivo</option>
+            <option value="Nequi">Nequi</option>
+            <option value="Daviplata">Daviplata</option>
+            <option value="Transferencia">Transferencia bancaria</option>
+            <option value="Tarjeta">Tarjeta</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="pmodal-field">
           <label>Total</label>
           <div class="pmodal-margin-readout" id="smTotalReadout">$0</div>
         </div>
@@ -1725,6 +1740,8 @@
     document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock" + (list ? (kind === "sizes" ? " (todas las tallas)" : " (todos los colores)") : "");
     document.getElementById("smPrice").value = p.price || 0;
     document.getElementById("smBuyer").value = "";
+    document.getElementById("smPhone").value = "";
+    document.getElementById("smPayment").value = "Efectivo";
     document.getElementById("smNotes").value = "";
     applySellUnitsLimit();
     document.getElementById("smodalOverlay").classList.add("show");
@@ -1845,6 +1862,8 @@
         slug: p.slug, n: p.n, sku: p.sku, brand: p.brand,
         qty: qty, unitPrice: price, total: qty * price,
         buyer: document.getElementById("smBuyer").value.trim(),
+        phone: document.getElementById("smPhone").value.trim(),
+        payment: document.getElementById("smPayment").value,
         notes: document.getElementById("smNotes").value.trim()
       }, variant ? (kind === "sizes" ? { size: variant.label } : { color: variant.label }) : {}));
       salesDirty = true;
