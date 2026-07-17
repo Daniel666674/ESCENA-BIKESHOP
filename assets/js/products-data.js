@@ -285,7 +285,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784312558002"
+  "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784326217980"
  },
  {
   "slug": "timon-gw-destructor-tornasol",
@@ -2577,10 +2577,10 @@ window.ESCENA_PRODUCTS = [
   "units": 4,
   "tag": "Nacional",
   "imgs": [
-   "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784325783725",
+   "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784326219051",
    "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1784325785008",
    "assets/img/products/tukanbikes-industrial-raw-3.jpg?v=1784325786292",
-   "assets/img/products/tukanbikes-industrial-raw-4.jpg?v=1784325787317",
+   "assets/img/products/tukanbikes-industrial-raw-4.jpg?v=1784326220098",
    "assets/img/products/tukanbikes-industrial-raw-5.jpg?v=1784325788342"
   ],
   "sizes": [
@@ -2602,13 +2602,16 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgColorMap": {
    "Azul / Industrial": [
-    0
+    0,
+    1,
+    2
    ],
    "Morado / Industrial": [
-    3
+    3,
+    4
    ]
   },
-  "img": "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784325783725"
+  "img": "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784326219051"
  },
  {
   "slug": "wethepeople-doomsayer-negro",
