@@ -137,16 +137,18 @@ window.ESCENA_PRODUCTS = [
   "n": "Caña Volume Bison Negra - FrontLoad",
   "brand": "Volume",
   "cat": "stems",
-  "spec": "Carga frontal · Alcance 50mm · Aluminio CNC",
+  "spec": "Alcance: 50 mm Altura de la pila: 33 mm Elevación (vertical): 10,5 mm Peso: 10,4 onzas",
   "price": 330000,
-  "sku": "STEAM",
+  "sku": "CAN-VOL-002",
   "units": 1,
   "tag": "Descuento",
   "imgs": [
-   "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322",
-   "assets/img/products/cana-volume-bison-negra-frontload-2.jpg?v=1784071885806",
-   "assets/img/products/cana-volume-bison-negra-frontload-3.jpg?v=1784071889009",
-   "assets/img/products/cana-volume-bison-negra-frontload-4.jpg?v=1784071891487"
+   "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784326496360",
+   "assets/img/products/cana-volume-bison-negra-frontload-2.jpg?v=1784326497720",
+   "assets/img/products/cana-volume-bison-negra-frontload-3.jpg?v=1784326499224",
+   "assets/img/products/cana-volume-bison-negra-frontload-4.jpg?v=1784326500625",
+   "assets/img/products/cana-volume-bison-negra-frontload-5.jpg?v=1784326501904",
+   "assets/img/products/cana-volume-bison-negra-frontload-6.jpg?v=1784326503247"
   ],
   "sizes": [
    {
@@ -154,7 +156,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322"
+  "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784326496360"
  },
  {
   "slug": "pedales-wellgo-negro",
