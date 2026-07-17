@@ -47,7 +47,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784311586478",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009",
    "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784311588157"
   ],
   "sizes": [
@@ -56,7 +56,8 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784311586478"
+  "imgFit": "cover",
+  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009"
  },
  {
   "slug": "marco-federal-chiller-20-75-cola-12-7",
@@ -69,7 +70,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784311589670",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784324778016",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1784311591232",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-3.jpg?v=1784311593072",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-4.jpg?v=1784311594918",
@@ -84,7 +85,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784311589670"
+  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784324778016"
  },
  {
   "slug": "coraza-innova-tire-20-x-2-40",
@@ -2540,7 +2541,12 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784087360390"
+  "imgs": [
+   "assets/img/products/fate-namaste-negro.jpg?v=1784324778974",
+   "assets/img/products/fate-namaste-negro-2.jpg?v=1784324780160",
+   "assets/img/products/fate-namaste-negro-3.jpg?v=1784324781239"
+  ],
+  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784324778974"
  },
  {
   "slug": "total-marco-2075-blanco-azul",
