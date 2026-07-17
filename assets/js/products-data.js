@@ -700,18 +700,14 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486",
-   "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784072401934",
-   "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1784072403563",
-   "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1784072404971",
-   "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1784072406365",
-   "assets/img/products/cana-fiend-mills-topload-6.jpg?v=1784072407845",
-   "assets/img/products/cana-fiend-mills-topload-7.jpg?v=1784072409612",
-   "assets/img/products/cana-fiend-mills-topload-8.jpg?v=1784072411172",
-   "assets/img/products/cana-fiend-mills-topload-9.jpg?v=1784072412987",
-   "assets/img/products/cana-fiend-mills-topload-10.jpg?v=1784072414581",
-   "assets/img/products/cana-fiend-mills-topload-11.jpg?v=1784072416122",
-   "assets/img/products/cana-fiend-mills-topload-12.jpg?v=1784072417456"
+   "assets/img/products/cana-fiend-mills-topload.jpg?v=1784328305117",
+   "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784328306259",
+   "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1784328307677",
+   "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1784328308815",
+   "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1784328310127",
+   "assets/img/products/cana-fiend-mills-topload-6.jpg?v=1784328311563",
+   "assets/img/products/cana-fiend-mills-topload-7.jpg?v=1784328312961",
+   "assets/img/products/cana-fiend-mills-topload-8.jpg?v=1784328314239"
   ],
   "sizes": [
    {
@@ -737,23 +733,19 @@ window.ESCENA_PRODUCTS = [
    "Morada": [
     0,
     1,
-    2,
-    9
+    2
    ],
    "Dorada": [
     3,
     4,
-    5,
-    10
+    5
    ],
    "Negro": [
     6,
-    7,
-    8,
-    11
+    7
    ]
   },
-  "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486"
+  "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784328305117"
  },
  {
   "slug": "cana-shadow-ravage-topload",
