@@ -1658,17 +1658,17 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "bsd-stem-negro",
-  "n": "Caña BSD Negra",
+  "n": "Caña BSD Stacke negro - Top load",
   "brand": "BSD",
   "cat": "stems",
-  "spec": "Carga frontal · Negro mate",
+  "spec": "Carga frontal · Alcance 50mm · Aluminio CNC",
   "price": 300000,
   "sku": "BSD-STEM-NEGRO",
-  "units": 12,
+  "units": 1,
   "sizes": [
    {
-    "label": "Única",
-    "units": 12
+    "label": "50mm",
+    "units": 1
    }
   ],
   "img": "assets/img/products/bsd-stem-negro.jpg"
