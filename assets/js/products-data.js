@@ -267,27 +267,16 @@ window.ESCENA_PRODUCTS = [
   "cat": "marcos",
   "spec": "Acero · 20.5\" · Tornasol",
   "price": 250000,
-  "sku": "MRC",
+  "sku": "MRC-GWB-001",
   "units": 1,
   "tag": "Nuevo",
-  "imgs": [
-   "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784153777781",
-   "assets/img/products/marco-gw-destructor-tornasol-2.jpg?v=1784153779601",
-   "assets/img/products/marco-gw-destructor-tornasol-3.jpg?v=1784153781303",
-   "assets/img/products/marco-gw-destructor-tornasol-4.jpg?v=1784153783138",
-   "assets/img/products/marco-gw-destructor-tornasol-5.jpg?v=1784153784773",
-   "assets/img/products/marco-gw-destructor-tornasol-6.jpg?v=1784153786580",
-   "assets/img/products/marco-gw-destructor-tornasol-7.jpg?v=1784153788418",
-   "assets/img/products/marco-gw-destructor-tornasol-8.jpg?v=1784153790163",
-   "assets/img/products/marco-gw-destructor-tornasol-9.jpg?v=1784153791900"
-  ],
   "sizes": [
    {
     "label": "20.5\"",
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784153777781"
+  "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784312558002"
  },
  {
   "slug": "timon-gw-destructor-tornasol",
@@ -895,13 +884,11 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Nuevo 🔥",
   "imgs": [
-   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011",
-   "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784067918547",
-   "assets/img/products/marco-fitbikeco-str-negro-3.jpg?v=1784067920230",
-   "assets/img/products/marco-fitbikeco-str-negro-4.jpg?v=1784067922518",
-   "assets/img/products/marco-fitbikeco-str-negro-5.jpg?v=1784067926343",
-   "assets/img/products/marco-fitbikeco-str-negro-6.jpg?v=1784067929321",
-   "assets/img/products/marco-fitbikeco-str-negro-7.jpg?v=1784067933081"
+   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784312560084",
+   "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784312562003",
+   "assets/img/products/marco-fitbikeco-str-negro-3.jpg?v=1784312563404",
+   "assets/img/products/marco-fitbikeco-str-negro-4.jpg?v=1784312564916",
+   "assets/img/products/marco-fitbikeco-str-negro-5.jpg?v=1784312566478"
   ],
   "sizes": [
    {
@@ -913,7 +900,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011"
+  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784312560084"
  },
  {
   "slug": "pedales-odyssey",
