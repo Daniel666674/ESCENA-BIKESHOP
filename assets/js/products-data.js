@@ -234,6 +234,20 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0,
+    1
+   ],
+   "Café": [
+    2,
+    3
+   ],
+   "Lava": [
+    4,
+    5
+   ]
+  },
   "img": "assets/img/products/grips-dailygrind.jpg?v=1784153759831"
  },
  {
@@ -407,6 +421,14 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Rojo": [
+    1
+   ]
+  },
   "img": "assets/img/products/grips-fiend-flangeless.jpg?v=1784139481764"
  },
  {
@@ -416,7 +438,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "punos",
   "spec": "Goma · 153mm · Flangeless · nervadura tetraédrica",
   "price": 50000,
-  "sku": "GRIPS",
+  "sku": "GRP-FND-001",
   "units": 2,
   "tag": "Nuevo!",
   "imgs": [
@@ -433,6 +455,14 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Morado": [
+    1
+   ]
+  },
   "img": "assets/img/products/grips-fiend-palmere.jpg?v=1784139484875"
  },
  {
@@ -515,7 +545,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "punos",
   "spec": "Goma · 160mm · 31.5mm · Super suave",
   "price": 50000,
-  "sku": "GRIPS",
+  "sku": "GRP-SNM-001",
   "units": 4,
   "tag": "Top 🔥!",
   "imgs": [
@@ -536,6 +566,18 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0,
+    1,
+    2
+   ],
+   "Morado": [
+    3,
+    4,
+    5
+   ]
+  },
   "img": "assets/img/products/grips-s-m-mike-hoder-3.jpg?v=1784138431279"
  },
  {
@@ -672,7 +714,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "stems",
   "spec": "Carga superior · Alcance 48mm · Aluminio CNC",
   "price": 320000,
-  "sku": "STEAM",
+  "sku": "CAN-FND-001",
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
@@ -709,6 +751,26 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "imgColorMap": {
+   "Morada": [
+    0,
+    1,
+    2,
+    9
+   ],
+   "Dorada": [
+    3,
+    4,
+    5,
+    10
+   ],
+   "Negro": [
+    6,
+    7,
+    8,
+    11
+   ]
+  },
   "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486"
  },
  {
@@ -718,7 +780,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "stems",
   "spec": "Carga superior · Alcance 53mm · Aluminio CNC",
   "price": 200000,
-  "sku": "STEAM",
+  "sku": "CAN-SHW-002",
   "units": 1,
   "tag": "Edicion Especial 🔥",
   "imgs": [
@@ -752,6 +814,23 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "imgColorMap": {
+   "Morada": [
+    0,
+    1,
+    2
+   ],
+   "Azul": [
+    3,
+    4,
+    5
+   ],
+   "Cromada": [
+    6,
+    7,
+    8
+   ]
+  },
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805"
  },
  {
@@ -869,78 +948,115 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/pedales-odyssey.jpg?v=1784059906159"
  },
  {
-  "slug": "pedales-demolition",
   "n": "Pedales Demolition",
   "brand": "Demolition",
   "cat": "pedales",
-  "spec": "Plataforma nylon · 10 pines · Azul con blanco · Rojo con blanco · Negro · Morado con blanco",
+  "spec": "Azul con blanco , Rojo con blanco , Gris con Blanco, Negro, Morado con blanco, Morado con Amarillo.",
   "price": 95000,
   "sku": "PDL",
-  "units": 10,
+  "units": 14,
   "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/pedales-demolition.jpg?v=1784059551908",
    "assets/img/products/pedales-demolition-2.jpg?v=1784059553615",
+   "assets/img/products/pedales-demolition-3.jpg?v=1784262238206",
    "assets/img/products/pedales-demolition-3.jpg?v=1784059555139",
    "assets/img/products/pedales-demolition-4.jpg?v=1784059556618",
    "assets/img/products/pedales-demolition-5.jpg?v=1784059558102",
-   "assets/img/products/pedales-demolition-6.jpg?v=1784059559776",
+   "assets/img/products/pedales-demolition-12.jpg?v=1784059569860",
    "assets/img/products/pedales-demolition-7.jpg?v=1784059561416",
    "assets/img/products/pedales-demolition-8.jpg?v=1784059563785",
    "assets/img/products/pedales-demolition-9.jpg?v=1784059565238",
+   "assets/img/products/pedales-demolition-11.jpg?v=1784262240124",
    "assets/img/products/pedales-demolition-10.jpg?v=1784059566652",
-   "assets/img/products/pedales-demolition-11.jpg?v=1784059568136",
-   "assets/img/products/pedales-demolition-12.jpg?v=1784059569860",
-   "assets/img/products/pedales-demolition-13.jpg?v=1784059571375",
    "assets/img/products/pedales-demolition-14.jpg?v=1784059573260",
+   "assets/img/products/pedales-demolition-11.jpg?v=1784059568136",
    "assets/img/products/pedales-demolition-15.jpg?v=1784059575864"
   ],
-  "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908",
+  "slug": "pedales-demolition",
   "colors": [
    {
-    "label": "Azul con blanco",
-    "units": 3
-   },
-   {
-    "label": "Rojo con blanco",
-    "units": 3
+    "label": "Rojo Azul",
+    "units": 2
    },
    {
     "label": "Negro",
     "units": 2
    },
    {
-    "label": "Morado con blanco",
+    "label": "Blanco Negro",
+    "units": 2
+   },
+   {
+    "label": "Morado Amarillo",
+    "units": 2
+   },
+   {
+    "label": "Blanco Lila",
+    "units": 2
+   },
+   {
+    "label": "Azul Blanco",
+    "units": 2
+   },
+   {
+    "label": "Rojo Blanco",
     "units": 2
    }
-  ]
+  ],
+  "imgColorMap": {
+   "Rojo Azul": [
+    0,
+    1
+   ],
+   "Negro": [
+    2,
+    3
+   ],
+   "Blanco Negro": [
+    4,
+    5
+   ],
+   "Morado Amarillo": [
+    6,
+    7
+   ],
+   "Blanco Lila": [
+    8,
+    9
+   ],
+   "Azul Blanco": [
+    10,
+    11
+   ],
+   "Rojo Blanco": [
+    12,
+    13
+   ]
+  },
+  "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908"
  },
  {
-  "slug": "pedales-stolen",
   "n": "Pedales Stolen",
   "brand": "Stolen",
   "cat": "pedales",
-  "spec": "Plataforma nylon · 12 pines · Verde · Azul · Rojo · Amarillo",
+  "spec": "Verde, Azul, AguaMarina, Rojo, Amarillo Florecente.",
   "price": 75000,
   "sku": "PDL",
   "units": 5,
   "tag": "Colorido 🌈",
   "imgs": [
    "assets/img/products/pedales-stolen.jpg?v=1784058795983",
-   "assets/img/products/pedales-stolen-2.jpg?v=1784058798429",
    "assets/img/products/pedales-stolen-3.jpg?v=1784058800908",
    "assets/img/products/pedales-stolen-4.jpg?v=1784058803539",
    "assets/img/products/pedales-stolen-5.jpg?v=1784058805501",
-   "assets/img/products/pedales-stolen-6.jpg?v=1784058808108"
+   "assets/img/products/pedales-stolen-6.jpg?v=1784058808108",
+   "assets/img/products/pedales-stolen-2.jpg?v=1784058798429"
   ],
-  "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983",
+  "slug": "pedales-stolen",
   "colors": [
    {
     "label": "Verde",
-    "units": 2
-   },
-   {
-    "label": "Azul",
     "units": 1
    },
    {
@@ -948,10 +1064,36 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    },
    {
+    "label": "Azul Aguamarina",
+    "units": 1
+   },
+   {
     "label": "Amarillo",
     "units": 1
+   },
+   {
+    "label": "Azul",
+    "units": 1
    }
-  ]
+  ],
+  "imgColorMap": {
+   "Verde": [
+    0
+   ],
+   "Rojo": [
+    1
+   ],
+   "Azul Aguamarina": [
+    2
+   ],
+   "Amarillo": [
+    3
+   ],
+   "Azul": [
+    4
+   ]
+  },
+  "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983"
  },
  {
   "slug": "cana-odyssey-cfl3",
