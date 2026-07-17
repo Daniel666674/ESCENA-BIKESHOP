@@ -12,7 +12,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "marco-gw-destructor-azul-20-5",
-  "n": "Marco GW Destructor Azul 20.5”",
+  "n": "Marco GW Destructor Azul",
   "brand": "GW",
   "cat": "marcos",
   "spec": "Acero · 20.5\" · Azul",
@@ -20,13 +20,21 @@ window.ESCENA_PRODUCTS = [
   "sku": "MRC",
   "units": 1,
   "tag": "Nacional",
+  "imgs": [
+   "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069",
+   "assets/img/products/marco-gw-destructor-azul-20-5-2.jpg?v=1784157840425",
+   "assets/img/products/marco-gw-destructor-azul-20-5-3.jpg?v=1784157841860",
+   "assets/img/products/marco-gw-destructor-azul-20-5-4.jpg?v=1784157843230",
+   "assets/img/products/marco-gw-destructor-azul-20-5-5.jpg?v=1784157844826",
+   "assets/img/products/marco-gw-destructor-azul-20-5-6.jpg?v=1784157846889"
+  ],
   "sizes": [
    {
     "label": "20.5\"",
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784311585087"
+  "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069"
  },
  {
   "slug": "marco-federal-command-negro-20-5-x-cola-12-5",
@@ -286,15 +294,21 @@ window.ESCENA_PRODUCTS = [
   "spec": "Tornasol • Acero GW • Medida: 10",
   "price": 80000,
   "sku": "TMN",
-  "units": 0,
-  "tag": "Nuevo",
+  "units": 2,
+  "tag": "Nuevo!",
+  "imgs": [
+   "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919",
+   "assets/img/products/timon-gw-destructor-tornasol-2.jpg?v=1784153795741",
+   "assets/img/products/timon-gw-destructor-tornasol-3.jpg?v=1784153797741",
+   "assets/img/products/timon-gw-destructor-tornasol-4.jpg?v=1784153799765"
+  ],
   "sizes": [
    {
     "label": "10\"",
-    "units": 0
+    "units": 2
    }
   ],
-  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784310632125"
+  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919"
  },
  {
   "slug": "timon-cult-heavens-gate-4p-cromado",
