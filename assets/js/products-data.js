@@ -2577,14 +2577,11 @@ window.ESCENA_PRODUCTS = [
   "units": 4,
   "tag": "Nacional",
   "imgs": [
-   "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784156626862",
-   "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1784156628659",
-   "assets/img/products/tukanbikes-industrial-raw-3.jpg?v=1784156630219",
-   "assets/img/products/tukanbikes-industrial-raw-4.jpg?v=1784156632133",
-   "assets/img/products/tukanbikes-industrial-raw-5.jpg?v=1784156634301",
-   "assets/img/products/tukanbikes-industrial-raw-6.jpg?v=1784156636091",
-   "assets/img/products/tukanbikes-industrial-raw-7.jpg?v=1784156637637",
-   "assets/img/products/tukanbikes-industrial-raw-8.jpg?v=1784156639341"
+   "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784325783725",
+   "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1784325785008",
+   "assets/img/products/tukanbikes-industrial-raw-3.jpg?v=1784325786292",
+   "assets/img/products/tukanbikes-industrial-raw-4.jpg?v=1784325787317",
+   "assets/img/products/tukanbikes-industrial-raw-5.jpg?v=1784325788342"
   ],
   "sizes": [
    {
@@ -2602,7 +2599,16 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "img": "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784156626862"
+  "imgFit": "cover",
+  "imgColorMap": {
+   "Azul / Industrial": [
+    0
+   ],
+   "Morado / Industrial": [
+    3
+   ]
+  },
+  "img": "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784325783725"
  },
  {
   "slug": "wethepeople-doomsayer-negro",
