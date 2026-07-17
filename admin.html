@@ -306,6 +306,49 @@
         </div>
       </div>
 
+      <div class="chart-card" id="salesPayCard" style="display:none; margin-bottom:1.6rem;">
+        <h3>Ventas por método de pago</h3>
+        <div class="rank-list" id="payRankList"></div>
+      </div>
+
+      <h3 class="section-title" id="salesListTitle" style="font-size:1.05rem; display:none;">Ventas registradas</h3>
+      <div class="inv-toolbar" id="salesToolbar" style="display:none;">
+        <input type="search" id="salesSearch" placeholder="Buscar por producto, comprador, método o nota…" />
+        <div class="inv-filters">
+          <select id="salesPayFilter">
+            <option value="">Todos los métodos</option>
+            <option value="Efectivo">Efectivo</option>
+            <option value="Nequi">Nequi</option>
+            <option value="Daviplata">Daviplata</option>
+            <option value="Transferencia">Transferencia bancaria</option>
+            <option value="Tarjeta">Tarjeta</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="inv-actions">
+          <button type="button" class="btn btn-outline btn-sm" id="salesExportBtn">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="inv-table-wrap" id="salesTableWrap" style="display:none;">
+        <table class="inv-table">
+          <thead>
+            <tr>
+              <th class="sortable sort-desc" data-sort="date">Fecha</th>
+              <th class="sortable" data-sort="n">Producto</th>
+              <th>Variante</th>
+              <th class="sortable" data-sort="qty">Cant.</th>
+              <th class="sortable" data-sort="unitPrice">Precio</th>
+              <th class="sortable" data-sort="total">Total</th>
+              <th>Comprador</th>
+              <th>Celular</th>
+              <th class="sortable" data-sort="payment">Pago</th>
+              <th>Notas</th>
+            </tr>
+          </thead>
+          <tbody id="salesBody"></tbody>
+        </table>
+      </div>
+
       </section>
 
       <section id="secAnaliticas" style="display:none;">
@@ -899,7 +942,79 @@
   }
 
   /* ---- Sales summary (real data from the manually-logged sales log) ---- */
+  /* ---- Registered-sales list (same table UX as Inventario) ---- */
+  var salesSortState = { key: "date", dir: -1 }; // newest first by default
+  function fmtSaleDate(iso) {
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return "";
+    return d.toLocaleDateString("es-CO", { day: "2-digit", month: "short", year: "numeric" });
+  }
+  function renderSalesList() {
+    var body = document.getElementById("salesBody");
+    if (!body) return;
+    var has = salesLog.length > 0;
+    ["salesPayCard", "salesToolbar", "salesTableWrap", "salesListTitle"].forEach(function (id) {
+      var el = document.getElementById(id); if (el) el.style.display = has ? "" : "none";
+    });
+    if (!has) { body.innerHTML = ""; return; }
+
+    // revenue by payment method
+    var payAgg = {};
+    salesLog.forEach(function (r) { var m = r.payment || "—"; payAgg[m] = (payAgg[m] || 0) + (r.total || 0); });
+    var payList = Object.keys(payAgg).map(function (k) { return { n: k, v: payAgg[k] }; }).sort(function (a, b) { return b.v - a.v; });
+    if (payList.length) renderRankList("payRankList", payList, function (v) { return cop(v); });
+
+    var f = (document.getElementById("salesSearch").value || "").trim().toLowerCase();
+    var pay = document.getElementById("salesPayFilter").value;
+    var rows = salesLog.slice();
+    if (f) rows = rows.filter(function (r) {
+      return (r.n || "").toLowerCase().indexOf(f) > -1 || (r.buyer || "").toLowerCase().indexOf(f) > -1 ||
+        (r.payment || "").toLowerCase().indexOf(f) > -1 || (r.notes || "").toLowerCase().indexOf(f) > -1 ||
+        (r.phone || "").toLowerCase().indexOf(f) > -1;
+    });
+    if (pay) rows = rows.filter(function (r) { return (r.payment || "") === pay; });
+
+    var k = salesSortState.key;
+    rows.sort(function (a, b) {
+      var av = a[k], bv = b[k];
+      if (typeof av === "string") { av = av.toLowerCase(); bv = (bv || "").toLowerCase(); }
+      else { av = av || 0; bv = bv || 0; }
+      if (av < bv) return -1 * salesSortState.dir;
+      if (av > bv) return 1 * salesSortState.dir;
+      return 0;
+    });
+
+    if (!rows.length) { body.innerHTML = '<tr class="empty-row"><td colspan="10">No hay ventas que coincidan con el filtro.</td></tr>'; return; }
+    body.innerHTML = rows.map(function (r) {
+      var variant = r.size || r.color || "—";
+      return '<tr>' +
+        '<td data-label="Fecha">' + esc(fmtSaleDate(r.date)) + '</td>' +
+        '<td data-label="Producto">' + esc(r.n || "") + '</td>' +
+        '<td data-label="Variante">' + esc(variant) + '</td>' +
+        '<td data-label="Cant.">' + (r.qty || 0) + '</td>' +
+        '<td data-label="Precio">' + cop(r.unitPrice || 0) + '</td>' +
+        '<td data-label="Total"><b>' + cop(r.total || 0) + '</b></td>' +
+        '<td data-label="Comprador">' + esc(r.buyer || "—") + '</td>' +
+        '<td data-label="Celular">' + esc(r.phone || "—") + '</td>' +
+        '<td data-label="Pago">' + esc(r.payment || "—") + '</td>' +
+        '<td data-label="Notas">' + esc(r.notes || "") + '</td>' +
+        '</tr>';
+    }).join("");
+  }
+  function exportSalesCsv() {
+    var headers = ["fecha", "producto", "variante", "cantidad", "precio_unitario", "total", "comprador", "celular", "pago", "notas"];
+    var rows = [headers.join(",")];
+    salesLog.forEach(function (r) {
+      var vals = [r.date || "", r.n || "", r.size || r.color || "", r.qty || 0, r.unitPrice || 0, r.total || 0, r.buyer || "", r.phone || "", r.payment || "", r.notes || ""];
+      rows.push(vals.map(function (v) { return '"' + String(v).replace(/"/g, '""') + '"'; }).join(","));
+    });
+    var blob = new Blob([rows.join("\n")], { type: "text/csv" });
+    var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "escena-ventas.csv"; a.click();
+    showToast("CSV de ventas exportado");
+  }
+
   function renderSalesSummary() {
+    renderSalesList();
     var countEl = document.getElementById("salesCount");
     var emptyNote = document.getElementById("salesEmptyNote");
     var chartRow = document.getElementById("salesChartRow");
@@ -1786,15 +1901,33 @@
       renderInventory(document.getElementById("invSearch").value.trim());
     });
 
-    document.querySelectorAll("th.sortable").forEach(function (th) {
+    document.querySelectorAll("#secInventario th.sortable").forEach(function (th) {
       th.addEventListener("click", function () {
         var key = th.getAttribute("data-sort");
         if (sortState.key === key) { sortState.dir *= -1; } else { sortState.key = key; sortState.dir = 1; }
-        document.querySelectorAll("th.sortable").forEach(function (t) { t.classList.remove("sort-asc", "sort-desc"); });
+        document.querySelectorAll("#secInventario th.sortable").forEach(function (t) { t.classList.remove("sort-asc", "sort-desc"); });
         th.classList.add(sortState.dir === 1 ? "sort-asc" : "sort-desc");
         renderInventory(document.getElementById("invSearch").value.trim());
       });
     });
+
+    // Registered-sales table: same sort/search/export UX, scoped to Resumen.
+    document.querySelectorAll("#secResumen th.sortable").forEach(function (th) {
+      th.addEventListener("click", function () {
+        var key = th.getAttribute("data-sort");
+        if (!key) return;
+        if (salesSortState.key === key) { salesSortState.dir *= -1; } else { salesSortState.key = key; salesSortState.dir = 1; }
+        document.querySelectorAll("#secResumen th.sortable").forEach(function (t) { t.classList.remove("sort-asc", "sort-desc"); });
+        th.classList.add(salesSortState.dir === 1 ? "sort-asc" : "sort-desc");
+        renderSalesList();
+      });
+    });
+    var salesSearchEl = document.getElementById("salesSearch");
+    if (salesSearchEl) salesSearchEl.addEventListener("input", renderSalesList);
+    var salesPayEl = document.getElementById("salesPayFilter");
+    if (salesPayEl) salesPayEl.addEventListener("change", renderSalesList);
+    var salesExportEl = document.getElementById("salesExportBtn");
+    if (salesExportEl) salesExportEl.addEventListener("click", exportSalesCsv);
 
     document.getElementById("invBody").addEventListener("click", function (e) {
       var tr = e.target.closest("tr[data-idx]");
