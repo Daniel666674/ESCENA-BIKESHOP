@@ -1076,12 +1076,13 @@ window.ESCENA_PRODUCTS = [
   "price": 340000,
   "sku": "Odysseycfl3",
   "units": 1,
-  "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/cana-odyssey-cfl3.jpg?v=1784068154674",
-   "assets/img/products/cana-odyssey-cfl3-2.jpg?v=1784068157052",
-   "assets/img/products/cana-odyssey-cfl3-3.jpg?v=1784068159027",
-   "assets/img/products/cana-odyssey-cfl3-4.jpg?v=1784068161154"
+   "assets/img/products/cana-odyssey-cfl3.jpg?v=1784328925937",
+   "assets/img/products/cana-odyssey-cfl3-2.jpg?v=1784328927780",
+   "assets/img/products/cana-odyssey-cfl3-3.jpg?v=1784328929357",
+   "assets/img/products/cana-odyssey-cfl3-4.jpg?v=1784328931011",
+   "assets/img/products/cana-odyssey-cfl3-5.jpg?v=1784328932650",
+   "assets/img/products/cana-odyssey-cfl3-6.jpg?v=1784328934902"
   ],
   "sizes": [
    {
@@ -1089,7 +1090,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784068154674"
+  "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784328925937"
  },
  {
   "slug": "cana-shadow-chula-48mm",
