@@ -2524,7 +2524,13 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784087360390"
+  "imgs": [
+   "assets/img/products/fate-namaste-negro.jpg?v=1784314539727",
+   "assets/img/products/fate-namaste-negro-2.jpg?v=1784314541006",
+   "assets/img/products/fate-namaste-negro-3.jpg?v=1784314542287",
+   "assets/img/products/fate-namaste-negro-4.jpg?v=1784314543504"
+  ],
+  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784314539727"
  },
  {
   "slug": "total-marco-2075-blanco-azul",
@@ -2543,23 +2549,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
- },
- {
-  "slug": "federal-marco-bruno-lt-blanco",
-  "n": "Federal Marco Bruno LT",
-  "brand": "Federal",
-  "cat": "marcos",
-  "spec": "Cromoly · Tubo superior 21\" · Cola 13.6\" · Negro",
-  "price": 980000,
-  "sku": "FEDERAL-MARCO-BRUNO-LT-BLANCO",
-  "units": 12,
-  "sizes": [
-   {
-    "label": "21\"",
-    "units": 12
-   }
-  ],
-  "img": "assets/img/products/frame-placeholder.svg"
  },
  {
   "slug": "tukanbikes-industrial-raw",
