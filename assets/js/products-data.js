@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Caña Cult Mind Control Negra - Top load",
+  "brand": "Cult",
+  "cat": "stems",
+  "spec": "Carga frontal · Alcance 48mm · Aluminio CNC",
+  "price": 340000,
+  "sku": "CAN-CLT-002",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 1
+   }
+  ],
+  "slug": "cana-cult-mind-control-negra-top-load",
+  "img": "assets/img/products/cana-cult-mind-control-negra-top-load.jpg?v=1784332694094"
+ },
+ {
   "n": "Caña Cult Mind Control Rasta - Front load",
   "brand": "Cult",
   "cat": "stems",
