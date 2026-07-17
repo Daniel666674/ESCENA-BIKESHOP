@@ -312,20 +312,14 @@ window.ESCENA_PRODUCTS = [
   "price": 80000,
   "sku": "TMN",
   "units": 0,
-  "tag": "Nuevo!",
-  "imgs": [
-   "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919",
-   "assets/img/products/timon-gw-destructor-tornasol-2.jpg?v=1784153795741",
-   "assets/img/products/timon-gw-destructor-tornasol-3.jpg?v=1784153797741",
-   "assets/img/products/timon-gw-destructor-tornasol-4.jpg?v=1784153799765"
-  ],
+  "tag": "Nacional",
   "sizes": [
    {
     "label": "10\"",
     "units": 0
    }
   ],
-  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919"
+  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784310304888"
  },
  {
   "slug": "timon-cult-heavens-gate-4p-cromado",
@@ -334,16 +328,12 @@ window.ESCENA_PRODUCTS = [
   "cat": "manubrios",
   "spec": "Cromoly tratado al calor · 28\" ancho · Cromado · 11.5° retroceso · 3° elevación",
   "price": 400000,
-  "sku": "TMN",
+  "sku": "TMN-CLT-001",
   "units": 4,
-  "tag": "Top 🔥!",
+  "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784151306441",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1784151307956",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-3.jpg?v=1784151309438",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-4.jpg?v=1784151310946",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-5.jpg?v=1784151312449",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-6.jpg?v=1784151313853"
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784310306495",
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1784310307966"
   ],
   "sizes": [
    {
@@ -365,7 +355,15 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784151306441"
+  "imgColorMap": {
+   "Cromado": [
+    0
+   ],
+   "Negro": [
+    1
+   ]
+  },
+  "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784310306495"
  },
  {
   "slug": "silla-pivotal-eighties-zebra",
@@ -1335,14 +1333,10 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgs": [
-   "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728",
-   "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1784211849883",
-   "assets/img/products/manubrio-cromoly-negro-01-3.jpg?v=1784211851445",
-   "assets/img/products/manubrio-cromoly-negro-01-4.jpg?v=1784211853668",
-   "assets/img/products/manubrio-cromoly-negro-01-5.jpg?v=1784211855102",
-   "assets/img/products/manubrio-cromoly-negro-01-6.jpg?v=1784211856740"
+   "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326",
+   "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1784310310687"
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728"
+  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326"
  },
  {
   "slug": "manubrio-cromoly-cromado",
@@ -1352,21 +1346,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · 28\" ancho · Cromado · 10.5° retroceso · 3° elevación",
   "price": 390000,
   "sku": "MANUBRIO-CROMOLY-CROMADO",
-  "units": 12,
+  "units": 2,
   "tag": "Top 🔥",
   "sizes": [
    {
     "label": "9.5\"",
-    "units": 12
+    "units": 2
    }
   ],
-  "imgs": [
-   "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495",
-   "assets/img/products/manubrio-cromoly-cromado-2.jpg?v=1784211858378",
-   "assets/img/products/manubrio-cromoly-cromado-3.jpg?v=1784211859914",
-   "assets/img/products/manubrio-cromoly-cromado-4.jpg?v=1784211861349"
-  ],
-  "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495"
+  "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784310311924"
  },
  {
   "slug": "manubrio-cromoly-negro-02",
@@ -1384,7 +1372,11 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784083427771"
+  "imgs": [
+   "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784310313215",
+   "assets/img/products/manubrio-cromoly-negro-02-2.jpg?v=1784310314405"
+  ],
+  "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784310313215"
  },
  {
   "slug": "manubrio-cromoly-negro-03",
@@ -1394,15 +1386,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · 29\" ancho · Negro mate · 12° retroceso · 1.5° elevación",
   "price": 380000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-03",
-  "units": 12,
+  "units": 2,
   "tag": "Nuevo",
   "sizes": [
    {
     "label": "9.4\"",
-    "units": 12
+    "units": 2
    }
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784083429077"
+  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784310315724"
  },
  {
   "slug": "manubrio-cromoly-negro-04",
@@ -1419,7 +1411,8 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1784083430350"
+  "tag": "Nuevo",
+  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1784310316959"
  },
  {
   "slug": "wethepeople-horquilla-cromada",
