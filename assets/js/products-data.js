@@ -1406,13 +1406,13 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "wethepeople-horquilla-cromada",
-  "n": "Tenedor Wethepeople Cromado",
+  "n": "Tenedor Wethepeople Battleship Cromado",
   "brand": "Wethepeople",
   "cat": "horquillas",
   "spec": "Cromoly · Tubo recto · Cromado",
   "price": 800000,
   "sku": "WETHEPEOPLE-HORQUILLA-CROMADA",
-  "units": 12,
+  "units": 0,
   "img": "assets/img/products/wethepeople-horquilla-cromada.jpg"
  },
  {
@@ -2504,7 +2504,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "cult-biggie-jaime-sintes-hammertone-negro",
-  "n": "Cult 25 Short Industrial",
+  "n": "Cult 2Short Industrial",
   "brand": "Cult",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.5\" · Hammertone Negro",
