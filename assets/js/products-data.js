@@ -1,5 +1,26 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Caña Cult Mind Control Rasta - Front load",
+  "brand": "Cult",
+  "cat": "stems",
+  "spec": "Carga frontal · Alcance 48mm · Aluminio CNC",
+  "price": 340000,
+  "sku": "CAN-CLT-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1784332431720",
+   "assets/img/products/cana-cult-mind-control-rasta-front-load-2.jpg?v=1784332433000"
+  ],
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 1
+   }
+  ],
+  "slug": "cana-cult-mind-control-rasta-front-load",
+  "img": "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1784332431720"
+ },
+ {
   "slug": "cassette-profle-mini-derecho",
   "n": "Cassette Profle Mini Derecho",
   "brand": "Profile",
