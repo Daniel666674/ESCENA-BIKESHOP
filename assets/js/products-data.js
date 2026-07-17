@@ -20,21 +20,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "MRC",
   "units": 1,
   "tag": "Nacional",
-  "imgs": [
-   "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069",
-   "assets/img/products/marco-gw-destructor-azul-20-5-2.jpg?v=1784157840425",
-   "assets/img/products/marco-gw-destructor-azul-20-5-3.jpg?v=1784157841860",
-   "assets/img/products/marco-gw-destructor-azul-20-5-4.jpg?v=1784157843230",
-   "assets/img/products/marco-gw-destructor-azul-20-5-5.jpg?v=1784157844826",
-   "assets/img/products/marco-gw-destructor-azul-20-5-6.jpg?v=1784157846889"
-  ],
   "sizes": [
    {
     "label": "20.5\"",
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069"
+  "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784311585087"
  },
  {
   "slug": "marco-federal-command-negro-20-5-x-cola-12-5",
@@ -43,17 +35,12 @@ window.ESCENA_PRODUCTS = [
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.5\" · Negro",
   "price": 1660000,
-  "sku": "MRC",
+  "sku": "MRC-FED-001",
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784157848220",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784157849695",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-3.jpg?v=1784157850967",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-4.jpg?v=1784157852335",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-5.jpg?v=1784157853865",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-6.jpg?v=1784157855331",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-7.jpg?v=1784157856973"
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784311586478",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784311588157"
   ],
   "sizes": [
    {
@@ -61,7 +48,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784157848220"
+  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784311586478"
  },
  {
   "slug": "marco-federal-chiller-20-75-cola-12-7",
@@ -70,19 +57,18 @@ window.ESCENA_PRODUCTS = [
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.7\" · Negro",
   "price": 1660000,
-  "sku": "MRC",
+  "sku": "MRC-FED-002",
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784157860339",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1784157862260",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-3.jpg?v=1784157864500",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-4.jpg?v=1784157866335",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-5.jpg?v=1784157868021",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-6.jpg?v=1784157869778",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-7.jpg?v=1784157871541",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-8.jpg?v=1784157873619",
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-9.jpg?v=1784157875566"
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784311589670",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1784311591232",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-3.jpg?v=1784311593072",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-4.jpg?v=1784311594918",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-5.jpg?v=1784311596562",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-6.jpg?v=1784311598078",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-7.jpg?v=1784311599759",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-8.jpg?v=1784311601505"
   ],
   "sizes": [
    {
@@ -90,7 +76,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784157860339"
+  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784311589670"
  },
  {
   "slug": "coraza-innova-tire-20-x-2-40",
@@ -281,27 +267,16 @@ window.ESCENA_PRODUCTS = [
   "cat": "marcos",
   "spec": "Acero · 20.5\" · Tornasol",
   "price": 250000,
-  "sku": "MRC",
+  "sku": "MRC-GWB-001",
   "units": 1,
   "tag": "Nuevo",
-  "imgs": [
-   "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784153777781",
-   "assets/img/products/marco-gw-destructor-tornasol-2.jpg?v=1784153779601",
-   "assets/img/products/marco-gw-destructor-tornasol-3.jpg?v=1784153781303",
-   "assets/img/products/marco-gw-destructor-tornasol-4.jpg?v=1784153783138",
-   "assets/img/products/marco-gw-destructor-tornasol-5.jpg?v=1784153784773",
-   "assets/img/products/marco-gw-destructor-tornasol-6.jpg?v=1784153786580",
-   "assets/img/products/marco-gw-destructor-tornasol-7.jpg?v=1784153788418",
-   "assets/img/products/marco-gw-destructor-tornasol-8.jpg?v=1784153790163",
-   "assets/img/products/marco-gw-destructor-tornasol-9.jpg?v=1784153791900"
-  ],
   "sizes": [
    {
     "label": "20.5\"",
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784153777781"
+  "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784312558002"
  },
  {
   "slug": "timon-gw-destructor-tornasol",
@@ -312,20 +287,14 @@ window.ESCENA_PRODUCTS = [
   "price": 80000,
   "sku": "TMN",
   "units": 0,
-  "tag": "Nuevo!",
-  "imgs": [
-   "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919",
-   "assets/img/products/timon-gw-destructor-tornasol-2.jpg?v=1784153795741",
-   "assets/img/products/timon-gw-destructor-tornasol-3.jpg?v=1784153797741",
-   "assets/img/products/timon-gw-destructor-tornasol-4.jpg?v=1784153799765"
-  ],
+  "tag": "Nuevo",
   "sizes": [
    {
     "label": "10\"",
     "units": 0
    }
   ],
-  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919"
+  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784310632125"
  },
  {
   "slug": "timon-cult-heavens-gate-4p-cromado",
@@ -334,16 +303,12 @@ window.ESCENA_PRODUCTS = [
   "cat": "manubrios",
   "spec": "Cromoly tratado al calor · 28\" ancho · Cromado · 11.5° retroceso · 3° elevación",
   "price": 400000,
-  "sku": "TMN",
+  "sku": "TMN-CLT-001",
   "units": 4,
-  "tag": "Top 🔥!",
+  "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784151306441",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1784151307956",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-3.jpg?v=1784151309438",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-4.jpg?v=1784151310946",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-5.jpg?v=1784151312449",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-6.jpg?v=1784151313853"
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784310306495",
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1784310307966"
   ],
   "sizes": [
    {
@@ -365,7 +330,15 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784151306441"
+  "imgColorMap": {
+   "Cromado": [
+    0
+   ],
+   "Negro": [
+    1
+   ]
+  },
+  "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784310306495"
  },
  {
   "slug": "silla-pivotal-eighties-zebra",
@@ -911,13 +884,11 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Nuevo 🔥",
   "imgs": [
-   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011",
-   "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784067918547",
-   "assets/img/products/marco-fitbikeco-str-negro-3.jpg?v=1784067920230",
-   "assets/img/products/marco-fitbikeco-str-negro-4.jpg?v=1784067922518",
-   "assets/img/products/marco-fitbikeco-str-negro-5.jpg?v=1784067926343",
-   "assets/img/products/marco-fitbikeco-str-negro-6.jpg?v=1784067929321",
-   "assets/img/products/marco-fitbikeco-str-negro-7.jpg?v=1784067933081"
+   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784312560084",
+   "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784312562003",
+   "assets/img/products/marco-fitbikeco-str-negro-3.jpg?v=1784312563404",
+   "assets/img/products/marco-fitbikeco-str-negro-4.jpg?v=1784312564916",
+   "assets/img/products/marco-fitbikeco-str-negro-5.jpg?v=1784312566478"
   ],
   "sizes": [
    {
@@ -929,7 +900,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011"
+  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784312560084"
  },
  {
   "slug": "pedales-odyssey",
@@ -1153,13 +1124,11 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "tag": "Nuevo",
   "imgs": [
-   "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779",
-   "assets/img/products/marco-cult-biggie-hammertone-2.jpg?v=1784048461580",
-   "assets/img/products/marco-cult-biggie-hammertone-3.jpg?v=1784048463198",
-   "assets/img/products/marco-cult-biggie-hammertone-4.jpg?v=1784048464803",
-   "assets/img/products/marco-cult-biggie-hammertone-5.jpg?v=1784048466711",
-   "assets/img/products/marco-cult-biggie-hammertone-6.jpg?v=1784048468587",
-   "assets/img/products/marco-cult-biggie-hammertone-7.jpg?v=1784048470248"
+   "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784313915335",
+   "assets/img/products/marco-cult-biggie-hammertone-2.jpg?v=1784313916815",
+   "assets/img/products/marco-cult-biggie-hammertone-3.jpg?v=1784313918454",
+   "assets/img/products/marco-cult-biggie-hammertone-4.jpg?v=1784313919935",
+   "assets/img/products/marco-cult-biggie-hammertone-5.jpg?v=1784313921292"
   ],
   "sizes": [
    {
@@ -1171,7 +1140,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779"
+  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784313915335"
  },
  {
   "slug": "cana-s-m-enduro-40mm-negra",
@@ -1335,14 +1304,10 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgs": [
-   "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728",
-   "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1784211849883",
-   "assets/img/products/manubrio-cromoly-negro-01-3.jpg?v=1784211851445",
-   "assets/img/products/manubrio-cromoly-negro-01-4.jpg?v=1784211853668",
-   "assets/img/products/manubrio-cromoly-negro-01-5.jpg?v=1784211855102",
-   "assets/img/products/manubrio-cromoly-negro-01-6.jpg?v=1784211856740"
+   "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326",
+   "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1784310310687"
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728"
+  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326"
  },
  {
   "slug": "manubrio-cromoly-cromado",
@@ -1352,21 +1317,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · 28\" ancho · Cromado · 10.5° retroceso · 3° elevación",
   "price": 390000,
   "sku": "MANUBRIO-CROMOLY-CROMADO",
-  "units": 12,
+  "units": 2,
   "tag": "Top 🔥",
   "sizes": [
    {
     "label": "9.5\"",
-    "units": 12
+    "units": 2
    }
   ],
-  "imgs": [
-   "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495",
-   "assets/img/products/manubrio-cromoly-cromado-2.jpg?v=1784211858378",
-   "assets/img/products/manubrio-cromoly-cromado-3.jpg?v=1784211859914",
-   "assets/img/products/manubrio-cromoly-cromado-4.jpg?v=1784211861349"
-  ],
-  "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495"
+  "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784310311924"
  },
  {
   "slug": "manubrio-cromoly-negro-02",
@@ -1384,7 +1343,11 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784083427771"
+  "imgs": [
+   "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784310313215",
+   "assets/img/products/manubrio-cromoly-negro-02-2.jpg?v=1784310314405"
+  ],
+  "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784310313215"
  },
  {
   "slug": "manubrio-cromoly-negro-03",
@@ -1394,15 +1357,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · 29\" ancho · Negro mate · 12° retroceso · 1.5° elevación",
   "price": 380000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-03",
-  "units": 12,
+  "units": 2,
   "tag": "Nuevo",
   "sizes": [
    {
     "label": "9.4\"",
-    "units": 12
+    "units": 2
    }
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784083429077"
+  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784310315724"
  },
  {
   "slug": "manubrio-cromoly-negro-04",
@@ -1419,7 +1382,8 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1784083430350"
+  "tag": "Nuevo",
+  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1784310316959"
  },
  {
   "slug": "wethepeople-horquilla-cromada",
@@ -2530,14 +2494,11 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1784060861700",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-3.jpg?v=1784150822577",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-4.jpg?v=1784060866186",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-5.jpg?v=1784060868553",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-6.jpg?v=1784060871314",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-7.jpg?v=1784060874032",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-8.jpg?v=1784150824939"
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784313922616",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1784313923821",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-3.jpg?v=1784313925313",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-4.jpg?v=1784313926605",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-5.jpg?v=1784313928050"
   ],
   "sizes": [
    {
@@ -2545,7 +2506,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784060860068"
+  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784313922616"
  },
  {
   "slug": "fate-namaste-negro",
@@ -2563,7 +2524,13 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784087360390"
+  "imgs": [
+   "assets/img/products/fate-namaste-negro.jpg?v=1784314539727",
+   "assets/img/products/fate-namaste-negro-2.jpg?v=1784314541006",
+   "assets/img/products/fate-namaste-negro-3.jpg?v=1784314542287",
+   "assets/img/products/fate-namaste-negro-4.jpg?v=1784314543504"
+  ],
+  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784314539727"
  },
  {
   "slug": "total-marco-2075-blanco-azul",
@@ -2582,23 +2549,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
- },
- {
-  "slug": "federal-marco-bruno-lt-blanco",
-  "n": "Federal Marco Bruno LT",
-  "brand": "Federal",
-  "cat": "marcos",
-  "spec": "Cromoly · Tubo superior 21\" · Cola 13.6\" · Negro",
-  "price": 980000,
-  "sku": "FEDERAL-MARCO-BRUNO-LT-BLANCO",
-  "units": 12,
-  "sizes": [
-   {
-    "label": "21\"",
-    "units": 12
-   }
-  ],
-  "img": "assets/img/products/frame-placeholder.svg"
  },
  {
   "slug": "tukanbikes-industrial-raw",
