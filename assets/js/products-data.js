@@ -1438,14 +1438,14 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "horquilla-cromoly-negra-02",
-  "n": "Tenedor Negro Steerer Blanco",
-  "brand": "",
+  "n": "Tenedor GW Negro",
+  "brand": "GW",
   "cat": "horquillas",
   "spec": "Cromoly · Steerer blanco · Negro mate",
   "price": 410000,
   "sku": "HORQUILLA-CROMOLY-NEGRA-02",
   "units": 12,
-  "img": "assets/img/products/horquilla-cromoly-negra-02.jpg"
+  "img": "assets/img/products/horquilla-cromoly-negra-02.jpg?v=1784327306225"
  },
  {
   "slug": "horquilla-cromoly-plateada",
@@ -1456,7 +1456,7 @@ window.ESCENA_PRODUCTS = [
   "price": 415000,
   "sku": "HORQUILLA-CROMOLY-PLATEADA",
   "units": 12,
-  "img": "assets/img/products/horquilla-cromoly-plateada.jpg"
+  "img": "assets/img/products/horquilla-cromoly-plateada.jpg?v=1784327307339"
  },
  {
   "slug": "stolen-buje-trasero-cassette-negro",
