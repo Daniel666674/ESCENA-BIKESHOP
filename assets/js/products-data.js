@@ -620,8 +620,8 @@ window.ESCENA_PRODUCTS = [
   "cat": "sillines",
   "spec": "Pivotal · Cuero · Base reforzada · 3 piezas",
   "price": 200000,
-  "sku": "SLA",
-  "units": 3,
+  "sku": "SIL-FND-003",
+  "units": 2,
   "tag": "Nuevo 🔥!",
   "imgs": [
    "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1784138463438",
@@ -828,9 +828,9 @@ window.ESCENA_PRODUCTS = [
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.6\" · Negro",
   "price": 650000,
-  "sku": "MRC",
+  "sku": "MRC-FIT-001",
   "units": 1,
-  "tag": "Nuevo",
+  "tag": "Nuevo 🔥",
   "imgs": [
    "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011",
    "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784067918547",
@@ -842,7 +842,11 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "20.75 x 12.6",
+    "label": "20.5\"",
+    "units": 0
+   },
+   {
+    "label": "20.75\"",
     "units": 1
    }
   ],
@@ -855,9 +859,9 @@ window.ESCENA_PRODUCTS = [
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.9\" · Hammertone",
   "price": 1790000,
-  "sku": "MRC",
-  "units": 1,
-  "tag": "Edición Especial",
+  "sku": "MRC-CLT-001",
+  "units": 2,
+  "tag": "Nuevo 🔥",
   "imgs": [
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210",
    "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-2.jpg?v=1784061950852",
@@ -873,6 +877,10 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.5\"",
+    "units": 1
+   },
+   {
+    "label": "20.75\"",
     "units": 1
    }
   ],
@@ -1206,13 +1214,21 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · 28\" ancho · Negro · 10.5° retroceso · 3° elevación",
   "price": 370000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-01",
-  "units": 12,
+  "units": 2,
   "tag": "Top 🔥",
   "sizes": [
    {
     "label": "9.5\"",
-    "units": 12
+    "units": 2
    }
+  ],
+  "imgs": [
+   "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728",
+   "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1784211849883",
+   "assets/img/products/manubrio-cromoly-negro-01-3.jpg?v=1784211851445",
+   "assets/img/products/manubrio-cromoly-negro-01-4.jpg?v=1784211853668",
+   "assets/img/products/manubrio-cromoly-negro-01-5.jpg?v=1784211855102",
+   "assets/img/products/manubrio-cromoly-negro-01-6.jpg?v=1784211856740"
   ],
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784083515728"
  },
@@ -1231,6 +1247,12 @@ window.ESCENA_PRODUCTS = [
     "label": "9.5\"",
     "units": 12
    }
+  ],
+  "imgs": [
+   "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495",
+   "assets/img/products/manubrio-cromoly-cromado-2.jpg?v=1784211858378",
+   "assets/img/products/manubrio-cromoly-cromado-3.jpg?v=1784211859914",
+   "assets/img/products/manubrio-cromoly-cromado-4.jpg?v=1784211861349"
   ],
   "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784083426495"
  },
