@@ -2564,7 +2564,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
+  "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784325939777"
  },
  {
   "slug": "tukanbikes-industrial-raw",
