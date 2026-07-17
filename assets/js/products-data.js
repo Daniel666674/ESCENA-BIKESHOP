@@ -700,14 +700,13 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/cana-fiend-mills-topload.jpg?v=1784328305117",
-   "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784328306259",
-   "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1784328307677",
-   "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1784328308815",
-   "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1784328310127",
-   "assets/img/products/cana-fiend-mills-topload-6.jpg?v=1784328311563",
-   "assets/img/products/cana-fiend-mills-topload-7.jpg?v=1784328312961",
-   "assets/img/products/cana-fiend-mills-topload-8.jpg?v=1784328314239"
+   "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784072401934",
+   "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1784072403563",
+   "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1784072404971",
+   "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1784072406365",
+   "assets/img/products/cana-fiend-mills-topload-6.jpg?v=1784072407845",
+   "assets/img/products/cana-fiend-mills-topload-7.jpg?v=1784072409612",
+   "assets/img/products/cana-fiend-mills-topload-8.jpg?v=1784072411172"
   ],
   "sizes": [
    {
@@ -732,21 +731,19 @@ window.ESCENA_PRODUCTS = [
   "imgColorMap": {
    "Morada": [
     0,
-    1,
-    2
+    1
    ],
    "Dorada": [
+    2,
     3,
-    4,
-    5
+    4
    ],
    "Negro": [
-    6,
-    7
+    5,
+    6
    ]
   },
-  "imgFit": "cover",
-  "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784328305117"
+  "img": "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784072401934"
  },
  {
   "slug": "cana-shadow-ravage-topload",
@@ -1402,15 +1399,14 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "horquilla-cromoly-negra-01",
-  "n": "Tenedor Rant Twin Peaks",
-  "brand": "Rant",
+  "n": "Tenedor Rant Twin Peaks Negro",
+  "brand": "",
   "cat": "horquillas",
   "spec": "Cromoly · Tubo recto · Negro mate",
   "price": 400000,
   "sku": "HORQUILLA-CROMOLY-NEGRA-01",
   "units": 12,
-  "tag": "Top",
-  "img": "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1784327053231"
+  "img": "assets/img/products/horquilla-cromoly-negra-01.jpg"
  },
  {
   "slug": "federal-horquilla-cromada",
