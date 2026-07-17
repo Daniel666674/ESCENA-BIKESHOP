@@ -1080,7 +1080,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "Odysseycfl3",
   "units": 1,
   "imgs": [
-   "assets/img/products/cana-odyssey-cfl3.jpg?v=1784328925937",
    "assets/img/products/cana-odyssey-cfl3-2.jpg?v=1784328927780",
    "assets/img/products/cana-odyssey-cfl3-3.jpg?v=1784328929357",
    "assets/img/products/cana-odyssey-cfl3-4.jpg?v=1784328931011",
@@ -1093,7 +1092,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784328925937"
+  "img": "assets/img/products/cana-odyssey-cfl3-2.jpg?v=1784328927780"
  },
  {
   "slug": "cana-shadow-chula-48mm",
