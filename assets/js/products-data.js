@@ -700,13 +700,15 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/cana-fiend-mills-topload.jpg?v=1784330118079",
-   "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784072401934",
-   "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1784072406365",
-   "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1784072404971",
-   "assets/img/products/cana-fiend-mills-topload-6.jpg?v=1784072407845",
-   "assets/img/products/cana-fiend-mills-topload-7.jpg?v=1784072409612",
-   "assets/img/products/cana-fiend-mills-topload-8.jpg?v=1784072411172"
+   "assets/img/products/cana-fiend-mills-topload.jpg?v=1784330514456",
+   "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784330515383",
+   "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1784330516301",
+   "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1784330517419",
+   "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1784330518348",
+   "assets/img/products/cana-fiend-mills-topload-6.jpg?v=1784330519351",
+   "assets/img/products/cana-fiend-mills-topload-7.jpg?v=1784330520316",
+   "assets/img/products/cana-fiend-mills-topload-8.jpg?v=1784330521302",
+   "assets/img/products/cana-fiend-mills-topload-9.jpg?v=1784330522468"
   ],
   "sizes": [
    {
@@ -731,19 +733,22 @@ window.ESCENA_PRODUCTS = [
   "imgColorMap": {
    "Morada": [
     0,
-    1
+    1,
+    2
    ],
    "Dorada": [
-    2,
     3,
-    4
+    4,
+    5
    ],
    "Negro": [
-    5,
-    6
+    6,
+    7,
+    8
    ]
   },
-  "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784330118079"
+  "imgFit": "cover",
+  "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784330514456"
  },
  {
   "slug": "cana-shadow-ravage-topload",
