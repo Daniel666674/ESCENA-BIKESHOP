@@ -12,7 +12,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "marco-gw-destructor-azul-20-5",
-  "n": "Marco GW Destructor Azul 20.5”",
+  "n": "Marco GW Destructor Azul",
   "brand": "GW",
   "cat": "marcos",
   "spec": "Acero · 20.5\" · Azul",
@@ -20,17 +20,25 @@ window.ESCENA_PRODUCTS = [
   "sku": "MRC",
   "units": 1,
   "tag": "Nacional",
+  "imgs": [
+   "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069",
+   "assets/img/products/marco-gw-destructor-azul-20-5-2.jpg?v=1784157840425",
+   "assets/img/products/marco-gw-destructor-azul-20-5-3.jpg?v=1784157841860",
+   "assets/img/products/marco-gw-destructor-azul-20-5-4.jpg?v=1784157843230",
+   "assets/img/products/marco-gw-destructor-azul-20-5-5.jpg?v=1784157844826",
+   "assets/img/products/marco-gw-destructor-azul-20-5-6.jpg?v=1784157846889"
+  ],
   "sizes": [
    {
     "label": "20.5\"",
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784311585087"
+  "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069"
  },
  {
   "slug": "marco-federal-command-negro-20-5-x-cola-12-5",
-  "n": "Marco Federal Command Negro 20.5” x Cola 12.5”",
+  "n": "Marco Federal Command Negro",
   "brand": "Federal",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.5\" · Negro",
@@ -52,7 +60,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "marco-federal-chiller-20-75-cola-12-7",
-  "n": "Marco Federal Chiller 20.75” Cola 12.7”",
+  "n": "Marco Federal Chiller",
   "brand": "Federal",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.7\" · Negro",
@@ -286,15 +294,21 @@ window.ESCENA_PRODUCTS = [
   "spec": "Tornasol • Acero GW • Medida: 10",
   "price": 80000,
   "sku": "TMN",
-  "units": 0,
-  "tag": "Nuevo",
+  "units": 2,
+  "tag": "Nuevo!",
+  "imgs": [
+   "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919",
+   "assets/img/products/timon-gw-destructor-tornasol-2.jpg?v=1784153795741",
+   "assets/img/products/timon-gw-destructor-tornasol-3.jpg?v=1784153797741",
+   "assets/img/products/timon-gw-destructor-tornasol-4.jpg?v=1784153799765"
+  ],
   "sizes": [
    {
     "label": "10\"",
-    "units": 0
+    "units": 2
    }
   ],
-  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784310632125"
+  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919"
  },
  {
   "slug": "timon-cult-heavens-gate-4p-cromado",
@@ -900,6 +914,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "imgFit": "contain",
   "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784312560084"
  },
  {
@@ -2516,36 +2531,30 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.4\"–20.75\" (dropout ajustable) · Negro",
   "price": 890000,
   "sku": "FATE-NAMASTE-NEGRO",
-  "units": 12,
+  "units": 2,
   "tag": "Nacional",
   "sizes": [
    {
     "label": "20.4\"-20.75\"",
-    "units": 12
+    "units": 2
    }
   ],
-  "imgs": [
-   "assets/img/products/fate-namaste-negro.jpg?v=1784314539727",
-   "assets/img/products/fate-namaste-negro-2.jpg?v=1784314541006",
-   "assets/img/products/fate-namaste-negro-3.jpg?v=1784314542287",
-   "assets/img/products/fate-namaste-negro-4.jpg?v=1784314543504"
-  ],
-  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784314539727"
+  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784087360390"
  },
  {
   "slug": "total-marco-2075-blanco-azul",
-  "n": "Total BMX Marco 20.75\"",
+  "n": "Total BMX Marco",
   "brand": "Total",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Blanco/Azul",
   "price": 1450000,
   "sku": "TOTAL-MARCO-2075-BLANCO-AZUL",
-  "units": 12,
+  "units": 2,
   "tag": "Nuevo",
   "sizes": [
    {
     "label": "20.75\"",
-    "units": 12
+    "units": 2
    }
   ],
   "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
@@ -2596,12 +2605,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.9\" · Negro",
   "price": 990000,
   "sku": "WETHEPEOPLE-DOOMSAYER-NEGRO",
-  "units": 12,
+  "units": 2,
   "tag": "Top",
   "sizes": [
    {
     "label": "20.75\"",
-    "units": 12
+    "units": 2
    }
   ],
   "img": "assets/img/products/wethepeople-doomsayer-negro.jpg?v=1784154923513"
@@ -2639,22 +2648,22 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.75\" · Negro",
   "price": 970000,
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
-  "units": 12,
+  "units": 2,
   "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315393093",
-   "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1784315394267",
-   "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1784315108223",
-   "assets/img/products/fiend-reynolds-v3-negro-4.jpg?v=1784315109553",
-   "assets/img/products/fiend-reynolds-v3-negro-5.jpg?v=1784315110904"
+   "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315798448",
+   "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1784315799762",
+   "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1784156646261",
+   "assets/img/products/fiend-reynolds-v3-negro-5.jpg?v=1784156650039",
+   "assets/img/products/fiend-reynolds-v3-negro-4.jpg?v=1784156648375"
   ],
   "sizes": [
    {
     "label": "20.75\"",
-    "units": 12
+    "units": 2
    }
   ],
-  "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315393093"
+  "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315798448"
  },
  {
   "slug": "aro_demolition_zero_plus_negro",
