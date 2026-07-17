@@ -914,6 +914,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "imgFit": "contain",
   "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784312560084"
  },
  {
