@@ -88,6 +88,7 @@
     @media (max-width: 860px) { .pdp { grid-template-columns: 1fr; gap: 1.5rem; } }
     .pdp-image { position: relative; aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #0A0A0A; cursor: zoom-in; }
     .pdp-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pdp-image.fit-contain img { object-fit: contain; }
     .pdp-image .tag { position: absolute; top: .9rem; left: .9rem; background: #fff; color: var(--ink); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .32rem .6rem; border-radius: 3px; z-index: 2; }
     .pdp-zoom-btn { position: absolute; bottom: .9rem; right: .9rem; z-index: 2; width: 38px; height: 38px; border-radius: 50%; border: none; background: rgba(10,10,10,.55); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px); }
     .pdp-zoom-btn svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; }
@@ -361,7 +362,7 @@ header.top-bar .brand .name { color: #fff; }
 
 <div class="pdp">
   <div>
-    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954&quot;,&quot;../assets/img/products/cana-volume-bison-frontload-2.jpg?v=1784069578394&quot;,&quot;../assets/img/products/cana-volume-bison-frontload-3.jpg?v=1784069579944&quot;,&quot;../assets/img/products/cana-volume-bison-frontload-4.jpg?v=1784069581279&quot;,&quot;../assets/img/products/cana-volume-bison-frontload-5.jpg?v=1784069582905&quot;,&quot;../assets/img/products/cana-volume-bison-frontload-6.jpg?v=1784069584354&quot;]">
+    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954&quot;,&quot;../assets/img/products/cana-volume-bison-frontload-2.jpg?v=1784069578394&quot;,&quot;../assets/img/products/cana-volume-bison-frontload-3.jpg?v=1784069579944&quot;,&quot;../assets/img/products/cana-volume-bison-frontload-4.jpg?v=1784069581279&quot;,&quot;../assets/img/products/cana-volume-bison-frontload-5.jpg?v=1784069582905&quot;,&quot;../assets/img/products/cana-volume-bison-frontload-6.jpg?v=1784069584354&quot;]" data-fit="auto">
       <span class="tag">Descuento 💸</span>
       <img id="pdpMainImg" src="../assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954" alt="Caña Volume Bison - FrontLoad - Volume BMX" width="700" height="700" />
       <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Ampliar imagen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
@@ -580,9 +581,26 @@ header.top-bar .brand .name { color: #fff; }
     var thumbsWrap = document.getElementById("pdpThumbs");
     var idx = 0;
 
+    // Photo fit: "cover" fills the square (may crop), "contain" shows the whole
+    // photo (no crop). "auto" (default) picks per photo by its aspect ratio, so
+    // wide/tall shots (frames, etc.) are never cropped. Owner can force a mode
+    // per product from the admin.
+    var fitMode = wrap.getAttribute("data-fit") || "auto";
+    function applyFit(){
+      if (fitMode === "cover") { wrap.classList.remove("fit-contain"); return; }
+      if (fitMode === "contain") { wrap.classList.add("fit-contain"); return; }
+      var w = mainImg.naturalWidth, h = mainImg.naturalHeight;
+      if (!w || !h) return; // wait for load
+      var r = w / h;
+      wrap.classList.toggle("fit-contain", r < 0.85 || r > 1.18);
+    }
+    mainImg.addEventListener("load", applyFit);
+    if (mainImg.complete) applyFit();
+
     function show(i){
       idx = (i + imgs.length) % imgs.length;
       mainImg.src = imgs[idx];
+      applyFit();
       var dots = dotsWrap ? dotsWrap.querySelectorAll("button") : [];
       for (var d = 0; d < dots.length; d++) dots[d].classList.toggle("is-active", d === idx);
       var thumbs = thumbsWrap ? thumbsWrap.querySelectorAll("button") : [];

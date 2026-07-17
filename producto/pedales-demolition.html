@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Pedales Demolition", "image": "https://escenabmx.com/assets/img/products/pedales-demolition.jpg", "description": "Pedales Demolition (Demolition) — Azul con blanco , Rojo con blanco , Gris con Blanco, Negro, Morado con blanco, Morado con Amarillo..", "sku": "PDL", "brand": {"@type": "Brand", "name": "Demolition"}, "category": "Pedales", "offers": {"@type": "Offer", "url": "https://escenabmx.com/producto/pedales-demolition.html", "priceCurrency": "COP", "price": "95000", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "seller": {"@type": "Organization", "name": "ESCENA BIKE SHOP"}}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://escenabmx.com/"}, {"@type": "ListItem", "position": 2, "name": "{{SHOP_LABEL_JSON}}", "item": "https://escenabmx.com/{{SHOP_PAGE}}"}, {"@type": "ListItem", "position": 3, "name": "Pedales", "item": "https://escenabmx.com/{{SHOP_PAGE}}?cat=pedales"}, {"@type": "ListItem", "position": 4, "name": "Pedales Demolition", "item": "https://escenabmx.com/producto/pedales-demolition.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://escenabmx.com/"}, {"@type": "ListItem", "position": 2, "name": "Tienda", "item": "https://escenabmx.com/tienda.html"}, {"@type": "ListItem", "position": 3, "name": "Pedales", "item": "https://escenabmx.com/tienda.html?cat=pedales"}, {"@type": "ListItem", "position": 4, "name": "Pedales Demolition", "item": "https://escenabmx.com/producto/pedales-demolition.html"}]}</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -88,6 +88,7 @@
     @media (max-width: 860px) { .pdp { grid-template-columns: 1fr; gap: 1.5rem; } }
     .pdp-image { position: relative; aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #0A0A0A; cursor: zoom-in; }
     .pdp-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pdp-image.fit-contain img { object-fit: contain; }
     .pdp-image .tag { position: absolute; top: .9rem; left: .9rem; background: #fff; color: var(--ink); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .32rem .6rem; border-radius: 3px; z-index: 2; }
     .pdp-zoom-btn { position: absolute; bottom: .9rem; right: .9rem; z-index: 2; width: 38px; height: 38px; border-radius: 50%; border: none; background: rgba(10,10,10,.55); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px); }
     .pdp-zoom-btn svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; }
@@ -354,14 +355,14 @@ header.top-bar .brand .name { color: #fff; }
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="../index.html">Inicio</a><span class="sep">/</span>
-  <a href="../{{SHOP_PAGE}}">{{SHOP_LABEL}}</a><span class="sep">/</span>
-  <a href="../{{SHOP_PAGE}}?cat=pedales">Pedales</a><span class="sep">/</span>
+  <a href="../tienda.html">Tienda</a><span class="sep">/</span>
+  <a href="../tienda.html?cat=pedales">Pedales</a><span class="sep">/</span>
   <span class="current">Pedales Demolition</span>
 </nav>
 
 <div class="pdp">
   <div>
-    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/pedales-demolition.jpg?v=1784059551908&quot;,&quot;../assets/img/products/pedales-demolition-2.jpg?v=1784059553615&quot;,&quot;../assets/img/products/pedales-demolition-3.jpg?v=1784262238206&quot;,&quot;../assets/img/products/pedales-demolition-3.jpg?v=1784059555139&quot;,&quot;../assets/img/products/pedales-demolition-4.jpg?v=1784059556618&quot;,&quot;../assets/img/products/pedales-demolition-5.jpg?v=1784059558102&quot;,&quot;../assets/img/products/pedales-demolition-12.jpg?v=1784059569860&quot;,&quot;../assets/img/products/pedales-demolition-7.jpg?v=1784059561416&quot;,&quot;../assets/img/products/pedales-demolition-8.jpg?v=1784059563785&quot;,&quot;../assets/img/products/pedales-demolition-9.jpg?v=1784059565238&quot;,&quot;../assets/img/products/pedales-demolition-11.jpg?v=1784262240124&quot;,&quot;../assets/img/products/pedales-demolition-10.jpg?v=1784059566652&quot;,&quot;../assets/img/products/pedales-demolition-14.jpg?v=1784059573260&quot;,&quot;../assets/img/products/pedales-demolition-11.jpg?v=1784059568136&quot;,&quot;../assets/img/products/pedales-demolition-15.jpg?v=1784059575864&quot;]">
+    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/pedales-demolition.jpg?v=1784059551908&quot;,&quot;../assets/img/products/pedales-demolition-2.jpg?v=1784059553615&quot;,&quot;../assets/img/products/pedales-demolition-3.jpg?v=1784262238206&quot;,&quot;../assets/img/products/pedales-demolition-3.jpg?v=1784059555139&quot;,&quot;../assets/img/products/pedales-demolition-4.jpg?v=1784059556618&quot;,&quot;../assets/img/products/pedales-demolition-5.jpg?v=1784059558102&quot;,&quot;../assets/img/products/pedales-demolition-12.jpg?v=1784059569860&quot;,&quot;../assets/img/products/pedales-demolition-7.jpg?v=1784059561416&quot;,&quot;../assets/img/products/pedales-demolition-8.jpg?v=1784059563785&quot;,&quot;../assets/img/products/pedales-demolition-9.jpg?v=1784059565238&quot;,&quot;../assets/img/products/pedales-demolition-11.jpg?v=1784262240124&quot;,&quot;../assets/img/products/pedales-demolition-10.jpg?v=1784059566652&quot;,&quot;../assets/img/products/pedales-demolition-14.jpg?v=1784059573260&quot;,&quot;../assets/img/products/pedales-demolition-11.jpg?v=1784059568136&quot;,&quot;../assets/img/products/pedales-demolition-15.jpg?v=1784059575864&quot;]" data-fit="auto">
       <span class="tag">Top 🔥</span>
       <img id="pdpMainImg" src="../assets/img/products/pedales-demolition.jpg?v=1784059551908" alt="Pedales Demolition - Demolition BMX" width="700" height="700" />
       <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Ampliar imagen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
@@ -394,7 +395,9 @@ header.top-bar .brand .name { color: #fff; }
     </div>
     <p class="pdp-desc">Pedales Demolition de Demolition.</p>
     <ul class="spec-list">
-      {{SPEC_ITEMS}}
+      <li>Azul con blanco , Rojo con blanco , Gris con Blanco, Negro, Morado con blanco, Morado con Amarillo.</li>
+<li class="meta"><span>Categoría</span><span>Pedales</span></li>
+<li class="meta"><span>Marca</span><span>Demolition</span></li>
     </ul>
     <div class="pdp-meta">
       <p><b>Envíos a toda Colombia</b> · coordinados por WhatsApp</p>
@@ -579,9 +582,26 @@ header.top-bar .brand .name { color: #fff; }
     var thumbsWrap = document.getElementById("pdpThumbs");
     var idx = 0;
 
+    // Photo fit: "cover" fills the square (may crop), "contain" shows the whole
+    // photo (no crop). "auto" (default) picks per photo by its aspect ratio, so
+    // wide/tall shots (frames, etc.) are never cropped. Owner can force a mode
+    // per product from the admin.
+    var fitMode = wrap.getAttribute("data-fit") || "auto";
+    function applyFit(){
+      if (fitMode === "cover") { wrap.classList.remove("fit-contain"); return; }
+      if (fitMode === "contain") { wrap.classList.add("fit-contain"); return; }
+      var w = mainImg.naturalWidth, h = mainImg.naturalHeight;
+      if (!w || !h) return; // wait for load
+      var r = w / h;
+      wrap.classList.toggle("fit-contain", r < 0.85 || r > 1.18);
+    }
+    mainImg.addEventListener("load", applyFit);
+    if (mainImg.complete) applyFit();
+
     function show(i){
       idx = (i + imgs.length) % imgs.length;
       mainImg.src = imgs[idx];
+      applyFit();
       var dots = dotsWrap ? dotsWrap.querySelectorAll("button") : [];
       for (var d = 0; d < dots.length; d++) dots[d].classList.toggle("is-active", d === idx);
       var thumbs = thumbsWrap ? thumbsWrap.querySelectorAll("button") : [];
