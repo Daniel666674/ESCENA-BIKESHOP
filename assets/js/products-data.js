@@ -745,6 +745,7 @@ window.ESCENA_PRODUCTS = [
     7
    ]
   },
+  "imgFit": "cover",
   "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784328305117"
  },
  {
