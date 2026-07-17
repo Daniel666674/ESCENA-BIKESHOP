@@ -143,8 +143,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Descuento",
   "imgs": [
-   "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784326496360",
-   "assets/img/products/cana-volume-bison-negra-frontload-2.jpg?v=1784326497720",
+   "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784330800302",
    "assets/img/products/cana-volume-bison-negra-frontload-3.jpg?v=1784326499224",
    "assets/img/products/cana-volume-bison-negra-frontload-4.jpg?v=1784326500625",
    "assets/img/products/cana-volume-bison-negra-frontload-5.jpg?v=1784326501904",
@@ -156,7 +155,8 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784326496360"
+  "imgFit": "cover",
+  "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784330800302"
  },
  {
   "slug": "pedales-wellgo-negro",
