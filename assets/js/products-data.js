@@ -1674,23 +1674,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/bsd-stem-negro.jpg"
  },
  {
-  "slug": "volume-stem-negro",
-  "n": "Caña Volume Biston Negra",
-  "brand": "Volume",
-  "cat": "stems",
-  "spec": "Carga frontal · Negro",
-  "price": 330000,
-  "sku": "VOLUME-STEM-NEGRO",
-  "units": 12,
-  "sizes": [
-   {
-    "label": "Única",
-    "units": 12
-   }
-  ],
-  "img": "assets/img/products/volume-stem-negro.jpg"
- },
- {
   "slug": "stem-plata-pulido",
   "n": "Caña Caña Demolition Josh Dave Cromada",
   "brand": "Demolition",
