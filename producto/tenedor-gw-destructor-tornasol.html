@@ -115,16 +115,26 @@
     .pdp-variant { margin: 0 0 1.3rem; }
     .pdp-variant-label { display: block; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .55rem; }
     .pdp-variant-options { display: flex; gap: .5rem; flex-wrap: wrap; }
-    .pdp-variant-options button { background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .8rem; font-weight: 600; color: var(--ink); cursor: pointer; font-family: inherit; transition: all .15s; }
+    .pdp-variant-options button { background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: .7rem 1.2rem; min-height: 44px; font-size: .82rem; font-weight: 600; color: var(--ink); cursor: pointer; font-family: inherit; transition: all .15s; }
     .pdp-variant-options button:hover { border-color: var(--ink); }
     .pdp-variant-options button.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
     .pdp-variant-options button:disabled { opacity: .4; cursor: not-allowed; text-decoration: line-through; }
     .pdp-variant-options button:disabled:hover { border-color: var(--line); }
+    .pdp-pick-hint { font-size: .8rem; font-weight: 700; color: #c0392b; margin: 0 0 .9rem; }
+    .pdp-pick-hint.flash { animation: pickflash .5s ease; }
+    @keyframes pickflash { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+    .btn.is-disabled { opacity: .45; cursor: not-allowed; }
     .pdp-actions { display: flex; flex-direction: column; gap: .7rem; max-width: 340px; margin-bottom: 1.6rem; }
     .pdp-actions.is-agotado .add-cart-btn, .pdp-actions.is-agotado .pdp-qty { opacity: .5; }
     .add-cart-btn:disabled { cursor: not-allowed; }
     .pdp-qty { display: inline-flex; align-items: center; gap: .4rem; border: 1.5px solid var(--line); border-radius: 6px; padding: .2rem .3rem; align-self: flex-start; }
-    .pdp-qty button { width: 28px; height: 28px; border: none; background: none; cursor: pointer; font-size: 1.1rem; color: var(--ink); line-height: 1; }
+    .pdp-qty button { width: 34px; height: 34px; border: none; background: none; cursor: pointer; font-size: 1.2rem; color: var(--ink); line-height: 1; }
+    @media (max-width: 640px) {
+      .pdp-variant-options { gap: .6rem; }
+      .pdp-variant-options button { padding: .8rem 1.3rem; min-height: 48px; font-size: .88rem; }
+      .pdp-qty button { width: 42px; height: 42px; font-size: 1.35rem; }
+      .pdp-qty input { width: 44px; font-size: 1rem; }
+    }
     .pdp-qty input { width: 34px; text-align: center; border: none; font-family: inherit; font-size: .9rem; color: var(--ink); }
     .pdp-qty input::-webkit-inner-spin-button, .pdp-qty input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     .pdp-qty input[type=number] { -moz-appearance: textfield; }
@@ -358,6 +368,7 @@ header.top-bar .brand .name { color: #fff; }
     <div class="pdp-price">$86.000 COP</div>
     <p class="pdp-stock-hint" id="pdpStockHint" data-units="2"></p>
     
+    <p class="pdp-pick-hint" id="pdpPickHint" style="display:none;"></p>
     <div class="pdp-actions" id="pdpActions">
       <a class="btn btn-ink" id="pdpWaLink" href="https://wa.me/573107630504?text=Hola%20ESCENA%20%F0%9F%90%95%2C%20quiero%20pedir%3A%20Tenedor%20GW%20Destructor%20Tornasol%20(GW)%20%E2%80%94%20%2486.000%20COP.%20%C2%BFEst%C3%A1%20disponible%3F" target="_blank" rel="noopener">Pedir por WhatsApp</a>
       <div class="pdp-qty">
@@ -652,6 +663,9 @@ header.top-bar .brand .name { color: #fff; }
   var addCartBtn = pdpActions ? pdpActions.querySelector(".add-cart-btn") : null;
   var unitsAvail = parseInt((stockHint && stockHint.getAttribute("data-units")) || "12", 10);
   if (isNaN(unitsAvail)) unitsAvail = 12;
+  var waLink = document.getElementById("pdpWaLink");
+  var pickHint = document.getElementById("pdpPickHint");
+  var mustPick = false; // true while a required size/color hasn't been chosen yet
 
   // Applies a stock count to the whole buy UI — called once at load, and again
   // whenever a real (inventory-backed) size button is picked, since each size
@@ -670,7 +684,10 @@ header.top-bar .brand .name { color: #fff; }
       if (stockHint) { stockHint.textContent = "Agotado"; stockHint.classList.add("is-out"); }
     } else {
       if (pdpActions) pdpActions.classList.remove("is-agotado");
-      if (addCartBtn) { addCartBtn.disabled = false; addCartBtn.textContent = "Agregar al carrito"; }
+      if (addCartBtn) {
+        if (mustPick) { addCartBtn.disabled = true; addCartBtn.textContent = "Elige una opción"; }
+        else { addCartBtn.disabled = false; addCartBtn.textContent = "Agregar al carrito"; }
+      }
       if (qtyInput) {
         qtyInput.disabled = false; if (qtyDec) qtyDec.disabled = false; if (qtyInc) qtyInc.disabled = false;
         qtyInput.value = String(Math.min(Math.max(parseInt(qtyInput.value, 10) || 1, 1), unitsAvail));
@@ -726,6 +743,28 @@ header.top-bar .brand .name { color: #fff; }
     function combinedVariant() {
       return groups.map(function (g) { return selected[g.id]; }).filter(Boolean).join(" / ");
     }
+    function allChosen() { return groups.every(function (g) { return selected[g.id]; }); }
+
+    // Require an explicit size/color choice before ordering: gate both the cart
+    // button and the WhatsApp link until every group is chosen, so no order ever
+    // goes out without its variant. applyStock() reads `mustPick` to set the
+    // cart button's label/disabled state.
+    function refreshGate() {
+      mustPick = !allChosen();
+      if (pickHint) pickHint.style.display = mustPick ? "" : "none";
+      if (waLink) {
+        waLink.classList.toggle("is-disabled", mustPick);
+        waLink.setAttribute("aria-disabled", mustPick ? "true" : "false");
+      }
+      applyStock(unitsAvail); // re-evaluate the cart button under the new gate
+    }
+
+    // Prompt built from the group labels, e.g. "Elige Talla y Color".
+    var labels = groups.map(function (g) {
+      var l = g.querySelector(".pdp-variant-label");
+      return l ? l.textContent.trim() : "opción";
+    });
+    if (pickHint) pickHint.textContent = "Elige " + labels.join(" y ") + " para continuar";
 
     groups.forEach(function (group) {
       var isRealSize = !!group.querySelector("button[data-units]");
@@ -740,6 +779,10 @@ header.top-bar .brand .name { color: #fff; }
         var rawImgMap = group.getAttribute("data-img-map");
         if (rawImgMap) { try { imgMap = JSON.parse(rawImgMap); } catch (e) { imgMap = null; } }
       }
+
+      // Nothing is pre-selected — clear any is-active baked in at publish time so
+      // the shopper has to make a deliberate choice.
+      group.querySelectorAll("button.is-active").forEach(function (b) { b.classList.remove("is-active"); });
 
       // Sync each button's stock/disabled state from the live catalog — an
       // option could have sold out (or come back) since this page was last
@@ -772,6 +815,7 @@ header.top-bar .brand .name { color: #fff; }
           applyStock(units);
         }
         if (imgMap) pdpFilterGallery(imgMap[val] || null);
+        refreshGate();
         if (window.EscenaWholesale && window.EscenaWholesale.refreshPDP) window.EscenaWholesale.refreshPDP();
       }
 
@@ -780,11 +824,22 @@ header.top-bar .brand .name { color: #fff; }
         if (!btn || btn.disabled) return;
         applyValue(btn.getAttribute("data-value"));
       });
-
-      var preferred = group.querySelector("button.is-active[data-value]:not(:disabled)");
-      var firstBtn = preferred || group.querySelector("button[data-value]:not(:disabled)") || group.querySelector("button[data-value]");
-      if (firstBtn) applyValue(firstBtn.getAttribute("data-value"));
     });
+
+    // Block the WhatsApp link until a choice is made; flash the hint instead.
+    if (waLink) {
+      waLink.addEventListener("click", function (e) {
+        if (mustPick) {
+          e.preventDefault();
+          if (pickHint) {
+            pickHint.style.display = "";
+            pickHint.classList.remove("flash"); void pickHint.offsetWidth; pickHint.classList.add("flash");
+          }
+        }
+      });
+    }
+
+    refreshGate(); // start gated until the shopper chooses
   })();
 </script>
 <script>var ESCENA_ROOT = "../";</script>
