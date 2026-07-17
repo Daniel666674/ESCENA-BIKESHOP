@@ -714,7 +714,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "stems",
   "spec": "Carga superior · Alcance 48mm · Aluminio CNC",
   "price": 320000,
-  "sku": "STEAM",
+  "sku": "CAN-FND-001",
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
@@ -751,6 +751,23 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "imgColorMap": {
+   "Morada": [
+    0,
+    1,
+    2
+   ],
+   "Dorada": [
+    3,
+    4,
+    5
+   ],
+   "Negro": [
+    6,
+    7,
+    8
+   ]
+  },
   "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486"
  },
  {
@@ -758,9 +775,9 @@ window.ESCENA_PRODUCTS = [
   "n": "Caña Shadow Ravage - TopLoad",
   "brand": "Shadow",
   "cat": "stems",
-  "spec": "Carga superior · Alcance 53mm · Aluminio CNC",
+  "spec": "Top load · Alcance 53mm · Aluminio CNC",
   "price": 200000,
-  "sku": "STEAM",
+  "sku": "CAN-SHW-002",
   "units": 1,
   "tag": "Edicion Especial 🔥",
   "imgs": [
@@ -794,6 +811,23 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "imgColorMap": {
+   "Morada": [
+    0,
+    1,
+    2
+   ],
+   "Azul": [
+    3,
+    4,
+    5
+   ],
+   "Cromada": [
+    6,
+    7,
+    8
+   ]
+  },
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805"
  },
  {
