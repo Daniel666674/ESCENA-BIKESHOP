@@ -853,40 +853,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784087357011"
  },
  {
-  "slug": "marco-cult-biggie-jaume-sintes-hammertone",
-  "n": "Marco Cult Biggie Jaume Sintes Hammertone",
-  "brand": "Cult Biggie Jaume Sintes Hammertone",
-  "cat": "marcos",
-  "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.9\" · Hammertone",
-  "price": 1790000,
-  "sku": "MRC-CLT-001",
-  "units": 2,
-  "tag": "Nuevo 🔥",
-  "imgs": [
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210",
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-2.jpg?v=1784061950852",
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-3.jpg?v=1784061955010",
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-4.jpg?v=1784061958723",
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-5.jpg?v=1784061968324",
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-6.jpg?v=1784061976283",
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-7.jpg?v=1784061981933",
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-8.jpg?v=1784061986562",
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-9.jpg?v=1784061991001",
-   "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone-10.jpg?v=1784087359163"
-  ],
-  "sizes": [
-   {
-    "label": "20.5\"",
-    "units": 1
-   },
-   {
-    "label": "20.75\"",
-    "units": 1
-   }
-  ],
-  "img": "assets/img/products/marco-cult-biggie-jaume-sintes-hammertone.jpg?v=1784061945210"
- },
- {
   "slug": "pedales-odyssey",
   "n": "Pedales Odyssey",
   "brand": "Odyssey",
@@ -1055,8 +1021,12 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "Única",
-    "units": 2
+    "label": "20.75\"",
+    "units": 1
+   },
+   {
+    "label": "20.5\"",
+    "units": 1
    }
   ],
   "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784048459779"
