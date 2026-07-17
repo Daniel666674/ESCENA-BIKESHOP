@@ -203,14 +203,15 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784153752086"
  },
  {
+  "slug": "grips-dailygrind",
   "n": "Grips Dailygrind",
   "brand": "Dailygrind",
   "cat": "punos",
-  "spec": "• Negro • Café • Lava •",
+  "spec": "Goma · 160mm · 30.5mm · acanalado hongo",
   "price": 50000,
   "sku": "GRIP",
   "units": 6,
-  "tag": "Top",
+  "tag": "Top!",
   "imgs": [
    "assets/img/products/grips-dailygrind.jpg?v=1784153759831",
    "assets/img/products/grips-dailygrind-2.jpg?v=1784153761769",
@@ -247,7 +248,6 @@ window.ESCENA_PRODUCTS = [
     5
    ]
   },
-  "slug": "grips-dailygrind",
   "img": "assets/img/products/grips-dailygrind.jpg?v=1784153759831"
  },
  {
@@ -421,6 +421,14 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Rojo": [
+    1
+   ]
+  },
   "img": "assets/img/products/grips-fiend-flangeless.jpg?v=1784139481764"
  },
  {
@@ -430,7 +438,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "punos",
   "spec": "Goma · 153mm · Flangeless · nervadura tetraédrica",
   "price": 50000,
-  "sku": "GRIPS",
+  "sku": "GRP-FND-001",
   "units": 2,
   "tag": "Nuevo!",
   "imgs": [
@@ -447,6 +455,14 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Morado": [
+    1
+   ]
+  },
   "img": "assets/img/products/grips-fiend-palmere.jpg?v=1784139484875"
  },
  {
