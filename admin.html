@@ -513,8 +513,7 @@
     <div class="pmodal-field" style="margin-top:.7rem;">
       <label>Ajuste de la foto en la página <span style="color:var(--muted);font-weight:400;">(cómo se ve en la tienda)</span></label>
       <select id="pmImgFit">
-        <option value="auto">Automático (recomendado)</option>
-        <option value="contain">Mostrar completa — sin recortar</option>
+        <option value="auto">Automático — muestra la foto completa (recomendado)</option>
         <option value="cover">Rellenar el cuadro — puede recortar bordes</option>
       </select>
     </div>
@@ -1140,7 +1139,7 @@
     m.units = (typeof p.units === "number") ? p.units : (p.stock === false ? 0 : 12);
     m.cost = (typeof p.cost === "number") ? p.cost : 0;
     m.notes = p.notes || "";
-    m.imgFit = (p.imgFit === "contain" || p.imgFit === "cover") ? p.imgFit : "auto";
+    m.imgFit = (p.imgFit === "cover") ? "cover" : "auto"; // legacy "contain" folds into "auto" (adapts + blur fill)
     m.tag = p.tag || "";
     m.published = (p.published === false) ? false : true;
     m.imgs = p.imgs || (p.img ? [p.img] : ["assets/img/escena-logo.jpg"]);
@@ -1780,7 +1779,7 @@
     document.getElementById("pmTag").value = p ? p.tag : "";
     document.getElementById("pmCost").value = p && p.cost ? p.cost : "";
     document.getElementById("pmNotes").value = p ? p.notes : "";
-    document.getElementById("pmImgFit").value = (p && p.imgFit) ? p.imgFit : "auto";
+    document.getElementById("pmImgFit").value = (p && p.imgFit === "cover") ? "cover" : "auto";
     updateMarginReadout();
     modalPhotos = p ? p.imgs.slice() : [];
     // Reverse p.imgColorMap ({label: [indices]}) into one label per photo index.

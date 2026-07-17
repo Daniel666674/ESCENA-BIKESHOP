@@ -86,9 +86,13 @@
 
     .pdp { max-width: 1180px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
     @media (max-width: 860px) { .pdp { grid-template-columns: 1fr; gap: 1.5rem; } }
-    .pdp-image { position: relative; aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #0A0A0A; cursor: zoom-in; }
-    .pdp-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .pdp-image.fit-contain img { object-fit: contain; }
+    .pdp-image { position: relative; aspect-ratio: var(--pdp-ar, 1 / 1); border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #0A0A0A; cursor: zoom-in; }
+    /* Blurred fill of the same photo behind a fully-visible (uncropped) image —
+       no black bars, no cropping, whatever the photo's shape. */
+    .pdp-image .pdp-image-blur { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center; filter: blur(30px) brightness(.5) saturate(1.15); transform: scale(1.14); }
+    .pdp-image img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; display: block; }
+    .pdp-image.fit-cover img { object-fit: cover; }
+    .pdp-image.fit-cover .pdp-image-blur { display: none; }
     .pdp-image .tag { position: absolute; top: .9rem; left: .9rem; background: #fff; color: var(--ink); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .32rem .6rem; border-radius: 3px; z-index: 2; }
     .pdp-zoom-btn { position: absolute; bottom: .9rem; right: .9rem; z-index: 2; width: 38px; height: 38px; border-radius: 50%; border: none; background: rgba(10,10,10,.55); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px); }
     .pdp-zoom-btn svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; }
@@ -363,6 +367,7 @@ header.top-bar .brand .name { color: #fff; }
 <div class="pdp">
   <div>
     <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784310306495&quot;,&quot;../assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1784310307966&quot;]" data-fit="auto">
+      <div class="pdp-image-blur" id="pdpBlur"></div>
       <span class="tag">Top 🔥</span>
       <img id="pdpMainImg" src="../assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784310306495" alt="Timón Cult Heavens Gate 4P Cromado - Cult BMX" width="700" height="700" />
       <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Ampliar imagen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
@@ -417,7 +422,7 @@ header.top-bar .brand .name { color: #fff; }
   <h2>También te puede gustar</h2>
   <div class="related-grid">
     <a class="r-card" href="timon-gw-destructor-tornasol.html">
-        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Nuevo</span><img src="../assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784310632125" alt="Timón GW Destructor Tornasol - GW BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Nuevo!</span><img src="../assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919" alt="Timón GW Destructor Tornasol - GW BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">GW</span>
           <h3>Timón GW Destructor Tornasol</h3>
@@ -589,18 +594,30 @@ header.top-bar .brand .name { color: #fff; }
     var thumbsWrap = document.getElementById("pdpThumbs");
     var idx = 0;
 
-    // Photo fit: "cover" fills the square (may crop), "contain" shows the whole
-    // photo (no crop). "auto" (default) picks per photo by its aspect ratio, so
-    // wide/tall shots (frames, etc.) are never cropped. Owner can force a mode
-    // per product from the admin.
+    // Photo formatting. "auto" (default): the image is always shown whole (never
+    // cropped); the picture box adopts the cover photo's aspect ratio (clamped to
+    // a sane range) so it fills nicely, and any leftover space is filled with a
+    // blurred copy of the photo instead of black bars — so every shot, wide or
+    // tall, looks clean. "cover" forces a crop-to-fill square; "contain" keeps a
+    // square with the whole photo + blurred fill.
     var fitMode = wrap.getAttribute("data-fit") || "auto";
+    var blurEl = document.getElementById("pdpBlur");
+    var AR_LO = 0.78, AR_HI = 1.6, arSet = false;
     function applyFit(){
-      if (fitMode === "cover") { wrap.classList.remove("fit-contain"); return; }
-      if (fitMode === "contain") { wrap.classList.add("fit-contain"); return; }
+      if (fitMode === "cover") { wrap.classList.add("fit-cover"); return; }
+      wrap.classList.remove("fit-cover");
+      // blurred backdrop = the current photo
+      if (blurEl) blurEl.style.backgroundImage = 'url("' + (mainImg.currentSrc || mainImg.src) + '")';
       var w = mainImg.naturalWidth, h = mainImg.naturalHeight;
       if (!w || !h) return; // wait for load
-      var r = w / h;
-      wrap.classList.toggle("fit-contain", r < 0.85 || r > 1.18);
+      // Box shape from the cover photo (set once so gallery swaps don't jump the
+      // layout). Any non-cover mode adapts + fills with blur, so a photo is never
+      // cropped and never framed by dead black bars.
+      if (!arSet) {
+        var ar = Math.max(AR_LO, Math.min(AR_HI, w / h));
+        wrap.style.setProperty("--pdp-ar", ar.toFixed(4) + " / 1");
+        arSet = true;
+      }
     }
     mainImg.addEventListener("load", applyFit);
     if (mainImg.complete) applyFit();
