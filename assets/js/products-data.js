@@ -755,17 +755,20 @@ window.ESCENA_PRODUCTS = [
    "Morada": [
     0,
     1,
-    2
+    2,
+    9
    ],
    "Dorada": [
     3,
     4,
-    5
+    5,
+    10
    ],
    "Negro": [
     6,
     7,
-    8
+    8,
+    11
    ]
   },
   "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486"
@@ -775,7 +778,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Caña Shadow Ravage - TopLoad",
   "brand": "Shadow",
   "cat": "stems",
-  "spec": "Top load · Alcance 53mm · Aluminio CNC",
+  "spec": "Carga superior · Alcance 53mm · Aluminio CNC",
   "price": 200000,
   "sku": "CAN-SHW-002",
   "units": 1,
