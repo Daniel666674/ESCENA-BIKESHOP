@@ -2516,21 +2516,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.4\"–20.75\" (dropout ajustable) · Negro",
   "price": 890000,
   "sku": "FATE-NAMASTE-NEGRO",
-  "units": 12,
+  "units": 2,
   "tag": "Nacional",
   "sizes": [
    {
     "label": "20.4\"-20.75\"",
-    "units": 12
+    "units": 2
    }
   ],
-  "imgs": [
-   "assets/img/products/fate-namaste-negro.jpg?v=1784314539727",
-   "assets/img/products/fate-namaste-negro-2.jpg?v=1784314541006",
-   "assets/img/products/fate-namaste-negro-3.jpg?v=1784314542287",
-   "assets/img/products/fate-namaste-negro-4.jpg?v=1784314543504"
-  ],
-  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784314539727"
+  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784087360390"
  },
  {
   "slug": "total-marco-2075-blanco-azul",
@@ -2540,12 +2534,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.75\" · Blanco/Azul",
   "price": 1450000,
   "sku": "TOTAL-MARCO-2075-BLANCO-AZUL",
-  "units": 12,
+  "units": 2,
   "tag": "Nuevo",
   "sizes": [
    {
     "label": "20.75\"",
-    "units": 12
+    "units": 2
    }
   ],
   "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
@@ -2596,12 +2590,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.9\" · Negro",
   "price": 990000,
   "sku": "WETHEPEOPLE-DOOMSAYER-NEGRO",
-  "units": 12,
+  "units": 2,
   "tag": "Top",
   "sizes": [
    {
     "label": "20.75\"",
-    "units": 12
+    "units": 2
    }
   ],
   "img": "assets/img/products/wethepeople-doomsayer-negro.jpg?v=1784154923513"
@@ -2639,7 +2633,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.75\" · Negro",
   "price": 970000,
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
-  "units": 12,
+  "units": 2,
   "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315798448",
@@ -2651,7 +2645,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.75\"",
-    "units": 12
+    "units": 2
    }
   ],
   "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315798448"
