@@ -1714,13 +1714,12 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "imgFit": "cover",
   "imgs": [
-   "assets/img/products/bsd-stem-negro.jpg?v=1784332339909",
-   "assets/img/products/bsd-stem-negro-2.jpg?v=1784332340959",
-   "assets/img/products/bsd-stem-negro-3.jpg?v=1784332342003"
+   "assets/img/products/bsd-stem-negro.jpg?v=1784333167289",
+   "assets/img/products/bsd-stem-negro-2.jpg?v=1784333168562",
+   "assets/img/products/bsd-stem-negro-3.jpg?v=1784333169928"
   ],
-  "img": "assets/img/products/bsd-stem-negro.jpg?v=1784332339909"
+  "img": "assets/img/products/bsd-stem-negro.jpg?v=1784333167289"
  },
  {
   "slug": "stem-plata-pulido",
