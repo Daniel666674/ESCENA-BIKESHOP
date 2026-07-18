@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco TSG Dawn Blanco",
+  "brand": "TSG",
+  "cat": "cascos",
+  "spec": "UNISEX • S/M/L/XL",
+  "price": 370000,
+  "sku": "CAS-TSG-002",
+  "units": 2,
+  "tag": "Nuevo",
+  "imgs": [
+   "assets/img/products/casco-tsg-dawn-blanco.jpg?v=1784400418395",
+   "assets/img/products/casco-tsg-dawn-blanco-2.jpg?v=1784400419400",
+   "assets/img/products/casco-tsg-dawn-blanco-3.jpg?v=1784400420441"
+  ],
+  "slug": "casco-tsg-dawn-blanco",
+  "img": "assets/img/products/casco-tsg-dawn-blanco.jpg?v=1784400418395"
+ },
+ {
   "n": "Casco TSG Evolution Negro",
   "brand": "TSG",
   "cat": "cascos",
