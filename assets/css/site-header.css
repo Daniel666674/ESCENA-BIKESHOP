@@ -66,14 +66,17 @@
   .site-header .brand-logo { max-width: calc(100vw - 140px); }
   /* category bar collapses into a slide-down under the header */
   .site-header .nav-links {
-    position: absolute; top: 100%; left: 0; right: 0; z-index: 90;
+    position: absolute; top: 100%; left: 0; right: 0; bottom: auto; z-index: 90;
     flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 0;
     padding: .4rem 1.5rem 1.8rem;
-    transform: translateY(-135%); transition: transform .3s;
+    transform: translateY(-135%); transition: transform .3s, visibility 0s .3s;
     box-shadow: 0 14px 26px rgba(0,0,0,.28);
     max-height: calc(100vh - 100px); overflow-y: auto; -webkit-overflow-scrolling: touch;
+    /* Belt-and-suspenders: stay fully hidden until opened, regardless of height
+       (visibility change waits for the slide-up to finish on close). */
+    visibility: hidden;
   }
-  .site-header .nav-links.open { transform: translateY(0); }
+  .site-header .nav-links.open { transform: translateY(0); visibility: visible; transition: transform .3s; }
   .site-header .nav-links > a, .site-header .nav-drop > a { width: 100%; padding: 1.05rem .2rem !important; border-bottom: 1px solid var(--line); font-size: .9rem !important; }
   .site-header .nav-links a.active { border-bottom: 1px solid var(--line); }
   .site-header .nav-drop { width: 100%; }
