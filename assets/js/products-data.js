@@ -1,5 +1,43 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Caña Cult Mind Control Negra - Top load",
+  "brand": "Cult",
+  "cat": "stems",
+  "spec": "Carga frontal · Alcance 48mm · Aluminio CNC",
+  "price": 320000,
+  "sku": "CAN-CLT-002",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 1
+   }
+  ],
+  "slug": "cana-cult-mind-control-negra-top-load",
+  "img": "assets/img/products/cana-cult-mind-control-negra-top-load.jpg?v=1784332727642"
+ },
+ {
+  "n": "Caña Cult Mind Control Rasta - Front load",
+  "brand": "Cult",
+  "cat": "stems",
+  "spec": "Carga frontal · Alcance 48mm · Aluminio CNC",
+  "price": 340000,
+  "sku": "CAN-CLT-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1784332431720",
+   "assets/img/products/cana-cult-mind-control-rasta-front-load-2.jpg?v=1784332549561"
+  ],
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 1
+   }
+  ],
+  "slug": "cana-cult-mind-control-rasta-front-load",
+  "img": "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1784332431720"
+ },
+ {
   "slug": "cassette-profle-mini-derecho",
   "n": "Cassette Profle Mini Derecho",
   "brand": "Profile",
@@ -47,7 +85,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784311586478",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009",
    "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784311588157"
   ],
   "sizes": [
@@ -56,7 +94,8 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784311586478"
+  "imgFit": "cover",
+  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009"
  },
  {
   "slug": "marco-federal-chiller-20-75-cola-12-7",
@@ -69,7 +108,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784311589670",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784324778016",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1784311591232",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-3.jpg?v=1784311593072",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-4.jpg?v=1784311594918",
@@ -84,7 +123,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784311589670"
+  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784324778016"
  },
  {
   "slug": "coraza-innova-tire-20-x-2-40",
@@ -136,16 +175,17 @@ window.ESCENA_PRODUCTS = [
   "n": "Caña Volume Bison Negra - FrontLoad",
   "brand": "Volume",
   "cat": "stems",
-  "spec": "Carga frontal · Alcance 50mm · Aluminio CNC",
+  "spec": "Alcance: 50 mm Altura de la pila: 33 mm Elevación (vertical): 10,5 mm Peso: 10,4 onzas",
   "price": 330000,
-  "sku": "STEAM",
+  "sku": "CAN-VOL-002",
   "units": 1,
   "tag": "Descuento",
   "imgs": [
-   "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322",
-   "assets/img/products/cana-volume-bison-negra-frontload-2.jpg?v=1784071885806",
-   "assets/img/products/cana-volume-bison-negra-frontload-3.jpg?v=1784071889009",
-   "assets/img/products/cana-volume-bison-negra-frontload-4.jpg?v=1784071891487"
+   "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784330800302",
+   "assets/img/products/cana-volume-bison-negra-frontload-3.jpg?v=1784326499224",
+   "assets/img/products/cana-volume-bison-negra-frontload-4.jpg?v=1784326500625",
+   "assets/img/products/cana-volume-bison-negra-frontload-5.jpg?v=1784326501904",
+   "assets/img/products/cana-volume-bison-negra-frontload-6.jpg?v=1784326503247"
   ],
   "sizes": [
    {
@@ -153,7 +193,8 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784071883322"
+  "imgFit": "cover",
+  "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784330800302"
  },
  {
   "slug": "pedales-wellgo-negro",
@@ -182,19 +223,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "TND",
   "units": 2,
   "tag": "Nuevo!",
-  "imgs": [
-   "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784153752086",
-   "assets/img/products/tenedor-gw-destructor-tornasol-2.jpg?v=1784153753998",
-   "assets/img/products/tenedor-gw-destructor-tornasol-3.jpg?v=1784153755990",
-   "assets/img/products/tenedor-gw-destructor-tornasol-4.jpg?v=1784153757901"
-  ],
   "colors": [
    {
     "label": "Tornasol",
     "units": 2
    }
   ],
-  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784153752086"
+  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784327049926"
  },
  {
   "slug": "grips-dailygrind",
@@ -284,7 +319,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784312558002"
+  "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784326217980"
  },
  {
   "slug": "timon-gw-destructor-tornasol",
@@ -591,14 +626,12 @@ window.ESCENA_PRODUCTS = [
   "cat": "stems",
   "spec": "Carga superior · Alcance 48mm · Aluminio CNC",
   "price": 310000,
-  "sku": "STEAM",
+  "sku": "CAN-SHW-001",
   "units": 1,
-  "tag": "Top🔥!",
   "imgs": [
-   "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784138444730",
-   "assets/img/products/cana-shadow-finest-negra-topload-2.jpg?v=1784138447031",
-   "assets/img/products/cana-shadow-finest-negra-topload-3.jpg?v=1784138449080",
-   "assets/img/products/cana-shadow-finest-negra-topload-4.jpg?v=1784138450830"
+   "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784327000115",
+   "assets/img/products/cana-shadow-finest-negra-topload-2.jpg?v=1784327001811",
+   "assets/img/products/cana-shadow-finest-negra-topload-3.jpg?v=1784327003589"
   ],
   "sizes": [
    {
@@ -606,7 +639,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784138444730"
+  "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784327000115"
  },
  {
   "slug": "silla-pivotal-fate-negra",
@@ -705,18 +738,15 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Edición Especial",
   "imgs": [
-   "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486",
-   "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784072401934",
-   "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1784072403563",
-   "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1784072404971",
-   "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1784072406365",
-   "assets/img/products/cana-fiend-mills-topload-6.jpg?v=1784072407845",
-   "assets/img/products/cana-fiend-mills-topload-7.jpg?v=1784072409612",
-   "assets/img/products/cana-fiend-mills-topload-8.jpg?v=1784072411172",
-   "assets/img/products/cana-fiend-mills-topload-9.jpg?v=1784072412987",
-   "assets/img/products/cana-fiend-mills-topload-10.jpg?v=1784072414581",
-   "assets/img/products/cana-fiend-mills-topload-11.jpg?v=1784072416122",
-   "assets/img/products/cana-fiend-mills-topload-12.jpg?v=1784072417456"
+   "assets/img/products/cana-fiend-mills-topload.jpg?v=1784330514456",
+   "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784330515383",
+   "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1784330516301",
+   "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1784330517419",
+   "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1784330518348",
+   "assets/img/products/cana-fiend-mills-topload-6.jpg?v=1784330519351",
+   "assets/img/products/cana-fiend-mills-topload-7.jpg?v=1784330520316",
+   "assets/img/products/cana-fiend-mills-topload-8.jpg?v=1784330521302",
+   "assets/img/products/cana-fiend-mills-topload-9.jpg?v=1784330522468"
   ],
   "sizes": [
    {
@@ -742,23 +772,21 @@ window.ESCENA_PRODUCTS = [
    "Morada": [
     0,
     1,
-    2,
-    9
+    2
    ],
    "Dorada": [
     3,
     4,
-    5,
-    10
+    5
    ],
    "Negro": [
     6,
     7,
-    8,
-    11
+    8
    ]
   },
-  "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784072400486"
+  "imgFit": "cover",
+  "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784330514456"
  },
  {
   "slug": "cana-shadow-ravage-topload",
@@ -898,7 +926,8 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Nuevo 🔥",
   "imgs": [
-   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784312560084",
+   "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784324392434",
+   "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784324393580",
    "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784312562003",
    "assets/img/products/marco-fitbikeco-str-negro-3.jpg?v=1784312563404",
    "assets/img/products/marco-fitbikeco-str-negro-4.jpg?v=1784312564916",
@@ -914,8 +943,8 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "imgFit": "contain",
-  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784312560084"
+  "imgFit": "cover",
+  "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784324392434"
  },
  {
   "slug": "pedales-odyssey",
@@ -1090,12 +1119,14 @@ window.ESCENA_PRODUCTS = [
   "price": 340000,
   "sku": "Odysseycfl3",
   "units": 1,
-  "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/cana-odyssey-cfl3.jpg?v=1784068154674",
-   "assets/img/products/cana-odyssey-cfl3-2.jpg?v=1784068157052",
-   "assets/img/products/cana-odyssey-cfl3-3.jpg?v=1784068159027",
-   "assets/img/products/cana-odyssey-cfl3-4.jpg?v=1784068161154"
+   "assets/img/products/cana-odyssey-cfl3.jpg?v=1784332338568",
+   "assets/img/products/cana-odyssey-cfl3-6.jpg?v=1784328934902",
+   "assets/img/products/cana-odyssey-cfl3-2.jpg?v=1784329904656",
+   "assets/img/products/cana-odyssey-cfl3-3.jpg?v=1784329907733",
+   "assets/img/products/cana-odyssey-cfl3-4.jpg?v=1784329910429",
+   "assets/img/products/cana-odyssey-cfl3-5.jpg?v=1784329913066",
+   "assets/img/products/cana-odyssey-cfl3-6.jpg?v=1784329917268"
   ],
   "sizes": [
    {
@@ -1103,7 +1134,8 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784068154674"
+  "imgFit": "cover",
+  "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784332338568"
  },
  {
   "slug": "cana-shadow-chula-48mm",
@@ -1185,7 +1217,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 1,
   "tag": "Nuev",
-  "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg"
+  "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1784327051012"
  },
  {
   "slug": "mutanty-savage-v2-stem-plata",
@@ -1202,7 +1234,12 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg"
+  "imgs": [
+   "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1784333440051",
+   "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1784333441121",
+   "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1784333443470"
+  ],
+  "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1784333440051"
  },
  {
   "slug": "fiend-fiending-stem-negro",
@@ -1409,11 +1446,11 @@ window.ESCENA_PRODUCTS = [
   "price": 800000,
   "sku": "WETHEPEOPLE-HORQUILLA-CROMADA",
   "units": 12,
-  "img": "assets/img/products/wethepeople-horquilla-cromada.jpg"
+  "img": "assets/img/products/wethepeople-horquilla-cromada.jpg?v=1784327052116"
  },
  {
   "slug": "horquilla-cromoly-negra-01",
-  "n": "Tenedor Negro",
+  "n": "Tenedor Rant Twin Peaks Negro",
   "brand": "",
   "cat": "horquillas",
   "spec": "Cromoly · Tubo recto · Negro mate",
@@ -1431,18 +1468,24 @@ window.ESCENA_PRODUCTS = [
   "price": 690000,
   "sku": "FEDERAL-HORQUILLA-CROMADA",
   "units": 3,
-  "img": "assets/img/products/federal-horquilla-cromada.jpg"
+  "tag": "Top",
+  "imgs": [
+   "assets/img/products/federal-horquilla-cromada.jpg?v=1784327054447",
+   "assets/img/products/federal-horquilla-cromada-2.jpg?v=1784327055487",
+   "assets/img/products/federal-horquilla-cromada-3.jpg?v=1784327056588"
+  ],
+  "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1784327054447"
  },
  {
   "slug": "horquilla-cromoly-negra-02",
-  "n": "Tenedor Negro Steerer Blanco",
-  "brand": "",
+  "n": "Tenedor GW Negro",
+  "brand": "GW",
   "cat": "horquillas",
   "spec": "Cromoly · Steerer blanco · Negro mate",
   "price": 410000,
   "sku": "HORQUILLA-CROMOLY-NEGRA-02",
   "units": 12,
-  "img": "assets/img/products/horquilla-cromoly-negra-02.jpg"
+  "img": "assets/img/products/horquilla-cromoly-negra-02.jpg?v=1784327306225"
  },
  {
   "slug": "horquilla-cromoly-plateada",
@@ -1453,7 +1496,7 @@ window.ESCENA_PRODUCTS = [
   "price": 415000,
   "sku": "HORQUILLA-CROMOLY-PLATEADA",
   "units": 12,
-  "img": "assets/img/products/horquilla-cromoly-plateada.jpg"
+  "img": "assets/img/products/horquilla-cromoly-plateada.jpg?v=1784327307339"
  },
  {
   "slug": "stolen-buje-trasero-cassette-negro",
@@ -1663,37 +1706,25 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "bsd-stem-negro",
-  "n": "Caña BSD Negra",
+  "n": "Caña BSD Stacke negro - Top load",
   "brand": "BSD",
   "cat": "stems",
-  "spec": "Carga frontal · Negro mate",
+  "spec": "Carga frontal · Alcance 50mm · Aluminio CNC",
   "price": 300000,
   "sku": "BSD-STEM-NEGRO",
-  "units": 12,
+  "units": 1,
   "sizes": [
    {
-    "label": "Única",
-    "units": 12
+    "label": "50mm",
+    "units": 1
    }
   ],
-  "img": "assets/img/products/bsd-stem-negro.jpg"
- },
- {
-  "slug": "volume-stem-negro",
-  "n": "Caña Volume Biston Negra",
-  "brand": "Volume",
-  "cat": "stems",
-  "spec": "Carga frontal · Negro",
-  "price": 330000,
-  "sku": "VOLUME-STEM-NEGRO",
-  "units": 12,
-  "sizes": [
-   {
-    "label": "Única",
-    "units": 12
-   }
+  "imgs": [
+   "assets/img/products/bsd-stem-negro.jpg?v=1784333167289",
+   "assets/img/products/bsd-stem-negro-2.jpg?v=1784333168562",
+   "assets/img/products/bsd-stem-negro-3.jpg?v=1784333169928"
   ],
-  "img": "assets/img/products/volume-stem-negro.jpg"
+  "img": "assets/img/products/bsd-stem-negro.jpg?v=1784333167289"
  },
  {
   "slug": "stem-plata-pulido",
@@ -1710,7 +1741,11 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "img": "assets/img/products/stem-plata-pulido.jpg"
+  "imgs": [
+   "assets/img/products/stem-plata-pulido.jpg?v=1784333444499",
+   "assets/img/products/stem-plata-pulido-2.jpg?v=1784333445681"
+  ],
+  "img": "assets/img/products/stem-plata-pulido.jpg?v=1784333444499"
  },
  {
   "slug": "escena-stem-grabado-plata",
@@ -2500,7 +2535,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "cult-biggie-jaime-sintes-hammertone-negro",
-  "n": "Cult 25 Short Industrial",
+  "n": "Cult 2Short Industrial",
   "brand": "Cult",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.5\" · Hammertone Negro",
@@ -2539,7 +2574,12 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784087360390"
+  "imgs": [
+   "assets/img/products/fate-namaste-negro.jpg?v=1784324778974",
+   "assets/img/products/fate-namaste-negro-2.jpg?v=1784324780160",
+   "assets/img/products/fate-namaste-negro-3.jpg?v=1784324781239"
+  ],
+  "img": "assets/img/products/fate-namaste-negro.jpg?v=1784324778974"
  },
  {
   "slug": "total-marco-2075-blanco-azul",
@@ -2557,7 +2597,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784060134787"
+  "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784325939777"
  },
  {
   "slug": "tukanbikes-industrial-raw",
@@ -2570,14 +2610,11 @@ window.ESCENA_PRODUCTS = [
   "units": 4,
   "tag": "Nacional",
   "imgs": [
-   "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784156626862",
-   "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1784156628659",
-   "assets/img/products/tukanbikes-industrial-raw-3.jpg?v=1784156630219",
-   "assets/img/products/tukanbikes-industrial-raw-4.jpg?v=1784156632133",
-   "assets/img/products/tukanbikes-industrial-raw-5.jpg?v=1784156634301",
-   "assets/img/products/tukanbikes-industrial-raw-6.jpg?v=1784156636091",
-   "assets/img/products/tukanbikes-industrial-raw-7.jpg?v=1784156637637",
-   "assets/img/products/tukanbikes-industrial-raw-8.jpg?v=1784156639341"
+   "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784326219051",
+   "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1784325785008",
+   "assets/img/products/tukanbikes-industrial-raw-3.jpg?v=1784325786292",
+   "assets/img/products/tukanbikes-industrial-raw-4.jpg?v=1784326220098",
+   "assets/img/products/tukanbikes-industrial-raw-5.jpg?v=1784325788342"
   ],
   "sizes": [
    {
@@ -2595,7 +2632,19 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "img": "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784156626862"
+  "imgFit": "cover",
+  "imgColorMap": {
+   "Azul / Industrial": [
+    0,
+    1,
+    2
+   ],
+   "Morado / Industrial": [
+    3,
+    4
+   ]
+  },
+  "img": "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784326219051"
  },
  {
   "slug": "wethepeople-doomsayer-negro",
