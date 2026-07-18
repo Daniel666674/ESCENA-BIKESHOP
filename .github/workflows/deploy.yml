@@ -24,7 +24,13 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_DIR }}   # e.g. "public_html/" — MUST end with a slash
+          # The Hostinger FTP account is already rooted at the site's docroot
+          # (public_html), so we upload to "./". Do NOT point this at
+          # "public_html/" — that double-nests everything into
+          # public_html/public_html/, which the web server never serves. That
+          # is what broke the very first deploy (upload succeeded, but the site
+          # kept showing the Hostinger placeholder / 404 on /index.html).
+          server-dir: ./
           protocol: ftps
           port: 21
           local-dir: ./
@@ -35,3 +41,31 @@ jobs:
             **/.github/**
             **/README*
             **/*.md
+
+      - name: Verify the live site is actually serving our files
+        # A green FTP upload does NOT prove the site is live: the first deploy
+        # uploaded cleanly but to the wrong folder, so the job reported success
+        # while escenabmx.com still showed the Hostinger placeholder. This step
+        # fetches a real, freshly-deployed page and fails the job if our content
+        # isn't being served — so a misconfigured deploy shows red instead of a
+        # misleading "success". Cache-busted + retried to ride out CDN/DNS
+        # propagation after the upload.
+        run: |
+          url="https://escenabmx.com/producto/marco-fitbikeco-str-negro.html"
+          ok=0
+          for attempt in 1 2 3 4 5 6; do
+            bust="$(date +%s)-$attempt"
+            code="$(curl -s -o /tmp/page.html -w '%{http_code}' -H 'Cache-Control: no-cache' "$url?cb=$bust" || echo 000)"
+            if [ "$code" = "200" ] && grep -qi 'pdpMainImg' /tmp/page.html; then
+              echo "Live check OK (HTTP $code, product-page markup present) on attempt $attempt."
+              ok=1
+              break
+            fi
+            echo "Attempt $attempt: HTTP $code, our content not confirmed yet; retrying in 20s..."
+            sleep 20
+          done
+          if [ "$ok" != "1" ]; then
+            echo "::error::Upload finished but https://escenabmx.com is NOT serving our files."
+            echo "::error::Most likely the FTP server-dir / docroot is wrong (files landed in the wrong folder in Hostinger)."
+            exit 1
+          fi
