@@ -1,5 +1,27 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco TSG Evolution Negro",
+  "brand": "TSG",
+  "cat": "cascos",
+  "spec": "UNISEX • S/M/L/XL",
+  "price": 350000,
+  "sku": "CAS-TSG-001",
+  "units": 4,
+  "tag": "Top",
+  "imgs": [
+   "assets/img/products/casco-tsg-evolution-negro.jpg?v=1784399938241",
+   "assets/img/products/casco-tsg-evolution-negro-2.jpg?v=1784399939368"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 4
+   }
+  ],
+  "slug": "casco-tsg-evolution-negro",
+  "img": "assets/img/products/casco-tsg-evolution-negro.jpg?v=1784399938241"
+ },
+ {
   "n": "Rodilleras Valkiria",
   "brand": "Valkiria",
   "cat": "rodilleras",
