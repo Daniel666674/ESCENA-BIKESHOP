@@ -4,7 +4,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "stems",
   "spec": "Carga frontal · Alcance 48mm · Aluminio CNC",
-  "price": 340000,
+  "price": 320000,
   "sku": "CAN-CLT-002",
   "units": 1,
   "sizes": [
