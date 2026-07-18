@@ -82,7 +82,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.5\" · Negro",
   "price": 1660000,
   "sku": "MRC-FED-001",
-  "units": 1,
+  "units": 2,
   "tag": "Edición Especial",
   "imgs": [
    "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009",
@@ -91,6 +91,10 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.5 x 12.5",
+    "units": 1
+   },
+   {
+    "label": "20.75\"",
     "units": 1
    }
   ],
