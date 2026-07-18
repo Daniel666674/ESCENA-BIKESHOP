@@ -1,0 +1,37 @@
+name: Deploy to Hostinger
+
+# Deploys the site to Hostinger via FTPS whenever main changes (which is what
+# the admin panel's "Publicar" does), plus a manual "Run workflow" button.
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Hostinger (FTPS)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_DIR }}   # e.g. "public_html/" — MUST end with a slash
+          protocol: ftps
+          port: 21
+          local-dir: ./
+          # only changed files upload after the first run (delta sync)
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/README*
+            **/*.md
