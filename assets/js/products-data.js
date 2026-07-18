@@ -14,7 +14,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-cult-mind-control-negra-top-load",
-  "img": "assets/img/products/cana-cult-mind-control-negra-top-load.jpg?v=1784332694094"
+  "img": "assets/img/products/cana-cult-mind-control-negra-top-load.jpg?v=1784332727642"
  },
  {
   "n": "Caña Cult Mind Control Rasta - Front load",
