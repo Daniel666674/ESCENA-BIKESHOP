@@ -24,13 +24,14 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # The Hostinger FTP account is already rooted at the site's docroot
-          # (public_html), so we upload to "./". Do NOT point this at
-          # "public_html/" — that double-nests everything into
-          # public_html/public_html/, which the web server never serves. That
-          # is what broke the very first deploy (upload succeeded, but the site
-          # kept showing the Hostinger placeholder / 404 on /index.html).
-          server-dir: ./
+          # escenabmx.com is an ADDON domain on this Hostinger account. Its real
+          # document root is domains/escenabmx.com/public_html/ — NOT the account's
+          # primary public_html/ (which is where the FTP login lands). Uploading to
+          # the login root put every file in a folder the domain never serves, so
+          # the site kept showing Hostinger's default.php parking page and /index.html
+          # 404'd. The FTP account can reach the addon docroot one level up, so we
+          # target it explicitly with a path relative to the login directory.
+          server-dir: ../domains/escenabmx.com/public_html/
           protocol: ftps
           port: 21
           local-dir: ./
