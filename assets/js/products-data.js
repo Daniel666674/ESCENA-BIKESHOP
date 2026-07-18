@@ -1235,11 +1235,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgs": [
-   "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1784333213840",
-   "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1784333215164",
-   "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1784333216559"
+   "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1784333440051",
+   "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1784333441121",
+   "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1784333443470"
   ],
-  "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1784333213840"
+  "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1784333440051"
  },
  {
   "slug": "fiend-fiending-stem-negro",
@@ -1741,12 +1741,11 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
-  "imgFit": "cover",
   "imgs": [
-   "assets/img/products/stem-plata-pulido.jpg?v=1784333218159",
-   "assets/img/products/stem-plata-pulido-2.jpg?v=1784333219436"
+   "assets/img/products/stem-plata-pulido.jpg?v=1784333444499",
+   "assets/img/products/stem-plata-pulido-2.jpg?v=1784333445681"
   ],
-  "img": "assets/img/products/stem-plata-pulido.jpg?v=1784333218159"
+  "img": "assets/img/products/stem-plata-pulido.jpg?v=1784333444499"
  },
  {
   "slug": "escena-stem-grabado-plata",
