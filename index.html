@@ -145,12 +145,15 @@
     @media (max-width: 640px) { .utility .u-info { display: none; } }
 
     /* ============ SITE HEADER (two-tier department nav) ============ */
-    header.site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); }
+    header.site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); transition: box-shadow .3s; }
+    header.site-header.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.10); }
 
     /* Row 1: brand + actions */
-    .header-brand-row { position: relative; display: flex; align-items: center; justify-content: center; padding: .95rem 1.5rem .55rem; }
+    .header-brand-row { position: relative; display: flex; align-items: center; justify-content: center; padding: .95rem 1.5rem .55rem; transition: padding .3s; }
+    header.site-header.scrolled .header-brand-row { padding: .35rem 1.5rem .2rem; }
     .brand { display: inline-flex; flex-direction: column; align-items: center; gap: .3rem; text-decoration: none; }
-    .brand-logo { width: clamp(190px, 62vw, 492px); height: auto; display: block; border-radius: 0; background: none; border: none; }
+    .brand-logo { width: clamp(190px, 62vw, 492px); height: auto; display: block; border-radius: 0; background: none; border: none; transition: width .3s; }
+    header.site-header.scrolled .brand-logo { width: clamp(130px, 38vw, 320px); }
     .brand-tagline { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-weight: 700; font-size: clamp(.85rem, 1.9vw, 1.6rem); letter-spacing: .2em; text-transform: uppercase; line-height: 1; }
 
     .header-actions { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .7rem; }
@@ -162,7 +165,8 @@
     .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--ink); font-size: 1.8rem; cursor: pointer; line-height: 1; }
 
     /* Row 2: world tabs (BMX / MTB / Skate) */
-    .world-tabs { display: flex; align-items: center; justify-content: center; gap: 1.1rem; padding: .1rem 1rem .65rem; }
+    .world-tabs { display: flex; align-items: center; justify-content: center; gap: 1.1rem; padding: .1rem 1rem .65rem; transition: padding .3s; }
+    header.site-header.scrolled .world-tabs { padding-top: 0; padding-bottom: .2rem; }
     .world-tab { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: .12em; color: var(--muted); text-decoration: none; padding: .1rem .1rem .25rem; border-bottom: 2.5px solid transparent; transition: color .2s, border-color .2s; }
     .world-tab:hover { color: var(--ink); }
     .world-tab.is-active { color: var(--ink); border-bottom-color: var(--gold); }

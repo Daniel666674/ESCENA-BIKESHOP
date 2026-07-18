@@ -4,10 +4,12 @@
    older inline nav CSS. --gold falls back to its hex in case a
    page's :root doesn't define it (index.html does).
    ============================================================ */
-.site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); }
+.site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); transition: box-shadow .3s; }
+.site-header.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.10); }
 
 /* Row 1: brand + actions */
-.site-header .header-brand-row { position: relative; display: flex; align-items: center; justify-content: center; padding: .95rem 1.5rem .55rem; }
+.site-header .header-brand-row { position: relative; display: flex; align-items: center; justify-content: center; padding: .95rem 1.5rem .55rem; transition: padding .3s; }
+.site-header.scrolled .header-brand-row { padding: .35rem 1.5rem .2rem; }
 .site-header .brand { display: inline-flex; flex-direction: column; align-items: center; gap: .3rem; text-decoration: none; }
 /* Fluid width (height:auto keeps the aspect ratio — never squished); ~100px tall
    on wide screens, scaling down smoothly so it always clears the burger/cart.
@@ -16,7 +18,8 @@
    rule (from the pre-redesign circular-avatar logo) — this wordmark isn't
    that img anymore, but the tag selector still matches it, so without these
    resets it gets stamped with a round white "sticker" mask that clips it. */
-.site-header .brand-logo { width: clamp(190px, 62vw, 492px); height: auto; display: block; border-radius: 0; background: none; border: none; }
+.site-header .brand-logo { width: clamp(190px, 62vw, 492px); height: auto; display: block; border-radius: 0; background: none; border: none; transition: width .3s; }
+.site-header.scrolled .brand-logo { width: clamp(130px, 38vw, 320px); }
 .site-header .brand-tagline { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-weight: 700; font-size: clamp(.85rem, 1.9vw, 1.6rem); letter-spacing: .2em; text-transform: uppercase; line-height: 1; }
 
 .site-header .header-actions { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .7rem; }
@@ -28,7 +31,8 @@
 .site-header .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--ink); font-size: 1.8rem; cursor: pointer; line-height: 1; }
 
 /* Row 2: world tabs (BMX / MTB / Skate) */
-.site-header .world-tabs { display: flex; align-items: center; justify-content: center; gap: 1.1rem; padding: .1rem 1rem .65rem; }
+.site-header .world-tabs { display: flex; align-items: center; justify-content: center; gap: 1.1rem; padding: .1rem 1rem .65rem; transition: padding .3s; }
+.site-header.scrolled .world-tabs { padding-top: 0; padding-bottom: .2rem; }
 .site-header .world-tab { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: .12em; color: var(--muted); text-decoration: none; padding: .1rem .1rem .25rem; border-bottom: 2.5px solid transparent; transition: color .2s, border-color .2s; }
 .site-header .world-tab:hover { color: var(--ink); }
 .site-header .world-tab.is-active { color: var(--ink); border-bottom-color: var(--gold, #C79A3A); }

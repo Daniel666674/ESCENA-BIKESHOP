@@ -268,3 +268,12 @@
 
   window.EscenaCart = { add: cartAdd, count: cartCount, total: cartTotal, get: cartGet };
 })();
+
+/* Header shrink-on-scroll */
+(function () {
+  var hdr = document.querySelector('.site-header');
+  if (!hdr) return;
+  function tick() { hdr.classList.toggle('scrolled', window.scrollY > 50); }
+  window.addEventListener('scroll', tick, { passive: true });
+  tick();
+})();
