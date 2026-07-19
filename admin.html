@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --bg: #ffffff; --panel: #f6f6f4; --ink: #0A0A0A; --muted: #666; --line: #ececeb; --good: #1baf7a; }
@@ -217,26 +218,45 @@
   <div class="gate-card">
     <img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" />
     <h1>PANEL ADMIN</h1>
-    <p>Ingresa con tu token de GitHub para editar el catálogo. Los cambios se publican directo en la tienda.</p>
-    <form id="tokenForm" style="display:flex;flex-direction:column;gap:.7rem;margin-top:.4rem;text-align:left;">
-      <label style="font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);">Token de acceso</label>
-      <input type="password" id="tokenInput" placeholder="github_pat_… o ghp_…" autocomplete="off" required
-        style="border:1.5px solid var(--line);border-radius:8px;padding:.85rem 1rem;font-size:.85rem;font-family:inherit;" />
-      <label style="display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--muted);font-weight:500;letter-spacing:0;text-transform:none;">
-        <input type="checkbox" id="tokenRemember" style="width:auto;" /> Recordar en este navegador
-      </label>
-      <button type="submit" class="btn btn-ink" id="tokenSubmit">Entrar</button>
-      <p id="tokenError" style="display:none;color:#c0392b;font-size:.76rem;margin:0;"></p>
-    </form>
-    <details style="margin-top:1rem;text-align:left;font-size:.72rem;color:var(--muted);">
-      <summary style="cursor:pointer;font-weight:700;">¿Cómo consigo mi token?</summary>
-      <ol style="margin:.6rem 0 0 1rem;line-height:1.6;">
-        <li>GitHub → Settings → Developer settings → <b>Fine-grained tokens</b> → Generate new token.</li>
-        <li>Repository access: <b>solo</b> el repo <b>ESCENA-BIKESHOP</b>.</li>
-        <li>Permisos → Repository → <b>Contents: Read and write</b>.</li>
-        <li>Genera, copia y pégalo aquí. Nunca lo compartas.</li>
-      </ol>
-    </details>
+
+    <!-- Step 1: Google sign-in (identity). Only allow-listed emails continue. -->
+    <div id="gAuthStep">
+      <p>Inicia sesión con tu cuenta de Google autorizada para administrar la tienda.</p>
+      <div id="g_id_onload"
+           data-client_id="229389025609-slv7i425luprmq9amso4i2cfg7jveheo.apps.googleusercontent.com"
+           data-callback="handleCredentialResponse"
+           data-auto_prompt="false"></div>
+      <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="filled_black"
+           data-text="signin_with" data-size="large" data-logo_alignment="left"
+           style="display:flex;justify-content:center;margin-top:.6rem;"></div>
+      <p id="gAuthError" style="display:none;color:#c0392b;font-size:.78rem;margin-top:.9rem;"></p>
+    </div>
+
+    <!-- Step 2: GitHub token (publishing access), shown after Google auth. -->
+    <div id="tokenStep" style="display:none;">
+      <p id="gUserLine" style="color:var(--good,#1baf7a);font-weight:600;font-size:.82rem;margin-bottom:.7rem;"></p>
+      <p>Pega tu token de GitHub para publicar los cambios en la tienda.</p>
+      <form id="tokenForm" style="display:flex;flex-direction:column;gap:.7rem;margin-top:.4rem;text-align:left;">
+        <label style="font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);">Token de acceso</label>
+        <input type="password" id="tokenInput" placeholder="github_pat_… o ghp_…" autocomplete="off" required
+          style="border:1.5px solid var(--line);border-radius:8px;padding:.85rem 1rem;font-size:.85rem;font-family:inherit;" />
+        <label style="display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--muted);font-weight:500;letter-spacing:0;text-transform:none;">
+          <input type="checkbox" id="tokenRemember" style="width:auto;" /> Recordar en este navegador
+        </label>
+        <button type="submit" class="btn btn-ink" id="tokenSubmit">Entrar</button>
+        <p id="tokenError" style="display:none;color:#c0392b;font-size:.76rem;margin:0;"></p>
+      </form>
+      <details style="margin-top:1rem;text-align:left;font-size:.72rem;color:var(--muted);">
+        <summary style="cursor:pointer;font-weight:700;">¿Cómo consigo mi token?</summary>
+        <ol style="margin:.6rem 0 0 1rem;line-height:1.6;">
+          <li>GitHub → Settings → Developer settings → <b>Fine-grained tokens</b> → Generate new token.</li>
+          <li>Repository access: <b>solo</b> el repo <b>ESCENA-BIKESHOP</b>.</li>
+          <li>Permisos → Repository → <b>Contents: Read and write</b>.</li>
+          <li>Genera, copia y pégalo aquí. Nunca lo compartas.</li>
+        </ol>
+      </details>
+      <button type="button" id="gSwitchAccount" style="margin-top:.9rem;background:none;border:0;color:var(--muted);font-size:.72rem;text-decoration:underline;cursor:pointer;">Usar otra cuenta de Google</button>
+    </div>
   </div>
 </div>
 
@@ -662,6 +682,16 @@
   /* ============ Config ============ */
   var GH = { owner: "Daniel666674", repo: "ESCENA-BIKESHOP", branch: "main" };
   var TOKEN_KEY = "escena_gh_token_v1";
+  /* ---- Admin identity (Google OAuth) ---- */
+  var GOOGLE_AUTH_KEY = "escena_google_authed_v1";
+  var OAUTH_CLIENT_ID = "229389025609-slv7i425luprmq9amso4i2cfg7jveheo.apps.googleusercontent.com";
+  // Only these Google accounts may reach the admin panel. Keep in sync with the
+  // "Test users" list in Google Cloud → Google Auth Platform → Público.
+  var OAUTH_ALLOWED_EMAILS = [
+    "daniel.f.acosta96@gmail.com",
+    "escenabmx.co@gmail.com",
+    "ivan.escena@gmail.com"
+  ];
   var CATALOG_KEY = "escena_admin_catalog_v1"; // local draft cache only
   var CATEGORY_LABELS = {
     bicicletas: "Bicicletas", accesorios: "Accesorios",
@@ -840,7 +870,58 @@
   function showGate() {
     adminApp.classList.remove("show");
     gate.style.display = "";
+    var gEmail = sessionStorage.getItem(GOOGLE_AUTH_KEY);
+    if (gEmail) { showTokenStep(gEmail); }
+    else {
+      document.getElementById("gAuthStep").style.display = "";
+      document.getElementById("tokenStep").style.display = "none";
+    }
   }
+  function showTokenStep(email) {
+    document.getElementById("gAuthStep").style.display = "none";
+    document.getElementById("tokenStep").style.display = "";
+    var line = document.getElementById("gUserLine");
+    if (line) line.textContent = "✓ " + email;
+  }
+
+  /* ---- Google OAuth: identity gate before the GitHub token step ----
+     The Google credential (a signed JWT) is verified by Google before it ever
+     reaches us; here we only decode the (already-signed) payload to read the
+     email and check it against the allow-list. No secret is involved: the
+     Client ID is public by design, and the GitHub token is still required
+     separately for any write. ---- */
+  function decodeJwtPayload(jwt) {
+    var part = jwt.split(".")[1];
+    var json = atob(part.replace(/-/g, "+").replace(/_/g, "/"));
+    return JSON.parse(decodeURIComponent(escape(json)));
+  }
+  function handleCredentialResponse(response) {
+    var errEl = document.getElementById("gAuthError");
+    try {
+      var payload = decodeJwtPayload(response.credential);
+      var email = (payload.email || "").toLowerCase();
+      var allowed = OAUTH_ALLOWED_EMAILS.map(function (e) { return e.toLowerCase(); });
+      if (!payload.email_verified || allowed.indexOf(email) === -1) {
+        if (errEl) { errEl.textContent = "Acceso denegado: " + (payload.email || "esta cuenta") + " no está autorizada."; errEl.style.display = "block"; }
+        if (window.google && google.accounts) google.accounts.id.disableAutoSelect();
+        return;
+      }
+      if (errEl) errEl.style.display = "none";
+      sessionStorage.setItem(GOOGLE_AUTH_KEY, email);
+      var tok = getToken();
+      if (tok) {
+        validateToken(tok).then(function (ok) {
+          if (ok) { showApp(); }
+          else { sessionStorage.removeItem(TOKEN_KEY); localStorage.removeItem(TOKEN_KEY); showTokenStep(email); }
+        });
+      } else {
+        showTokenStep(email);
+      }
+    } catch (e) {
+      if (errEl) { errEl.textContent = "No se pudo verificar la cuenta de Google. Intenta de nuevo."; errEl.style.display = "block"; }
+    }
+  }
+  window.handleCredentialResponse = handleCredentialResponse;
 
   /* ---- Section nav: show one section at a time ---- */
   function initAdminNav() {
@@ -884,8 +965,16 @@
   document.getElementById("adminLogoutBtn").addEventListener("click", function () {
     if (dirty && !confirm("Tienes cambios sin publicar. ¿Salir de todas formas?")) return;
     sessionStorage.removeItem(TOKEN_KEY);
+    sessionStorage.removeItem(GOOGLE_AUTH_KEY);
     localStorage.removeItem(TOKEN_KEY);
+    if (window.google && google.accounts) google.accounts.id.disableAutoSelect();
     window.location.href = "inicio";
+  });
+
+  document.getElementById("gSwitchAccount").addEventListener("click", function () {
+    sessionStorage.removeItem(GOOGLE_AUTH_KEY);
+    if (window.google && google.accounts) google.accounts.id.disableAutoSelect();
+    showGate();
   });
 
   /* ---- KPI charts (sample data) ---- */
@@ -2386,10 +2475,12 @@
     if (dirty) { e.preventDefault(); e.returnValue = ""; }
   });
 
-  /* ---- Boot: auto-enter if a valid token is already stored ---- */
+  /* ---- Boot: require Google identity first, then a valid GitHub token ---- */
   (function boot() {
+    var gEmail = sessionStorage.getItem(GOOGLE_AUTH_KEY);
+    if (!gEmail) { showGate(); return; }               // step 1: Google sign-in
     var tok = getToken();
-    if (!tok) { showGate(); return; }
+    if (!tok) { showGate(); return; }                  // step 2: GitHub token
     validateToken(tok).then(function (ok) {
       if (ok) { showApp(); }
       else { sessionStorage.removeItem(TOKEN_KEY); localStorage.removeItem(TOKEN_KEY); showGate(); }
