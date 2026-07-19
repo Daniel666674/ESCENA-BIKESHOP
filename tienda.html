@@ -430,7 +430,7 @@ header.top-bar .brand .name { color: #fff; }
 <div class="page-head">
   <div class="wrap">
     <div class="crumb"><a href="inicio">Inicio</a> / Tienda</div>
-    <h1>LA TIENDA</h1>
+    <h1 id="pageTitle">LA TIENDA</h1>
     <p id="pageSubtitle">Más de 100 partes BMX en stock. Filtra por categoría y pide por WhatsApp.</p>
   </div>
 </div>
@@ -447,6 +447,7 @@ header.top-bar .brand .name { color: #fff; }
         <p class="cat-sidebar-label">Categorías</p>
         <div class="filters" id="filters">
           <button data-filter="all">Todo</button>
+          <button data-filter="bicicletas">Bicicletas</button>
           <button data-filter="marcos">Marcos</button>
           <button data-filter="stems">Cañas</button>
           <button data-filter="manubrios">Timón</button>
@@ -541,6 +542,7 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
   var currentFilter = "all";
   var currentPage = 1;
   var activeBrand = null;
+  var promoOnly = false; // ?promo=1 — show only items marked on sale
 
   function cop(n){
     if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
@@ -551,7 +553,8 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
     return PRODUCTS.filter(function(p){
       var catOk = filter === "all" || p.cat === filter;
       var brandOk = !activeBrand || (p.brand && p.brand.toLowerCase() === activeBrand.toLowerCase());
-      return catOk && brandOk;
+      var promoOk = !promoOnly || p.promo === true;
+      return catOk && brandOk && promoOk;
     });
   }
 
@@ -567,7 +570,8 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
     var hasDetailPage = p.img.indexOf("frame-placeholder") === -1;
     var href = "producto/" + slugOf(p);
     var agotado = (typeof p.units === "number" && p.units <= 0);
-    var tagHTML = agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+p.tag+'</span>' : '');
+    var promoHTML = p.promo ? '<span class="tag" style="background:var(--gold,#C79A3A);color:#fff;left:.7rem;right:auto;">PROMO</span>' : '';
+    var tagHTML = promoHTML + (agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+p.tag+'</span>' : ''));
     return '<article class="card' + (agotado ? ' is-agotado' : '') + '">' +
         (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
           '<div class="ph">' + tagHTML +
@@ -667,6 +671,13 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
   var initialCat = urlParams.get("cat") || "all";
   var initialBrand = urlParams.get("brand");
   if (initialBrand) showBrandBanner(initialBrand);
+  if (urlParams.has("promo")) {
+    promoOnly = true;
+    var ttl = document.getElementById("pageTitle");
+    var sub = document.getElementById("pageSubtitle");
+    if (ttl) ttl.textContent = "PROMOCIONES";
+    if (sub) sub.textContent = "Todo lo que está en promoción ahora mismo. Pide por WhatsApp.";
+  }
   var initBtn = document.querySelector('#filters button[data-filter="' + initialCat + '"]') || document.querySelector('#filters button[data-filter="all"]');
   document.querySelectorAll("#filters button").forEach(function(b){ b.classList.remove("active"); });
   initBtn.classList.add("active");
