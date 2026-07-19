@@ -998,6 +998,10 @@
   function renderBarChart(svgId, tooltipId, weeks, values, unitLabel) {
     var svg = document.getElementById(svgId);
     var tooltip = document.getElementById(tooltipId);
+    if (!values || !values.length || Math.max.apply(null, values) <= 0) {
+      svg.innerHTML = '<text x="16" y="34" fill="#999" font-size="13" font-family="Inter,sans-serif">Sin datos en este periodo.</text>';
+      return;
+    }
     var max = Math.max.apply(null, values) || 1;
     var chartW = 640, chartH = 200, padL = 26, padB = 24, padT = 10;
     var plotW = chartW - padL - 10, plotH = chartH - padB - padT;
@@ -1049,8 +1053,12 @@
   }
 
   function renderRankList(elId, items, valueFmt) {
-    var max = items[0].v;
     var list = document.getElementById(elId);
+    if (!items || !items.length) {
+      list.innerHTML = '<p style="color:var(--muted);font-size:.82rem;padding:.5rem 0;">Sin datos en este periodo.</p>';
+      return;
+    }
+    var max = items[0].v || 1;
     list.innerHTML = items.map(function (r, i) {
       var pct = Math.round((r.v / max) * 100);
       return '<div class="rank-row">' +
@@ -1329,7 +1337,7 @@
       var rows = d.rows || [];
       var labels = rows.map(function (_, i) { return "S" + (i + 1); });
       var vals = rows.map(function (r) { return +r.metricValues[0].value; });
-      if (vals.length) renderBarChart("gaChart", "gaTooltip", labels, vals, "sesiones");
+      renderBarChart("gaChart", "gaTooltip", labels, vals, "sesiones");
     });
     var chan = gapiPost(base, {
       dateRanges: [{ startDate: "28daysAgo", endDate: "yesterday" }],
@@ -1343,7 +1351,7 @@
       var items = rows.map(function (r) {
         return { n: r.dimensionValues[0].value, v: Math.round((+r.metricValues[0].value / total) * 100) };
       });
-      if (items.length) renderRankList("channelList", items, function (v) { return v + "%"; });
+      renderRankList("channelList", items, function (v) { return v + "%"; });
     });
     return Promise.all([kpi, weekly, chan]).then(function () {
       var tag = document.getElementById("ga4Tag");
@@ -1379,7 +1387,7 @@
     var queries = gscQuery({ startDate: cur.startDate, endDate: cur.endDate, dimensions: ["query"], rowLimit: 8 })
       .then(function (d) {
         var items = (d.rows || []).map(function (r) { return { n: r.keys[0], v: r.clicks }; });
-        if (items.length) renderRankList("queryList", items, function (v) { return fmtInt(v) + " clics"; });
+        renderRankList("queryList", items, function (v) { return fmtInt(v) + " clics"; });
       });
     return Promise.all([totals, queries]).then(function () {
       var tag = document.getElementById("gscTag");
