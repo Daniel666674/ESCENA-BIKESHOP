@@ -1,0 +1,13 @@
+# HTML pages: never cache — ensures visitors always get the latest version
+# even when Hostinger's CDN (Cloudflare) is active.
+<FilesMatch "\.html$">
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires "0"
+</FilesMatch>
+
+# Static assets (.js, .css, images): cache for 1 year.
+# Cache-busting is handled by version query strings (?v=N) in the HTML.
+<FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|webp|woff2|woff|ttf)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
