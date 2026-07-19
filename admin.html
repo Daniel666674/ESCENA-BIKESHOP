@@ -252,7 +252,7 @@
         </div>
       </div>
       <div class="admin-actions">
-        <a href="index.html" class="btn btn-outline btn-sm">Ver tienda</a>
+        <a href="inicio" class="btn btn-outline btn-sm">Ver tienda</a>
         <button type="button" class="btn btn-outline btn-sm" id="adminLogoutBtn">Cerrar sesión</button>
       </div>
     </div>
@@ -566,6 +566,12 @@
           <input type="text" id="pmTag" placeholder="Ej: Nuevo, Top, Edición" />
         </div>
         <div class="pmodal-field">
+          <label>Promoción</label>
+          <label style="display:flex;align-items:center;gap:.5rem;font-weight:400;font-size:.85rem;cursor:pointer;">
+            <input type="checkbox" id="pmPromo" style="width:auto;" /> En promoción (aparece en Promo)
+          </label>
+        </div>
+        <div class="pmodal-field">
           <label>Costo (COP, interno)</label>
           <input type="number" id="pmCost" min="0" step="1000" />
         </div>
@@ -658,6 +664,7 @@
   var TOKEN_KEY = "escena_gh_token_v1";
   var CATALOG_KEY = "escena_admin_catalog_v1"; // local draft cache only
   var CATEGORY_LABELS = {
+    bicicletas: "Bicicletas", accesorios: "Accesorios",
     marcos: "Marcos", stems: "Cañas", manubrios: "Timón", horquillas: "Tenedores",
     bielas: "Bielas", "manzana-delantera": "Manzana Delantera", "manzana-trasera": "Manzana Trasera",
     rines: "Rines", corazas: "Corazas", pinones: "Plato",
@@ -686,6 +693,7 @@
      can never land on the same SKU. Assigned once and stored on the product —
      never regenerated on edit, so a SKU stays stable for the product's life. */
   var SKU_CAT_CODE = {
+    bicicletas: "BIC", accesorios: "ACC",
     marcos: "MRC", stems: "CAN", manubrios: "TMN", horquillas: "TEN", bielas: "BIE",
     "manzana-delantera": "MZD", "manzana-trasera": "MZT", rines: "RIN", corazas: "COR",
     pinones: "PLT", pedales: "PED", sillines: "SIL", tijas: "PST", punos: "GRP",
@@ -731,11 +739,11 @@
   // department page (protecciones.html today; ropa.html/tenis.html once those
   // go from coming-soon to live product pages).
   var SHOP_PAGE_BY_CAT = {
-    cascos: "protecciones.html", rodilleras: "protecciones.html", canilleras: "protecciones.html",
-    tobilleras: "protecciones.html", "rodi-cani-tobilleras": "protecciones.html", guantes: "protecciones.html"
+    cascos: "protecciones", rodilleras: "protecciones", canilleras: "protecciones",
+    tobilleras: "protecciones", "rodi-cani-tobilleras": "protecciones", guantes: "protecciones"
   };
-  var SHOP_LABEL_BY_PAGE = { "tienda.html": "Tienda", "protecciones.html": "Protecciones" };
-  function shopPageFor(cat) { return SHOP_PAGE_BY_CAT[cat] || "tienda.html"; }
+  var SHOP_LABEL_BY_PAGE = { "tienda": "Tienda", "protecciones": "Protecciones" };
+  function shopPageFor(cat) { return SHOP_PAGE_BY_CAT[cat] || "tienda"; }
   function sizesTotal(sizes) { return (sizes || []).reduce(function (s, x) { return s + (x.units || 0); }, 0); }
   // Colors work the same way as sizes (p.colors = [{label, units}]) but are
   // available on every category, independent of talla. A product tracks real,
@@ -877,7 +885,7 @@
     if (dirty && !confirm("Tienes cambios sin publicar. ¿Salir de todas formas?")) return;
     sessionStorage.removeItem(TOKEN_KEY);
     localStorage.removeItem(TOKEN_KEY);
-    window.location.href = "index.html";
+    window.location.href = "inicio";
   });
 
   /* ---- KPI charts (sample data) ---- */
@@ -1141,6 +1149,7 @@
     m.notes = p.notes || "";
     m.imgFit = (p.imgFit === "cover") ? "cover" : "auto"; // legacy "contain" folds into "auto" (adapts + blur fill)
     m.tag = p.tag || "";
+    m.promo = p.promo === true;
     m.published = (p.published === false) ? false : true;
     m.imgs = p.imgs || (p.img ? [p.img] : ["assets/img/escena-logo.jpg"]);
     delete m.img; delete m.stock;
@@ -1215,6 +1224,7 @@
     if (!p.imgs || p.imgs.length < 2) delete o.imgs; // omit when there's nothing extra to say
     if (o.published === true) delete o.published; // default; keep only when false
     if (!o.tag) delete o.tag;
+    if (!o.promo) delete o.promo; // default false; keep only when on sale
     delete o.cost; delete o.notes; // internal-only, never published
     if (o.imgFit === "auto" || !o.imgFit) delete o.imgFit; // default; keep only an explicit override
     delete o._pageSnapshot; // internal-only, drives static page regeneration
@@ -1394,7 +1404,7 @@
     var cards = rel.map(function (q) {
       var img = "../" + ((q.imgs && q.imgs[0]) || ("assets/img/products/" + q.slug + ".jpg"));
       var tag = q.tag ? '<span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">' + esc(q.tag) + '</span>' : '';
-      return '<a class="r-card" href="' + q.slug + '.html">\n        <div class="ph" style="position:relative;">' + tag + '<img src="' + img + '" alt="' + esc(q.n) + (q.brand ? ' - ' + esc(q.brand) : '') + ' BMX" loading="lazy" width="300" height="300" /></div>\n        <div class="body">\n          <span class="brand-lbl">' + esc(q.brand || "") + '</span>\n          <h3>' + esc(q.n) + '</h3>\n          <div class="price">' + copFmt(q.price) + ' COP</div>\n        </div>\n      </a>';
+      return '<a class="r-card" href="' + q.slug + '">\n        <div class="ph" style="position:relative;">' + tag + '<img src="' + img + '" alt="' + esc(q.n) + (q.brand ? ' - ' + esc(q.brand) : '') + ' BMX" loading="lazy" width="300" height="300" /></div>\n        <div class="body">\n          <span class="brand-lbl">' + esc(q.brand || "") + '</span>\n          <h3>' + esc(q.n) + '</h3>\n          <div class="price">' + copFmt(q.price) + ' COP</div>\n        </div>\n      </a>';
     });
     return '<div class="related">\n  <h2>También te puede gustar</h2>\n  <div class="related-grid">\n    ' + cards.join('\n') + '\n  </div>\n</div>';
   }
@@ -1534,8 +1544,8 @@
       return ghPutWithRetry("sitemap.xml", "Add " + createdSlugs.length + " product page(s) to sitemap (admin)", function (remoteText) {
         if (!remoteText) return null;
         var today = new Date().toISOString().slice(0, 10);
-        var adds = createdSlugs.filter(function (s) { return remoteText.indexOf("/producto/" + s + ".html") === -1; }).map(function (s) {
-          return "  <url>\n    <loc>https://escenabmx.com/producto/" + s + ".html</loc>\n    <lastmod>" + today + "</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>";
+        var adds = createdSlugs.filter(function (s) { return remoteText.indexOf("/producto/" + s + "<") === -1; }).map(function (s) {
+          return "  <url>\n    <loc>https://escenabmx.com/producto/" + s + "</loc>\n    <lastmod>" + today + "</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>";
         });
         if (!adds.length) return null;
         return remoteText.replace("</urlset>", adds.join("\n") + "\n</urlset>");
@@ -1777,6 +1787,7 @@
     document.getElementById("pmSku").value = p ? (p.sku || "") : genSku(cat, "");
     document.getElementById("pmUnits").value = p ? p.units : 0;
     document.getElementById("pmTag").value = p ? p.tag : "";
+    document.getElementById("pmPromo").checked = p ? p.promo === true : false;
     document.getElementById("pmCost").value = p && p.cost ? p.cost : "";
     document.getElementById("pmNotes").value = p ? p.notes : "";
     document.getElementById("pmImgFit").value = (p && p.imgFit === "cover") ? "cover" : "auto";
@@ -2171,6 +2182,7 @@
         sku: document.getElementById("pmSku").value.trim(),
         units: parseInt(document.getElementById("pmUnits").value, 10) || 0,
         tag: document.getElementById("pmTag").value.trim(),
+        promo: document.getElementById("pmPromo").checked,
         cost: parseFloat(document.getElementById("pmCost").value) || 0,
         notes: document.getElementById("pmNotes").value.trim(),
         imgFit: document.getElementById("pmImgFit").value,

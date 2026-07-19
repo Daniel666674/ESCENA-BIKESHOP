@@ -13,9 +13,9 @@
   <meta name="theme-color" content="#0A0A0A" />
   <meta name="geo.region" content="CO-DC" />
   <meta name="geo.placename" content="Bogotá, Colombia" />
-  <link rel="canonical" href="https://escenabmx.com/" />
-  <link rel="alternate" hreflang="es-co" href="https://escenabmx.com/" />
-  <link rel="alternate" hreflang="x-default" href="https://escenabmx.com/" />
+  <link rel="canonical" href="https://escenabmx.com/inicio" />
+  <link rel="alternate" hreflang="es-co" href="https://escenabmx.com/inicio" />
+  <link rel="alternate" hreflang="x-default" href="https://escenabmx.com/inicio" />
 
   <!-- ============ Open Graph / Social ============ -->
   <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@
   <meta property="og:locale" content="es_CO" />
   <meta property="og:title" content="ESCENA BIKE SHOP — Partes y Componentes BMX" />
   <meta property="og:description" content="Más de 100 partes BMX en stock en Colombia: cañas, timones, tenedores, bielas, manzanas, platos, pedales y más de las mejores marcas. Pedidos por WhatsApp." />
-  <meta property="og:url" content="https://escenabmx.com/" />
+  <meta property="og:url" content="https://escenabmx.com/inicio" />
   <meta property="og:image" content="https://escenabmx.com/assets/img/escena-logo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ESCENA BIKE SHOP — Partes y Componentes BMX" />
@@ -36,6 +36,7 @@
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="assets/css/cart.css" />
   <link rel="stylesheet" href="assets/css/cookie-consent.css" />
+  <link rel="stylesheet" href="assets/css/site-header.css" />
   <script src="assets/js/wholesale.js"></script>
   <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 
@@ -52,7 +53,7 @@
     "@id": "https://escenabmx.com/#store",
     "name": "ESCENA BIKE SHOP",
     "description": "Tienda de partes y componentes BMX en Colombia con más de 100 productos en stock. Distribuidor de cañas, timones, tenedores, bielas, manzanas, platos, pedales, sillines y accesorios de marcas como Cult, Fiend, Éclat, Volume, Mutanty, Federal, Odyssey, Stolen, Demolition, Animal, Shadow y Colony.",
-    "url": "https://escenabmx.com/",
+    "url": "https://escenabmx.com/inicio",
     "logo": "https://escenabmx.com/assets/img/escena-logo.jpg",
     "image": "https://escenabmx.com/assets/img/escena-logo.jpg",
     "priceRange": "$$",
@@ -77,7 +78,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "ESCENA BIKE SHOP",
-    "url": "https://escenabmx.com/",
+    "url": "https://escenabmx.com/inicio",
     "inLanguage": "es-CO",
     "potentialAction": {
       "@type": "SearchAction",
@@ -144,101 +145,7 @@
     .utility .u-links { display: flex; gap: 1.2rem; }
     @media (max-width: 640px) { .utility .u-info { display: none; } }
 
-    /* ============ SITE HEADER (two-tier department nav) ============ */
-    header.site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); transition: box-shadow .3s; }
-    header.site-header.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.10); }
-
-    /* Row 1: brand + actions */
-    .header-brand-row { position: relative; display: flex; align-items: center; justify-content: center; padding: .95rem 1.5rem .55rem; transition: padding .3s; }
-    header.site-header.scrolled .header-brand-row { padding: .35rem 1.5rem .2rem; }
-    .brand { display: inline-flex; flex-direction: column; align-items: center; gap: .3rem; text-decoration: none; }
-    .brand-logo { width: clamp(190px, 62vw, 492px); height: auto; display: block; border-radius: 0; background: none; border: none; transition: width .3s; }
-    header.site-header.scrolled .brand-logo { width: clamp(130px, 38vw, 320px); }
-    .brand-tagline { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-weight: 700; font-size: clamp(.85rem, 1.9vw, 1.6rem); letter-spacing: .2em; text-transform: uppercase; line-height: 1; }
-
-    .header-actions { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .7rem; }
-    .header-actions .wa-link { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: #25D366; }
-    .header-actions .wa-link svg { width: 22px; height: 22px; fill: #fff; }
-    .header-actions .wa-link:hover { opacity: .88; }
-    .cart-btn { position: relative; width: 44px; height: 44px; background: none; border: 0; color: var(--ink); cursor: pointer; }
-    .cart-btn svg { width: 26px; height: 26px; }
-    .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--ink); font-size: 1.8rem; cursor: pointer; line-height: 1; }
-
-    /* Row 2: world tabs (BMX / MTB / Skate) */
-    .world-tabs { display: flex; align-items: center; justify-content: center; gap: 1.1rem; padding: .1rem 1rem .65rem; transition: padding .3s; }
-    header.site-header.scrolled .world-tabs { padding-top: 0; padding-bottom: .2rem; }
-    .world-tab { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: .12em; color: var(--muted); text-decoration: none; padding: .1rem .1rem .25rem; border-bottom: 2.5px solid transparent; transition: color .2s, border-color .2s; }
-    .world-tab:hover { color: var(--ink); }
-    .world-tab.is-active { color: var(--ink); border-bottom-color: var(--gold); }
-    .world-sep { width: 1px; height: 15px; background: var(--line); }
-
-    /* Row 3: category bar (white band) */
-    header.site-header .nav-links { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .1rem; background: #fff; border-top: 1px solid var(--line); padding: 0 1rem; }
-    header.site-header .nav-links a { color: var(--ink); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; padding: .85rem .95rem; border-radius: 0; border-bottom: 2.5px solid transparent; transition: color .2s, background .2s, border-color .2s; }
-    header.site-header .nav-links a:hover { background: var(--panel); }
-    header.site-header .nav-links a.active { color: var(--ink); border-bottom-color: var(--gold); }
-
-    /* Category dropdown ("Partes") */
-    .nav-drop { position: relative; }
-    .nav-drop > a { display: inline-flex; align-items: center; gap: .35rem; }
-    .nav-drop .caret { display: inline-block; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); position: relative; top: -2px; }
-    .nav-drop-menu { display: none; }
-    .nav-drop-toggle { display: none; }
-    @media (min-width: 981px) {
-      .nav-drop-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 20px 45px rgba(0,0,0,.18); padding: .5rem; min-width: 240px; z-index: 60; max-height: min(74vh, 560px); overflow-y: auto; }
-      .nav-drop:hover .nav-drop-menu, .nav-drop:focus-within .nav-drop-menu { display: block; }
-      #navDropMenu { left: 0; transform: none; min-width: 480px; grid-template-columns: repeat(3, minmax(150px, 1fr)); column-gap: .4rem; }
-      .nav-drop:hover #navDropMenu, .nav-drop:focus-within #navDropMenu { display: grid; }
-      .nav-drop-col { display: flex; flex-direction: column; }
-      .nav-drop-menu a { display: block; color: var(--ink) !important; font-weight: 600 !important; font-size: .78rem !important; letter-spacing: 0 !important; text-transform: none !important; padding: .55rem .75rem !important; border-radius: 7px; background: none !important; }
-      .nav-drop-menu a:hover { background: var(--panel) !important; color: var(--ink) !important; }
-    }
-
-    @media (max-width: 980px) {
-      .burger { display: block; }
-      .header-actions .wa-link { display: none; }
-      /* extra safety so the logo always clears the burger (left) / cart (right) */
-      .brand-logo { max-width: calc(100vw - 140px); }
-      /* category bar collapses into a slide-down under the header */
-      header.site-header .nav-links {
-        position: absolute; top: 100%; left: 0; right: 0; z-index: 90;
-        flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 0;
-        padding: .4rem 1.5rem 1.8rem;
-        transform: translateY(-135%); transition: transform .3s;
-        box-shadow: 0 14px 26px rgba(0,0,0,.28);
-        max-height: calc(100vh - 100px); overflow-y: auto; -webkit-overflow-scrolling: touch;
-      }
-      header.site-header .nav-links.open { transform: translateY(0); }
-      header.site-header .nav-links > a, .nav-drop > a { width: 100%; padding: 1.05rem .2rem !important; border-bottom: 1px solid var(--line); font-size: .9rem !important; }
-      .nav-drop { width: 100%; }
-      .nav-drop > a { padding-right: 3rem !important; }
-      .nav-drop > a .caret { display: none; }
-      .nav-drop-toggle {
-        display: flex; align-items: center; justify-content: center;
-        position: absolute; top: 0; right: 0; width: 52px; height: 3.4rem;
-        background: none; border: none; padding: 0; margin: 0; cursor: pointer; color: var(--ink);
-      }
-      .nav-drop-toggle .caret { display: inline-block; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); transition: transform .25s ease; }
-      .nav-drop-toggle[aria-expanded="true"] .caret { transform: rotate(-135deg); }
-      .nav-drop-menu {
-        display: block !important; position: static; background: none; border: none; box-shadow: none; transform: none;
-        max-height: 0; overflow: hidden; padding: 0 0 0 .3rem; margin: 0;
-        transition: max-height .35s ease;
-      }
-      .nav-drop-menu.open { max-height: 1100px; padding: .3rem 0 .7rem .3rem; }
-      .nav-drop-menu a {
-        display: block; border-bottom: none !important; background: none !important;
-        padding: .6rem .2rem !important; font-size: .8rem !important; letter-spacing: .04em !important;
-        text-transform: uppercase !important; font-weight: 700 !important; color: var(--ink) !important;
-      }
-      .nav-drop-menu a:hover, .nav-drop-menu a:active { color: var(--muted) !important; }
-    }
-    @media (max-width: 480px) {
-      .brand-tagline { letter-spacing: .16em; }
-      .header-brand-row { padding-left: 3.7rem; padding-right: 3.7rem; }
-      .header-actions { right: 1rem; }
-      .burger { left: 1rem; }
-    }
+    /* Site header styles now live in assets/css/site-header.css */
 
     /* ============ HERO (split layout) ============ */
     .hero { position: relative; background: var(--ink); padding: 6rem 1.5rem; overflow: hidden; min-height: 82vh; display: flex; align-items: center; isolation: isolate; }
@@ -272,24 +179,6 @@
       .hero-copy p.lead { margin-left: auto; margin-right: auto; }
     }
     @media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }
-
-    /* ============ BRAND MARQUEE (replaces old impact-band rotator) ============ */
-    .brand-marquee { position: relative; background: var(--ink); padding: 2.6rem 0 0; overflow: hidden; isolation: isolate; }
-    .brand-marquee-hint { text-align: center; font-size: .74rem; letter-spacing: .06em; color: rgba(255,255,255,.55); margin-top: 1.4rem; padding: 0 1.5rem 2rem; }
-    .bm-track { display: flex; width: max-content; animation: bmScroll 75s linear infinite; }
-    @media (hover: hover) and (pointer: fine) { .brand-marquee:hover .bm-track { animation-play-state: paused; } }
-    .bm-group { display: flex; align-items: center; flex-shrink: 0; }
-    .bm-chip { display: flex; align-items: center; justify-content: center; flex-shrink: 0; height: 92px; padding: .9rem 2rem; margin: 0 .7rem; background: #fff; border-radius: 12px; transition: transform .15s; }
-    .bm-chip a { display: flex; align-items: center; justify-content: center; height: 100%; }
-    .bm-chip img { display: block; height: 100%; width: auto; max-width: 190px; object-fit: contain; }
-    @media (hover: hover) and (pointer: fine) { .bm-chip:hover { transform: scale(1.04); } }
-    @media (max-width: 640px) { .bm-chip { height: 46px; padding: .4rem 1rem; margin: 0 .5rem; border-radius: 10px; } .bm-chip img { max-width: 96px; } }
-    @keyframes bmScroll {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-    @media (max-width: 640px) { .brand-marquee { padding: 1.9rem 0 0; } .brand-marquee-hint { margin-top: 1rem; padding-bottom: 1.5rem; } }
-    @media (prefers-reduced-motion: reduce) { .bm-track { animation: none; } }
 
     /* ============ SECTIONS ============ */
     section { padding: 4.5rem 1.5rem; }
@@ -478,13 +367,82 @@
 </div>
 
 <!-- ============ NAV (two-tier department header) ============ -->
+<div class="brand-strip" aria-label="Marcas que manejamos">
+  <div class="brand-strip-track" id="brandStripTrack" aria-hidden="true"></div>
+</div>
 <header class="site-header">
-  <div class="header-brand-row">
+  <nav class="world-tabs" aria-label="Mundos ESCENA">
+    <a href="inicio" class="world-tab" data-world="bmx">BMX</a>
+    <span class="world-sep" aria-hidden="true"></span>
+    <a href="mtb" class="world-tab" data-world="mtb">MTB</a>
+    <span class="world-sep" aria-hidden="true"></span>
+    <a href="skate" class="world-tab" data-world="skate">Skate</a>
+  </nav>
+
+  <div class="header-main">
     <button class="burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="nav">☰</button>
-    <a href="index.html" class="brand" aria-label="ESCENA BMX - Inicio">
-      <img class="brand-logo" src="assets/img/escena-wordmark.png" alt="ESCENA BMX — La Gran Familia BMX" width="167" height="34" />
-      <span class="brand-tagline">La Gran Familia BMX</span>
-    </a>
+    <a href="inicio" class="brand brand-mobile" aria-label="ESCENA BMX - Inicio"><img class="brand-logo" src="assets/img/escena-wordmark.png" alt="ESCENA BMX" width="167" height="34" /></a>
+    <nav class="nav-links" id="nav" aria-label="Menú principal">
+      <a href="tienda?cat=bicicletas" data-nav="bicicletas">Bicicletas</a>
+      <div class="nav-drop" data-nav="partes">
+        <a href="tienda">Partes <span class="caret"></span></a>
+        <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-controls="navDropMenu" aria-label="Mostrar categorías de Partes"><span class="caret"></span></button>
+        <div class="nav-drop-menu" id="navDropMenu">
+          <div class="nav-drop-col">
+            <a href="tienda?cat=manubrios">Timón</a>
+            <a href="tienda?cat=stems">Cañas</a>
+            <a href="tienda?cat=punos">Grips</a>
+            <a href="tienda?cat=horquillas">Tenedores</a>
+            <a href="tienda?cat=caja-frente">Caja de Frente</a>
+            <a href="tienda?cat=manzana-delantera">Manzana Delantera</a>
+            <a href="tienda?cat=corazas">Corazas</a>
+          </div>
+          <div class="nav-drop-col">
+            <a href="tienda?cat=marcos">Marcos</a>
+            <a href="tienda?cat=bielas">Bielas</a>
+            <a href="tienda?cat=pinones">Plato</a>
+            <a href="tienda?cat=pedales">Pedales</a>
+            <a href="tienda?cat=sillines">Sillas</a>
+            <a href="tienda?cat=tijas">Postes</a>
+            <a href="tienda?cat=caja-centro">Caja de Centro</a>
+          </div>
+          <div class="nav-drop-col">
+            <a href="tienda?cat=manzana-trasera">Manzana Trasera</a>
+            <a href="tienda?cat=rines">Rines</a>
+            <a href="tienda?cat=clavijas">Pegs</a>
+            <a href="tienda?cat=piezas">Piezas varias</a>
+            <a href="tienda?cat=tornilleria">Tornillería</a>
+            <a href="tienda?cat=herramientas">Herramientas</a>
+          </div>
+        </div>
+      </div>
+      <a href="armar-bmx" data-nav="armar">Arma tu BMX</a>
+      <a href="inicio" class="brand nav-brand" aria-label="ESCENA BMX - Inicio"><img class="brand-logo" src="assets/img/escena-wordmark.png" alt="ESCENA BMX" width="167" height="34" /></a>
+      <div class="nav-drop" data-nav="protecciones">
+        <a href="protecciones">Protecciones <span class="caret"></span></a>
+        <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-controls="navDropMenuProt" aria-label="Mostrar categorías de Protecciones"><span class="caret"></span></button>
+        <div class="nav-drop-menu" id="navDropMenuProt">
+          <a href="protecciones?cat=cascos">Cascos</a>
+          <a href="protecciones?cat=rodilleras">Rodilleras</a>
+          <a href="protecciones?cat=canilleras">Canilleras</a>
+          <a href="protecciones?cat=tobilleras">Tobilleras</a>
+          <a href="protecciones?cat=rodi-cani-tobilleras">Rodillera + Canillera + Tobillera</a>
+          <a href="protecciones?cat=guantes">Guantes</a>
+        </div>
+      </div>
+      <div class="nav-drop" data-nav="ropa">
+        <a href="ropa">Ropa <span class="caret"></span></a>
+        <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-controls="navDropMenuRopa" aria-label="Mostrar categorías de Ropa"><span class="caret"></span></button>
+        <div class="nav-drop-menu" id="navDropMenuRopa">
+          <a href="tenis">Tenis</a>
+          <a href="ropa?cat=camisetas">Camisetas</a>
+          <a href="ropa?cat=chaquetas">Chaquetas</a>
+          <a href="ropa?cat=gorras">Gorras</a>
+          <a href="ropa?cat=accesorios">Accesorios</a>
+        </div>
+      </div>
+      <a href="tienda?promo=1" class="nav-promo" data-nav="promo">Promo</a>
+    </nav>
     <div class="header-actions">
       <a class="wa-link" href="https://wa.me/573107630504" target="_blank" rel="noopener" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
@@ -495,67 +453,6 @@
       </button>
     </div>
   </div>
-
-  <nav class="world-tabs" aria-label="Mundos ESCENA">
-    <a href="index.html" class="world-tab is-active">BMX</a>
-    <span class="world-sep" aria-hidden="true"></span>
-    <a href="mtb.html" class="world-tab">MTB</a>
-    <span class="world-sep" aria-hidden="true"></span>
-    <a href="skate.html" class="world-tab">Skate</a>
-  </nav>
-
-  <nav class="nav-links" id="nav" aria-label="Menú BMX">
-    <a href="index.html" class="active">Inicio</a>
-    <div class="nav-drop">
-      <a href="tienda.html">Partes <span class="caret"></span></a>
-      <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-controls="navDropMenu" aria-label="Mostrar categorías de Partes"><span class="caret"></span></button>
-      <div class="nav-drop-menu" id="navDropMenu">
-      <div class="nav-drop-col">
-      <a href="tienda.html?cat=manubrios">Timón</a>
-      <a href="tienda.html?cat=stems">Cañas</a>
-      <a href="tienda.html?cat=punos">Grips</a>
-      <a href="tienda.html?cat=horquillas">Tenedores</a>
-      <a href="tienda.html?cat=caja-frente">Caja de Frente</a>
-      <a href="tienda.html?cat=manzana-delantera">Manzana Delantera</a>
-      <a href="tienda.html?cat=corazas">Corazas</a>
-      </div>
-      <div class="nav-drop-col">
-      <a href="tienda.html?cat=marcos">Marcos</a>
-      <a href="tienda.html?cat=bielas">Bielas</a>
-      <a href="tienda.html?cat=pinones">Plato</a>
-      <a href="tienda.html?cat=pedales">Pedales</a>
-      <a href="tienda.html?cat=sillines">Sillas</a>
-      <a href="tienda.html?cat=tijas">Postes</a>
-      <a href="tienda.html?cat=caja-centro">Caja de Centro</a>
-      </div>
-      <div class="nav-drop-col">
-      <a href="tienda.html?cat=manzana-trasera">Manzana Trasera</a>
-      <a href="tienda.html?cat=rines">Rines</a>
-      <a href="tienda.html?cat=clavijas">Pegs</a>
-      <a href="tienda.html?cat=piezas">Piezas varias</a>
-      <a href="tienda.html?cat=tornilleria">Tornillería</a>
-      <a href="tienda.html?cat=herramientas">Herramientas</a>
-      </div>
-      
-      </div>
-    </div>
-    <a href="armar-bmx.html">Arma tu BMX</a>
-    <div class="nav-drop">
-      <a href="protecciones.html">Protecciones <span class="caret"></span></a>
-      <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-controls="navDropMenuProt" aria-label="Mostrar categorías de Protecciones"><span class="caret"></span></button>
-      <div class="nav-drop-menu" id="navDropMenuProt">
-      <a href="protecciones.html?cat=cascos">Cascos</a>
-      <a href="protecciones.html?cat=rodilleras">Rodilleras</a>
-      <a href="protecciones.html?cat=canilleras">Canilleras</a>
-      <a href="protecciones.html?cat=tobilleras">Tobilleras</a>
-      <a href="protecciones.html?cat=rodi-cani-tobilleras">Rodillera + Canillera + Tobillera</a>
-      <a href="protecciones.html?cat=guantes">Guantes</a>
-      </div>
-    </div>
-    <a href="ropa.html">Ropa</a>
-    <a href="tenis.html">Tenis</a>
-    <a href="index.html#marcas">Marcas</a>
-  </nav>
 </header>
 
 <!-- ============ HERO (split) ============ -->
@@ -576,7 +473,7 @@
       <p class="tagline">Partes que aguantan calle</p>
       <p class="lead">Más de 100 partes originales de las marcas que mueven la escena: cañas, timones, tenedores, bielas, manzanas, platos, pedales, sillines y más. Directo de la tienda a tu bici — pides por WhatsApp, montas y ruedas.</p>
       <div class="btns">
-        <a href="tienda.html" class="btn btn-primary">Ver la tienda</a>
+        <a href="tienda" class="btn btn-primary">Ver la tienda</a>
         <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20info%20de%20partes%20BMX" target="_blank" rel="noopener" class="btn btn-ghost">Pedir por WhatsApp</a>
       </div>
       <div class="hero-stats">
@@ -588,13 +485,7 @@
   </div>
 </section>
 
-<!-- ============ BRAND MARQUEE ============ -->
-<h2 class="sr-only">Marcas que manejamos</h2>
-<p class="sr-only" id="brandMarqueeSrList"></p>
-<div class="brand-marquee" id="marcas">
-  <div class="bm-track" id="brandMarqueeTrack" aria-hidden="true"></div>
-  <p class="brand-marquee-hint">Toca una marca para ver sus productos</p>
-</div>
+<!-- Brand marquee now lives in the global top strip (see .brand-strip in the header). -->
 
 <!-- ============ CATEGORIES (photo cards) ============ -->
 <section id="categorias">
@@ -604,35 +495,35 @@
       <h2>CATEGORÍAS <span class="bar">/</span> COMPONENTES</h2>
     </div>
     <div class="cats">
-      <a href="tienda.html?cat=stems" class="cat" style="background-image:url('assets/img/products/volume-stem-front-load-plata.jpg')">
+      <a href="tienda?cat=stems" class="cat" style="background-image:url('assets/img/products/volume-stem-front-load-plata.jpg')">
         <div class="content"><h3>Cañas</h3><p>Front load y top load para control total.</p></div>
         <span class="arrow">→</span>
       </a>
-      <a href="tienda.html?cat=manubrios" class="cat" style="background-image:url('assets/img/products/manubrio-cromoly-negro-01.jpg')">
+      <a href="tienda?cat=manubrios" class="cat" style="background-image:url('assets/img/products/manubrio-cromoly-negro-01.jpg')">
         <div class="content"><h3>Timón</h3><p>Cromoly cross brace, altura para cada estilo.</p></div>
         <span class="arrow">→</span>
       </a>
-      <a href="tienda.html?cat=horquillas" class="cat" style="background-image:url('assets/img/products/federal-horquilla-cromada.jpg')">
+      <a href="tienda?cat=horquillas" class="cat" style="background-image:url('assets/img/products/federal-horquilla-cromada.jpg')">
         <div class="content"><h3>Tenedores</h3><p>Cromoly resistente para street y park.</p></div>
         <span class="arrow">→</span>
       </a>
-      <a href="tienda.html?cat=bielas" class="cat" style="background-image:url('assets/img/products/mutany-savage-bielas-negro.jpg')">
+      <a href="tienda?cat=bielas" class="cat" style="background-image:url('assets/img/products/mutany-savage-bielas-negro.jpg')">
         <div class="content"><h3>Bielas</h3><p>Cromoly 48 spline que no perdona.</p></div>
         <span class="arrow">→</span>
       </a>
-      <a href="tienda.html?cat=manzana-trasera" class="cat" style="background-image:url('assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg')">
+      <a href="tienda?cat=manzana-trasera" class="cat" style="background-image:url('assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg')">
         <div class="content"><h3>Manzanas</h3><p>Cassette y freecoaster, delanteros y traseros.</p></div>
         <span class="arrow">→</span>
       </a>
-      <a href="tienda.html?cat=pinones" class="cat" style="background-image:url('assets/img/products/odyssey-pinon-28t-negro.jpg')">
+      <a href="tienda?cat=pinones" class="cat" style="background-image:url('assets/img/products/odyssey-pinon-28t-negro.jpg')">
         <div class="content"><h3>Plato</h3><p>Aluminio CNC, distintos dientes y colores.</p></div>
         <span class="arrow">→</span>
       </a>
-      <a href="tienda.html?cat=sillines" class="cat" style="background-image:url('assets/img/products/cult-vans-sillin-negro.jpg')">
+      <a href="tienda?cat=sillines" class="cat" style="background-image:url('assets/img/products/cult-vans-sillin-negro.jpg')">
         <div class="content"><h3>Sillas</h3><p>Pivotal slim, cómodos y ligeros.</p></div>
         <span class="arrow">→</span>
       </a>
-      <a href="tienda.html?cat=pedales" class="cat" style="background-image:url('assets/img/products/pedales-metal-negro-02.jpg')">
+      <a href="tienda?cat=pedales" class="cat" style="background-image:url('assets/img/products/pedales-metal-negro-02.jpg')">
         <div class="content"><h3>Pedales</h3><p>Plataforma nylon o aluminio, agarre total.</p></div>
         <span class="arrow">→</span>
       </a>
@@ -651,7 +542,7 @@
     <div class="grid" id="grid"><!-- featured products injected by JS --></div>
 
     <div style="text-align:center;margin-top:2.5rem;">
-      <a href="tienda.html" class="btn btn-ink">Ver toda la tienda →</a>
+      <a href="tienda" class="btn btn-ink">Ver toda la tienda →</a>
     </div>
   </div>
 </section>
@@ -728,7 +619,7 @@
 -->
 
 <!-- ============ BRANDS STRIP ============ -->
-<div class="brands-strip">
+<div class="brands-strip" id="marcas">
   <p class="brands-strip-hint">Toca una marca para ver sus productos</p>
   <div class="brands-row" id="brandsStripRow"></div>
 </div>
@@ -789,7 +680,7 @@
       <details><summary>¿Cómo compro?</summary><p>Eliges los productos que quieras, tocas "Pedir por WhatsApp" y se arma un mensaje con tu pedido. Confirmas por chat, coordinamos el pago (Nequi, Daviplata, transferencia o efectivo) y el envío. Así de simple.</p></details>
       <details><summary>¿Qué marcas manejan?</summary><p>Trabajamos con marcas líderes de la escena BMX mundial: Cult, Fiend, Éclat, Volume, Mutanty, Federal, Odyssey, Stolen, Demolition, Animal, Shadow, Colony, entre otras. Manejamos más de 100 partes originales: cañas, timones, tenedores, bielas, manzanas, platos, pedales, sillines y más.</p></details>
       <details><summary>¿Las partes son originales?</summary><p>Totalmente. Todas nuestras partes son 100% originales de las marcas oficiales. Cada producto pasa por revisión de calidad antes de salir del taller.</p></details>
-      <details><summary>¿Puedo cambiar o devolver una parte?</summary><p>Sí, dentro de los términos de nuestra política. Aplica para defectos de fabricación y errores nuestros. Revisa los detalles en <a href="devoluciones.html" style="color:var(--ink);text-decoration:underline;">Devoluciones y Cambios</a>.</p></details>
+      <details><summary>¿Puedo cambiar o devolver una parte?</summary><p>Sí, dentro de los términos de nuestra política. Aplica para defectos de fabricación y errores nuestros. Revisa los detalles en <a href="devoluciones" style="color:var(--ink);text-decoration:underline;">Devoluciones y Cambios</a>.</p></details>
     </div>
   </div>
 </section>
@@ -818,20 +709,20 @@
     <div>
       <h4>Tienda</h4>
       <a href="#categorias">Categorías</a>
-      <a href="tienda.html">Componentes</a>
-      <a href="armar-bmx.html">Arma tu BMX</a>
-      <a href="blog.html">Blog</a>
-      <a href="mayoristas.html">Mayoristas</a>
+      <a href="tienda">Componentes</a>
+      <a href="armar-bmx">Arma tu BMX</a>
+      <a href="blog">Blog</a>
+      <a href="mayoristas">Mayoristas</a>
       <a href="#escena">La Escena</a>
       <a href="#faq">Preguntas frecuentes</a>
     </div>
     <div>
       <h4>Info</h4>
-      <a href="envios.html">Envíos</a>
-      <a href="devoluciones.html">Devoluciones</a>
-      <a href="terminos.html">Términos</a>
-      <a href="politica-privacidad.html">Privacidad</a>
-      <a href="politica-cookies.html">Cookies</a>
+      <a href="envios">Envíos</a>
+      <a href="devoluciones">Devoluciones</a>
+      <a href="terminos">Términos</a>
+      <a href="politica-privacidad">Privacidad</a>
+      <a href="politica-cookies">Cookies</a>
       <div class="pay-row">
         <span>Nequi</span><span>Daviplata</span><span>Transferencia</span><span>Efectivo</span>
       </div>
@@ -894,7 +785,7 @@
     g.innerHTML = FEATURED.map(function(p){
       var wPrefix = (window.EscenaWholesale && window.EscenaWholesale.isActive()) ? "🏷️ PEDIDO MAYORISTA (15% aplicado)\n" : "";
       var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
-      var href = "producto/" + slugOf(p) + ".html";
+      var href = "producto/" + slugOf(p);
       var agotado = (typeof p.units === "number" && p.units <= 0);
       var tagHTML = agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+p.tag+'</span>' : '');
       return '<article class="card'+(agotado ? ' is-agotado' : '')+'">' +
@@ -1013,18 +904,13 @@
     { name: "Cinema", img: "assets/img/logo_19_Cinema.jpeg" },
     { name: "Primo", img: "assets/img/logo_20_Primo.jpeg" }
   ];
-  var bmTrack = document.getElementById("brandMarqueeTrack");
-  function bmGroupHTML(){
-    return BRAND_LOGOS.map(function(b){
-      return '<span class="bm-chip"><a href="tienda.html?brand=' + encodeURIComponent(b.key || b.name) + '"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy" width="190" height="92"></a></span>';
-    }).join("");
-  }
-  bmTrack.innerHTML = '<div class="bm-group">' + bmGroupHTML() + '</div><div class="bm-group">' + bmGroupHTML() + '</div>';
-  document.getElementById("brandMarqueeSrList").textContent = BRAND_LOGOS.map(function(b){ return b.name; }).join(", ");
+  /* The moving brand marquee now lives in the global top strip, built by
+     assets/js/cart.js (#brandStripTrack). BRAND_LOGOS is still used below for
+     the static brands grid. */
 
   /* ---- Brands strip (before Instagram) ---- */
   document.getElementById("brandsStripRow").innerHTML = BRAND_LOGOS.map(function(b){
-    return '<span class="bs-chip"><a href="tienda.html?brand=' + encodeURIComponent(b.key || b.name) + '"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy" width="150" height="64"></a></span>';
+    return '<span class="bs-chip"><a href="tienda?brand=' + encodeURIComponent(b.key || b.name) + '"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy" width="150" height="64"></a></span>';
   }).join("");
 
   /* ---- Newsletter popup (once per browser session) ---- */
