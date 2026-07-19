@@ -52,11 +52,13 @@ jobs:
         # misleading "success". Cache-busted + retried to ride out CDN/DNS
         # propagation after the upload.
         run: |
-          url="https://escenabmx.com/producto/marco-fitbikeco-str-negro.html"
+          # Clean URL (the .htaccess 301-redirects the old .html form to this);
+          # -L follows that redirect so the check validates the final page.
+          url="https://escenabmx.com/producto/marco-fitbikeco-str-negro"
           ok=0
           for attempt in 1 2 3 4 5 6; do
             bust="$(date +%s)-$attempt"
-            code="$(curl -s -o /tmp/page.html -w '%{http_code}' -H 'Cache-Control: no-cache' "$url?cb=$bust" || echo 000)"
+            code="$(curl -sL -o /tmp/page.html -w '%{http_code}' -H 'Cache-Control: no-cache' "$url?cb=$bust" || echo 000)"
             if [ "$code" = "200" ] && grep -qi 'pdpMainImg' /tmp/page.html; then
               echo "Live check OK (HTTP $code, product-page markup present) on attempt $attempt."
               ok=1
