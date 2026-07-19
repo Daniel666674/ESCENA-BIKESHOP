@@ -17,15 +17,15 @@
    Small white chips on a dark band — thin/subtle, but each logo stays in its
    natural colours (the logos are a mix of transparent PNGs and white-background
    JPEGs, so a single tint/invert can't work for both). */
-.brand-strip { background: var(--ink, #0A0A0A); overflow: hidden; padding: 5px 0; }
+.brand-strip { background: var(--ink, #0A0A0A); overflow: hidden; padding: 9px 0; }
 .brand-strip-track { display: flex; width: max-content; animation: bsScroll 60s linear infinite; }
 @media (hover: hover) and (pointer: fine) { .brand-strip:hover .brand-strip-track { animation-play-state: paused; } }
 .brand-strip-group { display: flex; align-items: center; flex-shrink: 0; }
-.brand-strip .bs-chip { display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin: 0 .3rem; }
-.brand-strip .bs-chip img { display: block; height: 22px; width: auto; max-width: 88px; object-fit: contain; background: #fff; border-radius: 5px; padding: 3px 8px; opacity: .9; transition: opacity .2s; }
+.brand-strip .bs-chip { display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin: 0 .4rem; }
+.brand-strip .bs-chip img { display: block; height: 34px; width: auto; max-width: 128px; object-fit: contain; background: #fff; border-radius: 6px; padding: 4px 12px; opacity: .9; transition: opacity .2s; }
 @media (hover: hover) and (pointer: fine) { .brand-strip .bs-chip:hover img { opacity: 1; } }
 @keyframes bsScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@media (max-width: 640px) { .brand-strip .bs-chip img { height: 18px; max-width: 66px; padding: 2px 6px; } }
+@media (max-width: 640px) { .brand-strip { padding: 7px 0; } .brand-strip .bs-chip img { height: 26px; max-width: 96px; padding: 3px 9px; } }
 @media (prefers-reduced-motion: reduce) { .brand-strip-track { animation: none; } }
 
 /* ---- Header shell ---- */
