@@ -19,7 +19,7 @@
   var bannerHTML =
     '<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">' +
       '<p>Usamos cookies esenciales para que la tienda funcione y, si lo aceptás, cookies de analítica para entender el tráfico del sitio. ' +
-        '<a href="' + ROOT + 'privacidad.html">Leer más</a>.</p>' +
+        '<a href="' + ROOT + 'privacidad">Leer más</a>.</p>' +
       '<div class="cookie-banner-actions">' +
         '<button type="button" id="cookieEssentialBtn">Solo esenciales</button>' +
         '<button type="button" id="cookieAcceptBtn" class="cookie-accept">Aceptar</button>' +

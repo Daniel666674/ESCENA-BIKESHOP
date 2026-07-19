@@ -252,7 +252,7 @@
         </div>
       </div>
       <div class="admin-actions">
-        <a href="index.html" class="btn btn-outline btn-sm">Ver tienda</a>
+        <a href="inicio" class="btn btn-outline btn-sm">Ver tienda</a>
         <button type="button" class="btn btn-outline btn-sm" id="adminLogoutBtn">Cerrar sesión</button>
       </div>
     </div>
@@ -731,11 +731,11 @@
   // department page (protecciones.html today; ropa.html/tenis.html once those
   // go from coming-soon to live product pages).
   var SHOP_PAGE_BY_CAT = {
-    cascos: "protecciones.html", rodilleras: "protecciones.html", canilleras: "protecciones.html",
-    tobilleras: "protecciones.html", "rodi-cani-tobilleras": "protecciones.html", guantes: "protecciones.html"
+    cascos: "protecciones", rodilleras: "protecciones", canilleras: "protecciones",
+    tobilleras: "protecciones", "rodi-cani-tobilleras": "protecciones", guantes: "protecciones"
   };
-  var SHOP_LABEL_BY_PAGE = { "tienda.html": "Tienda", "protecciones.html": "Protecciones" };
-  function shopPageFor(cat) { return SHOP_PAGE_BY_CAT[cat] || "tienda.html"; }
+  var SHOP_LABEL_BY_PAGE = { "tienda": "Tienda", "protecciones": "Protecciones" };
+  function shopPageFor(cat) { return SHOP_PAGE_BY_CAT[cat] || "tienda"; }
   function sizesTotal(sizes) { return (sizes || []).reduce(function (s, x) { return s + (x.units || 0); }, 0); }
   // Colors work the same way as sizes (p.colors = [{label, units}]) but are
   // available on every category, independent of talla. A product tracks real,
@@ -877,7 +877,7 @@
     if (dirty && !confirm("Tienes cambios sin publicar. ¿Salir de todas formas?")) return;
     sessionStorage.removeItem(TOKEN_KEY);
     localStorage.removeItem(TOKEN_KEY);
-    window.location.href = "index.html";
+    window.location.href = "inicio";
   });
 
   /* ---- KPI charts (sample data) ---- */
@@ -1394,7 +1394,7 @@
     var cards = rel.map(function (q) {
       var img = "../" + ((q.imgs && q.imgs[0]) || ("assets/img/products/" + q.slug + ".jpg"));
       var tag = q.tag ? '<span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">' + esc(q.tag) + '</span>' : '';
-      return '<a class="r-card" href="' + q.slug + '.html">\n        <div class="ph" style="position:relative;">' + tag + '<img src="' + img + '" alt="' + esc(q.n) + (q.brand ? ' - ' + esc(q.brand) : '') + ' BMX" loading="lazy" width="300" height="300" /></div>\n        <div class="body">\n          <span class="brand-lbl">' + esc(q.brand || "") + '</span>\n          <h3>' + esc(q.n) + '</h3>\n          <div class="price">' + copFmt(q.price) + ' COP</div>\n        </div>\n      </a>';
+      return '<a class="r-card" href="' + q.slug + '">\n        <div class="ph" style="position:relative;">' + tag + '<img src="' + img + '" alt="' + esc(q.n) + (q.brand ? ' - ' + esc(q.brand) : '') + ' BMX" loading="lazy" width="300" height="300" /></div>\n        <div class="body">\n          <span class="brand-lbl">' + esc(q.brand || "") + '</span>\n          <h3>' + esc(q.n) + '</h3>\n          <div class="price">' + copFmt(q.price) + ' COP</div>\n        </div>\n      </a>';
     });
     return '<div class="related">\n  <h2>También te puede gustar</h2>\n  <div class="related-grid">\n    ' + cards.join('\n') + '\n  </div>\n</div>';
   }
@@ -1534,8 +1534,8 @@
       return ghPutWithRetry("sitemap.xml", "Add " + createdSlugs.length + " product page(s) to sitemap (admin)", function (remoteText) {
         if (!remoteText) return null;
         var today = new Date().toISOString().slice(0, 10);
-        var adds = createdSlugs.filter(function (s) { return remoteText.indexOf("/producto/" + s + ".html") === -1; }).map(function (s) {
-          return "  <url>\n    <loc>https://escenabmx.com/producto/" + s + ".html</loc>\n    <lastmod>" + today + "</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>";
+        var adds = createdSlugs.filter(function (s) { return remoteText.indexOf("/producto/" + s + "<") === -1; }).map(function (s) {
+          return "  <url>\n    <loc>https://escenabmx.com/producto/" + s + "</loc>\n    <lastmod>" + today + "</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>";
         });
         if (!adds.length) return null;
         return remoteText.replace("</urlset>", adds.join("\n") + "\n</urlset>");

@@ -294,7 +294,7 @@
         return;
       }
       if (e.target.closest("#wsaleGoTienda")) {
-        window.location.href = ROOT + "tienda.html";
+        window.location.href = ROOT + "tienda";
         return;
       }
     });
@@ -317,7 +317,7 @@
       if (result.role === "admin") {
         window.location.href = ROOT + "admin.html";
       } else {
-        window.location.href = ROOT + "tienda.html";
+        window.location.href = ROOT + "tienda";
       }
     });
   }

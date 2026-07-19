@@ -1,3 +1,32 @@
+# ============================================================================
+# Clean URLs — serve pages without the .html extension, and use /inicio for home
+# (e.g. escenabmx.com/tienda, escenabmx.com/producto/<slug>, escenabmx.com/inicio)
+# ============================================================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Bare domain root -> /inicio (single canonical home URL)
+  RewriteCond %{THE_REQUEST} \s/+(\?[^\s]*)?\s [NC]
+  RewriteRule ^$ /inicio [R=301,L]
+
+  # index or index.html -> /inicio
+  RewriteCond %{THE_REQUEST} \s/+index(\.html)?(\?[^\s]*)?\s [NC]
+  RewriteRule ^ /inicio [R=301,L]
+
+  # Any explicit .html request -> extensionless (query string preserved)
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html(\?[^\s]*)?\s [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  # /inicio -> index.html (internal, no redirect)
+  RewriteRule ^inicio/?$ index.html [L]
+
+  # Extensionless -> .html when that file exists (internal, no redirect)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>
+
 # HTML pages: never cache — ensures visitors always get the latest version
 # even when Hostinger's CDN (Cloudflare) is active.
 <FilesMatch "\.html$">

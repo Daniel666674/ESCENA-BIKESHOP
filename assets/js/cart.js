@@ -102,7 +102,7 @@
 
   function itemHTML(item) {
     var imgSrc = /^https?:\/\//.test(item.img) ? item.img : ROOT + item.img;
-    var href = ROOT + "producto/" + item.slug + ".html";
+    var href = ROOT + "producto/" + item.slug;
     return (
       '<div class="cart-item" data-slug="' + item.slug + '" data-variant="' + (item.variant || "") + '">' +
         '<a class="ci-img" href="' + href + '"><img src="' + imgSrc + '" alt="' + item.n + '" loading="lazy" width="62" height="62"></a>' +
@@ -313,7 +313,7 @@
   if (track) {
     function groupHTML() {
       return BRAND_LOGOS.map(function (b) {
-        return '<span class="bs-chip"><a href="' + PFX + 'tienda.html?brand=' +
+        return '<span class="bs-chip"><a href="' + PFX + 'tienda?brand=' +
           encodeURIComponent(b.key || b.name) + '" aria-label="' + b.name +
           '"><img src="' + PFX + b.img + '" alt="' + b.name +
           '" loading="lazy" height="30"></a></span>';
@@ -325,14 +325,17 @@
 
   /* Active nav state — the static markup is identical on every page, so we
      light up the current section here from the URL. */
-  var path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  // Normalise the current page name so this works with clean URLs (/tienda),
+  // explicit .html (/tienda.html), or the extensionless home (/inicio, /).
+  var page = (location.pathname.split("/").pop() || "").toLowerCase().replace(/\.html$/, "");
+  if (page === "" || page === "index") page = "inicio";
   var params = new URLSearchParams(location.search);
   var cat = params.get("cat");
 
   // world tabs
   var world = "bmx";
-  if (path === "mtb.html") world = "mtb";
-  else if (path === "skate.html") world = "skate";
+  if (page === "mtb") world = "mtb";
+  else if (page === "skate") world = "skate";
   var wt = document.querySelector('.world-tab[data-world="' + world + '"]');
   if (wt) wt.classList.add("is-active");
 
@@ -340,10 +343,10 @@
   var navKey = null;
   if (params.has("promo")) navKey = "promo";
   else if (cat === "bicicletas") navKey = "bicicletas";
-  else if (path === "tienda.html") navKey = "partes";
-  else if (path === "protecciones.html") navKey = "protecciones";
-  else if (path === "ropa.html" || path === "tenis.html") navKey = "ropa";
-  else if (path === "armar-bmx.html") navKey = "armar";
+  else if (page === "tienda") navKey = "partes";
+  else if (page === "protecciones") navKey = "protecciones";
+  else if (page === "ropa" || page === "tenis") navKey = "ropa";
+  else if (page === "armar-bmx") navKey = "armar";
   if (navKey) {
     var el = document.querySelector('[data-nav="' + navKey + '"]');
     if (el) {
