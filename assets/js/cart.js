@@ -277,3 +277,78 @@
   window.addEventListener('scroll', tick, { passive: true });
   tick();
 })();
+
+/* ---- Brand strip (subtle moving marquee at the very top) + nav active state.
+   Runs on every storefront page; product pages under /producto/ need a "../"
+   asset/link prefix. ---- */
+(function () {
+  // Pages live at the site root or one level deep (producto/ , blog/), so those
+  // subdirectories need a "../" prefix for asset + link paths.
+  var PFX = /\/(producto|blog)\//.test(location.pathname) ? "../" : "";
+
+  var BRAND_LOGOS = [
+    { name: "Mutanty", key: "Mutanty", img: "assets/img/logo_01_Mutanty.png" },
+    { name: "Fate", img: "assets/img/logo_02_Fate.jpeg" },
+    { name: "Cult", img: "assets/img/logo_03_Cult.png" },
+    { name: "Fiend", img: "assets/img/logo_04_Fiend.jpeg" },
+    { name: "Shadow", img: "assets/img/logo_05_Shadow.png" },
+    { name: "Wethepeople", img: "assets/img/logo_06_Wethepeople.png" },
+    { name: "Odyssey", img: "assets/img/logo_07_Odyssey.png" },
+    { name: "BSD", img: "assets/img/logo_08_BSD.png" },
+    { name: "Éclat", img: "assets/img/logo_09_Eclat.png" },
+    { name: "Demolition", img: "assets/img/logo_10_Demolition.png" },
+    { name: "Kink BMX", img: "assets/img/logo_11_KinkBMX.png" },
+    { name: "Federal", img: "assets/img/logo_12_Federal.png" },
+    { name: "Animal", img: "assets/img/logo_13_Animal.png" },
+    { name: "Merritt", img: "assets/img/logo_14_Merritt.jpeg" },
+    { name: "Subrosa", img: "assets/img/logo_15_Subrosa.jpeg" },
+    { name: "Stranger", img: "assets/img/logo_16_Stranger.jpeg" },
+    { name: "Volume", img: "assets/img/logo_17_Volume.jpeg" },
+    { name: "Profile Racing", img: "assets/img/logo_18_ProfileRacing.jpeg" },
+    { name: "Cinema", img: "assets/img/logo_19_Cinema.jpeg" },
+    { name: "Primo", img: "assets/img/logo_20_Primo.jpeg" }
+  ];
+
+  var track = document.getElementById("brandStripTrack");
+  if (track) {
+    function groupHTML() {
+      return BRAND_LOGOS.map(function (b) {
+        return '<span class="bs-chip"><a href="' + PFX + 'tienda.html?brand=' +
+          encodeURIComponent(b.key || b.name) + '" aria-label="' + b.name +
+          '"><img src="' + PFX + b.img + '" alt="' + b.name +
+          '" loading="lazy" height="30"></a></span>';
+      }).join("");
+    }
+    track.innerHTML = '<div class="brand-strip-group">' + groupHTML() +
+      '</div><div class="brand-strip-group">' + groupHTML() + '</div>';
+  }
+
+  /* Active nav state — the static markup is identical on every page, so we
+     light up the current section here from the URL. */
+  var path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  var params = new URLSearchParams(location.search);
+  var cat = params.get("cat");
+
+  // world tabs
+  var world = "bmx";
+  if (path === "mtb.html") world = "mtb";
+  else if (path === "skate.html") world = "skate";
+  var wt = document.querySelector('.world-tab[data-world="' + world + '"]');
+  if (wt) wt.classList.add("is-active");
+
+  // main nav
+  var navKey = null;
+  if (params.has("promo")) navKey = "promo";
+  else if (cat === "bicicletas") navKey = "bicicletas";
+  else if (path === "tienda.html") navKey = "partes";
+  else if (path === "protecciones.html") navKey = "protecciones";
+  else if (path === "ropa.html" || path === "tenis.html") navKey = "ropa";
+  else if (path === "armar-bmx.html") navKey = "armar";
+  if (navKey) {
+    var el = document.querySelector('[data-nav="' + navKey + '"]');
+    if (el) {
+      if (el.classList.contains("nav-drop")) el.classList.add("active");
+      else el.classList.add("active");
+    }
+  }
+})();

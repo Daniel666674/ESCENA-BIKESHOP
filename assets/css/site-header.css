@@ -1,88 +1,118 @@
 /* ============================================================
-   ESCENA — shared two-tier department header
-   Scoped under .site-header so it cleanly overrides each page's
-   older inline nav CSS. --gold falls back to its hex in case a
-   page's :root doesn't define it (index.html does).
+   ESCENA — shared site header (redesign)
+   Layout, top → bottom:
+     1. .brand-strip  — thin, subtle moving strip of brand logos
+     2. .world-tabs   — BMX / MTB / Skate (kept as-is)
+     3. .header-main  — desktop: nav with the wordmark CENTERED between
+                        the category links (Bicicletas · Partes · Arma tu
+                        BMX · [LOGO] · Protecciones · Ropa · Promo).
+                        mobile: burger (left) · centered wordmark · cart
+                        (right), links collapse into a slide-down menu.
+   Scoped under .site-header so it cleanly overrides each page's older
+   inline nav CSS. --gold falls back to its hex in case a page's :root
+   doesn't define it (index.html does).
    ============================================================ */
+
+/* ---- 1. Brand strip (subtle moving marquee, very top) ----
+   Small white chips on a dark band — thin/subtle, but each logo stays in its
+   natural colours (the logos are a mix of transparent PNGs and white-background
+   JPEGs, so a single tint/invert can't work for both). */
+.brand-strip { background: var(--ink, #0A0A0A); overflow: hidden; padding: 5px 0; }
+.brand-strip-track { display: flex; width: max-content; animation: bsScroll 60s linear infinite; }
+@media (hover: hover) and (pointer: fine) { .brand-strip:hover .brand-strip-track { animation-play-state: paused; } }
+.brand-strip-group { display: flex; align-items: center; flex-shrink: 0; }
+.brand-strip .bs-chip { display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin: 0 .3rem; }
+.brand-strip .bs-chip img { display: block; height: 22px; width: auto; max-width: 88px; object-fit: contain; background: #fff; border-radius: 5px; padding: 3px 8px; opacity: .9; transition: opacity .2s; }
+@media (hover: hover) and (pointer: fine) { .brand-strip .bs-chip:hover img { opacity: 1; } }
+@keyframes bsScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (max-width: 640px) { .brand-strip .bs-chip img { height: 18px; max-width: 66px; padding: 2px 6px; } }
+@media (prefers-reduced-motion: reduce) { .brand-strip-track { animation: none; } }
+
+/* ---- Header shell ---- */
 .site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); transition: box-shadow .3s; }
 .site-header.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.10); }
 
-/* Row 1: brand + actions */
-.site-header .header-brand-row { position: relative; display: flex; align-items: center; justify-content: center; padding: .95rem 1.5rem .55rem; transition: padding .3s; }
-.site-header.scrolled .header-brand-row { padding: .35rem 1.5rem .2rem; }
-.site-header .brand { display: inline-flex; flex-direction: column; align-items: center; gap: .3rem; text-decoration: none; }
-/* Fluid width (height:auto keeps the aspect ratio — never squished); ~100px tall
-   on wide screens, scaling down smoothly so it always clears the burger/cart.
-   Explicit resets below because some pages still carry an older, unrelated
-   ".brand img { border-radius: 50%; background: #fff; border: 1px solid … }"
-   rule (from the pre-redesign circular-avatar logo) — this wordmark isn't
-   that img anymore, but the tag selector still matches it, so without these
-   resets it gets stamped with a round white "sticker" mask that clips it. */
-.site-header .brand-logo { width: clamp(190px, 62vw, 492px); height: auto; display: block; border-radius: 0; background: none; border: none; transition: width .3s; }
-.site-header.scrolled .brand-logo { width: clamp(130px, 38vw, 320px); }
-.site-header .brand-tagline { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-weight: 700; font-size: clamp(.85rem, 1.9vw, 1.6rem); letter-spacing: .2em; text-transform: uppercase; line-height: 1; }
-
-.site-header .header-actions { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .7rem; }
-.site-header .header-actions .wa-link { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: #25D366; }
-.site-header .header-actions .wa-link svg { width: 22px; height: 22px; fill: #fff; }
-.site-header .header-actions .wa-link:hover { opacity: .88; }
-.site-header .cart-btn { position: relative; width: 44px; height: 44px; background: none; border: 0; color: var(--ink); cursor: pointer; }
-.site-header .cart-btn svg { width: 26px; height: 26px; }
-.site-header .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--ink); font-size: 1.8rem; cursor: pointer; line-height: 1; }
-
-/* Row 2: world tabs (BMX / MTB / Skate) */
-.site-header .world-tabs { display: flex; align-items: center; justify-content: center; gap: 1.1rem; padding: .1rem 1rem .65rem; transition: padding .3s; }
-.site-header.scrolled .world-tabs { padding-top: 0; padding-bottom: .2rem; }
-.site-header .world-tab { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: .12em; color: var(--muted); text-decoration: none; padding: .1rem .1rem .25rem; border-bottom: 2.5px solid transparent; transition: color .2s, border-color .2s; }
+/* ---- 2. World tabs (BMX / MTB / Skate) ---- */
+.site-header .world-tabs { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: .3rem 1rem; border-bottom: 1px solid var(--line); transition: padding .3s; }
+.site-header.scrolled .world-tabs { padding-top: .18rem; padding-bottom: .18rem; }
+.site-header .world-tab { font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: .12em; color: var(--muted); text-decoration: none; padding: .05rem .1rem .18rem; border-bottom: 2.5px solid transparent; transition: color .2s, border-color .2s; }
 .site-header .world-tab:hover { color: var(--ink); }
 .site-header .world-tab.is-active { color: var(--ink); border-bottom-color: var(--gold, #C79A3A); }
-.site-header .world-sep { width: 1px; height: 15px; background: var(--line); }
+.site-header .world-sep { width: 1px; height: 14px; background: var(--line); }
 
-/* Row 3: category bar (white band) */
-.site-header .nav-links { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .1rem; background: #fff; border-top: 1px solid var(--line); padding: 0 1rem; }
-.site-header .nav-links a { color: var(--ink); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; padding: .85rem .95rem; border-radius: 0; border-bottom: 2.5px solid transparent; transition: color .2s, background .2s, border-color .2s; }
-.site-header .nav-links a:hover { color: var(--ink); background: var(--panel); }
-.site-header .nav-links a.active { color: var(--ink); background: none; border-bottom-color: var(--gold, #C79A3A); }
+/* ---- 3. Main row ---- */
+.site-header .header-main { position: relative; display: flex; align-items: center; justify-content: center; padding: .3rem 1.5rem; transition: padding .3s; }
+.site-header.scrolled .header-main { padding-top: .1rem; padding-bottom: .1rem; }
 
-/* Category dropdown ("Partes") */
-.site-header .nav-drop { position: relative; padding-bottom: 0; margin-bottom: 0; }
+/* wordmark (shared img rule — resets the legacy circular-avatar styling that
+   some pages still carry on ".brand img") */
+.site-header .brand { display: inline-flex; align-items: center; text-decoration: none; }
+.site-header .brand-logo { width: clamp(150px, 21vw, 300px); height: auto; display: block; border-radius: 0; background: none; border: none; transition: width .3s; }
+.site-header.scrolled .brand-logo { width: clamp(120px, 15vw, 220px); }
+/* the centered wordmark inside the nav (desktop); a separate .brand-mobile is
+   shown in the bar on small screens */
+.site-header .nav-brand { margin: 0 1.4rem; }
+.site-header .brand-mobile { display: none; }
+
+/* actions pinned right */
+.site-header .header-actions { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .7rem; }
+.site-header .header-actions .wa-link { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #25D366; }
+.site-header .header-actions .wa-link svg { width: 21px; height: 21px; fill: #fff; }
+.site-header .header-actions .wa-link:hover { opacity: .88; }
+.site-header .cart-btn { position: relative; width: 42px; height: 42px; background: none; border: 0; color: var(--ink); cursor: pointer; }
+.site-header .cart-btn svg { width: 25px; height: 25px; }
+.site-header .cart-badge { position: absolute; top: 2px; right: 2px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: var(--gold, #C79A3A); color: #fff; font-size: .62rem; font-weight: 800; line-height: 17px; text-align: center; }
+.site-header .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--ink); font-size: 1.7rem; cursor: pointer; line-height: 1; }
+
+/* category links */
+.site-header .nav-links { display: flex; align-items: center; justify-content: center; gap: .1rem; }
+.site-header .nav-links > a, .site-header .nav-drop > a { color: var(--ink); font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: .7rem .85rem; border-radius: 0; border-bottom: 2.5px solid transparent; transition: color .2s, background .2s, border-color .2s; white-space: nowrap; }
+.site-header .nav-links > a:hover, .site-header .nav-drop > a:hover { background: var(--panel); }
+.site-header .nav-links > a.active, .site-header .nav-drop.active > a { color: var(--ink); border-bottom-color: var(--gold, #C79A3A); }
+.site-header .nav-promo { color: var(--gold, #C79A3A) !important; }
+
+/* dropdowns (Partes / Protecciones / Ropa) */
+.site-header .nav-drop { position: relative; }
 .site-header .nav-drop > a { display: inline-flex; align-items: center; gap: .35rem; }
 .site-header .nav-drop .caret { display: inline-block; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); position: relative; top: -2px; }
 .site-header .nav-drop-menu { display: none; }
 .site-header .nav-drop-toggle { display: none; }
 @media (min-width: 981px) {
-  .site-header .nav-drop-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 20px 45px rgba(0,0,0,.18); padding: .5rem; min-width: 240px; z-index: 60; max-height: min(74vh, 560px); overflow-y: auto; }
+  .site-header .nav-drop-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 20px 45px rgba(0,0,0,.18); padding: .5rem; min-width: 220px; z-index: 60; max-height: min(74vh, 560px); overflow-y: auto; }
   .site-header .nav-drop:hover .nav-drop-menu, .site-header .nav-drop:focus-within .nav-drop-menu { display: block; }
   .site-header .nav-drop-menu a { display: block; color: var(--ink) !important; font-weight: 600 !important; font-size: .78rem !important; letter-spacing: 0 !important; text-transform: none !important; padding: .55rem .75rem !important; border-radius: 7px; background: none !important; border-bottom: none !important; }
   .site-header .nav-drop-menu a:hover { background: var(--panel) !important; color: var(--ink) !important; }
-  /* Partes menu: 3 zone columns (front / mid / rear) so it stays short and never
-     overflows small laptop screens. Scoped to #navDropMenu so Protecciones (few
-     items) keeps its single column. */
-  .site-header #navDropMenu { left: 0; transform: none; min-width: 480px; grid-template-columns: repeat(3, minmax(150px, 1fr)); column-gap: .4rem; }
+  /* Partes menu: 3 zone columns so it stays short. Scoped to #navDropMenu so
+     Protecciones / Ropa (few items) keep their single column. */
+  .site-header #navDropMenu { left: 50%; transform: translateX(-50%); min-width: 480px; grid-template-columns: repeat(3, minmax(150px, 1fr)); column-gap: .4rem; }
   .site-header .nav-drop:hover #navDropMenu, .site-header .nav-drop:focus-within #navDropMenu { display: grid; }
   .site-header .nav-drop-col { display: flex; flex-direction: column; }
 }
 
 @media (max-width: 980px) {
+  .site-header .world-tabs { gap: .8rem; }
+  .site-header .header-main { justify-content: center; padding: .55rem 1.5rem; }
   .site-header .burger { display: block; }
   .site-header .header-actions .wa-link { display: none; }
-  /* extra safety so the logo always clears the burger (left) / cart (right) */
-  .site-header .brand-logo { max-width: calc(100vw - 140px); }
-  /* category bar collapses into a slide-down under the header */
+  /* on mobile the centered wordmark lives in the bar, not inside the nav */
+  .site-header .nav-brand { display: none; }
+  .site-header .brand-mobile { display: inline-flex; }
+  .site-header .brand-mobile .brand-logo { width: clamp(150px, 52vw, 300px); max-width: calc(100vw - 140px); }
+  .site-header.scrolled .brand-mobile .brand-logo { width: clamp(120px, 40vw, 240px); }
+  /* category bar collapses into a slide-down under the header.
+     bottom:auto is explicit so a leftover inline `inset:… 0 …` (bottom:0) on
+     the category pages can't pin both edges and crush the menu to ~36px. */
   .site-header .nav-links {
-    position: absolute; top: 100%; left: 0; right: 0; bottom: auto; z-index: 90;
+    position: absolute; top: 100%; bottom: auto; left: 0; right: 0; z-index: 90;
     flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 0;
-    padding: .4rem 1.5rem 1.8rem;
+    background: #fff; padding: .4rem 1.5rem 1.8rem;
     transform: translateY(-135%); transition: transform .3s, visibility 0s .3s;
     box-shadow: 0 14px 26px rgba(0,0,0,.28);
     max-height: calc(100vh - 100px); overflow-y: auto; -webkit-overflow-scrolling: touch;
-    /* Belt-and-suspenders: stay fully hidden until opened, regardless of height
-       (visibility change waits for the slide-up to finish on close). */
     visibility: hidden;
   }
   .site-header .nav-links.open { transform: translateY(0); visibility: visible; transition: transform .3s; }
   .site-header .nav-links > a, .site-header .nav-drop > a { width: 100%; padding: 1.05rem .2rem !important; border-bottom: 1px solid var(--line); font-size: .9rem !important; }
-  .site-header .nav-links a.active { border-bottom: 1px solid var(--line); }
   .site-header .nav-drop { width: 100%; }
   .site-header .nav-drop > a { padding-right: 3rem !important; }
   .site-header .nav-drop > a .caret { display: none; }
@@ -107,8 +137,7 @@
   .site-header .nav-drop-menu a:hover, .site-header .nav-drop-menu a:active { color: var(--muted) !important; }
 }
 @media (max-width: 480px) {
-  .site-header .brand-tagline { letter-spacing: .16em; }
-  .site-header .header-brand-row { padding-left: 3.7rem; padding-right: 3.7rem; }
+  .site-header .header-main { padding-left: 3.6rem; padding-right: 3.6rem; }
   .site-header .header-actions { right: 1rem; }
   .site-header .burger { left: 1rem; }
 }
