@@ -33,40 +33,40 @@
 .site-header.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.10); }
 
 /* ---- 2. World tabs (BMX / MTB / Skate) ---- */
-.site-header .world-tabs { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: .3rem 1rem; border-bottom: 1px solid var(--line); transition: padding .3s; }
-.site-header.scrolled .world-tabs { padding-top: .18rem; padding-bottom: .18rem; }
-.site-header .world-tab { font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: .12em; color: var(--muted); text-decoration: none; padding: .05rem .1rem .18rem; border-bottom: 2.5px solid transparent; transition: color .2s, border-color .2s; }
+.site-header .world-tabs { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: .2rem 1rem; border-bottom: 1px solid var(--line); transition: padding .3s; }
+.site-header.scrolled .world-tabs { padding-top: .1rem; padding-bottom: .1rem; }
+.site-header .world-tab { font-family: 'Bebas Neue', sans-serif; font-size: .95rem; letter-spacing: .12em; color: var(--muted); text-decoration: none; padding: .05rem .1rem .15rem; border-bottom: 2.5px solid transparent; transition: color .2s, border-color .2s; }
 .site-header .world-tab:hover { color: var(--ink); }
 .site-header .world-tab.is-active { color: var(--ink); border-bottom-color: var(--gold, #C79A3A); }
-.site-header .world-sep { width: 1px; height: 14px; background: var(--line); }
+.site-header .world-sep { width: 1px; height: 12px; background: var(--line); }
 
 /* ---- 3. Main row ---- */
-.site-header .header-main { position: relative; display: flex; align-items: center; justify-content: center; padding: .3rem 1.5rem; transition: padding .3s; }
-.site-header.scrolled .header-main { padding-top: .1rem; padding-bottom: .1rem; }
+.site-header .header-main { position: relative; display: flex; align-items: center; justify-content: center; padding: .18rem 1.5rem; transition: padding .3s; }
+.site-header.scrolled .header-main { padding-top: .05rem; padding-bottom: .05rem; }
 
 /* wordmark (shared img rule — resets the legacy circular-avatar styling that
    some pages still carry on ".brand img") */
 .site-header .brand { display: inline-flex; align-items: center; text-decoration: none; }
-.site-header .brand-logo { width: clamp(150px, 21vw, 300px); height: auto; display: block; border-radius: 0; background: none; border: none; transition: width .3s; }
-.site-header.scrolled .brand-logo { width: clamp(120px, 15vw, 220px); }
+.site-header .brand-logo { width: clamp(130px, 18vw, 260px); height: auto; display: block; border-radius: 0; background: none; border: none; transition: width .3s; }
+.site-header.scrolled .brand-logo { width: clamp(105px, 13vw, 190px); }
 /* the centered wordmark inside the nav (desktop); a separate .brand-mobile is
    shown in the bar on small screens */
-.site-header .nav-brand { margin: 0 1.4rem; }
+.site-header .nav-brand { margin: 0 1.2rem; }
 .site-header .brand-mobile { display: none; }
 
 /* actions pinned right */
-.site-header .header-actions { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .7rem; }
-.site-header .header-actions .wa-link { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #25D366; }
-.site-header .header-actions .wa-link svg { width: 21px; height: 21px; fill: #fff; }
+.site-header .header-actions { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .6rem; }
+.site-header .header-actions .wa-link { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #25D366; }
+.site-header .header-actions .wa-link svg { width: 19px; height: 19px; fill: #fff; }
 .site-header .header-actions .wa-link:hover { opacity: .88; }
-.site-header .cart-btn { position: relative; width: 42px; height: 42px; background: none; border: 0; color: var(--ink); cursor: pointer; }
-.site-header .cart-btn svg { width: 25px; height: 25px; }
-.site-header .cart-badge { position: absolute; top: 2px; right: 2px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: var(--gold, #C79A3A); color: #fff; font-size: .62rem; font-weight: 800; line-height: 17px; text-align: center; }
-.site-header .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--ink); font-size: 1.7rem; cursor: pointer; line-height: 1; }
+.site-header .cart-btn { position: relative; width: 38px; height: 38px; background: none; border: 0; color: var(--ink); cursor: pointer; }
+.site-header .cart-btn svg { width: 23px; height: 23px; }
+.site-header .cart-badge { position: absolute; top: 1px; right: 1px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 9px; background: var(--gold, #C79A3A); color: #fff; font-size: .6rem; font-weight: 800; line-height: 16px; text-align: center; }
+.site-header .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--ink); font-size: 1.6rem; cursor: pointer; line-height: 1; }
 
 /* category links */
 .site-header .nav-links { display: flex; align-items: center; justify-content: center; gap: .1rem; }
-.site-header .nav-links > a, .site-header .nav-drop > a { color: var(--ink); font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: .7rem .85rem; border-radius: 0; border-bottom: 2.5px solid transparent; transition: color .2s, background .2s, border-color .2s; white-space: nowrap; }
+.site-header .nav-links > a, .site-header .nav-drop > a { color: var(--ink); font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: .5rem .7rem; border-radius: 0; border-bottom: 2.5px solid transparent; transition: color .2s, background .2s, border-color .2s; white-space: nowrap; }
 .site-header .nav-links > a:hover, .site-header .nav-drop > a:hover { background: var(--panel); }
 .site-header .nav-links > a.active, .site-header .nav-drop.active > a { color: var(--ink); border-bottom-color: var(--gold, #C79A3A); }
 .site-header .nav-promo { color: var(--gold, #C79A3A) !important; }
@@ -91,14 +91,14 @@
 
 @media (max-width: 980px) {
   .site-header .world-tabs { gap: .8rem; }
-  .site-header .header-main { justify-content: center; padding: .55rem 1.5rem; }
+  .site-header .header-main { justify-content: center; padding: .4rem 1.5rem; }
   .site-header .burger { display: block; }
   .site-header .header-actions .wa-link { display: none; }
   /* on mobile the centered wordmark lives in the bar, not inside the nav */
   .site-header .nav-brand { display: none; }
   .site-header .brand-mobile { display: inline-flex; }
-  .site-header .brand-mobile .brand-logo { width: clamp(150px, 52vw, 300px); max-width: calc(100vw - 140px); }
-  .site-header.scrolled .brand-mobile .brand-logo { width: clamp(120px, 40vw, 240px); }
+  .site-header .brand-mobile .brand-logo { width: clamp(130px, 44vw, 260px); max-width: calc(100vw - 140px); }
+  .site-header.scrolled .brand-mobile .brand-logo { width: clamp(105px, 34vw, 200px); }
   /* category bar collapses into a slide-down under the header.
      bottom:auto is explicit so a leftover inline `inset:… 0 …` (bottom:0) on
      the category pages can't pin both edges and crush the menu to ~36px. */
