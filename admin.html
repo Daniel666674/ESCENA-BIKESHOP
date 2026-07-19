@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --bg: #ffffff; --panel: #f6f6f4; --ink: #0A0A0A; --muted: #666; --line: #ececeb; --good: #1baf7a; }
@@ -212,31 +213,49 @@
 </head>
 <body>
 
-<!-- ============ LOGIN (GitHub token) ============ -->
+<!-- ============ LOGIN ============ -->
 <div class="gate" id="gate">
   <div class="gate-card">
     <img src="assets/img/escena-logo.jpg" alt="ESCENA BMX" />
     <h1>PANEL ADMIN</h1>
-    <p>Ingresa con tu token de GitHub para editar el catálogo. Los cambios se publican directo en la tienda.</p>
-    <form id="tokenForm" style="display:flex;flex-direction:column;gap:.7rem;margin-top:.4rem;text-align:left;">
-      <label style="font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);">Token de acceso</label>
-      <input type="password" id="tokenInput" placeholder="github_pat_… o ghp_…" autocomplete="off" required
-        style="border:1.5px solid var(--line);border-radius:8px;padding:.85rem 1rem;font-size:.85rem;font-family:inherit;" />
-      <label style="display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--muted);font-weight:500;letter-spacing:0;text-transform:none;">
-        <input type="checkbox" id="tokenRemember" style="width:auto;" /> Recordar en este navegador
-      </label>
-      <button type="submit" class="btn btn-ink" id="tokenSubmit">Entrar</button>
-      <p id="tokenError" style="display:none;color:#c0392b;font-size:.76rem;margin:0;"></p>
-    </form>
-    <details style="margin-top:1rem;text-align:left;font-size:.72rem;color:var(--muted);">
-      <summary style="cursor:pointer;font-weight:700;">¿Cómo consigo mi token?</summary>
-      <ol style="margin:.6rem 0 0 1rem;line-height:1.6;">
-        <li>GitHub → Settings → Developer settings → <b>Fine-grained tokens</b> → Generate new token.</li>
-        <li>Repository access: <b>solo</b> el repo <b>ESCENA-BIKESHOP</b>.</li>
-        <li>Permisos → Repository → <b>Contents: Read and write</b>.</li>
-        <li>Genera, copia y pégalo aquí. Nunca lo compartas.</li>
-      </ol>
-    </details>
+
+    <!-- Step 1: Google OAuth -->
+    <div id="gAuthStep">
+      <p>Inicia sesión con tu cuenta Google autorizada para acceder al panel.</p>
+      <div id="g_id_onload"
+           data-client_id="PLACEHOLDER_CLIENT_ID"
+           data-callback="handleCredentialResponse"
+           data-auto_prompt="false">
+      </div>
+      <div style="display:flex;justify-content:center;margin-top:.5rem;">
+        <div class="g_id_signin"
+             data-type="standard"
+             data-size="large"
+             data-theme="outline"
+             data-text="signin_with"
+             data-shape="rectangular"
+             data-logo_alignment="left"
+             data-width="280">
+        </div>
+      </div>
+      <p id="gAuthError" style="display:none;color:#c0392b;font-size:.76rem;margin:.8rem 0 0;"></p>
+    </div>
+
+    <!-- Step 2: GitHub token (shown after Google auth if no saved token) -->
+    <div id="tokenStep" style="display:none;">
+      <p id="gUserLine" style="font-size:.76rem;color:var(--muted);margin-bottom:1rem;"></p>
+      <form id="tokenForm" style="display:flex;flex-direction:column;gap:.7rem;text-align:left;">
+        <label style="font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);">Token de GitHub</label>
+        <input type="password" id="tokenInput" placeholder="github_pat_… o ghp_…" autocomplete="off" required
+          style="border:1.5px solid var(--line);border-radius:8px;padding:.85rem 1rem;font-size:.85rem;font-family:inherit;" />
+        <label style="display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--muted);font-weight:500;letter-spacing:0;text-transform:none;">
+          <input type="checkbox" id="tokenRemember" style="width:auto;" /> Recordar en este navegador
+        </label>
+        <button type="submit" class="btn btn-ink" id="tokenSubmit">Entrar</button>
+        <p id="tokenError" style="display:none;color:#c0392b;font-size:.76rem;margin:0;"></p>
+      </form>
+    </div>
+
   </div>
 </div>
 
@@ -656,6 +675,10 @@
   /* ============ Config ============ */
   var GH = { owner: "Daniel666674", repo: "ESCENA-BIKESHOP", branch: "main" };
   var TOKEN_KEY = "escena_gh_token_v1";
+  /* Google OAuth — fill these in once you have the credentials */
+  var GOOGLE_AUTH_KEY    = "escena_google_authed_v1";
+  var OAUTH_CLIENT_ID    = "PLACEHOLDER_CLIENT_ID"; // e.g. 123456789-abc.apps.googleusercontent.com
+  var OAUTH_ALLOWED_EMAILS = ["PLACEHOLDER_EMAIL"];  // your Gmail address
   var CATALOG_KEY = "escena_admin_catalog_v1"; // local draft cache only
   var CATEGORY_LABELS = {
     marcos: "Marcos", stems: "Cañas", manubrios: "Timón", horquillas: "Tenedores",
@@ -758,6 +781,43 @@
     }, opts.headers || {});
     return fetch("https://api.github.com/repos/" + GH.owner + "/" + GH.repo + path, opts);
   }
+  /* Google OAuth callback — called by Google Identity Services after sign-in */
+  function handleCredentialResponse(response) {
+    try {
+      var parts = response.credential.split('.');
+      var payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+      var email = (payload.email || '').toLowerCase();
+      var allowed = OAUTH_ALLOWED_EMAILS.map(function (e) { return e.toLowerCase(); });
+      if (allowed.indexOf(email) === -1) {
+        var errEl = document.getElementById('gAuthError');
+        if (errEl) { errEl.textContent = 'Acceso denegado: ' + email + ' no está autorizado.'; errEl.style.display = 'block'; }
+        if (window.google && google.accounts) google.accounts.id.disableAutoSelect();
+        return;
+      }
+      sessionStorage.setItem(GOOGLE_AUTH_KEY, email);
+      var tok = getToken();
+      if (tok) {
+        validateToken(tok).then(function (ok) {
+          if (ok) { showApp(); }
+          else { sessionStorage.removeItem(TOKEN_KEY); localStorage.removeItem(TOKEN_KEY); showTokenStep(email); }
+        });
+      } else {
+        showTokenStep(email);
+      }
+    } catch (e) {
+      var errEl = document.getElementById('gAuthError');
+      if (errEl) { errEl.textContent = 'Error al verificar Google. Intenta de nuevo.'; errEl.style.display = 'block'; }
+    }
+  }
+  window.handleCredentialResponse = handleCredentialResponse;
+
+  function showTokenStep(email) {
+    document.getElementById('gAuthStep').style.display = 'none';
+    document.getElementById('tokenStep').style.display = '';
+    var line = document.getElementById('gUserLine');
+    if (line) line.textContent = '✓ ' + email;
+  }
+
   function validateToken(tok) {
     return fetch("https://api.github.com/repos/" + GH.owner + "/" + GH.repo, {
       headers: { "Authorization": "Bearer " + tok, "Accept": "application/vnd.github+json" }
@@ -832,6 +892,16 @@
   function showGate() {
     adminApp.classList.remove("show");
     gate.style.display = "";
+    var gEmail = sessionStorage.getItem(GOOGLE_AUTH_KEY);
+    if (gEmail) {
+      document.getElementById('gAuthStep').style.display = 'none';
+      document.getElementById('tokenStep').style.display = '';
+      var line = document.getElementById('gUserLine');
+      if (line) line.textContent = '✓ ' + gEmail;
+    } else {
+      document.getElementById('gAuthStep').style.display = '';
+      document.getElementById('tokenStep').style.display = 'none';
+    }
   }
 
   /* ---- Section nav: show one section at a time ---- */
@@ -876,7 +946,9 @@
   document.getElementById("adminLogoutBtn").addEventListener("click", function () {
     if (dirty && !confirm("Tienes cambios sin publicar. ¿Salir de todas formas?")) return;
     sessionStorage.removeItem(TOKEN_KEY);
+    sessionStorage.removeItem(GOOGLE_AUTH_KEY);
     localStorage.removeItem(TOKEN_KEY);
+    if (window.google && google.accounts) google.accounts.id.disableAutoSelect();
     window.location.href = "index.html";
   });
 
@@ -2374,8 +2446,10 @@
     if (dirty) { e.preventDefault(); e.returnValue = ""; }
   });
 
-  /* ---- Boot: auto-enter if a valid token is already stored ---- */
+  /* ---- Boot: require Google auth, then auto-enter if GH token saved ---- */
   (function boot() {
+    var gEmail = sessionStorage.getItem(GOOGLE_AUTH_KEY);
+    if (!gEmail) { showGate(); return; }
     var tok = getToken();
     if (!tok) { showGate(); return; }
     validateToken(tok).then(function (ok) {
