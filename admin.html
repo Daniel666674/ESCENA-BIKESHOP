@@ -68,6 +68,7 @@
     .kpi .val { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.7rem; letter-spacing: -.01em; }
     .kpi .delta { font-size: .74rem; font-weight: 700; margin-top: .3rem; }
     .kpi .delta.up { color: var(--good); }
+    .kpi .delta.down { color: #c0392b; }
 
     /* ---- Charts ---- */
     .chart-row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.2rem; margin-bottom: 2.4rem; }
@@ -372,30 +373,35 @@
       </section>
 
       <section id="secAnaliticas" style="display:none;">
-      <!-- ============ GA4 + SEARCH CONSOLE ============ -->
-      <h2 class="section-title">Google Analytics 4<span class="demo-tag">Datos de ejemplo</span></h2>
-      <p class="section-sub">Incluido en los paquetes Premium y Avanzado. Se conecta a la propiedad GA4 real del sitio una vez creada.</p>
+      <!-- ============ GA4 + SEARCH CONSOLE (real data) ============ -->
+      <div id="analyticsConnectBar" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.9rem 1.1rem;margin-bottom:1.4rem;">
+        <div style="font-size:.82rem;color:var(--muted);" id="analyticsStatus">Conecta tu cuenta de Google para ver datos reales de GA4 y Search Console (últimos 28 días).</div>
+        <button type="button" class="btn btn-ink btn-sm" id="analyticsConnectBtn">Conectar con Google</button>
+      </div>
+
+      <h2 class="section-title">Google Analytics 4<span class="demo-tag" id="ga4Tag">Datos de ejemplo</span></h2>
+      <p class="section-sub">Tráfico real del sitio (últimos 28 días vs. los 28 anteriores).</p>
 
       <div class="kpi-row">
         <div class="kpi">
           <div class="lbl">Sesiones</div>
-          <div class="val">2.340</div>
-          <div class="delta up">▲ 18% vs. mes anterior</div>
+          <div class="val" id="ga4Sessions">2.340</div>
+          <div class="delta up" id="ga4SessionsD">▲ 18% vs. periodo anterior</div>
         </div>
         <div class="kpi">
           <div class="lbl">Usuarios</div>
-          <div class="val">1.890</div>
-          <div class="delta up">▲ 15% vs. mes anterior</div>
+          <div class="val" id="ga4Users">1.890</div>
+          <div class="delta up" id="ga4UsersD">▲ 15% vs. periodo anterior</div>
         </div>
         <div class="kpi">
           <div class="lbl">Duración promedio</div>
-          <div class="val">2m 14s</div>
-          <div class="delta up">▲ 6% vs. mes anterior</div>
+          <div class="val" id="ga4Dur">2m 14s</div>
+          <div class="delta up" id="ga4DurD">▲ 6% vs. periodo anterior</div>
         </div>
         <div class="kpi">
           <div class="lbl">Tasa de rebote</div>
-          <div class="val">38%</div>
-          <div class="delta up">▼ 4pts vs. mes anterior</div>
+          <div class="val" id="ga4Bounce">38%</div>
+          <div class="delta up" id="ga4BounceD">▼ 4pts vs. periodo anterior</div>
         </div>
       </div>
 
@@ -411,29 +417,29 @@
         </div>
       </div>
 
-      <h2 class="section-title">Search Console<span class="demo-tag">Datos de ejemplo</span></h2>
-      <p class="section-sub">Rendimiento en resultados de búsqueda de Google. Incluido en los paquetes Premium y Avanzado.</p>
+      <h2 class="section-title">Search Console<span class="demo-tag" id="gscTag">Datos de ejemplo</span></h2>
+      <p class="section-sub">Rendimiento en resultados de búsqueda de Google (últimos 28 días vs. los 28 anteriores).</p>
 
       <div class="kpi-row">
         <div class="kpi">
           <div class="lbl">Clics</div>
-          <div class="val">612</div>
-          <div class="delta up">▲ 22% vs. mes anterior</div>
+          <div class="val" id="gscClicks">612</div>
+          <div class="delta up" id="gscClicksD">▲ 22% vs. periodo anterior</div>
         </div>
         <div class="kpi">
           <div class="lbl">Impresiones</div>
-          <div class="val">18.400</div>
-          <div class="delta up">▲ 9% vs. mes anterior</div>
+          <div class="val" id="gscImpr">18.400</div>
+          <div class="delta up" id="gscImprD">▲ 9% vs. periodo anterior</div>
         </div>
         <div class="kpi">
           <div class="lbl">CTR promedio</div>
-          <div class="val">3.3%</div>
-          <div class="delta up">▲ 0.4pts vs. mes anterior</div>
+          <div class="val" id="gscCtr">3.3%</div>
+          <div class="delta up" id="gscCtrD">▲ 0.4pts vs. periodo anterior</div>
         </div>
         <div class="kpi">
           <div class="lbl">Posición promedio</div>
-          <div class="val">14.2</div>
-          <div class="delta up">▲ 2.1 vs. mes anterior</div>
+          <div class="val" id="gscPos">14.2</div>
+          <div class="delta up" id="gscPosD">▲ 2.1 vs. periodo anterior</div>
         </div>
       </div>
 
@@ -692,6 +698,17 @@
     "escenabmx.co@gmail.com",
     "ivan.escena@gmail.com"
   ];
+  /* ---- Real analytics (GA4 Data API + Search Console API) ----
+     GA4_PROPERTY_ID is the NUMERIC property id (GA4 → Admin → Property Settings),
+     not the "G-…" Measurement ID. Requires the Analytics Data API and Search
+     Console API to be enabled in the Google Cloud project. */
+  var GA4_PROPERTY_ID = "";                 // e.g. "501234567" — fill in to activate
+  // Domain property in Search Console (shown as "escenabmx.com"); the API uses
+  // the sc-domain: form. For a URL-prefix property it'd be "https://escenabmx.com/".
+  var GSC_SITE_URL     = "sc-domain:escenabmx.com";
+  var ANALYTICS_SCOPES =
+    "https://www.googleapis.com/auth/analytics.readonly " +
+    "https://www.googleapis.com/auth/webmasters.readonly";
   var CATALOG_KEY = "escena_admin_catalog_v1"; // local draft cache only
   var CATEGORY_LABELS = {
     bicicletas: "Bicicletas", accesorios: "Accesorios",
@@ -1188,6 +1205,186 @@
       { n: "comprar bmx partes", v: 43 },
       { n: "escena bike shop", v: 38 }
     ], function (v) { return v + " clics"; });
+
+    var cbtn = document.getElementById("analyticsConnectBtn");
+    if (cbtn) cbtn.addEventListener("click", connectAnalytics);
+  }
+
+  /* ============================================================
+     Real analytics — GA4 Data API + Search Console API.
+     Uses Google's OAuth *access-token* flow (separate from the ID-token
+     sign-in): the admin taps "Conectar con Google", grants read-only
+     analytics + search-console scopes, and we query the APIs straight from
+     the browser. The token lives in memory for the session only — nothing is
+     stored, and no secret is involved (the Client ID is public).
+     ============================================================ */
+  var apiToken = null;
+  var apiTokenClient = null;
+
+  function fmtInt(n) { return Math.round(n).toLocaleString("es-CO"); }
+  function fmtDur(sec) {
+    sec = Math.round(sec);
+    var m = Math.floor(sec / 60), s = sec % 60;
+    return m + "m " + (s < 10 ? "0" : "") + s + "s";
+  }
+  function deltaText(cur, prev, opts) {
+    opts = opts || {};
+    if (!prev) return "—";
+    var diff = cur - prev;
+    var arrow = diff >= 0 ? "▲" : "▼";
+    var mag = opts.points
+      ? (Math.abs(Math.round((cur - prev) * 10) / 10) + "pts")
+      : (Math.abs(Math.round((diff / prev) * 100)) + "%");
+    return arrow + " " + mag + " vs. periodo anterior";
+  }
+  function setDelta(elId, cur, prev, opts) {
+    var el = document.getElementById(elId); if (!el) return;
+    opts = opts || {};
+    var better = opts.lowerIsBetter ? (cur <= prev) : (cur >= prev);
+    el.className = "delta " + (better ? "up" : "down");
+    el.textContent = deltaText(cur, prev, opts);
+  }
+  function analyticsStatus(msg) { var el = document.getElementById("analyticsStatus"); if (el) el.textContent = msg; }
+
+  function initApiTokenClient() {
+    if (apiTokenClient) return apiTokenClient;
+    if (!(window.google && google.accounts && google.accounts.oauth2)) return null;
+    apiTokenClient = google.accounts.oauth2.initTokenClient({
+      client_id: OAUTH_CLIENT_ID,
+      scope: ANALYTICS_SCOPES,
+      callback: function (resp) {
+        if (resp && resp.access_token) { apiToken = resp.access_token; loadRealAnalytics(); }
+        else { analyticsStatus("No se pudo conectar con Google. Intenta de nuevo."); }
+      },
+      error_callback: function () { analyticsStatus("Conexión cancelada."); }
+    });
+    return apiTokenClient;
+  }
+  function connectAnalytics() {
+    var c = initApiTokenClient();
+    if (!c) { analyticsStatus("Google API no disponible todavía. Recarga la página."); return; }
+    analyticsStatus("Conectando…");
+    c.requestAccessToken({ prompt: apiToken ? "" : "consent" });
+  }
+  function gapiPost(url, body) {
+    return fetch(url, {
+      method: "POST",
+      headers: { "Authorization": "Bearer " + apiToken, "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    }).then(function (r) {
+      if (r.status === 401) { apiToken = null; throw new Error("token"); }
+      if (!r.ok) return r.text().then(function (t) { throw new Error(r.status + " " + t.slice(0, 160)); });
+      return r.json();
+    });
+  }
+  function loadRealAnalytics() {
+    analyticsStatus("Cargando datos…");
+    var jobs = [];
+    if (GA4_PROPERTY_ID) jobs.push(loadGA4());
+    jobs.push(loadGSC());
+    Promise.allSettled(jobs).then(function (res) {
+      var failed = res.filter(function (r) { return r.status === "rejected"; });
+      if (failed.some(function (f) { return String(f.reason && f.reason.message) === "token"; })) {
+        analyticsStatus("La sesión de Google expiró. Toca “Conectar con Google” otra vez.");
+      } else if (!failed.length) {
+        analyticsStatus("✓ Datos reales (últimos 28 días) — actualizado " + new Date().toLocaleTimeString("es-CO"));
+      } else {
+        analyticsStatus("Algunos datos no cargaron: " + (failed[0].reason && failed[0].reason.message || "error") +
+          ". Verifica que las APIs estén habilitadas, el Property ID sea correcto y el sitio esté verificado en Search Console.");
+      }
+    });
+  }
+
+  /* ---- GA4 Data API ---- */
+  function loadGA4() {
+    var base = "https://analyticsdata.googleapis.com/v1beta/properties/" + GA4_PROPERTY_ID + ":runReport";
+    var kpi = gapiPost(base, {
+      dateRanges: [
+        { startDate: "28daysAgo", endDate: "yesterday" },
+        { startDate: "56daysAgo", endDate: "29daysAgo" }
+      ],
+      metrics: [{ name: "sessions" }, { name: "totalUsers" }, { name: "averageSessionDuration" }, { name: "bounceRate" }]
+    }).then(function (d) {
+      var cur = { s: 0, u: 0, dur: 0, b: 0 }, prev = { s: 0, u: 0, dur: 0, b: 0 };
+      (d.rows || []).forEach(function (row) {
+        var t = row.dimensionValues[0].value === "date_range_0" ? cur : prev;
+        t.s = +row.metricValues[0].value; t.u = +row.metricValues[1].value;
+        t.dur = +row.metricValues[2].value; t.b = +row.metricValues[3].value;
+      });
+      document.getElementById("ga4Sessions").textContent = fmtInt(cur.s);
+      document.getElementById("ga4Users").textContent = fmtInt(cur.u);
+      document.getElementById("ga4Dur").textContent = fmtDur(cur.dur);
+      document.getElementById("ga4Bounce").textContent = Math.round(cur.b * 100) + "%";
+      setDelta("ga4SessionsD", cur.s, prev.s);
+      setDelta("ga4UsersD", cur.u, prev.u);
+      setDelta("ga4DurD", cur.dur, prev.dur);
+      setDelta("ga4BounceD", cur.b, prev.b, { lowerIsBetter: true, points: true });
+    });
+    var weekly = gapiPost(base, {
+      dateRanges: [{ startDate: "56daysAgo", endDate: "yesterday" }],
+      dimensions: [{ name: "yearWeek" }],
+      metrics: [{ name: "sessions" }],
+      orderBys: [{ dimension: { dimensionName: "yearWeek" } }]
+    }).then(function (d) {
+      var rows = d.rows || [];
+      var labels = rows.map(function (_, i) { return "S" + (i + 1); });
+      var vals = rows.map(function (r) { return +r.metricValues[0].value; });
+      if (vals.length) renderBarChart("gaChart", "gaTooltip", labels, vals, "sesiones");
+    });
+    var chan = gapiPost(base, {
+      dateRanges: [{ startDate: "28daysAgo", endDate: "yesterday" }],
+      dimensions: [{ name: "sessionDefaultChannelGroup" }],
+      metrics: [{ name: "sessions" }],
+      orderBys: [{ metric: { metricName: "sessions" }, desc: true }],
+      limit: 6
+    }).then(function (d) {
+      var rows = d.rows || [];
+      var total = rows.reduce(function (s, r) { return s + (+r.metricValues[0].value); }, 0) || 1;
+      var items = rows.map(function (r) {
+        return { n: r.dimensionValues[0].value, v: Math.round((+r.metricValues[0].value / total) * 100) };
+      });
+      if (items.length) renderRankList("channelList", items, function (v) { return v + "%"; });
+    });
+    return Promise.all([kpi, weekly, chan]).then(function () {
+      var tag = document.getElementById("ga4Tag");
+      if (tag) { tag.textContent = "En vivo"; tag.style.background = "#1baf7a"; tag.style.color = "#fff"; }
+    });
+  }
+
+  /* ---- Search Console API ---- */
+  function gscQuery(body) {
+    var url = "https://searchconsole.googleapis.com/webmasters/v3/sites/" +
+      encodeURIComponent(GSC_SITE_URL) + "/searchAnalytics/query";
+    return gapiPost(url, body);
+  }
+  function daysAgo(n) { var d = new Date(); d.setDate(d.getDate() - n); return d.toISOString().slice(0, 10); }
+  function loadGSC() {
+    var cur = { startDate: daysAgo(28), endDate: daysAgo(1) };
+    var prev = { startDate: daysAgo(56), endDate: daysAgo(29) };
+    var totals = Promise.all([
+      gscQuery({ startDate: cur.startDate, endDate: cur.endDate, dimensions: [] }),
+      gscQuery({ startDate: prev.startDate, endDate: prev.endDate, dimensions: [] })
+    ]).then(function (rr) {
+      function agg(d) { var r = (d.rows && d.rows[0]) || {}; return { clicks: r.clicks || 0, impr: r.impressions || 0, ctr: r.ctr || 0, pos: r.position || 0 }; }
+      var c = agg(rr[0]), p = agg(rr[1]);
+      document.getElementById("gscClicks").textContent = fmtInt(c.clicks);
+      document.getElementById("gscImpr").textContent = fmtInt(c.impr);
+      document.getElementById("gscCtr").textContent = (c.ctr * 100).toFixed(1) + "%";
+      document.getElementById("gscPos").textContent = c.pos.toFixed(1);
+      setDelta("gscClicksD", c.clicks, p.clicks);
+      setDelta("gscImprD", c.impr, p.impr);
+      setDelta("gscCtrD", c.ctr * 100, p.ctr * 100, { points: true });
+      setDelta("gscPosD", c.pos, p.pos, { lowerIsBetter: true, points: true });
+    });
+    var queries = gscQuery({ startDate: cur.startDate, endDate: cur.endDate, dimensions: ["query"], rowLimit: 8 })
+      .then(function (d) {
+        var items = (d.rows || []).map(function (r) { return { n: r.keys[0], v: r.clicks }; });
+        if (items.length) renderRankList("queryList", items, function (v) { return fmtInt(v) + " clics"; });
+      });
+    return Promise.all([totals, queries]).then(function () {
+      var tag = document.getElementById("gscTag");
+      if (tag) { tag.textContent = "En vivo"; tag.style.background = "#1baf7a"; tag.style.color = "#fff"; }
+    });
   }
 
   /* ---- Inventory manager ---- */
