@@ -2,7 +2,7 @@
 
 > Tienda de partes y componentes BMX en Colombia con más de 100 productos en stock. Riders montando una tienda para riders: stems, manubrios, horquillas, bielas, bujes, piñones, pedales, sillines y más, de las mejores marcas, con pedidos por WhatsApp y envíos a todo el país.
 
-ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. Vende únicamente partes originales de marcas reconocidas de la escena BMX mundial y despacha a los 32 departamentos de Colombia. La compra se realiza por WhatsApp y el pago se coordina por Nequi, Daviplata, transferencia bancaria o efectivo.
+ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. Trabaja directamente con marcas reconocidas de la escena BMX mundial y despacha a los 32 departamentos de Colombia. La compra se realiza por WhatsApp y el pago se coordina por Nequi, Daviplata, transferencia bancaria o efectivo.
 
 ## Datos clave
 - Nombre: ESCENA BIKE SHOP
@@ -16,6 +16,7 @@ ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. V
 - Idioma: Español (Colombia)
 
 ## Categorías de producto
+- Bicicletas completas
 - Marcos / frames (street, park y dirt)
 - Cañas / stems (front load y top load)
 - Timones / manubrios (cromoly cross brace)
@@ -34,22 +35,23 @@ ESCENA BIKE SHOP es un negocio colombiano especializado en componentes de BMX. V
 - Tornillería (incluye titanio)
 - Herramientas (multiherramientas, llaves)
 - Piezas varias: kits de freecoaster, cadenas, ejes, amarres
+- Ropa y accesorios: tenis, camisetas, chaquetas, gorras, accesorios
 
 ## Marcas
 Animal, BSD, Brainstorm, Colony, Cult, Demolition, Éclat, ESCENA, Fate, Federal, Fiend, Fit Bike Co, Iron Fist, Mutany, Odyssey, S&M, Shadow, Stolen, Stranger, Subrosa, Sunday, Tall Order, Total, TukanBikes, Volume, Wethepeople.
 
 ## Páginas
-- Inicio: https://escenabmx.com/
-- Tienda (catálogo completo, paginado y filtrable por categoría): https://escenabmx.com/tienda.html
+- Inicio: https://escenabmx.com/inicio
+- Tienda (catálogo completo, paginado y filtrable por categoría): https://escenabmx.com/tienda
 - Fichas de producto individuales (una por SKU, con precio, especificaciones y pedido directo): https://escenabmx.com/producto/
-- Arma tu BMX (configurador guiado para armar una bici completa a tu medida desde cero): https://escenabmx.com/armar-bmx.html
-- Blog (guías de compra, mantenimiento y cultura BMX): https://escenabmx.com/blog.html
-- Mayoristas (programa de precios al por mayor para tiendas y revendedores): https://escenabmx.com/mayoristas.html
-- Envíos: https://escenabmx.com/envios.html
-- Devoluciones y cambios: https://escenabmx.com/devoluciones.html
-- Términos y condiciones: https://escenabmx.com/terminos.html
-- Política de privacidad: https://escenabmx.com/politica-privacidad.html
-- Política de cookies: https://escenabmx.com/politica-cookies.html
+- Arma tu BMX (configurador guiado para armar una bici completa a tu medida desde cero): https://escenabmx.com/armar-bmx
+- Blog (guías de compra, mantenimiento y cultura BMX): https://escenabmx.com/blog
+- Mayoristas (programa de precios al por mayor para tiendas y revendedores): https://escenabmx.com/mayoristas
+- Envíos: https://escenabmx.com/envios
+- Devoluciones y cambios: https://escenabmx.com/devoluciones
+- Términos y condiciones: https://escenabmx.com/terminos
+- Política de privacidad: https://escenabmx.com/politica-privacidad
+- Política de cookies: https://escenabmx.com/politica-cookies
 
 ## Cómo comprar
 1. El cliente elige los productos en el sitio (filtrando por categoría, buscando en la tienda, o usando el configurador "Arma tu BMX" para armar una bici completa a su medida).

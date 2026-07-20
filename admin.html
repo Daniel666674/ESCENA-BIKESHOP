@@ -1832,13 +1832,21 @@
       inventoryCatalog.forEach(function (p) {
         if (p.published === false && createdSlugs.indexOf(p.slug) > -1) { p.published = true; markDirty(p.slug); }
       });
-      // add new pages to sitemap.xml — recomputed against the freshest remote
-      // sitemap on every attempt, so a retry never reapplies a stale insert.
-      if (!createdSlugs.length) return Promise.resolve();
-      return ghPutWithRetry("sitemap.xml", "Add " + createdSlugs.length + " product page(s) to sitemap (admin)", function (remoteText) {
+      // Reconcile sitemap.xml against every currently-published product, not just
+      // this session's newly-onboarded ones (createdSlugs) — self-healing against
+      // any product that reached the catalog without going through the normal
+      // onboarding flow (CSV/JSON import of already-published rows, a legacy page
+      // migrated straight into products-data.js, etc.), so nothing silently stays
+      // unindexed. Recomputed against the freshest remote sitemap on every attempt;
+      // only ever appends missing entries, never touches existing ones.
+      var publishedSlugs = inventoryCatalog.filter(function (p) {
+        return p.published !== false && eligible(p);
+      }).map(function (p) { return p.slug; });
+      if (!publishedSlugs.length) return Promise.resolve();
+      return ghPutWithRetry("sitemap.xml", "Sync product pages in sitemap.xml (admin)", function (remoteText) {
         if (!remoteText) return null;
         var today = new Date().toISOString().slice(0, 10);
-        var adds = createdSlugs.filter(function (s) { return remoteText.indexOf("/producto/" + s + "<") === -1; }).map(function (s) {
+        var adds = publishedSlugs.filter(function (s) { return remoteText.indexOf("/producto/" + s + "<") === -1; }).map(function (s) {
           return "  <url>\n    <loc>https://escenabmx.com/producto/" + s + "</loc>\n    <lastmod>" + today + "</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>";
         });
         if (!adds.length) return null;
