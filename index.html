@@ -257,16 +257,6 @@
     .review .who b { display: block; font-size: .82rem; }
     .review .who span { font-size: .72rem; color: var(--muted); }
 
-    /* ============ BRANDS STRIP ============ */
-    .brands-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2rem 1.5rem; }
-    .brands-strip-hint { text-align: center; font-size: .74rem; letter-spacing: .04em; color: var(--muted); margin-bottom: 1.1rem; }
-    .brands-row { max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; }
-    .brands-row .bs-chip { display: flex; align-items: center; justify-content: center; height: 64px; padding: .6rem 1.4rem; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; filter: grayscale(1); opacity: .7; transition: filter .2s, opacity .2s; }
-    .brands-row .bs-chip:hover { filter: grayscale(0); opacity: 1; }
-    .brands-row .bs-chip a { display: flex; align-items: center; justify-content: center; height: 100%; }
-    .brands-row .bs-chip img { display: block; height: 100%; width: auto; max-width: 150px; object-fit: contain; }
-    @media (max-width: 640px) { .brands-row .bs-chip { height: 46px; padding: .4rem 1rem; } .brands-row .bs-chip img { max-width: 110px; } }
-
     /* ============ INSTAGRAM ============ */
     .ig-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
     .ig-handle { display: flex; align-items: center; gap: .7rem; }
@@ -595,12 +585,6 @@
 </section>
 -->
 
-<!-- ============ BRANDS STRIP ============ -->
-<div class="brands-strip" id="marcas">
-  <p class="brands-strip-hint">Toca una marca para ver sus productos</p>
-  <div class="brands-row" id="brandsStripRow"></div>
-</div>
-
 <!-- ============ INSTAGRAM ============ -->
 <section>
   <div class="wrap">
@@ -796,37 +780,9 @@
     start();
   })();
 
-  /* ---- Brand marquee ---- */
-  var BRAND_LOGOS = [
-    { name: "Mutanty", key: "Mutanty", img: "assets/img/logo_01_Mutanty.png" },
-    { name: "Fate", img: "assets/img/logo_02_Fate.jpeg" },
-    { name: "Cult", img: "assets/img/logo_03_Cult.png" },
-    { name: "Fiend", img: "assets/img/logo_04_Fiend.jpeg" },
-    { name: "Shadow", img: "assets/img/logo_05_Shadow.png" },
-    { name: "Wethepeople", img: "assets/img/logo_06_Wethepeople.png" },
-    { name: "Odyssey", img: "assets/img/logo_07_Odyssey.png" },
-    { name: "BSD", img: "assets/img/logo_08_BSD.png" },
-    { name: "Éclat", img: "assets/img/logo_09_Eclat.png" },
-    { name: "Demolition", img: "assets/img/logo_10_Demolition.png" },
-    { name: "Kink BMX", img: "assets/img/logo_11_KinkBMX.png" },
-    { name: "Federal", img: "assets/img/logo_12_Federal.png" },
-    { name: "Animal", img: "assets/img/logo_13_Animal.png" },
-    { name: "Merritt", img: "assets/img/logo_14_Merritt.jpeg" },
-    { name: "Subrosa", img: "assets/img/logo_15_Subrosa.jpeg" },
-    { name: "Stranger", img: "assets/img/logo_16_Stranger.jpeg" },
-    { name: "Volume", img: "assets/img/logo_17_Volume.jpeg" },
-    { name: "Profile Racing", img: "assets/img/logo_18_ProfileRacing.jpeg" },
-    { name: "Cinema", img: "assets/img/logo_19_Cinema.jpeg" },
-    { name: "Primo", img: "assets/img/logo_20_Primo.jpeg" }
-  ];
-  /* The moving brand marquee now lives in the global top strip, built by
-     assets/js/cart.js (#brandStripTrack). BRAND_LOGOS is still used below for
-     the static brands grid. */
-
-  /* ---- Brands strip (before Instagram) ---- */
-  document.getElementById("brandsStripRow").innerHTML = BRAND_LOGOS.map(function(b){
-    return '<span class="bs-chip"><a href="tienda?brand=' + encodeURIComponent(b.key || b.name) + '"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy" width="150" height="64"></a></span>';
-  }).join("");
+  /* The moving brand marquee lives in the global top strip, built by
+     assets/js/cart.js (#brandStripTrack). The static brands grid that used
+     to sit before Instagram has been removed. */
 
   /* ---- Newsletter popup (once per browser session) ---- */
   var nlOverlay = document.getElementById("nlOverlay");
