@@ -37,7 +37,7 @@
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="assets/css/cart.css" />
   <link rel="stylesheet" href="assets/css/cookie-consent.css" />
-  <link rel="stylesheet" href="assets/css/site-header.css?v=8" />
+  <link rel="stylesheet" href="assets/css/site-header.css?v=9" />
   <script src="assets/js/wholesale.js?v=1"></script>
   <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 
@@ -524,22 +524,6 @@
   </div>
 </section>
 
-<!-- ============ DESTACADOS (preview, full catalog lives on tienda.html) ============ -->
-<section id="tienda">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Selección de la casa</span>
-      <h2>DESTACADOS <span class="bar">/</span> 100+ EN STOCK</h2>
-    </div>
-
-    <div class="grid" id="grid"><!-- featured products injected by JS --></div>
-
-    <div style="text-align:center;margin-top:2.5rem;">
-      <a href="tienda" class="btn btn-ink">Ver toda la tienda →</a>
-    </div>
-  </div>
-</section>
-
 <!-- ============ VALUE PROPS ============ -->
 <!-- ============ BRAND STORY ============ -->
 <section id="escena" class="story">
@@ -738,72 +722,7 @@
 </a>
 
 <script>
-  /* ---- Featured products (full catalog lives on tienda.html) ---- */
-  /* Curated featured set — resolved to LIVE catalog data by stable slug so
-     price/name/photo/stock always match what the admin publishes. */
-  var FEATURED_FALLBACK = [
-    { n:"Caña Volume Front Load", brand:"Volume", spec:"Front load · 48mm · Aluminio pulido plata", price:210000, tag:"Nuevo", img:"assets/img/products/volume-stem-front-load-plata.jpg" },
-    { n:"Tenedor Wethepeople Cromado", brand:"Wethepeople", spec:"Cromoly · Tubo recto · Cromado", price:420000, tag:"", img:"assets/img/products/wethepeople-horquilla-cromada.jpg" },
-    { n:"Bielas Mutanty Savage 165", brand:"Mutanty", spec:"Cromoly · 48 spline · 165mm · Negro", price:420000, tag:"Top", img:"assets/img/products/mutany-savage-bielas-negro.jpg" },
-    { n:"Manzana Trasera Mutanty Mercury Elite LHD", brand:"Mutanty", spec:"Cassette · LHD · Negro", price:390000, tag:"Top", img:"assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg" },
-    { n:"Éclat Trippin Rin", brand:"Éclat", spec:"20\" · Doble pared · 36H · Negro", price:240000, tag:"", img:"assets/img/products/eclat-trippin-rin-negro.jpg" },
-    { n:"Plato Odyssey 28T Negro", brand:"Odyssey", spec:"28T · Aluminio CNC · Negro", price:150000, tag:"", img:"assets/img/products/odyssey-pinon-28t-negro.jpg" },
-    { n:"Silla Cult x Vans Pivotal", brand:"Cult", spec:"Pivotal slim · Cordura · Negro", price:185000, tag:"Colab", img:"assets/img/products/cult-vans-sillin-negro.jpg" },
-    { n:"Pedales Demolition Rosa", brand:"Demolition", spec:"Plataforma nylon · Rosa", price:100000, tag:"", img:"assets/img/products/demolition-pedales-rosa.jpg" }
-  ];
-  function _slugFromImg(img){ return (img||"").split("/").pop().replace(/\.[a-zA-Z0-9]+$/, ""); }
-  var _CATALOG = window.ESCENA_PRODUCTS || [];
-  function _findLive(slug){
-    for (var i=0;i<_CATALOG.length;i++){ var p=_CATALOG[i]; if ((p.slug||_slugFromImg(p.img))===slug) return p; }
-    return null;
-  }
-  var FEATURED = FEATURED_FALLBACK.map(function(fb){
-    var live = _findLive(_slugFromImg(fb.img));
-    if (live && live.published !== false) {
-      return { n:live.n, brand:live.brand, spec:live.spec, price:live.price, tag:live.tag||"", img:live.img||fb.img, units:live.units };
-    }
-    return fb;
-  });
   var WA = "573107630504";
-  function cop(n){
-    if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
-    return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
-  }
-    function esc(s) {
-    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-  }
-  function slugOf(p){
-    var file = p.img.split("/").pop();
-    return file.replace(/\.[a-zA-Z0-9]+$/, "");
-  }
-  (function renderFeatured(){
-    var g = document.getElementById("grid");
-    g.innerHTML = FEATURED.map(function(p){
-      var wPrefix = (window.EscenaWholesale && window.EscenaWholesale.isActive()) ? "🏷️ PEDIDO MAYORISTA (15% aplicado)\n" : "";
-      var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
-      var href = "producto/" + slugOf(p);
-      var agotado = (typeof p.units === "number" && p.units <= 0);
-      var tagHTML = agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+esc(p.tag)+'</span>' : '');
-      return '<article class="card'+(agotado ? ' is-agotado' : '')+'">' +
-          '<a class="ph-link" href="'+href+'">' +
-            '<div class="ph">' + tagHTML +
-              '<img src="'+p.img+'" alt="'+esc(p.n)+' - '+esc(p.brand)+' BMX" loading="lazy" width="400" height="400"></div>' +
-          '</a>' +
-          '<div class="body">' +
-            '<span class="brand-lbl">'+esc(p.brand)+'</span>' +
-            '<h3><a class="title-link" href="'+href+'">'+esc(p.n)+'</a></h3>' +
-            '<p class="spec">'+esc(p.spec)+'</p>' +
-            '<div class="price">'+cop(p.price)+'</div>' +
-            '<div class="card-actions">' +
-              (agotado
-                ? '<span class="buy" style="opacity:.5;pointer-events:none;text-align:center;">Agotado</span>'
-                : '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
-                  '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+esc(p.n)+'" data-brand="'+esc(p.brand)+'" data-price="'+p.price+'" data-img="'+p.img+'" data-units="'+(typeof p.units === "number" ? p.units : "")+'">Agregar al carrito</button>') +
-            '</div>' +
-          '</div>' +
-        '</article>';
-    }).join("");
-  })();
 
   /* ---- Mobile nav ---- */
   var burger = document.getElementById("burger"), nav = document.getElementById("nav");

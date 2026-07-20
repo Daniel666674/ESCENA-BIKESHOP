@@ -44,16 +44,6 @@
   background: rgba(10, 10, 10, .97);
   box-shadow: 0 4px 24px rgba(0, 0, 0, .35);
 }
-.site-header .nav-links > a, .site-header .nav-drop > a { color: #fff; }
-.site-header .nav-links > a:hover, .site-header .nav-drop > a:hover { background: rgba(255, 255, 255, .12); }
-.site-header .nav-links > a.active, .site-header .nav-drop.active > a { color: #fff; }
-.site-header .nav-promo { color: var(--gold, #C79A3A) !important; }
-.site-header .world-tab { color: rgba(255, 255, 255, .55); }
-.site-header .world-tab:hover { color: #fff; }
-.site-header .world-tab.is-active { color: #fff; }
-.site-header .world-sep { background: rgba(255, 255, 255, .25); }
-.site-header .burger, .site-header .cart-btn { color: #fff; }
-
 /* ---- 3. Main row (now renders first — world tabs sit under the logo) ---- */
 .site-header .header-main { position: relative; display: flex; align-items: center; justify-content: center; padding: .18rem 1.5rem; transition: padding .3s; }
 .site-header.scrolled .header-main { padding-top: .05rem; padding-bottom: .05rem; }
@@ -61,10 +51,10 @@
 /* ---- 2. World tabs (BMX / MTB / Skate) — directly under the centered wordmark ---- */
 .site-header .world-tabs { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: .1rem 1rem .35rem; transition: padding .3s; }
 .site-header.scrolled .world-tabs { padding-top: .05rem; padding-bottom: .18rem; }
-.site-header .world-tab { font-family: 'Bebas Neue', sans-serif; font-size: .95rem; letter-spacing: .12em; color: var(--muted); text-decoration: none; padding: .05rem .1rem .15rem; border-bottom: 2.5px solid transparent; transition: color .2s, border-color .2s; }
-.site-header .world-tab:hover { color: var(--ink); }
-.site-header .world-tab.is-active { color: var(--ink); border-bottom-color: var(--gold, #C79A3A); }
-.site-header .world-sep { width: 1px; height: 12px; background: var(--line); }
+.site-header .world-tab { font-family: 'Bebas Neue', sans-serif; font-size: .95rem; letter-spacing: .12em; color: rgba(255, 255, 255, .55); text-decoration: none; padding: .05rem .1rem .15rem; border-bottom: 2.5px solid transparent; transition: color .2s, border-color .2s; }
+.site-header .world-tab:hover { color: #fff; }
+.site-header .world-tab.is-active { color: #fff; border-bottom-color: var(--gold, #C79A3A); }
+.site-header .world-sep { width: 1px; height: 12px; background: rgba(255, 255, 255, .25); }
 
 /* wordmark (shared img rule — resets the legacy circular-avatar styling that
    some pages still carry on ".brand img") */
@@ -81,16 +71,16 @@
 .site-header .header-actions .wa-link { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #25D366; }
 .site-header .header-actions .wa-link svg { width: 19px; height: 19px; fill: #fff; }
 .site-header .header-actions .wa-link:hover { opacity: .88; }
-.site-header .cart-btn { position: relative; width: 38px; height: 38px; background: none; border: 0; color: var(--ink); cursor: pointer; }
+.site-header .cart-btn { position: relative; width: 38px; height: 38px; background: none; border: 0; color: #fff; cursor: pointer; }
 .site-header .cart-btn svg { width: 23px; height: 23px; }
 .site-header .cart-badge { position: absolute; top: 1px; right: 1px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 9px; background: var(--gold, #C79A3A); color: #fff; font-size: .6rem; font-weight: 800; line-height: 16px; text-align: center; }
-.site-header .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--ink); font-size: 1.6rem; cursor: pointer; line-height: 1; }
+.site-header .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: #fff; font-size: 1.6rem; cursor: pointer; line-height: 1; }
 
 /* category links */
 .site-header .nav-links { display: flex; align-items: center; justify-content: center; gap: .1rem; }
-.site-header .nav-links > a, .site-header .nav-drop > a { color: var(--ink); font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: .5rem .7rem; border-radius: 0; border-bottom: 2.5px solid transparent; transition: color .2s, background .2s, border-color .2s; white-space: nowrap; }
-.site-header .nav-links > a:hover, .site-header .nav-drop > a:hover { background: var(--panel); }
-.site-header .nav-links > a.active, .site-header .nav-drop.active > a { color: var(--ink); border-bottom-color: var(--gold, #C79A3A); }
+.site-header .nav-links > a, .site-header .nav-drop > a { color: #fff; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: .5rem .7rem; border-radius: 0; border-bottom: 2.5px solid transparent; transition: color .2s, background .2s, border-color .2s; white-space: nowrap; }
+.site-header .nav-links > a:hover, .site-header .nav-drop > a:hover { background: rgba(255, 255, 255, .12); }
+.site-header .nav-links > a.active, .site-header .nav-drop.active > a { color: #fff; border-bottom-color: var(--gold, #C79A3A); }
 .site-header .nav-promo { color: var(--gold, #C79A3A) !important; }
 
 /* dropdowns (Partes / Protecciones / Ropa) */
