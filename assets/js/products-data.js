@@ -3,7 +3,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Rodicanitobilleras R2",
   "brand": "R2 protect",
   "cat": "rodi-cani-tobilleras",
-  "spec": "",
+  "spec": "Diseño comodo para proteger rodilla, canilla y tobillo Proteccion 4 laminas",
   "price": 160000,
   "sku": "RCT-R2P-001",
   "units": 36,
