@@ -1,5 +1,30 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodilleras Valkiria",
+  "brand": "Valkiria",
+  "cat": "rodilleras",
+  "spec": "Rodilleras con velcro parte superior e inferior con ajuste seguro para mayor proteccion",
+  "price": 125000,
+  "sku": "ROD-VAL-002",
+  "units": 11,
+  "slug": "rodilleras-valkiria",
+  "colors": [
+   {
+    "label": "Talla S",
+    "units": 1
+   },
+   {
+    "label": "Talla M",
+    "units": 5
+   },
+   {
+    "label": "Talla L",
+    "units": 5
+   }
+  ],
+  "img": "assets/img/products/rodilleras-valkiria.jpg?v=1784590208418"
+ },
+ {
   "n": "Rodicanitobilleras R2",
   "brand": "R2 protect",
   "cat": "rodi-cani-tobilleras",
