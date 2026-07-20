@@ -1,5 +1,26 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Canitobilleras R2",
+  "brand": "R2 Protecciones",
+  "cat": "rodi-cani-tobilleras",
+  "spec": "",
+  "price": 90000,
+  "sku": "RCT-R2P-001",
+  "units": 12,
+  "colors": [
+   {
+    "label": "Talla M",
+    "units": 6
+   },
+   {
+    "label": "Talla L",
+    "units": 6
+   }
+  ],
+  "slug": "canitobilleras-r2",
+  "img": "assets/img/products/canitobilleras-r2.jpg?v=1784585611637"
+ },
+ {
   "n": "Casco TSG Dawn Blanco",
   "brand": "TSG",
   "cat": "cascos",
