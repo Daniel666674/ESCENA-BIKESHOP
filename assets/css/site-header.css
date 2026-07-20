@@ -17,8 +17,12 @@
    Small white chips on a dark band — thin/subtle, but each logo stays in its
    natural colours (the logos are a mix of transparent PNGs and white-background
    JPEGs, so a single tint/invert can't work for both). */
-.brand-strip { background: rgba(10, 10, 10, .94); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); overflow: hidden; padding: 9px 0; }
-.brand-strip-track { display: flex; width: max-content; animation: bsScroll 60s linear infinite; }
+/* No backdrop-filter here: combined with overflow:hidden and the child's
+   infinite transform animation, iOS Safari's compositor can freeze the
+   marquee after the first paint. Not needed anyway at .94 opacity — the
+   blur added nothing visible over the already near-solid background. */
+.brand-strip { background: rgba(10, 10, 10, .94); overflow: hidden; padding: 9px 0; }
+.brand-strip-track { display: flex; width: max-content; animation: bsScroll 60s linear infinite; will-change: transform; -webkit-transform: translateZ(0); transform: translateZ(0); }
 @media (hover: hover) and (pointer: fine) { .brand-strip:hover .brand-strip-track { animation-play-state: paused; } }
 .brand-strip-group { display: flex; align-items: center; flex-shrink: 0; }
 .brand-strip .bs-chip { display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin: 0 .4rem; }
