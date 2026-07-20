@@ -89,22 +89,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/casco-tsg-evolution-negro.jpg?v=1784399938241"
  },
  {
-  "n": "Rodilleras Valkiria",
-  "brand": "Valkiria",
-  "cat": "rodilleras",
-  "spec": "Rodilleras Valkiria",
-  "price": 125000,
-  "sku": "ROD-VAL-001",
-  "units": 2,
-  "imgs": [
-   "assets/img/products/rodilleras-valkiria.jpg?v=1784399817709",
-   "assets/img/products/rodilleras-valkiria-2.jpg?v=1784399818978",
-   "assets/img/products/rodilleras-valkiria-3.jpg?v=1784399820153"
-  ],
-  "slug": "rodilleras-valkiria",
-  "img": "assets/img/products/rodilleras-valkiria.jpg?v=1784399817709"
- },
- {
   "n": "Caña Cult Mind Control Negra - Top load",
   "brand": "Cult",
   "cat": "stems",
