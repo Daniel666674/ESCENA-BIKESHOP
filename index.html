@@ -37,7 +37,7 @@
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="assets/css/cart.css" />
   <link rel="stylesheet" href="assets/css/cookie-consent.css" />
-  <link rel="stylesheet" href="assets/css/site-header.css?v=5" />
+  <link rel="stylesheet" href="assets/css/site-header.css?v=6" />
   <script src="assets/js/wholesale.js?v=1"></script>
   <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 
@@ -197,13 +197,10 @@
       min-height: 220px; background-size: cover; background-position: center;
       transition: transform .3s, box-shadow .3s; isolation: isolate;
     }
-    .cat::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(10,10,10,.15) 0%, rgba(10,10,10,.88) 100%); }
+    .cat::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(10,10,10,.38) 0%, rgba(10,10,10,.5) 50%, rgba(10,10,10,.62) 100%); }
     .cat:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(0,0,0,.22); }
-    .cat .content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.2rem; }
-    .cat h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .04em; color: #fff; }
-    .cat p { font-size: .78rem; color: rgba(255,255,255,.7); margin-top: .2rem; }
-    .cat .arrow { position: absolute; bottom: 1rem; right: 1rem; z-index: 2; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3); display: flex; align-items: center; justify-content: center; color: #fff; font-size: .85rem; transition: background .2s, transform .2s; }
-    .cat:hover .arrow { background: #fff; color: var(--ink); transform: translateX(2px); }
+    .cat .content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.2rem; text-align: center; }
+    .cat h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; letter-spacing: .04em; color: #fff; }
 
     /* ============ PRODUCTS ============ */
     #tienda { background: #fff; }
@@ -371,15 +368,10 @@
 <div class="brand-strip" aria-label="Marcas que manejamos">
   <div class="brand-strip-track" id="brandStripTrack" aria-hidden="true"></div>
 </div>
+<div class="brand-strip" aria-label="Marcas que manejamos">
+  <div class="brand-strip-track" id="brandStripTrack" aria-hidden="true"></div>
+</div>
 <header class="site-header">
-  <nav class="world-tabs" aria-label="Mundos ESCENA">
-    <a href="inicio" class="world-tab" data-world="bmx">BMX</a>
-    <span class="world-sep" aria-hidden="true"></span>
-    <a href="mtb" class="world-tab" data-world="mtb">MTB</a>
-    <span class="world-sep" aria-hidden="true"></span>
-    <a href="skate" class="world-tab" data-world="skate">Skate</a>
-  </nav>
-
   <div class="header-main">
     <button class="burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="nav">☰</button>
     <a href="inicio" class="brand brand-mobile" aria-label="ESCENA BMX - Inicio"><img class="brand-logo" src="assets/img/escena-wordmark.png" alt="ESCENA BMX" width="167" height="34" /></a>
@@ -454,6 +446,14 @@
       </button>
     </div>
   </div>
+
+  <nav class="world-tabs" aria-label="Mundos ESCENA">
+    <a href="inicio" class="world-tab" data-world="bmx">BMX</a>
+    <span class="world-sep" aria-hidden="true"></span>
+    <a href="mtb" class="world-tab" data-world="mtb">MTB</a>
+    <span class="world-sep" aria-hidden="true"></span>
+    <a href="skate" class="world-tab" data-world="skate">Skate</a>
+  </nav>
 </header>
 
 <!-- ============ HERO (split) ============ -->
@@ -497,36 +497,28 @@
     </div>
     <div class="cats">
       <a href="tienda?cat=stems" class="cat" style="background-image:url('assets/img/products/volume-stem-front-load-plata.jpg')">
-        <div class="content"><h3>Cañas</h3><p>Front load y top load para control total.</p></div>
-        <span class="arrow">→</span>
+        <div class="content"><h3>Cañas</h3></div>
       </a>
       <a href="tienda?cat=manubrios" class="cat" style="background-image:url('assets/img/products/manubrio-cromoly-negro-01.jpg')">
-        <div class="content"><h3>Timón</h3><p>Cromoly cross brace, altura para cada estilo.</p></div>
-        <span class="arrow">→</span>
+        <div class="content"><h3>Timón</h3></div>
       </a>
       <a href="tienda?cat=horquillas" class="cat" style="background-image:url('assets/img/products/federal-horquilla-cromada.jpg')">
-        <div class="content"><h3>Tenedores</h3><p>Cromoly resistente para street y park.</p></div>
-        <span class="arrow">→</span>
+        <div class="content"><h3>Tenedores</h3></div>
       </a>
       <a href="tienda?cat=bielas" class="cat" style="background-image:url('assets/img/products/mutany-savage-bielas-negro.jpg')">
-        <div class="content"><h3>Bielas</h3><p>Cromoly 48 spline que no perdona.</p></div>
-        <span class="arrow">→</span>
+        <div class="content"><h3>Bielas</h3></div>
       </a>
       <a href="tienda?cat=manzana-trasera" class="cat" style="background-image:url('assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg')">
-        <div class="content"><h3>Manzanas</h3><p>Cassette y freecoaster, delanteros y traseros.</p></div>
-        <span class="arrow">→</span>
+        <div class="content"><h3>Manzanas</h3></div>
       </a>
       <a href="tienda?cat=pinones" class="cat" style="background-image:url('assets/img/products/odyssey-pinon-28t-negro.jpg')">
-        <div class="content"><h3>Plato</h3><p>Aluminio CNC, distintos dientes y colores.</p></div>
-        <span class="arrow">→</span>
+        <div class="content"><h3>Plato</h3></div>
       </a>
       <a href="tienda?cat=sillines" class="cat" style="background-image:url('assets/img/products/cult-vans-sillin-negro.jpg')">
-        <div class="content"><h3>Sillas</h3><p>Pivotal slim, cómodos y ligeros.</p></div>
-        <span class="arrow">→</span>
+        <div class="content"><h3>Sillas</h3></div>
       </a>
       <a href="tienda?cat=pedales" class="cat" style="background-image:url('assets/img/products/pedales-metal-negro-02.jpg')">
-        <div class="content"><h3>Pedales</h3><p>Plataforma nylon o aluminio, agarre total.</p></div>
-        <span class="arrow">→</span>
+        <div class="content"><h3>Pedales</h3></div>
       </a>
     </div>
   </div>
