@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tobilleras Estabilizadoras Valkiria",
+  "brand": "Valkiria",
+  "cat": "tobilleras",
+  "spec": "",
+  "price": 120000,
+  "sku": "TOB-VAL-001",
+  "units": 0,
+  "colors": [
+   {
+    "label": "Talla S",
+    "units": 2
+   }
+  ],
+  "slug": "tobilleras-estabilizadoras-valkiria",
+  "img": "assets/img/products/tobilleras-estabilizadoras-valkiria.jpg?v=1784590947267"
+ },
+ {
   "n": "Rodilleras Valkiria",
   "brand": "Valkiria",
   "cat": "rodilleras",
