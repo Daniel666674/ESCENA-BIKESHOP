@@ -17,7 +17,7 @@
    Small white chips on a dark band — thin/subtle, but each logo stays in its
    natural colours (the logos are a mix of transparent PNGs and white-background
    JPEGs, so a single tint/invert can't work for both). */
-.brand-strip { background: var(--ink, #0A0A0A); overflow: hidden; padding: 9px 0; }
+.brand-strip { background: rgba(10, 10, 10, .94); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); overflow: hidden; padding: 9px 0; }
 .brand-strip-track { display: flex; width: max-content; animation: bsScroll 60s linear infinite; }
 @media (hover: hover) and (pointer: fine) { .brand-strip:hover .brand-strip-track { animation-play-state: paused; } }
 .brand-strip-group { display: flex; align-items: center; flex-shrink: 0; }
@@ -35,13 +35,13 @@
    text/icons are light so they stay legible against the dark background. */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(10, 10, 10, .78);
+  background: rgba(10, 10, 10, .94);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, .08);
   transition: box-shadow .3s, background-color .4s;
 }
 .site-header.scrolled {
-  background: rgba(10, 10, 10, .86);
+  background: rgba(10, 10, 10, .97);
   box-shadow: 0 4px 24px rgba(0, 0, 0, .35);
 }
 .site-header .nav-links > a, .site-header .nav-drop > a { color: #fff; }
