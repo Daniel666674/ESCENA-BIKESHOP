@@ -3,7 +3,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Canitobilleras R2",
   "brand": "R2 protect",
   "cat": "canilleras",
-  "spec": "",
+  "spec": "Diseño cómodo para proteger el tobillo y canilla  Protección de 4 laminas",
   "price": 90000,
   "sku": "CNL-R2P-001",
   "units": 20,
