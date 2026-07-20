@@ -22,7 +22,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "img": "assets/img/products/rodilleras-valkiria.jpg?v=1784590208418"
+  "img": "assets/img/products/rodilleras-valkiria.jpg?v=1784590273713"
  },
  {
   "n": "Rodicanitobilleras R2",
