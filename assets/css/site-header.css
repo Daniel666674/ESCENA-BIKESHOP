@@ -29,26 +29,30 @@
 @media (prefers-reduced-motion: reduce) { .brand-strip-track { animation: none; } }
 
 /* ---- Header shell ----
-   On scroll the header animates from solid white to a translucent black
-   (frosted) bar, matching the dark brand strip above it. The wordmark (black
-   fill, white outline) and all nav text/icons switch to light colors so they
-   stay legible against the dark, semi-transparent background. */
-.site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); transition: box-shadow .3s, background-color .4s, border-color .4s; }
-.site-header.scrolled {
-  background: rgba(10, 10, 10, .88);
+   Always a translucent black (frosted) bar, matching the dark brand strip
+   above it — not just on scroll. Scrolling just deepens it slightly for
+   contrast/depth. The wordmark (black fill, white outline) and all nav
+   text/icons are light so they stay legible against the dark background. */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10, 10, 10, .78);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  border-bottom-color: rgba(255, 255, 255, .08);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+  transition: box-shadow .3s, background-color .4s;
+}
+.site-header.scrolled {
+  background: rgba(10, 10, 10, .86);
   box-shadow: 0 4px 24px rgba(0, 0, 0, .35);
 }
-.site-header.scrolled .nav-links > a, .site-header.scrolled .nav-drop > a { color: #fff; }
-.site-header.scrolled .nav-links > a:hover, .site-header.scrolled .nav-drop > a:hover { background: rgba(255, 255, 255, .12); }
-.site-header.scrolled .nav-links > a.active, .site-header.scrolled .nav-drop.active > a { color: #fff; }
-.site-header.scrolled .nav-promo { color: var(--gold, #C79A3A) !important; }
-.site-header.scrolled .world-tab { color: rgba(255, 255, 255, .55); }
-.site-header.scrolled .world-tab:hover { color: #fff; }
-.site-header.scrolled .world-tab.is-active { color: #fff; }
-.site-header.scrolled .world-sep { background: rgba(255, 255, 255, .25); }
-.site-header.scrolled .burger, .site-header.scrolled .cart-btn { color: #fff; }
+.site-header .nav-links > a, .site-header .nav-drop > a { color: #fff; }
+.site-header .nav-links > a:hover, .site-header .nav-drop > a:hover { background: rgba(255, 255, 255, .12); }
+.site-header .nav-links > a.active, .site-header .nav-drop.active > a { color: #fff; }
+.site-header .nav-promo { color: var(--gold, #C79A3A) !important; }
+.site-header .world-tab { color: rgba(255, 255, 255, .55); }
+.site-header .world-tab:hover { color: #fff; }
+.site-header .world-tab.is-active { color: #fff; }
+.site-header .world-sep { background: rgba(255, 255, 255, .25); }
+.site-header .burger, .site-header .cart-btn { color: #fff; }
 
 /* ---- 3. Main row (now renders first — world tabs sit under the logo) ---- */
 .site-header .header-main { position: relative; display: flex; align-items: center; justify-content: center; padding: .18rem 1.5rem; transition: padding .3s; }
@@ -131,11 +135,10 @@
   }
   .site-header .nav-links.open { transform: translateY(0); visibility: visible; transition: transform .3s; }
   .site-header .nav-links > a, .site-header .nav-drop > a { width: 100%; padding: 1.05rem .2rem !important; border-bottom: 1px solid var(--line); font-size: .9rem !important; }
-  /* the slide-down panel keeps a solid white background regardless of scroll
-     state, so its links must stay dark even when .scrolled turns them white
-     for the always-visible (non-popup) desktop nav. */
-  .site-header.scrolled .nav-links > a, .site-header.scrolled .nav-drop > a { color: var(--ink) !important; }
-  .site-header.scrolled .nav-links > a:hover, .site-header.scrolled .nav-drop > a:hover { background: var(--panel); }
+  /* the slide-down panel keeps a solid white background regardless of the
+     (now always-dark) header, so its links must stay dark to stay legible. */
+  .site-header .nav-links > a, .site-header .nav-drop > a { color: var(--ink) !important; }
+  .site-header .nav-links > a:hover, .site-header .nav-drop > a:hover { background: var(--panel); }
   .site-header .nav-drop { width: 100%; }
   .site-header .nav-drop > a { padding-right: 3rem !important; }
   .site-header .nav-drop > a .caret { display: none; }
