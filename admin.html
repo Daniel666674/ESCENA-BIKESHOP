@@ -375,7 +375,7 @@
       <section id="secAnaliticas" style="display:none;">
       <!-- ============ GA4 + SEARCH CONSOLE (real data) ============ -->
       <div id="analyticsConnectBar" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.9rem 1.1rem;margin-bottom:1.4rem;">
-        <div style="font-size:.82rem;color:var(--muted);" id="analyticsStatus">Conecta tu cuenta de Google para ver datos reales de GA4 y Search Console (últimos 28 días).</div>
+        <div style="font-size:.82rem;color:var(--muted);" id="analyticsStatus">Conectando con Google…</div>
         <button type="button" class="btn btn-ink btn-sm" id="analyticsConnectBtn">Conectar con Google</button>
       </div>
 
@@ -1216,6 +1216,20 @@
 
     var cbtn = document.getElementById("analyticsConnectBtn");
     if (cbtn) cbtn.addEventListener("click", connectAnalytics);
+
+    // Try to bring the dashboard live immediately, no click required.
+    if (window.google && google.accounts && google.accounts.oauth2) {
+      autoConnectAnalytics();
+    } else {
+      // gsi/client script may still be loading — retry once it's ready.
+      var gsiWait = setInterval(function () {
+        if (window.google && google.accounts && google.accounts.oauth2) {
+          clearInterval(gsiWait);
+          autoConnectAnalytics();
+        }
+      }, 300);
+      setTimeout(function () { clearInterval(gsiWait); }, 8000);
+    }
   }
 
   /* ============================================================
@@ -1254,6 +1268,7 @@
   }
   function analyticsStatus(msg) { var el = document.getElementById("analyticsStatus"); if (el) el.textContent = msg; }
 
+  var silentAttemptInFlight = false;
   function initApiTokenClient() {
     if (apiTokenClient) return apiTokenClient;
     if (!(window.google && google.accounts && google.accounts.oauth2)) return null;
@@ -1261,12 +1276,36 @@
       client_id: OAUTH_CLIENT_ID,
       scope: ANALYTICS_SCOPES,
       callback: function (resp) {
-        if (resp && resp.access_token) { apiToken = resp.access_token; loadRealAnalytics(); }
-        else { analyticsStatus("No se pudo conectar con Google. Intenta de nuevo."); }
+        var wasSilent = silentAttemptInFlight;
+        silentAttemptInFlight = false;
+        if (resp && resp.access_token) {
+          apiToken = resp.access_token;
+          document.getElementById("analyticsConnectBar").style.display = "none";
+          loadRealAnalytics();
+        } else if (!wasSilent) {
+          analyticsStatus("No se pudo conectar con Google. Intenta de nuevo.");
+        }
+        // A failed *silent* attempt is expected on first-ever use (no prior
+        // consent yet) — stay quiet and leave the manual button visible.
       },
-      error_callback: function () { analyticsStatus("Conexión cancelada."); }
+      error_callback: function () {
+        var wasSilent = silentAttemptInFlight;
+        silentAttemptInFlight = false;
+        if (!wasSilent) analyticsStatus("Conexión cancelada.");
+      }
     });
     return apiTokenClient;
+  }
+  // Runs automatically every time the admin panel loads: if this browser
+  // already has an active Google session and previously granted the
+  // analytics/search-console scopes, the token renews with no popup and no
+  // click — the dashboard is just live. Only the very first-ever grant (or a
+  // fully revoked/expired Google session) falls back to the manual button.
+  function autoConnectAnalytics() {
+    var c = initApiTokenClient();
+    if (!c) return;
+    silentAttemptInFlight = true;
+    c.requestAccessToken({ prompt: "" });
   }
   function connectAnalytics() {
     var c = initApiTokenClient();
@@ -1285,6 +1324,7 @@
       return r.json();
     });
   }
+  var tokenRetriedThisLoad = false;
   function loadRealAnalytics() {
     analyticsStatus("Cargando datos…");
     var jobs = [];
@@ -1292,9 +1332,16 @@
     jobs.push(loadGSC());
     Promise.allSettled(jobs).then(function (res) {
       var failed = res.filter(function (r) { return r.status === "rejected"; });
-      if (failed.some(function (f) { return String(f.reason && f.reason.message) === "token"; })) {
+      var expired = failed.some(function (f) { return String(f.reason && f.reason.message) === "token"; });
+      if (expired && !tokenRetriedThisLoad) {
+        // Token expired mid-session (~1h) — silently renew and retry once,
+        // no click needed, before ever bothering the admin about it.
+        tokenRetriedThisLoad = true;
+        autoConnectAnalytics();
+      } else if (expired) {
         analyticsStatus("La sesión de Google expiró. Toca “Conectar con Google” otra vez.");
       } else if (!failed.length) {
+        tokenRetriedThisLoad = false;
         analyticsStatus("✓ Datos reales (últimos 28 días) — actualizado " + new Date().toLocaleTimeString("es-CO"));
       } else {
         analyticsStatus("Algunos datos no cargaron: " + (failed[0].reason && failed[0].reason.message || "error") +
