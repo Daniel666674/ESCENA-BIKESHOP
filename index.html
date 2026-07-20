@@ -777,6 +777,9 @@
     if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
     return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
   }
+    function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
   function slugOf(p){
     var file = p.img.split("/").pop();
     return file.replace(/\.[a-zA-Z0-9]+$/, "");
@@ -788,22 +791,22 @@
       var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
       var href = "producto/" + slugOf(p);
       var agotado = (typeof p.units === "number" && p.units <= 0);
-      var tagHTML = agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+p.tag+'</span>' : '');
+      var tagHTML = agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+esc(p.tag)+'</span>' : '');
       return '<article class="card'+(agotado ? ' is-agotado' : '')+'">' +
           '<a class="ph-link" href="'+href+'">' +
             '<div class="ph">' + tagHTML +
-              '<img src="'+p.img+'" alt="'+p.n+' - '+p.brand+' BMX" loading="lazy" width="400" height="400"></div>' +
+              '<img src="'+p.img+'" alt="'+esc(p.n)+' - '+esc(p.brand)+' BMX" loading="lazy" width="400" height="400"></div>' +
           '</a>' +
           '<div class="body">' +
-            '<span class="brand-lbl">'+p.brand+'</span>' +
-            '<h3><a class="title-link" href="'+href+'">'+p.n+'</a></h3>' +
-            '<p class="spec">'+p.spec+'</p>' +
+            '<span class="brand-lbl">'+esc(p.brand)+'</span>' +
+            '<h3><a class="title-link" href="'+href+'">'+esc(p.n)+'</a></h3>' +
+            '<p class="spec">'+esc(p.spec)+'</p>' +
             '<div class="price">'+cop(p.price)+'</div>' +
             '<div class="card-actions">' +
               (agotado
                 ? '<span class="buy" style="opacity:.5;pointer-events:none;text-align:center;">Agotado</span>'
                 : '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
-                  '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+p.n+'" data-brand="'+p.brand+'" data-price="'+p.price+'" data-img="'+p.img+'" data-units="'+(typeof p.units === "number" ? p.units : "")+'">Agregar al carrito</button>') +
+                  '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+esc(p.n)+'" data-brand="'+esc(p.brand)+'" data-price="'+p.price+'" data-img="'+p.img+'" data-units="'+(typeof p.units === "number" ? p.units : "")+'">Agregar al carrito</button>') +
             '</div>' +
           '</div>' +
         '</article>';

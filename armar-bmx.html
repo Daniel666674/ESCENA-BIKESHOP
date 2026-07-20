@@ -678,6 +678,9 @@ function cop(n){
   if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
   return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
 }
+function esc(s) {
+  return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
 function slugOf(p){ return p.slug || p.img.split("/").pop().replace(/\.[a-zA-Z0-9]+$/, ""); }
 
 function slotProducts(slot){
@@ -930,8 +933,8 @@ function renderComponentArea(){
       var over = p.price > remaining;
       return '<button type="button" class="arm-opt-card' + (selected ? " selected" : "") + (over ? " over-budget" : "") + '" data-slug="' + slugOf(p) + '" data-part="' + slot.key + '">' +
         (selected ? '<span class="arm-opt-check">&#10003;</span>' : "") +
-        '<div class="arm-opt-ph"><img src="' + p.img + '" alt="' + p.n + '" loading="lazy" width="220" height="220"></div>' +
-        '<div class="arm-opt-body"><span class="arm-opt-brand">' + p.brand + '</span><h4>' + p.n + '</h4><div class="arm-opt-price">' + cop(p.price) + '</div>' +
+        '<div class="arm-opt-ph"><img src="' + p.img + '" alt="' + esc(p.n) + '" loading="lazy" width="220" height="220"></div>' +
+        '<div class="arm-opt-body"><span class="arm-opt-brand">' + esc(p.brand) + '</span><h4>' + esc(p.n) + '</h4><div class="arm-opt-price">' + cop(p.price) + '</div>' +
         (over ? '<div class="arm-opt-budget-flag">Excede tu presupuesto</div>' : "") +
         '</div></button>';
     }).join("");

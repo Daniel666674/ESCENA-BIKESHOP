@@ -558,6 +558,9 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
     });
   }
 
+    function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
   function slugOf(p){
     if (p.slug) return p.slug;
     var file = p.img.split("/").pop();
@@ -571,22 +574,22 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
     var href = "producto/" + slugOf(p);
     var agotado = (typeof p.units === "number" && p.units <= 0);
     var promoHTML = p.promo ? '<span class="tag" style="background:var(--gold,#C79A3A);color:#fff;left:.7rem;right:auto;">PROMO</span>' : '';
-    var tagHTML = promoHTML + (agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+p.tag+'</span>' : ''));
+    var tagHTML = promoHTML + (agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+esc(p.tag)+'</span>' : ''));
     return '<article class="card' + (agotado ? ' is-agotado' : '') + '">' +
         (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
           '<div class="ph">' + tagHTML +
-            '<img src="'+p.img+'" alt="'+p.n+(p.brand ? ' - '+p.brand : '')+' BMX" loading="lazy" width="400" height="400"></div>' +
+            '<img src="'+p.img+'" alt="'+esc(p.n)+(p.brand ? ' - '+esc(p.brand) : '')+' BMX" loading="lazy" width="400" height="400"></div>' +
         (hasDetailPage ? '</a>' : '</div>') +
         '<div class="body">' +
-          '<span class="brand-lbl">'+p.brand+'</span>' +
-          '<h3>' + (hasDetailPage ? '<a class="title-link" href="'+href+'">'+p.n+'</a>' : p.n) + '</h3>' +
-          '<p class="spec">'+p.spec+'</p>' +
+          '<span class="brand-lbl">'+esc(p.brand)+'</span>' +
+          '<h3>' + (hasDetailPage ? '<a class="title-link" href="'+href+'">'+esc(p.n)+'</a>' : esc(p.n)) + '</h3>' +
+          '<p class="spec">'+esc(p.spec)+'</p>' +
           '<div class="price">'+cop(p.price)+'</div>' +
           '<div class="card-actions">' +
             (agotado
               ? '<span class="buy" style="opacity:.5;pointer-events:none;text-align:center;">Agotado</span>'
               : '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
-                '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+p.n+'" data-brand="'+p.brand+'" data-price="'+p.price+'" data-img="'+p.img+'" data-units="'+(typeof p.units === "number" ? p.units : "")+'">Agregar al carrito</button>') +
+                '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+esc(p.n)+'" data-brand="'+esc(p.brand)+'" data-price="'+p.price+'" data-img="'+p.img+'" data-units="'+(typeof p.units === "number" ? p.units : "")+'">Agregar al carrito</button>') +
           '</div>' +
         '</div>' +
       '</article>';
