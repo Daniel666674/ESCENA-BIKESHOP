@@ -1,5 +1,30 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tobilleras Estabilizadoras Valkiria",
+  "brand": "Valkiria",
+  "cat": "tobilleras",
+  "spec": "Proteccion del tobillo, antiesguince y golpes, incluye el par",
+  "price": 120000,
+  "sku": "TOB-VAL-001",
+  "units": 12,
+  "colors": [
+   {
+    "label": "Talla S",
+    "units": 2
+   },
+   {
+    "label": "Talla M",
+    "units": 5
+   },
+   {
+    "label": "Talla S",
+    "units": 5
+   }
+  ],
+  "slug": "tobilleras-estabilizadoras-valkiria",
+  "img": "assets/img/products/tobilleras-estabilizadoras-valkiria.jpg?v=1784591894911"
+ },
+ {
   "n": "Rodilleras Valkiria",
   "brand": "Valkiria",
   "cat": "rodilleras",
