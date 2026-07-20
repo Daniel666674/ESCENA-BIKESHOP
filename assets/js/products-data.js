@@ -1,5 +1,34 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodicanitobilleras R2",
+  "brand": "R2 protect",
+  "cat": "rodi-cani-tobilleras",
+  "spec": "",
+  "price": 160000,
+  "sku": "RCT-R2P-001",
+  "units": 36,
+  "colors": [
+   {
+    "label": "Talla XS",
+    "units": 8
+   },
+   {
+    "label": "Talla S",
+    "units": 8
+   },
+   {
+    "label": "Talla M",
+    "units": 10
+   },
+   {
+    "label": "Talla L",
+    "units": 10
+   }
+  ],
+  "slug": "rodicanitobilleras-r2",
+  "img": "assets/img/products/rodicanitobilleras-r2.jpg?v=1784588819283"
+ },
+ {
   "n": "Canitobilleras R2",
   "brand": "R2 protect",
   "cat": "canilleras",
