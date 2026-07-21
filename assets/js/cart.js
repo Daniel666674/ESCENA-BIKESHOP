@@ -302,11 +302,11 @@
     { name: "Animal", img: "assets/img/logo_13_Animal.png" },
     { name: "Merritt", img: "assets/img/logo_14_Merritt.jpeg" },
     { name: "Subrosa", img: "assets/img/logo_15_Subrosa.jpeg" },
-    { name: "Stranger", img: "assets/img/logo_16_Stranger.jpeg" },
+    { name: "Stranger", img: "assets/img/logo_16_Stranger.png" },
     { name: "Volume", img: "assets/img/logo_17_Volume.jpeg" },
     { name: "Profile Racing", img: "assets/img/logo_18_ProfileRacing.jpeg" },
     { name: "Cinema", img: "assets/img/logo_19_Cinema.jpeg" },
-    { name: "Primo", img: "assets/img/logo_20_Primo.jpeg" }
+    { name: "Primo", img: "assets/img/logo_20_Primo.png" }
   ];
 
   var track = document.getElementById("brandStripTrack");
