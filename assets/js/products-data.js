@@ -7,22 +7,18 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "TOB-VAL-001",
   "units": 12,
-  "colors": [
+  "slug": "tobilleras-estabilizadoras-valkiria",
+  "img": "assets/img/products/tobilleras-estabilizadoras-valkiria.jpg?v=1784591894911",
+  "sizes": [
    {
-    "label": "Talla S",
-    "units": 2
+    "label": "S",
+    "units": 7
    },
    {
-    "label": "Talla M",
-    "units": 5
-   },
-   {
-    "label": "Talla S",
+    "label": "M",
     "units": 5
    }
-  ],
-  "slug": "tobilleras-estabilizadoras-valkiria",
-  "img": "assets/img/products/tobilleras-estabilizadoras-valkiria.jpg?v=1784591894911"
+  ]
  },
  {
   "n": "Rodilleras Valkiria",
@@ -33,21 +29,21 @@ window.ESCENA_PRODUCTS = [
   "sku": "ROD-VAL-002",
   "units": 11,
   "slug": "rodilleras-valkiria",
-  "colors": [
+  "img": "assets/img/products/rodilleras-valkiria.jpg?v=1784590273713",
+  "sizes": [
    {
-    "label": "Talla S",
+    "label": "S",
     "units": 1
    },
    {
-    "label": "Talla M",
+    "label": "M",
     "units": 5
    },
    {
-    "label": "Talla L",
+    "label": "L",
     "units": 5
    }
-  ],
-  "img": "assets/img/products/rodilleras-valkiria.jpg?v=1784590273713"
+  ]
  },
  {
   "n": "Rodicanitobilleras R2",
@@ -57,26 +53,26 @@ window.ESCENA_PRODUCTS = [
   "price": 160000,
   "sku": "RCT-R2P-001",
   "units": 36,
-  "colors": [
+  "slug": "rodicanitobilleras-r2",
+  "img": "assets/img/products/rodicanitobilleras-r2.jpg?v=1784588819283",
+  "sizes": [
    {
-    "label": "Talla XS",
+    "label": "XS",
     "units": 8
    },
    {
-    "label": "Talla S",
+    "label": "S",
     "units": 8
    },
    {
-    "label": "Talla M",
+    "label": "M",
     "units": 10
    },
    {
-    "label": "Talla L",
+    "label": "L",
     "units": 10
    }
-  ],
-  "slug": "rodicanitobilleras-r2",
-  "img": "assets/img/products/rodicanitobilleras-r2.jpg?v=1784588819283"
+  ]
  },
  {
   "n": "Canitobilleras R2",
@@ -86,18 +82,18 @@ window.ESCENA_PRODUCTS = [
   "price": 90000,
   "sku": "CNL-R2P-001",
   "units": 20,
-  "colors": [
+  "slug": "canitobilleras-r2",
+  "img": "assets/img/products/canitobilleras-r2.jpg?v=1784585889473",
+  "sizes": [
    {
-    "label": "Talla M",
+    "label": "M",
     "units": 10
    },
    {
-    "label": "Talla L",
+    "label": "L",
     "units": 10
    }
-  ],
-  "slug": "canitobilleras-r2",
-  "img": "assets/img/products/canitobilleras-r2.jpg?v=1784585889473"
+  ]
  },
  {
   "n": "Casco TSG Dawn Blanco",

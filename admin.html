@@ -733,7 +733,15 @@
   // maintained sum of p.sizes[].units so every existing units-based consumer
   // (KPI totals, low-stock badges, CSV export, bulk price adjust) keeps working
   // unchanged. Everything else stays on the plain flat p.units field.
-  var SIZE_CATEGORIES = { bielas: 1, pinones: 1, marcos: 1, stems: 1, manubrios: 1 };
+  // Categories where the product is only orderable by picking a talla — the
+  // admin modal shows "Tallas y stock por talla" (not the generic color/units
+  // fields) and the storefront page's primary variant selector is labeled
+  // "Talla" with real per-size stock. See isSizeCat()/isColorReal() below.
+  var SIZE_CATEGORIES = {
+    bielas: 1, pinones: 1, marcos: 1, stems: 1, manubrios: 1,
+    cascos: 1, guantes: 1, rodilleras: 1, canilleras: 1, tobilleras: 1, "rodi-cani-tobilleras": 1,
+    camisetas: 1, gorros: 1, gorras: 1, hoodies: 1, chaquetas: 1, pantalones: 1, medias: 1, tenis: 1
+  };
   function isSizeCat(cat) { return !!SIZE_CATEGORIES[cat]; }
 
   /* ---- Automated SKU generator: CAT-BRD-NNN (e.g. MRC-FED-001) ----
@@ -1668,14 +1676,13 @@
   /* ---- Product-page generation ---- */
   function copFmt(n) { return "$" + Math.round(n || 0).toLocaleString("es-CO"); }
   function jsonEsc(s) { return JSON.stringify(String(s == null ? "" : s)).slice(1, -1); }
-  // Each "·"/"•"-separated spec segment becomes its own line; category and brand
-  // follow as muted meta rows. Rendered inside <ul class="spec-list"> on the page.
+  // Each "·"/"•"-separated spec segment becomes its own line, rendered inside
+  // <ul class="spec-list"> on the page. Category/brand/SKU are intentionally
+  // not shown here — customer-facing pages don't surface internal catalog
+  // metadata (brand is already shown separately above the title).
   function specItems(spec, catLabel, brand) {
     var parts = (spec || "").split(/[·•]/).map(function (x) { return x.trim(); }).filter(Boolean);
-    var r = parts.map(function (v) { return '<li>' + esc(v) + '</li>'; });
-    r.push('<li class="meta"><span>Categoría</span><span>' + esc(catLabel) + '</span></li>');
-    if (brand) r.push('<li class="meta"><span>Marca</span><span>' + esc(brand) + '</span></li>');
-    return r.join('\n');
+    return parts.map(function (v) { return '<li>' + esc(v) + '</li>'; }).join('\n');
   }
   function waMsgFor(p) {
     return "Hola ESCENA 🐕, quiero pedir: " + p.n + (p.brand ? " (" + p.brand + ")" : "") + " — " + copFmt(p.price) + " COP.";
