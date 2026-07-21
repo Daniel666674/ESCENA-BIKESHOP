@@ -2707,13 +2707,17 @@ window.ESCENA_PRODUCTS = [
   "brand": "Fate",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.4\"–20.75\" (dropout ajustable) · Negro",
-  "price": 890000,
+  "price": 1320000,
   "sku": "FATE-NAMASTE-NEGRO",
-  "units": 2,
+  "units": 4,
   "tag": "Nacional",
   "sizes": [
    {
-    "label": "20.4\"-20.75\"",
+    "label": "20.4\"",
+    "units": 2
+   },
+   {
+    "label": "20.75\"",
     "units": 2
    }
   ],
