@@ -327,6 +327,41 @@
       '</div><div class="brand-strip-group">' + groupHTML() + '</div>';
   }
 
+  /* Header search — icon toggles a small panel; submitting always navigates
+     to /tienda?q=… (the header is shared across every page, including ones
+     with no product grid, so a full navigation is the only behavior that
+     works everywhere). tienda.html reads ?q= on load and live-filters. */
+  var searchBtn = document.getElementById("searchBtnHeader");
+  var searchPanel = document.getElementById("headerSearchPanel");
+  var searchInput = document.getElementById("headerSearchInput");
+  if (searchBtn && searchPanel && searchInput) {
+    searchBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = searchPanel.classList.toggle("open");
+      searchBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      if (open) searchInput.focus();
+    });
+    searchPanel.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var q = searchInput.value.trim();
+      if (!q) return;
+      location.href = PFX + "tienda?q=" + encodeURIComponent(q);
+    });
+    document.addEventListener("click", function (e) {
+      if (searchPanel.classList.contains("open") &&
+          !searchPanel.contains(e.target) && e.target !== searchBtn) {
+        searchPanel.classList.remove("open");
+        searchBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && searchPanel.classList.contains("open")) {
+        searchPanel.classList.remove("open");
+        searchBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   /* Active nav state — the static markup is identical on every page, so we
      light up the current section here from the URL. */
   // Normalise the current page name so this works with clean URLs (/tienda),
