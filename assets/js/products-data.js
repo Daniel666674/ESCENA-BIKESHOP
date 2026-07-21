@@ -2877,8 +2877,8 @@ window.ESCENA_PRODUCTS = [
   "n": "Aro Éclat Bondi Cromado",
   "brand": "Éclat",
   "cat": "rines",
-  "spec": "20\" · Pared simple · 36H · Cromado",
-  "price": 250000,
+  "spec": "Cromado",
+  "price": 390000,
   "sku": "AROS_ECLAT_BONDI_CROMADOS",
   "units": 12,
   "img": "assets/img/products/aros_eclat_bondi_cromados.jpeg"
