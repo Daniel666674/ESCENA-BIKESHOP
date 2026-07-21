@@ -26,10 +26,10 @@
 @media (hover: hover) and (pointer: fine) { .brand-strip:hover .brand-strip-track { animation-play-state: paused; } }
 .brand-strip-group { display: flex; align-items: center; flex-shrink: 0; }
 .brand-strip .bs-chip { display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin: 0 .4rem; }
-.brand-strip .bs-chip img { display: block; height: 34px; width: auto; max-width: 128px; object-fit: contain; background: #fff; border-radius: 6px; padding: 4px 12px; opacity: .9; transition: opacity .2s; }
+.brand-strip .bs-chip img { display: block; height: 44px; width: auto; max-width: 152px; object-fit: contain; background: #fff; border-radius: 6px; padding: 5px 14px; opacity: .9; transition: opacity .2s; }
 @media (hover: hover) and (pointer: fine) { .brand-strip .bs-chip:hover img { opacity: 1; } }
 @keyframes bsScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@media (max-width: 640px) { .brand-strip { padding: 7px 0; } .brand-strip .bs-chip img { height: 26px; max-width: 96px; padding: 3px 9px; } }
+@media (max-width: 640px) { .brand-strip { padding: 7px 0; } .brand-strip .bs-chip img { height: 32px; max-width: 112px; padding: 4px 10px; } }
 @media (prefers-reduced-motion: reduce) { .brand-strip-track { animation: none; } }
 
 /* ---- Header shell ----
