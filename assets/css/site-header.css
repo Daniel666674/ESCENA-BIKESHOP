@@ -21,7 +21,7 @@
    infinite transform animation, iOS Safari's compositor can freeze the
    marquee after the first paint. Not needed anyway at .94 opacity — the
    blur added nothing visible over the already near-solid background. */
-.brand-strip { background: rgba(10, 10, 10, .94); overflow: hidden; padding: 9px 0; }
+.brand-strip { background: rgba(10, 10, 10, .48); overflow: hidden; padding: 9px 0; }
 .brand-strip-track { display: flex; width: max-content; animation: bsScroll 60s linear infinite; will-change: transform; -webkit-transform: translateZ(0); transform: translateZ(0); }
 @media (hover: hover) and (pointer: fine) { .brand-strip:hover .brand-strip-track { animation-play-state: paused; } }
 .brand-strip-group { display: flex; align-items: center; flex-shrink: 0; }
@@ -39,13 +39,13 @@
    text/icons are light so they stay legible against the dark background. */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(10, 10, 10, .94);
+  background: rgba(10, 10, 10, .48);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, .08);
   transition: box-shadow .3s, background-color .4s;
 }
 .site-header.scrolled {
-  background: rgba(10, 10, 10, .97);
+  background: rgba(10, 10, 10, .6);
   box-shadow: 0 4px 24px rgba(0, 0, 0, .35);
 }
 /* ---- 3. Main row (now renders first — world tabs sit under the logo) ---- */
@@ -82,7 +82,7 @@
 
 /* category links */
 .site-header .nav-links { display: flex; align-items: center; justify-content: center; gap: .1rem; }
-.site-header .nav-links > a, .site-header .nav-drop > a { color: #fff; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: .5rem .7rem; border-radius: 0; border-bottom: 2.5px solid transparent; transition: color .2s, background .2s, border-color .2s; white-space: nowrap; }
+.site-header .nav-links > a, .site-header .nav-drop > a { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; font-weight: 400; letter-spacing: .07em; text-transform: uppercase; text-decoration: none; padding: .5rem .7rem; border-radius: 0; border-bottom: 2.5px solid transparent; transition: color .2s, background .2s, border-color .2s; white-space: nowrap; }
 .site-header .nav-links > a:hover, .site-header .nav-drop > a:hover { background: rgba(255, 255, 255, .12); }
 .site-header .nav-links > a.active, .site-header .nav-drop.active > a { color: #fff; border-bottom-color: var(--gold, #C79A3A); }
 .site-header .nav-promo { color: var(--gold, #C79A3A) !important; }
