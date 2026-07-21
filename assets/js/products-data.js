@@ -2867,7 +2867,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Demolition",
   "cat": "rines",
   "spec": "20\" · Doble pared · 36H · Negro",
-  "price": 260000,
+  "price": 300000,
   "sku": "ARO_DEMOLITION_ZERO_PLUS_NEGRO",
   "units": 12,
   "img": "assets/img/products/aro_demolition_zero_plus_negro.jpeg"
