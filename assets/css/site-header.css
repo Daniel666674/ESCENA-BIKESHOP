@@ -70,15 +70,38 @@
 .site-header .nav-brand { margin: 0 1.2rem; }
 .site-header .brand-mobile { display: none; }
 
+/* social icons pinned left (desktop only — burger owns that corner on mobile) */
+.site-header .header-social { position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .55rem; }
+.site-header .header-social a { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; color: rgba(255, 255, 255, .75); transition: color .2s; }
+.site-header .header-social a:hover { color: #fff; }
+.site-header .header-social svg { width: 17px; height: 17px; fill: currentColor; }
+
 /* actions pinned right */
 .site-header .header-actions { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .6rem; }
-.site-header .header-actions .wa-link { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #25D366; }
-.site-header .header-actions .wa-link svg { width: 19px; height: 19px; fill: #fff; }
-.site-header .header-actions .wa-link:hover { opacity: .88; }
+.site-header .search-btn { width: 38px; height: 38px; background: none; border: 0; color: #fff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+.site-header .search-btn svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
 .site-header .cart-btn { position: relative; width: 38px; height: 38px; background: none; border: 0; color: #fff; cursor: pointer; }
 .site-header .cart-btn svg { width: 23px; height: 23px; }
 .site-header .cart-badge { position: absolute; top: 1px; right: 1px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 9px; background: var(--gold, #C79A3A); color: #fff; font-size: .6rem; font-weight: 800; line-height: 16px; text-align: center; }
 .site-header .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: #fff; font-size: 1.6rem; cursor: pointer; line-height: 1; }
+
+/* search panel — slides down from the header-actions corner */
+.site-header .header-search-panel {
+  display: none; position: absolute; top: 100%; right: 1.5rem; margin-top: .6rem;
+  background: #fff; border-radius: 10px; box-shadow: 0 20px 45px rgba(0,0,0,.22);
+  padding: .5rem; gap: .4rem; z-index: 70; width: min(320px, calc(100vw - 3rem));
+}
+.site-header .header-search-panel.open { display: flex; }
+.site-header .header-search-panel input {
+  flex: 1; border: 1.5px solid var(--line, #ececeb); border-radius: 7px; padding: .6rem .75rem;
+  font-family: inherit; font-size: .85rem; color: var(--ink, #0A0A0A); background: #fff;
+}
+.site-header .header-search-panel input:focus { outline: none; border-color: var(--ink, #0A0A0A); }
+.site-header .header-search-panel button {
+  flex-shrink: 0; width: 40px; border-radius: 7px; border: none; background: var(--ink, #0A0A0A);
+  color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.site-header .header-search-panel button svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
 
 /* category links */
 .site-header .nav-links { display: flex; align-items: center; justify-content: center; gap: .1rem; }
@@ -109,7 +132,7 @@
   .site-header .world-tabs { gap: .8rem; }
   .site-header .header-main { justify-content: center; padding: .4rem 1.5rem; }
   .site-header .burger { display: block; }
-  .site-header .header-actions .wa-link { display: none; }
+  .site-header .header-social { display: none; }
   /* on mobile the centered wordmark lives in the bar, not inside the nav */
   .site-header .nav-brand { display: none; }
   .site-header .brand-mobile { display: inline-flex; }
