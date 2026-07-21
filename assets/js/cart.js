@@ -286,27 +286,31 @@
   // subdirectories need a "../" prefix for asset + link paths.
   var PFX = /\/(producto|blog)\//.test(location.pathname) ? "../" : "";
 
+  // Cache-busted (?v=N) — assets are served with a 1-year immutable
+  // Cache-Control (see .htaccess), so overwriting a logo file in place is
+  // invisible to any browser/CDN that already fetched the old bytes unless
+  // the URL itself changes. Bump a logo's ?v= whenever its file is replaced.
   var BRAND_LOGOS = [
-    { name: "Mutanty", key: "Mutanty", img: "assets/img/logo_01_Mutanty.png" },
-    { name: "Fate", img: "assets/img/logo_02_Fate.jpeg" },
-    { name: "Cult", img: "assets/img/logo_03_Cult.png" },
-    { name: "Fiend", img: "assets/img/logo_04_Fiend.jpeg" },
-    { name: "Shadow", img: "assets/img/logo_05_Shadow.png" },
-    { name: "Wethepeople", img: "assets/img/logo_06_Wethepeople.png" },
-    { name: "Odyssey", img: "assets/img/logo_07_Odyssey.png" },
-    { name: "BSD", img: "assets/img/logo_08_BSD.png" },
-    { name: "Éclat", img: "assets/img/logo_09_Eclat.png" },
-    { name: "Demolition", img: "assets/img/logo_10_Demolition.png" },
-    { name: "Kink BMX", img: "assets/img/logo_11_KinkBMX.png" },
-    { name: "Federal", img: "assets/img/logo_12_Federal.png" },
-    { name: "Animal", img: "assets/img/logo_13_Animal.png" },
-    { name: "Merritt", img: "assets/img/logo_14_Merritt.jpeg" },
-    { name: "Subrosa", img: "assets/img/logo_15_Subrosa.jpeg" },
-    { name: "Stranger", img: "assets/img/logo_16_Stranger.png" },
-    { name: "Volume", img: "assets/img/logo_17_Volume.jpeg" },
-    { name: "Profile Racing", img: "assets/img/logo_18_ProfileRacing.jpeg" },
-    { name: "Cinema", img: "assets/img/logo_19_Cinema.jpeg" },
-    { name: "Primo", img: "assets/img/logo_20_Primo.png" }
+    { name: "Mutanty", key: "Mutanty", img: "assets/img/logo_01_Mutanty.png?v=2" },
+    { name: "Fate", img: "assets/img/logo_02_Fate.jpeg?v=2" },
+    { name: "Cult", img: "assets/img/logo_03_Cult.png?v=2" },
+    { name: "Fiend", img: "assets/img/logo_04_Fiend.jpeg?v=2" },
+    { name: "Shadow", img: "assets/img/logo_05_Shadow.png?v=2" },
+    { name: "Wethepeople", img: "assets/img/logo_06_Wethepeople.png?v=2" },
+    { name: "Odyssey", img: "assets/img/logo_07_Odyssey.png?v=2" },
+    { name: "BSD", img: "assets/img/logo_08_BSD.png?v=2" },
+    { name: "Éclat", img: "assets/img/logo_09_Eclat.png?v=2" },
+    { name: "Demolition", img: "assets/img/logo_10_Demolition.png?v=2" },
+    { name: "Kink BMX", img: "assets/img/logo_11_KinkBMX.png?v=2" },
+    { name: "Federal", img: "assets/img/logo_12_Federal.png?v=2" },
+    { name: "Animal", img: "assets/img/logo_13_Animal.png?v=2" },
+    { name: "Merritt", img: "assets/img/logo_14_Merritt.jpeg?v=2" },
+    { name: "Subrosa", img: "assets/img/logo_15_Subrosa.jpeg?v=2" },
+    { name: "Stranger", img: "assets/img/logo_16_Stranger.png?v=2" },
+    { name: "Volume", img: "assets/img/logo_17_Volume.jpeg?v=2" },
+    { name: "Profile Racing", img: "assets/img/logo_18_ProfileRacing.jpeg?v=2" },
+    { name: "Cinema", img: "assets/img/logo_19_Cinema.jpeg?v=2" },
+    { name: "Primo", img: "assets/img/logo_20_Primo.png?v=2" }
   ];
 
   var track = document.getElementById("brandStripTrack");
