@@ -1,5 +1,26 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodillera Community Propark",
+  "brand": "Community",
+  "cat": "rodilleras",
+  "spec": "Protector interno SAS-TEC 3D Lycra 100% poliéster – antibacterial Resorte siliconado interno para mayor ajuste Neopreno Protectores laterales en visco elástico Certificación europea Tecnología alemana",
+  "price": 270000,
+  "sku": "ROD-COM-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/rodillera-community-propark.jpg?v=1784761331739",
+   "assets/img/products/rodillera-community-propark-2.jpg?v=1784761333110"
+  ],
+  "sizes": [
+   {
+    "label": "Talla XS",
+    "units": 1
+   }
+  ],
+  "slug": "rodillera-community-propark",
+  "img": "assets/img/products/rodillera-community-propark.jpg?v=1784761331739"
+ },
+ {
   "n": "Rodilleras Community Venom Pro",
   "brand": "290000",
   "cat": "rodilleras",
