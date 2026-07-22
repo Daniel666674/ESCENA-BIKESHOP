@@ -3,7 +3,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Rodilleras Community Venom Pro",
   "brand": "290000",
   "cat": "rodilleras",
-  "spec": "Protector externo 3D super flexible Protector interno visco elástico Lycra 100% poliéster – antibacterial Resorte siliconado interno para mayor ajuste Neopreno Protectores laterales en visco elástico Certificación europea Tecnología alemana Manufacturado en Colombia",
+  "spec": "Protector externo 3D super flexible Protector interno visco elástico Lycra 100% poliéster – antibacterial Resorte siliconado interno para mayor ajuste Neopreno Protectores laterales en visco elástico Certificación europea Tecnología alemana",
   "price": 290000,
   "sku": "ROD-290-001",
   "units": 3,
