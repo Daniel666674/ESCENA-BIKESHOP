@@ -8,7 +8,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "ROD-COM-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/rodillera-community-propark.jpg?v=1784761331739",
+   "assets/img/products/rodillera-community-propark.jpg?v=1784761392303",
    "assets/img/products/rodillera-community-propark-2.jpg?v=1784761333110"
   ],
   "sizes": [
@@ -18,7 +18,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "rodillera-community-propark",
-  "img": "assets/img/products/rodillera-community-propark.jpg?v=1784761331739"
+  "img": "assets/img/products/rodillera-community-propark.jpg?v=1784761392303"
  },
  {
   "n": "Rodilleras Community Venom Pro",
