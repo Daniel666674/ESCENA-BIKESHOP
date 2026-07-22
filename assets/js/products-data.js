@@ -7,6 +7,7 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "TOB-R2P-001",
   "units": 1,
+  "imgFit": "cover",
   "sizes": [
    {
     "label": "Talla Unica",
