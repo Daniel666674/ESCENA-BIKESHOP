@@ -44,17 +44,8 @@ header.top-bar .cart-btn { color: #fff; }
 header.top-bar .cart-btn svg { stroke: #fff; }
 header.top-bar .cart-badge { background: #fff; color: var(--ink); }
 
-.cart-float { position: fixed; bottom: 6.7rem; right: 1.4rem; z-index: 199; width: 56px; height: 56px; border-radius: 50%; background: var(--ink); box-shadow: 0 8px 24px rgba(0,0,0,.25); transition: transform .15s; }
-.cart-float:hover { transform: scale(1.07); }
-.cart-float svg { width: 26px; height: 26px; stroke: #fff; }
-.cart-float .cart-badge { top: -3px; right: -3px; background: #fff; color: var(--ink); }
-
 @media (max-width: 720px) {
   .cart-drawer { width: 100%; }
-}
-@media (max-width: 480px) {
-  .cart-float { bottom: 5.7rem; width: 50px; height: 50px; }
-  .cart-float svg { width: 22px; height: 22px; }
 }
 
 /* ---- Wishlist (header button, product-card heart, PDP heart) ---- */
