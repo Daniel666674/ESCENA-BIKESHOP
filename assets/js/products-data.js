@@ -1,5 +1,44 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tobillera de Impacto R2",
+  "brand": "R2 protect",
+  "cat": "tobilleras",
+  "spec": "proteccion paa tobillos para golpes de impacto",
+  "price": 50000,
+  "sku": "TOB-R2P-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "Talla Unica",
+    "units": 1
+   }
+  ],
+  "slug": "tobillera-de-impacto-r2",
+  "img": "assets/img/products/tobillera-de-impacto-r2.jpg?v=1784762003801"
+ },
+ {
+  "n": "Canilleras Community Terrain X",
+  "brand": "Community",
+  "cat": "canilleras",
+  "spec": "Protector interno SAS-TEC 3D Lycra 100% poliéster – antibacterial Resorte siliconado interno para mayor ajuste Neopreno Protectores laterales en visco elástico Certificación europea Tecnología alemana",
+  "price": 200000,
+  "sku": "CNL-COM-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/canilleras-community-terrain-x.jpg?v=1784762005367",
+   "assets/img/products/canilleras-community-terrain-x-2.jpg?v=1784762006890",
+   "assets/img/products/canilleras-community-terrain-x-3.jpg?v=1784762008243"
+  ],
+  "sizes": [
+   {
+    "label": "Talla M",
+    "units": 1
+   }
+  ],
+  "slug": "canilleras-community-terrain-x",
+  "img": "assets/img/products/canilleras-community-terrain-x.jpg?v=1784762005367"
+ },
+ {
   "n": "Rodillera Community Propark",
   "brand": "Community",
   "cat": "rodilleras",
