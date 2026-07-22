@@ -14,7 +14,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tobillera-de-impacto-r2",
-  "img": "assets/img/products/tobillera-de-impacto-r2.jpg?v=1784762003801"
+  "img": "assets/img/products/tobillera-de-impacto-r2.jpg?v=1784762054756"
  },
  {
   "n": "Canilleras Community Terrain X",
@@ -25,7 +25,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CNL-COM-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/canilleras-community-terrain-x.jpg?v=1784762005367",
+   "assets/img/products/canilleras-community-terrain-x.jpg?v=1784762096922",
    "assets/img/products/canilleras-community-terrain-x-2.jpg?v=1784762006890",
    "assets/img/products/canilleras-community-terrain-x-3.jpg?v=1784762008243"
   ],
@@ -36,7 +36,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "canilleras-community-terrain-x",
-  "img": "assets/img/products/canilleras-community-terrain-x.jpg?v=1784762005367"
+  "img": "assets/img/products/canilleras-community-terrain-x.jpg?v=1784762096922"
  },
  {
   "n": "Rodillera Community Propark",
