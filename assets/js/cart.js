@@ -269,6 +269,66 @@
   window.EscenaCart = { add: cartAdd, count: cartCount, total: cartTotal, get: cartGet };
 })();
 
+/* ---- Wishlist (localStorage, shared across storefront + product pages) ----
+   Header heart icon links to tienda?wishlist=1 (tienda.html reads that param
+   and filters to just wished slugs, mirroring its ?brand=/?q= patterns).
+   A "escena:wishlist-change" event fires on every toggle so any page-specific
+   listener (e.g. tienda.html re-rendering its wishlist view) can react. ---- */
+(function () {
+  var WL_KEY = "escena_wishlist";
+  var PFX = /\/(producto|blog)\//.test(location.pathname) ? "../" : "";
+
+  function getWL() {
+    try { return JSON.parse(localStorage.getItem(WL_KEY)) || []; }
+    catch (e) { return []; }
+  }
+  function isWished(slug) { return getWL().indexOf(slug) > -1; }
+  function updateBadge() {
+    var el = document.getElementById("wishlistBadgeHeader");
+    if (el) el.textContent = String(getWL().length);
+  }
+  function toggleWished(slug) {
+    var wl = getWL();
+    var i = wl.indexOf(slug);
+    var wished;
+    if (i > -1) { wl.splice(i, 1); wished = false; }
+    else { wl.push(slug); wished = true; }
+    localStorage.setItem(WL_KEY, JSON.stringify(wl));
+    updateBadge();
+    document.dispatchEvent(new CustomEvent("escena:wishlist-change", { detail: { slug: slug, wished: wished } }));
+    return wished;
+  }
+
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".card-wish, .pdp-wish-btn");
+    if (!btn) return;
+    var slug = btn.getAttribute("data-slug");
+    if (!slug) return;
+    e.preventDefault(); // .card-wish sits inside the product card's <a> link — don't navigate
+    e.stopPropagation();
+    btn.classList.toggle("active", toggleWished(slug));
+  });
+
+  var wlBtn = document.getElementById("wishlistBtnHeader");
+  if (wlBtn) wlBtn.addEventListener("click", function () { location.href = PFX + "tienda?wishlist=1"; });
+  updateBadge();
+
+  // Product detail pages: inject a heart toggle right next to the add-to-cart button.
+  var addBtn = document.querySelector(".pdp-actions .add-cart-btn[data-slug]");
+  if (addBtn && !document.querySelector(".pdp-wish-btn")) {
+    var slug = addBtn.getAttribute("data-slug");
+    var heart = document.createElement("button");
+    heart.type = "button";
+    heart.className = "pdp-wish-btn" + (isWished(slug) ? " active" : "");
+    heart.setAttribute("data-slug", slug);
+    heart.setAttribute("aria-label", "Agregar a lista de deseos");
+    heart.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.72-4.35-9.33-8.36C.98 9.1 1.53 5.7 4.36 4.06c2.34-1.36 5.2-.7 6.77 1.44L12 6.4l.87-1.9C14.44 3.36 17.3 2.7 19.64 4.06c2.83 1.64 3.38 5.04 1.69 8.58C18.72 16.65 12 21 12 21z"/></svg>';
+    addBtn.insertAdjacentElement("afterend", heart);
+  }
+
+  window.ESCENA_WISHLIST = { get: getWL, isWished: isWished, toggle: toggleWished };
+})();
+
 /* Header shrink-on-scroll */
 (function () {
   var hdr = document.querySelector('.site-header');
