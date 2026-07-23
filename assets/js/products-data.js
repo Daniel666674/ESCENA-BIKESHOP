@@ -1,5 +1,75 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Pro-Tec Classic",
+  "brand": "Pro-Tec",
+  "cat": "cascos",
+  "spec": "CALOTA • ABS de alto impacto FORRO • EPS VENTILACIONES • 11 ventilaciones abiertas INTERIOR • Almohadillas premium termoselladas AJUSTE • CERTIFICACIONES • ASTM 1492/1447, AS/NZS 2063:2008, CE 1078",
+  "price": 250000,
+  "sku": "CAS-PRO-002",
+  "units": 30,
+  "imgs": [
+   "assets/img/products/casco-pro-tec-classic.jpg?v=1784775517248",
+   "assets/img/products/casco-pro-tec-classic-2.jpg?v=1784775519107",
+   "assets/img/products/casco-pro-tec-classic-3.jpg?v=1784775521036",
+   "assets/img/products/casco-pro-tec-classic-4.jpg?v=1784775522572",
+   "assets/img/products/casco-pro-tec-classic-5.jpg?v=1784775523904",
+   "assets/img/products/casco-pro-tec-classic-6.jpg?v=1784775525030",
+   "assets/img/products/casco-pro-tec-classic-7.jpg?v=1784775526668",
+   "assets/img/products/casco-pro-tec-classic-8.jpg?v=1784775528102",
+   "assets/img/products/casco-pro-tec-classic-9.jpg?v=1784775529638",
+   "assets/img/products/casco-pro-tec-classic-10.jpg?v=1784775530867",
+   "assets/img/products/casco-pro-tec-classic-11.jpg?v=1784775532096",
+   "assets/img/products/casco-pro-tec-classic-12.jpg?v=1784775533428",
+   "assets/img/products/casco-pro-tec-classic-13.jpg?v=1784775534797",
+   "assets/img/products/casco-pro-tec-classic-14.jpg?v=1784775536089",
+   "assets/img/products/casco-pro-tec-classic-15.jpg?v=1784775537216",
+   "assets/img/products/casco-pro-tec-classic-16.jpg?v=1784775538446",
+   "assets/img/products/casco-pro-tec-classic-17.jpg?v=1784775539675",
+   "assets/img/products/casco-pro-tec-classic-18.jpg?v=1784775540844",
+   "assets/img/products/casco-pro-tec-classic-19.jpg?v=1784775549686",
+   "assets/img/products/casco-pro-tec-classic-20.jpg?v=1784775552167",
+   "assets/img/products/casco-pro-tec-classic-21.jpg?v=1784775553910"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 4
+   },
+   {
+    "label": "M",
+    "units": 9
+   },
+   {
+    "label": "L",
+    "units": 13
+   },
+   {
+    "label": "XL",
+    "units": 4
+   }
+  ],
+  "colors": [
+   {
+    "label": "Negro Mate",
+    "units": 6
+   },
+   {
+    "label": "Negro Brillante",
+    "units": 10
+   },
+   {
+    "label": "Blanco",
+    "units": 4
+   },
+   {
+    "label": "Gris",
+    "units": 10
+   }
+  ],
+  "slug": "casco-pro-tec-classic",
+  "img": "assets/img/products/casco-pro-tec-classic.jpg?v=1784775517248"
+ },
+ {
   "n": "Casco Pro-Tec Full Full Cut",
   "brand": "Pro-Tec",
   "cat": "cascos",
