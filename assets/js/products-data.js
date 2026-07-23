@@ -32,8 +32,20 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "Talla M",
+    "label": "S",
+    "units": 0
+   },
+   {
+    "label": "M",
     "units": 1
+   },
+   {
+    "label": "L",
+    "units": 0
+   },
+   {
+    "label": "XL",
+    "units": 0
    }
   ],
   "slug": "canilleras-community-terrain-x",
@@ -53,8 +65,24 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "Talla XS",
+    "label": "XS",
     "units": 1
+   },
+   {
+    "label": "S",
+    "units": 0
+   },
+   {
+    "label": "M",
+    "units": 0
+   },
+   {
+    "label": "L",
+    "units": 0
+   },
+   {
+    "label": "XL",
+    "units": 0
    }
   ],
   "slug": "rodillera-community-propark",
@@ -74,12 +102,20 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "Talla XS",
+    "label": "XS",
     "units": 1
    },
    {
-    "label": "Talla M",
+    "label": "S",
+    "units": 0
+   },
+   {
+    "label": "M",
     "units": 2
+   },
+   {
+    "label": "L",
+    "units": 0
    }
   ],
   "slug": "rodilleras-community-venom-pro",
