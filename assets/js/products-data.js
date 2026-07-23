@@ -130,17 +130,21 @@ window.ESCENA_PRODUCTS = [
   "sku": "TOB-VAL-001",
   "units": 12,
   "slug": "tobilleras-estabilizadoras-valkiria",
-  "img": "assets/img/products/tobilleras-estabilizadoras-valkiria.jpg?v=1784591894911",
   "sizes": [
    {
     "label": "S",
-    "units": 7
+    "units": 2
    },
    {
     "label": "M",
     "units": 5
+   },
+   {
+    "label": "L",
+    "units": 5
    }
-  ]
+  ],
+  "img": "assets/img/products/tobilleras-estabilizadoras-valkiria.jpg?v=1784591894911"
  },
  {
   "n": "Rodilleras Valkiria",
@@ -151,7 +155,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "ROD-VAL-002",
   "units": 11,
   "slug": "rodilleras-valkiria",
-  "img": "assets/img/products/rodilleras-valkiria.jpg?v=1784590273713",
   "sizes": [
    {
     "label": "S",
@@ -165,7 +168,8 @@ window.ESCENA_PRODUCTS = [
     "label": "L",
     "units": 5
    }
-  ]
+  ],
+  "img": "assets/img/products/rodilleras-valkiria.jpg?v=1784590273713"
  },
  {
   "n": "Rodicanitobilleras R2",
@@ -176,7 +180,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "RCT-R2P-001",
   "units": 36,
   "slug": "rodicanitobilleras-r2",
-  "img": "assets/img/products/rodicanitobilleras-r2.jpg?v=1784588819283",
   "sizes": [
    {
     "label": "XS",
@@ -194,7 +197,8 @@ window.ESCENA_PRODUCTS = [
     "label": "L",
     "units": 10
    }
-  ]
+  ],
+  "img": "assets/img/products/rodicanitobilleras-r2.jpg?v=1784588819283"
  },
  {
   "n": "Canitobilleras R2",
