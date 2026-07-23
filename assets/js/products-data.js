@@ -1,5 +1,55 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Pro-Tec Full Full Cut",
+  "brand": "Pro-Tec",
+  "cat": "cascos",
+  "spec": "CALOTA • ABS de alto impacto o HDPE REVESTIMIENTO • EPS VENTILACIONES • 11 ventilaciones abiertas INTERIOR • Almohadillas moldeadas por compresión AJUSTE • CERTIFICACIONES • ASTM 1492/1447, AS/NZS 2063:2008, CE 1078",
+  "price": 350000,
+  "sku": "CAS-PRO-001",
+  "units": 16,
+  "imgs": [
+   "assets/img/products/casco-pro-tec-full-full-cut.jpg?v=1784773789346",
+   "assets/img/products/casco-pro-tec-full-full-cut-2.jpg?v=1784773791599",
+   "assets/img/products/casco-pro-tec-full-full-cut-3.jpg?v=1784773794056",
+   "assets/img/products/casco-pro-tec-full-full-cut-4.jpg?v=1784773795592",
+   "assets/img/products/casco-pro-tec-full-full-cut-5.jpg?v=1784773796923",
+   "assets/img/products/casco-pro-tec-full-full-cut-6.jpg?v=1784773813717",
+   "assets/img/products/casco-pro-tec-full-full-cut-7.jpg?v=1784773815151",
+   "assets/img/products/casco-pro-tec-full-full-cut-8.jpg?v=1784773816379",
+   "assets/img/products/casco-pro-tec-full-full-cut-9.jpg?v=1784773819351"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 7
+   },
+   {
+    "label": "L",
+    "units": 6
+   },
+   {
+    "label": "XL",
+    "units": 2
+   }
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 12
+   },
+   {
+    "label": "Blanco",
+    "units": 6
+   }
+  ],
+  "slug": "casco-pro-tec-full-full-cut",
+  "img": "assets/img/products/casco-pro-tec-full-full-cut.jpg?v=1784773789346"
+ },
+ {
   "n": "Tobillera de Impacto R2",
   "brand": "R2 protect",
   "cat": "tobilleras",
