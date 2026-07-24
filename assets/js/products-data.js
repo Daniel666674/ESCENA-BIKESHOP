@@ -1,5 +1,39 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Guantes Mutanty Venom - Zoom",
+  "brand": "Mutanty",
+  "cat": "guantes",
+  "spec": "Diseño nuevo y ajustado Materiales de primera calidad Lona y sintético Spadex Disponible en este Color",
+  "price": 75000,
+  "sku": "GUA-MUT-001",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/guantes-mutanty-venom-zoom.jpg?v=1784935422969",
+   "assets/img/products/guantes-mutanty-venom-zoom-2.jpg?v=1784935424810",
+   "assets/img/products/guantes-mutanty-venom-zoom-3.jpg?v=1784935426654"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 1
+   },
+   {
+    "label": "L",
+    "units": 1
+   },
+   {
+    "label": "XL",
+    "units": 1
+   }
+  ],
+  "slug": "guantes-mutanty-venom-zoom",
+  "img": "assets/img/products/guantes-mutanty-venom-zoom.jpg?v=1784935422969"
+ },
+ {
   "n": "Casco Gw Wasp Full Face",
   "brand": "Gw",
   "cat": "cascos",
