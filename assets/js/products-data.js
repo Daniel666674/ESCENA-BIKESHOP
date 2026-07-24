@@ -1,5 +1,58 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Pro-Tec Old School",
+  "brand": "Protec",
+  "cat": "cascos",
+  "spec": "",
+  "price": 330000,
+  "sku": "CAS-PRO-003",
+  "units": 19,
+  "imgs": [
+   "assets/img/products/casco-pro-tec-old-school.jpg?v=1784915341235",
+   "assets/img/products/casco-pro-tec-old-school-2.jpg?v=1784915342534",
+   "assets/img/products/casco-pro-tec-old-school-3.jpg?v=1784915343881",
+   "assets/img/products/casco-pro-tec-old-school-4.jpg?v=1784915345191",
+   "assets/img/products/casco-pro-tec-old-school-5.jpg?v=1784915346432",
+   "assets/img/products/casco-pro-tec-old-school-6.jpg?v=1784915347697",
+   "assets/img/products/casco-pro-tec-old-school-7.jpg?v=1784915349032",
+   "assets/img/products/casco-pro-tec-old-school-8.jpg?v=1784915350429",
+   "assets/img/products/casco-pro-tec-old-school-9.jpg?v=1784915352557",
+   "assets/img/products/casco-pro-tec-old-school-10.jpg?v=1784915354110",
+   "assets/img/products/casco-pro-tec-old-school-11.jpg?v=1784915355911",
+   "assets/img/products/casco-pro-tec-old-school-12.jpg?v=1784915357341",
+   "assets/img/products/casco-pro-tec-old-school-13.jpg?v=1784915359082",
+   "assets/img/products/casco-pro-tec-old-school-14.jpg?v=1784915360619",
+   "assets/img/products/casco-pro-tec-old-school-15.jpg?v=1784915362062",
+   "assets/img/products/casco-pro-tec-old-school-16.jpg?v=1784915364129"
+  ],
+  "sizes": [
+   {
+    "label": "S/M",
+    "units": 9
+   },
+   {
+    "label": "L/XL",
+    "units": 10
+   }
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 7
+   },
+   {
+    "label": "Blanco",
+    "units": 4
+   },
+   {
+    "label": "Gris",
+    "units": 8
+   }
+  ],
+  "slug": "casco-pro-tec-old-school",
+  "img": "assets/img/products/casco-pro-tec-old-school.jpg?v=1784915341235"
+ },
+ {
   "n": "Casco Pro-Tec Classic",
   "brand": "Pro-Tec",
   "cat": "cascos",
