@@ -1,17 +1,5 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Marco Wethepeople Message Verde",
-  "brand": "Wethepeople",
-  "cat": "piezas",
-  "spec": "20.6",
-  "price": 1790000,
-  "sku": "PZA-WTP-001",
-  "units": 2,
-  "tag": "Top",
-  "slug": "marco-wethepeople-message-verde",
-  "img": "assets/img/products/marco-wethepeople-message-verde.jpg?v=1784866855403"
- },
- {
   "n": "Casco Pro-Tec Classic",
   "brand": "Pro-Tec",
   "cat": "cascos",
