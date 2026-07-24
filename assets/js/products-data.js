@@ -34,7 +34,6 @@ window.ESCENA_PRODUCTS = [
   "price": 350000,
   "sku": "CAS-TSG-002",
   "units": 1,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/casco-tsg-evolution-rojo.jpg?v=1784922301228",
    "assets/img/products/casco-tsg-evolution-rojo-2.jpg?v=1784922304555"
