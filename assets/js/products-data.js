@@ -1,5 +1,73 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Guantes Mutanty Venom - Negro",
+  "brand": "Mutanty",
+  "cat": "guantes",
+  "spec": "Diseño nuevo y ajustado Materiales de primera calidad Lona y sintético Spadex",
+  "price": 75000,
+  "sku": "GUA-MUT-005",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/guantes-mutanty-venom-negro.jpg?v=1784937385407",
+   "assets/img/products/guantes-mutanty-venom-negro-2.jpg?v=1784937386666",
+   "assets/img/products/guantes-mutanty-venom-negro-3.jpg?v=1784937388248"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 1
+   },
+   {
+    "label": "L",
+    "units": 1
+   },
+   {
+    "label": "XL",
+    "units": 1
+   }
+  ],
+  "slug": "guantes-mutanty-venom-negro",
+  "img": "assets/img/products/guantes-mutanty-venom-negro.jpg?v=1784937385407"
+ },
+ {
+  "n": "Guantes Mutanty Venom - Vinotinto",
+  "brand": "Mutanty",
+  "cat": "guantes",
+  "spec": "Diseño nuevo y ajustado Materiales de primera calidad Lona y sintético Spadex",
+  "price": 75000,
+  "sku": "GUA-MUT-004",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/guantes-mutanty-venom-vinotinto.jpg?v=1784937389524",
+   "assets/img/products/guantes-mutanty-venom-vinotinto-2.jpg?v=1784937391061",
+   "assets/img/products/guantes-mutanty-venom-vinotinto-3.jpg?v=1784937392493"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 1
+   },
+   {
+    "label": "L",
+    "units": 1
+   },
+   {
+    "label": "XL",
+    "units": 1
+   }
+  ],
+  "slug": "guantes-mutanty-venom-vinotinto",
+  "img": "assets/img/products/guantes-mutanty-venom-vinotinto.jpg?v=1784937389524"
+ },
+ {
   "n": "Guantes Mutanty Venom - Verde Militar",
   "brand": "Mutanty",
   "cat": "guantes",
