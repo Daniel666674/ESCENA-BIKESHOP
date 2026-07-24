@@ -225,6 +225,13 @@
 
     <!-- Step 1: Google sign-in (identity). Only allow-listed emails continue. -->
     <div id="gAuthStep">
+      <p id="inAppBrowserWarning" style="display:none;background:#fff3cd;color:#664d03;border:1px solid #ffe69c;border-radius:8px;padding:.7rem .9rem;font-size:.78rem;text-align:left;margin-bottom:.9rem;line-height:1.45;">
+        ⚠️ Parece que abriste este link dentro de WhatsApp/Instagram/Facebook.
+        Google <b>no permite iniciar sesión</b> desde ese navegador integrado —
+        vas a ver un error aunque tu cuenta esté bien configurada.
+        Tocá los <b>⋮</b> o <b>···</b> arriba y elegí <b>"Abrir en Safari"</b> o
+        <b>"Abrir en Chrome"</b>, y volvé a intentar desde ahí.
+      </p>
       <p>Inicia sesión con tu cuenta de Google autorizada para administrar la tienda.</p>
       <div id="g_id_onload"
            data-client_id="229389025609-slv7i425luprmq9amso4i2cfg7jveheo.apps.googleusercontent.com"
@@ -695,6 +702,22 @@
   /* ============ Config ============ */
   var GH = { owner: "Daniel666674", repo: "ESCENA-BIKESHOP", branch: "main" };
   var TOKEN_KEY = "escena_gh_token_v1";
+  // Google's Sign-In blocks/misbehaves inside embedded in-app browsers
+  // (WhatsApp, Instagram, Facebook) — this typically surfaces as a confusing
+  // "Error 400: origin_mismatch" instead of a clear "use a real browser"
+  // message. Detect the common cases (mostly reliable on Android; iOS
+  // in-app browsers don't always expose a distinct marker, so this is
+  // best-effort, not exhaustive) and warn BEFORE the user hits Google's
+  // cryptic error screen.
+  (function () {
+    var ua = navigator.userAgent || "";
+    var isInApp = /FBAN|FBAV|Instagram|; ?wv\)|WhatsApp/i.test(ua);
+    if (isInApp) {
+      var w = document.getElementById("inAppBrowserWarning");
+      if (w) w.style.display = "block";
+    }
+  })();
+
   /* ---- Admin identity (Google OAuth) ---- */
   var GOOGLE_AUTH_KEY = "escena_google_authed_v1";
   var OAUTH_CLIENT_ID = "229389025609-slv7i425luprmq9amso4i2cfg7jveheo.apps.googleusercontent.com";
@@ -1630,6 +1653,30 @@
   }
 
   /* ---- Image compression (canvas) ---- */
+  // On memory-constrained mobile browsers (especially embedded webviews like
+  // WhatsApp's/Instagram's in-app browser, which have tighter limits than real
+  // Safari/Chrome) drawImage() on a large modern phone-camera photo can fail
+  // SILENTLY — no exception, no onerror — leaving the canvas in its default
+  // fully-transparent state. toDataURL() then happily encodes that as a
+  // "valid" JPEG that's really just a solid black square. This is what showed
+  // up as black product photos: the corrupted image passed every existing
+  // check (real JPEG header, well over 100 bytes) and got committed as-is.
+  // Sample a handful of pixels and check alpha — real drawn image data is
+  // always fully opaque (alpha 255); an untouched/failed canvas reads back as
+  // alpha 0 everywhere. A legitimately all-black *photo* still has alpha 255,
+  // so this can't false-positive on a dark product photo.
+  function canvasLooksBlank(ctx, w, h) {
+    var xs = [0, Math.floor(w / 2), w - 1];
+    var ys = [0, Math.floor(h / 2), h - 1];
+    for (var i = 0; i < xs.length; i++) {
+      for (var j = 0; j < ys.length; j++) {
+        var d = ctx.getImageData(xs[i], ys[j], 1, 1).data;
+        if (d[3] !== 0) return false; // found an opaque pixel — real image data
+      }
+    }
+    return true;
+  }
+
   function compressDataUri(dataUri, maxDim, quality) {
     return new Promise(function (resolve, reject) {
       var img = new Image();
@@ -1639,7 +1686,9 @@
           if (!w || !h) { reject(new Error("imagen sin dimensiones")); return; }
           if (Math.max(w, h) > maxDim) { var s = maxDim / Math.max(w, h); w = Math.round(w * s); h = Math.round(h * s); }
           var c = document.createElement("canvas"); c.width = w; c.height = h;
-          c.getContext("2d").drawImage(img, 0, 0, w, h);
+          var ctx = c.getContext("2d");
+          ctx.drawImage(img, 0, 0, w, h);
+          if (canvasLooksBlank(ctx, w, h)) { reject(new Error("la foto salió en negro (fallo de memoria del navegador) — probá de nuevo o desde otro navegador")); return; }
           var out = c.toDataURL("image/jpeg", quality);
           // A real JPEG data URI is well over a few dozen bytes; anything tiny
           // means the encode produced nothing usable.
@@ -1669,6 +1718,7 @@
           ctx.translate(h / 2, w / 2);
           ctx.rotate(Math.PI / 2);
           ctx.drawImage(img, -w / 2, -h / 2);
+          if (canvasLooksBlank(ctx, h, w)) { reject(new Error("la foto salió en negro al rotar (fallo de memoria del navegador) — probá de nuevo")); return; }
           var out = c.toDataURL("image/jpeg", 0.85);
           if (out.indexOf("data:image/jpeg") !== 0 || out.length < 100) { reject(new Error("no se pudo rotar")); return; }
           resolve(out);
@@ -2442,8 +2492,11 @@
           return compressDataUri(raw, 1200, 0.8).then(function (compressed) {
             modalPhotos.push(compressed);
             modalPhotoColors.push("");
-          }).catch(function () {
-            showToast('No se pudo procesar "' + file.name + '" — probá con una foto en JPG o PNG.');
+          }).catch(function (e) {
+            var msg = (e && /negro/.test(e.message))
+              ? '"' + file.name + '" salió en negro — probá de nuevo, o subila desde otro navegador (no desde WhatsApp/Instagram).'
+              : 'No se pudo procesar "' + file.name + '" — probá con una foto en JPG o PNG.';
+            showToast(msg);
           });
         });
       });
