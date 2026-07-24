@@ -1,5 +1,34 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Protec Old School Gris",
+  "brand": "Protec",
+  "cat": "cascos",
+  "spec": "",
+  "price": 330000,
+  "sku": "CAS-PRO-003",
+  "units": 8,
+  "imgs": [
+   "assets/img/products/casco-protec-old-school-gris.jpg?v=1784931652903",
+   "assets/img/products/casco-protec-old-school-gris-2.jpg?v=1784931654129",
+   "assets/img/products/casco-protec-old-school-gris-3.jpg?v=1784931655357",
+   "assets/img/products/casco-protec-old-school-gris-4.jpg?v=1784931656486",
+   "assets/img/products/casco-protec-old-school-gris-5.jpg?v=1784931657610",
+   "assets/img/products/casco-protec-old-school-gris-6.jpg?v=1784931659044"
+  ],
+  "sizes": [
+   {
+    "label": "S/M",
+    "units": 4
+   },
+   {
+    "label": "L/XL",
+    "units": 4
+   }
+  ],
+  "slug": "casco-protec-old-school-gris",
+  "img": "assets/img/products/casco-protec-old-school-gris.jpg?v=1784931652903"
+ },
+ {
   "n": "Casco Protec Full Cut Blanco",
   "brand": "Protec",
   "cat": "cascos",
