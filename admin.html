@@ -686,7 +686,11 @@
 <div class="toast" id="toast"></div>
 
 <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
-<script>document.write('<scr'+'ipt src="assets/js/sales-log.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+<!-- sales-log.js is intentionally NOT loaded here as a public script tag —
+     it's not deployed to the public site at all (see deploy.yml's exclude
+     list). Revenue data should only be readable by an authenticated admin,
+     so it's fetched via the GitHub API (same auth as publishing) inside
+     initInventory() below, not as a plain public HTTP request. -->
 <script>
   /* ============ Config ============ */
   var GH = { owner: "Daniel666674", repo: "ESCENA-BIKESHOP", branch: "main" };
@@ -2259,11 +2263,18 @@
     var catFilterEl = document.getElementById("invCatFilter");
     if (catFilterEl) catFilterEl.insertAdjacentHTML("beforeend", catOptions(""));
     renderInventory("");
-    salesLog = (window.ESCENA_SALES || []).slice();
-    salesDirty = false;
-    salesBaselineCount = salesLog.length;
     dirtySlugs = {}; deletedSlugs = {};
-    renderSalesSummary();
+    // Sales data isn't publicly deployed (see deploy.yml) — read it through
+    // the authenticated GitHub API, same as the write path already does.
+    ghGetFile("assets/js/sales-log.js").then(function (cur) {
+      salesLog = parseRemoteArray(cur.text, "ESCENA_SALES");
+      salesDirty = false;
+      salesBaselineCount = salesLog.length;
+      renderSalesSummary();
+    }).catch(function (e) {
+      console.error("No se pudo cargar el registro de ventas:", e);
+      showToast("No se pudo cargar el registro de ventas");
+    });
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
       renderInventory(e.target.value.trim());
