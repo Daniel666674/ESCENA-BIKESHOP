@@ -7,10 +7,10 @@ window.ESCENA_PRODUCTS = [
   "price": 350000,
   "sku": "CAS-TSG-002",
   "units": 1,
+  "imgFit": "cover",
   "imgs": [
-   "assets/img/products/casco-tsg-evolution-rojo.jpg?v=1784922134003",
-   "assets/img/products/casco-tsg-evolution-rojo-2.jpg?v=1784922135128",
-   "assets/img/products/casco-tsg-evolution-rojo-3.jpg?v=1784922136351"
+   "assets/img/products/casco-tsg-evolution-rojo.jpg?v=1784922301228",
+   "assets/img/products/casco-tsg-evolution-rojo-2.jpg?v=1784922304555"
   ],
   "sizes": [
    {
@@ -23,7 +23,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-rojo",
-  "img": "assets/img/products/casco-tsg-evolution-rojo.jpg?v=1784922134003"
+  "img": "assets/img/products/casco-tsg-evolution-rojo.jpg?v=1784922301228"
  },
  {
   "n": "Casco Tsg Evolution Verde",
