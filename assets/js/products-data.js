@@ -1,5 +1,79 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Protec Classic Negro Mate",
+  "brand": "250000",
+  "cat": "cascos",
+  "spec": "",
+  "price": 250000,
+  "sku": "CAS-250-001",
+  "units": 6,
+  "imgs": [
+   "assets/img/products/casco-protec-classic-negro-mate.jpg?v=1784934336234",
+   "assets/img/products/casco-protec-classic-negro-mate-2.jpg?v=1784934337462",
+   "assets/img/products/casco-protec-classic-negro-mate-3.jpg?v=1784934338487",
+   "assets/img/products/casco-protec-classic-negro-mate-4.jpg?v=1784934339613",
+   "assets/img/products/casco-protec-classic-negro-mate-5.jpg?v=1784934340740",
+   "assets/img/products/casco-protec-classic-negro-mate-6.jpg?v=1784934342076"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 0
+   },
+   {
+    "label": "L",
+    "units": 4
+   },
+   {
+    "label": "XL",
+    "units": 1
+   }
+  ],
+  "slug": "casco-protec-classic-negro-mate",
+  "img": "assets/img/products/casco-protec-classic-negro-mate.jpg?v=1784934336234"
+ },
+ {
+  "n": "Casco Protec Classic Gris",
+  "brand": "Protec",
+  "cat": "cascos",
+  "spec": "",
+  "price": 250000,
+  "sku": "CAS-PRO-007",
+  "units": 10,
+  "imgs": [
+   "assets/img/products/casco-protec-classic-gris.jpg?v=1784934343914",
+   "assets/img/products/casco-protec-classic-gris-2.jpg?v=1784934345245",
+   "assets/img/products/casco-protec-classic-gris-3.jpg?v=1784934346473",
+   "assets/img/products/casco-protec-classic-gris-4.jpg?v=1784934347599",
+   "assets/img/products/casco-protec-classic-gris-5.jpg?v=1784934348729",
+   "assets/img/products/casco-protec-classic-gris-6.jpg?v=1784934350263"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 4
+   },
+   {
+    "label": "L",
+    "units": 4
+   },
+   {
+    "label": "L/XL",
+    "units": 1
+   }
+  ],
+  "slug": "casco-protec-classic-gris",
+  "img": "assets/img/products/casco-protec-classic-gris.jpg?v=1784934343914"
+ },
+ {
   "n": "Casco Protec Classic Blanco",
   "brand": "Protec",
   "cat": "cascos",
