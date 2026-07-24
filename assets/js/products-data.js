@@ -9,7 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "tag": "Top",
   "slug": "marco-wethepeople-message-verde",
-  "img": "assets/img/escena-logo.jpg"
+  "img": "assets/img/products/marco-wethepeople-message-verde.jpg?v=1784866855403"
  },
  {
   "n": "Casco Pro-Tec Classic",
