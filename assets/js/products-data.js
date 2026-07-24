@@ -1,5 +1,32 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Tsg Evolution Morado",
+  "brand": "Tsg",
+  "cat": "cascos",
+  "spec": "Carcasa rígida - protección total de la cabeza - certificación América y Europea - peso 460 gramos",
+  "price": 350000,
+  "sku": "CAS-TSG-003",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/casco-tsg-evolution-morado.jpg?v=1784921085414",
+   "assets/img/products/casco-tsg-evolution-morado-2.jpg?v=1784921086973",
+   "assets/img/products/casco-tsg-evolution-morado-3.jpg?v=1784921088305",
+   "assets/img/products/casco-tsg-evolution-morado-4.jpg?v=1784921090022"
+  ],
+  "sizes": [
+   {
+    "label": "S/M",
+    "units": 1
+   },
+   {
+    "label": "L/XL",
+    "units": 0
+   }
+  ],
+  "slug": "casco-tsg-evolution-morado",
+  "img": "assets/img/products/casco-tsg-evolution-morado.jpg?v=1784921085414"
+ },
+ {
   "n": "Casco Pro-Tec Classic",
   "brand": "Pro-Tec",
   "cat": "cascos",
