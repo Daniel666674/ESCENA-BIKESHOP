@@ -78,15 +78,14 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAS-PRO-001",
   "units": 16,
   "imgs": [
-   "assets/img/products/casco-pro-tec-full-full-cut.jpg?v=1784773789346",
-   "assets/img/products/casco-pro-tec-full-full-cut-2.jpg?v=1784773791599",
-   "assets/img/products/casco-pro-tec-full-full-cut-3.jpg?v=1784773794056",
-   "assets/img/products/casco-pro-tec-full-full-cut-4.jpg?v=1784773795592",
-   "assets/img/products/casco-pro-tec-full-full-cut-5.jpg?v=1784773796923",
-   "assets/img/products/casco-pro-tec-full-full-cut-6.jpg?v=1784773813717",
-   "assets/img/products/casco-pro-tec-full-full-cut-7.jpg?v=1784773815151",
-   "assets/img/products/casco-pro-tec-full-full-cut-8.jpg?v=1784773816379",
-   "assets/img/products/casco-pro-tec-full-full-cut-9.jpg?v=1784773819351"
+   "assets/img/products/casco-pro-tec-full-full-cut.jpg?v=1784913992763",
+   "assets/img/products/casco-pro-tec-full-full-cut-2.jpg?v=1784913994210",
+   "assets/img/products/casco-pro-tec-full-full-cut-3.jpg?v=1784913996122",
+   "assets/img/products/casco-pro-tec-full-full-cut-4.jpg?v=1784913997809",
+   "assets/img/products/casco-pro-tec-full-full-cut-5.jpg?v=1784913999169",
+   "assets/img/products/casco-pro-tec-full-full-cut-6.jpg?v=1784914000766",
+   "assets/img/products/casco-pro-tec-full-full-cut-7.jpg?v=1784914002368",
+   "assets/img/products/casco-pro-tec-full-full-cut-8.jpg?v=1784914004121"
   ],
   "sizes": [
    {
@@ -117,7 +116,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-pro-tec-full-full-cut",
-  "img": "assets/img/products/casco-pro-tec-full-full-cut.jpg?v=1784773789346"
+  "img": "assets/img/products/casco-pro-tec-full-full-cut.jpg?v=1784913992763"
  },
  {
   "n": "Tobillera de Impacto R2",
