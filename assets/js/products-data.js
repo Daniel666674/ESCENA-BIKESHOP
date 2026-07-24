@@ -1,5 +1,41 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Protec Full Cut Blanco",
+  "brand": "Protec",
+  "cat": "cascos",
+  "spec": "",
+  "price": 350000,
+  "sku": "CAS-PRO-002",
+  "units": 6,
+  "imgs": [
+   "assets/img/products/casco-protec-full-cut-blanco.jpg?v=1784930212036",
+   "assets/img/products/casco-protec-full-cut-blanco-2.jpg?v=1784930213160",
+   "assets/img/products/casco-protec-full-cut-blanco-3.jpg?v=1784930214183",
+   "assets/img/products/casco-protec-full-cut-blanco-4.jpg?v=1784930215310",
+   "assets/img/products/casco-protec-full-cut-blanco-5.jpg?v=1784930216538"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 2
+   },
+   {
+    "label": "L",
+    "units": 2
+   },
+   {
+    "label": "XL",
+    "units": 1
+   }
+  ],
+  "slug": "casco-protec-full-cut-blanco",
+  "img": "assets/img/products/casco-protec-full-cut-blanco.jpg?v=1784930212036"
+ },
+ {
   "n": "Casco Protec Full Cut Negro",
   "brand": "Protec",
   "cat": "cascos",
@@ -11,7 +47,8 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/casco-protec-full-cut-negro.jpg?v=1784929825682",
    "assets/img/products/casco-protec-full-cut-negro-2.jpg?v=1784929827084",
    "assets/img/products/casco-protec-full-cut-negro-3.jpg?v=1784929829058",
-   "assets/img/products/casco-protec-full-cut-negro-4.jpg?v=1784929830490"
+   "assets/img/products/casco-protec-full-cut-negro-4.jpg?v=1784929830490",
+   "assets/img/products/casco-protec-full-cut-negro-5.jpg?v=1784930218279"
   ],
   "sizes": [
    {
