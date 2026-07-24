@@ -1,5 +1,79 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Protec Classic Gris",
+  "brand": "250000",
+  "cat": "cascos",
+  "spec": "",
+  "price": 250000,
+  "sku": "CAS-250-001",
+  "units": 6,
+  "imgs": [
+   "assets/img/products/casco-protec-classic-gris.jpg?v=1784932386911",
+   "assets/img/products/casco-protec-classic-gris-2.jpg?v=1784932388509",
+   "assets/img/products/casco-protec-classic-gris-3.jpg?v=1784932390693",
+   "assets/img/products/casco-protec-classic-gris-4.jpg?v=1784932393049",
+   "assets/img/products/casco-protec-classic-gris-5.jpg?v=1784932395613",
+   "assets/img/products/casco-protec-classic-gris-6.jpg?v=1784932399807"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 0
+   },
+   {
+    "label": "L",
+    "units": 4
+   },
+   {
+    "label": "XL",
+    "units": 1
+   }
+  ],
+  "slug": "casco-protec-classic-gris",
+  "img": "assets/img/products/casco-protec-classic-gris.jpg?v=1784932386911"
+ },
+ {
+  "n": "Casco Protec Classic Negro Brillante",
+  "brand": "Protec",
+  "cat": "cascos",
+  "spec": "",
+  "price": 250000,
+  "sku": "CAS-PRO-006",
+  "units": 10,
+  "imgs": [
+   "assets/img/products/casco-protec-classic-negro-brillante.jpg?v=1784932401755",
+   "assets/img/products/casco-protec-classic-negro-brillante-2.jpg?v=1784932404827",
+   "assets/img/products/casco-protec-classic-negro-brillante-3.jpg?v=1784932408204",
+   "assets/img/products/casco-protec-classic-negro-brillante-4.jpg?v=1784932410354",
+   "assets/img/products/casco-protec-classic-negro-brillante-5.jpg?v=1784932412504",
+   "assets/img/products/casco-protec-classic-negro-brillante-6.jpg?v=1784932417009"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 4
+   },
+   {
+    "label": "L",
+    "units": 4
+   },
+   {
+    "label": "XL",
+    "units": 1
+   }
+  ],
+  "slug": "casco-protec-classic-negro-brillante",
+  "img": "assets/img/products/casco-protec-classic-negro-brillante.jpg?v=1784932401755"
+ },
+ {
   "n": "Casco Protec Old School Negro",
   "brand": "Protec",
   "cat": "cascos",
