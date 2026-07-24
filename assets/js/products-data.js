@@ -1,5 +1,32 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Tsg Evolution Verde",
+  "brand": "Tsg",
+  "cat": "cascos",
+  "spec": "",
+  "price": 350000,
+  "sku": "CAS-TSG-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/casco-tsg-evolution-verde.jpg?v=1784921480587",
+   "assets/img/products/casco-tsg-evolution-verde-2.jpg?v=1784921482642",
+   "assets/img/products/casco-tsg-evolution-verde-3.jpg?v=1784921484736",
+   "assets/img/products/casco-tsg-evolution-verde-4.jpg?v=1784921486315"
+  ],
+  "sizes": [
+   {
+    "label": "S/M",
+    "units": 1
+   },
+   {
+    "label": "L/XL",
+    "units": 0
+   }
+  ],
+  "slug": "casco-tsg-evolution-verde",
+  "img": "assets/img/products/casco-tsg-evolution-verde.jpg?v=1784921480587"
+ },
+ {
   "n": "Casco Tsg Evolution Morado",
   "brand": "Tsg",
   "cat": "cascos",
@@ -25,126 +52,6 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "casco-tsg-evolution-morado",
   "img": "assets/img/products/casco-tsg-evolution-morado.jpg?v=1784921085414"
- },
- {
-  "n": "Casco Pro-Tec Classic",
-  "brand": "Pro-Tec",
-  "cat": "cascos",
-  "spec": "CALOTA • ABS de alto impacto FORRO • EPS VENTILACIONES • 11 ventilaciones abiertas INTERIOR • Almohadillas premium termoselladas AJUSTE • CERTIFICACIONES • ASTM 1492/1447, AS/NZS 2063:2008, CE 1078",
-  "price": 250000,
-  "sku": "CAS-PRO-002",
-  "units": 30,
-  "imgs": [
-   "assets/img/products/casco-pro-tec-classic.jpg?v=1784775517248",
-   "assets/img/products/casco-pro-tec-classic-2.jpg?v=1784775519107",
-   "assets/img/products/casco-pro-tec-classic-3.jpg?v=1784775521036",
-   "assets/img/products/casco-pro-tec-classic-4.jpg?v=1784775522572",
-   "assets/img/products/casco-pro-tec-classic-5.jpg?v=1784775523904",
-   "assets/img/products/casco-pro-tec-classic-6.jpg?v=1784775525030",
-   "assets/img/products/casco-pro-tec-classic-7.jpg?v=1784775526668",
-   "assets/img/products/casco-pro-tec-classic-8.jpg?v=1784775528102",
-   "assets/img/products/casco-pro-tec-classic-9.jpg?v=1784775529638",
-   "assets/img/products/casco-pro-tec-classic-10.jpg?v=1784775530867",
-   "assets/img/products/casco-pro-tec-classic-11.jpg?v=1784775532096",
-   "assets/img/products/casco-pro-tec-classic-12.jpg?v=1784775533428",
-   "assets/img/products/casco-pro-tec-classic-13.jpg?v=1784775534797",
-   "assets/img/products/casco-pro-tec-classic-14.jpg?v=1784775536089",
-   "assets/img/products/casco-pro-tec-classic-15.jpg?v=1784775537216",
-   "assets/img/products/casco-pro-tec-classic-16.jpg?v=1784775538446",
-   "assets/img/products/casco-pro-tec-classic-17.jpg?v=1784775539675",
-   "assets/img/products/casco-pro-tec-classic-18.jpg?v=1784775540844",
-   "assets/img/products/casco-pro-tec-classic-19.jpg?v=1784775549686",
-   "assets/img/products/casco-pro-tec-classic-20.jpg?v=1784775552167",
-   "assets/img/products/casco-pro-tec-classic-21.jpg?v=1784775553910"
-  ],
-  "sizes": [
-   {
-    "label": "S",
-    "units": 4
-   },
-   {
-    "label": "M",
-    "units": 9
-   },
-   {
-    "label": "L",
-    "units": 13
-   },
-   {
-    "label": "XL",
-    "units": 4
-   }
-  ],
-  "colors": [
-   {
-    "label": "Negro Mate",
-    "units": 6
-   },
-   {
-    "label": "Negro Brillante",
-    "units": 10
-   },
-   {
-    "label": "Blanco",
-    "units": 4
-   },
-   {
-    "label": "Gris",
-    "units": 10
-   }
-  ],
-  "slug": "casco-pro-tec-classic",
-  "img": "assets/img/products/casco-pro-tec-classic.jpg?v=1784775517248"
- },
- {
-  "n": "Casco Pro-Tec Full Full Cut",
-  "brand": "Pro-Tec",
-  "cat": "cascos",
-  "spec": "CALOTA • ABS de alto impacto o HDPE REVESTIMIENTO • EPS VENTILACIONES • 11 ventilaciones abiertas INTERIOR • Almohadillas moldeadas por compresión AJUSTE • CERTIFICACIONES • ASTM 1492/1447, AS/NZS 2063:2008, CE 1078",
-  "price": 350000,
-  "sku": "CAS-PRO-001",
-  "units": 16,
-  "imgs": [
-   "assets/img/products/casco-pro-tec-full-full-cut.jpg?v=1784913992763",
-   "assets/img/products/casco-pro-tec-full-full-cut-2.jpg?v=1784913994210",
-   "assets/img/products/casco-pro-tec-full-full-cut-3.jpg?v=1784913996122",
-   "assets/img/products/casco-pro-tec-full-full-cut-4.jpg?v=1784913997809",
-   "assets/img/products/casco-pro-tec-full-full-cut-5.jpg?v=1784913999169",
-   "assets/img/products/casco-pro-tec-full-full-cut-6.jpg?v=1784914000766",
-   "assets/img/products/casco-pro-tec-full-full-cut-7.jpg?v=1784914002368",
-   "assets/img/products/casco-pro-tec-full-full-cut-8.jpg?v=1784914004121"
-  ],
-  "sizes": [
-   {
-    "label": "S",
-    "units": 1
-   },
-   {
-    "label": "M",
-    "units": 7
-   },
-   {
-    "label": "L",
-    "units": 6
-   },
-   {
-    "label": "XL",
-    "units": 2
-   }
-  ],
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 12
-   },
-   {
-    "label": "Blanco",
-    "units": 6
-   }
-  ],
-  "slug": "casco-pro-tec-full-full-cut",
-  "imgFit": "cover",
-  "img": "assets/img/products/casco-pro-tec-full-full-cut.jpg?v=1784913992763"
  },
  {
   "n": "Tobillera de Impacto R2",
@@ -367,45 +274,6 @@ window.ESCENA_PRODUCTS = [
     "units": 10
    }
   ]
- },
- {
-  "n": "Casco TSG Dawn Blanco",
-  "brand": "TSG",
-  "cat": "cascos",
-  "spec": "UNISEX • S/M/L/XL",
-  "price": 370000,
-  "sku": "CAS-TSG-002",
-  "units": 2,
-  "tag": "Nuevo",
-  "imgs": [
-   "assets/img/products/casco-tsg-dawn-blanco.jpg?v=1784400418395",
-   "assets/img/products/casco-tsg-dawn-blanco-2.jpg?v=1784400419400",
-   "assets/img/products/casco-tsg-dawn-blanco-3.jpg?v=1784400420441"
-  ],
-  "slug": "casco-tsg-dawn-blanco",
-  "img": "assets/img/products/casco-tsg-dawn-blanco.jpg?v=1784400418395"
- },
- {
-  "n": "Casco TSG Evolution Negro",
-  "brand": "TSG",
-  "cat": "cascos",
-  "spec": "UNISEX • S/M/L/XL",
-  "price": 350000,
-  "sku": "CAS-TSG-001",
-  "units": 4,
-  "tag": "Top",
-  "imgs": [
-   "assets/img/products/casco-tsg-evolution-negro.jpg?v=1784399938241",
-   "assets/img/products/casco-tsg-evolution-negro-2.jpg?v=1784399939368"
-  ],
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 4
-   }
-  ],
-  "slug": "casco-tsg-evolution-negro",
-  "img": "assets/img/products/casco-tsg-evolution-negro.jpg?v=1784399938241"
  },
  {
   "n": "Caña Cult Mind Control Negra - Top load",
