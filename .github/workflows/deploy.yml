@@ -36,12 +36,19 @@ jobs:
           port: 21
           local-dir: ./
           # only changed files upload after the first run (delta sync)
+          #
+          # assets/js/sales-log.js is excluded on purpose: it holds real
+          # revenue/order data. This is a public repo, so anything deployed
+          # here is publicly fetchable with no auth — admin.html reads/writes
+          # it via the GitHub API instead (same trust boundary as
+          # publishing), so it should never touch the public site at all.
           exclude: |
             **/.git*
             **/.git*/**
             **/.github/**
             **/README*
             **/*.md
+            assets/js/sales-log.js
 
       - name: Verify the live site is actually serving our files
         # A green FTP upload does NOT prove the site is live: the first deploy
@@ -72,3 +79,18 @@ jobs:
             echo "::error::Most likely the FTP server-dir / docroot is wrong (files landed in the wrong folder in Hostinger)."
             exit 1
           fi
+
+      - name: Verify sales-log.js is NOT publicly reachable
+        # Regression guard: sales-log.js holds real revenue data and must
+        # never be servable from the public site (see the exclude comment
+        # above). If this ever starts returning 200 again — e.g. someone
+        # removes the exclude rule, or a future refactor re-adds a public
+        # <script> load for it — fail the deploy loudly instead of letting
+        # a real data leak ship silently.
+        run: |
+          code="$(curl -sL -o /dev/null -w '%{http_code}' "https://escenabmx.com/assets/js/sales-log.js?cb=$(date +%s)" || echo 000)"
+          if [ "$code" = "200" ]; then
+            echo "::error::assets/js/sales-log.js is publicly reachable (HTTP 200) — revenue data is exposed. This must stay excluded from the public deploy."
+            exit 1
+          fi
+          echo "OK: sales-log.js is not publicly reachable (HTTP $code)."
