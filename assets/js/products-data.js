@@ -1,5 +1,63 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Protec Old School Negro",
+  "brand": "Protec",
+  "cat": "cascos",
+  "spec": "",
+  "price": 330000,
+  "sku": "CAS-PRO-005",
+  "units": 8,
+  "imgs": [
+   "assets/img/products/casco-protec-old-school-negro.jpg?v=1784931883710",
+   "assets/img/products/casco-protec-old-school-negro-2.jpg?v=1784931884939",
+   "assets/img/products/casco-protec-old-school-negro-3.jpg?v=1784931886271",
+   "assets/img/products/casco-protec-old-school-negro-4.jpg?v=1784931887601",
+   "assets/img/products/casco-protec-old-school-negro-5.jpg?v=1784931888830",
+   "assets/img/products/casco-protec-old-school-negro-6.jpg?v=1784931890264"
+  ],
+  "sizes": [
+   {
+    "label": "S/M",
+    "units": 4
+   },
+   {
+    "label": "L/XL",
+    "units": 4
+   }
+  ],
+  "slug": "casco-protec-old-school-negro",
+  "img": "assets/img/products/casco-protec-old-school-negro.jpg?v=1784931883710"
+ },
+ {
+  "n": "Casco Protec Old School Blanco",
+  "brand": "Protec",
+  "cat": "cascos",
+  "spec": "",
+  "price": 330000,
+  "sku": "CAS-PRO-004",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/casco-protec-old-school-blanco.jpg?v=1784931891390",
+   "assets/img/products/casco-protec-old-school-blanco-2.jpg?v=1784931892620",
+   "assets/img/products/casco-protec-old-school-blanco-3.jpg?v=1784931894155",
+   "assets/img/products/casco-protec-old-school-blanco-4.jpg?v=1784931895284",
+   "assets/img/products/casco-protec-old-school-blanco-5.jpg?v=1784931896407",
+   "assets/img/products/casco-protec-old-school-blanco-6.jpg?v=1784931897636"
+  ],
+  "sizes": [
+   {
+    "label": "S/M",
+    "units": 2
+   },
+   {
+    "label": "L/XL",
+    "units": 2
+   }
+  ],
+  "slug": "casco-protec-old-school-blanco",
+  "img": "assets/img/products/casco-protec-old-school-blanco.jpg?v=1784931891390"
+ },
+ {
   "n": "Casco Protec Old School Gris",
   "brand": "Protec",
   "cat": "cascos",
