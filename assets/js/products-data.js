@@ -1,5 +1,32 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Tsg Evolution Negro Mate",
+  "brand": "Tsg",
+  "cat": "cascos",
+  "spec": "",
+  "price": 350000,
+  "sku": "CAS-TSG-005",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/casco-tsg-evolution-negro-mate.jpg?v=1784923216659",
+   "assets/img/products/casco-tsg-evolution-negro-mate-2.jpg?v=1784923218308",
+   "assets/img/products/casco-tsg-evolution-negro-mate-3.jpg?v=1784923220130",
+   "assets/img/products/casco-tsg-evolution-negro-mate-4.jpg?v=1784923263336"
+  ],
+  "sizes": [
+   {
+    "label": "S/M",
+    "units": 2
+   },
+   {
+    "label": "L/XL",
+    "units": 2
+   }
+  ],
+  "slug": "casco-tsg-evolution-negro-mate",
+  "img": "assets/img/products/casco-tsg-evolution-negro-mate.jpg?v=1784923216659"
+ },
+ {
   "n": "Casco Tsg Evolution Negro Brillante",
   "brand": "Tsg",
   "cat": "cascos",
