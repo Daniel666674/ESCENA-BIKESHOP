@@ -42,7 +42,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "GUA-MUT-004",
   "units": 4,
   "imgs": [
-   "assets/img/products/guantes-mutanty-venom-vinotinto.jpg?v=1784937389524",
+   "assets/img/products/guantes-mutanty-venom-vinotinto.jpg?v=1784937496292",
    "assets/img/products/guantes-mutanty-venom-vinotinto-2.jpg?v=1784937391061",
    "assets/img/products/guantes-mutanty-venom-vinotinto-3.jpg?v=1784937392493"
   ],
@@ -65,7 +65,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "guantes-mutanty-venom-vinotinto",
-  "img": "assets/img/products/guantes-mutanty-venom-vinotinto.jpg?v=1784937389524"
+  "img": "assets/img/products/guantes-mutanty-venom-vinotinto.jpg?v=1784937496292"
  },
  {
   "n": "Guantes Mutanty Venom - Verde Militar",
