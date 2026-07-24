@@ -1,6 +1,6 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Casco Tsg Evolution Negro",
+  "n": "Casco Tsg Evolution Negro Brillante",
   "brand": "Tsg",
   "cat": "cascos",
   "spec": "",
