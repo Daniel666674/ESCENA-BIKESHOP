@@ -1,5 +1,32 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Tsg Dawn Negro",
+  "brand": "Tsg",
+  "cat": "cascos",
+  "spec": "",
+  "price": 370000,
+  "sku": "CAS-TSG-006",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/casco-tsg-dawn-negro.jpg?v=1784924219625",
+   "assets/img/products/casco-tsg-dawn-negro-2.jpg?v=1784924221628",
+   "assets/img/products/casco-tsg-dawn-negro-3.jpg?v=1784924223569",
+   "assets/img/products/casco-tsg-dawn-negro-4.jpg?v=1784924225344"
+  ],
+  "sizes": [
+   {
+    "label": "S/M",
+    "units": 2
+   },
+   {
+    "label": "L/XL",
+    "units": 2
+   }
+  ],
+  "slug": "casco-tsg-dawn-negro",
+  "img": "assets/img/products/casco-tsg-dawn-negro.jpg?v=1784924219625"
+ },
+ {
   "n": "Casco Tsg Evolution Negro Mate",
   "brand": "Tsg",
   "cat": "cascos",
