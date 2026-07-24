@@ -1,5 +1,39 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Guantes Mutanty Venom - Collage",
+  "brand": "Mutanty",
+  "cat": "guantes",
+  "spec": "",
+  "price": 75000,
+  "sku": "GUA-MUT-002",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/guantes-mutanty-venom-collage.jpg?v=1784936713291",
+   "assets/img/products/guantes-mutanty-venom-collage-2.jpg?v=1784936715024",
+   "assets/img/products/guantes-mutanty-venom-collage-3.jpg?v=1784936716868"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 1
+   },
+   {
+    "label": "L",
+    "units": 1
+   },
+   {
+    "label": "XL",
+    "units": 1
+   }
+  ],
+  "slug": "guantes-mutanty-venom-collage",
+  "img": "assets/img/products/guantes-mutanty-venom-collage.jpg?v=1784936713291"
+ },
+ {
   "n": "Guantes Mutanty Venom - Zoom",
   "brand": "Mutanty",
   "cat": "guantes",
