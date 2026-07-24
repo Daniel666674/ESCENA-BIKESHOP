@@ -7,6 +7,7 @@ window.ESCENA_PRODUCTS = [
   "price": 350000,
   "sku": "CAS-PRO-002",
   "units": 6,
+  "imgFit": "cover",
   "imgs": [
    "assets/img/products/casco-protec-full-cut-blanco.jpg?v=1784930287809",
    "assets/img/products/casco-protec-full-cut-blanco-2.jpg?v=1784930289038",
