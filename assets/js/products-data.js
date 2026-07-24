@@ -1,5 +1,40 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Protec Full Cut Negro",
+  "brand": "Protec",
+  "cat": "cascos",
+  "spec": "",
+  "price": 350000,
+  "sku": "CAS-PRO-001",
+  "units": 10,
+  "imgs": [
+   "assets/img/products/casco-protec-full-cut-negro.jpg?v=1784929825682",
+   "assets/img/products/casco-protec-full-cut-negro-2.jpg?v=1784929827084",
+   "assets/img/products/casco-protec-full-cut-negro-3.jpg?v=1784929829058",
+   "assets/img/products/casco-protec-full-cut-negro-4.jpg?v=1784929830490"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 0
+   },
+   {
+    "label": "M",
+    "units": 5
+   },
+   {
+    "label": "L",
+    "units": 4
+   },
+   {
+    "label": "XL",
+    "units": 1
+   }
+  ],
+  "slug": "casco-protec-full-cut-negro",
+  "img": "assets/img/products/casco-protec-full-cut-negro.jpg?v=1784929825682"
+ },
+ {
   "n": "Casco Tsg Dawn Negro",
   "brand": "Tsg",
   "cat": "cascos",
