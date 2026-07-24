@@ -8,10 +8,10 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAS-TSG-005",
   "units": 4,
   "imgs": [
-   "assets/img/products/casco-tsg-evolution-negro-mate.jpg?v=1784923606664",
-   "assets/img/products/casco-tsg-evolution-negro-mate-2.jpg?v=1784923612618",
-   "assets/img/products/casco-tsg-evolution-negro-mate-3.jpg?v=1784923618798",
-   "assets/img/products/casco-tsg-evolution-negro-mate-4.jpg?v=1784923623893"
+   "assets/img/products/casco-tsg-evolution-negro-mate.jpg?v=1784923786485",
+   "assets/img/products/casco-tsg-evolution-negro-mate-2.jpg?v=1784923789268",
+   "assets/img/products/casco-tsg-evolution-negro-mate-3.jpg?v=1784923796547",
+   "assets/img/products/casco-tsg-evolution-negro-mate-4.jpg?v=1784923802039"
   ],
   "sizes": [
    {
@@ -24,7 +24,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-negro-mate",
-  "img": "assets/img/products/casco-tsg-evolution-negro-mate.jpg?v=1784923606664"
+  "img": "assets/img/products/casco-tsg-evolution-negro-mate.jpg?v=1784923786485"
  },
  {
   "n": "Casco Tsg Evolution Negro Brillante",
