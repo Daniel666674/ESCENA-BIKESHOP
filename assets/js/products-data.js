@@ -9,11 +9,11 @@ window.ESCENA_PRODUCTS = [
   "units": 6,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/casco-protec-full-cut-blanco.jpg?v=1784930287809",
-   "assets/img/products/casco-protec-full-cut-blanco-2.jpg?v=1784930289038",
-   "assets/img/products/casco-protec-full-cut-blanco-3.jpg?v=1784930290778",
-   "assets/img/products/casco-protec-full-cut-blanco-4.jpg?v=1784930292110",
-   "assets/img/products/casco-protec-full-cut-blanco-5.jpg?v=1784930293952"
+   "assets/img/products/casco-protec-full-cut-blanco.jpg?v=1784931235622",
+   "assets/img/products/casco-protec-full-cut-blanco-2.jpg?v=1784931236954",
+   "assets/img/products/casco-protec-full-cut-blanco-3.jpg?v=1784931238385",
+   "assets/img/products/casco-protec-full-cut-blanco-4.jpg?v=1784931239716",
+   "assets/img/products/casco-protec-full-cut-blanco-5.jpg?v=1784931243301"
   ],
   "sizes": [
    {
@@ -34,7 +34,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-full-cut-blanco",
-  "img": "assets/img/products/casco-protec-full-cut-blanco.jpg?v=1784930287809"
+  "img": "assets/img/products/casco-protec-full-cut-blanco.jpg?v=1784931235622"
  },
  {
   "n": "Casco Protec Full Cut Negro",
