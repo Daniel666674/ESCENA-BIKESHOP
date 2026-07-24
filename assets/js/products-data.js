@@ -1,5 +1,40 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Gw Wasp Full Face",
+  "brand": "Gw",
+  "cat": "cascos",
+  "spec": "",
+  "price": 320000,
+  "sku": "CAS-GWB-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/casco-gw-wasp-full-face.jpg?v=1784934676099",
+   "assets/img/products/casco-gw-wasp-full-face-2.jpg?v=1784934677429",
+   "assets/img/products/casco-gw-wasp-full-face-3.jpg?v=1784934678658",
+   "assets/img/products/casco-gw-wasp-full-face-4.jpg?v=1784934679786"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 0
+   },
+   {
+    "label": "M",
+    "units": 1
+   },
+   {
+    "label": "L",
+    "units": 0
+   },
+   {
+    "label": "XL",
+    "units": 0
+   }
+  ],
+  "slug": "casco-gw-wasp-full-face",
+  "img": "assets/img/products/casco-gw-wasp-full-face.jpg?v=1784934676099"
+ },
+ {
   "n": "Casco Protec Classic Negro Mate",
   "brand": "250000",
   "cat": "cascos",
