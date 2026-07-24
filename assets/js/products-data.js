@@ -1,5 +1,32 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Tsg Evolution Negro",
+  "brand": "Tsg",
+  "cat": "cascos",
+  "spec": "",
+  "price": 350000,
+  "sku": "CAS-TSG-004",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/casco-tsg-evolution-negro.jpg?v=1784922527718",
+   "assets/img/products/casco-tsg-evolution-negro-2.jpg?v=1784922531565",
+   "assets/img/products/casco-tsg-evolution-negro-3.jpg?v=1784922532992",
+   "assets/img/products/casco-tsg-evolution-negro-4.jpg?v=1784922534929"
+  ],
+  "sizes": [
+   {
+    "label": "S/M",
+    "units": 2
+   },
+   {
+    "label": "L/XL",
+    "units": 2
+   }
+  ],
+  "slug": "casco-tsg-evolution-negro",
+  "img": "assets/img/products/casco-tsg-evolution-negro.jpg?v=1784922527718"
+ },
+ {
   "n": "Casco Tsg Evolution Rojo",
   "brand": "Tsg",
   "cat": "cascos",
