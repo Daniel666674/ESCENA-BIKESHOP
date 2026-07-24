@@ -1,19 +1,19 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Casco Protec Classic Negro Mate",
-  "brand": "250000",
+  "n": "Casco Protec Classic Blanco",
+  "brand": "Protec",
   "cat": "cascos",
   "spec": "",
   "price": 250000,
-  "sku": "CAS-250-001",
-  "units": 6,
+  "sku": "CAS-PRO-008",
+  "units": 4,
   "imgs": [
-   "assets/img/products/casco-protec-classic-gris.jpg?v=1784932386911",
-   "assets/img/products/casco-protec-classic-gris-2.jpg?v=1784932388509",
-   "assets/img/products/casco-protec-classic-gris-3.jpg?v=1784932390693",
-   "assets/img/products/casco-protec-classic-gris-4.jpg?v=1784932393049",
-   "assets/img/products/casco-protec-classic-gris-5.jpg?v=1784932395613",
-   "assets/img/products/casco-protec-classic-gris-6.jpg?v=1784932399807"
+   "assets/img/products/casco-protec-classic-blanco.jpg?v=1784933989266",
+   "assets/img/products/casco-protec-classic-blanco-2.jpg?v=1784933990392",
+   "assets/img/products/casco-protec-classic-blanco-3.jpg?v=1784933991722",
+   "assets/img/products/casco-protec-classic-blanco-4.jpg?v=1784933992952",
+   "assets/img/products/casco-protec-classic-blanco-5.jpg?v=1784933994181",
+   "assets/img/products/casco-protec-classic-blanco-6.jpg?v=1784933995615"
   ],
   "sizes": [
    {
@@ -22,19 +22,19 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "M",
-    "units": 0
+    "units": 1
    },
    {
     "label": "L",
-    "units": 4
+    "units": 1
    },
    {
     "label": "XL",
     "units": 1
    }
   ],
-  "slug": "casco-protec-classic-gris",
-  "img": "assets/img/products/casco-protec-classic-gris.jpg?v=1784932386911"
+  "slug": "casco-protec-classic-blanco",
+  "img": "assets/img/products/casco-protec-classic-blanco.jpg?v=1784933989266"
  },
  {
   "n": "Casco Protec Classic Negro Brillante",
