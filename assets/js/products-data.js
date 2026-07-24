@@ -116,6 +116,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-pro-tec-full-full-cut",
+  "imgFit": "cover",
   "img": "assets/img/products/casco-pro-tec-full-full-cut.jpg?v=1784913992763"
  },
  {
