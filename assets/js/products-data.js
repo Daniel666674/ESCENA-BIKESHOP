@@ -3,7 +3,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Casco Pro-Tec Old School",
   "brand": "Protec",
   "cat": "cascos",
-  "spec": "",
+  "spec": "Certificación de casco",
   "price": 330000,
   "sku": "CAS-PRO-003",
   "units": 19,
