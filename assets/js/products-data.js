@@ -1,6 +1,6 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Casco Protec Classic Gris",
+  "n": "Casco Protec Classic Negro Mate",
   "brand": "250000",
   "cat": "cascos",
   "spec": "",
