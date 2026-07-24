@@ -1,9 +1,43 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Guantes Mutanty Venom - Verde Militar",
+  "brand": "Mutanty",
+  "cat": "guantes",
+  "spec": "Diseño nuevo y ajustado Materiales de primera calidad Lona y sintético Spadex",
+  "price": 75000,
+  "sku": "GUA-MUT-003",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/guantes-mutanty-venom-verde-militar.jpg?v=1784936973178",
+   "assets/img/products/guantes-mutanty-venom-verde-militar-2.jpg?v=1784936974723",
+   "assets/img/products/guantes-mutanty-venom-verde-militar-3.jpg?v=1784936975963"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1
+   },
+   {
+    "label": "M",
+    "units": 1
+   },
+   {
+    "label": "L",
+    "units": 1
+   },
+   {
+    "label": "XL",
+    "units": 1
+   }
+  ],
+  "slug": "guantes-mutanty-venom-verde-militar",
+  "img": "assets/img/products/guantes-mutanty-venom-verde-militar.jpg?v=1784936973178"
+ },
+ {
   "n": "Guantes Mutanty Venom - Collage",
   "brand": "Mutanty",
   "cat": "guantes",
-  "spec": "",
+  "spec": "Diseño nuevo y ajustado Materiales de primera calidad Lona y sintético Spadex",
   "price": 75000,
   "sku": "GUA-MUT-002",
   "units": 4,
@@ -37,7 +71,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Guantes Mutanty Venom - Zoom",
   "brand": "Mutanty",
   "cat": "guantes",
-  "spec": "Diseño nuevo y ajustado Materiales de primera calidad Lona y sintético Spadex Disponible en este Color",
+  "spec": "Diseño nuevo y ajustado Materiales de primera calidad Lona y sintético Spadex",
   "price": 75000,
   "sku": "GUA-MUT-001",
   "units": 4,
