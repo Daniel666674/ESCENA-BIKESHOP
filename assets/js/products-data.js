@@ -8,7 +8,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "GUA-MUT-005",
   "units": 4,
   "imgs": [
-   "assets/img/products/guantes-mutanty-venom-negro.jpg?v=1784937385407",
+   "assets/img/products/guantes-mutanty-venom-negro.jpg?v=1784937538059",
    "assets/img/products/guantes-mutanty-venom-negro-2.jpg?v=1784937386666",
    "assets/img/products/guantes-mutanty-venom-negro-3.jpg?v=1784937388248"
   ],
@@ -31,7 +31,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "guantes-mutanty-venom-negro",
-  "img": "assets/img/products/guantes-mutanty-venom-negro.jpg?v=1784937385407"
+  "img": "assets/img/products/guantes-mutanty-venom-negro.jpg?v=1784937538059"
  },
  {
   "n": "Guantes Mutanty Venom - Vinotinto",
