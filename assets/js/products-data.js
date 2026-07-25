@@ -32,7 +32,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-gw-destructor-negro",
-  "img": "assets/img/products/timon-gw-destructor-negro.jpg?v=1784942218071"
+  "img": "assets/img/products/timon-gw-destructor-negro.jpg?v=1784943297626"
  },
  {
   "n": "Timon Gw destructor Cromado",
@@ -60,7 +60,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "GUA-GWB-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/guantes-gw-largos-full-reflective.jpg?v=1784943113130",
+   "assets/img/products/guantes-gw-largos-full-reflective.jpg?v=1784943299577",
    "assets/img/products/guantes-gw-largos-full-reflective-2.jpg?v=1784939769292",
    "assets/img/products/guantes-gw-largos-full-reflective-3.jpg?v=1784939770520"
   ],
@@ -87,7 +87,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "guantes-gw-largos-full-reflective",
-  "img": "assets/img/products/guantes-gw-largos-full-reflective.jpg?v=1784943113130"
+  "img": "assets/img/products/guantes-gw-largos-full-reflective.jpg?v=1784943299577"
  },
  {
   "n": "Guantes Mutanty Venom - Negro",
