@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Gw destructor Cromado",
+  "brand": "GW",
+  "cat": "manubrios",
+  "spec": "",
+  "price": 45000,
+  "sku": "TMN-GWB-001",
+  "units": 2,
+  "sizes": [
+   {
+    "label": "9.5”",
+    "units": 2
+   }
+  ],
+  "slug": "timon-gw-destructor-cromado",
+  "img": "assets/img/products/timon-gw-destructor-cromado.jpg?v=1784942152231"
+ },
+ {
   "n": "Guantes Gw Largos Full Reflective",
   "brand": "GW",
   "cat": "guantes",
