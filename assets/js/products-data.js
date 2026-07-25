@@ -1,5 +1,23 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Gw Destructor Negro",
+  "brand": "GW",
+  "cat": "manubrios",
+  "spec": "Material Acero Medida 9.5″",
+  "price": 38000,
+  "sku": "TMN-GWB-001",
+  "units": 0,
+  "tag": "Agotado",
+  "sizes": [
+   {
+    "label": "9.5\"",
+    "units": 0
+   }
+  ],
+  "slug": "timon-gw-destructor-negro",
+  "img": "assets/img/products/timon-gw-destructor-negro.jpg?v=1784942173114"
+ },
+ {
   "n": "Timon Gw destructor Cromado",
   "brand": "GW",
   "cat": "manubrios",
@@ -1276,74 +1294,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784326217980"
  },
  {
-  "slug": "timon-gw-destructor-tornasol",
-  "n": "Timón GW Destructor Tornasol",
-  "brand": "GW",
-  "cat": "manubrios",
-  "spec": "Tornasol • Acero GW • Medida: 10",
-  "price": 80000,
-  "sku": "TMN",
-  "units": 2,
-  "tag": "Nuevo!",
-  "imgs": [
-   "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919",
-   "assets/img/products/timon-gw-destructor-tornasol-2.jpg?v=1784153795741",
-   "assets/img/products/timon-gw-destructor-tornasol-3.jpg?v=1784153797741",
-   "assets/img/products/timon-gw-destructor-tornasol-4.jpg?v=1784153799765"
-  ],
-  "sizes": [
-   {
-    "label": "10\"",
-    "units": 2
-   }
-  ],
-  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784153793919"
- },
- {
-  "slug": "timon-cult-heavens-gate-4p-cromado",
-  "n": "Timón Cult Heavens Gate 4P Cromado",
-  "brand": "Cult",
-  "cat": "manubrios",
-  "spec": "Cromoly tratado al calor · 28\" ancho · Cromado · 11.5° retroceso · 3° elevación",
-  "price": 400000,
-  "sku": "TMN-CLT-001",
-  "units": 4,
-  "tag": "Top 🔥",
-  "imgs": [
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784310306495",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1784310307966"
-  ],
-  "sizes": [
-   {
-    "label": "9.42\"",
-    "units": 2
-   },
-   {
-    "label": "9.65\"",
-    "units": 2
-   }
-  ],
-  "colors": [
-   {
-    "label": "Cromado",
-    "units": 2
-   },
-   {
-    "label": "Negro",
-    "units": 2
-   }
-  ],
-  "imgColorMap": {
-   "Cromado": [
-    0
-   ],
-   "Negro": [
-    1
-   ]
-  },
-  "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784310306495"
- },
- {
   "slug": "silla-pivotal-eighties-zebra",
   "n": "Silla Pivotal Eighties Zebra",
   "brand": "Eighties",
@@ -2292,108 +2242,6 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "tag": "Edición Especial",
   "img": "assets/img/products/cult-sillin-cuadros.jpg"
- },
- {
-  "slug": "manubrio-cromoly-negro-01",
-  "n": "Timón Cult Devon 9.5\" Negro",
-  "brand": "Cult",
-  "cat": "manubrios",
-  "spec": "Cromoly · 28\" ancho · Negro · 10.5° retroceso · 3° elevación",
-  "price": 370000,
-  "sku": "MANUBRIO-CROMOLY-NEGRO-01",
-  "units": 2,
-  "tag": "Top 🔥",
-  "sizes": [
-   {
-    "label": "9.5\"",
-    "units": 2
-   }
-  ],
-  "imgs": [
-   "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326",
-   "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1784310310687"
-  ],
-  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326"
- },
- {
-  "slug": "manubrio-cromoly-cromado",
-  "n": "Timón Cult Devon 9.5\" Cromado",
-  "brand": "Cult",
-  "cat": "manubrios",
-  "spec": "Cromoly · 28\" ancho · Cromado · 10.5° retroceso · 3° elevación",
-  "price": 390000,
-  "sku": "MANUBRIO-CROMOLY-CROMADO",
-  "units": 2,
-  "tag": "Top 🔥",
-  "sizes": [
-   {
-    "label": "9.5\"",
-    "units": 2
-   }
-  ],
-  "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784310311924"
- },
- {
-  "slug": "manubrio-cromoly-negro-02",
-  "n": "Timón Cult Crew 9.35\" Negro",
-  "brand": "Cult",
-  "cat": "manubrios",
-  "spec": "Cromoly · 30\" ancho · Negro · 12° retroceso · 2° elevación",
-  "price": 380000,
-  "sku": "MANUBRIO-CROMOLY-NEGRO-02",
-  "units": 12,
-  "tag": "Top 🔥",
-  "sizes": [
-   {
-    "label": "9.35\"",
-    "units": 12
-   }
-  ],
-  "imgs": [
-   "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784310313215",
-   "assets/img/products/manubrio-cromoly-negro-02-2.jpg?v=1784310314405"
-  ],
-  "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784310313215"
- },
- {
-  "slug": "manubrio-cromoly-negro-03",
-  "n": "Timón Colony Guardian Negro",
-  "brand": "Colony",
-  "cat": "manubrios",
-  "spec": "Cromoly · 29\" ancho · Negro mate · 12° retroceso · 1.5° elevación",
-  "price": 380000,
-  "sku": "MANUBRIO-CROMOLY-NEGRO-03",
-  "units": 1,
-  "tag": "Nuevo",
-  "sizes": [
-   {
-    "label": "9.4\"",
-    "units": 1
-   }
-  ],
-  "imgs": [
-   "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784940680692",
-   "assets/img/products/manubrio-cromoly-negro-03-2.jpg?v=1784940681991"
-  ],
-  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784940680692"
- },
- {
-  "slug": "manubrio-cromoly-negro-04",
-  "n": "Timón Mutanty Radical Negro",
-  "brand": "Mutanty",
-  "cat": "manubrios",
-  "spec": "Material Full Cr-mo Medidas ancho 29″ 1.5° Inclinación hacia arriba 11° Inclinación hacia atrás",
-  "price": 165000,
-  "sku": "MANUBRIO-CROMOLY-NEGRO-04",
-  "units": 5,
-  "sizes": [
-   {
-    "label": "9.25\"",
-    "units": 5
-   }
-  ],
-  "tag": "Nuevo",
-  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1784940683072"
  },
  {
   "slug": "wethepeople-horquilla-cromada",
