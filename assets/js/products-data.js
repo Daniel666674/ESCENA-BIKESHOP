@@ -3717,23 +3717,34 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "manubrio-cromoly-negro-02",
-  "n": "Timón Cult Crew 9.35\" Negro",
+  "n": "Timón Cult Crew",
   "brand": "Cult",
   "cat": "manubrios",
-  "spec": "Cromoly · 30\" ancho · Negro · 12° retroceso · 2° elevación",
+  "spec": "Medidas 30″ de ancho, 12° inclinación hacia atrás , 2° inclinación hacia arriba. Peso: 850gr",
   "price": 380000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-02",
-  "units": 12,
-  "tag": "Top 🔥",
+  "units": 4,
   "sizes": [
    {
     "label": "9.35\"",
-    "units": 12
+    "units": 4
    }
   ],
   "imgs": [
    "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784310313215",
-   "assets/img/products/manubrio-cromoly-negro-02-2.jpg?v=1784310314405"
+   "assets/img/products/manubrio-cromoly-negro-02-2.jpg?v=1784310314405",
+   "assets/img/products/manubrio-cromoly-negro-02-3.jpg?v=1785023024249",
+   "assets/img/products/manubrio-cromoly-negro-02-4.jpg?v=1785023026023"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 2
+   },
+   {
+    "label": "Cromado",
+    "units": 2
+   }
   ],
   "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784310313215"
  },
