@@ -14,7 +14,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-gw-destructor-tornasol",
-  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784943551226"
+  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784943613143"
  },
  {
   "n": "Timon Gw Destructor Negro",
