@@ -15,7 +15,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-gw-gorila-4pc-negro",
-  "img": "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944251580"
+  "img": "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944288272"
  },
  {
   "n": "Timon Gw Destructor Tornasol",
