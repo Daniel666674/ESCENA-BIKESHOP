@@ -80,5 +80,15 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-02"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-25T23:57:27.600Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "manubrio-cromoly-negro-02"
+  ],
+  "deleted": []
  }
 ];
