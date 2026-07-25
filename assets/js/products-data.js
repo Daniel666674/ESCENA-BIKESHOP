@@ -3749,6 +3749,16 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0,
+    1
+   ],
+   "Cromado": [
+    2,
+    3
+   ]
+  },
   "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1784310313215"
  },
  {
