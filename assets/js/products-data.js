@@ -3703,6 +3703,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1784310310687",
    "assets/img/products/manubrio-cromoly-negro-01-3.jpg?v=1785022796540"
   ],
+  "imgFit": "cover",
   "colors": [
    {
     "label": "Negro",
