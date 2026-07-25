@@ -2340,39 +2340,43 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "manubrio-cromoly-negro-03",
-  "n": "Timón Colony Guardian 9.4\" Negro Mate",
+  "n": "Timón Colony Guardian Negro",
   "brand": "Colony",
   "cat": "manubrios",
   "spec": "Cromoly · 29\" ancho · Negro mate · 12° retroceso · 1.5° elevación",
   "price": 380000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-03",
-  "units": 2,
+  "units": 1,
   "tag": "Nuevo",
   "sizes": [
    {
     "label": "9.4\"",
-    "units": 2
+    "units": 1
    }
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784310315724"
+  "imgs": [
+   "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784940680692",
+   "assets/img/products/manubrio-cromoly-negro-03-2.jpg?v=1784940681991"
+  ],
+  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784940680692"
  },
  {
   "slug": "manubrio-cromoly-negro-04",
-  "n": "Timón Mutanty Radical 9.25\" Negro",
+  "n": "Timón Mutanty Radical Negro",
   "brand": "Mutanty",
   "cat": "manubrios",
-  "spec": "Timón Mutanty Radical 9.5\" Negro",
+  "spec": "Material Full Cr-mo Medidas ancho 29″ 1.5° Inclinación hacia arriba 11° Inclinación hacia atrás",
   "price": 165000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-04",
-  "units": 12,
+  "units": 5,
   "sizes": [
    {
     "label": "9.25\"",
-    "units": 12
+    "units": 5
    }
   ],
   "tag": "Nuevo",
-  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1784310316959"
+  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1784940683072"
  },
  {
   "slug": "wethepeople-horquilla-cromada",
