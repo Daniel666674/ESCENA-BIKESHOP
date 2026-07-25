@@ -8,5 +8,17 @@ window.ESCENA_AUDIT = [
    "timon-cult-heavens-gate-4p-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-25T23:39:59.334Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 producto eliminado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "manubrio-cromoly-negro-01"
+  ],
+  "deleted": [
+   "manubrio-cromoly-cromado"
+  ]
  }
 ];
