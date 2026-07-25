@@ -32,7 +32,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-gw-destructor-cromado",
-  "img": "assets/img/products/timon-gw-destructor-cromado.jpg?v=1784942152231"
+  "img": "assets/img/products/timon-gw-destructor-cromado.jpg?v=1784942323033"
  },
  {
   "n": "Guantes Gw Largos Full Reflective",
