@@ -294,6 +294,7 @@
       <button type="button" class="admin-nav-btn is-active" data-section="secResumen">Resumen</button>
       <button type="button" class="admin-nav-btn" data-section="secAnaliticas">Analíticas</button>
       <button type="button" class="admin-nav-btn" data-section="secInventario">Inventario</button>
+      <button type="button" class="admin-nav-btn" data-section="secActividad">Actividad</button>
     </div>
   </nav>
 
@@ -533,6 +534,24 @@
           <tbody id="invBody"></tbody>
         </table>
       </div>
+      </section>
+
+      <section id="secActividad" style="display:none;">
+      <h2 class="section-title">Actividad<span class="demo-tag" id="activityCount">0 cambios registrados</span></h2>
+      <p class="section-sub">Historial de quién publicó qué y cuándo — cada fila es una acción de "Publicar" en el panel.</p>
+      <div class="inv-table-wrap" id="activityTableWrap" style="display:none;">
+        <table class="inv-table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Usuario</th>
+              <th>Cambios</th>
+            </tr>
+          </thead>
+          <tbody id="activityBody"></tbody>
+        </table>
+      </div>
+      <p class="empty-state" id="activityEmpty" style="display:none;">Todavía no hay actividad registrada.</p>
       </section>
     </div>
   </main>
@@ -872,7 +891,13 @@
     });
   }
   function ghPutFile(path, text, message, sha, isBase64) {
-    var body = { message: message, content: isBase64 ? text : b64EncodeUtf8(text), branch: GH.branch };
+    // Tag every commit with the authenticated admin's email so the repo's own
+    // history doubles as a per-user audit trail (independent of whichever
+    // GitHub PAT actually made the API call) — see also assets/js/audit-log.js,
+    // the structured version of the same thing shown in the Actividad tab.
+    var actor = sessionStorage.getItem(GOOGLE_AUTH_KEY);
+    var taggedMessage = actor ? "[" + actor + "] " + message : message;
+    var body = { message: taggedMessage, content: isBase64 ? text : b64EncodeUtf8(text), branch: GH.branch };
     if (sha) body.sha = sha;
     return ghFetch("/contents/" + path, { method: "PUT", body: JSON.stringify(body) }).then(function (r) {
       if (!r.ok) return r.text().then(function (t) {
@@ -990,7 +1015,7 @@
     });
   }
   function showAdminSection(id) {
-    ["secResumen", "secAnaliticas", "secInventario"].forEach(function (secId) {
+    ["secResumen", "secAnaliticas", "secInventario", "secActividad"].forEach(function (secId) {
       var el = document.getElementById(secId);
       if (el) el.style.display = secId === id ? "" : "none";
     });
@@ -1231,6 +1256,31 @@
     }
     renderBarChart("barChart", "barTooltip", weekLabels, weekTotals, "unidades");
     renderRankList("rankList", topList.slice(0, 5));
+  }
+
+  function renderActivity() {
+    var countEl = document.getElementById("activityCount");
+    var wrap = document.getElementById("activityTableWrap");
+    var empty = document.getElementById("activityEmpty");
+    var body = document.getElementById("activityBody");
+    if (countEl) countEl.textContent = auditLog.length + (auditLog.length === 1 ? " cambio registrado" : " cambios registrados");
+    if (!auditLog.length) {
+      if (wrap) wrap.style.display = "none";
+      if (empty) empty.style.display = "";
+      return;
+    }
+    if (wrap) wrap.style.display = "";
+    if (empty) empty.style.display = "none";
+    var rows = auditLog.slice().sort(function (a, b) { return new Date(b.ts) - new Date(a.ts); });
+    body.innerHTML = rows.map(function (r) {
+      var when = new Date(r.ts);
+      var whenStr = isNaN(when.getTime()) ? "" : when.toLocaleString("es-CO", { day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" });
+      return '<tr>' +
+        '<td data-label="Fecha">' + esc(whenStr) + '</td>' +
+        '<td data-label="Usuario">' + esc(r.actor || "desconocido") + '</td>' +
+        '<td data-label="Cambios">' + esc(r.summary || "") + '</td>' +
+        '</tr>';
+    }).join("");
   }
 
   function initDashboard() {
@@ -1487,6 +1537,7 @@
   var salesLog = [];
   var salesDirty = false; // unpublished sale records exist
   var salesBaselineCount = 0; // salesLog.length at last successful publish/load — everything past this is "mine, not yet committed"
+  var auditLog = []; // per-user change history, shown in the Actividad tab
   var modalPhotos = [];
   // Parallel to modalPhotos: modalPhotoColors[i] is the color label that photo
   // i belongs to ("" = shown for every color, the default). Only meaningful
@@ -1878,6 +1929,7 @@
 
     // 1) find data-URI photos to commit
     var uploads = [];
+    var newSalesCount = 0; // set when the sales-log step runs; read by the audit-log step after
     inventoryCatalog.forEach(function (p) {
       (p.imgs || []).forEach(function (src, idx) {
         if (/^data:/.test(src)) uploads.push({ p: p, idx: idx, src: src });
@@ -1978,6 +2030,7 @@
       if (!salesDirty) return Promise.resolve();
       btn.textContent = "Guardando ventas…";
       var newSales = salesLog.slice(salesBaselineCount);
+      newSalesCount = newSales.length;
       if (!newSales.length) { salesDirty = false; return Promise.resolve(); }
       return ghPutWithRetry("assets/js/sales-log.js", "Update sales log via admin panel", function (remoteText) {
         var remoteSales = parseRemoteArray(remoteText, "ESCENA_SALES");
@@ -1994,6 +2047,35 @@
         var merged = mergeCatalog(remoteArr, inventoryCatalog, dirtySlugs, deletedSlugs);
         return "window.ESCENA_PRODUCTS = " + JSON.stringify(merged, null, 1) + ";\n";
       }, false);
+    }).then(function () {
+      // Record what THIS publish actually did, attributed to the authenticated
+      // admin — captured now, before dirtySlugs/deletedSlugs get cleared below.
+      var createdSet = {}; createdSlugs.forEach(function (s) { createdSet[s] = true; });
+      var editedSlugs = Object.keys(dirtySlugs).filter(function (s) { return !createdSet[s]; });
+      var deletedSlugsList = Object.keys(deletedSlugs);
+      var parts = [];
+      if (createdSlugs.length) parts.push(createdSlugs.length + " producto" + (createdSlugs.length > 1 ? "s" : "") + " nuevo" + (createdSlugs.length > 1 ? "s" : ""));
+      if (editedSlugs.length) parts.push(editedSlugs.length + " producto" + (editedSlugs.length > 1 ? "s" : "") + " editado" + (editedSlugs.length > 1 ? "s" : ""));
+      if (deletedSlugsList.length) parts.push(deletedSlugsList.length + " producto" + (deletedSlugsList.length > 1 ? "s" : "") + " eliminado" + (deletedSlugsList.length > 1 ? "s" : ""));
+      if (uploads.length) parts.push(uploads.length + " foto" + (uploads.length > 1 ? "s" : "") + " subida" + (uploads.length > 1 ? "s" : ""));
+      if (newSalesCount) parts.push(newSalesCount + " venta" + (newSalesCount > 1 ? "s" : "") + " registrada" + (newSalesCount > 1 ? "s" : ""));
+      if (!parts.length) return Promise.resolve();
+      var entry = {
+        ts: new Date().toISOString(),
+        actor: sessionStorage.getItem(GOOGLE_AUTH_KEY) || "desconocido",
+        summary: parts.join(", "),
+        created: createdSlugs.slice(),
+        edited: editedSlugs,
+        deleted: deletedSlugsList
+      };
+      return ghPutWithRetry("assets/js/audit-log.js", "Log activity in audit-log.js", function (remoteText) {
+        var remoteEntries = parseRemoteArray(remoteText, "ESCENA_AUDIT");
+        var merged = remoteEntries.concat([entry]);
+        return "window.ESCENA_AUDIT = " + JSON.stringify(merged, null, 1) + ";\n";
+      }, false).then(function () {
+        auditLog.push(entry);
+        renderActivity();
+      });
     }).then(function () {
       dirty = false; clearDraft(); updatePendingUI();
       dirtySlugs = {}; deletedSlugs = {};
@@ -2324,6 +2406,15 @@
     }).catch(function (e) {
       console.error("No se pudo cargar el registro de ventas:", e);
       showToast("No se pudo cargar el registro de ventas");
+    });
+    // Same trust boundary as sales-log.js: not publicly deployed (deploy.yml
+    // excludes it), read only through the authenticated GitHub API.
+    ghGetFile("assets/js/audit-log.js").then(function (cur) {
+      auditLog = parseRemoteArray(cur.text, "ESCENA_AUDIT");
+      renderActivity();
+    }).catch(function (e) {
+      console.error("No se pudo cargar el registro de actividad:", e);
+      showToast("No se pudo cargar el registro de actividad");
     });
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
