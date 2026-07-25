@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Gw Destructor Tornasol",
+  "brand": "GW",
+  "cat": "manubrios",
+  "spec": "Material Acero Medida 9.5″",
+  "price": 80000,
+  "sku": "TMN-GWB-002",
+  "units": 4,
+  "sizes": [
+   {
+    "label": "9.5\"",
+    "units": 4
+   }
+  ],
+  "slug": "timon-gw-destructor-tornasol",
+  "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784942169617"
+ },
+ {
   "n": "Timon Gw Destructor Negro",
   "brand": "GW",
   "cat": "manubrios",
