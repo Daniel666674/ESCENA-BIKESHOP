@@ -3685,14 +3685,13 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "manubrio-cromoly-negro-01",
-  "n": "Timón Cult Devon 9.5\" Negro",
+  "n": "Timón Cult Devon Smile",
   "brand": "Cult",
   "cat": "manubrios",
-  "spec": "Cromoly · 28\" ancho · Negro · 10.5° retroceso · 3° elevación",
+  "spec": "Medidas: 28″ Ancho, 10.5° inclinación hacia atrás, 3° inclinación hacia arriba. Peso: 820gr",
   "price": 370000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-01",
   "units": 2,
-  "tag": "Top 🔥",
   "sizes": [
    {
     "label": "9.5\"",
@@ -3701,27 +3700,20 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgs": [
    "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326",
-   "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1784310310687"
+   "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1784310310687",
+   "assets/img/products/manubrio-cromoly-negro-01-3.jpg?v=1785022796540"
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326"
- },
- {
-  "slug": "manubrio-cromoly-cromado",
-  "n": "Timón Cult Devon 9.5\" Cromado",
-  "brand": "Cult",
-  "cat": "manubrios",
-  "spec": "Cromoly · 28\" ancho · Cromado · 10.5° retroceso · 3° elevación",
-  "price": 390000,
-  "sku": "MANUBRIO-CROMOLY-CROMADO",
-  "units": 2,
-  "tag": "Top 🔥",
-  "sizes": [
+  "colors": [
    {
-    "label": "9.5\"",
+    "label": "Negro",
+    "units": 2
+   },
+   {
+    "label": "Cromado",
     "units": 2
    }
   ],
-  "img": "assets/img/products/manubrio-cromoly-cromado.jpg?v=1784310311924"
+  "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326"
  },
  {
   "slug": "manubrio-cromoly-negro-02",
