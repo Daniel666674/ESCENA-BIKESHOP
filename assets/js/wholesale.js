@@ -18,13 +18,6 @@
   var WA_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>';
   var USER_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="M3 21c0-4.97 4.03-8 9-8s9 3.03 9 8"/></svg>';
 
-  /* ---- Payment badges: Visa/Mastercard are official simple-icons path data (verified).
-     Nequi/Daviplata/PSE/Bold have no reliable official vector source reachable from this
-     environment — these render as brand-colored wordmarks, not exact logo artwork. Swap
-     in real assets if/when available. ---- */
-  var VISA_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="#1A1F71"><path d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/></svg>';
-  var MC_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="12" r="7" fill="#EB001B"/><circle cx="15" cy="12" r="7" fill="#F79E1B" style="mix-blend-mode:multiply"/></svg>';
-
   function isActive() {
     return localStorage.getItem(WS_KEY) === "1";
   }
@@ -119,11 +112,7 @@
     '.wsale-logged-view .wsale-badge { display: inline-block; background: var(--ink); color: #fff; font-size: .64rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: .35rem .8rem; border-radius: 999px; margin-bottom: 1rem; }' +
     '.wsale-logged-view .btn { width: 100%; margin-bottom: .8rem; }' +
     '.wsale-textlink { background: none; border: none; color: var(--muted); font-size: .78rem; text-decoration: underline; cursor: pointer; font-family: inherit; }' +
-    '.wsale-textlink:hover { color: var(--ink); }' +
-    '.pay-badge { display: inline-flex; align-items: center; justify-content: center; height: 26px; padding: 0 .6rem; background: #fff; border-radius: 5px; }' +
-    '.pay-badge svg { height: 13px; width: auto; display: block; }' +
-    '.pay-badge.pay-text { font-family: "Inter", sans-serif; font-weight: 800; font-size: .72rem; letter-spacing: .01em; white-space: nowrap; }' +
-    '.pay-plain { font-size: .68rem; letter-spacing: .04em; color: rgba(255,255,255,.5); border: 1px solid rgba(255,255,255,.15); border-radius: 5px; padding: .25rem .5rem; }';
+    '.wsale-textlink:hover { color: var(--ink); }';
 
   function ensureStyles() {
     if (document.getElementById("wsaleStyles")) return;
@@ -198,18 +187,6 @@
     });
   }
 
-  function renderPaymentBadges() {
-    var html =
-      '<span class="pay-badge">' + MC_SVG + '</span>' +
-      '<span class="pay-badge">' + VISA_SVG + '</span>' +
-      '<span class="pay-badge pay-text" style="color:#E5007D;">nequi</span>' +
-      '<span class="pay-badge pay-text" style="color:#EE1C25;">DaviPlata</span>' +
-      '<span class="pay-badge pay-text" style="color:#003DA5;">PSE</span>' +
-      '<span class="pay-badge pay-text" style="color:#0A0A0A;">bold</span>' +
-      '<span class="pay-plain">Transferencia</span>' +
-      '<span class="pay-plain">Efectivo</span>';
-    document.querySelectorAll(".pay-row").forEach(function (el) { el.innerHTML = html; });
-  }
 
   /* ---- Category-dependent variant selector(s) (LHD/RHD, talla, color, etc.)
      A page can have more than one independent selector group (e.g. talla and
@@ -259,7 +236,13 @@
     document.body.insertAdjacentHTML("afterbegin", injectedHTML);
     injectAccountButtons();
     fixWaCta();
-    renderPaymentBadges();
+    // Payment badges are plain, honest static HTML in each page's footer now
+    // (Nequi/Daviplata/Transferencia/Efectivo) — this used to unconditionally
+    // overwrite them with Mastercard/Visa/PSE/Bold badges on every page load,
+    // regardless of wholesale status, even though no card/PSE/Bold gateway is
+    // actually wired up anywhere (checkout is WhatsApp-coordinated only).
+    // Removed rather than fixed-in-place: showing payment methods nobody can
+    // actually use is a real misleading-advertising risk, not just a bug.
     renderBanner();
     renderAccountBtn();
     rewriteStaticPDP();

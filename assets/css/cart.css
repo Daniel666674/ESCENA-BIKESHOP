@@ -82,3 +82,14 @@ a.trust-item:hover { color: #fff; }
   .trust-strip .wrap { gap: 1rem 1.4rem; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: .2rem; }
   .trust-item { flex-shrink: 0; }
 }
+
+/* ---- Footer payment-method badges — only real, accepted methods (no card-
+   network/PSE/etc marks, since the site has no live card/PSE gateway; showing
+   those would misrepresent what's actually accepted). Specificity bumped
+   (.pay-row .pay-badge / .pay-row .pay-nequi etc.) so this reliably overrides
+   each page's own inline ".pay-row span" rule regardless of load order. ---- */
+.pay-row .pay-badge { font-size: .68rem; font-weight: 700; letter-spacing: .03em; padding: .32rem .7rem; border-radius: 999px; border: 1px solid; background: none; }
+.pay-row .pay-nequi { color: #ff4fa8; border-color: rgba(255,79,168,.4); background: rgba(255,79,168,.08); }
+.pay-row .pay-davi { color: #ff5c5c; border-color: rgba(255,92,92,.4); background: rgba(255,92,92,.08); }
+.pay-row .pay-transfer { color: #7db2ff; border-color: rgba(125,178,255,.4); background: rgba(125,178,255,.08); }
+.pay-row .pay-cash { color: #3ddc9a; border-color: rgba(61,220,154,.4); background: rgba(61,220,154,.08); }
