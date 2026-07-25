@@ -15,7 +15,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-gw-destructor-negro",
-  "img": "assets/img/products/timon-gw-destructor-negro.jpg?v=1784942173114"
+  "img": "assets/img/products/timon-gw-destructor-negro.jpg?v=1784942218071"
  },
  {
   "n": "Timon Gw destructor Cromado",
