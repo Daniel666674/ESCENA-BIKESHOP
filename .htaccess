@@ -70,12 +70,14 @@
   RewriteRule ^(.+?)/?$ $1.html [L]
 </IfModule>
 
-# HTML pages: never cache — ensures visitors always get the latest version
-# even when Hostinger's CDN (Cloudflare) is active.
+# HTML pages: never cache — tell both browsers and Cloudflare to always revalidate.
+# max-age=0 forces revalidation every time; combined with must-revalidate, this
+# prevents Cloudflare from serving stale copies even if it caches internally.
 <FilesMatch "\.html$">
-  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Cache-Control "public, max-age=0, must-revalidate"
   Header set Pragma "no-cache"
   Header set Expires "0"
+  Header set ETag "-"
 </FilesMatch>
 
 # Static assets (.js, .css, images): cache for 1 year.
