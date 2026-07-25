@@ -1,5 +1,23 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Gw Gorila 4PC Negro",
+  "brand": "GW",
+  "cat": "manubrios",
+  "spec": "Material: Acero Largo: 740MM",
+  "price": 50000,
+  "sku": "TMN-GWB-004",
+  "units": 0,
+  "tag": "Agotado",
+  "sizes": [
+   {
+    "label": "740mm",
+    "units": 0
+   }
+  ],
+  "slug": "timon-gw-gorila-4pc-negro",
+  "img": "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944251580"
+ },
+ {
   "n": "Timon Gw Destructor Tornasol",
   "brand": "GW",
   "cat": "manubrios",
