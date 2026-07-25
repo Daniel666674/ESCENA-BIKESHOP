@@ -1,5 +1,43 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Guantes Gw Largos Full Reflective",
+  "brand": "GW",
+  "cat": "guantes",
+  "spec": "",
+  "price": 93000,
+  "sku": "GUA-GWB-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/guantes-gw-largos-full-reflective.jpg?v=1784939768166",
+   "assets/img/products/guantes-gw-largos-full-reflective-2.jpg?v=1784939769292",
+   "assets/img/products/guantes-gw-largos-full-reflective-3.jpg?v=1784939770520"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 0
+   },
+   {
+    "label": "M",
+    "units": 0
+   },
+   {
+    "label": "L",
+    "units": 0
+   },
+   {
+    "label": "XL",
+    "units": 0
+   },
+   {
+    "label": "XXL",
+    "units": 1
+   }
+  ],
+  "slug": "guantes-gw-largos-full-reflective",
+  "img": "assets/img/products/guantes-gw-largos-full-reflective.jpg?v=1784939768166"
+ },
+ {
   "n": "Guantes Mutanty Venom - Negro",
   "brand": "Mutanty",
   "cat": "guantes",
