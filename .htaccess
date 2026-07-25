@@ -80,3 +80,13 @@
 <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|webp|woff2|woff|ttf)$">
   Header set Cache-Control "public, max-age=31536000, immutable"
 </FilesMatch>
+
+# Service worker script: never cache at the HTTP layer, regardless of the
+# blanket .js rule above (this FilesMatch is later, so it wins). Browsers
+# already cap SW staleness at 24h per spec no matter what Cache-Control
+# says, but there's no reason to lean on that — an urgent SW fix (like the
+# one that stopped admin.html itself from being cached) should reach every
+# device immediately, not within up-to-a-day.
+<Files "sw-admin.js">
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+</Files>
