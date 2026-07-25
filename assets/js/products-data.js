@@ -3786,6 +3786,12 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "tag": "Nuevo",
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 5
+   }
+  ],
   "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1784940683072"
  }
 ];
