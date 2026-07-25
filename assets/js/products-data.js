@@ -3753,7 +3753,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Timón Colony Guardian Negro",
   "brand": "Colony",
   "cat": "manubrios",
-  "spec": "Cromoly · 29\" ancho · Negro mate · 12° retroceso · 1.5° elevación",
+  "spec": "Material Full Cr-mo Tratado al calor Medidas: 9.4″ Ancho 29″ Inclinación hacia atrás 15° Inclinación hacia arriba 1.5° Garantía de 1 año Peso: 942 Gramos",
   "price": 380000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-03",
   "units": 1,
@@ -3765,10 +3765,20 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgs": [
-   "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784940680692",
+   "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1785023261111",
    "assets/img/products/manubrio-cromoly-negro-03-2.jpg?v=1784940681991"
   ],
-  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1784940680692"
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1
+   },
+   {
+    "label": "Cromado",
+    "units": 0
+   }
+  ],
+  "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1785023261111"
  },
  {
   "slug": "manubrio-cromoly-negro-04",
