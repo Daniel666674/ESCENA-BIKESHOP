@@ -3653,13 +3653,13 @@ window.ESCENA_PRODUCTS = [
   "n": "Timón Cult Heavens Gate 4P Cromado",
   "brand": "Cult",
   "cat": "manubrios",
-  "spec": "Cromoly tratado al calor · 28\" ancho · Cromado · 11.5° retroceso · 3° elevación",
+  "spec": "Fabricado en cromoly 100% tratado térmicamente y conificado , 28\" de ancho, 11,5° de inclinación hacia atrás, 3° de inclinación hacia arriba",
   "price": 400000,
   "sku": "TMN-CLT-001",
   "units": 4,
   "imgs": [
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1785018824827",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1785018826142"
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1785018826142",
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1785023627723"
   ],
   "sizes": [
    {
@@ -3681,7 +3681,8 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1785018824827"
+  "imgFit": "cover",
+  "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1785018826142"
  },
  {
   "slug": "manubrio-cromoly-negro-01",
