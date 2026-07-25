@@ -75,8 +75,6 @@ a.trust-item:hover { color: #fff; }
 .foot-hours strong { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.55); margin-bottom: .1rem; }
 .foot-hours span { font-size: .84rem; }
 .foot-shipping { font-size: .8rem; color: rgba(255,255,255,.6); }
-.foot-map { margin-top: .9rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,.12); max-width: 340px; }
-.foot-map iframe { display: block; width: 100%; height: 190px; }
 
 @media (max-width: 640px) {
   .trust-strip .wrap { gap: 1rem 1.4rem; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: .2rem; }
