@@ -3657,10 +3657,9 @@ window.ESCENA_PRODUCTS = [
   "price": 400000,
   "sku": "TMN-CLT-001",
   "units": 4,
-  "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784310306495",
-   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1784310307966"
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1785018824827",
+   "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1785018826142"
   ],
   "sizes": [
    {
@@ -3682,15 +3681,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "imgColorMap": {
-   "Cromado": [
-    0
-   ],
-   "Negro": [
-    1
-   ]
-  },
-  "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1784310306495"
+  "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado.jpg?v=1785018824827"
  },
  {
   "slug": "manubrio-cromoly-negro-01",
