@@ -574,7 +574,7 @@ var PROT_CATS = ["cascos","rodilleras","canilleras","tobilleras","rodi-cani-tobi
       var catOk = filter === "all" || p.cat === filter;
       var brandOk = !activeBrand || (p.brand && p.brand.toLowerCase() === activeBrand.toLowerCase());
       return catOk && brandOk;
-    });
+    }).sort(function(a, b){ return (b.price || 0) - (a.price || 0); });
   }
 
     function esc(s) {

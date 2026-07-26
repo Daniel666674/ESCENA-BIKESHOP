@@ -616,7 +616,7 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
       var searchOk = !q || normText(p.n).indexOf(q) !== -1 || normText(p.brand).indexOf(q) !== -1 || normText(p.spec).indexOf(q) !== -1;
       var wishOk = !wl || wl.indexOf(slugOf(p)) !== -1;
       return catOk && brandOk && promoOk && searchOk && wishOk;
-    });
+    }).sort(function(a, b){ return (b.price || 0) - (a.price || 0); });
   }
 
     function esc(s) {
