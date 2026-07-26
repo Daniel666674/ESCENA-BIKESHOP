@@ -3682,6 +3682,14 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgFit": "cover",
+  "imgColorMap": {
+   "Cromado": [
+    0
+   ],
+   "Negro": [
+    1
+   ]
+  },
   "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1785018826142"
  },
  {
@@ -3715,6 +3723,15 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0,
+    1
+   ],
+   "Cromado": [
+    2
+   ]
+  },
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326"
  },
  {
@@ -3791,6 +3808,12 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0,
+    1
+   ]
+  },
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1785023261111"
  },
  {
