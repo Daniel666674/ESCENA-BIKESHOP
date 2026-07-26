@@ -90,5 +90,19 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-02"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-26T00:00:39.491Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos editados",
+  "created": [],
+  "edited": [
+   "timon-cult-heavens-gate-4p-cromado",
+   "manubrio-cromoly-negro-01",
+   "manubrio-cromoly-negro-02",
+   "manubrio-cromoly-negro-03",
+   "manubrio-cromoly-negro-04"
+  ],
+  "deleted": []
  }
 ];
