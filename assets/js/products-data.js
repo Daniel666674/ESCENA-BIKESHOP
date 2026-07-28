@@ -1,5 +1,28 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Marco GW Destructor Morado",
+  "brand": "GW",
+  "cat": "marcos",
+  "spec": "Morado • 20.5”",
+  "price": 180000,
+  "sku": "MRC-GWB-002",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "20.5",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Morado",
+    "units": 1
+   }
+  ],
+  "slug": "marco-gw-destructor-morado",
+  "img": "assets/img/products/marco-gw-destructor-morado.jpg?v=1785260741191"
+ },
+ {
   "n": "Marco Profit Culver Gris Cromolio",
   "brand": "Profit",
   "cat": "marcos",
