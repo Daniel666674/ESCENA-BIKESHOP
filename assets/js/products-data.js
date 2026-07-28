@@ -7,11 +7,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1790000,
   "sku": "MRC-WTP-001",
   "units": 1,
-  "imgFit": "cover",
-  "imgs": [
-   "assets/img/products/marco-wethepeople-message-verde.jpg?v=1785259996949",
-   "assets/img/products/marco-wethepeople-message-verde-2.jpg?v=1785259998178"
-  ],
   "sizes": [
    {
     "label": "20.6",
@@ -25,7 +20,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-wethepeople-message-verde",
-  "img": "assets/img/products/marco-wethepeople-message-verde.jpg?v=1785259996949"
+  "img": "assets/img/products/marco-wethepeople-message-verde.jpg?v=1785260255097"
  },
  {
   "n": "Marco Colony Prisma Negro",
