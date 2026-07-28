@@ -1,5 +1,33 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Marco Wethepeople Message Verde",
+  "brand": "Wethepeople",
+  "cat": "marcos",
+  "spec": "Cr-Mo (4130) • Verde • 20.6” - 12.95”",
+  "price": 1790000,
+  "sku": "MRC-WTP-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/marco-wethepeople-message-verde.jpg?v=1785259996949",
+   "assets/img/products/marco-wethepeople-message-verde-2.jpg?v=1785259998178"
+  ],
+  "sizes": [
+   {
+    "label": "20.6",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Verde",
+    "units": 1
+   }
+  ],
+  "slug": "marco-wethepeople-message-verde",
+  "img": "assets/img/products/marco-wethepeople-message-verde.jpg?v=1785259996949"
+ },
+ {
   "n": "Marco Colony Prisma Negro",
   "brand": "Colony",
   "cat": "marcos",
