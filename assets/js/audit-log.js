@@ -114,5 +114,26 @@ window.ESCENA_AUDIT = [
    "timon-cult-heavens-gate-4p-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-28T17:20:37.998Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "12 productos editados",
+  "created": [],
+  "edited": [
+   "marco-gw-destructor-azul-20-5",
+   "marco-federal-command-negro-20-5-x-cola-12-5",
+   "marco-federal-chiller-20-75-cola-12-7",
+   "marco-gw-destructor-tornasol",
+   "marco-fitbikeco-str-negro",
+   "marco-cult-biggie-hammertone",
+   "cult-biggie-jaime-sintes-hammertone-negro",
+   "total-marco-2075-blanco-azul",
+   "tukanbikes-industrial-raw",
+   "wethepeople-doomsayer-negro",
+   "cult-havens-gate-alex-duleba-negro",
+   "fiend-reynolds-v3-negro"
+  ],
+  "deleted": []
  }
 ];
