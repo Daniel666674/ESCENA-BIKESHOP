@@ -1060,7 +1060,6 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "MRC",
   "units": 1,
-  "tag": "Nacional",
   "imgs": [
    "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069",
    "assets/img/products/marco-gw-destructor-azul-20-5-2.jpg?v=1784157840425",
@@ -1086,7 +1085,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1660000,
   "sku": "MRC-FED-001",
   "units": 2,
-  "tag": "Edición Especial",
   "imgs": [
    "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009",
    "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784311588157"
@@ -1113,7 +1111,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1660000,
   "sku": "MRC-FED-002",
   "units": 1,
-  "tag": "Edición Especial",
   "imgs": [
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784324778016",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1784311591232",
@@ -1319,7 +1316,6 @@ window.ESCENA_PRODUCTS = [
   "price": 250000,
   "sku": "MRC-GWB-001",
   "units": 1,
-  "tag": "Nuevo",
   "sizes": [
    {
     "label": "20.5\"",
@@ -1863,7 +1859,6 @@ window.ESCENA_PRODUCTS = [
   "price": 650000,
   "sku": "MRC-FIT-001",
   "units": 1,
-  "tag": "Nuevo 🔥",
   "imgs": [
    "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784324392434",
    "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1784324393580",
@@ -2108,7 +2103,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1790000,
   "sku": "biggie hammertoe",
   "units": 2,
-  "tag": "Nuevo",
   "imgs": [
    "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784313915335",
    "assets/img/products/marco-cult-biggie-hammertone-2.jpg?v=1784313916815",
@@ -3383,7 +3377,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1790000,
   "sku": "CULT-SHORT",
   "units": 1,
-  "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784313922616",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1784313923821",
@@ -3435,7 +3428,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1450000,
   "sku": "TOTAL-MARCO-2075-BLANCO-AZUL",
   "units": 2,
-  "tag": "Nuevo",
   "sizes": [
    {
     "label": "20.75\"",
@@ -3453,7 +3445,6 @@ window.ESCENA_PRODUCTS = [
   "price": 360000,
   "sku": "TUKANBIKES-INDUSTRIAL-RAW",
   "units": 4,
-  "tag": "Nacional",
   "imgs": [
    "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784326219051",
    "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1784325785008",
@@ -3500,7 +3491,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1820000,
   "sku": "WETHEPEOPLE-DOOMSAYER-NEGRO",
   "units": 2,
-  "tag": "Top",
   "sizes": [
    {
     "label": "20.75\"",
@@ -3518,7 +3508,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1790000,
   "sku": "CULT-HAVENS-GATE-ALEX-DULEBA-NEGRO",
   "units": 1,
-  "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784315099008",
    "assets/img/products/cult-havens-gate-alex-duleba-negro-2.jpg?v=1784315100361",
@@ -3543,7 +3532,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1900000,
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
   "units": 2,
-  "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315798448",
    "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1784315799762",
