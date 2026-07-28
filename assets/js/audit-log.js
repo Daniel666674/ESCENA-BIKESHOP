@@ -135,5 +135,15 @@ window.ESCENA_AUDIT = [
    "fiend-reynolds-v3-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-28T17:27:17.117Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 4 fotos subidas",
+  "created": [
+   "marco-colony-prisma-negro"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
