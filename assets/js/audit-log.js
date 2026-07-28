@@ -175,5 +175,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-28T17:45:45.390Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "marco-gw-destructor-morado"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
