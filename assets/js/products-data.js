@@ -1,5 +1,35 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Marco Colony Prisma Negro",
+  "brand": "Colony",
+  "cat": "marcos",
+  "spec": "Cr-Mo (4130) • Negro • 21 - 12.7”",
+  "price": 1700000,
+  "sku": "MRC-CLN-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/marco-colony-prisma-negro.jpg?v=1785259625448",
+   "assets/img/products/marco-colony-prisma-negro-2.jpg?v=1785259627901",
+   "assets/img/products/marco-colony-prisma-negro-3.jpg?v=1785259629232",
+   "assets/img/products/marco-colony-prisma-negro-4.jpg?v=1785259631178"
+  ],
+  "sizes": [
+   {
+    "label": "21",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1
+   }
+  ],
+  "slug": "marco-colony-prisma-negro",
+  "img": "assets/img/products/marco-colony-prisma-negro.jpg?v=1785259625448"
+ },
+ {
   "n": "Timon Gw Gorila 4PC Negro",
   "brand": "GW",
   "cat": "manubrios",
