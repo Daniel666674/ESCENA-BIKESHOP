@@ -165,5 +165,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-28T17:43:10.867Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "marco-profit-culver-gris-cromolio"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
