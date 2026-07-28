@@ -1,5 +1,29 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Marco Profit Culver Gris Cromolio",
+  "brand": "Profit",
+  "cat": "marcos",
+  "spec": "",
+  "price": 370000,
+  "sku": "MRC-PRO-001",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "20”",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Gris",
+    "units": 1
+   }
+  ],
+  "slug": "marco-profit-culver-gris-cromolio",
+  "img": "assets/img/products/marco-profit-culver-gris-cromolio.jpg?v=1785260584825"
+ },
+ {
   "n": "Marco Wethepeople Message Verde",
   "brand": "Wethepeople",
   "cat": "marcos",
