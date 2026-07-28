@@ -185,5 +185,18 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-28T17:51:44.610Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "4 productos editados, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "manubrio-cromoly-negro-02",
+   "manubrio-cromoly-negro-04",
+   "manubrio-cromoly-negro-03",
+   "timon-gw-gorila-4pc-negro"
+  ],
+  "deleted": []
  }
 ];
