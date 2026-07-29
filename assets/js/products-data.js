@@ -3909,6 +3909,7 @@ window.ESCENA_PRODUCTS = [
     "price": 380000
    }
   ],
+  "imgFit": "cover",
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1785261214689"
  },
  {
