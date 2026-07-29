@@ -598,5 +598,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T21:28:56.704Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 4 fotos subidas",
+  "created": [],
+  "edited": [
+   "bicicleta-profit-oxnard-negro-rojo"
+  ],
+  "deleted": []
  }
 ];
