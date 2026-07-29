@@ -25,14 +25,14 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIC-PRO-002",
   "units": 2,
   "imgs": [
-   "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro.jpg?v=1785359151110",
-   "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-2.jpg?v=1785359036462",
-   "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-3.jpg?v=1785359038136",
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-4.jpg?v=1785359039599",
-   "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-5.jpg?v=1785359041084"
+   "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro.jpg?v=1785359151110",
+   "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-5.jpg?v=1785359041084",
+   "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-2.jpg?v=1785359036462",
+   "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-3.jpg?v=1785359038136"
   ],
   "slug": "bicicleta-profit-culver-bmx-gris-oscuro",
-  "img": "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro.jpg?v=1785359151110"
+  "img": "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-4.jpg?v=1785359039599"
  },
  {
   "n": "Bicicleta Profit Culver BMX - Gris Claro",
@@ -43,14 +43,14 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIC-PRO-001",
   "units": 2,
   "imgs": [
-   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro.jpg?v=1785358669132",
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1785358670530",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro.jpg?v=1785358669132",
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-3.jpg?v=1785358672950",
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-4.jpg?v=1785358674676",
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-5.jpg?v=1785358676737"
   ],
   "slug": "bicicleta-profir-culver-bmx-gris-oscuro",
-  "img": "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro.jpg?v=1785358669132"
+  "img": "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1785358670530"
  },
  {
   "n": "Timon Federal Assaut",
