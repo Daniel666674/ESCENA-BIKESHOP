@@ -1,6 +1,6 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Bicicleta Profir Culver BMX - Gris Oscuro",
+  "n": "Bicicleta Profit Culver BMX - Gris Claro",
   "brand": "Profit",
   "cat": "bicicletas",
   "spec": "Bicicleta de BMX Bicicleta Profit – Linea Optimus Marco medida 20.5″ – Cola 13.5″ Manubrio 8.9″ Acero Alta tensión Tenedor Full Cr-mo Frente y Caja Integrado Rodamientos Bielas Forjadas Acero Cassette Derecho 9T Balineras Selladas Manzana Delantera Balin Suelto Silla Pivotal Fat Llantas 2.35″ Incluye Freno Peso 12.8 Kgrs",
