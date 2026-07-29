@@ -1,5 +1,40 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tenedor Fiction Shank",
+  "brand": "Fiction",
+  "cat": "horquillas",
+  "spec": "Material Cromolio Garantía de 6 Meses 26mm",
+  "price": 430000,
+  "sku": "TEN-FIC-001",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/tenedor-fiction-shank.jpg?v=1785365485891",
+   "assets/img/products/tenedor-fiction-shank-2.jpg?v=1785365489005"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1,
+    "price": 410000
+   },
+   {
+    "label": "Cromado",
+    "units": 1,
+    "price": 430000
+   }
+  ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Cromado": [
+    1
+   ]
+  },
+  "slug": "tenedor-fiction-shank",
+  "img": "assets/img/products/tenedor-fiction-shank.jpg?v=1785365485891"
+ },
+ {
   "n": "Bicicleta Profit Oxnard - Negro/Rojo",
   "brand": "Profit",
   "cat": "bicicletas",
