@@ -2635,10 +2635,10 @@ window.ESCENA_PRODUCTS = [
   "sku": "HORQUILLA-CROMOLY-NEGRA-01",
   "units": 1,
   "imgs": [
-   "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785362996674",
+   "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785364296356",
    "assets/img/products/horquilla-cromoly-negra-01.jpg"
   ],
-  "img": "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785362996674"
+  "img": "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785364296356"
  },
  {
   "slug": "federal-horquilla-cromada",
