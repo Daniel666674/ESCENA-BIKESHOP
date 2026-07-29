@@ -471,5 +471,18 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:30:12.405Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "timon-fitbikeco-dugan-raw",
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04"
+  ],
+  "deleted": []
  }
 ];
