@@ -9,8 +9,8 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/timon-fiend-reynolds.jpg?v=1785354576527",
-   "assets/img/products/timon-fiend-reynolds.jpg?v=1785353761676"
+   "assets/img/products/timon-fiend-reynolds.jpg?v=1785354854411",
+   "assets/img/products/timon-fiend-reynolds.jpg?v=1785354576527"
   ],
   "sizes": [
    {
@@ -34,13 +34,8 @@ window.ESCENA_PRODUCTS = [
     "price": 420000
    }
   ],
-  "imgColorMap": {
-   "Cromado": [
-    1
-   ]
-  },
   "slug": "timon-fiend-reynolds",
-  "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1785354576527"
+  "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1785354854411"
  },
  {
   "n": "Marco GW Destructor Morado",
