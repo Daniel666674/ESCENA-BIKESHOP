@@ -619,5 +619,18 @@ window.ESCENA_AUDIT = [
    "bicicleta-profit-culver-bmx-gris-oscuro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T22:03:08.476Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 2 productos eliminados, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "tenedor-gw-destructor-tornasol"
+  ],
+  "deleted": [
+   "horquilla-cromoly-plateada",
+   "horquilla-cromoly-negra-02"
+  ]
  }
 ];
