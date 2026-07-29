@@ -2627,14 +2627,18 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "horquilla-cromoly-negra-01",
-  "n": "Tenedor Rant Twin Peaks Negro",
-  "brand": "",
+  "n": "Tenedor Rant Twin Peaks",
+  "brand": "Rant",
   "cat": "horquillas",
   "spec": "Cromoly · Tubo recto · Negro mate",
-  "price": 400000,
+  "price": 410000,
   "sku": "HORQUILLA-CROMOLY-NEGRA-01",
-  "units": 12,
-  "img": "assets/img/products/horquilla-cromoly-negra-01.jpg"
+  "units": 1,
+  "imgs": [
+   "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785362996674",
+   "assets/img/products/horquilla-cromoly-negra-01.jpg"
+  ],
+  "img": "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785362996674"
  },
  {
   "slug": "federal-horquilla-cromada",
