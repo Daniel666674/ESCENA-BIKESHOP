@@ -156,6 +156,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-gw-destructor-tornasol",
+  "imgFit": "cover",
   "imgs": [
    "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784943613143",
    "assets/img/products/timon-gw-destructor-tornasol-2.jpg?v=1785351656165",
