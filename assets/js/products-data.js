@@ -1,5 +1,27 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Colony Rick 4 Piezas",
+  "brand": "Colony",
+  "cat": "manubrios",
+  "spec": "Barras de diseño exclusivo de 4 piezas de Ricky Catanzariti. Altura: 9,3”. Ancho: 28,0” (altura de 9,3”) Retroceso: 10,5 grados. Ángulo de elevación: 2,0 grados. Construcción de acero 4130 CrMo con tratamiento térmico posterior completo y múltiples espesores variables. Tubos más robustos.  Peso: 1056 gramos",
+  "price": 380000,
+  "sku": "TMN-CLN-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785355852757",
+   "assets/img/products/timon-colony-rick-4-piezas-2.jpg?v=1785355854430",
+   "assets/img/products/timon-colony-rick-4-piezas-3.jpg?v=1785355856091"
+  ],
+  "sizes": [
+   {
+    "label": "9.3\"",
+    "units": 1
+   }
+  ],
+  "slug": "timon-colony-rick-4-piezas",
+  "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785355852757"
+ },
+ {
   "n": "Timon Fiend Reynolds",
   "brand": "Fiend",
   "cat": "manubrios",
