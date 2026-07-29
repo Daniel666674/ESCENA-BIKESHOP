@@ -210,5 +210,15 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-02"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T18:47:56.580Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "rodilleras-community-venom-pro"
+  ],
+  "deleted": []
  }
 ];
