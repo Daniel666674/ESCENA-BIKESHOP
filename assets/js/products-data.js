@@ -8,13 +8,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIC-PRO-003",
   "units": 1,
   "imgs": [
-   "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1785360466045",
-   "assets/img/products/bicicleta-profit-oxnard-negro-rojo-2.jpg?v=1785360467416",
-   "assets/img/products/bicicleta-profit-oxnard-negro-rojo-3.jpg?v=1785360468984",
-   "assets/img/products/bicicleta-profit-oxnard-negro-rojo-4.jpg?v=1785360470617"
+   "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1785360528859",
+   "assets/img/products/bicicleta-profit-oxnard-negro-rojo-2.jpg?v=1785360530085",
+   "assets/img/products/bicicleta-profit-oxnard-negro-rojo-3.jpg?v=1785360531362",
+   "assets/img/products/bicicleta-profit-oxnard-negro-rojo-4.jpg?v=1785360532487"
   ],
   "slug": "bicicleta-profit-oxnard-negro-rojo",
-  "img": "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1785360466045"
+  "img": "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1785360528859"
  },
  {
   "n": "Bicicleta Profit Culver BMX - Gris Oscuro",
