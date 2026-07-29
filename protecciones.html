@@ -161,8 +161,15 @@
     .filters button.active { animation: catPop .22s ease; }
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
     @media (min-width: 1300px) { .grid { grid-template-columns: repeat(4, 1fr); } }
-    @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 440px) { .grid { grid-template-columns: 1fr; } }
+    @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); gap: .9rem; } }
+    @media (max-width: 480px) {
+      .grid { gap: .7rem; }
+      .card .body { padding: .75rem .75rem .9rem; }
+      .card h3 { font-size: .82rem; }
+      .card .price { font-size: 1.25rem; }
+      .card .brand-lbl { font-size: .6rem; }
+      .card .buy, .card .add-cart-btn { padding: .55rem .5rem; font-size: .64rem; }
+    }
 
     @media (max-width: 900px) {
       .tienda-layout { display: block; }
