@@ -124,50 +124,48 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Acero Medida 9.5″",
   "price": 80000,
   "sku": "TMN-GWB-002",
-  "units": 4,
+  "units": 7,
   "sizes": [
    {
     "label": "9.5\"",
-    "units": 4
+    "units": 7
    }
   ],
   "slug": "timon-gw-destructor-tornasol",
+  "imgs": [
+   "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784943613143",
+   "assets/img/products/timon-gw-destructor-tornasol-2.jpg?v=1785351656165",
+   "assets/img/products/timon-gw-destructor-tornasol-3.jpg?v=1785351660031"
+  ],
+  "colors": [
+   {
+    "label": "Tornasol",
+    "units": 5,
+    "price": 80000
+   },
+   {
+    "label": "Cromado",
+    "units": 2,
+    "price": 45000
+   },
+   {
+    "label": "Negro",
+    "units": 0,
+    "price": 38000
+   }
+  ],
+  "imgColorMap": {
+   "Tornasol": [
+    0
+   ],
+   "Negro": [
+    1
+   ],
+   "Cromado": [
+    2
+   ]
+  },
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784943613143"
- },
- {
-  "n": "Timon Gw Destructor Negro",
-  "brand": "GW",
-  "cat": "manubrios",
-  "spec": "Material Acero Medida 9.5″",
-  "price": 38000,
-  "sku": "TMN-GWB-001",
-  "units": 0,
-  "tag": "Agotado",
-  "sizes": [
-   {
-    "label": "9.5\"",
-    "units": 0
-   }
-  ],
-  "slug": "timon-gw-destructor-negro",
-  "img": "assets/img/products/timon-gw-destructor-negro.jpg?v=1784943297626"
- },
- {
-  "n": "Timon Gw destructor Cromado",
-  "brand": "GW",
-  "cat": "manubrios",
-  "spec": "",
-  "price": 45000,
-  "sku": "TMN-GWB-001",
-  "units": 2,
-  "sizes": [
-   {
-    "label": "9.5”",
-    "units": 2
-   }
-  ],
-  "slug": "timon-gw-destructor-cromado",
-  "img": "assets/img/products/timon-gw-destructor-cromado.jpg?v=1784942323033"
  },
  {
   "n": "Guantes Gw Largos Full Reflective",
