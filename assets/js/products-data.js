@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bicicleta Profit Oxnard - Negro/Rojo",
+  "brand": "Profit",
+  "cat": "bicicletas",
+  "spec": "",
+  "price": 650000,
+  "sku": "BIC-PRO-003",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1785360466045",
+   "assets/img/products/bicicleta-profit-oxnard-negro-rojo-2.jpg?v=1785360467416",
+   "assets/img/products/bicicleta-profit-oxnard-negro-rojo-3.jpg?v=1785360468984",
+   "assets/img/products/bicicleta-profit-oxnard-negro-rojo-4.jpg?v=1785360470617"
+  ],
+  "slug": "bicicleta-profit-oxnard-negro-rojo",
+  "img": "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1785360466045"
+ },
+ {
   "n": "Bicicleta Profit Culver BMX - Gris Oscuro",
   "brand": "Profit",
   "cat": "bicicletas",
