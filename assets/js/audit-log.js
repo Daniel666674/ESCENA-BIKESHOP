@@ -451,5 +451,15 @@ window.ESCENA_AUDIT = [
    "timon-colony-rick-4-piezas"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:16:56.746Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-colony-rick-4-piezas"
+  ],
+  "deleted": []
  }
 ];
