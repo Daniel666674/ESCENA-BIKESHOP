@@ -548,5 +548,15 @@ window.ESCENA_AUDIT = [
    "bicicleta-profir-culver-bmx-gris-oscuro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:58:00.827Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 5 fotos subidas",
+  "created": [],
+  "edited": [
+   "bicicleta-profir-culver-bmx-gris-oscuro"
+  ],
+  "deleted": []
  }
 ];
