@@ -100,7 +100,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/marco-colony-prisma-negro.jpg?v=1785259625448"
  },
  {
-  "n": "Timon Gw Gorila 4PC Negro",
+  "n": "Timon Gw Gorila 4 Piezas",
   "brand": "GW",
   "cat": "manubrios",
   "spec": "Material: Acero Largo: 740MM",
@@ -115,10 +115,34 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-gw-gorila-4pc-negro",
+  "imgs": [
+   "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944288272",
+   "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1785352578738"
+  ],
+  "colors": [
+   {
+    "label": "Morado",
+    "units": 2,
+    "price": 50000
+   },
+   {
+    "label": "Negro",
+    "units": 0,
+    "price": 50000
+   }
+  ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Morado": [
+    1
+   ]
+  },
   "img": "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944288272"
  },
  {
-  "n": "Timon Gw Destructor Tornasol",
+  "n": "Timon Gw Destructor",
   "brand": "GW",
   "cat": "manubrios",
   "spec": "Material Acero Medida 9.5″",
@@ -3725,7 +3749,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "timon-cult-heavens-gate-4p-cromado",
-  "n": "Timón Cult Heavens Gate 4P Cromado",
+  "n": "Timón Cult Heavens Gate 4 Piezas",
   "brand": "Cult",
   "cat": "manubrios",
   "spec": "Fabricado en cromoly 100% tratado térmicamente y conificado , 28\" de ancho, 11,5° de inclinación hacia atrás, 3° de inclinación hacia arriba",
@@ -3793,11 +3817,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 2
+    "units": 2,
+    "price": 370000
    },
    {
     "label": "Cromado",
-    "units": 2
+    "units": 2,
+    "price": 390000
    }
   ],
   "imgColorMap": {
@@ -3859,7 +3885,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "manubrio-cromoly-negro-03",
-  "n": "Timón Colony Guardian Negro",
+  "n": "Timón Colony Guardian",
   "brand": "Colony",
   "cat": "manubrios",
   "spec": "Material Full Cr-mo Tratado al calor Medidas: 9.4″ Ancho 29″ Inclinación hacia atrás 15° Inclinación hacia arriba 1.5° Garantía de 1 año Peso: 942 Gramos",
@@ -3879,19 +3905,10 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1
-   },
-   {
-    "label": "Cromado",
-    "units": 0
+    "units": 1,
+    "price": 380000
    }
   ],
-  "imgColorMap": {
-   "Negro": [
-    0,
-    1
-   ]
-  },
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1785261214689"
  },
  {
