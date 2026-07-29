@@ -298,5 +298,15 @@ window.ESCENA_AUDIT = [
    "timon-gw-destructor-tornasol"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T19:21:25.774Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-gw-gorila-4pc-negro"
+  ],
+  "deleted": []
  }
 ];
