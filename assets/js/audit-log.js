@@ -715,5 +715,15 @@ window.ESCENA_AUDIT = [
    "horquilla-cromoly-negra-01"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T22:51:37.103Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "tenedor-fiction-shank"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
