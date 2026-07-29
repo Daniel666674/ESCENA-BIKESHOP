@@ -6,26 +6,34 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: Cromo 4130, tratado térmicamente Ancho: 29,5\" Barrido ascendente: 3º Inclinación hacia atrás: 11,5º",
   "price": 390000,
   "sku": "TMN-FED-001",
-  "units": 1,
+  "units": 4,
   "imgs": [
    "assets/img/products/timon-federal-assaut.jpg?v=1785357421950",
    "assets/img/products/timon-federal-assaut-2.jpg?v=1785357369717"
   ],
   "sizes": [
    {
+    "label": "9.25\"",
+    "units": 1
+   },
+   {
     "label": "9.5\"",
     "units": 1
+   },
+   {
+    "label": "10\"",
+    "units": 2
    }
   ],
   "colors": [
    {
     "label": "Cromado",
-    "units": 1,
+    "units": 2,
     "price": 390000
    },
    {
     "label": "Negro",
-    "units": 0,
+    "units": 2,
     "price": 370000
    }
   ],
