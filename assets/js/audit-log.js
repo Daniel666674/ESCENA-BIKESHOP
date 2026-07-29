@@ -417,5 +417,15 @@ window.ESCENA_AUDIT = [
    "timon-gw-gorila-4pc-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:11:04.266Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "timon-colony-rick-4-piezas"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
