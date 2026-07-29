@@ -288,5 +288,15 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-03"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T19:20:20.531Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-gw-destructor-tornasol"
+  ],
+  "deleted": []
  }
 ];
