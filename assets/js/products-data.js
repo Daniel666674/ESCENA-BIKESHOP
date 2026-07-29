@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Fitbikeco Dugan Raw",
+  "brand": "Fitbikeco",
+  "cat": "manubrios",
+  "spec": "Material: cromolio con tratamiento medida: 9.25\"",
+  "price": 380000,
+  "sku": "TMN-FIT-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "9.25\"",
+    "units": 1
+   }
+  ],
+  "slug": "timon-fitbikeco-dugan-raw",
+  "img": "assets/img/products/timon-fitbikeco-dugan-raw.jpg?v=1785356918020"
+ },
+ {
   "n": "Timon Colony Rick 4 Piezas",
   "brand": "Colony",
   "cat": "manubrios",
