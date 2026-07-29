@@ -8,14 +8,14 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIC-PRO-002",
   "units": 2,
   "imgs": [
-   "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro.jpg?v=1785359034691",
+   "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro.jpg?v=1785359151110",
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-2.jpg?v=1785359036462",
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-3.jpg?v=1785359038136",
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-4.jpg?v=1785359039599",
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-5.jpg?v=1785359041084"
   ],
   "slug": "bicicleta-profit-culver-bmx-gris-oscuro",
-  "img": "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro.jpg?v=1785359034691"
+  "img": "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro.jpg?v=1785359151110"
  },
  {
   "n": "Bicicleta Profit Culver BMX - Gris Claro",
