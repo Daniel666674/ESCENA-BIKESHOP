@@ -220,5 +220,15 @@ window.ESCENA_AUDIT = [
    "rodilleras-community-venom-pro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T18:49:13.422Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "timon-cult-heavens-gate-4p-cromado"
+  ],
+  "deleted": []
  }
 ];
