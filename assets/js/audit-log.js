@@ -390,5 +390,15 @@ window.ESCENA_AUDIT = [
    "timon-fiend-reynolds"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:02:13.461Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-gw-gorila-4pc-negro"
+  ],
+  "deleted": []
  }
 ];
