@@ -43,6 +43,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "order": 0,
   "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1785354854411"
  },
  {
@@ -186,6 +187,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "order": 70,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944288272"
  },
  {
@@ -237,6 +239,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
+  "order": 60,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784943613143"
  },
  {
@@ -3839,6 +3842,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "order": 10,
   "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1785018826142"
  },
  {
@@ -3883,6 +3887,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
+  "order": 30,
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1784310309326"
  },
  {
@@ -3929,6 +3934,7 @@ window.ESCENA_PRODUCTS = [
     3
    ]
   },
+  "order": 20,
   "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1785261213594"
  },
  {
@@ -3958,6 +3964,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgFit": "cover",
+  "order": 40,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1785261214689"
  },
  {
@@ -3981,6 +3988,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
+  "order": 50,
   "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1785261215817"
  }
 ];
