@@ -2642,20 +2642,39 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "federal-horquilla-cromada",
-  "n": "Tenedor Federal Assault – Cromado",
+  "n": "Tenedor Federal Assault",
   "brand": "Federal",
   "cat": "horquillas",
   "spec": "Cromoly · 22mm offset · Cromado · 4130 tratado al calor",
-  "price": 690000,
+  "price": 730000,
   "sku": "FEDERAL-HORQUILLA-CROMADA",
-  "units": 3,
+  "units": 2,
   "tag": "Top",
   "imgs": [
-   "assets/img/products/federal-horquilla-cromada.jpg?v=1784327054447",
-   "assets/img/products/federal-horquilla-cromada-2.jpg?v=1784327055487",
-   "assets/img/products/federal-horquilla-cromada-3.jpg?v=1784327056588"
+   "assets/img/products/federal-horquilla-cromada.jpg?v=1785363557096",
+   "assets/img/products/federal-horquilla-cromada-2.jpg?v=1784327055487"
   ],
-  "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1784327054447"
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1,
+    "price": 690000
+   },
+   {
+    "label": "Cromado",
+    "units": 1,
+    "price": 730000
+   }
+  ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Cromado": [
+    1
+   ]
+  },
+  "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1785363557096"
  },
  {
   "slug": "stolen-buje-trasero-cassette-negro",
