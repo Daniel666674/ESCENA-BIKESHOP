@@ -608,5 +608,16 @@ window.ESCENA_AUDIT = [
    "bicicleta-profit-oxnard-negro-rojo"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T21:32:24.360Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "bicicleta-profir-culver-bmx-gris-oscuro",
+   "bicicleta-profit-culver-bmx-gris-oscuro"
+  ],
+  "deleted": []
  }
 ];
