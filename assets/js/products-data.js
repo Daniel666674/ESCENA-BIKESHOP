@@ -1558,11 +1558,23 @@ window.ESCENA_PRODUCTS = [
     "price": 55000
    }
   ],
+  "imgFit": "cover",
   "imgs": [
    "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785362577221",
    "assets/img/products/tenedor-gw-destructor-tornasol-2.jpg?v=1785362581546",
    "assets/img/products/tenedor-gw-destructor-tornasol-3.jpg?v=1785362583966"
   ],
+  "imgColorMap": {
+   "Tornasol": [
+    0
+   ],
+   "Negro": [
+    1
+   ],
+   "Cromado": [
+    2
+   ]
+  },
   "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785362577221"
  },
  {
