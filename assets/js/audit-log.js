@@ -441,5 +441,15 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-03"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:15:56.860Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-colony-rick-4-piezas"
+  ],
+  "deleted": []
  }
 ];
