@@ -115,6 +115,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-gw-gorila-4pc-negro",
+  "imgFit": "cover",
   "imgs": [
    "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944288272",
    "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1785352578738"
