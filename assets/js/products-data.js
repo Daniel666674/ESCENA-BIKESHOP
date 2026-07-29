@@ -20,6 +20,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "timon-colony-rick-4-piezas",
   "order": 40,
+  "imgFit": "cover",
   "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785355981350"
  },
  {
