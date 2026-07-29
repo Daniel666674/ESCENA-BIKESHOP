@@ -528,5 +528,15 @@ window.ESCENA_AUDIT = [
    "timon-federal-assaut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:55:49.546Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 5 fotos subidas",
+  "created": [
+   "bicicleta-profir-culver-bmx-gris-oscuro"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
