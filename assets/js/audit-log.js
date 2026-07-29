@@ -675,5 +675,15 @@ window.ESCENA_AUDIT = [
    "tenedor-gw-destructor-tornasol"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T22:27:21.994Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "tenedor-gw-destructor-tornasol"
+  ],
+  "deleted": []
  }
 ];
