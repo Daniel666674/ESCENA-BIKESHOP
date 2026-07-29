@@ -35,6 +35,14 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-fiend-reynolds",
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Cromado": [
+    1
+   ]
+  },
   "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1785354854411"
  },
  {
