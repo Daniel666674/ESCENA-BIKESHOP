@@ -308,5 +308,15 @@ window.ESCENA_AUDIT = [
    "timon-gw-gorila-4pc-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T19:23:01.868Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-gw-gorila-4pc-negro"
+  ],
+  "deleted": []
  }
 ];
