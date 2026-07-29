@@ -112,6 +112,11 @@
     table.inv-table th.sortable.sort-desc::after { content: "↓"; opacity: 1; }
     table.inv-table td { padding: .55rem .7rem; border-bottom: 1px solid var(--line); vertical-align: middle; white-space: nowrap; }
     table.inv-table tr:last-child td { border-bottom: none; }
+    table.inv-table .ord-controls { display: flex; flex-direction: column; gap: .15rem; }
+    table.inv-table .ord-controls button { width: 26px; height: 20px; border: 1px solid var(--line); background: #fff; border-radius: 4px; color: var(--muted); font-size: .6rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    table.inv-table .ord-controls button:hover:not(:disabled) { background: var(--panel); color: var(--ink); border-color: var(--ink); }
+    table.inv-table .ord-controls button:disabled { opacity: .3; cursor: not-allowed; }
+    table.inv-table .ord-locked { color: var(--muted); font-size: .8rem; }
     table.inv-table .thumb { position: relative; width: 44px; height: 44px; border-radius: 6px; overflow: hidden; background: #0A0A0A; flex-shrink: 0; }
     table.inv-table .thumb img { width: 100%; height: 100%; object-fit: cover; }
     table.inv-table .thumb .thumb-count { position: absolute; bottom: 0; right: 0; background: rgba(0,0,0,.75); color: #fff; font-size: .58rem; font-weight: 700; padding: .05rem .3rem; border-top-left-radius: 4px; }
@@ -178,6 +183,7 @@
     .pmodal-field input:focus, .pmodal-field select:focus, .pmodal-field textarea:focus { outline: none; border-color: var(--ink); }
     .pmodal-margin-readout { border: 1.5px solid var(--line); border-radius: 8px; padding: .65rem .8rem; font-size: .86rem; font-weight: 700; background: var(--panel); }
     .pmodal-sizes-row { display: grid; grid-template-columns: 1fr 110px auto; gap: .5rem; align-items: center; margin-bottom: .5rem; }
+    .pmodal-sizes-row-color { grid-template-columns: 1fr 90px 140px auto; }
     .pmodal-sizes-row input { border: 1.5px solid var(--line); border-radius: 8px; padding: .6rem .7rem; font-size: .84rem; font-family: inherit; width: 100%; }
     .pmodal-sizes-row input:focus { outline: none; border-color: var(--ink); }
     .pmodal-sizes-row .pmodal-size-rm { width: 32px; height: 32px; border-radius: 8px; border: 1.5px solid var(--line); background: #fff; color: var(--muted); font-size: 1rem; cursor: pointer; line-height: 1; }
@@ -520,6 +526,7 @@
         <table class="inv-table">
           <thead>
             <tr>
+              <th title="Orden en que aparece en la tienda">Orden</th>
               <th>Foto</th>
               <th class="sortable" data-sort="n">Nombre</th>
               <th class="sortable" data-sort="brand">Marca</th>
@@ -1840,6 +1847,7 @@
       var out = real && (c.units || 0) <= 0;
       return '<button type="button" data-value="' + esc(c.label) + '"' +
         (real ? ' data-units="' + (c.units || 0) + '"' : '') +
+        (c.price > 0 ? ' data-price="' + c.price + '"' : '') +
         (c.label === activeLabel ? ' class="is-active"' : '') + (out ? ' disabled' : '') + '>' + esc(c.label) + '</button>';
     }).join("");
     var imgMapAttr = (p.imgColorMap && Object.keys(p.imgColorMap).length)
@@ -2094,7 +2102,7 @@
     }).join("");
   }
 
-  function rowHTML(p, idx) {
+  function rowHTML(p, idx, naturalView, pos, total) {
     var units = p.units || 0;
     var statusHTML = (p.published === false)
       ? '<span class="status-badge out">Borrador</span>'
@@ -2104,7 +2112,14 @@
           ? '<span class="status-badge warn">Bajo stock</span>'
           : '<span class="status-badge ok">En stock</span>'));
     var countBadge = p.imgs.length > 1 ? '<span class="thumb-count">+' + (p.imgs.length - 1) + '</span>' : '';
+    var ordHTML = naturalView
+      ? '<div class="ord-controls">' +
+          '<button type="button" class="ord-up" data-slug="' + esc(p.slug) + '"' + (pos <= 0 ? ' disabled' : '') + ' aria-label="Subir">&#9650;</button>' +
+          '<button type="button" class="ord-down" data-slug="' + esc(p.slug) + '"' + (pos >= total - 1 ? ' disabled' : '') + ' aria-label="Bajar">&#9660;</button>' +
+        '</div>'
+      : '<span class="ord-locked" title="Quita la búsqueda y el orden de columna para reordenar">—</span>';
     return '<tr data-idx="' + idx + '">' +
+      '<td data-label="Orden">' + ordHTML + '</td>' +
       '<td data-label="Foto"><div class="thumb"><img src="' + p.imgs[0] + '" alt="" loading="lazy" />' + countBadge + '</div></td>' +
       '<td class="col-name" data-label="Nombre">' + esc(p.n) + '</td>' +
       '<td class="col-brand" data-label="Marca" title="' + esc(p.brand) + '">' + esc(p.brand) + '</td>' +
@@ -2123,6 +2138,41 @@
   function cop(n) { return "$" + Math.round(n || 0).toLocaleString("es-CO"); }
 
   var sortState = { key: null, dir: 1 };
+  // Same fallback logic the storefront uses (tienda.html/protecciones.html
+  // getFiltered): products with an explicit p.order show first, sorted
+  // ascending among themselves; everything else falls back to price
+  // descending. Keeping this identical here is what makes the Inventario
+  // table's "natural" view (no search/sort active) an accurate preview of
+  // what shoppers actually see.
+  function effectiveOrderCompare(a, b) {
+    var ao = (typeof a.order === "number") ? a.order : null;
+    var bo = (typeof b.order === "number") ? b.order : null;
+    if (ao !== null && bo !== null) return ao - bo;
+    if (ao !== null) return -1;
+    if (bo !== null) return 1;
+    return (b.price || 0) - (a.price || 0);
+  }
+  var currentInvItems = []; // items in the order currently rendered — reorder buttons operate on this
+  var invNaturalView = false; // true when showing the natural (reorderable) storefront order, not a search/column sort
+  function reorderProduct(slug, dir) {
+    var i = currentInvItems.findIndex(function (p) { return p.slug === slug; });
+    var j = i + dir;
+    if (i === -1 || j < 0 || j >= currentInvItems.length) return;
+    // Normalize the whole visible list to clean, evenly-spaced order values
+    // first (a product with no p.order yet needs one before it can be
+    // swapped), then swap the two neighbors' values. Only touch — and only
+    // mark dirty — items whose order actually changes, so a routine swap
+    // doesn't republish the entire catalog.
+    currentInvItems.forEach(function (p, k) {
+      var target = k * 10;
+      if (p.order !== target) { p.order = target; markDirty(p.slug); }
+    });
+    var a = currentInvItems[i], b = currentInvItems[j];
+    var tmp = a.order; a.order = b.order; b.order = tmp;
+    markDirty(a.slug); markDirty(b.slug);
+    saveCatalog();
+    renderInventory(document.getElementById("invSearch").value.trim());
+  }
   function renderInvKpis() {
     var value = 0, unitsTotal = 0, low = 0, out = 0;
     inventoryCatalog.forEach(function (p) {
@@ -2173,7 +2223,15 @@
     document.querySelectorAll(".kpi-filterable").forEach(function (k) {
       k.classList.toggle("is-active", k.getAttribute("data-filter-status") === statusFilter && !!statusFilter);
     });
-    if (sortState.key) {
+    // "Natural" view — no text search and no explicit column sort active —
+    // shows (and lets the admin reorder) products in the same order shoppers
+    // see them in on the storefront. A text search or a clicked column
+    // header displays a different, purpose-specific order, so reordering is
+    // disabled there (there's no coherent "position" to save in that view).
+    invNaturalView = !filter && sortState.key === null;
+    if (invNaturalView) {
+      items = items.slice().sort(effectiveOrderCompare);
+    } else if (sortState.key) {
       items = items.slice().sort(function (a, b) {
         var k = sortState.key;
         var av = k === "cat" ? (CATEGORY_LABELS[a.cat] || a.cat) : a[k];
@@ -2184,12 +2242,13 @@
         return 0;
       });
     }
+    currentInvItems = items;
     if (items.length === 0) {
-      body.innerHTML = '<tr class="empty-row"><td colspan="9">No se encontraron productos para "' + esc(filter) + '".</td></tr>';
+      body.innerHTML = '<tr class="empty-row"><td colspan="10">No se encontraron productos para "' + esc(filter) + '".</td></tr>';
       return;
     }
-    body.innerHTML = items.map(function (p) {
-      return rowHTML(p, inventoryCatalog.indexOf(p));
+    body.innerHTML = items.map(function (p, i) {
+      return rowHTML(p, inventoryCatalog.indexOf(p), invNaturalView, i, items.length);
     }).join("");
   }
 
@@ -2245,10 +2304,12 @@
 
   function renderModalColors() {
     var wrap = document.getElementById("pmColorsRows");
+    var basePrice = parseFloat(document.getElementById("pmPrice").value) || 0;
     wrap.innerHTML = modalColors.map(function (c, i) {
-      return '<div class="pmodal-sizes-row">' +
+      return '<div class="pmodal-sizes-row pmodal-sizes-row-color">' +
         '<input type="text" placeholder="Ej: Negro, Cromado, Azul" data-i="' + i + '" data-f="label" value="' + esc(c.label || "") + '" />' +
         '<input type="number" min="0" step="1" placeholder="Stock" data-i="' + i + '" data-f="units" value="' + (typeof c.units === "number" ? c.units : "") + '" />' +
+        '<input type="number" min="0" step="500" placeholder="Precio base: ' + Math.round(basePrice).toLocaleString("es-CO") + '" data-i="' + i + '" data-f="price" value="' + (typeof c.price === "number" && c.price > 0 ? c.price : "") + '" title="Vacío = usa el precio base del producto" />' +
         '<button type="button" class="pmodal-size-rm" data-i="' + i + '" aria-label="Quitar color">&times;</button>' +
         '</div>';
     }).join("");
@@ -2300,7 +2361,7 @@
     }
     modalSizes = p && p.sizes ? p.sizes.map(function (s) { return { label: s.label, units: s.units }; }) : [];
     renderModalSizes();
-    modalColors = p && p.colors ? p.colors.map(function (c) { return { label: c.label, units: c.units }; }) : [];
+    modalColors = p && p.colors ? p.colors.map(function (c) { return { label: c.label, units: c.units, price: c.price || 0 }; }) : [];
     renderModalColors();
     toggleUnitsVsSizes(cat);
     document.getElementById("pmodalOverlay").classList.add("show");
@@ -2464,6 +2525,11 @@
     if (salesExportEl) salesExportEl.addEventListener("click", exportSalesCsv);
 
     document.getElementById("invBody").addEventListener("click", function (e) {
+      var ordBtn = e.target.closest(".ord-up, .ord-down");
+      if (ordBtn) {
+        reorderProduct(ordBtn.getAttribute("data-slug"), ordBtn.classList.contains("ord-up") ? -1 : 1);
+        return;
+      }
       var tr = e.target.closest("tr[data-idx]");
       if (!tr) return;
       var idx = parseInt(tr.getAttribute("data-idx"), 10);
@@ -2661,7 +2727,7 @@
       renderModalSizes();
     });
     document.getElementById("pmColorsAddBtn").addEventListener("click", function () {
-      modalColors.push({ label: "", units: 0 });
+      modalColors.push({ label: "", units: 0, price: 0 });
       renderModalColors();
       var inputs = document.querySelectorAll('#pmColorsRows input[data-f="label"]');
       if (inputs.length) inputs[inputs.length - 1].focus();
@@ -2671,7 +2737,9 @@
       if (i === null || !f) return;
       i = parseInt(i, 10);
       if (!modalColors[i]) return;
-      modalColors[i][f] = f === "units" ? (parseInt(e.target.value, 10) || 0) : e.target.value;
+      modalColors[i][f] = f === "units" ? (parseInt(e.target.value, 10) || 0)
+        : f === "price" ? (parseFloat(e.target.value) || 0)
+        : e.target.value;
       document.getElementById("pmColorsTotal").textContent = "Total: " + sizesTotal(modalColors) + " unidades en " + modalColors.length + " color(es).";
       renderModalColorsHint(document.getElementById("pmCat").value);
       if (f === "label") renderModalPhotos();
@@ -2710,7 +2778,7 @@
         fields.units = sizesTotal(fields.sizes);
       }
       var validColorsInput = modalColors
-        .map(function (c) { return { label: (c.label || "").trim(), units: c.units || 0 }; })
+        .map(function (c) { var out = { label: (c.label || "").trim(), units: c.units || 0 }; if (c.price > 0) out.price = c.price; return out; })
         .filter(function (c) { return c.label; });
       if (validColorsInput.length) {
         fields.colors = validColorsInput;
@@ -2767,13 +2835,13 @@
     });
 
     document.getElementById("invExportCsvBtn").addEventListener("click", function () {
-      var headers = ["slug", "n", "brand", "cat", "spec", "price", "sku", "units", "tag", "imgs", "sizes", "colors", "imgFit"];
+      var headers = ["slug", "n", "brand", "cat", "spec", "price", "sku", "units", "tag", "order", "imgs", "sizes", "colors", "imgFit"];
       var rows = [headers.join(",")];
       inventoryCatalog.forEach(function (p) {
         rows.push(headers.map(function (h) {
           var v = h === "imgs" ? p.imgs.join("|")
             : h === "sizes" ? (p.sizes || []).map(function (s) { return s.label + ":" + s.units; }).join("|")
-            : h === "colors" ? (p.colors || []).map(function (c) { return c.label + ":" + c.units; }).join("|")
+            : h === "colors" ? (p.colors || []).map(function (c) { return c.label + ":" + c.units + ":" + (c.price || ""); }).join("|")
             : (p[h] === undefined ? "" : p[h]);
           return '"' + String(v).replace(/"/g, '""') + '"';
         }).join(","));
@@ -2865,6 +2933,7 @@
       headers.forEach(function (h, i) { o[h] = cells[i]; });
       if (o.price !== undefined) o.price = parseFloat(o.price) || 0;
       if (o.units !== undefined) o.units = parseInt(o.units, 10) || 0;
+      if (o.order !== undefined) { var ordN = parseInt(o.order, 10); if (isNaN(ordN)) delete o.order; else o.order = ordN; }
       if (o.imgs) o.imgs = String(o.imgs).split("|").filter(Boolean);
       if (o.sizes) {
         o.sizes = String(o.sizes).split("|").filter(Boolean).map(function (s) {
@@ -2877,7 +2946,10 @@
       if (o.colors) {
         o.colors = String(o.colors).split("|").filter(Boolean).map(function (c) {
           var parts = c.split(":");
-          return { label: parts[0], units: parseInt(parts[1], 10) || 0 };
+          var out = { label: parts[0], units: parseInt(parts[1], 10) || 0 };
+          var price = parseFloat(parts[2]);
+          if (price > 0) out.price = price;
+          return out;
         });
       } else if (o.colors === "") {
         delete o.colors;

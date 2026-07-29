@@ -217,6 +217,7 @@
     .card .title-link:hover { text-decoration: underline; }
     .card .card-spacer { flex: 1; min-height: .6rem; }
     .card .price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .02em; margin-bottom: .7rem; }
+    .card .price-from { font-family: 'Inter', sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
     .card .buy { display: block; text-align: center; background: var(--ink); color: #fff; text-decoration: none; padding: .7rem; border-radius: 5px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s, color .2s; border: 1px solid var(--ink); }
     .card .buy:hover { background: #fff; color: var(--ink); }
     .card-actions { display: flex; flex-direction: column; gap: .5rem; }
@@ -600,6 +601,16 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
     if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
     return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
   }
+  // Colors can carry their own price override — if any do and they differ,
+  // show the card's price as "Desde {mínimo}" instead of a single flat price.
+  function cardPriceHTML(p){
+    if (p.colors && p.colors.length > 1) {
+      var prices = p.colors.map(function(c){ return c.price > 0 ? c.price : p.price; });
+      var min = Math.min.apply(null, prices), max = Math.max.apply(null, prices);
+      if (min !== max) return '<span class="price-from">Desde</span> ' + cop(min);
+    }
+    return cop(p.price);
+  }
 
   // Accent-insensitive lowercase, so "piñon"/"pinon" and "PIÑÓN" all match.
   function normText(s){
@@ -616,7 +627,17 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
       var searchOk = !q || normText(p.n).indexOf(q) !== -1 || normText(p.brand).indexOf(q) !== -1 || normText(p.spec).indexOf(q) !== -1;
       var wishOk = !wl || wl.indexOf(slugOf(p)) !== -1;
       return catOk && brandOk && promoOk && searchOk && wishOk;
-    }).sort(function(a, b){ return (b.price || 0) - (a.price || 0); });
+    }).sort(function(a, b){
+      // Admin-chosen order (p.order, set in admin.html's Inventario tab) wins
+      // first — products without one fall back to price high-to-low, and
+      // always sort after anything explicitly ordered.
+      var ao = (typeof a.order === "number") ? a.order : null;
+      var bo = (typeof b.order === "number") ? b.order : null;
+      if (ao !== null && bo !== null) return ao - bo;
+      if (ao !== null) return -1;
+      if (bo !== null) return 1;
+      return (b.price || 0) - (a.price || 0);
+    });
   }
 
     function esc(s) {
@@ -645,7 +666,7 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
           '<span class="brand-lbl">'+esc(p.brand)+'</span>' +
           '<h3>' + (hasDetailPage ? '<a class="title-link" href="'+href+'">'+esc(p.n)+'</a>' : esc(p.n)) + '</h3>' +
           '<div class="card-spacer"></div>' +
-          '<div class="price">'+cop(p.price)+'</div>' +
+          '<div class="price">'+cardPriceHTML(p)+'</div>' +
           '<div class="card-actions">' +
             (agotado
               ? '<span class="buy" style="opacity:.5;pointer-events:none;text-align:center;">Agotado</span>'

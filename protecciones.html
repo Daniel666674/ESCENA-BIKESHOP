@@ -209,6 +209,7 @@
     .card .title-link:hover { text-decoration: underline; }
     .card .card-spacer { flex: 1; min-height: .6rem; }
     .card .price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .02em; margin-bottom: .7rem; }
+    .card .price-from { font-family: 'Inter', sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
     .card .buy { display: block; text-align: center; background: var(--ink); color: #fff; text-decoration: none; padding: .7rem; border-radius: 5px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s, color .2s; border: 1px solid var(--ink); }
     .card .buy:hover { background: #fff; color: var(--ink); }
     .card-actions { display: flex; flex-direction: column; gap: .5rem; }
@@ -568,13 +569,28 @@ var PROT_CATS = ["cascos","rodilleras","canilleras","tobilleras","rodi-cani-tobi
     if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
     return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
   }
+  function cardPriceHTML(p){
+    if (p.colors && p.colors.length > 1) {
+      var prices = p.colors.map(function(c){ return c.price > 0 ? c.price : p.price; });
+      var min = Math.min.apply(null, prices), max = Math.max.apply(null, prices);
+      if (min !== max) return '<span class="price-from">Desde</span> ' + cop(min);
+    }
+    return cop(p.price);
+  }
 
   function getFiltered(filter){
     return PRODUCTS.filter(function(p){
       var catOk = filter === "all" || p.cat === filter;
       var brandOk = !activeBrand || (p.brand && p.brand.toLowerCase() === activeBrand.toLowerCase());
       return catOk && brandOk;
-    }).sort(function(a, b){ return (b.price || 0) - (a.price || 0); });
+    }).sort(function(a, b){
+      var ao = (typeof a.order === "number") ? a.order : null;
+      var bo = (typeof b.order === "number") ? b.order : null;
+      if (ao !== null && bo !== null) return ao - bo;
+      if (ao !== null) return -1;
+      if (bo !== null) return 1;
+      return (b.price || 0) - (a.price || 0);
+    });
   }
 
     function esc(s) {
@@ -602,7 +618,7 @@ var PROT_CATS = ["cascos","rodilleras","canilleras","tobilleras","rodi-cani-tobi
           '<span class="brand-lbl">'+esc(p.brand)+'</span>' +
           '<h3>' + (hasDetailPage ? '<a class="title-link" href="'+href+'">'+esc(p.n)+'</a>' : esc(p.n)) + '</h3>' +
           '<div class="card-spacer"></div>' +
-          '<div class="price">'+cop(p.price)+'</div>' +
+          '<div class="price">'+cardPriceHTML(p)+'</div>' +
           '<div class="card-actions">' +
             (agotado
               ? '<span class="buy" style="opacity:.5;pointer-events:none;text-align:center;">Agotado</span>'
