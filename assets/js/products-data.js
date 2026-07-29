@@ -1560,11 +1560,22 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785364032274",
-   "assets/img/products/tenedor-gw-destructor-tornasol-2.jpg?v=1785364033482",
-   "assets/img/products/tenedor-gw-destructor-tornasol-3.jpg?v=1785364034626"
+   "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785364188649",
+   "assets/img/products/tenedor-gw-destructor-tornasol-2.jpg?v=1785364189858",
+   "assets/img/products/tenedor-gw-destructor-tornasol-3.jpg?v=1785364190966"
   ],
-  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785364032274"
+  "imgColorMap": {
+   "Tornasol": [
+    0
+   ],
+   "Negro": [
+    1
+   ],
+   "Cromado": [
+    2
+   ]
+  },
+  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785364188649"
  },
  {
   "slug": "grips-dailygrind",
