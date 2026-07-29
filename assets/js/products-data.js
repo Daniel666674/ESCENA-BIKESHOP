@@ -1,5 +1,46 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Federal Assaut",
+  "brand": "Federal",
+  "cat": "manubrios",
+  "spec": "Material: Cromo 4130, tratado térmicamente Ancho: 29,5\" Barrido ascendente: 3º Inclinación hacia atrás: 11,5º",
+  "price": 390000,
+  "sku": "TMN-FED-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/timon-federal-assaut.jpg?v=1785357368217",
+   "assets/img/products/timon-federal-assaut-2.jpg?v=1785357369717"
+  ],
+  "sizes": [
+   {
+    "label": "9.5\"",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Cromado",
+    "units": 1,
+    "price": 390000
+   },
+   {
+    "label": "Negro",
+    "units": 0,
+    "price": 370000
+   }
+  ],
+  "imgColorMap": {
+   "Cromado": [
+    0
+   ],
+   "Negro": [
+    1
+   ]
+  },
+  "slug": "timon-federal-assaut",
+  "img": "assets/img/products/timon-federal-assaut.jpg?v=1785357368217"
+ },
+ {
   "n": "Timon Fitbikeco Dugan Raw",
   "brand": "Fitbikeco",
   "cat": "manubrios",
