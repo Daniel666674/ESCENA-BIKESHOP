@@ -504,5 +504,19 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:44:28.974Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos editados",
+  "created": [],
+  "edited": [
+   "timon-federal-assaut",
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "timon-fitbikeco-dugan-raw"
+  ],
+  "deleted": []
  }
 ];
