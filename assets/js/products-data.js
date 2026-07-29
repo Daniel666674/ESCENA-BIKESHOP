@@ -1560,9 +1560,9 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785362577221",
-   "assets/img/products/tenedor-gw-destructor-tornasol-2.jpg?v=1785362581546",
-   "assets/img/products/tenedor-gw-destructor-tornasol-3.jpg?v=1785362583966"
+   "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785363968860",
+   "assets/img/products/tenedor-gw-destructor-tornasol-2.jpg?v=1785363970479",
+   "assets/img/products/tenedor-gw-destructor-tornasol-3.jpg?v=1785363972050"
   ],
   "imgColorMap": {
    "Tornasol": [
@@ -1575,7 +1575,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785362577221"
+  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785363968860"
  },
  {
   "slug": "grips-dailygrind",
@@ -2651,7 +2651,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "tag": "Top",
   "imgs": [
-   "assets/img/products/federal-horquilla-cromada.jpg?v=1785363557096",
+   "assets/img/products/federal-horquilla-cromada.jpg?v=1785363973599",
    "assets/img/products/federal-horquilla-cromada-2.jpg?v=1784327055487"
   ],
   "colors": [
@@ -2674,7 +2674,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1785363557096"
+  "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1785363973599"
  },
  {
   "slug": "stolen-buje-trasero-cassette-negro",
