@@ -484,5 +484,15 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-04"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:33:26.252Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-fitbikeco-dugan-raw"
+  ],
+  "deleted": []
  }
 ];
