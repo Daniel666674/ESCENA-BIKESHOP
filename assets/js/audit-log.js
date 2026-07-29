@@ -400,5 +400,22 @@ window.ESCENA_AUDIT = [
    "timon-gw-gorila-4pc-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:03:31.436Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "8 productos editados",
+  "created": [],
+  "edited": [
+   "timon-fiend-reynolds",
+   "timon-cult-heavens-gate-4p-cromado",
+   "manubrio-cromoly-negro-02",
+   "manubrio-cromoly-negro-03",
+   "manubrio-cromoly-negro-01",
+   "manubrio-cromoly-negro-04",
+   "timon-gw-destructor-tornasol",
+   "timon-gw-gorila-4pc-negro"
+  ],
+  "deleted": []
  }
 ];
