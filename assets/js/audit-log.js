@@ -664,5 +664,16 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "wethepeople-horquilla-cromada"
   ]
+ },
+ {
+  "ts": "2026-07-29T22:26:21.346Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 4 fotos subidas",
+  "created": [],
+  "edited": [
+   "federal-horquilla-cromada",
+   "tenedor-gw-destructor-tornasol"
+  ],
+  "deleted": []
  }
 ];
