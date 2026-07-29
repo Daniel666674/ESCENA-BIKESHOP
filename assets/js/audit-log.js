@@ -632,5 +632,15 @@ window.ESCENA_AUDIT = [
    "horquilla-cromoly-plateada",
    "horquilla-cromoly-negra-02"
   ]
+ },
+ {
+  "ts": "2026-07-29T22:05:24.718Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "tenedor-gw-destructor-tornasol"
+  ],
+  "deleted": []
  }
 ];
