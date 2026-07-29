@@ -1,5 +1,23 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bicicleta Profir Culver BMX - Gris Oscuro",
+  "brand": "Profit",
+  "cat": "bicicletas",
+  "spec": "Bicicleta de BMX Bicicleta Profit – Linea Optimus Marco medida 20.5″ – Cola 13.5″ Manubrio 8.9″ Acero Alta tensión Tenedor Full Cr-mo Frente y Caja Integrado Rodamientos Bielas Forjadas Acero Cassette Derecho 9T Balineras Selladas Manzana Delantera Balin Suelto Silla Pivotal Fat Llantas 2.35″ Incluye Freno Peso 12.8 Kgrs",
+  "price": 890000,
+  "sku": "BIC-PRO-001",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro.jpg?v=1785358528201",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1785358530867",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-3.jpg?v=1785358533103",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-4.jpg?v=1785358537071",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-5.jpg?v=1785358539900"
+  ],
+  "slug": "bicicleta-profir-culver-bmx-gris-oscuro",
+  "img": "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro.jpg?v=1785358528201"
+ },
+ {
   "n": "Timon Federal Assaut",
   "brand": "Federal",
   "cat": "manubrios",
