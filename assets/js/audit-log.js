@@ -253,5 +253,16 @@ window.ESCENA_AUDIT = [
    "timon-gw-destructor-cromado",
    "timon-gw-destructor-negro"
   ]
+ },
+ {
+  "ts": "2026-07-29T19:02:49.283Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "timon-cult-heavens-gate-4p-cromado",
+   "manubrio-cromoly-negro-02"
+  ],
+  "deleted": []
  }
 ];
