@@ -1,5 +1,50 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Fiend Reynolds",
+  "brand": "Fiend",
+  "cat": "manubrios",
+  "spec": "Material en cromolio tratado térmicamente y conificado - 27 pulgadas - Peso: 28.75 onzas",
+  "price": 460000,
+  "sku": "TMN-FND-001",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/timon-fiend-reynolds.jpg?v=1785353676880",
+   "assets/img/products/timon-fiend-reynolds-2.jpg?v=1785353678124"
+  ],
+  "sizes": [
+   {
+    "label": "9\"",
+    "units": 2
+   },
+   {
+    "label": "9.25\"",
+    "units": 0
+   }
+  ],
+  "colors": [
+   {
+    "label": "Cromado",
+    "units": 2,
+    "price": 460000
+   },
+   {
+    "label": "Negro",
+    "units": 0,
+    "price": 420000
+   }
+  ],
+  "imgColorMap": {
+   "Cromado": [
+    0
+   ],
+   "Negro": [
+    1
+   ]
+  },
+  "slug": "timon-fiend-reynolds",
+  "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1785353676880"
+ },
+ {
   "n": "Marco GW Destructor Morado",
   "brand": "GW",
   "cat": "marcos",
@@ -128,7 +173,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "Negro",
-    "units": 1,
+    "units": 0,
     "price": 50000
    }
   ],
