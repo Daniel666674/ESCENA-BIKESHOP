@@ -578,5 +578,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T21:05:54.600Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "bicicleta-profit-culver-bmx-gris-oscuro"
+  ],
+  "deleted": []
  }
 ];
