@@ -8,7 +8,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TMN-FED-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/timon-federal-assaut.jpg?v=1785357368217",
+   "assets/img/products/timon-federal-assaut.jpg?v=1785357421950",
    "assets/img/products/timon-federal-assaut-2.jpg?v=1785357369717"
   ],
   "sizes": [
@@ -38,7 +38,8 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "timon-federal-assaut",
-  "img": "assets/img/products/timon-federal-assaut.jpg?v=1785357368217"
+  "order": 60,
+  "img": "assets/img/products/timon-federal-assaut.jpg?v=1785357421950"
  },
  {
   "n": "Timon Fitbikeco Dugan Raw",
@@ -56,7 +57,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-fitbikeco-dugan-raw",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/timon-fitbikeco-dugan-raw.jpg?v=1785357005874"
  },
  {
@@ -269,7 +270,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944288272"
  },
  {
@@ -318,7 +319,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784943613143"
  },
  {
@@ -4067,7 +4068,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1785261215817"
  }
 ];
