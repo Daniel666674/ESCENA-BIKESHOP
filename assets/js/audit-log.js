@@ -230,5 +230,15 @@ window.ESCENA_AUDIT = [
    "timon-cult-heavens-gate-4p-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T18:50:28.846Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto eliminado",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "direccion-negra"
+  ]
  }
 ];
