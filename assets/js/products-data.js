@@ -8,7 +8,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TMN-CLN-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785355852757",
+   "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785355981350",
    "assets/img/products/timon-colony-rick-4-piezas-2.jpg?v=1785355854430",
    "assets/img/products/timon-colony-rick-4-piezas-3.jpg?v=1785355856091"
   ],
@@ -19,7 +19,8 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-colony-rick-4-piezas",
-  "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785355852757"
+  "order": 40,
+  "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785355981350"
  },
  {
   "n": "Timon Fiend Reynolds",
@@ -209,7 +210,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944288272"
  },
  {
@@ -261,7 +262,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784943613143"
  },
  {
@@ -3986,7 +3987,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgFit": "cover",
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1785261214689"
  },
  {
@@ -4010,7 +4011,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1785261215817"
  }
 ];
