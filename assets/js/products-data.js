@@ -128,7 +128,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "Negro",
-    "units": 0,
+    "units": 1,
     "price": 50000
    }
   ],
