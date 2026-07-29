@@ -518,5 +518,15 @@ window.ESCENA_AUDIT = [
    "timon-fitbikeco-dugan-raw"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:47:23.741Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-federal-assaut"
+  ],
+  "deleted": []
  }
 ];
