@@ -1533,21 +1533,37 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "tenedor-gw-destructor-tornasol",
-  "n": "Tenedor GW Destructor Tornasol",
+  "n": "Tenedor GW Destructor",
   "brand": "GW",
   "cat": "horquillas",
-  "spec": "• Tornasol •",
+  "spec": "Material en Acero - Uña eje 14mm – Offset 25mm",
   "price": 86000,
   "sku": "TND",
-  "units": 2,
+  "units": 7,
   "tag": "Nuevo!",
   "colors": [
    {
     "label": "Tornasol",
-    "units": 2
+    "units": 4,
+    "price": 86000
+   },
+   {
+    "label": "Negro",
+    "units": 2,
+    "price": 55000
+   },
+   {
+    "label": "Cromado",
+    "units": 1,
+    "price": 55000
    }
   ],
-  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784327049926"
+  "imgs": [
+   "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785362577221",
+   "assets/img/products/tenedor-gw-destructor-tornasol-2.jpg?v=1785362581546",
+   "assets/img/products/tenedor-gw-destructor-tornasol-3.jpg?v=1785362583966"
+  ],
+  "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785362577221"
  },
  {
   "slug": "grips-dailygrind",
@@ -2624,28 +2640,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/federal-horquilla-cromada-3.jpg?v=1784327056588"
   ],
   "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1784327054447"
- },
- {
-  "slug": "horquilla-cromoly-negra-02",
-  "n": "Tenedor GW Negro",
-  "brand": "GW",
-  "cat": "horquillas",
-  "spec": "Cromoly · Steerer blanco · Negro mate",
-  "price": 410000,
-  "sku": "HORQUILLA-CROMOLY-NEGRA-02",
-  "units": 12,
-  "img": "assets/img/products/horquilla-cromoly-negra-02.jpg?v=1784327306225"
- },
- {
-  "slug": "horquilla-cromoly-plateada",
-  "n": "Tenedor Plateado",
-  "brand": "",
-  "cat": "horquillas",
-  "spec": "Cromoly · Tubo recto · Plata pulido",
-  "price": 415000,
-  "sku": "HORQUILLA-CROMOLY-PLATEADA",
-  "units": 12,
-  "img": "assets/img/products/horquilla-cromoly-plateada.jpg?v=1784327307339"
  },
  {
   "slug": "stolen-buje-trasero-cassette-negro",
