@@ -3032,17 +3032,6 @@ window.ESCENA_PRODUCTS = [
   ]
  },
  {
-  "slug": "direccion-negra",
-  "n": "Cajas de Frente Shadow Negra",
-  "brand": "shadow",
-  "cat": "caja-frente",
-  "spec": "Integrada · Rodamientos sellados · Negro",
-  "price": 135000,
-  "sku": "DIRECCION-NEGRA",
-  "units": 8,
-  "img": "assets/img/products/direccion-negra.jpg"
- },
- {
   "slug": "demolition-caja-pedalier-negra",
   "n": "Cajas de Frente Demolition Negra",
   "brand": "Demolition",
