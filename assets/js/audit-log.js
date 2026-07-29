@@ -240,5 +240,18 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "direccion-negra"
   ]
+ },
+ {
+  "ts": "2026-07-29T19:01:03.638Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 2 productos eliminados, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "timon-gw-destructor-tornasol"
+  ],
+  "deleted": [
+   "timon-gw-destructor-cromado",
+   "timon-gw-destructor-negro"
+  ]
  }
 ];
