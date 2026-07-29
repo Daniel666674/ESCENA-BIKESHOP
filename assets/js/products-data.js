@@ -3749,11 +3749,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Cromado",
-    "units": 2
+    "units": 2,
+    "price": 400000
    },
    {
     "label": "Negro",
-    "units": 2
+    "units": 2,
+    "price": 380000
    }
   ],
   "imgFit": "cover",
@@ -3834,11 +3836,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 2
+    "units": 2,
+    "price": 380000
    },
    {
     "label": "Cromado",
-    "units": 2
+    "units": 2,
+    "price": 380000
    }
   ],
   "imgColorMap": {
