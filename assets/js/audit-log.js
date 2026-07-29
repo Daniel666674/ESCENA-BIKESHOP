@@ -427,5 +427,19 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:13:09.172Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "timon-colony-rick-4-piezas",
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "manubrio-cromoly-negro-03"
+  ],
+  "deleted": []
  }
 ];
