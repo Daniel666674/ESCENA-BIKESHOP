@@ -8,8 +8,8 @@ window.ESCENA_PRODUCTS = [
   "sku": "TMN-FND-001",
   "units": 2,
   "imgs": [
-   "assets/img/products/timon-fiend-reynolds.jpg?v=1785353676880",
-   "assets/img/products/timon-fiend-reynolds-2.jpg?v=1785353678124"
+   "assets/img/products/timon-fiend-reynolds.jpg?v=1785353761676",
+   "assets/img/products/timon-fiend-reynolds-2.jpg?v=1785353762784"
   ],
   "sizes": [
    {
@@ -42,7 +42,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "timon-fiend-reynolds",
-  "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1785353676880"
+  "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1785353761676"
  },
  {
   "n": "Marco GW Destructor Morado",
