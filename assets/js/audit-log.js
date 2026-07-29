@@ -642,5 +642,15 @@ window.ESCENA_AUDIT = [
    "tenedor-gw-destructor-tornasol"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T22:10:01.908Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "horquilla-cromoly-negra-01"
+  ],
+  "deleted": []
  }
 ];
