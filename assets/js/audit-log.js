@@ -461,5 +461,15 @@ window.ESCENA_AUDIT = [
    "timon-colony-rick-4-piezas"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-29T20:28:43.495Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "timon-fitbikeco-dugan-raw"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
