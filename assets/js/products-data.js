@@ -8,14 +8,14 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIC-PRO-001",
   "units": 2,
   "imgs": [
-   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro.jpg?v=1785358609093",
-   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1785358610551",
-   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-3.jpg?v=1785358611987",
-   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-4.jpg?v=1785358613195",
-   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-5.jpg?v=1785358614509"
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro.jpg?v=1785358669132",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1785358670530",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-3.jpg?v=1785358672950",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-4.jpg?v=1785358674676",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-5.jpg?v=1785358676737"
   ],
   "slug": "bicicleta-profir-culver-bmx-gris-oscuro",
-  "img": "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro.jpg?v=1785358609093"
+  "img": "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro.jpg?v=1785358669132"
  },
  {
   "n": "Timon Federal Assaut",
