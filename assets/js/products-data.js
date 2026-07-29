@@ -7,6 +7,7 @@ window.ESCENA_PRODUCTS = [
   "price": 460000,
   "sku": "TMN-FND-001",
   "units": 2,
+  "imgFit": "cover",
   "imgs": [
    "assets/img/products/timon-fiend-reynolds.jpg?v=1785353761676",
    "assets/img/products/timon-fiend-reynolds-2.jpg?v=1785353762784"
