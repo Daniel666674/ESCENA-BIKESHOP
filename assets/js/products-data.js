@@ -7,6 +7,7 @@ window.ESCENA_PRODUCTS = [
   "price": 380000,
   "sku": "TMN-FIT-001",
   "units": 1,
+  "imgFit": "cover",
   "sizes": [
    {
     "label": "9.25\"",
