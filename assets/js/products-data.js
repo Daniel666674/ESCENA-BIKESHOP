@@ -1,5 +1,28 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tenedor Ontrail Nemesis",
+  "brand": "Ontrail",
+  "cat": "horquillas",
+  "spec": "Material Acero",
+  "price": 50000,
+  "sku": "TEN-ONT-001",
+  "units": 2,
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1,
+    "price": 45000
+   },
+   {
+    "label": "Cromado",
+    "units": 1,
+    "price": 50000
+   }
+  ],
+  "slug": "tenedor-ontrail-nemesis",
+  "img": "assets/img/escena-logo.jpg"
+ },
+ {
   "n": "Tenedor Fiction Shank",
   "brand": "Fiction",
   "cat": "horquillas",
