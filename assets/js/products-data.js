@@ -54,11 +54,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "NegroNegro",
-    "units": 1
+    "units": 1,
+    "price": 400000
    },
    {
     "label": "Cromado",
-    "units": 1
+    "units": 1,
+    "price": 420000
    }
   ],
   "slug": "tenedor-fiction-shank",
@@ -1656,19 +1658,22 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material en Acero - Uña eje 14mm – Offset 25mm",
   "price": 86000,
   "sku": "TND",
-  "units": 7,
+  "units": 5,
   "colors": [
    {
     "label": "Tornasol",
-    "units": 4
+    "units": 4,
+    "price": 86000
    },
    {
     "label": "Negro",
-    "units": 2
+    "units": 0,
+    "price": 55000
    },
    {
     "label": "Cromado",
-    "units": 1
+    "units": 1,
+    "price": 55000
    }
   ],
   "imgFit": "cover",
@@ -2624,14 +2629,38 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "tenedor-cult-sect-v4-cromado-18mm",
-  "n": "Tenedor Cult Sect V4 Cromado",
+  "n": "Tenedor Cult Sect V4",
   "brand": "Cult",
   "cat": "horquillas",
-  "spec": "Cromoly · 18mm offset · Cromado · Tubo recto",
+  "spec": "Cromoly · 18mm offset · Tubo recto",
   "price": 830000,
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 1,
   "order": 300,
+  "imgs": [
+   "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1784327051012",
+   "assets/img/products/tenedor-cult-sect-v4-cromado-18mm-2.jpg?v=1785530446854"
+  ],
+  "colors": [
+   {
+    "label": "Cromado",
+    "units": 1,
+    "price": 830000
+   },
+   {
+    "label": "Negro",
+    "units": 0,
+    "price": 800000
+   }
+  ],
+  "imgColorMap": {
+   "Cromado": [
+    0
+   ],
+   "Negro": [
+    1
+   ]
+  },
   "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1784327051012"
  },
  {
@@ -2793,11 +2822,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1
+    "units": 1,
+    "price": 690000
    },
    {
     "label": "Cromado",
-    "units": 1
+    "units": 1,
+    "price": 720000
    }
   ],
   "imgColorMap": {
