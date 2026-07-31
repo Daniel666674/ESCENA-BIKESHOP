@@ -18,8 +18,19 @@
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg: #ffffff; --panel: #f6f6f4; --ink: #0A0A0A; --muted: #666; --line: #ececeb; --good: #1baf7a; }
-    body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    :root {
+      --bg: #ffffff; --panel: #f6f6f4; --ink: #0A0A0A; --muted: #666; --line: #ececeb; --good: #1baf7a;
+      /* Inventario/product-editor palette — matches the reference dashboard's
+         look; scoped to those areas only, the rest of admin.html (gate,
+         Resumen, Analíticas) keeps the site's original ink/gold styling. */
+      --violet: #7C3AED; --violet-dark: #6D28D9; --violet-bg: #F5F3FF; --violet-line: #E9E3FC;
+      --app-bg: #FAF9FD;
+      --blue: #2563EB; --blue-bg: #EFF4FF;
+      --amber: #B45309; --amber-bg: #FEF6E7;
+      --red: #DC2626; --red-bg: #FDECEC;
+      --card-line: #ECE9F4; --card-shadow: 0 1px 2px rgba(30,20,60,.04), 0 8px 24px rgba(30,20,60,.05);
+    }
+    body { background: var(--app-bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
     a { color: inherit; }
     img { max-width: 100%; display: block; }
     .wrap { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
@@ -61,17 +72,28 @@
     .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: .03em; margin-bottom: .3rem; }
     .section-sub { font-size: .82rem; color: var(--muted); margin-bottom: 1.4rem; }
     .demo-tag { display: inline-block; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: .15rem .5rem; font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-left: .5rem; vertical-align: middle; }
+    #secInventario .section-title { font-family: 'Inter', sans-serif; font-size: 1.7rem; font-weight: 800; letter-spacing: -.01em; }
+    #secInventario .demo-tag { background: var(--violet-bg); border: none; color: var(--violet-dark); border-radius: 999px; padding: .25rem .7rem; font-weight: 700; }
 
     /* ---- KPI tiles ---- */
     .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.6rem; }
     @media (max-width: 900px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 480px) { .kpi-row { grid-template-columns: 1fr; } }
-    .kpi { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.3rem; }
-    .kpi .lbl { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .5rem; }
-    .kpi .val { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.7rem; letter-spacing: -.01em; }
+    #secInventario .kpi { background: #fff; border: 1px solid var(--card-line); border-radius: 14px; padding: 1.1rem 1.2rem; box-shadow: var(--card-shadow); display: flex; align-items: flex-start; gap: .8rem; }
+    #secInventario .kpi-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    #secInventario .kpi-icon svg { width: 19px; height: 19px; }
+    #secInventario .kpi[data-tone="violet"] .kpi-icon { background: var(--violet-bg); color: var(--violet); }
+    #secInventario .kpi[data-tone="blue"] .kpi-icon { background: var(--blue-bg); color: var(--blue); }
+    #secInventario .kpi[data-tone="amber"] .kpi-icon { background: var(--amber-bg); color: var(--amber); }
+    #secInventario .kpi[data-tone="red"] .kpi-icon { background: var(--red-bg); color: var(--red); }
+    .kpi .lbl { font-size: .74rem; color: var(--muted); font-weight: 500; margin-bottom: .35rem; }
+    .kpi .val { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.5rem; letter-spacing: -.01em; }
     .kpi .delta { font-size: .74rem; font-weight: 700; margin-top: .3rem; }
     .kpi .delta.up { color: var(--good); }
     .kpi .delta.down { color: #c0392b; }
+    .kpi.kpi-filterable { cursor: pointer; transition: box-shadow .15s, border-color .15s; }
+    .kpi.kpi-filterable:hover { border-color: var(--violet-line); }
+    .kpi.kpi-filterable.is-active { border-color: var(--violet); box-shadow: 0 0 0 3px var(--violet-bg); }
 
     /* ---- Charts ---- */
     .chart-row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.2rem; margin-bottom: 2.4rem; }
@@ -93,9 +115,42 @@
     .inv-toolbar input[type=search] { border: 1.5px solid var(--line); border-radius: 8px; padding: .6rem .9rem; font-size: .85rem; font-family: inherit; min-width: 220px; }
     .inv-toolbar input[type=search]:focus { outline: none; border-color: var(--ink); }
     .inv-toolbar .inv-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
-    .inv-filters { display: flex; gap: .5rem; flex-wrap: wrap; }
-    .inv-filters select { border: 1.5px solid var(--line); border-radius: 8px; padding: .6rem .8rem; font-size: .82rem; font-family: inherit; background: #fff; color: var(--ink); cursor: pointer; }
-    .inv-filters select:focus { outline: none; border-color: var(--ink); }
+    .inv-filters { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+    .inv-filters select { border: 1.5px solid var(--card-line); border-radius: 8px; padding: .6rem .8rem; font-size: .82rem; font-family: inherit; background: #fff; color: var(--ink); cursor: pointer; }
+    .inv-filters select:focus { outline: none; border-color: var(--violet); }
+
+    /* ---- Inventario: decluttered action row (primary CTAs + overflow menu) ---- */
+    .inv-actions-row { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .inv-publish-btn { margin-left: auto; }
+    .btn-violet { background: var(--violet); color: #fff; }
+    .btn-violet:hover { background: var(--violet-dark); }
+    .inv-more-wrap { position: relative; }
+    .inv-more-menu { display: none; position: absolute; top: calc(100% + .4rem); left: 0; z-index: 30; background: #fff; border: 1px solid var(--card-line); border-radius: 10px; box-shadow: var(--card-shadow); padding: .4rem; min-width: 220px; flex-direction: column; gap: .1rem; }
+    .inv-more-menu.show { display: flex; }
+    .inv-more-menu button { text-align: left; background: none; border: none; padding: .55rem .7rem; border-radius: 7px; font-size: .8rem; font-family: inherit; color: var(--ink); cursor: pointer; }
+    .inv-more-menu button:hover { background: var(--violet-bg); color: var(--violet-dark); }
+
+    /* ---- Inventario: search field with icon + shortcut hint ---- */
+    .inv-search-wrap { position: relative; display: flex; align-items: center; flex: 1 1 260px; max-width: 360px; }
+    .inv-search-ic { position: absolute; left: .8rem; width: 16px; height: 16px; color: var(--muted); pointer-events: none; }
+    .inv-search-wrap input[type=search] { width: 100%; padding-left: 2.4rem; padding-right: 2.6rem; }
+    .inv-search-kbd { position: absolute; right: .6rem; font-family: inherit; font-size: .68rem; font-weight: 700; color: var(--muted); background: var(--panel); border: 1px solid var(--card-line); border-radius: 5px; padding: .15rem .4rem; pointer-events: none; }
+
+    /* ---- Inventario: grid/list view toggle ---- */
+    .inv-view-toggle { display: flex; border: 1.5px solid var(--card-line); border-radius: 8px; overflow: hidden; }
+    .inv-view-toggle button { background: #fff; border: none; padding: .55rem .6rem; display: flex; align-items: center; color: var(--muted); cursor: pointer; }
+    .inv-view-toggle button + button { border-left: 1.5px solid var(--card-line); }
+    .inv-view-toggle button.is-active { background: var(--violet-bg); color: var(--violet); }
+
+    /* ---- Inventario: pagination ---- */
+    .inv-pagination { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid var(--card-line); font-size: .82rem; color: var(--muted); }
+    .inv-pagination .pg-pages { display: flex; align-items: center; gap: .3rem; }
+    .inv-pagination .pg-pages button { min-width: 30px; height: 30px; padding: 0 .4rem; border: 1px solid var(--card-line); background: #fff; border-radius: 7px; font-size: .78rem; font-family: inherit; font-weight: 600; color: var(--ink); cursor: pointer; }
+    .inv-pagination .pg-pages button:hover:not(:disabled) { border-color: var(--violet); }
+    .inv-pagination .pg-pages button.is-active { background: var(--violet); border-color: var(--violet); color: #fff; }
+    .inv-pagination .pg-pages button:disabled { opacity: .35; cursor: not-allowed; }
+    .inv-pagination .pg-pages .pg-ellipsis { padding: 0 .3rem; color: var(--muted); }
+    .inv-pagination select { border: 1.5px solid var(--card-line); border-radius: 7px; padding: .35rem .5rem; font-size: .78rem; font-family: inherit; background: #fff; }
     .kpi-filterable { cursor: pointer; transition: box-shadow .15s; }
     .kpi-filterable:hover { box-shadow: 0 0 0 1.5px var(--ink) inset; }
     .kpi-filterable.is-active { box-shadow: 0 0 0 1.5px var(--ink) inset; background: var(--panel); }
@@ -129,35 +184,46 @@
     .inv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; }
     @media (max-width: 900px) { .inv-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .8rem; } }
     @media (max-width: 480px) { .inv-grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; } }
-    .inv-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .15s, transform .1s; }
-    .inv-card:hover { box-shadow: 0 10px 28px rgba(0,0,0,.08); transform: translateY(-2px); }
-    .inv-card-ph { position: relative; aspect-ratio: 1 / 1; background: #0A0A0A; }
+    .inv-grid.list-view { grid-template-columns: 1fr; }
+    .inv-grid.list-view .inv-card { flex-direction: row; }
+    .inv-grid.list-view .inv-card-ph { width: 110px; flex-shrink: 0; aspect-ratio: 1/1; }
+    .inv-grid.list-view .inv-card-body { flex-direction: row; align-items: center; flex-wrap: wrap; gap: .3rem 1.2rem; padding: .8rem 1rem; }
+    .inv-grid.list-view .inv-card-name { min-height: 0; -webkit-line-clamp: 1; min-width: 160px; }
+    .inv-grid.list-view .inv-card-brand { min-width: 90px; }
+    .inv-grid.list-view .inv-card-sku { margin-bottom: 0; min-width: 140px; }
+    .inv-grid.list-view .inv-card-row { min-width: 140px; }
+    .inv-grid.list-view .inv-card-variants { order: 5; }
+    .inv-grid.list-view .inv-card-actions { margin-top: 0; margin-left: auto; width: auto; flex: 0 0 auto; }
+    .inv-grid.list-view .inv-card-actions button { flex: 0 0 auto; padding: .4rem .7rem; }
+    .inv-card { background: #fff; border: 1px solid var(--card-line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--card-shadow); transition: box-shadow .15s, transform .1s; }
+    .inv-card:hover { box-shadow: 0 4px 10px rgba(30,20,60,.06), 0 14px 32px rgba(30,20,60,.09); transform: translateY(-2px); }
+    .inv-card-ph { position: relative; aspect-ratio: 1 / 1; background: #FAFAFC; }
     .inv-card-ph img { width: 100%; height: 100%; object-fit: cover; }
-    .inv-card-ph .thumb-count { position: absolute; bottom: .4rem; right: .4rem; background: rgba(0,0,0,.75); color: #fff; font-size: .6rem; font-weight: 700; padding: .1rem .35rem; border-radius: 4px; }
-    .inv-card-ph .status-badge { position: absolute; top: .5rem; left: .5rem; display: inline-block; font-size: .6rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: .22rem .5rem; border-radius: 999px; }
-    .inv-card-ph .status-badge.ok { background: #e5f7ef; color: #1a9c63; }
-    .inv-card-ph .status-badge.warn { background: #fff4de; color: #b5750a; }
-    .inv-card-ph .status-badge.out { background: #fbe9e7; color: #c0392b; }
-    .inv-card-ph .ord-controls { position: absolute; top: .5rem; right: .5rem; display: flex; flex-direction: column; gap: .2rem; }
-    .inv-card-ph .ord-controls button { width: 24px; height: 24px; border: none; border-radius: 5px; background: rgba(255,255,255,.92); color: var(--ink); font-size: .6rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-    .inv-card-ph .ord-controls button:hover:not(:disabled) { background: #fff; }
+    .inv-card-ph .thumb-count { position: absolute; bottom: .4rem; right: .4rem; background: rgba(10,10,10,.72); color: #fff; font-size: .6rem; font-weight: 700; padding: .1rem .35rem; border-radius: 4px; }
+    .inv-card-ph .status-badge { position: absolute; top: .55rem; left: .55rem; display: inline-block; font-size: .6rem; font-weight: 700; letter-spacing: .01em; padding: .25rem .55rem; border-radius: 999px; }
+    .inv-card-ph .status-badge.ok { background: #E7F8EF; color: #16A34A; }
+    .inv-card-ph .status-badge.warn { background: var(--amber-bg); color: var(--amber); }
+    .inv-card-ph .status-badge.out { background: var(--red-bg); color: var(--red); }
+    .inv-card-ph .ord-controls { position: absolute; top: .55rem; right: .55rem; display: flex; flex-direction: column; gap: .2rem; }
+    .inv-card-ph .ord-controls button { width: 24px; height: 24px; border: none; border-radius: 6px; background: rgba(255,255,255,.95); box-shadow: 0 1px 3px rgba(0,0,0,.15); color: var(--ink); font-size: .6rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    .inv-card-ph .ord-controls button:hover:not(:disabled) { background: var(--violet-bg); color: var(--violet); }
     .inv-card-ph .ord-controls button:disabled { opacity: .35; cursor: not-allowed; }
-    .inv-card-body { padding: .7rem .8rem .85rem; display: flex; flex-direction: column; gap: .15rem; flex: 1; }
-    .inv-card-brand { font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .inv-card-name { font-size: .82rem; font-weight: 600; line-height: 1.3; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.1em; }
-    .inv-card-sku { font-family: monospace; font-size: .66rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-bottom: .3rem; }
+    .inv-card-body { padding: .75rem .85rem .9rem; display: flex; flex-direction: column; gap: .15rem; flex: 1; }
+    .inv-card-brand { font-size: .62rem; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .inv-card-name { font-size: .84rem; font-weight: 700; line-height: 1.3; margin: 0; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.1em; }
+    .inv-card-sku { font-size: .68rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-bottom: .3rem; }
     .inv-card-row { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
-    .inv-card-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: .02em; }
-    .units-badge { display: inline-flex; align-items: center; font-weight: 700; font-size: .78rem; }
+    .inv-card-price { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; color: var(--ink); }
+    .units-badge { display: inline-flex; align-items: center; font-weight: 600; font-size: .76rem; color: var(--muted); }
     .inv-card-variants { display: flex; gap: .3rem; flex-wrap: wrap; margin-top: .3rem; }
-    .mini-badge { display: inline-block; background: var(--panel); color: var(--muted); font-size: .6rem; font-weight: 700; padding: .12rem .4rem; border-radius: 4px; }
-    .inv-card-actions { display: flex; gap: .35rem; margin-top: .6rem; }
-    .inv-card-actions button { flex: 1; background: none; border: 1px solid var(--line); border-radius: 5px; padding: .4rem .3rem; font-size: .64rem; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink); }
+    .mini-badge { display: inline-block; background: var(--violet-bg); color: var(--violet-dark); font-size: .6rem; font-weight: 700; padding: .14rem .45rem; border-radius: 999px; }
+    .inv-card-actions { display: flex; gap: .4rem; margin-top: .65rem; }
+    .inv-card-actions button { flex: 1; background: none; border: 1px solid var(--card-line); border-radius: 7px; padding: .45rem .3rem; font-size: .68rem; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink); }
     .inv-card-actions button:hover { background: var(--panel); }
-    .inv-card-actions .sell { color: #1a9c63; border-color: #cdeee0; }
-    .inv-card-actions .sell:hover { background: #e5f7ef; }
-    .inv-card-actions .del { color: #c0392b; border-color: #f0d0cc; }
-    .inv-card-actions .del:hover { background: #fdf2f0; }
+    .inv-card-actions .sell { color: #16A34A; border-color: #CFEEDA; }
+    .inv-card-actions .sell:hover { background: #E7F8EF; }
+    .inv-card-actions .del { color: var(--red); border-color: #F5D3D3; }
+    .inv-card-actions .del:hover { background: var(--red-bg); }
 
     /* ---- Product modal (add/edit) ---- */
     .pmodal-overlay { position: fixed; inset: 0; z-index: 300; background: rgba(10,10,10,.65); display: none; align-items: flex-start; justify-content: center; padding: 3rem 1.5rem; overflow-y: auto; }
@@ -185,7 +251,9 @@
     .pmodal-sizes-add { background: none; border: 1.5px dashed var(--line); border-radius: 8px; padding: .55rem .9rem; font-size: .78rem; font-weight: 700; color: var(--muted); cursor: pointer; font-family: inherit; width: 100%; margin-top: .2rem; }
     .pmodal-sizes-add:hover { border-color: var(--ink); color: var(--ink); }
     .pmodal-sizes-total { font-size: .74rem; color: var(--muted); margin-top: .5rem; }
-    .pmodal-photos { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .8rem; }
+    .pmodal-photos { display: contents; }
+    .pmodal-photo-item:first-child { width: 132px; }
+    .pmodal-photo-item:first-child .pmodal-photo { width: 132px; height: 132px; }
     .pmodal-photo { position: relative; width: 72px; height: 72px; border-radius: 8px; overflow: hidden; background: #0A0A0A; }
     .pmodal-photo img { width: 100%; height: 100%; object-fit: cover; }
     .pmodal-photo .rm, .pmodal-photo .mv { -webkit-appearance: none; appearance: none; font-family: inherit; box-sizing: border-box; }
@@ -205,6 +273,77 @@
     .pmodal-add-photo:hover { border-color: var(--ink); color: var(--ink); }
     .pmodal-actions { display: flex; gap: .7rem; margin-top: 1.4rem; }
     .pmodal-actions .btn { flex: 1; }
+
+    /* ---- Product modal: two-column redesign ---- */
+    .pmodal-product { max-width: 1080px; padding: 2.2rem 2.4rem; }
+    .pmodal-product h3 { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.5rem; letter-spacing: -.01em; margin-bottom: .2rem; }
+    .pm-subtitle { font-size: .84rem; color: var(--muted); margin-bottom: 1.6rem; }
+    .pmodal-2col { display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start; }
+    @media (max-width: 860px) { .pmodal-2col { grid-template-columns: 1fr; } }
+    .pmodal-main { min-width: 0; }
+    .pm-section { padding: 1.4rem 0; border-bottom: 1px solid var(--card-line); }
+    .pm-section:first-child { padding-top: 0; }
+    .pm-section:last-child { border-bottom: none; padding-bottom: 0; }
+    .pm-section-title { font-size: .82rem; font-weight: 800; color: var(--ink); margin-bottom: .9rem; }
+    .pm-label-note { color: var(--muted); font-weight: 400; text-transform: none; letter-spacing: 0; }
+    .pm-hint { font-size: .74rem; color: var(--muted); margin: .6rem 0 0; line-height: 1.5; }
+    .pm-gallery-row { display: flex; flex-wrap: wrap; align-items: flex-start; gap: .6rem; }
+
+    /* Variant tables: reuse the existing .pmodal-sizes-row grid (JS-rendered,
+       unchanged) — these just add a matching static header row so it reads
+       as a table, no change to the row-rendering logic itself. */
+    .pm-variant-table { border: 1px solid var(--card-line); border-radius: 10px; padding: .9rem 1rem 1rem; margin-bottom: 1rem; }
+    .pm-variant-table:last-child { margin-bottom: 0; }
+    .pm-variant-head { display: grid; grid-template-columns: 1fr 110px auto; gap: .5rem; margin-bottom: .6rem; font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .pm-variant-head-color { grid-template-columns: 1fr 90px 140px auto; }
+
+    .pm-pill-toggle { display: flex; border: 1.5px solid var(--card-line); border-radius: 999px; padding: .2rem; width: fit-content; }
+    .pm-pill-toggle button { background: none; border: none; border-radius: 999px; padding: .4rem 1rem; font-size: .78rem; font-weight: 700; font-family: inherit; color: var(--muted); cursor: pointer; }
+    .pm-pill-toggle button.is-active { background: var(--violet); color: #fff; }
+
+    /* ---- Right column: preview + financial + inventory panels ---- */
+    .pmodal-aside { position: sticky; top: 0; display: flex; flex-direction: column; gap: 1rem; }
+    .pm-aside-card { background: var(--app-bg); border: 1px solid var(--card-line); border-radius: 12px; padding: 1.1rem 1.2rem; }
+    .pm-aside-card-head { font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; font-weight: 800; color: var(--muted); margin-bottom: .8rem; }
+    .pm-preview-ph { aspect-ratio: 1/1; border-radius: 10px; overflow: hidden; background: #fff; border: 1px solid var(--card-line); margin-bottom: .8rem; }
+    .pm-preview-ph img { width: 100%; height: 100%; object-fit: contain; }
+    .pm-preview-name { font-weight: 800; font-size: 1rem; line-height: 1.3; margin-bottom: .15rem; }
+    .pm-preview-meta { font-size: .76rem; color: var(--violet); font-weight: 600; margin-bottom: .6rem; }
+    .pm-preview-price { font-weight: 800; font-size: 1.3rem; margin-bottom: .3rem; }
+    .pm-preview-price span { font-size: .68rem; font-weight: 700; color: var(--muted); }
+    .pm-preview-stock { display: inline-block; background: #E7F8EF; color: #16A34A; font-size: .68rem; font-weight: 700; padding: .25rem .6rem; border-radius: 999px; margin-bottom: .9rem; }
+    .pm-preview-stock.is-out { background: var(--red-bg); color: var(--red); }
+    .pm-preview-rows { display: flex; flex-direction: column; gap: .45rem; padding-top: .8rem; border-top: 1px solid var(--card-line); }
+    .pm-preview-rows div { display: flex; justify-content: space-between; font-size: .78rem; }
+    .pm-preview-rows span { color: var(--muted); }
+    .pm-preview-status { color: #16A34A; }
+    .pm-preview-status::before { content: "●"; margin-right: .3rem; font-size: .6rem; }
+    .pm-preview-status.is-draft { color: var(--amber); }
+
+    .pm-fin-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem .6rem; }
+    .pm-fin-tiles > div:last-child { grid-column: 1 / -1; }
+    .pm-fin-tiles span { display: block; font-size: .66rem; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .2rem; }
+    .pm-fin-tiles b { font-size: 1rem; font-weight: 800; }
+    .pm-fin-tiles em { display: inline-block; font-style: normal; font-size: .66rem; font-weight: 700; margin-left: .5rem; padding: .12rem .5rem; border-radius: 999px; }
+    .pm-fin-tiles em.tier-good { background: #E7F8EF; color: #16A34A; }
+    .pm-fin-tiles em.tier-mid { background: var(--amber-bg); color: var(--amber); }
+    .pm-fin-tiles em.tier-low { background: var(--red-bg); color: var(--red); }
+
+    .pm-inv-stat { display: flex; justify-content: space-between; align-items: center; }
+    .pm-inv-stat span { font-size: .8rem; color: var(--muted); }
+    .pm-inv-stat b { font-size: 1.3rem; font-weight: 800; color: #16A34A; }
+
+    .pmodal-actions-full { display: flex; align-items: center; gap: .7rem; margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--card-line); }
+    .pmodal-actions-full .btn { flex: 0 0 auto; }
+    .pm-actions-spacer { flex: 1; }
+    .pm-danger { color: var(--red); border-color: #F5D3D3; }
+    .pm-danger:hover { background: var(--red-bg); }
+    @media (max-width: 560px) {
+      .pmodal-product { padding: 1.4rem 1.2rem; }
+      .pmodal-actions-full { flex-wrap: wrap; }
+      .pmodal-actions-full .btn { flex: 1 1 auto; }
+      .pm-actions-spacer { flex-basis: 100%; height: 0; }
+    }
 
     /* ---- WhatsApp support float ---- */
     .support-float { position: fixed; bottom: 1.4rem; right: 1.4rem; z-index: 200; background: #25D366; color: #fff; display: flex; align-items: center; gap: .6rem; border-radius: 999px; padding: .8rem 1.2rem .8rem .8rem; box-shadow: 0 8px 24px rgba(0,0,0,.25); text-decoration: none; font-size: .78rem; font-weight: 700; }
@@ -469,21 +608,21 @@
       <p class="section-sub">Edita precios, stock y datos del catálogo. Al <b>Publicar</b>, los cambios van directo a la tienda en vivo.</p>
 
       <div class="kpi-row" id="invKpiRow">
-        <div class="kpi">
-          <div class="lbl">Valor del inventario</div>
-          <div class="val" id="kpiInvValue">$0</div>
+        <div class="kpi" data-tone="violet">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-4a2 2 0 1 1 0-4h4z"/></svg></div>
+          <div><div class="lbl">Valor del inventario</div><div class="val" id="kpiInvValue">$0</div></div>
         </div>
-        <div class="kpi">
-          <div class="lbl">Unidades totales</div>
-          <div class="val" id="kpiUnitsTotal">0</div>
+        <div class="kpi" data-tone="blue">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+          <div><div class="lbl">Unidades totales</div><div class="val" id="kpiUnitsTotal">0</div></div>
         </div>
-        <div class="kpi kpi-filterable" data-filter-status="low" title="Ver productos con bajo stock">
-          <div class="lbl">Bajo stock (1-3)</div>
-          <div class="val" id="kpiLowStock">0</div>
+        <div class="kpi kpi-filterable" data-tone="amber" data-filter-status="low" title="Ver productos con bajo stock">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div><div class="lbl">Bajo stock (1-3)</div><div class="val" id="kpiLowStock">0</div></div>
         </div>
-        <div class="kpi kpi-filterable" data-filter-status="out" title="Ver productos agotados">
-          <div class="lbl">Agotados</div>
-          <div class="val" id="kpiOutStock">0</div>
+        <div class="kpi kpi-filterable" data-tone="red" data-filter-status="out" title="Ver productos agotados">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><line x1="9" y1="10" x2="15" y2="15"/><line x1="15" y1="10" x2="9" y2="15"/></svg></div>
+          <div><div class="lbl">Agotados</div><div class="val" id="kpiOutStock">0</div></div>
         </div>
       </div>
 
@@ -491,8 +630,29 @@
         <b>Tienes cambios sin publicar.</b> Toca <b>“Publicar en el sitio”</b> para que aparezcan en la tienda (tarda ~1 minuto en verse).
       </div>
 
+      <div class="inv-actions-row">
+        <button type="button" class="btn btn-violet btn-sm" id="invAddBtn">+ Agregar producto</button>
+        <button type="button" class="btn btn-outline btn-sm" id="invBulkBtn">Edición masiva</button>
+        <button type="button" class="btn btn-outline btn-sm" id="invImportBtn">Importar CSV/JSON</button>
+        <input type="file" id="invImportFile" accept=".json,.csv" style="display:none;" />
+        <div class="inv-more-wrap">
+          <button type="button" class="btn btn-outline btn-sm" id="invMoreBtn" aria-haspopup="true" aria-expanded="false">Más acciones <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="inv-more-menu" id="invMoreMenu">
+            <button type="button" id="invExportCsvBtn">Exportar CSV</button>
+            <button type="button" id="invExportBtn">Exportar JSON</button>
+            <button type="button" id="invRegenBtn" title="Regenera la página de cada producto con la plantilla actual — úsalo una vez después de un cambio de plantilla.">Regenerar todas las páginas</button>
+            <button type="button" id="invDiscardBtn">Descartar cambios</button>
+          </div>
+        </div>
+        <button type="button" class="btn btn-ink btn-sm inv-publish-btn" id="invPublishBtn">Publicar en el sitio</button>
+      </div>
+
       <div class="inv-toolbar">
-        <input type="search" id="invSearch" placeholder="Buscar por nombre, marca, SKU o categoría…" />
+        <div class="inv-search-wrap">
+          <svg class="inv-search-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="invSearch" placeholder="Buscar por nombre, marca o SKU…" />
+          <kbd class="inv-search-kbd">⌘K</kbd>
+        </div>
         <div class="inv-filters">
           <select id="invCatFilter"><option value="">Todas las categorías</option></select>
           <select id="invStatusFilter">
@@ -503,29 +663,23 @@
             <option value="draft">Borrador</option>
           </select>
           <select id="invSortSel" title="Ordenar por">
-            <option value="">Orden de la tienda</option>
-            <option value="n">Nombre</option>
-            <option value="brand">Marca</option>
-            <option value="cat">Categoría</option>
-            <option value="price">Precio</option>
-            <option value="units">Unidades</option>
+            <option value="">Orden: tienda</option>
+            <option value="n">Orden: Nombre</option>
+            <option value="brand">Orden: Marca</option>
+            <option value="cat">Orden: Categoría</option>
+            <option value="price">Orden: Precio</option>
+            <option value="units">Orden: Unidades</option>
           </select>
-          <button type="button" class="btn btn-outline btn-sm" id="invSortDirBtn" title="Invertir orden">&#8593;&#8595;</button>
-        </div>
-        <div class="inv-actions">
-          <button type="button" class="btn btn-outline btn-sm" id="invAddBtn">+ Agregar producto</button>
-          <button type="button" class="btn btn-outline btn-sm" id="invBulkBtn">Edición masiva</button>
-          <button type="button" class="btn btn-outline btn-sm" id="invImportBtn">Importar CSV/JSON</button>
-          <input type="file" id="invImportFile" accept=".json,.csv" style="display:none;" />
-          <button type="button" class="btn btn-outline btn-sm" id="invExportCsvBtn">Exportar CSV</button>
-          <button type="button" class="btn btn-outline btn-sm" id="invExportBtn">Exportar JSON</button>
-          <button type="button" class="btn btn-outline btn-sm" id="invRegenBtn" title="Regenera la página de cada producto con la plantilla actual — úsalo una vez después de un cambio de plantilla.">Regenerar todas las páginas</button>
-          <button type="button" class="btn btn-outline btn-sm" id="invDiscardBtn">Descartar cambios</button>
-          <button type="button" class="btn btn-ink btn-sm" id="invPublishBtn">Publicar en el sitio</button>
+          <button type="button" class="btn btn-outline btn-sm inv-sort-dir" id="invSortDirBtn" title="Invertir orden">&#8593;&#8595;</button>
+          <div class="inv-view-toggle" role="group" aria-label="Vista">
+            <button type="button" class="is-active" id="invViewGridBtn" title="Vista de tarjetas" aria-label="Vista de tarjetas"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></button>
+            <button type="button" id="invViewListBtn" title="Vista de lista" aria-label="Vista de lista"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></button>
+          </div>
         </div>
       </div>
 
       <div class="inv-grid" id="invBody"></div>
+      <div class="inv-pagination" id="invPagination"></div>
       </section>
 
       <section id="secActividad" style="display:none;">
@@ -551,89 +705,148 @@
 
 <!-- ============ PRODUCT MODAL (add/edit) ============ -->
 <div class="pmodal-overlay" id="pmodalOverlay">
-  <div class="pmodal">
+  <div class="pmodal pmodal-product">
     <button type="button" class="pmodal-close" id="pmodalClose" aria-label="Cerrar">&times;</button>
     <h3 id="pmodalTitle">Agregar producto</h3>
-    <div class="pmodal-photos" id="pmodalPhotos"></div>
-    <button type="button" class="pmodal-add-photo" id="pmodalAddPhotoBtn" title="Agregar foto">+</button>
-    <p style="font-size:.72rem;color:var(--muted);margin:.4rem 0 0;">Foto en <b>JPG</b> o <b>PNG</b>. Se comprime automáticamente al subirla. Usá &lsaquo; &rsaquo; para ordenarlas (la primera, "Portada", es la que se muestra en la tienda) y &#8635; para rotarlas 90° si quedaron torcidas.</p>
-    <div class="pmodal-field" style="margin-top:.7rem;">
-      <label>Ajuste de la foto en la página <span style="color:var(--muted);font-weight:400;">(cómo se ve en la tienda)</span></label>
-      <select id="pmImgFit">
-        <option value="auto">Automático — muestra la foto completa (recomendado)</option>
-        <option value="cover">Rellenar el cuadro — puede recortar bordes</option>
-      </select>
-    </div>
+    <p class="pm-subtitle">Actualiza la información de tu producto.</p>
     <input type="file" id="pmodalFileInput" accept="image/jpeg,image/png,image/webp,image/*" multiple style="display:none;" />
     <form id="pmodalForm">
-      <div class="pmodal-grid" style="margin-top:1.2rem;">
-        <div class="pmodal-field span2">
-          <label>Nombre</label>
-          <input type="text" id="pmName" required />
+      <div class="pmodal-2col">
+        <div class="pmodal-main">
+
+          <section class="pm-section">
+            <h4 class="pm-section-title">Imágenes del producto</h4>
+            <div class="pm-gallery-row">
+              <div class="pmodal-photos" id="pmodalPhotos"></div>
+              <button type="button" class="pmodal-add-photo" id="pmodalAddPhotoBtn" title="Agregar foto">+</button>
+            </div>
+            <p class="pm-hint">Se comprimen automáticamente al subir. <b>&lsaquo; &rsaquo;</b> ordena, <b>&#8635;</b> rota, <b>&#9986;</b> quita el fondo (ayudante local — ver tools/README.md). La primera foto ("Portada") es la que se muestra en la tienda.</p>
+            <div class="pmodal-field" style="margin-top:.6rem;">
+              <label>Ajuste de la foto en la página <span class="pm-label-note">(cómo se ve en la tienda)</span></label>
+              <select id="pmImgFit">
+                <option value="auto">Automático — muestra la foto completa (recomendado)</option>
+                <option value="cover">Rellenar el cuadro — puede recortar bordes</option>
+              </select>
+            </div>
+          </section>
+
+          <section class="pm-section">
+            <h4 class="pm-section-title">Información básica</h4>
+            <div class="pmodal-grid">
+              <div class="pmodal-field span2">
+                <label>Nombre del producto</label>
+                <input type="text" id="pmName" required />
+              </div>
+              <div class="pmodal-field">
+                <label>Marca</label>
+                <input type="text" id="pmBrand" />
+              </div>
+              <div class="pmodal-field">
+                <label>Categoría</label>
+                <select id="pmCat"></select>
+              </div>
+              <div class="pmodal-field span2">
+                <label>Especificación</label>
+                <input type="text" id="pmSpec" placeholder="Ej: Cromoly · 48 spline · Negro" />
+              </div>
+              <div class="pmodal-field">
+                <label>SKU <span class="pm-label-note">(automático, editable)</span></label>
+                <input type="text" id="pmSku" placeholder="CAT-MARCA-000" />
+              </div>
+              <div class="pmodal-field" id="pmUnitsField">
+                <label>Unidades en stock</label>
+                <input type="number" id="pmUnits" min="0" step="1" />
+              </div>
+            </div>
+          </section>
+
+          <section class="pm-section">
+            <div class="pm-section-head">
+              <h4 class="pm-section-title">Variantes del producto</h4>
+            </div>
+            <div class="pm-variant-table" id="pmSizesField" style="display:none;">
+              <div class="pm-variant-head"><span>Talla</span><span>Stock</span><span></span></div>
+              <div id="pmSizesRows"></div>
+              <button type="button" class="pmodal-sizes-add" id="pmSizesAddBtn">+ Añadir talla</button>
+              <p class="pmodal-sizes-total" id="pmSizesTotal"></p>
+            </div>
+            <div class="pm-variant-table">
+              <div class="pm-variant-head pm-variant-head-color"><span>Color</span><span>Stock</span><span>Precio (opcional)</span><span></span></div>
+              <div id="pmColorsRows"></div>
+              <button type="button" class="pmodal-sizes-add" id="pmColorsAddBtn">+ Añadir color</button>
+              <p class="pmodal-sizes-total" id="pmColorsTotal"></p>
+              <p class="pmodal-sizes-total" id="pmColorsHint"></p>
+            </div>
+          </section>
+
+          <section class="pm-section">
+            <div class="pmodal-grid">
+              <div class="pmodal-field">
+                <label>Tag <span class="pm-label-note">(opcional)</span></label>
+                <input type="text" id="pmTag" placeholder="Ej: Nuevo, Top, Edición" />
+              </div>
+              <div class="pmodal-field">
+                <label>Promoción</label>
+                <div class="pm-pill-toggle" id="pmPromoToggle">
+                  <button type="button" class="is-active" data-val="0">Normal</button>
+                  <button type="button" data-val="1">En oferta</button>
+                </div>
+                <input type="checkbox" id="pmPromo" style="display:none;" />
+              </div>
+              <div class="pmodal-field">
+                <label>Precio (COP)</label>
+                <input type="number" id="pmPrice" min="0" step="1000" required />
+              </div>
+              <div class="pmodal-field">
+                <label>Costo (COP, interno)</label>
+                <input type="number" id="pmCost" min="0" step="1000" />
+              </div>
+              <div class="pmodal-field span2">
+                <label>Notas internas <span class="pm-label-note">(no se publican)</span></label>
+                <textarea id="pmNotes" rows="2" placeholder="Proveedor, recordatorio de reabastecimiento, etc."></textarea>
+              </div>
+            </div>
+          </section>
+
         </div>
-        <div class="pmodal-field">
-          <label>Marca</label>
-          <input type="text" id="pmBrand" />
-        </div>
-        <div class="pmodal-field">
-          <label>Categoría</label>
-          <select id="pmCat"></select>
-        </div>
-        <div class="pmodal-field span2">
-          <label>Especificación</label>
-          <input type="text" id="pmSpec" placeholder="Ej: Cromoly · 48 spline · Negro" />
-        </div>
-        <div class="pmodal-field">
-          <label>Precio (COP)</label>
-          <input type="number" id="pmPrice" min="0" step="1000" required />
-        </div>
-        <div class="pmodal-field">
-          <label>SKU <span style="color:var(--muted);font-weight:400;">(automático — puedes editarlo)</span></label>
-          <input type="text" id="pmSku" placeholder="CAT-MARCA-000" />
-        </div>
-        <div class="pmodal-field" id="pmUnitsField">
-          <label>Unidades en stock</label>
-          <input type="number" id="pmUnits" min="0" step="1" />
-        </div>
-        <div class="pmodal-field span2" id="pmSizesField" style="display:none;">
-          <label>Tallas y stock por talla</label>
-          <div id="pmSizesRows"></div>
-          <button type="button" class="pmodal-sizes-add" id="pmSizesAddBtn">+ Añadir talla</button>
-          <p class="pmodal-sizes-total" id="pmSizesTotal"></p>
-        </div>
-        <div class="pmodal-field span2">
-          <label>Colores y stock por color (opcional)</label>
-          <div id="pmColorsRows"></div>
-          <button type="button" class="pmodal-sizes-add" id="pmColorsAddBtn">+ Añadir color</button>
-          <p class="pmodal-sizes-total" id="pmColorsTotal"></p>
-          <p class="pmodal-sizes-total" id="pmColorsHint"></p>
-        </div>
-        <div class="pmodal-field">
-          <label>Tag (opcional)</label>
-          <input type="text" id="pmTag" placeholder="Ej: Nuevo, Top, Edición" />
-        </div>
-        <div class="pmodal-field">
-          <label>Promoción</label>
-          <label style="display:flex;align-items:center;gap:.5rem;font-weight:400;font-size:.85rem;cursor:pointer;">
-            <input type="checkbox" id="pmPromo" style="width:auto;" /> En promoción (aparece en Promo)
-          </label>
-        </div>
-        <div class="pmodal-field">
-          <label>Costo (COP, interno)</label>
-          <input type="number" id="pmCost" min="0" step="1000" />
-        </div>
-        <div class="pmodal-field">
-          <label>Margen</label>
-          <div class="pmodal-margin-readout" id="pmMarginReadout">—</div>
-        </div>
-        <div class="pmodal-field span2">
-          <label>Notas internas (no se publican)</label>
-          <textarea id="pmNotes" rows="2" placeholder="Proveedor, recordatorio de reabastecimiento, etc."></textarea>
-        </div>
+
+        <aside class="pmodal-aside">
+          <div class="pm-aside-card">
+            <div class="pm-aside-card-head"><span>Vista previa</span></div>
+            <div class="pm-preview-ph"><img id="pmPreviewImg" src="assets/img/escena-logo.jpg" alt="" /></div>
+            <div class="pm-preview-name" id="pmPreviewName">Nombre del producto</div>
+            <div class="pm-preview-meta" id="pmPreviewMeta">Marca · Categoría</div>
+            <div class="pm-preview-price" id="pmPreviewPrice">$0 <span>COP</span></div>
+            <div class="pm-preview-stock" id="pmPreviewStock">0 unidades disponibles</div>
+            <div class="pm-preview-rows">
+              <div><span>SKU</span><b id="pmPreviewSku">—</b></div>
+              <div><span>Categoría</span><b id="pmPreviewCat">—</b></div>
+              <div><span>Estado</span><b id="pmPreviewStatus" class="pm-preview-status">Publicado</b></div>
+            </div>
+          </div>
+
+          <div class="pm-aside-card">
+            <div class="pm-aside-card-head"><span>Resumen financiero</span></div>
+            <div class="pm-fin-tiles">
+              <div><span>Precio</span><b id="pmFinPrice">$0</b></div>
+              <div><span>Costo</span><b id="pmFinCost">$0</b></div>
+              <div><span>Margen</span><b id="pmFinMargin">—%</b><em id="pmFinMarginTag"></em></div>
+            </div>
+          </div>
+
+          <div class="pm-aside-card">
+            <div class="pm-aside-card-head"><span>Inventario</span></div>
+            <div class="pm-inv-stat"><span>Disponible</span><b id="pmInvAvail">0</b></div>
+          </div>
+        </aside>
       </div>
-      <div class="pmodal-actions">
+
+      <div class="pmodal-actions pmodal-actions-full">
+        <button type="button" class="btn btn-outline pm-danger" id="pmDeleteBtn" style="display:none;">Eliminar producto</button>
+        <button type="button" class="btn btn-outline" id="pmDuplicateBtn" style="display:none;">Duplicar producto</button>
+        <span class="pm-actions-spacer"></span>
         <button type="button" class="btn btn-outline" id="pmodalCancel">Cancelar</button>
-        <button type="submit" class="btn btn-ink">Guardar producto</button>
+        <button type="submit" class="btn btn-ink" id="pmSaveBtn">Guardar producto</button>
       </div>
     </form>
   </div>
@@ -2169,8 +2382,10 @@
     if (bo !== null) return 1;
     return (b.price || 0) - (a.price || 0);
   }
-  var currentInvItems = []; // items in the order currently rendered — reorder buttons operate on this
+  var currentInvItems = []; // full filtered/sorted list (not just the visible page) — reorder buttons operate on this
   var invNaturalView = false; // true when showing the natural (reorderable) storefront order, not a search/column sort
+  var invPage = 1;
+  var invPageSize = 24;
   function reorderProduct(slug, dir) {
     var i = currentInvItems.findIndex(function (p) { return p.slug === slug; });
     var j = i + dir;
@@ -2262,11 +2477,60 @@
     currentInvItems = items;
     if (items.length === 0) {
       body.innerHTML = '<p class="empty-state">No se encontraron productos para "' + esc(filter) + '".</p>';
+      renderInvPagination(0);
       return;
     }
-    body.innerHTML = items.map(function (p, i) {
-      return rowHTML(p, inventoryCatalog.indexOf(p), invNaturalView, i, items.length);
+    var totalPages = Math.max(1, Math.ceil(items.length / invPageSize));
+    invPage = Math.min(Math.max(1, invPage), totalPages);
+    var start = (invPage - 1) * invPageSize;
+    var pageItems = items.slice(start, start + invPageSize);
+    body.innerHTML = pageItems.map(function (p) {
+      var globalIdx = items.indexOf(p); // position in the full sorted list — drives reorder-arrow disabled state
+      return rowHTML(p, inventoryCatalog.indexOf(p), invNaturalView, globalIdx, items.length);
     }).join("");
+    renderInvPagination(items.length);
+  }
+
+  function renderInvPagination(total) {
+    var el = document.getElementById("invPagination");
+    if (!el) return;
+    if (!total) { el.innerHTML = ""; return; }
+    var totalPages = Math.max(1, Math.ceil(total / invPageSize));
+    var start = (invPage - 1) * invPageSize + 1;
+    var end = Math.min(total, invPage * invPageSize);
+
+    // Compact page-number list: always show first/last, current ± 1, "…" for gaps.
+    var pages = [];
+    for (var i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || Math.abs(i - invPage) <= 1) pages.push(i);
+      else if (pages[pages.length - 1] !== "…") pages.push("…");
+    }
+    var pagesHTML = pages.map(function (p) {
+      return p === "…"
+        ? '<span class="pg-ellipsis">…</span>'
+        : '<button type="button" class="pg-page' + (p === invPage ? ' is-active' : '') + '" data-page="' + p + '">' + p + '</button>';
+    }).join("");
+
+    el.innerHTML =
+      '<span>Mostrando ' + start + ' a ' + end + ' de ' + total + ' productos</span>' +
+      '<div class="pg-pages">' +
+        '<button type="button" class="pg-prev" ' + (invPage <= 1 ? 'disabled' : '') + ' aria-label="Anterior">&#8249;</button>' +
+        pagesHTML +
+        '<button type="button" class="pg-next" ' + (invPage >= totalPages ? 'disabled' : '') + ' aria-label="Siguiente">&#8250;</button>' +
+      '</div>' +
+      '<label>Ver <select id="invPageSizeSel">' +
+        [12, 24, 48, 96].map(function (n) { return '<option value="' + n + '"' + (n === invPageSize ? ' selected' : '') + '>' + n + '</option>'; }).join("") +
+      '</select> por página</label>';
+
+    el.querySelectorAll(".pg-page").forEach(function (b) {
+      b.addEventListener("click", function () { invPage = parseInt(b.getAttribute("data-page"), 10); renderInventory(document.getElementById("invSearch").value.trim()); document.getElementById("invBody").scrollIntoView({ block: "start", behavior: "smooth" }); });
+    });
+    var prevBtn = el.querySelector(".pg-prev");
+    if (prevBtn) prevBtn.addEventListener("click", function () { invPage--; renderInventory(document.getElementById("invSearch").value.trim()); document.getElementById("invBody").scrollIntoView({ block: "start", behavior: "smooth" }); });
+    var nextBtn = el.querySelector(".pg-next");
+    if (nextBtn) nextBtn.addEventListener("click", function () { invPage++; renderInventory(document.getElementById("invSearch").value.trim()); document.getElementById("invBody").scrollIntoView({ block: "start", behavior: "smooth" }); });
+    var sizeSel = document.getElementById("invPageSizeSel");
+    if (sizeSel) sizeSel.addEventListener("change", function () { invPageSize = parseInt(sizeSel.value, 10); invPage = 1; renderInventory(document.getElementById("invSearch").value.trim()); });
   }
 
   /* ---- Product modal ---- */
@@ -2298,6 +2562,7 @@
         '</div>' + picker +
         '</div>';
     }).join("");
+    if (typeof updatePreview === "function") updatePreview();
   }
 
   function renderModalSizes() {
@@ -2311,6 +2576,7 @@
     }).join("");
     var total = sizesTotal(modalSizes);
     document.getElementById("pmSizesTotal").textContent = modalSizes.length ? "Total: " + total + " unidades en " + modalSizes.length + " talla(s)." : "Sin tallas todavía.";
+    if (typeof updatePreview === "function") updatePreview();
   }
   function toggleUnitsVsSizes(cat) {
     var isSizes = isSizeCat(cat);
@@ -2362,10 +2628,16 @@
     document.getElementById("pmSku").value = p ? (p.sku || "") : genSku(cat, "");
     document.getElementById("pmUnits").value = p ? p.units : 0;
     document.getElementById("pmTag").value = p ? p.tag : "";
-    document.getElementById("pmPromo").checked = p ? p.promo === true : false;
+    var promoOn = p ? p.promo === true : false;
+    document.getElementById("pmPromo").checked = promoOn;
+    document.querySelectorAll("#pmPromoToggle button").forEach(function (b) {
+      b.classList.toggle("is-active", (b.getAttribute("data-val") === "1") === promoOn);
+    });
     document.getElementById("pmCost").value = p && p.cost ? p.cost : "";
     document.getElementById("pmNotes").value = p ? p.notes : "";
     document.getElementById("pmImgFit").value = (p && p.imgFit === "cover") ? "cover" : "auto";
+    document.getElementById("pmDeleteBtn").style.display = p ? "" : "none";
+    document.getElementById("pmDuplicateBtn").style.display = p ? "" : "none";
     updateMarginReadout();
     modalPhotos = p ? p.imgs.slice() : [];
     // Reverse p.imgColorMap ({label: [indices]}) into one label per photo index.
@@ -2382,16 +2654,54 @@
     modalColors = p && p.colors ? p.colors.map(function (c) { return { label: c.label, units: c.units, price: c.price || 0 }; }) : [];
     renderModalColors();
     toggleUnitsVsSizes(cat);
+    updatePreview();
     document.getElementById("pmodalOverlay").classList.add("show");
     document.getElementById("pmName").focus();
   }
   function updateMarginReadout() {
-    var el = document.getElementById("pmMarginReadout");
     var price = parseFloat(document.getElementById("pmPrice").value) || 0;
     var cost = parseFloat(document.getElementById("pmCost").value) || 0;
-    if (!price || !cost) { el.textContent = "—"; return; }
+    var priceEl = document.getElementById("pmFinPrice");
+    var costEl = document.getElementById("pmFinCost");
+    var marginEl = document.getElementById("pmFinMargin");
+    var tagEl = document.getElementById("pmFinMarginTag");
+    if (!priceEl) return; // sell modal etc. don't have these — guard just in case
+    priceEl.textContent = cop(price);
+    costEl.textContent = cop(cost);
+    if (!price) { marginEl.textContent = "—%"; tagEl.textContent = ""; return; }
     var margin = ((price - cost) / price) * 100;
-    el.textContent = margin.toFixed(0) + "% (" + cop(price - cost) + ")";
+    marginEl.textContent = margin.toFixed(0) + "%";
+    var tier = margin >= 40 ? ["Excelente", "tier-good"] : margin >= 20 ? ["Buena", "tier-mid"] : ["Baja", "tier-low"];
+    tagEl.textContent = cost ? tier[0] : "";
+    tagEl.className = tier[1];
+  }
+  // Live "Vista previa" card in the modal's right column — reflects the form
+  // as it's being edited, not just the saved product, so it can't drift out
+  // of sync with what Guardar is about to write.
+  function updatePreview() {
+    var name = document.getElementById("pmName").value.trim() || "Nombre del producto";
+    var brand = document.getElementById("pmBrand").value.trim();
+    var catVal = document.getElementById("pmCat").value;
+    var catLabel = CATEGORY_LABELS[catVal] || catVal || "—";
+    var price = parseFloat(document.getElementById("pmPrice").value) || 0;
+    var sku = document.getElementById("pmSku").value.trim() || "—";
+    var units = isSizeCat(catVal) ? sizesTotal(modalSizes)
+      : (modalColors.length > 1 ? sizesTotal(modalColors) : (parseInt(document.getElementById("pmUnits").value, 10) || 0));
+    document.getElementById("pmPreviewImg").src = modalPhotos[0] || "assets/img/escena-logo.jpg";
+    document.getElementById("pmPreviewName").textContent = name;
+    document.getElementById("pmPreviewMeta").textContent = (brand ? brand + " · " : "") + catLabel;
+    document.getElementById("pmPreviewPrice").innerHTML = cop(price) + " <span>COP</span>";
+    var stockEl = document.getElementById("pmPreviewStock");
+    stockEl.textContent = units + (units === 1 ? " unidad disponible" : " unidades disponibles");
+    stockEl.classList.toggle("is-out", units <= 0);
+    document.getElementById("pmPreviewSku").textContent = sku;
+    document.getElementById("pmPreviewCat").textContent = catLabel;
+    var statusEl = document.getElementById("pmPreviewStatus");
+    var isDraft = editingIdx !== null && inventoryCatalog[editingIdx] && inventoryCatalog[editingIdx].published === false;
+    statusEl.textContent = isDraft ? "Borrador" : "Publicado";
+    statusEl.classList.toggle("is-draft", isDraft);
+    document.getElementById("pmInvAvail").textContent = units;
+    updateMarginReadout();
   }
   function closeProductModal() {
     document.getElementById("pmodalOverlay").classList.remove("show");
@@ -2497,13 +2807,16 @@
     });
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
+      invPage = 1;
       renderInventory(e.target.value.trim());
     });
     if (catFilterEl) catFilterEl.addEventListener("change", function () {
+      invPage = 1;
       renderInventory(document.getElementById("invSearch").value.trim());
     });
     var statusFilterEl = document.getElementById("invStatusFilter");
     if (statusFilterEl) statusFilterEl.addEventListener("change", function () {
+      invPage = 1;
       renderInventory(document.getElementById("invSearch").value.trim());
     });
     document.getElementById("invKpiRow").addEventListener("click", function (e) {
@@ -2511,6 +2824,7 @@
       if (!card || !statusFilterEl) return;
       var status = card.getAttribute("data-filter-status");
       statusFilterEl.value = statusFilterEl.value === status ? "" : status; // click again to clear
+      invPage = 1;
       renderInventory(document.getElementById("invSearch").value.trim());
     });
 
@@ -2518,12 +2832,50 @@
     if (invSortSelEl) invSortSelEl.addEventListener("change", function () {
       sortState.key = invSortSelEl.value || null;
       sortState.dir = 1;
+      invPage = 1;
       renderInventory(document.getElementById("invSearch").value.trim());
     });
     var invSortDirEl = document.getElementById("invSortDirBtn");
     if (invSortDirEl) invSortDirEl.addEventListener("click", function () {
       sortState.dir *= -1;
       renderInventory(document.getElementById("invSearch").value.trim());
+    });
+
+    // "Más acciones" overflow menu — closes on outside click or Escape.
+    var invMoreBtn = document.getElementById("invMoreBtn");
+    var invMoreMenu = document.getElementById("invMoreMenu");
+    if (invMoreBtn && invMoreMenu) {
+      invMoreBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var show = !invMoreMenu.classList.contains("show");
+        invMoreMenu.classList.toggle("show", show);
+        invMoreBtn.setAttribute("aria-expanded", String(show));
+      });
+      invMoreMenu.addEventListener("click", function () { invMoreMenu.classList.remove("show"); invMoreBtn.setAttribute("aria-expanded", "false"); });
+      document.addEventListener("click", function () { invMoreMenu.classList.remove("show"); invMoreBtn.setAttribute("aria-expanded", "false"); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") { invMoreMenu.classList.remove("show"); invMoreBtn.setAttribute("aria-expanded", "false"); } });
+    }
+
+    // Grid / list view toggle.
+    var invViewGridBtn = document.getElementById("invViewGridBtn");
+    var invViewListBtn = document.getElementById("invViewListBtn");
+    if (invViewGridBtn && invViewListBtn) {
+      invViewGridBtn.addEventListener("click", function () {
+        document.getElementById("invBody").classList.remove("list-view");
+        invViewGridBtn.classList.add("is-active"); invViewListBtn.classList.remove("is-active");
+      });
+      invViewListBtn.addEventListener("click", function () {
+        document.getElementById("invBody").classList.add("list-view");
+        invViewListBtn.classList.add("is-active"); invViewGridBtn.classList.remove("is-active");
+      });
+    }
+
+    // ⌘K / Ctrl+K focuses the inventory search, matching the hint shown in the field.
+    document.addEventListener("keydown", function (e) {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k" && document.getElementById("secInventario").style.display !== "none") {
+        e.preventDefault();
+        document.getElementById("invSearch").focus();
+      }
     });
 
     // Registered-sales table: same sort/search/export UX, scoped to Resumen.
@@ -2627,8 +2979,10 @@
       renderInventory(document.getElementById("invSearch").value.trim());
     });
 
-    document.getElementById("pmPrice").addEventListener("input", updateMarginReadout);
-    document.getElementById("pmCost").addEventListener("input", updateMarginReadout);
+    document.getElementById("pmPrice").addEventListener("input", updatePreview);
+    document.getElementById("pmCost").addEventListener("input", updatePreview);
+    document.getElementById("pmName").addEventListener("input", updatePreview);
+    document.getElementById("pmUnits").addEventListener("input", updatePreview);
     // Auto-fill SKU (new products only) as brand/category are entered; stop the
     // moment the user types their own SKU so a manual value is never overwritten.
     function refreshAutoSku() {
@@ -2637,9 +2991,43 @@
         document.getElementById("pmCat").value,
         document.getElementById("pmBrand").value.trim()
       );
+      updatePreview();
     }
     document.getElementById("pmBrand").addEventListener("input", refreshAutoSku);
-    document.getElementById("pmSku").addEventListener("input", function () { skuAuto = false; });
+    document.getElementById("pmSku").addEventListener("input", function () { skuAuto = false; updatePreview(); });
+    document.getElementById("pmPromoToggle").addEventListener("click", function (e) {
+      var btn = e.target.closest("button");
+      if (!btn) return;
+      var val = btn.getAttribute("data-val") === "1";
+      document.getElementById("pmPromo").checked = val;
+      this.querySelectorAll("button").forEach(function (b) { b.classList.toggle("is-active", b === btn); });
+    });
+    document.getElementById("pmDeleteBtn").addEventListener("click", function () {
+      if (editingIdx === null) return;
+      var p = inventoryCatalog[editingIdx];
+      if (!confirm("¿Eliminar \"" + p.n + "\" del catálogo?")) return;
+      markDeleted(p.slug);
+      inventoryCatalog.splice(editingIdx, 1);
+      saveCatalog();
+      closeProductModal();
+      showToast("Producto eliminado");
+      renderInventory(document.getElementById("invSearch").value.trim());
+    });
+    document.getElementById("pmDuplicateBtn").addEventListener("click", function () {
+      if (editingIdx === null) return;
+      var src = inventoryCatalog[editingIdx];
+      var copy = JSON.parse(JSON.stringify(src));
+      copy.n = src.n + " (copia)";
+      copy.slug = makeSlug(copy.n) || ("producto-" + Date.now());
+      copy.sku = genSku(copy.cat, copy.brand);
+      copy.published = false;
+      inventoryCatalog.unshift(copy);
+      markDirty(copy.slug);
+      saveCatalog();
+      closeProductModal();
+      showToast("Producto duplicado. Al Publicar se crea su página.");
+      renderInventory(document.getElementById("invSearch").value.trim());
+    });
     document.getElementById("pmodalAddPhotoBtn").addEventListener("click", function () {
       document.getElementById("pmodalFileInput").click();
     });
@@ -2746,6 +3134,7 @@
     document.getElementById("pmCat").addEventListener("change", function () {
       toggleUnitsVsSizes(this.value);
       refreshAutoSku();
+      updatePreview();
     });
     document.getElementById("pmSizesAddBtn").addEventListener("click", function () {
       modalSizes.push({ label: "", units: 0 });
