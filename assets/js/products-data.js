@@ -3,10 +3,10 @@ window.ESCENA_PRODUCTS = [
   "n": "Tall Order Ramp",
   "brand": "Tallorder",
   "cat": "horquillas",
-  "spec": "",
+  "spec": "Material cromolio 4130 tratado térmicamente - Tapa superior con rosca Allen M24/6 mm - Uña de 28 mm .",
   "price": 680000,
   "sku": "TEN-TAL-001",
-  "units": 0,
+  "units": 1,
   "colors": [
    {
     "label": "Cromado",
