@@ -1080,5 +1080,15 @@ window.ESCENA_AUDIT = [
    "tenedor-cult-sect-v4-cromado-18mm"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-31T20:41:57.513Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "federal-horquilla-cromada"
+  ],
+  "deleted": []
  }
 ];
