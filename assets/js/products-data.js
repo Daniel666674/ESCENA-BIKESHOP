@@ -2802,7 +2802,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "tag": "RHD",
   "order": 320,
-  "img": "assets/img/products/buje-cassette-negro-cromado.jpg"
+  "img": "assets/img/products/buje-cassette-negro-cromado.jpg?v=1785493814976"
  },
  {
   "slug": "buje-cassette-negro-plata",
