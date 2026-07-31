@@ -1044,5 +1044,17 @@ window.ESCENA_AUDIT = [
    "cana-volume-bison-frontload"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-31T20:17:05.601Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 1 foto subida",
+  "created": [
+   "tall-order-ramp"
+  ],
+  "edited": [
+   "tenedor-cult-sect-v4-cromado-18mm"
+  ],
+  "deleted": []
  }
 ];
