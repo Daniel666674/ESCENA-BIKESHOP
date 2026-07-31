@@ -941,5 +941,15 @@ window.ESCENA_AUDIT = [
    "odyssey-cadena-caja"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-31T10:30:18.156Z",
+  "actor": "daniel.f.acosta96@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "buje-cassette-negro-cromado"
+  ],
+  "deleted": []
  }
 ];
