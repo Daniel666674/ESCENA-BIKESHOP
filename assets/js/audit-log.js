@@ -1090,5 +1090,15 @@ window.ESCENA_AUDIT = [
    "federal-horquilla-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-31T20:45:32.974Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "federal-horquilla-cromada"
+  ],
+  "deleted": []
  }
 ];
