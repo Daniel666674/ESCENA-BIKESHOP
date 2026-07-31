@@ -1,5 +1,23 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tall Order Ramp",
+  "brand": "Tallorder",
+  "cat": "horquillas",
+  "spec": "",
+  "price": 680000,
+  "sku": "TEN-TAL-001",
+  "units": 0,
+  "colors": [
+   {
+    "label": "Cromado",
+    "units": 1,
+    "price": 680000
+   }
+  ],
+  "slug": "tall-order-ramp",
+  "img": "assets/img/products/tall-order-ramp.jpg?v=1785529018434"
+ },
+ {
   "n": "Tenedor Ontrail Nemesis",
   "brand": "Ontrail",
   "cat": "horquillas",
@@ -2606,7 +2624,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "tenedor-cult-sect-v4-cromado-18mm",
-  "n": "Tenedor Cult Sect V4 Cromado 18MM",
+  "n": "Tenedor Cult Sect V4 Cromado",
   "brand": "Cult",
   "cat": "horquillas",
   "spec": "Cromoly · 18mm offset · Cromado · Tubo recto",
