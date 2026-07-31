@@ -2840,6 +2840,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "order": 330,
+  "imgFit": "cover",
   "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1785363973599"
  },
  {
