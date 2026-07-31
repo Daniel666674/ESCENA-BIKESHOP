@@ -10,16 +10,15 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
-    "price": 45000
+    "units": 1
    },
    {
     "label": "Cromado",
-    "units": 1,
-    "price": 50000
+    "units": 1
    }
   ],
   "slug": "tenedor-ontrail-nemesis",
+  "order": 1940,
   "img": "assets/img/escena-logo.jpg"
  },
  {
@@ -190,7 +189,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TMN-CLN-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785355981350",
+   "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785515824254",
    "assets/img/products/timon-colony-rick-4-piezas-2.jpg?v=1785355854430",
    "assets/img/products/timon-colony-rick-4-piezas-3.jpg?v=1785355856091"
   ],
@@ -203,7 +202,7 @@ window.ESCENA_PRODUCTS = [
   "slug": "timon-colony-rick-4-piezas",
   "order": 40,
   "imgFit": "cover",
-  "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785355981350"
+  "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785515824254"
  },
  {
   "n": "Timon Fiend Reynolds",
@@ -231,13 +230,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Cromado",
-    "units": 2,
-    "price": 460000
+    "units": 2
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 420000
+    "units": 0
    }
   ],
   "slug": "timon-fiend-reynolds",
@@ -249,7 +246,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 0,
+  "order": 10,
   "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1785354854411"
  },
  {
@@ -4214,13 +4211,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Cromado",
-    "units": 2,
-    "price": 400000
+    "units": 2
    },
    {
     "label": "Negro",
-    "units": 2,
-    "price": 380000
+    "units": 2
    }
   ],
   "imgFit": "cover",
@@ -4232,7 +4227,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 10,
+  "order": 0,
   "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1785018826142"
  },
  {
