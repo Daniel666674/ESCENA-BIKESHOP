@@ -193,11 +193,11 @@
     .pmodal-photo .rm:hover { background: #c0392b; }
     .pmodal-photo .cover-badge { position: absolute; top: 2px; left: 2px; background: #fff; color: #0A0A0A; font-size: .52rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: .1rem .3rem; border-radius: 3px; z-index: 2; }
     .pmodal-photo .mv-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 22px; display: flex; }
-    .pmodal-photo .mv { flex: 1; background: rgba(0,0,0,.55); color: #fff; border: none; font-size: .78rem; cursor: pointer; line-height: 1; display: flex; align-items: center; justify-content: center; }
+    .pmodal-photo .mv { flex: 1; background: rgba(0,0,0,.55); color: #fff; border: none; font-size: .66rem; padding: 0; cursor: pointer; line-height: 1; display: flex; align-items: center; justify-content: center; }
     .pmodal-photo .mv:disabled { opacity: .3; cursor: not-allowed; }
     .pmodal-photo .mv-bar .mv:first-child { border-radius: 0 0 0 8px; }
     .pmodal-photo .mv-bar .mv:last-child { border-radius: 0 0 8px 0; }
-    .pmodal-photo .mv-rot { font-size: .9rem; }
+    .pmodal-photo .mv-rot, .pmodal-photo .mv-bg { font-size: .74rem; }
     .pmodal-photo-item { display: flex; flex-direction: column; gap: .3rem; width: 72px; }
     .pmodal-photo-color { width: 72px; font-size: .6rem; border: 1.5px solid var(--line); border-radius: 6px; padding: .2rem .15rem; font-family: inherit; color: var(--muted); background: #fff; }
     .pmodal-photo-color:focus { outline: none; border-color: var(--ink); }
@@ -1772,6 +1772,34 @@
     });
   }
 
+  /* ---- Background removal (local helper) ----
+     admin.html has no backend of its own — the AI model that does this well
+     (birefnet-general, ~1GB, 30-60s/photo on CPU) is too heavy to run in a
+     browser tab, so it runs as a small local server (tools/bg-server.py)
+     the admin starts on their own machine. Nothing calls it unless the
+     "Quitar fondo" button is clicked — normal photo upload is completely
+     unaffected whether or not the helper is running. */
+  var BG_HELPER_URL = "http://127.0.0.1:8642";
+  function checkBgHelper() {
+    return fetch(BG_HELPER_URL + "/health", { signal: AbortSignal.timeout(1000) })
+      .then(function (r) { return r.ok; })
+      .catch(function () { return false; });
+  }
+  function removeBgViaHelper(dataUri) {
+    return fetch(BG_HELPER_URL + "/remove-bg", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ image: dataUri }),
+      signal: AbortSignal.timeout(180000) // birefnet is slow — give it up to 3 min
+    }).then(function (r) {
+      if (!r.ok) return r.text().then(function (t) { throw new Error(t || ("HTTP " + r.status)); });
+      return r.json();
+    }).then(function (j) {
+      if (!j || !j.image) throw new Error("respuesta inválida del ayudante");
+      return j.image;
+    });
+  }
+
   /* ---- Product-page generation ---- */
   function copFmt(n) { return "$" + Math.round(n || 0).toLocaleString("es-CO"); }
   function jsonEsc(s) { return JSON.stringify(String(s == null ? "" : s)).slice(1, -1); }
@@ -2264,6 +2292,7 @@
         '<div class="mv-bar">' +
         '<button type="button" class="mv mv-l" data-i="' + i + '" data-dir="-1"' + (i === 0 ? ' disabled' : '') + ' aria-label="Mover a la izquierda">&#8249;</button>' +
         '<button type="button" class="mv mv-rot" data-i="' + i + '" data-deg="90" aria-label="Rotar 90°">&#8635;</button>' +
+        '<button type="button" class="mv mv-bg" data-i="' + i + '" title="Quitar fondo (requiere el ayudante local — ver tools/README.md)" aria-label="Quitar fondo">&#9986;</button>' +
         '<button type="button" class="mv mv-r" data-i="' + i + '" data-dir="1"' + (i === n - 1 ? ' disabled' : '') + ' aria-label="Mover a la derecha">&#8250;</button>' +
         '</div>' +
         '</div>' + picker +
@@ -2674,6 +2703,27 @@
         }).catch(function () {
           showToast("No se pudo rotar esta foto.");
           rot.disabled = false;
+        });
+        return;
+      }
+      var bg = e.target.closest(".mv-bg");
+      if (bg) {
+        var bgI = parseInt(bg.getAttribute("data-i"), 10);
+        bg.disabled = true;
+        checkBgHelper().then(function (up) {
+          if (!up) {
+            showToast("Ayudante de fondo no encontrado — iniciá tools/bg-server.py en tu computador (ver tools/README.md)");
+            bg.disabled = false;
+            return;
+          }
+          bg.textContent = "…";
+          return removeBgViaHelper(modalPhotos[bgI]).then(function (out) {
+            modalPhotos[bgI] = out;
+            renderModalPhotos();
+          }).catch(function (e2) {
+            showToast("No se pudo quitar el fondo: " + (e2 && e2.message || "error desconocido"));
+            bg.disabled = false;
+          });
         });
         return;
       }

@@ -100,23 +100,26 @@ def trim_and_pad(rgba_img, canvas_size, pad_frac):
     return canvas
 
 
-def process_one(path: Path, out_path: Path, session, args):
-    from PIL import Image
-    from rembg import remove
+def remove_background_to_white(img, session, feather=2.0, canvas=1200, pad=0.08, matting=False):
+    """Core pipeline, shared by the CLI (process_one, below) and bg-server.py
+    (the local-helper HTTP server admin.html's photo upload can call) — both
+    must produce identical results, so this is the one place the actual
+    processing logic lives.
 
-    img = Image.open(path).convert("RGB")
+    img: a PIL RGB Image. Returns a PIL RGB Image (white background)."""
+    from rembg import remove
 
     cutout = remove(
         img,
         session=session,
-        alpha_matting=args.matting,
+        alpha_matting=matting,
         alpha_matting_foreground_threshold=240,
         alpha_matting_background_threshold=10,
         alpha_matting_erode_size=8,
         post_process_mask=True,
     )  # returns RGBA
 
-    if args.feather > 0:
+    if feather > 0:
         # Two-step edge cleanup: sharpen the mask's confidence first, then
         # blur lightly for anti-aliasing — blurring alone was carrying the
         # model's soft, low-confidence boundary straight into the output,
@@ -133,11 +136,18 @@ def process_one(path: Path, out_path: Path, session, args):
         a_arr = np.asarray(a, dtype=np.float32) / 255.0
         a_sharp = 1.0 / (1.0 + np.exp(-12.0 * (a_arr - 0.5)))
         a = Image.fromarray((a_sharp * 255).astype("uint8"))
-        a = a.filter(ImageFilter.GaussianBlur(radius=min(args.feather, 1.2)))
+        a = a.filter(ImageFilter.GaussianBlur(radius=min(feather, 1.2)))
         cutout = Image.merge("RGBA", (r, g, b, a))
 
-    framed = trim_and_pad(cutout, args.canvas, args.pad)
-    flat = composite_on_white(framed)
+    framed = trim_and_pad(cutout, canvas, pad)
+    return composite_on_white(framed)
+
+
+def process_one(path: Path, out_path: Path, session, args):
+    from PIL import Image
+
+    img = Image.open(path).convert("RGB")
+    flat = remove_background_to_white(img, session, args.feather, args.canvas, args.pad, args.matting)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     if args.format == "png":
