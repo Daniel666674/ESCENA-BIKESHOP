@@ -385,10 +385,10 @@ header.top-bar .brand .name { color: #fff; }
 
 <div class="pdp">
   <div>
-    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/buje-cassette-negro-cromado.jpg&quot;]" data-fit="auto">
+    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/buje-cassette-negro-cromado.jpg?v=1785493814976&quot;]" data-fit="auto">
       <div class="pdp-image-blur" id="pdpBlur"></div>
       <span class="tag">RHD</span>
-      <img id="pdpMainImg" src="../assets/img/products/buje-cassette-negro-cromado.jpg" alt="Freecoaster Odyssey Clutch V2 Derecho - Odyssey BMX" width="700" height="700" />
+      <img id="pdpMainImg" src="../assets/img/products/buje-cassette-negro-cromado.jpg?v=1785493814976" alt="Freecoaster Odyssey Clutch V2 Derecho - Odyssey BMX" width="700" height="700" />
       <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Ampliar imagen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
       <div class="pdp-dots" id="pdpDots"></div>
     </div>
@@ -748,6 +748,9 @@ header.top-bar .brand .name { color: #fff; }
   var stockHint = document.getElementById("pdpStockHint");
   var pdpActions = document.getElementById("pdpActions");
   var addCartBtn = pdpActions ? pdpActions.querySelector(".add-cart-btn") : null;
+  // The product's own base price, baked in at publish time — the fallback
+  // whenever a selected color has no price override of its own.
+  var basePrice = addCartBtn ? (parseFloat(addCartBtn.getAttribute("data-price")) || 0) : 0;
   var unitsAvail = parseInt((stockHint && stockHint.getAttribute("data-units")) || "12", 10);
   if (isNaN(unitsAvail)) unitsAvail = 12;
   var waLink = document.getElementById("pdpWaLink");
@@ -889,6 +892,23 @@ header.top-bar .brand .name { color: #fff; }
         });
         selected[group.id] = val;
         if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
+        // Color-specific price override: prefer the live catalog's price (an
+        // admin edit must show up immediately), fall back to what was baked
+        // into this button at publish time, and fall back again to the
+        // product's base price if this color has no override of its own.
+        if (group.id === "pdpVariantColor" && addCartBtn) {
+          var colorPrice = null;
+          if (liveList) {
+            var liveColor = liveList.filter(function (c) { return c.label === val; })[0];
+            if (liveColor && liveColor.price > 0) colorPrice = liveColor.price;
+          }
+          if (colorPrice === null) {
+            var cBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+            var baked = cBtn ? parseFloat(cBtn.getAttribute("data-price")) : NaN;
+            if (baked > 0) colorPrice = baked;
+          }
+          addCartBtn.setAttribute("data-price", colorPrice !== null ? colorPrice : basePrice);
+        }
         if (isRealSize) {
           var units = null;
           if (liveList) {
