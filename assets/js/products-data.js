@@ -8,12 +8,12 @@ window.ESCENA_PRODUCTS = [
   "sku": "TEN-FIC-001",
   "units": 2,
   "imgs": [
-   "assets/img/products/tenedor-fiction-shank.jpg?v=1785365624394",
-   "assets/img/products/tenedor-fiction-shank-2.jpg?v=1785365489005"
+   "assets/img/products/tenedor-fiction-shank.jpg?v=1785501829417",
+   "assets/img/products/tenedor-fiction-shank-2.jpg?v=1785501830749"
   ],
   "colors": [
    {
-    "label": "Negro",
+    "label": "NegroNegro",
     "units": 1
    },
    {
@@ -21,17 +21,9 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "imgColorMap": {
-   "Negro": [
-    0
-   ],
-   "Cromado": [
-    1
-   ]
-  },
   "slug": "tenedor-fiction-shank",
   "order": 420,
-  "img": "assets/img/products/tenedor-fiction-shank.jpg?v=1785365624394"
+  "img": "assets/img/products/tenedor-fiction-shank.jpg?v=1785501829417"
  },
  {
   "n": "Bicicleta Profit Oxnard - Negro/Rojo",
