@@ -1120,5 +1120,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-31T23:41:08.668Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "tenedor-colony-sweet-thoot"
+  ],
+  "deleted": []
  }
 ];
