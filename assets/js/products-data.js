@@ -2277,12 +2277,8 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Descuento 💸",
   "imgs": [
-   "assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954",
-   "assets/img/products/cana-volume-bison-frontload-2.jpg?v=1784069578394",
-   "assets/img/products/cana-volume-bison-frontload-3.jpg?v=1784069579944",
-   "assets/img/products/cana-volume-bison-frontload-4.jpg?v=1784069581279",
-   "assets/img/products/cana-volume-bison-frontload-5.jpg?v=1784069582905",
-   "assets/img/products/cana-volume-bison-frontload-6.jpg?v=1784069584354"
+   "assets/img/products/cana-volume-bison-frontload.jpg?v=1785516828215",
+   "assets/img/products/cana-volume-bison-frontload-2.jpg?v=1785516829649"
   ],
   "sizes": [
    {
@@ -2291,7 +2287,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 650,
-  "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954"
+  "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1785516828215"
  },
  {
   "slug": "plato-fitbikeco",
