@@ -1,5 +1,23 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tenedor colony sweet thoot",
+  "brand": "Colony",
+  "cat": "horquillas",
+  "spec": "Material Cromolio - La Sweet Tooth Alex Hiam- El tornillo superior tiene una rosca M24",
+  "price": 680000,
+  "sku": "TEN-CLN-001",
+  "units": 1,
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1,
+    "price": 680000
+   }
+  ],
+  "slug": "tenedor-colony-sweet-thoot",
+  "img": "assets/img/products/tenedor-colony-sweet-thoot.jpg?v=1785531604469"
+ },
+ {
   "n": "Tall Order Ramp",
   "brand": "Tallorder",
   "cat": "horquillas",
