@@ -14,13 +14,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
-    "price": 410000
+    "units": 1
    },
    {
     "label": "Cromado",
-    "units": 1,
-    "price": 430000
+    "units": 1
    }
   ],
   "imgColorMap": {
@@ -32,6 +30,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "tenedor-fiction-shank",
+  "order": 420,
   "img": "assets/img/products/tenedor-fiction-shank.jpg?v=1785365624394"
  },
  {
@@ -49,6 +48,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profit-oxnard-negro-rojo-4.jpg?v=1785360532487"
   ],
   "slug": "bicicleta-profit-oxnard-negro-rojo",
+  "order": 340,
   "img": "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1785360528859"
  },
  {
@@ -67,6 +67,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-3.jpg?v=1785359038136"
   ],
   "slug": "bicicleta-profit-culver-bmx-gris-oscuro",
+  "order": 260,
   "img": "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-4.jpg?v=1785359039599"
  },
  {
@@ -85,6 +86,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-5.jpg?v=1785358676737"
   ],
   "slug": "bicicleta-profir-culver-bmx-gris-oscuro",
+  "order": 250,
   "img": "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1785358670530"
  },
  {
@@ -248,6 +250,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-gw-destructor-morado",
+  "order": 1090,
   "img": "assets/img/products/marco-gw-destructor-morado.jpg?v=1785260741191"
  },
  {
@@ -272,6 +275,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-profit-culver-gris-cromolio",
+  "order": 460,
   "img": "assets/img/products/marco-profit-culver-gris-cromolio.jpg?v=1785260584825"
  },
  {
@@ -295,6 +299,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-wethepeople-message-verde",
+  "order": 130,
   "img": "assets/img/products/marco-wethepeople-message-verde.jpg?v=1785260255097"
  },
  {
@@ -325,6 +330,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-colony-prisma-negro",
+  "order": 170,
   "img": "assets/img/products/marco-colony-prisma-negro.jpg?v=1785259625448"
  },
  {
@@ -454,6 +460,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "guantes-gw-largos-full-reflective",
+  "order": 1500,
   "img": "assets/img/products/guantes-gw-largos-full-reflective.jpg?v=1784943299577"
  },
  {
@@ -488,6 +495,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "guantes-mutanty-venom-negro",
+  "order": 1570,
   "img": "assets/img/products/guantes-mutanty-venom-negro.jpg?v=1784937538059"
  },
  {
@@ -522,6 +530,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "guantes-mutanty-venom-vinotinto",
+  "order": 1580,
   "img": "assets/img/products/guantes-mutanty-venom-vinotinto.jpg?v=1784937496292"
  },
  {
@@ -556,6 +565,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "guantes-mutanty-venom-verde-militar",
+  "order": 1590,
   "img": "assets/img/products/guantes-mutanty-venom-verde-militar.jpg?v=1784936973178"
  },
  {
@@ -590,6 +600,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "guantes-mutanty-venom-collage",
+  "order": 1600,
   "img": "assets/img/products/guantes-mutanty-venom-collage.jpg?v=1784936713291"
  },
  {
@@ -624,6 +635,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "guantes-mutanty-venom-zoom",
+  "order": 1610,
   "img": "assets/img/products/guantes-mutanty-venom-zoom.jpg?v=1784935422969"
  },
  {
@@ -659,6 +671,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-gw-wasp-full-face",
+  "order": 680,
   "img": "assets/img/products/casco-gw-wasp-full-face.jpg?v=1784934676099"
  },
  {
@@ -696,6 +709,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-classic-negro-mate",
+  "order": 810,
   "img": "assets/img/products/casco-protec-classic-negro-mate.jpg?v=1784934336234"
  },
  {
@@ -733,6 +747,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-classic-gris",
+  "order": 820,
   "img": "assets/img/products/casco-protec-classic-gris.jpg?v=1784934343914"
  },
  {
@@ -770,6 +785,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-classic-blanco",
+  "order": 830,
   "img": "assets/img/products/casco-protec-classic-blanco.jpg?v=1784933989266"
  },
  {
@@ -807,6 +823,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-classic-negro-brillante",
+  "order": 840,
   "img": "assets/img/products/casco-protec-classic-negro-brillante.jpg?v=1784932401755"
  },
  {
@@ -836,6 +853,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-old-school-negro",
+  "order": 610,
   "img": "assets/img/products/casco-protec-old-school-negro.jpg?v=1784931883710"
  },
  {
@@ -865,6 +883,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-old-school-blanco",
+  "order": 620,
   "img": "assets/img/products/casco-protec-old-school-blanco.jpg?v=1784931891390"
  },
  {
@@ -894,6 +913,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-old-school-gris",
+  "order": 630,
   "img": "assets/img/products/casco-protec-old-school-gris.jpg?v=1784931652903"
  },
  {
@@ -931,6 +951,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-full-cut-blanco",
+  "order": 490,
   "img": "assets/img/products/casco-protec-full-cut-blanco.jpg?v=1784931235622"
  },
  {
@@ -967,6 +988,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-full-cut-negro",
+  "order": 500,
   "img": "assets/img/products/casco-protec-full-cut-negro.jpg?v=1784929825682"
  },
  {
@@ -994,6 +1016,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-dawn-negro",
+  "order": 470,
   "img": "assets/img/products/casco-tsg-dawn-negro.jpg?v=1784924219625"
  },
  {
@@ -1021,6 +1044,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-negro-mate",
+  "order": 510,
   "img": "assets/img/products/casco-tsg-evolution-negro-mate.jpg?v=1784923786485"
  },
  {
@@ -1048,6 +1072,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-negro",
+  "order": 520,
   "img": "assets/img/products/casco-tsg-evolution-negro.jpg?v=1784922527718"
  },
  {
@@ -1073,6 +1098,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-rojo",
+  "order": 530,
   "img": "assets/img/products/casco-tsg-evolution-rojo.jpg?v=1784922714649"
  },
  {
@@ -1100,6 +1126,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-verde",
+  "order": 540,
   "img": "assets/img/products/casco-tsg-evolution-verde.jpg?v=1784921480587"
  },
  {
@@ -1127,6 +1154,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-morado",
+  "order": 550,
   "img": "assets/img/products/casco-tsg-evolution-morado.jpg?v=1784921085414"
  },
  {
@@ -1145,6 +1173,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tobillera-de-impacto-r2",
+  "order": 1790,
   "img": "assets/img/products/tobillera-de-impacto-r2.jpg?v=1784762054756"
  },
  {
@@ -1179,6 +1208,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "canilleras-community-terrain-x",
+  "order": 1030,
   "img": "assets/img/products/canilleras-community-terrain-x.jpg?v=1784762096922"
  },
  {
@@ -1216,6 +1246,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "rodillera-community-propark",
+  "order": 780,
   "img": "assets/img/products/rodillera-community-propark.jpg?v=1784761392303"
  },
  {
@@ -1249,6 +1280,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "rodilleras-community-venom-pro",
+  "order": 760,
   "img": "assets/img/products/rodilleras-community-venom-pro.jpg?v=1784760800948"
  },
  {
@@ -1274,6 +1306,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
+  "order": 1350,
   "img": "assets/img/products/tobilleras-estabilizadoras-valkiria.jpg?v=1784591894911"
  },
  {
@@ -1299,6 +1332,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
+  "order": 1330,
   "img": "assets/img/products/rodilleras-valkiria.jpg?v=1784590273713"
  },
  {
@@ -1328,6 +1362,7 @@ window.ESCENA_PRODUCTS = [
     "units": 10
    }
   ],
+  "order": 1190,
   "img": "assets/img/products/rodicanitobilleras-r2.jpg?v=1784588819283"
  },
  {
@@ -1339,7 +1374,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "CNL-R2P-001",
   "units": 20,
   "slug": "canitobilleras-r2",
-  "img": "assets/img/products/canitobilleras-r2.jpg?v=1784585889473",
   "sizes": [
    {
     "label": "M",
@@ -1349,7 +1383,9 @@ window.ESCENA_PRODUCTS = [
     "label": "L",
     "units": 10
    }
-  ]
+  ],
+  "order": 1510,
+  "img": "assets/img/products/canitobilleras-r2.jpg?v=1784585889473"
  },
  {
   "n": "Caña Cult Mind Control Negra - Top load",
@@ -1366,6 +1402,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-cult-mind-control-negra-top-load",
+  "order": 690,
   "img": "assets/img/products/cana-cult-mind-control-negra-top-load.jpg?v=1784332727642"
  },
  {
@@ -1387,6 +1424,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-cult-mind-control-rasta-front-load",
+  "order": 570,
   "img": "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1784332431720"
  },
  {
@@ -1398,6 +1436,7 @@ window.ESCENA_PRODUCTS = [
   "price": 1300000,
   "sku": "sahsadhjfhjas",
   "units": 2,
+  "order": 220,
   "img": "assets/img/products/cassette-profle-mini-derecho.jpg?v=1784164462529"
  },
  {
@@ -1423,6 +1462,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 1100,
   "img": "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069"
  },
  {
@@ -1449,6 +1489,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgFit": "cover",
+  "order": 180,
   "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009"
  },
  {
@@ -1476,6 +1517,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 190,
   "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784324778016"
  },
  {
@@ -1521,6 +1563,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "order": 1530,
   "img": "assets/img/products/coraza-innova-tire-20-x-2-40.jpg?v=1784157072000"
  },
  {
@@ -1547,6 +1590,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgFit": "cover",
+  "order": 640,
   "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784330800302"
  },
  {
@@ -1564,6 +1608,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1784153748363",
    "assets/img/products/pedales-wellgo-negro-3.jpg?v=1784153750038"
   ],
+  "order": 1710,
   "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1784153746515"
  },
  {
@@ -1606,6 +1651,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
+  "order": 1520,
   "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785364188649"
  },
  {
@@ -1654,6 +1700,7 @@ window.ESCENA_PRODUCTS = [
     5
    ]
   },
+  "order": 1800,
   "img": "assets/img/products/grips-dailygrind.jpg?v=1784153759831"
  },
  {
@@ -1678,6 +1725,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 790,
   "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1784153770220"
  },
  {
@@ -1695,6 +1743,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 850,
   "img": "assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784326217980"
  },
  {
@@ -1725,6 +1774,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "order": 1110,
   "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1784139733693"
  },
  {
@@ -1759,6 +1809,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "order": 1810,
   "img": "assets/img/products/grips-fiend-flangeless.jpg?v=1784139481764"
  },
  {
@@ -1793,6 +1844,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "order": 1820,
   "img": "assets/img/products/grips-fiend-palmere.jpg?v=1784139484875"
  },
  {
@@ -1802,13 +1854,14 @@ window.ESCENA_PRODUCTS = [
   "cat": "punos",
   "spec": "Goma · 168mm · 32mm · acanalado multidireccional",
   "price": 50000,
-  "sku": "GRIPS",
+  "sku": "GRP-FED-001",
   "units": 2,
   "tag": "Top!",
   "imgs": [
    "assets/img/products/grips-federal-command-negro.jpg?v=1784139488275",
    "assets/img/products/grips-federal-command-negro-2.jpg?v=1784139489794"
   ],
+  "order": 1830,
   "img": "assets/img/products/grips-federal-command-negro.jpg?v=1784139488275"
  },
  {
@@ -1818,7 +1871,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "pinones",
   "spec": "Guardia • Negro • 28T",
   "price": 230000,
-  "sku": "PLT",
+  "sku": "PLT-FAT-001",
   "units": 1,
   "tag": "Top!",
   "imgs": [
@@ -1831,6 +1884,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 910,
   "img": "assets/img/products/plato-fate-guardia-negro-28t.jpg?v=1784139491454"
  },
  {
@@ -1840,7 +1894,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "pedales",
   "spec": "Negro",
   "price": 65000,
-  "sku": "PDL",
+  "sku": "PED-FAT-001",
   "units": 2,
   "tag": "Nuevo 🔥!",
   "imgs": [
@@ -1848,6 +1902,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-fate-negro-2.jpg?v=1784139497268",
    "assets/img/products/pedales-fate-negro-3.jpg?v=1784139498920"
   ],
+  "order": 1670,
   "img": "assets/img/products/pedales-fate-negro.jpg?v=1784139495189"
  },
  {
@@ -1857,7 +1912,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "sillines",
   "spec": "Pivotal · Lona Zebra · Base reforzada · Relleno grueso",
   "price": 205000,
-  "sku": "SLA",
+  "sku": "SIL-FND-001",
   "units": 1,
   "tag": "Edición Especial 🔥!",
   "imgs": [
@@ -1866,6 +1921,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-3.jpg?v=1784138420747",
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-4.jpg?v=1784138422794"
   ],
+  "order": 1010,
   "img": "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1784138416524"
  },
  {
@@ -1908,6 +1964,7 @@ window.ESCENA_PRODUCTS = [
     5
    ]
   },
+  "order": 1840,
   "img": "assets/img/products/grips-s-m-mike-hoder-3.jpg?v=1784138431279"
  },
  {
@@ -1917,7 +1974,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "sillines",
   "spec": "Pivotal • Negro",
   "price": 160000,
-  "sku": "SLA",
+  "sku": "SIL-FIT-001",
   "units": 1,
   "tag": "Nuevo 🔥!",
   "imgs": [
@@ -1925,6 +1982,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fitbikeco-negra-2.jpg?v=1784138441275",
    "assets/img/products/silla-pivotal-fitbikeco-negra-3.jpg?v=1784138443126"
   ],
+  "order": 1200,
   "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1784138439638"
  },
  {
@@ -1947,6 +2005,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 720,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1784327000115"
  },
  {
@@ -1956,7 +2015,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "sillines",
   "spec": "Pivotal",
   "price": 130000,
-  "sku": "SLA",
+  "sku": "SIL-FAT-001",
   "units": 2,
   "tag": "Nuevo 🔥!",
   "imgs": [
@@ -1964,6 +2023,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fate-negra-2.jpg?v=1784138454479",
    "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1784138456279"
   ],
+  "order": 1280,
   "img": "assets/img/products/silla-pivotal-fate-negra.jpg?v=1784138452598"
  },
  {
@@ -1973,7 +2033,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "sillines",
   "spec": "Pivotal · Cuero sintético · Base reforzada",
   "price": 205000,
-  "sku": "SLA",
+  "sku": "SIL-FND-002",
   "units": 1,
   "tag": "Top 🔥!",
   "imgs": [
@@ -1981,6 +2041,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fiend-reynolds-negra-2.jpg?v=1784138459718",
    "assets/img/products/silla-pivotal-fiend-reynolds-negra-3.jpg?v=1784138461542"
   ],
+  "order": 1020,
   "img": "assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1784138458192"
  },
  {
@@ -2004,6 +2065,7 @@ window.ESCENA_PRODUCTS = [
     "units": 3
    }
   ],
+  "order": 1040,
   "img": "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1784138463438"
  },
  {
@@ -2013,7 +2075,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "pinones",
   "spec": "28T · Aluminio 7075-T6 · 5 Radios · Negro",
   "price": 240000,
-  "sku": "PLT",
+  "sku": "PLT-ODY-001",
   "units": 1,
   "tag": "Top 🔥",
   "imgs": [
@@ -2033,6 +2095,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 890,
   "img": "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1784138469320"
  },
  {
@@ -2094,6 +2157,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "imgFit": "cover",
+  "order": 700,
   "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1784330514456"
  },
  {
@@ -2154,6 +2218,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
+  "order": 1050,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805"
  },
  {
@@ -2179,6 +2244,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 710,
   "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1784071875410"
  },
  {
@@ -2188,7 +2254,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "stems",
   "spec": "Carga frontal · Alcance 50mm · Aluminio CNC",
   "price": 330000,
-  "sku": "STEAM",
+  "sku": "CAN-VOL-001",
   "units": 1,
   "tag": "Descuento 💸",
   "imgs": [
@@ -2205,6 +2271,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 650,
   "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1784069576954"
  },
  {
@@ -2214,13 +2281,14 @@ window.ESCENA_PRODUCTS = [
   "cat": "piezas",
   "spec": "Negro Guardia 28T",
   "price": 340000,
-  "sku": "PLT",
+  "sku": "PZA-FIT-001",
   "units": 1,
   "tag": "Top",
   "imgs": [
    "assets/img/products/plato-fitbikeco.jpg?v=1784069585656",
    "assets/img/products/plato-fitbikeco-2.jpg?v=1784069586958"
   ],
+  "order": 580,
   "img": "assets/img/products/plato-fitbikeco.jpg?v=1784069585656"
  },
  {
@@ -2251,6 +2319,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgFit": "cover",
+  "order": 350,
   "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784324392434"
  },
  {
@@ -2260,13 +2329,14 @@ window.ESCENA_PRODUCTS = [
   "cat": "pedales",
   "spec": "Plataforma nylon · 12 pines · Morado",
   "price": 95000,
-  "sku": "PDL",
+  "sku": "PED-ODY-001",
   "units": 2,
   "tag": "Caliente 🔥",
   "imgs": [
    "assets/img/products/pedales-odyssey.jpg?v=1784059906159",
    "assets/img/products/pedales-odyssey-2.jpg?v=1784059908763"
   ],
+  "order": 1460,
   "img": "assets/img/products/pedales-odyssey.jpg?v=1784059906159"
  },
  {
@@ -2275,7 +2345,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "pedales",
   "spec": "Azul con blanco , Rojo con blanco , Gris con Blanco, Negro, Morado con blanco, Morado con Amarillo.",
   "price": 95000,
-  "sku": "PDL",
+  "sku": "PED-DMO-001",
   "units": 14,
   "tag": "Top 🔥",
   "imgs": [
@@ -2356,6 +2426,7 @@ window.ESCENA_PRODUCTS = [
     13
    ]
   },
+  "order": 1470,
   "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908"
  },
  {
@@ -2364,7 +2435,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "pedales",
   "spec": "Verde, Azul, AguaMarina, Rojo, Amarillo Florecente.",
   "price": 75000,
-  "sku": "PDL",
+  "sku": "PED-STL-001",
   "units": 5,
   "tag": "Colorido 🌈",
   "imgs": [
@@ -2415,6 +2486,7 @@ window.ESCENA_PRODUCTS = [
     4
    ]
   },
+  "order": 1620,
   "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983"
  },
  {
@@ -2442,6 +2514,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgFit": "cover",
+  "order": 590,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1784332338568"
  },
  {
@@ -2455,9 +2528,9 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Top 🔥",
   "imgs": [
+   "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583",
    "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105",
-   "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1784053122690",
-   "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583"
+   "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1784053122690"
   ],
   "sizes": [
    {
@@ -2465,7 +2538,8 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105"
+  "order": 860,
+  "img": "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583"
  },
  {
   "slug": "marco-cult-biggie-hammertone",
@@ -2493,6 +2567,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 140,
   "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784313915335"
  },
  {
@@ -2511,6 +2586,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "order": 560,
   "img": "assets/img/products/cana-s-m-enduro-40mm-negra.jpg"
  },
  {
@@ -2522,6 +2598,7 @@ window.ESCENA_PRODUCTS = [
   "price": 830000,
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 1,
+  "order": 300,
   "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1784327051012"
  },
  {
@@ -2544,6 +2621,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1784333441121",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1784333443470"
   ],
+  "order": 940,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1784333440051"
  },
  {
@@ -2556,6 +2634,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "FIEND-FIENDING-SILLA-NEGRO",
   "units": 1,
   "tag": "Nacional",
+  "order": 1070,
   "img": "assets/img/products/fiend-fiending-stem-negro.jpg"
  },
  {
@@ -2582,6 +2661,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
+  "order": 390,
   "img": "assets/img/products/mutany-savage-bielas-negro.jpg"
  },
  {
@@ -2600,6 +2680,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 290,
   "img": "assets/img/products/fiend-bielas-negro.jpg"
  },
  {
@@ -2618,6 +2699,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 310,
   "img": "assets/img/products/cult-bielas-negro.jpg"
  },
  {
@@ -2630,6 +2712,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "ECLAT-TRIPPIN-RIN-NEGRO",
   "units": 12,
   "tag": "Top 🔥",
+  "order": 900,
   "img": "assets/img/products/eclat-trippin-rin-negro.jpg"
  },
  {
@@ -2642,6 +2725,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CULT-SILLIN-CUADROS",
   "units": 12,
   "tag": "Edición Especial",
+  "order": 1150,
   "img": "assets/img/products/cult-sillin-cuadros.jpg"
  },
  {
@@ -2657,6 +2741,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785364403226",
    "assets/img/products/horquilla-cromoly-negra-01.jpg"
   ],
+  "order": 430,
   "img": "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785364403226"
  },
  {
@@ -2690,6 +2775,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "order": 330,
   "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1785363973599"
  },
  {
@@ -2702,6 +2788,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "STOLEN-BUJE-TRASERO-CASSETTE-NEGRO",
   "units": 1,
   "tag": "RHD",
+  "order": 380,
   "img": "assets/img/products/stolen-buje-trasero-cassette-negro.jpg"
  },
  {
@@ -2714,6 +2801,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "FREECOASTER ODYSSEY-NEGRO-CROMADO",
   "units": 2,
   "tag": "RHD",
+  "order": 320,
   "img": "assets/img/products/buje-cassette-negro-cromado.jpg"
  },
  {
@@ -2726,6 +2814,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "BUJE-CASSETTE-NEGRO-PLATA",
   "units": 1,
   "tag": "LHD",
+  "order": 360,
   "img": "assets/img/products/buje-cassette-negro-plata.jpg"
  },
  {
@@ -2741,6 +2830,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/odyssey-buje-cassette-negro.jpg",
    "assets/img/products/odyssey-buje-cassette-negro-2.jpg?v=1784026964585"
   ],
+  "order": 370,
   "img": "assets/img/products/odyssey-buje-cassette-negro.jpg"
  },
  {
@@ -2753,6 +2843,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "MUTANY-MERCURY-ELITE-LHD-BUJE-NEGRO",
   "units": 5,
   "tag": "RHD-LHD",
+  "order": 400,
   "img": "assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg"
  },
  {
@@ -2762,9 +2853,10 @@ window.ESCENA_PRODUCTS = [
   "cat": "manzana-trasera",
   "spec": "Cassette · 9T · Negro",
   "price": 550000,
-  "sku": "MUTANY-MERCURY-ELITE-LHD-BUJE-NEGRO",
+  "sku": "MZT-MUT-001",
   "units": 5,
   "tag": "RHD+LHD",
+  "order": 410,
   "img": "assets/img/products/buje-cassette-negro-plata-02.jpg"
  },
  {
@@ -2777,6 +2869,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "BUJE-CASSETTE-NEGRO",
   "units": 5,
   "tag": "RHD-LHD",
+  "order": 450,
   "img": "assets/img/products/buje-cassette-negro.jpg"
  },
  {
@@ -2789,6 +2882,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "BUJE-DELANTERO-NEGRO",
   "units": 3,
   "tag": "TOP",
+  "order": 730,
   "img": "assets/img/products/buje-delantero-negro.jpg"
  },
  {
@@ -2800,6 +2894,7 @@ window.ESCENA_PRODUCTS = [
   "price": 270000,
   "sku": "SHADOW-BUJE-DELANTERO-NEGRO",
   "units": 1,
+  "order": 800,
   "img": "assets/img/products/shadow-buje-delantero-negro.jpg"
  },
  {
@@ -2811,6 +2906,7 @@ window.ESCENA_PRODUCTS = [
   "price": 330000,
   "sku": "BUJE-DELANTERO-CROMADO",
   "units": 2,
+  "order": 660,
   "img": "assets/img/products/buje-delantero-cromado.jpg"
  },
  {
@@ -2828,6 +2924,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 230,
   "img": "assets/img/products/kit-eje-espaciadores-plata.jpg"
  },
  {
@@ -2846,6 +2943,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "order": 280,
   "img": "assets/img/products/colony-bielas-negro.jpg"
  },
  {
@@ -2871,6 +2969,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
+  "order": 240,
   "img": "assets/img/products/kit-hardware-bielas-plata.jpg"
  },
  {
@@ -2896,6 +2995,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
+  "order": 270,
   "img": "assets/img/products/kit-hardware-bielas-negro.jpg"
  },
  {
@@ -2918,6 +3018,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bsd-stem-negro-2.jpg?v=1784333168562",
    "assets/img/products/bsd-stem-negro-3.jpg?v=1784333169928"
   ],
+  "order": 740,
   "img": "assets/img/products/bsd-stem-negro.jpg?v=1784333167289"
  },
  {
@@ -2939,6 +3040,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/stem-plata-pulido.jpg?v=1784333444499",
    "assets/img/products/stem-plata-pulido-2.jpg?v=1784333445681"
   ],
+  "order": 670,
   "img": "assets/img/products/stem-plata-pulido.jpg?v=1784333444499"
  },
  {
@@ -2956,6 +3058,7 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
+  "order": 870,
   "img": "assets/img/products/escena-stem-grabado-plata.jpg"
  },
  {
@@ -2973,6 +3076,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
+  "order": 980,
   "img": "assets/img/products/federal-stem-plata.jpg"
  },
  {
@@ -2990,6 +3094,7 @@ window.ESCENA_PRODUCTS = [
     "units": 12
    }
   ],
+  "order": 990,
   "img": "assets/img/products/federal-stem-negro.jpg"
  },
  {
@@ -3001,6 +3106,7 @@ window.ESCENA_PRODUCTS = [
   "price": 175000,
   "sku": "FIEND-MILLS-SILLIN-BLANCO",
   "units": 12,
+  "order": 1160,
   "img": "assets/img/products/fiend-mills-sillin-blanco.jpg"
  },
  {
@@ -3012,6 +3118,7 @@ window.ESCENA_PRODUCTS = [
   "price": 175000,
   "sku": "FIEND-MILLS-SILLIN-NEGRO",
   "units": 12,
+  "order": 1170,
   "img": "assets/img/products/fiend-mills-sillin-negro.jpg"
  },
  {
@@ -3023,6 +3130,7 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "CULT-SILLIN-NEGRO",
   "units": 12,
+  "order": 1120,
   "img": "assets/img/products/cult-sillin-negro.jpg"
  },
  {
@@ -3035,6 +3143,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "ODYSSEY-SILLIN-FLORAL",
   "units": 12,
   "tag": "Edición",
+  "order": 1080,
   "img": "assets/img/products/odyssey-sillin-floral.jpg"
  },
  {
@@ -3046,6 +3155,7 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "ANIMAL-SILLIN-CAMUFLADO",
   "units": 12,
+  "order": 1130,
   "img": "assets/img/products/animal-sillin-camuflado.jpg"
  },
  {
@@ -3057,6 +3167,7 @@ window.ESCENA_PRODUCTS = [
   "price": 175000,
   "sku": "FIT-SILLIN-DIAMANTE-NEGRO",
   "units": 12,
+  "order": 1180,
   "img": "assets/img/products/fit-sillin-diamante-negro.jpg"
  },
  {
@@ -3068,6 +3179,7 @@ window.ESCENA_PRODUCTS = [
   "price": 178000,
   "sku": "STOLEN-SILLIN-NEGRO",
   "units": 12,
+  "order": 1140,
   "img": "assets/img/products/stolen-sillin-negro.jpg"
  },
  {
@@ -3079,6 +3191,7 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "PEDALES-PLATAFORMA-NEGRO-01",
   "units": 12,
+  "order": 1480,
   "img": "assets/img/products/pedales-plataforma-negro-01.jpg"
  },
  {
@@ -3090,6 +3203,7 @@ window.ESCENA_PRODUCTS = [
   "price": 100000,
   "sku": "DEMOLITION-PEDALES-ROSA",
   "units": 12,
+  "order": 1450,
   "img": "assets/img/products/demolition-pedales-rosa.jpg"
  },
  {
@@ -3101,6 +3215,7 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "PEDALES-METAL-NEGRO-01",
   "units": 12,
+  "order": 1290,
   "img": "assets/img/products/pedales-metal-negro-01.jpg"
  },
  {
@@ -3112,6 +3227,7 @@ window.ESCENA_PRODUCTS = [
   "price": 135000,
   "sku": "PEDALES-METAL-NEGRO-02",
   "units": 12,
+  "order": 1260,
   "img": "assets/img/products/pedales-metal-negro-02.jpg"
  },
  {
@@ -3123,6 +3239,7 @@ window.ESCENA_PRODUCTS = [
   "price": 135000,
   "sku": "PEDALES-METAL-NEGRO-03",
   "units": 12,
+  "order": 1270,
   "img": "assets/img/products/pedales-metal-negro-03.jpg"
  },
  {
@@ -3135,6 +3252,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "DEMOLITION-PEDALES-SPLASH-BLANCO",
   "units": 12,
   "tag": "Edición",
+  "order": 1430,
   "img": "assets/img/products/demolition-pedales-splash-blanco.jpg"
  },
  {
@@ -3147,6 +3265,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "DEMOLITION-PEDALES-SPLASH-ROJO",
   "units": 12,
   "tag": "Edición",
+  "order": 1440,
   "img": "assets/img/products/demolition-pedales-splash-rojo.jpg"
  },
  {
@@ -3165,6 +3284,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "order": 1240,
   "img": "assets/img/products/pinon-snowflake-plata.jpg"
  },
  {
@@ -3183,6 +3303,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
+  "order": 920,
   "img": "assets/img/products/cult-pinon-negro.jpg"
  },
  {
@@ -3200,6 +3321,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 600,
   "img": "assets/img/products/odyssey-pinon-28t-negro.jpg"
  },
  {
@@ -3217,6 +3339,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "order": 770,
   "img": "assets/img/products/fiend-pinon-25t-negro.jpg"
  },
  {
@@ -3234,6 +3357,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "order": 1060,
   "img": "assets/img/products/federal-pinon-gris.jpg"
  },
  {
@@ -3245,6 +3369,7 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "BSD-GUARDA-PINON-NEGRO",
   "units": 6,
+  "order": 1640,
   "img": "assets/img/products/bsd-guarda-pinon-negro.jpg"
  },
  {
@@ -3256,6 +3381,7 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "MUTANY-GUARDA-PINON-NEGRO",
   "units": 2,
+  "order": 1490,
   "img": "assets/img/products/mutany-guarda-pinon-negro.jpg"
  },
  {
@@ -3267,6 +3393,7 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "CAJA-PEDALIER-NEGRA-01",
   "units": 4,
+  "order": 1360,
   "img": "assets/img/products/caja-pedalier-negra-01.jpg"
  },
  {
@@ -3278,7 +3405,6 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "DIRECCION-NEGRA-BSD",
   "units": 2,
-  "img": "assets/img/products/direccion-negra-set.jpg",
   "colors": [
    {
     "label": "Negro",
@@ -3288,7 +3414,9 @@ window.ESCENA_PRODUCTS = [
     "label": "Cromado",
     "units": 1
    }
-  ]
+  ],
+  "order": 1300,
+  "img": "assets/img/products/direccion-negra-set.jpg"
  },
  {
   "slug": "demolition-caja-pedalier-negra",
@@ -3299,6 +3427,7 @@ window.ESCENA_PRODUCTS = [
   "price": 125000,
   "sku": "DEMOLITION-CAJA-PEDALIER-NEGRA",
   "units": 3,
+  "order": 1340,
   "img": "assets/img/products/demolition-caja-pedalier-negra.jpg"
  },
  {
@@ -3311,6 +3440,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CULT-KIT-RODAMIENTOS-BB",
   "units": 4,
   "tag": "19mm-22mm",
+  "order": 1370,
   "img": "assets/img/products/cult-kit-rodamientos-bb.jpg"
  },
  {
@@ -3323,6 +3453,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "ODYSSEY-KIT-RODAMIENTOS-BB",
   "units": 3,
   "tag": "22mm",
+  "order": 1380,
   "img": "assets/img/products/odyssey-kit-rodamientos-bb.jpg"
  },
  {
@@ -3334,6 +3465,7 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "ANIMAL-KIT-RODAMIENTOS-BB",
   "units": 4,
+  "order": 1310,
   "img": "assets/img/products/animal-kit-rodamientos-bb.jpg"
  },
  {
@@ -3345,6 +3477,7 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "KIT-RODAMIENTOS-BB-GENERICO",
   "units": 2,
+  "order": 1850,
   "img": "assets/img/products/kit-rodamientos-bb-generico.jpg"
  },
  {
@@ -3356,6 +3489,7 @@ window.ESCENA_PRODUCTS = [
   "price": 140000,
   "sku": "ODYSSEY-CAJAS-NEGRO-",
   "units": 2,
+  "order": 1250,
   "img": "assets/img/products/odyssey-clavijas-negro-par.jpg"
  },
  {
@@ -3367,6 +3501,7 @@ window.ESCENA_PRODUCTS = [
   "price": 150000,
   "sku": "CLAVIJAS-NEGRO-PAR",
   "units": 12,
+  "order": 1220,
   "img": "assets/img/products/clavijas-negro-par.jpg"
  },
  {
@@ -3378,6 +3513,7 @@ window.ESCENA_PRODUCTS = [
   "price": 80000,
   "sku": "CULT-CLAVIJA-NEGRO",
   "units": 12,
+  "order": 1540,
   "img": "assets/img/products/cult-clavija-negro.jpg"
  },
  {
@@ -3389,6 +3525,7 @@ window.ESCENA_PRODUCTS = [
   "price": 78000,
   "sku": "CLAVIJA-NEGRO",
   "units": 12,
+  "order": 1560,
   "img": "assets/img/products/clavija-negro.jpg"
  },
  {
@@ -3400,6 +3537,7 @@ window.ESCENA_PRODUCTS = [
   "price": 80000,
   "sku": "FEDERAL-CLAVIJA-NEGRO",
   "units": 12,
+  "order": 1550,
   "img": "assets/img/products/federal-clavija-negro.jpg"
  },
  {
@@ -3411,6 +3549,7 @@ window.ESCENA_PRODUCTS = [
   "price": 22000,
   "sku": "FUNDA-PEGS-FATE",
   "units": 10,
+  "order": 1910,
   "img": "assets/img/products/cult-punos-negro.jpg"
  },
  {
@@ -3422,6 +3561,7 @@ window.ESCENA_PRODUCTS = [
   "price": 55000,
   "sku": "CULT-PUNOS-RASTA",
   "units": 12,
+  "order": 1750,
   "img": "assets/img/products/cult-punos-rasta.jpg"
  },
  {
@@ -3433,6 +3573,7 @@ window.ESCENA_PRODUCTS = [
   "price": 55000,
   "sku": "ODYSSEY-PUNOS-NEGRO-GRIS",
   "units": 12,
+  "order": 1760,
   "img": "assets/img/products/odyssey-punos-negro-gris.jpg"
  },
  {
@@ -3444,6 +3585,7 @@ window.ESCENA_PRODUCTS = [
   "price": 55000,
   "sku": "FEDERAL-PUNOS-GRIS",
   "units": 12,
+  "order": 1770,
   "img": "assets/img/products/federal-punos-gris.jpg"
  },
  {
@@ -3455,6 +3597,7 @@ window.ESCENA_PRODUCTS = [
   "price": 55000,
   "sku": "FIEND-PUNOS-NEGRO",
   "units": 12,
+  "order": 1780,
   "img": "assets/img/products/fiend-punos-negro.jpg"
  },
  {
@@ -3467,6 +3610,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "FIEND-PUNOS-ROJO-BLANCO",
   "units": 12,
   "tag": "Edición",
+  "order": 1730,
   "img": "assets/img/products/fiend-punos-rojo-blanco.jpg"
  },
  {
@@ -3478,6 +3622,7 @@ window.ESCENA_PRODUCTS = [
   "price": 56000,
   "sku": "DEMOLITION-PUNOS-ROJO-NEGRO",
   "units": 12,
+  "order": 1740,
   "img": "assets/img/products/demolition-punos-rojo-negro.jpg"
  },
  {
@@ -3490,6 +3635,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CULT-VANS-PUNOS-MORADO",
   "units": 12,
   "tag": "Colab",
+  "order": 1690,
   "img": "assets/img/products/cult-vans-punos-morado.jpg"
  },
  {
@@ -3501,6 +3647,7 @@ window.ESCENA_PRODUCTS = [
   "price": 65000,
   "sku": "TORNILLOS-TITANIO-ARCOIRIS-01",
   "units": 12,
+  "order": 1680,
   "img": "assets/img/products/tornillos-titanio-arcoiris-01.jpg"
  },
  {
@@ -3512,6 +3659,7 @@ window.ESCENA_PRODUCTS = [
   "price": 60000,
   "sku": "TORNILLOS-TITANIO-PLATA",
   "units": 12,
+  "order": 1720,
   "img": "assets/img/products/tornillos-titanio-plata.jpg"
  },
  {
@@ -3523,6 +3671,7 @@ window.ESCENA_PRODUCTS = [
   "price": 40000,
   "sku": "TORNILLOS-TITANIO-SILLIN-ARCOIRIS",
   "units": 12,
+  "order": 1870,
   "img": "assets/img/products/tornillos-titanio-sillin-arcoiris.jpg"
  },
  {
@@ -3534,6 +3683,7 @@ window.ESCENA_PRODUCTS = [
   "price": 62000,
   "sku": "TORNILLOS-TITANIO-MORADO",
   "units": 12,
+  "order": 1700,
   "img": "assets/img/products/tornillos-titanio-morado.jpg"
  },
  {
@@ -3545,6 +3695,7 @@ window.ESCENA_PRODUCTS = [
   "price": 25000,
   "sku": "MUTANY-TORNILLOS-NEGRO",
   "units": 12,
+  "order": 1890,
   "img": "assets/img/products/mutany-tornillos-negro.jpg"
  },
  {
@@ -3556,6 +3707,7 @@ window.ESCENA_PRODUCTS = [
   "price": 25000,
   "sku": "FEDERAL-TORNILLOS-NEGRO",
   "units": 12,
+  "order": 1900,
   "img": "assets/img/products/federal-tornillos-negro.jpg"
  },
  {
@@ -3568,6 +3720,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TIJA-NEGRA-01",
   "units": 12,
   "tag": "Nacional",
+  "order": 1860,
   "img": "assets/img/products/tija-negra-01.jpg"
  },
  {
@@ -3580,6 +3733,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TIJA-NEGRA-02",
   "units": 3,
   "tag": "Top 🔥",
+  "order": 1210,
   "img": "assets/img/products/tija-negra-02.jpg"
  },
  {
@@ -3592,6 +3746,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TIJA-NEGRA-CURVA",
   "units": 12,
   "tag": "Top 🔥",
+  "order": 1230,
   "img": "assets/img/products/tija-negra-curva.jpg"
  },
  {
@@ -3604,6 +3759,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "BRAINSTORM-FREECOASTER-KIT-01",
   "units": 12,
   "tag": "Top",
+  "order": 950,
   "img": "assets/img/products/brainstorm-freecoaster-kit-01.jpg"
  },
  {
@@ -3615,6 +3771,7 @@ window.ESCENA_PRODUCTS = [
   "price": 220000,
   "sku": "BRAINSTORM-FREECOASTER-KIT-02",
   "units": 12,
+  "order": 960,
   "img": "assets/img/products/brainstorm-freecoaster-kit-02.jpg"
  },
  {
@@ -3626,6 +3783,7 @@ window.ESCENA_PRODUCTS = [
   "price": 220000,
   "sku": "BRAINSTORM-FREECOASTER-KIT-03",
   "units": 12,
+  "order": 970,
   "img": "assets/img/products/brainstorm-freecoaster-kit-03.jpg"
  },
  {
@@ -3637,6 +3795,7 @@ window.ESCENA_PRODUCTS = [
   "price": 230000,
   "sku": "BRAINSTORM-FREECOASTER-KIT-04",
   "units": 12,
+  "order": 930,
   "img": "assets/img/products/brainstorm-freecoaster-kit-04.jpg"
  },
  {
@@ -3648,6 +3807,7 @@ window.ESCENA_PRODUCTS = [
   "price": 30000,
   "sku": "ESLABONES-CADENA-SUELTOS",
   "units": 12,
+  "order": 1880,
   "img": "assets/img/products/eslabones-cadena-sueltos.jpg"
  },
  {
@@ -3659,6 +3819,7 @@ window.ESCENA_PRODUCTS = [
   "price": 15000,
   "sku": "KIT-DESPINCHE",
   "units": 12,
+  "order": 1930,
   "img": "assets/img/products/odyssey-cadena-caja.jpg"
  },
  {
@@ -3670,6 +3831,7 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "MUTANY-EJE-PEDALIER-P25",
   "units": 12,
+  "order": 1650,
   "img": "assets/img/products/mutany-eje-pedalier-p25.jpg"
  },
  {
@@ -3681,6 +3843,7 @@ window.ESCENA_PRODUCTS = [
   "price": 20000,
   "sku": "IRON-FIST-AMARRES-CABLE",
   "units": 12,
+  "order": 1920,
   "img": "assets/img/products/iron-fist-amarres-cable.jpg"
  },
  {
@@ -3692,6 +3855,7 @@ window.ESCENA_PRODUCTS = [
   "price": 110000,
   "sku": "CULT-MULTIHERRAMIENTA-01",
   "units": 12,
+  "order": 1400,
   "img": "assets/img/products/cult-multiherramienta-01.jpg"
  },
  {
@@ -3703,6 +3867,7 @@ window.ESCENA_PRODUCTS = [
   "price": 110000,
   "sku": "CULT-MULTIHERRAMIENTA-02",
   "units": 12,
+  "order": 1410,
   "img": "assets/img/products/cult-multiherramienta-02.jpg"
  },
  {
@@ -3714,6 +3879,7 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "LLAVE-Y-ROJA",
   "units": 12,
+  "order": 1660,
   "img": "assets/img/products/llave-y-roja.jpg"
  },
  {
@@ -3738,6 +3904,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 150,
   "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784313922616"
  },
  {
@@ -3765,6 +3932,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/fate-namaste-negro-2.jpg?v=1784324780160",
    "assets/img/products/fate-namaste-negro-3.jpg?v=1784324781239"
   ],
+  "order": 210,
   "img": "assets/img/products/fate-namaste-negro.jpg?v=1784324778974"
  },
  {
@@ -3782,6 +3950,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "order": 200,
   "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784325939777"
  },
  {
@@ -3828,6 +3997,7 @@ window.ESCENA_PRODUCTS = [
     4
    ]
   },
+  "order": 480,
   "img": "assets/img/products/tukanbikes-industrial-raw.jpg?v=1784326219051"
  },
  {
@@ -3845,6 +4015,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "order": 120,
   "img": "assets/img/products/wethepeople-doomsayer-negro.jpg?v=1784154923513"
  },
  {
@@ -3869,6 +4040,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 160,
   "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784315099008"
  },
  {
@@ -3893,6 +4065,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
+  "order": 110,
   "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315798448"
  },
  {
@@ -3904,6 +4077,7 @@ window.ESCENA_PRODUCTS = [
   "price": 300000,
   "sku": "ARO_DEMOLITION_ZERO_PLUS_NEGRO",
   "units": 12,
+  "order": 750,
   "img": "assets/img/products/aro_demolition_zero_plus_negro.jpeg"
  },
  {
@@ -3915,6 +4089,7 @@ window.ESCENA_PRODUCTS = [
   "price": 390000,
   "sku": "AROS_ECLAT_BONDI_CROMADOS",
   "units": 12,
+  "order": 440,
   "img": "assets/img/products/aros_eclat_bondi_cromados.jpeg"
  },
  {
@@ -3927,6 +4102,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "AROS_FATE_NEGRO",
   "units": 12,
   "tag": "Nacional",
+  "order": 1000,
   "img": "assets/img/products/aros_fate_negro.jpeg"
  },
  {
@@ -3938,6 +4114,7 @@ window.ESCENA_PRODUCTS = [
   "price": 245000,
   "sku": "AROS_STOLEN_CHAMBER_CROMADOS",
   "units": 12,
+  "order": 880,
   "img": "assets/img/products/aros_stolen_chamber_cromados.jpeg"
  },
  {
@@ -3949,6 +4126,7 @@ window.ESCENA_PRODUCTS = [
   "price": 110000,
   "sku": "CORAZA_CULT_WAFFLECUP_2.40",
   "units": 12,
+  "order": 1420,
   "img": "assets/img/products/coraza_cult_wafflecup_2.40.jpeg"
  },
  {
@@ -3960,6 +4138,7 @@ window.ESCENA_PRODUCTS = [
   "price": 75000,
   "sku": "CORAZA_INNOVA_PRO_2.40",
   "units": 12,
+  "order": 1630,
   "img": "assets/img/products/coraza_innova_pro_2.40.jpeg"
  },
  {
@@ -3971,6 +4150,7 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "CORAZA_ODYSSEY_SUPERCIRCUIT_2.40",
   "units": 12,
+  "order": 1390,
   "img": "assets/img/products/coraza_odyssey_supercircuit_2.40.jpeg"
  },
  {
@@ -3982,6 +4162,7 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "CORAZA_PRIMO_555_2.45",
   "units": 12,
+  "order": 1320,
   "img": "assets/img/products/coraza_primo_555_2.45.jpeg"
  },
  {
