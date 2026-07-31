@@ -951,5 +951,15 @@ window.ESCENA_AUDIT = [
    "buje-cassette-negro-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-31T12:43:53.715Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "tenedor-fiction-shank"
+  ],
+  "deleted": []
  }
 ];
