@@ -961,5 +961,15 @@ window.ESCENA_AUDIT = [
    "tenedor-fiction-shank"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-31T12:45:19.424Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "tenedor-fiction-shank"
+  ],
+  "deleted": []
  }
 ];
