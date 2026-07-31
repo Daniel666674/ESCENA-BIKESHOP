@@ -73,6 +73,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "imgFit": "cover",
   "img": "assets/img/products/tenedor-fiction-shank.jpg?v=1785502335887"
  },
  {
