@@ -51,6 +51,7 @@ jobs:
             **/*.md
             assets/js/sales-log.js
             assets/js/audit-log.js
+            tools/**
 
       - name: Verify the live site is actually serving our files
         # A green FTP upload does NOT prove the site is live: the first deploy
