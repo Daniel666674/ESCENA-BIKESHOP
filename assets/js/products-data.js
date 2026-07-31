@@ -189,9 +189,9 @@ window.ESCENA_PRODUCTS = [
   "sku": "TMN-CLN-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785515824254",
-   "assets/img/products/timon-colony-rick-4-piezas-2.jpg?v=1785355854430",
-   "assets/img/products/timon-colony-rick-4-piezas-3.jpg?v=1785355856091"
+   "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785516708127",
+   "assets/img/products/timon-colony-rick-4-piezas-3.jpg?v=1785355856091",
+   "assets/img/products/timon-colony-rick-4-piezas-2.jpg?v=1785355854430"
   ],
   "sizes": [
    {
@@ -201,8 +201,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "timon-colony-rick-4-piezas",
   "order": 40,
-  "imgFit": "cover",
-  "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785515824254"
+  "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1785516708127"
  },
  {
   "n": "Timon Fiend Reynolds",
