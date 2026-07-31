@@ -7,7 +7,7 @@ Usage:
 Examples:
   python3 tools/remove-bg.py assets/img/products/mi-producto.jpg
   python3 tools/remove-bg.py assets/img/products -o assets/img/products-white
-  python3 tools/remove-bg.py assets/img/products -o out --canvas 1200 --matting
+  python3 tools/remove-bg.py assets/img/products -o out --canvas 1200 --feather 1.5
 
 See tools/README.md for the full option list and install instructions.
 """
@@ -28,13 +28,17 @@ def build_arg_parser():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("input", help="Image file or directory of images")
     p.add_argument("-o", "--output", help="Output directory (default: <input>_white next to the source)")
-    p.add_argument("--model", default="isnet-general-use",
-                    help="rembg model (default: isnet-general-use — best general edge quality). "
-                         "Other options: u2net, u2netp, isnet-anime, silueta")
-    p.add_argument("--matting", action="store_true", default=True,
-                    help="Use alpha matting for cleaner edges (default: on)")
-    p.add_argument("--no-matting", dest="matting", action="store_false",
-                    help="Disable alpha matting (faster, slightly rougher edges)")
+    p.add_argument("--model", default="birefnet-general",
+                    help="rembg model (default: birefnet-general — highest edge quality, including hard "
+                         "cases like a torn/textured label blending into the pavement background; ~1GB "
+                         "download, slow on CPU (~30-60s/photo)). Faster fallback: isnet-general-use")
+    p.add_argument("--matting", action="store_true", default=False,
+                    help="Use alpha matting (off by default — on this model it produced blocky, jagged "
+                         "edges, worse than the plain mask; --feather already gives smooth edges without it)")
+    p.add_argument("--no-matting", dest="matting", action="store_false", help=argparse.SUPPRESS)
+    p.add_argument("--feather", type=float, default=2.0,
+                    help="Gaussian blur radius (px) applied to the alpha channel for smooth, anti-aliased "
+                         "edges (default: 2.0). 0 = off (hard/jagged edges)")
     p.add_argument("--canvas", type=int, default=1200,
                     help="Final square canvas size in px (default: 1200). 0 = keep original cutout size, no padding/centering")
     p.add_argument("--pad", type=float, default=0.08,
@@ -111,6 +115,16 @@ def process_one(path: Path, out_path: Path, session, args):
         alpha_matting_erode_size=8,
         post_process_mask=True,
     )  # returns RGBA
+
+    if args.feather > 0:
+        # Smooths the mask's edge into a real anti-aliased gradient instead of
+        # the blocky/stair-stepped boundary the raw model mask has close up —
+        # a uniform blur on a mostly-binary alpha channel only visibly affects
+        # the boundary pixels, so this doesn't touch solid interior/exterior.
+        from PIL import Image, ImageFilter
+        r, g, b, a = cutout.split()
+        a = a.filter(ImageFilter.GaussianBlur(radius=args.feather))
+        cutout = Image.merge("RGBA", (r, g, b, a))
 
     framed = trim_and_pad(cutout, args.canvas, args.pad)
     flat = composite_on_white(framed)
