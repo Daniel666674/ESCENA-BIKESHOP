@@ -10,12 +10,12 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
-    "price": 680000
+    "units": 1
    }
   ],
   "slug": "tenedor-colony-sweet-thoot",
-  "img": "assets/img/products/tenedor-colony-sweet-thoot.jpg?v=1785531604469"
+  "imgFit": "cover",
+  "img": "assets/img/products/tenedor-colony-sweet-thoot.jpg?v=1785541248389"
  },
  {
   "n": "Tall Order Ramp",
