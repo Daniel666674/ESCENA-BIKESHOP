@@ -735,5 +735,19 @@ window.ESCENA_AUDIT = [
    "tenedor-fiction-shank"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-31T03:18:29.361Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados, 1 producto eliminado",
+  "created": [],
+  "edited": [
+   "tenedor-gw-destructor-tornasol",
+   "federal-horquilla-cromada",
+   "tenedor-cult-sect-v4-cromado-18mm"
+  ],
+  "deleted": [
+   "wethepeople-horquilla-cromada"
+  ]
  }
 ];
