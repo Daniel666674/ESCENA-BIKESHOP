@@ -1066,5 +1066,19 @@ window.ESCENA_AUDIT = [
    "tall-order-ramp"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-31T20:40:55.907Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "tenedor-fiction-shank",
+   "federal-horquilla-cromada",
+   "tenedor-gw-destructor-tornasol",
+   "tall-order-ramp",
+   "tenedor-cult-sect-v4-cromado-18mm"
+  ],
+  "deleted": []
  }
 ];
