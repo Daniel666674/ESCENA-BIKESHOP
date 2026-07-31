@@ -117,13 +117,23 @@ def process_one(path: Path, out_path: Path, session, args):
     )  # returns RGBA
 
     if args.feather > 0:
-        # Smooths the mask's edge into a real anti-aliased gradient instead of
-        # the blocky/stair-stepped boundary the raw model mask has close up —
-        # a uniform blur on a mostly-binary alpha channel only visibly affects
-        # the boundary pixels, so this doesn't touch solid interior/exterior.
+        # Two-step edge cleanup: sharpen the mask's confidence first, then
+        # blur lightly for anti-aliasing — blurring alone was carrying the
+        # model's soft, low-confidence boundary straight into the output,
+        # which is barely visible on a large solid part but shows up as a
+        # visible warm-grey halo around small/thin ones (a washer, a
+        # retaining clip) where that soft boundary is a big fraction of the
+        # object's own size. The sigmoid pushes mid-confidence alpha toward
+        # solid 0/255 (a crisp boundary) before the blur only softens that
+        # crisp edge into anti-aliasing, instead of smoothing over genuine
+        # uncertainty.
+        import numpy as np
         from PIL import Image, ImageFilter
         r, g, b, a = cutout.split()
-        a = a.filter(ImageFilter.GaussianBlur(radius=args.feather))
+        a_arr = np.asarray(a, dtype=np.float32) / 255.0
+        a_sharp = 1.0 / (1.0 + np.exp(-12.0 * (a_arr - 0.5)))
+        a = Image.fromarray((a_sharp * 255).astype("uint8"))
+        a = a.filter(ImageFilter.GaussianBlur(radius=min(args.feather, 1.2)))
         cutout = Image.merge("RGBA", (r, g, b, a))
 
     framed = trim_and_pad(cutout, args.canvas, args.pad)
