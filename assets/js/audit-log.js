@@ -1034,5 +1034,15 @@ window.ESCENA_AUDIT = [
    "timon-colony-rick-4-piezas"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-07-31T16:53:52.578Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "cana-volume-bison-frontload"
+  ],
+  "deleted": []
  }
 ];
