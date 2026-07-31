@@ -1575,22 +1575,18 @@ window.ESCENA_PRODUCTS = [
   "price": 86000,
   "sku": "TND",
   "units": 7,
-  "tag": "Nuevo!",
   "colors": [
    {
     "label": "Tornasol",
-    "units": 4,
-    "price": 86000
+    "units": 4
    },
    {
     "label": "Negro",
-    "units": 2,
-    "price": 55000
+    "units": 2
    },
    {
     "label": "Cromado",
-    "units": 1,
-    "price": 55000
+    "units": 1
    }
   ],
   "imgFit": "cover",
@@ -2526,7 +2522,6 @@ window.ESCENA_PRODUCTS = [
   "price": 830000,
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 1,
-  "tag": "Nuev",
   "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1784327051012"
  },
  {
@@ -2650,17 +2645,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cult-sillin-cuadros.jpg"
  },
  {
-  "slug": "wethepeople-horquilla-cromada",
-  "n": "Tenedor Wethepeople Cromado",
-  "brand": "Wethepeople",
-  "cat": "horquillas",
-  "spec": "Cromoly · Tubo recto · Cromado",
-  "price": 800000,
-  "sku": "WETHEPEOPLE-HORQUILLA-CROMADA",
-  "units": 12,
-  "img": "assets/img/products/wethepeople-horquilla-cromada.jpg?v=1784327052116"
- },
- {
   "slug": "horquilla-cromoly-negra-01",
   "n": "Tenedor Rant Twin Peaks",
   "brand": "Rant",
@@ -2684,7 +2668,6 @@ window.ESCENA_PRODUCTS = [
   "price": 730000,
   "sku": "FEDERAL-HORQUILLA-CROMADA",
   "units": 2,
-  "tag": "Top",
   "imgs": [
    "assets/img/products/federal-horquilla-cromada.jpg?v=1785363973599",
    "assets/img/products/federal-horquilla-cromada-2.jpg?v=1784327055487"
@@ -2692,13 +2675,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
-    "price": 690000
+    "units": 1
    },
    {
     "label": "Cromado",
-    "units": 1,
-    "price": 730000
+    "units": 1
    }
   ],
   "imgColorMap": {
