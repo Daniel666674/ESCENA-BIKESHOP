@@ -387,7 +387,7 @@ header.top-bar .brand .name { color: #fff; }
   <div>
     <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1784327051012&quot;]" data-fit="auto">
       <div class="pdp-image-blur" id="pdpBlur"></div>
-      <span class="tag">Nuev</span>
+      
       <img id="pdpMainImg" src="../assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1784327051012" alt="Tenedor Cult Sect V4 Cromado 18MM - Cult BMX" width="700" height="700" />
       <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Ampliar imagen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
       <div class="pdp-dots" id="pdpDots"></div>
@@ -430,36 +430,36 @@ header.top-bar .brand .name { color: #fff; }
 <div class="related">
   <h2>También te puede gustar</h2>
   <div class="related-grid">
-    <a class="r-card" href="tenedor-gw-destructor-tornasol">
-        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Nuevo!</span><img src="../assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1784327049926" alt="Tenedor GW Destructor Tornasol - GW BMX" loading="lazy" width="300" height="300" /></div>
+    <a class="r-card" href="tenedor-fiction-shank">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/tenedor-fiction-shank.jpg?v=1785365624394" alt="Tenedor Fiction Shank - Fiction BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Fiction</span>
+          <h3>Tenedor Fiction Shank</h3>
+          <div class="price">$430.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="tenedor-gw-destructor-tornasol">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785364188649" alt="Tenedor GW Destructor - GW BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">GW</span>
-          <h3>Tenedor GW Destructor Tornasol</h3>
+          <h3>Tenedor GW Destructor</h3>
           <div class="price">$86.000 COP</div>
         </div>
       </a>
-<a class="r-card" href="wethepeople-horquilla-cromada">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/wethepeople-horquilla-cromada.jpg?v=1784327052116" alt="Tenedor Wethepeople Cromado - Wethepeople BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Wethepeople</span>
-          <h3>Tenedor Wethepeople Cromado</h3>
-          <div class="price">$800.000 COP</div>
-        </div>
-      </a>
 <a class="r-card" href="horquilla-cromoly-negra-01">
-        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Top</span><img src="../assets/img/products/horquilla-cromoly-negra-01.jpg?v=1784327053231" alt="Tenedor Rant Twin Peaks - Rant BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785364403226" alt="Tenedor Rant Twin Peaks - Rant BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Rant</span>
           <h3>Tenedor Rant Twin Peaks</h3>
-          <div class="price">$400.000 COP</div>
+          <div class="price">$410.000 COP</div>
         </div>
       </a>
 <a class="r-card" href="federal-horquilla-cromada">
-        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Top</span><img src="../assets/img/products/federal-horquilla-cromada.jpg?v=1784327054447" alt="Tenedor Federal Assault – Cromado - Federal BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/federal-horquilla-cromada.jpg?v=1785363973599" alt="Tenedor Federal Assault - Federal BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Federal</span>
-          <h3>Tenedor Federal Assault – Cromado</h3>
-          <div class="price">$690.000 COP</div>
+          <h3>Tenedor Federal Assault</h3>
+          <div class="price">$730.000 COP</div>
         </div>
       </a>
   </div>
@@ -743,6 +743,9 @@ header.top-bar .brand .name { color: #fff; }
   var stockHint = document.getElementById("pdpStockHint");
   var pdpActions = document.getElementById("pdpActions");
   var addCartBtn = pdpActions ? pdpActions.querySelector(".add-cart-btn") : null;
+  // The product's own base price, baked in at publish time — the fallback
+  // whenever a selected color has no price override of its own.
+  var basePrice = addCartBtn ? (parseFloat(addCartBtn.getAttribute("data-price")) || 0) : 0;
   var unitsAvail = parseInt((stockHint && stockHint.getAttribute("data-units")) || "12", 10);
   if (isNaN(unitsAvail)) unitsAvail = 12;
   var waLink = document.getElementById("pdpWaLink");
@@ -884,6 +887,23 @@ header.top-bar .brand .name { color: #fff; }
         });
         selected[group.id] = val;
         if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
+        // Color-specific price override: prefer the live catalog's price (an
+        // admin edit must show up immediately), fall back to what was baked
+        // into this button at publish time, and fall back again to the
+        // product's base price if this color has no override of its own.
+        if (group.id === "pdpVariantColor" && addCartBtn) {
+          var colorPrice = null;
+          if (liveList) {
+            var liveColor = liveList.filter(function (c) { return c.label === val; })[0];
+            if (liveColor && liveColor.price > 0) colorPrice = liveColor.price;
+          }
+          if (colorPrice === null) {
+            var cBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+            var baked = cBtn ? parseFloat(cBtn.getAttribute("data-price")) : NaN;
+            if (baked > 0) colorPrice = baked;
+          }
+          addCartBtn.setAttribute("data-price", colorPrice !== null ? colorPrice : basePrice);
+        }
         if (isRealSize) {
           var units = null;
           if (liveList) {
