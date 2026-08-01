@@ -1130,5 +1130,15 @@ window.ESCENA_AUDIT = [
    "tenedor-colony-sweet-thoot"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-01T18:15:55.717Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "kit-eje-espaciadores-plata"
+  ],
+  "deleted": []
  }
 ];
