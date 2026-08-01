@@ -1180,5 +1180,15 @@ window.ESCENA_AUDIT = [
    "fiend-bielas-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-01T18:24:54.533Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "cult-bielas-negro"
+  ],
+  "deleted": []
  }
 ];
