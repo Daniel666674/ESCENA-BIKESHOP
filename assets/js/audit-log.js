@@ -1160,5 +1160,15 @@ window.ESCENA_AUDIT = [
    "kit-hardware-bielas-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-01T18:22:00.652Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "colony-bielas-negro"
+  ],
+  "deleted": []
  }
 ];
