@@ -32,7 +32,16 @@ self.addEventListener("fetch", function (e) {
   var url = e.request.url;
   if (e.request.method !== "GET") return;
   if (e.request.mode === "navigate") return; // admin.html itself: always network, never cached
-  if (url.indexOf("api.github.com") > -1) return; // never intercept the GitHub API
+  // Never intercept third-party requests — the GitHub API, and (since the
+  // "Quitar fondo" button) the CDNs the background-removal library loads
+  // its code/model/WASM from (cdn.jsdelivr.net, staticimgly.com). This SW's
+  // own cache is only ever meant for our own logo images (SHELL, above);
+  // grabbing large cross-origin responses here served no purpose and — for
+  // the CDN files specifically — could fail (e.g. a redirected/partial
+  // response the Cache API can't store) and fall back to an empty cache,
+  // which resolves to no Response at all: "FetchEvent.respondWith received
+  // an error: Returned response is null".
+  if (new URL(url).origin !== self.location.origin) return;
   if (url.indexOf(".js") > -1) return; // any script (products-data.js, sales-log.js, this app's own JS) — always live
   if (url.indexOf(".html") > -1) return; // belt-and-suspenders alongside the navigate check above
 
