@@ -385,14 +385,14 @@ header.top-bar .brand .name { color: #fff; }
 
 <div class="pdp">
   <div>
-    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/colony-bielas-negro.jpg&quot;]" data-fit="auto">
+    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/colony-bielas-negro.jpg?v=1785608515667&quot;,&quot;../assets/img/products/colony-bielas-negro-2.jpg?v=1785608517173&quot;,&quot;../assets/img/products/colony-bielas-negro-3.jpg?v=1785608518092&quot;]" data-fit="auto">
       <div class="pdp-image-blur" id="pdpBlur"></div>
       <span class="tag">Top</span>
-      <img id="pdpMainImg" src="../assets/img/products/colony-bielas-negro.jpg" alt="Bielas Colony Venator Negra - Colony BMX" width="700" height="700" />
+      <img id="pdpMainImg" src="../assets/img/products/colony-bielas-negro.jpg?v=1785608515667" alt="Bielas Colony Venator Negra - Colony BMX" width="700" height="700" />
       <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Ampliar imagen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
-      <div class="pdp-dots" id="pdpDots"></div>
+      <div class="pdp-dots" id="pdpDots"><button type="button" data-i="0" class="is-active" aria-label="Foto 1"></button><button type="button" data-i="1" aria-label="Foto 2"></button><button type="button" data-i="2" aria-label="Foto 3"></button></div>
     </div>
-    <div class="pdp-thumbs" id="pdpThumbs"></div>
+    <div class="pdp-thumbs" id="pdpThumbs"><button type="button" data-i="0" class="is-active" aria-label="Ver foto 1"><img src="../assets/img/products/colony-bielas-negro.jpg?v=1785608515667" alt="Bielas Colony Venator Negra foto 1" loading="lazy" /></button><button type="button" data-i="1" aria-label="Ver foto 2"><img src="../assets/img/products/colony-bielas-negro-2.jpg?v=1785608517173" alt="Bielas Colony Venator Negra foto 2" loading="lazy" /></button><button type="button" data-i="2" aria-label="Ver foto 3"><img src="../assets/img/products/colony-bielas-negro-3.jpg?v=1785608518092" alt="Bielas Colony Venator Negra foto 3" loading="lazy" /></button></div>
   </div>
   <div class="pdp-info">
     <span class="brand-lbl">Colony</span>
@@ -456,7 +456,7 @@ header.top-bar .brand .name { color: #fff; }
         </div>
       </a>
 <a class="r-card" href="kit-eje-espaciadores-plata">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/kit-eje-espaciadores-plata.jpg" alt="Bielas Fitbikeco Blunt Cromadas 165MM - Fitbikeco BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/kit-eje-espaciadores-plata.jpg?v=1785608153030" alt="Bielas Fitbikeco Blunt Cromadas 165MM - Fitbikeco BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Fitbikeco</span>
           <h3>Bielas Fitbikeco Blunt Cromadas 165MM</h3>
@@ -744,6 +744,9 @@ header.top-bar .brand .name { color: #fff; }
   var stockHint = document.getElementById("pdpStockHint");
   var pdpActions = document.getElementById("pdpActions");
   var addCartBtn = pdpActions ? pdpActions.querySelector(".add-cart-btn") : null;
+  // The product's own base price, baked in at publish time — the fallback
+  // whenever a selected color has no price override of its own.
+  var basePrice = addCartBtn ? (parseFloat(addCartBtn.getAttribute("data-price")) || 0) : 0;
   var unitsAvail = parseInt((stockHint && stockHint.getAttribute("data-units")) || "12", 10);
   if (isNaN(unitsAvail)) unitsAvail = 12;
   var waLink = document.getElementById("pdpWaLink");
@@ -885,6 +888,23 @@ header.top-bar .brand .name { color: #fff; }
         });
         selected[group.id] = val;
         if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
+        // Color-specific price override: prefer the live catalog's price (an
+        // admin edit must show up immediately), fall back to what was baked
+        // into this button at publish time, and fall back again to the
+        // product's base price if this color has no override of its own.
+        if (group.id === "pdpVariantColor" && addCartBtn) {
+          var colorPrice = null;
+          if (liveList) {
+            var liveColor = liveList.filter(function (c) { return c.label === val; })[0];
+            if (liveColor && liveColor.price > 0) colorPrice = liveColor.price;
+          }
+          if (colorPrice === null) {
+            var cBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+            var baked = cBtn ? parseFloat(cBtn.getAttribute("data-price")) : NaN;
+            if (baked > 0) colorPrice = baked;
+          }
+          addCartBtn.setAttribute("data-price", colorPrice !== null ? colorPrice : basePrice);
+        }
         if (isRealSize) {
           var units = null;
           if (liveList) {
