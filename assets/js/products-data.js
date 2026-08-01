@@ -2785,7 +2785,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 310,
-  "img": "assets/img/products/cult-bielas-negro.jpg"
+  "imgs": [
+   "assets/img/products/cult-bielas-negro.jpg?v=1785608691048",
+   "assets/img/products/cult-bielas-negro-2.jpg?v=1785608692072"
+  ],
+  "img": "assets/img/products/cult-bielas-negro.jpg?v=1785608691048"
  },
  {
   "slug": "eclat-trippin-rin-negro",
