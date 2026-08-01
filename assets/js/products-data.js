@@ -3054,7 +3054,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 240,
-  "img": "assets/img/products/kit-hardware-bielas-plata.jpg"
+  "imgs": [
+   "assets/img/products/kit-hardware-bielas-plata.jpg?v=1785608267823",
+   "assets/img/products/kit-hardware-bielas-plata-2.jpg?v=1785608269052"
+  ],
+  "img": "assets/img/products/kit-hardware-bielas-plata.jpg?v=1785608267823"
  },
  {
   "slug": "kit-hardware-bielas-negro",
