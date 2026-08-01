@@ -2743,7 +2743,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 390,
-  "img": "assets/img/products/mutany-savage-bielas-negro.jpg"
+  "imgs": [
+   "assets/img/products/mutany-savage-bielas-negro.jpg?v=1785608865643",
+   "assets/img/products/mutany-savage-bielas-negro-2.jpg?v=1785608868307"
+  ],
+  "img": "assets/img/products/mutany-savage-bielas-negro.jpg?v=1785608865643"
  },
  {
   "slug": "fiend-bielas-negro",
