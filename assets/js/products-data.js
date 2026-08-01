@@ -2762,7 +2762,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 290,
-  "img": "assets/img/products/fiend-bielas-negro.jpg"
+  "imgs": [
+   "assets/img/products/fiend-bielas-negro.jpg?v=1785608582606",
+   "assets/img/products/fiend-bielas-negro-2.jpg?v=1785608584038"
+  ],
+  "img": "assets/img/products/fiend-bielas-negro.jpg?v=1785608582606"
  },
  {
   "slug": "cult-bielas-negro",
