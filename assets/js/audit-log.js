@@ -1140,5 +1140,15 @@ window.ESCENA_AUDIT = [
    "kit-eje-espaciadores-plata"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-01T18:17:51.512Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "kit-hardware-bielas-plata"
+  ],
+  "deleted": []
  }
 ];
