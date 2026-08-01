@@ -3009,7 +3009,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 230,
-  "img": "assets/img/products/kit-eje-espaciadores-plata.jpg"
+  "img": "assets/img/products/kit-eje-espaciadores-plata.jpg?v=1785608153030"
  },
  {
   "slug": "colony-bielas-negro",
