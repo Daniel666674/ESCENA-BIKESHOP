@@ -2727,7 +2727,6 @@ window.ESCENA_PRODUCTS = [
   "price": 590000,
   "sku": "MUTANY-SAVAGE-BIELAS-NEGRO",
   "units": 2,
-  "tag": "Nacional",
   "sizes": [
    {
     "label": "170mm",
@@ -2744,10 +2743,10 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 390,
   "imgs": [
-   "assets/img/products/mutany-savage-bielas-negro.jpg?v=1785608865643",
-   "assets/img/products/mutany-savage-bielas-negro-2.jpg?v=1785608868307"
+   "assets/img/products/mutany-savage-bielas-negro.jpg?v=1785609361166",
+   "assets/img/products/mutany-savage-bielas-negro-2.jpg?v=1785609362290"
   ],
-  "img": "assets/img/products/mutany-savage-bielas-negro.jpg?v=1785608865643"
+  "img": "assets/img/products/mutany-savage-bielas-negro.jpg?v=1785609361166"
  },
  {
   "slug": "fiend-bielas-negro",
@@ -2781,7 +2780,6 @@ window.ESCENA_PRODUCTS = [
   "price": 790000,
   "sku": "CULT-BIELAS-NEGRO",
   "units": 1,
-  "tag": "Top 🔥",
   "sizes": [
    {
     "label": "165mm",
@@ -3033,7 +3031,6 @@ window.ESCENA_PRODUCTS = [
   "price": 880000,
   "sku": "COLONY-BIELAS-NEGRO",
   "units": 2,
-  "tag": "Top",
   "sizes": [
    {
     "label": "Única",
