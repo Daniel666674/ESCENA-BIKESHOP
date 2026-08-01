@@ -1200,5 +1200,15 @@ window.ESCENA_AUDIT = [
    "mutany-savage-bielas-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-01T18:33:19.779Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "cult-bielas-negro"
+  ],
+  "deleted": []
  }
 ];
