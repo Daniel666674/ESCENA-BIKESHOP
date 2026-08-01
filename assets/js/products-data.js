@@ -3028,7 +3028,12 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 280,
-  "img": "assets/img/products/colony-bielas-negro.jpg"
+  "imgs": [
+   "assets/img/products/colony-bielas-negro.jpg?v=1785608515667",
+   "assets/img/products/colony-bielas-negro-2.jpg?v=1785608517173",
+   "assets/img/products/colony-bielas-negro-3.jpg?v=1785608518092"
+  ],
+  "img": "assets/img/products/colony-bielas-negro.jpg?v=1785608515667"
  },
  {
   "slug": "kit-hardware-bielas-plata",
