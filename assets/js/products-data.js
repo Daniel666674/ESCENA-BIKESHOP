@@ -3084,7 +3084,12 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 270,
-  "img": "assets/img/products/kit-hardware-bielas-negro.jpg"
+  "imgs": [
+   "assets/img/products/kit-hardware-bielas-negro.jpg?v=1785608385789",
+   "assets/img/products/kit-hardware-bielas-negro-2.jpg?v=1785608386815",
+   "assets/img/products/kit-hardware-bielas-negro-3.jpg?v=1785608387836"
+  ],
+  "img": "assets/img/products/kit-hardware-bielas-negro.jpg?v=1785608385789"
  },
  {
   "slug": "bsd-stem-negro",
