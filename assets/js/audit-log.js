@@ -1150,5 +1150,15 @@ window.ESCENA_AUDIT = [
    "kit-hardware-bielas-plata"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-01T18:19:50.312Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "kit-hardware-bielas-negro"
+  ],
+  "deleted": []
  }
 ];
