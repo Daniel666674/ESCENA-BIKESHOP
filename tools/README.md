@@ -1,29 +1,35 @@
-# Background removal — remove-bg.py (batch) + bg-server.py (admin.html button)
+# Background removal — the admin.html button + remove-bg.py (batch)
 
 Converts product photo backgrounds (asphalt, pavement, whatever they were shot
 on) to a clean, solid white — for the product photos used across
 `assets/img/products/`.
 
-Uses AI segmentation (`rembg` + `birefnet-general`, a high-quality
-dichotomous-segmentation model), not naive color thresholding — it handles
-low-contrast cases (a black part on dark asphalt), reflective chrome, fine
-negative space (a 28-tooth sprocket's spoke gaps), and small/thin parts
-(washers, retaining clips) cleanly. Tested against 10 real product photos
-spanning those cases, including two rounds of fixes after real defects were
-found by zooming into the results (blocky matting edges, then a soft halo
-around small parts) — see git history on this file for what was tried and
-why.
-
 Two ways to use it:
-- **`remove-bg.py`** — a batch CLI for processing a folder of photos at once.
-- **`bg-server.py`** — a local server that powers the **"✂ Quitar fondo"**
-  button on each photo in admin.html's product editor, for one photo at a
-  time while you're publishing.
+- **The "✂ Quitar fondo" button** on each photo in admin.html's product
+  editor — runs **entirely in your browser**, nothing to install. Click it,
+  the first time on a given browser it downloads a small AI model (~50MB,
+  cached afterward), then the photo is replaced in place with the
+  white-background version. This is what admins use day to day.
+- **`remove-bg.py`** — a batch CLI for processing a whole folder of photos at
+  once from the terminal (e.g. bulk-cleaning existing product photos).
+  Optional, only needed for bulk work — not required for the button above.
 
-Both share the exact same processing logic (`remove_background_to_white` in
-`remove-bg.py`), so results are identical either way.
+They use different engines (the button runs `@imgly/background-removal` — a
+WASM build light enough for a browser tab; the CLI uses `rembg` +
+`birefnet-general`, heavier but even higher quality) but both apply the same
+post-processing: sharpen the AI mask's confidence toward solid black/white
+before a small blur (avoids the soft halo a raw mask leaves around small/thin
+parts), crop to the subject, center it on a padded white square canvas.
 
-## Install (one-time)
+## The "Quitar fondo" button (admin.html)
+
+Nothing to install — just click **✂** on a photo thumbnail in the product
+editor. First click on a given browser downloads the model (progress shown
+as a percentage on the button); after that it's cached and later clicks are
+much faster. Everything happens on your device — no photo is ever uploaded
+anywhere for this. Normal photo upload/publish is unaffected either way.
+
+## remove-bg.py — batch-processing a whole folder from the terminal
 
 ```
 pip install -r tools/requirements.txt
@@ -31,34 +37,6 @@ pip install -r tools/requirements.txt
 
 First run downloads the model (~1GB, `birefnet-general`) to `~/.u2net/` —
 cached after that, no network needed for subsequent runs.
-
-## Option A: the "Quitar fondo" button in admin.html
-
-admin.html runs entirely in the browser with no backend of its own (the
-GitHub API is the only "backend" it has) — and this model is too heavy
-(~1GB, 30-60s/photo even on CPU) to run inside a browser tab. So it runs as
-a small server on **your own computer** instead, which the button talks to
-over `localhost`.
-
-```
-python3 tools/bg-server.py
-```
-
-Leave it running, then in admin.html's product editor, click **✂** on any
-photo thumbnail. It takes 30-60s (the button shows "…" while working); the
-photo is replaced in place with the white-background version once done —
-nothing else about publishing changes.
-
-If the server isn't running, clicking the button just shows a toast telling
-you to start it — normal photo upload is completely unaffected either way,
-whether or not you ever run this.
-
-- Default port: `8642` — change with `--port` if that's taken.
-- Only accepts connections from your own machine; nothing about it is
-  reachable from the internet.
-- Stop it with Ctrl+C.
-
-## Option B: batch-processing a whole folder
 
 ```
 # One photo
@@ -103,13 +81,6 @@ the same file(s) instead, once you've checked the results.
 | `--matting` | off | Alpha matting — off by default; on this model it produced blocky, jagged edges, worse than the plain (feathered) mask |
 | `--recursive` | off | Recurse into subfolders |
 | `--overwrite` | off | Write back into the source file(s) instead of a separate output dir |
-
-## bg-server.py options
-
-| Flag | Default | What it does |
-|---|---|---|
-| `--port` | `8642` | Port to listen on |
-| `--model` | `birefnet-general` | Must match what you want `remove-bg.py` to produce — keep these two in sync |
 
 ## If a specific photo comes out wrong
 

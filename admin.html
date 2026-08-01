@@ -16,6 +16,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <!-- Resolves the bare "onnxruntime-web" import inside the background-removal
+       library (loaded on demand, see removeBgClientSide below) — the library
+       ships pre-bundled but that one dependency stays external, so plain
+       dynamic-import usage (no bundler) needs this to resolve it. -->
+  <script type="importmap">
+  {
+    "imports": {
+      "onnxruntime-web": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.21.0/dist/ort.bundle.min.mjs",
+      "onnxruntime-web/webgpu": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.21.0/dist/ort.webgpu.bundle.min.mjs"
+    }
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -720,7 +732,7 @@
               <div class="pmodal-photos" id="pmodalPhotos"></div>
               <button type="button" class="pmodal-add-photo" id="pmodalAddPhotoBtn" title="Agregar foto">+</button>
             </div>
-            <p class="pm-hint">Se comprimen automáticamente al subir. <b>&lsaquo; &rsaquo;</b> ordena, <b>&#8635;</b> rota, <b>&#9986;</b> quita el fondo (ayudante local — ver tools/README.md). La primera foto ("Portada") es la que se muestra en la tienda.</p>
+            <p class="pm-hint">Se comprimen automáticamente al subir. <b>&lsaquo; &rsaquo;</b> ordena, <b>&#8635;</b> rota, <b>&#9986;</b> quita el fondo (en tu navegador, sin instalar nada — la primera vez tarda por descargar el modelo). La primera foto ("Portada") es la que se muestra en la tienda.</p>
             <div class="pmodal-field" style="margin-top:.6rem;">
               <label>Ajuste de la foto en la página <span class="pm-label-note">(cómo se ve en la tienda)</span></label>
               <select id="pmImgFit">
@@ -1985,31 +1997,98 @@
     });
   }
 
-  /* ---- Background removal (local helper) ----
-     admin.html has no backend of its own — the AI model that does this well
-     (birefnet-general, ~1GB, 30-60s/photo on CPU) is too heavy to run in a
-     browser tab, so it runs as a small local server (tools/bg-server.py)
-     the admin starts on their own machine. Nothing calls it unless the
-     "Quitar fondo" button is clicked — normal photo upload is completely
-     unaffected whether or not the helper is running. */
-  var BG_HELPER_URL = "http://127.0.0.1:8642";
-  function checkBgHelper() {
-    return fetch(BG_HELPER_URL + "/health", { signal: AbortSignal.timeout(1000) })
-      .then(function (r) { return r.ok; })
-      .catch(function () { return false; });
+  /* ---- Background removal (fully in-browser, nothing to install) ----
+     Runs entirely on the admin's own device via @imgly/background-removal
+     (WebAssembly + onnxruntime-web), loaded on demand from a CDN the first
+     time "Quitar fondo" is clicked. No server, no local setup, no photo
+     ever leaves the browser. The model (~40-80MB) downloads once per
+     browser and is cached by it afterward, so only the very first use on a
+     given device is slow. */
+  var BG_LIB_VERSION = "1.7.0";
+  var bgRemoveModulePromise = null;
+  function loadBgRemoveModule() {
+    if (!bgRemoveModulePromise) {
+      bgRemoveModulePromise = import(
+        /* webpackIgnore: true */
+        "https://cdn.jsdelivr.net/npm/@imgly/background-removal@" + BG_LIB_VERSION + "/dist/index.mjs"
+      );
+    }
+    return bgRemoveModulePromise;
   }
-  function removeBgViaHelper(dataUri) {
-    return fetch(BG_HELPER_URL + "/remove-bg", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ image: dataUri }),
-      signal: AbortSignal.timeout(180000) // birefnet is slow — give it up to 3 min
-    }).then(function (r) {
-      if (!r.ok) return r.text().then(function (t) { throw new Error(t || ("HTTP " + r.status)); });
-      return r.json();
-    }).then(function (j) {
-      if (!j || !j.image) throw new Error("respuesta inválida del ayudante");
-      return j.image;
+  // Sharpens the model's alpha mask toward solid 0/255 before a small blur,
+  // so its soft, low-confidence edge doesn't show up as a visible halo
+  // (most noticeable on small/thin parts) — ported from the same fix in
+  // tools/remove-bg.py, verified there against real product photos.
+  function sharpenAndFeatherAlpha(ctx, w, h, featherPx) {
+    var imgData = ctx.getImageData(0, 0, w, h);
+    var d = imgData.data;
+    var alphaCanvas = document.createElement("canvas");
+    alphaCanvas.width = w; alphaCanvas.height = h;
+    var actx = alphaCanvas.getContext("2d");
+    var aData = actx.createImageData(w, h);
+    for (var i = 0; i < d.length; i += 4) {
+      var a = d[i + 3] / 255;
+      var sharp = 1 / (1 + Math.exp(-12 * (a - 0.5)));
+      var v = Math.round(sharp * 255);
+      aData.data[i] = v; aData.data[i + 1] = v; aData.data[i + 2] = v; aData.data[i + 3] = 255;
+    }
+    actx.putImageData(aData, 0, 0);
+    var blurCanvas = document.createElement("canvas");
+    blurCanvas.width = w; blurCanvas.height = h;
+    var bctx = blurCanvas.getContext("2d");
+    bctx.filter = "blur(" + featherPx + "px)";
+    bctx.drawImage(alphaCanvas, 0, 0);
+    var blurred = bctx.getImageData(0, 0, w, h).data;
+    for (var j = 0; j < d.length; j += 4) d[j + 3] = blurred[j];
+    ctx.putImageData(imgData, 0, 0);
+  }
+  // Crops to the subject's bounding box and centers it on a square white
+  // canvas with padding — mirrors tools/remove-bg.py's trim_and_pad, so a
+  // photo processed here matches one processed via that CLI tool.
+  function trimPadComposite(cutoutCanvas, canvasSize, padFrac) {
+    var w = cutoutCanvas.width, h = cutoutCanvas.height;
+    var ctx = cutoutCanvas.getContext("2d");
+    var data = ctx.getImageData(0, 0, w, h).data;
+    var minX = w, minY = h, maxX = -1, maxY = -1;
+    for (var y = 0; y < h; y++) {
+      for (var x = 0; x < w; x++) {
+        if (data[(y * w + x) * 4 + 3] > 8) {
+          if (x < minX) minX = x; if (x > maxX) maxX = x;
+          if (y < minY) minY = y; if (y > maxY) maxY = y;
+        }
+      }
+    }
+    if (maxX < 0) { minX = 0; minY = 0; maxX = w - 1; maxY = h - 1; } // fully transparent -> bail to original
+    var bw = maxX - minX + 1, bh = maxY - minY + 1;
+    var usable = canvasSize * (1 - 2 * padFrac);
+    var scale = Math.min(usable / bw, usable / bh);
+    var dw = Math.max(1, Math.round(bw * scale)), dh = Math.max(1, Math.round(bh * scale));
+    var out = document.createElement("canvas");
+    out.width = canvasSize; out.height = canvasSize;
+    var octx = out.getContext("2d");
+    octx.fillStyle = "#fff";
+    octx.fillRect(0, 0, canvasSize, canvasSize);
+    octx.drawImage(cutoutCanvas, minX, minY, bw, bh, (canvasSize - dw) / 2, (canvasSize - dh) / 2, dw, dh);
+    return out;
+  }
+  function removeBgClientSide(dataUri, onProgress) {
+    return loadBgRemoveModule().then(function (mod) {
+      return mod.removeBackground(dataUri, {
+        output: { format: "image/png" },
+        progress: onProgress || function () {}
+      });
+    }).then(function (blob) {
+      return createImageBitmap(blob);
+    }).then(function (bitmap) {
+      var c = document.createElement("canvas");
+      c.width = bitmap.width; c.height = bitmap.height;
+      var ctx = c.getContext("2d");
+      ctx.drawImage(bitmap, 0, 0);
+      sharpenAndFeatherAlpha(ctx, c.width, c.height, 1.2);
+      var framed = trimPadComposite(c, 1200, 0.08);
+      var out = framed.toDataURL("image/jpeg", 0.92);
+      if (out.indexOf("data:image/jpeg") !== 0 || out.length < 100) throw new Error("no se pudo procesar la imagen");
+      return out;
     });
   }
 
@@ -2556,7 +2635,7 @@
         '<div class="mv-bar">' +
         '<button type="button" class="mv mv-l" data-i="' + i + '" data-dir="-1"' + (i === 0 ? ' disabled' : '') + ' aria-label="Mover a la izquierda">&#8249;</button>' +
         '<button type="button" class="mv mv-rot" data-i="' + i + '" data-deg="90" aria-label="Rotar 90°">&#8635;</button>' +
-        '<button type="button" class="mv mv-bg" data-i="' + i + '" title="Quitar fondo (requiere el ayudante local — ver tools/README.md)" aria-label="Quitar fondo">&#9986;</button>' +
+        '<button type="button" class="mv mv-bg" data-i="' + i + '" title="Quitar fondo (procesa en tu navegador, la primera vez descarga un modelo ~50MB)" aria-label="Quitar fondo">&#9986;</button>' +
         '<button type="button" class="mv mv-r" data-i="' + i + '" data-dir="1"' + (i === n - 1 ? ' disabled' : '') + ' aria-label="Mover a la derecha">&#8250;</button>' +
         '</div>' +
         '</div>' + picker +
@@ -3098,20 +3177,20 @@
       if (bg) {
         var bgI = parseInt(bg.getAttribute("data-i"), 10);
         bg.disabled = true;
-        checkBgHelper().then(function (up) {
-          if (!up) {
-            showToast("Ayudante de fondo no encontrado — iniciá tools/bg-server.py en tu computador (ver tools/README.md)");
-            bg.disabled = false;
-            return;
+        bg.textContent = "…";
+        removeBgClientSide(modalPhotos[bgI], function (key, current, total) {
+          if (key.indexOf("fetch:") === 0 && total) {
+            bg.textContent = Math.round((current / total) * 100) + "%";
+          } else {
+            bg.textContent = "…";
           }
-          bg.textContent = "…";
-          return removeBgViaHelper(modalPhotos[bgI]).then(function (out) {
-            modalPhotos[bgI] = out;
-            renderModalPhotos();
-          }).catch(function (e2) {
-            showToast("No se pudo quitar el fondo: " + (e2 && e2.message || "error desconocido"));
-            bg.disabled = false;
-          });
+        }).then(function (out) {
+          modalPhotos[bgI] = out;
+          renderModalPhotos();
+        }).catch(function (e2) {
+          showToast("No se pudo quitar el fondo: " + (e2 && e2.message || "error desconocido") + " — probá de nuevo o con otra foto.");
+          bg.disabled = false;
+          bg.textContent = "✂";
         });
         return;
       }
