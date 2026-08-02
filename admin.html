@@ -16,18 +16,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <!-- Resolves the bare "onnxruntime-web" import inside the background-removal
-       library (loaded on demand, see removeBgClientSide below) — the library
-       ships pre-bundled but that one dependency stays external, so plain
-       dynamic-import usage (no bundler) needs this to resolve it. -->
-  <script type="importmap">
-  {
-    "imports": {
-      "onnxruntime-web": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.21.0/dist/ort.bundle.min.mjs",
-      "onnxruntime-web/webgpu": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.21.0/dist/ort.webgpu.bundle.min.mjs"
-    }
-  }
-  </script>
+  <!-- The admin-only "Quitar fondo" (background removal) feature loads
+       @huggingface/transformers on demand from jsdelivr (see loadBgPipeline
+       below). It bundles its own onnxruntime-web and fetches the WASM from
+       jsdelivr too, so no import map is needed here. -->
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -2008,25 +2000,52 @@
   }
 
   /* ---- Background removal (fully in-browser, nothing to install) ----
-     Runs entirely on the admin's own device via @imgly/background-removal
-     (WebAssembly + onnxruntime-web), loaded on demand from a CDN the first
-     time "Quitar fondo" is clicked. No server, no local setup, no photo
-     ever leaves the browser. Uses the library's full-precision "large"
-     model (see removeBgClientSide below) for the best accuracy on
-     reflective/chrome parts and parts with holes — bigger download than
-     the default, but it only happens once per browser (cached afterward),
-     and device:"gpu" uses WebGPU to run it when the browser supports it
-     (automatic fallback to CPU/WASM otherwise). */
-  var BG_LIB_VERSION = "1.7.0";
-  var bgRemoveModulePromise = null;
-  function loadBgRemoveModule() {
-    if (!bgRemoveModulePromise) {
-      bgRemoveModulePromise = import(
-        /* webpackIgnore: true */
-        "https://cdn.jsdelivr.net/npm/@imgly/background-removal@" + BG_LIB_VERSION + "/dist/index.mjs"
-      );
-    }
-    return bgRemoveModulePromise;
+     Runs entirely on the admin's own device via @huggingface/transformers
+     (WebAssembly / WebGPU + onnxruntime-web), loaded on demand from jsdelivr
+     the first time "Quitar fondo" is clicked. No server, no local setup, no
+     photo ever leaves the browser. The model downloads once per browser and
+     is cached, so only the very first use on a device is slow.
+
+     Model: BiRefNet — current state-of-the-art in-browser matting. It's
+     markedly better than the previous isnet model on exactly the shots that
+     kept failing here: reflective/chrome parts (mask no longer bites into the
+     product) and parts with holes (bolt holes, sprocket/spoke cutouts come out
+     as clean background instead of a smudge). Tradeoff: heavier download and
+     slower per photo than isnet — WebGPU (when the browser supports it) keeps
+     it usable; it falls back to CPU/WASM otherwise.
+
+     BG_ATTEMPTS is an ordered fallback list, tried until one loads. We can't
+     reach the model CDN from the dev sandbox to verify a repo/variant ahead of
+     time, so if the top choice ever isn't reachable the button still works via
+     the next proven model rather than dying. Edit the first entry to change the
+     primary model. */
+  var TFJS_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0/dist/transformers.web.js";
+  function bgAttempts() {
+    var gpu = (typeof navigator !== "undefined" && navigator.gpu) ? "webgpu" : null;
+    var list = [];
+    if (gpu) list.push({ id: "onnx-community/BiRefNet_lite", device: "webgpu" }); // SOTA, GPU-accelerated
+    list.push({ id: "onnx-community/BiRefNet_lite", device: "wasm" });            // SOTA, CPU fallback
+    list.push({ id: "briaai/RMBG-1.4", device: "wasm" });                        // proven fallback, trained for product photos
+    return list;
+  }
+  var bgPipelinePromise = null;
+  function loadBgPipeline(onProgress) {
+    if (bgPipelinePromise) return bgPipelinePromise;
+    bgPipelinePromise = import(/* webpackIgnore: true */ TFJS_URL).then(function (tfjs) {
+      var attempts = bgAttempts();
+      function tryAttempt(i) {
+        if (i >= attempts.length) throw new Error("no se pudo cargar el modelo de recorte");
+        return tfjs.pipeline("background-removal", attempts[i].id, {
+          device: attempts[i].device,
+          progress_callback: onProgress || function () {}
+        }).catch(function () { return tryAttempt(i + 1); });
+      }
+      return tryAttempt(0);
+    });
+    // On failure, clear the cache so a later click can retry from scratch
+    // (a resolved pipeline stays cached and is reused for every subsequent photo).
+    bgPipelinePromise.catch(function () { bgPipelinePromise = null; });
+    return bgPipelinePromise;
   }
   // Sharpens the model's alpha mask toward solid 0/255 before a small blur,
   // so its soft, low-confidence edge doesn't show up as a visible halo
@@ -2086,44 +2105,39 @@
   }
   function removeBgClientSide(dataUri, onProgress) {
     // Existing (already-published) photos are stored as a relative site path
-    // (e.g. "assets/img/products/foo.jpg"), not a data: URI — the library
-    // would otherwise try to resolve that relative path against its OWN CDN
-    // base (meant for model files), fetch a URL that doesn't exist there,
-    // and fail decoding the resulting HTML error page as an image
-    // ("Invalid format: text/html"). Fetching it ourselves into a real Blob
-    // first sidesteps that entirely, for both data: URIs and site paths.
+    // (e.g. "assets/img/products/foo.jpg"), not a data: URI. Fetch the source
+    // into a real Blob ourselves and hand the pipeline a blob: URL, so photo
+    // loading always resolves against our own origin (works for both data:
+    // URIs and site paths) and never leaves the browser.
     var absoluteUrl = new URL(dataUri, location.href).href;
+    var blobUrl = null;
     return fetch(absoluteUrl).then(function (r) {
       if (!r.ok) throw new Error("no se pudo leer la foto original (HTTP " + r.status + ")");
       return r.blob();
     }).then(function (srcBlob) {
-      return loadBgRemoveModule().then(function (mod) {
-        return mod.removeBackground(srcBlob, {
-          output: { format: "image/png" },
-          // Full-precision model (vs. the library's "medium"/fp16 default) —
-          // meaningfully more accurate on the cases that were actually failing:
-          // reflective/chrome parts (mask biting into the product) and holes
-          // cut into a part (bolt holes, spoke cutouts left as a smudge instead
-          // of clean background). device:"gpu" pays for the extra compute: the
-          // library feature-detects WebGPU itself and falls back to CPU/WASM
-          // automatically when it's unavailable, so this is safe everywhere.
-          model: "large",
-          device: "gpu",
-          progress: onProgress || function () {}
-        });
-      });
-    }).then(function (blob) {
-      return createImageBitmap(blob);
-    }).then(function (bitmap) {
+      blobUrl = URL.createObjectURL(srcBlob);
+      return loadBgPipeline(onProgress);
+    }).then(function (segmenter) {
+      return segmenter(blobUrl);
+    }).then(function (result) {
+      if (blobUrl) { URL.revokeObjectURL(blobUrl); blobUrl = null; }
+      // The pipeline returns a RawImage (RGBA: the original with the predicted
+      // alpha mask applied). Draw it onto a canvas, then run the same
+      // edge-sharpen + trim/center/pad framing used for every product photo.
+      var raw = Array.isArray(result) ? result[0] : result;
+      if (!raw || !raw.data || !raw.width) throw new Error("el modelo no devolvió una imagen válida");
       var c = document.createElement("canvas");
-      c.width = bitmap.width; c.height = bitmap.height;
+      c.width = raw.width; c.height = raw.height;
       var ctx = c.getContext("2d");
-      ctx.drawImage(bitmap, 0, 0);
+      ctx.putImageData(new ImageData(new Uint8ClampedArray(raw.data), raw.width, raw.height), 0, 0);
       sharpenAndFeatherAlpha(ctx, c.width, c.height, 1.2);
       var framed = trimPadComposite(c, 1200, 0.08);
       var out = framed.toDataURL("image/jpeg", 0.92);
       if (out.indexOf("data:image/jpeg") !== 0 || out.length < 100) throw new Error("no se pudo procesar la imagen");
       return out;
+    }).catch(function (e) {
+      if (blobUrl) { URL.revokeObjectURL(blobUrl); blobUrl = null; }
+      throw e;
     });
   }
 
@@ -3222,26 +3236,33 @@
         var bgI = parseInt(bg.getAttribute("data-i"), 10);
         var bgSrc = modalPhotos[bgI];
         bg.disabled = true;
-        bg.textContent = "…";
         bgProcessing++;
-        removeBgClientSide(bgSrc, function (key, current, total) {
-          if (key.indexOf("fetch:") === 0 && total) {
-            bg.textContent = Math.round((current / total) * 100) + "%";
-          } else if (key.indexOf("compute:") === 0 && total) {
-            // No byte count during inference itself (only during the one-time
-            // model download), so show the step count instead — otherwise the
-            // button just shows a static "…" for however long inference takes
-            // (several seconds+ on CPU), which reads as frozen/broken.
-            bg.textContent = current + "/" + total;
-          } else {
-            bg.textContent = "…";
+        // A spinner runs the whole time so the button never looks frozen —
+        // BiRefNet inference reports no progress and can take several seconds
+        // (longer on CPU). The download progress callback (first use only)
+        // pauses the spinner to show a concrete %, then resumes it for the
+        // inference phase.
+        var spinFrames = ["·", "··", "···"], sfi = 0, spinning = true;
+        var spinTimer = setInterval(function () {
+          if (spinning) bg.textContent = spinFrames[sfi++ % spinFrames.length];
+        }, 350);
+        bg.textContent = spinFrames[0];
+        function stopSpin() { spinning = false; clearInterval(spinTimer); }
+        removeBgClientSide(bgSrc, function (p) {
+          if (p && p.total && typeof p.loaded === "number" && p.status !== "done" && p.status !== "ready") {
+            spinning = false;
+            bg.textContent = Math.round((p.loaded / p.total) * 100) + "%";
+          } else if (p && (p.status === "done" || p.status === "ready")) {
+            spinning = true; // download finished -> spinner for the inference phase
           }
         }).then(function (out) {
+          stopSpin();
           bgProcessing--;
           modalPhotoBgBackup[bgI] = bgSrc;
           modalPhotos[bgI] = out;
           renderModalPhotos();
         }).catch(function (e2) {
+          stopSpin();
           bgProcessing--;
           showToast("No se pudo quitar el fondo: " + (e2 && e2.message || "error desconocido") + " — probá de nuevo o con otra foto.");
           bg.disabled = false;

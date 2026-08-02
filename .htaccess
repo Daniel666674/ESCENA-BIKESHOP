@@ -17,19 +17,21 @@
   # Identity Services + the GitHub API (admin panel only), Google Maps (the
   # footer location embed — was missing here, which silently blocked the map
   # iframe on every page with no visible error, just a blank/broken box),
-  # and jsdelivr + staticimgly (admin panel's "Quitar fondo" button — loads
-  # @imgly/background-removal + onnxruntime-web from jsdelivr, and their
-  # WASM/model files from staticimgly, both entirely client-side; without
-  # these the button fails with "Importing a module script failed" and no
-  # other clue why). 'unsafe-inline' is required because the pages are built
-  # with inline <script>/<style>; 'unsafe-eval' and blob: are required for
-  # that same button — onnxruntime-web's WASM loader itself evaluates a
-  # string as JS while setting itself up (confirmed by the browser's own CSP
-  # violation report; 'wasm-unsafe-eval' alone only covers compiling
-  # WebAssembly, not this) — plus a Web Worker loaded from a blob: URL, not
-  # a normal script URL. The policy still blocks scripts/connections/frames
-  # from any other origin.
-  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data: https://www.google-analytics.com https://www.gstatic.com; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: https://www.googletagmanager.com https://www.google-analytics.com https://accounts.google.com https://apis.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://staticimgly.com; connect-src 'self' blob: https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://api.github.com https://accounts.google.com https://analyticsdata.googleapis.com https://searchconsole.googleapis.com https://www.googleapis.com https://oauth2.googleapis.com https://cdn.jsdelivr.net https://staticimgly.com; frame-src https://accounts.google.com https://www.google.com;"
+  # and jsdelivr + Hugging Face (admin panel's "Quitar fondo" button — loads
+  # @huggingface/transformers + onnxruntime-web (and its WASM) from jsdelivr,
+  # and the BiRefNet model weights from Hugging Face, all entirely client-side;
+  # without these the button fails with "Importing a module script failed" or a
+  # generic model-load error and no other clue why). Hugging Face serves large
+  # model files via redirects to its own CDNs, so *.huggingface.co / *.hf.co /
+  # *.xethub.hf.co are allowlisted in connect-src alongside huggingface.co
+  # itself. 'unsafe-inline' is required because the pages are built with inline
+  # <script>/<style>; 'unsafe-eval' and blob: are required for that same button
+  # — onnxruntime-web's WASM loader itself evaluates a string as JS while
+  # setting itself up (confirmed by the browser's own CSP violation report;
+  # 'wasm-unsafe-eval' alone only covers compiling WebAssembly, not this) — plus
+  # Web Workers loaded from blob: URLs (worker-src). The policy still blocks
+  # scripts/connections/frames from any other origin.
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data: https://www.google-analytics.com https://www.gstatic.com; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: https://www.googletagmanager.com https://www.google-analytics.com https://accounts.google.com https://apis.google.com https://www.gstatic.com https://cdn.jsdelivr.net; worker-src 'self' blob:; connect-src 'self' blob: https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://api.github.com https://accounts.google.com https://analyticsdata.googleapis.com https://searchconsole.googleapis.com https://www.googleapis.com https://oauth2.googleapis.com https://cdn.jsdelivr.net https://huggingface.co https://*.huggingface.co https://*.hf.co https://*.xethub.hf.co; frame-src https://accounts.google.com https://www.google.com;"
 </IfModule>
 
 # ============================================================================
