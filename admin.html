@@ -161,6 +161,19 @@
     .inv-note { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.2rem; font-size: .8rem; color: #333; margin-bottom: 1.4rem; }
     .inv-note b { color: var(--ink); }
 
+    /* ---- Página principal: category video cards ---- */
+    .catvid-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+    .catvid-card { background: #fff; border: 1px solid var(--card-line); border-radius: 14px; padding: 1rem; box-shadow: var(--card-shadow); display: flex; flex-direction: column; gap: .7rem; }
+    .catvid-card h4 { font-size: .9rem; font-weight: 700; }
+    .catvid-preview { position: relative; aspect-ratio: 4/3; border-radius: 10px; overflow: hidden; background: var(--panel); display: flex; align-items: center; justify-content: center; }
+    .catvid-preview video { width: 100%; height: 100%; object-fit: cover; }
+    .catvid-preview .catvid-empty { font-size: .72rem; color: var(--muted); text-align: center; padding: 0 .8rem; }
+    .catvid-status { font-size: .7rem; font-weight: 700; letter-spacing: .04em; }
+    .catvid-status.has-video { color: var(--violet-dark); }
+    .catvid-status.no-video { color: var(--muted); }
+    .catvid-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .catvid-actions .btn { flex: 1; }
+
     /* ---- Shared table styles (Resumen/Ventas table only — Inventario is a
        card grid, see .inv-grid below) ---- */
     .inv-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
@@ -437,6 +450,7 @@
       <button type="button" class="admin-nav-btn is-active" data-section="secResumen">Resumen</button>
       <button type="button" class="admin-nav-btn" data-section="secAnaliticas">Analíticas</button>
       <button type="button" class="admin-nav-btn" data-section="secInventario">Inventario</button>
+      <button type="button" class="admin-nav-btn" data-section="secPagina">Página principal</button>
       <button type="button" class="admin-nav-btn" data-section="secActividad">Actividad</button>
     </div>
   </nav>
@@ -686,6 +700,12 @@
       <div class="inv-pagination" id="invPagination"></div>
       </section>
 
+      <section id="secPagina" style="display:none;">
+      <h2 class="section-title">Página principal<span class="demo-tag" id="catVidCount">0 de 7 con video</span></h2>
+      <p class="section-sub">Reemplaza la foto de cada tarjeta de categoría en el inicio por un video corto (mudo, en loop) grabado en la tienda. Recomendado: 5-8 segundos, formato MP4, menos de 20MB — no se comprime automáticamente como las fotos, así que recórtalo/comprímelo antes de subir. Una categoría sin video sigue mostrando su foto normal.</p>
+      <div class="catvid-grid" id="catVidGrid"></div>
+      </section>
+
       <section id="secActividad" style="display:none;">
       <h2 class="section-title">Actividad<span class="demo-tag" id="activityCount">0 cambios registrados</span></h2>
       <p class="section-sub">Historial de quién publicó qué y cuándo — cada fila es una acción de "Publicar" en el panel.</p>
@@ -921,6 +941,7 @@
 <div class="toast" id="toast"></div>
 
 <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+<script>document.write('<scr'+'ipt src="assets/js/category-video.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 <!-- sales-log.js is intentionally NOT loaded here as a public script tag —
      it's not deployed to the public site at all (see deploy.yml's exclude
      list). Revenue data should only be readable by an authenticated admin,
@@ -1224,7 +1245,7 @@
     });
   }
   function showAdminSection(id) {
-    ["secResumen", "secAnaliticas", "secInventario", "secActividad"].forEach(function (secId) {
+    ["secResumen", "secAnaliticas", "secInventario", "secPagina", "secActividad"].forEach(function (secId) {
       var el = document.getElementById(secId);
       if (el) el.style.display = secId === id ? "" : "none";
     });
@@ -2909,6 +2930,151 @@
     sellingIdx = null;
   }
 
+  /* ---- Página principal: category card videos ----
+     The homepage's category cards (index.html #catsGrid) can show a short
+     looping video instead of their static photo. This is a small, fixed set
+     of slots keyed by category — NOT part of inventoryCatalog/products-data.js
+     — so it gets its own tiny manifest file (assets/js/category-video.js:
+     {catKey: versionNumber}) instead of going through dirtySlugs/mergeCatalog.
+     Each upload/remove commits and publishes immediately (no separate
+     "Publicar" step), since there's no staged-draft concept here. */
+  // Keep this list in sync with the .cat[data-cat] cards in index.html's
+  // #catsGrid — this is the definitive list of which categories have a
+  // homepage card at all (there's no card for every catalog category).
+  var HOMEPAGE_CATEGORY_CARDS = [
+    { key: "stems", label: "Cañas" },
+    { key: "manubrios", label: "Timón" },
+    { key: "horquillas", label: "Tenedores" },
+    { key: "bielas", label: "Bielas" },
+    { key: "manzana-trasera", label: "Manzanas" },
+    { key: "pinones", label: "Plato" },
+    { key: "sillines", label: "Sillas" }
+  ];
+  var categoryVideoMap = {}; // {catKey: versionNumber}, loaded from window.ESCENA_CATEGORY_VIDEO_V
+  var CATEGORY_VIDEO_MAX_BYTES = 20 * 1024 * 1024;
+  function parseRemoteObject(text) {
+    if (!text) return {};
+    var m = text.match(/window\.ESCENA_CATEGORY_VIDEO_V\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+    if (!m) return {};
+    try { var o = JSON.parse(m[1]); return (o && typeof o === "object") ? o : {}; } catch (e) { return {}; }
+  }
+  // Always merges onto the freshest remote copy (same reasoning as
+  // mergeCatalog: another device could have uploaded a different category's
+  // video since this session loaded) — never overwrites with a full local
+  // snapshot, just this one key.
+  function commitCategoryVideoManifest(catKey, versionOrNull) {
+    return ghPutWithRetry("assets/js/category-video.js", "Update category video (" + catKey + ") via admin panel", function (remoteText) {
+      var obj = parseRemoteObject(remoteText);
+      if (versionOrNull === null) delete obj[catKey]; else obj[catKey] = versionOrNull;
+      return "window.ESCENA_CATEGORY_VIDEO_V = " + JSON.stringify(obj, null, 1) + ";\n";
+    }, false);
+  }
+  function renderCategoryVideos() {
+    var grid = document.getElementById("catVidGrid");
+    if (!grid) return;
+    var withVideo = HOMEPAGE_CATEGORY_CARDS.filter(function (c) { return categoryVideoMap[c.key]; }).length;
+    var countEl = document.getElementById("catVidCount");
+    if (countEl) countEl.textContent = withVideo + " de " + HOMEPAGE_CATEGORY_CARDS.length + " con video";
+    grid.innerHTML = HOMEPAGE_CATEGORY_CARDS.map(function (c) {
+      var v = categoryVideoMap[c.key];
+      var preview = v
+        ? '<video muted loop playsinline autoplay src="assets/video/cat-' + c.key + '.mp4?v=' + v + '"></video>'
+        : '<div class="catvid-empty">Sin video — se muestra la foto actual de esta categoría</div>';
+      return '<div class="catvid-card" data-cat="' + c.key + '">' +
+        '<h4>' + esc(c.label) + '</h4>' +
+        '<div class="catvid-preview">' + preview + '</div>' +
+        '<div class="catvid-status ' + (v ? "has-video" : "no-video") + '">' + (v ? "✓ Video activo" : "Sin video") + '</div>' +
+        '<div class="catvid-actions">' +
+        '<button type="button" class="btn btn-outline btn-sm catvid-upload-btn" data-cat="' + c.key + '">' + (v ? "Reemplazar" : "Subir video") + '</button>' +
+        (v ? '<button type="button" class="btn btn-outline btn-sm catvid-remove-btn" data-cat="' + c.key + '">Quitar</button>' : '') +
+        '</div>' +
+        '</div>';
+    }).join("");
+  }
+  function uploadCategoryVideo(catKey, file, cardEl) {
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    var isMp4 = file.type === "video/mp4" || /\.mp4$/i.test(file.name);
+    if (!isMp4) { showToast("Subí un video en formato MP4."); return; }
+    if (file.size > CATEGORY_VIDEO_MAX_BYTES) {
+      showToast("El video pesa " + (file.size / 1024 / 1024).toFixed(1) + "MB — recórtalo a unos 5-8 segundos y comprímelo (máx 20MB) antes de subir.");
+      return;
+    }
+    var btns = cardEl.querySelectorAll("button");
+    btns.forEach(function (b) { b.disabled = true; });
+    var uploadBtn = cardEl.querySelector(".catvid-upload-btn");
+    var originalLabel = uploadBtn.textContent;
+    uploadBtn.textContent = "Subiendo…";
+    var reader = new FileReader();
+    reader.onerror = function () {
+      showToast("No se pudo leer el archivo.");
+      btns.forEach(function (b) { b.disabled = false; });
+      uploadBtn.textContent = originalLabel;
+    };
+    reader.onload = function () {
+      var b64 = String(reader.result).split(",")[1];
+      var path = "assets/video/cat-" + catKey + ".mp4";
+      ghPutWithRetry(path, "Add category video (" + catKey + ") via admin panel", function () { return b64; }, true)
+        .then(function () {
+          var v = Date.now();
+          return commitCategoryVideoManifest(catKey, v).then(function () { return v; });
+        })
+        .then(function (v) {
+          categoryVideoMap[catKey] = v;
+          renderCategoryVideos();
+          showToast("Video actualizado. La tienda se actualiza en ~1 minuto.");
+        })
+        .catch(function (e) {
+          showToast("No se pudo subir el video: " + (e && e.message || "error desconocido"));
+          btns.forEach(function (b) { b.disabled = false; });
+          uploadBtn.textContent = originalLabel;
+        });
+    };
+    reader.readAsDataURL(file);
+  }
+  function removeCategoryVideo(catKey, cardEl) {
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    if (!confirm("¿Quitar el video de esta categoría? Volverá a mostrarse la foto.")) return;
+    var btns = cardEl.querySelectorAll("button");
+    btns.forEach(function (b) { b.disabled = true; });
+    commitCategoryVideoManifest(catKey, null).then(function () {
+      delete categoryVideoMap[catKey];
+      renderCategoryVideos();
+      showToast("Video quitado — la tienda se actualiza en ~1 minuto.");
+    }).catch(function (e) {
+      showToast("No se pudo quitar: " + (e && e.message || "error desconocido"));
+      btns.forEach(function (b) { b.disabled = false; });
+    });
+  }
+  function initCategoryVideos() {
+    categoryVideoMap = Object.assign({}, window.ESCENA_CATEGORY_VIDEO_V || {});
+    renderCategoryVideos();
+    var grid = document.getElementById("catVidGrid");
+    if (!grid) return;
+    var fileInput = document.createElement("input");
+    fileInput.type = "file"; fileInput.accept = "video/mp4"; fileInput.style.display = "none";
+    document.body.appendChild(fileInput);
+    var pendingCard = null;
+    fileInput.addEventListener("change", function (e) {
+      var file = e.target.files && e.target.files[0];
+      e.target.value = "";
+      if (!file || !pendingCard) return;
+      uploadCategoryVideo(pendingCard.getAttribute("data-cat"), file, pendingCard);
+    });
+    grid.addEventListener("click", function (e) {
+      var upBtn = e.target.closest(".catvid-upload-btn");
+      if (upBtn) {
+        pendingCard = upBtn.closest(".catvid-card");
+        fileInput.click();
+        return;
+      }
+      var rmBtn = e.target.closest(".catvid-remove-btn");
+      if (rmBtn) {
+        var card = rmBtn.closest(".catvid-card");
+        removeCategoryVideo(card.getAttribute("data-cat"), card);
+      }
+    });
+  }
+
   function initInventory() {
     // Always load the live catalog fresh from the repo. Never restore an old
     // cross-session draft — a stale copy can silently revert live changes.
@@ -2940,6 +3106,7 @@
       console.error("No se pudo cargar el registro de actividad:", e);
       showToast("No se pudo cargar el registro de actividad");
     });
+    initCategoryVideos();
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
       invPage = 1;

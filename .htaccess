@@ -91,9 +91,9 @@
   Header set ETag "-"
 </FilesMatch>
 
-# Static assets (.js, .css, images): cache for 1 year.
+# Static assets (.js, .css, images, video): cache for 1 year.
 # Cache-busting is handled by version query strings (?v=N) in the HTML.
-<FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|webp|woff2|woff|ttf)$">
+<FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|webp|woff2|woff|ttf|mp4|webm)$">
   Header set Cache-Control "public, max-age=31536000, immutable"
 </FilesMatch>
 

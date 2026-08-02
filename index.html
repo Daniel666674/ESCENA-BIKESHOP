@@ -42,6 +42,7 @@
   <link rel="stylesheet" href="assets/css/site-header.css?v=13" />
   <script src="assets/js/wholesale.js?v=1"></script>
   <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+  <script>document.write('<scr'+'ipt src="assets/js/category-video.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 
   <!-- ============ Fonts ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -210,6 +211,13 @@
       transition: transform .3s, box-shadow .3s; isolation: isolate;
     }
     .cat::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(10,10,10,.38) 0%, rgba(10,10,10,.5) 50%, rgba(10,10,10,.62) 100%); }
+    /* Optional short clip per category (admin-managed, see categoryVideos()
+       below) — sits behind the darkening gradient/content, on top of the card's
+       own background-image photo. Starts invisible and fades in only once it's
+       actually decoded a frame, so the photo underneath is the "poster" until
+       the video is truly ready (no flash of blank/black on slow connections). */
+    .cat video { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s; }
+    .cat video.is-visible { opacity: 1; }
     .cat:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(0,0,0,.22); }
     .cat .content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.2rem; text-align: center; }
     .cat h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; letter-spacing: .04em; color: #fff; }
@@ -511,26 +519,33 @@
       <span class="eyebrow">Encontrá tu parte</span>
       <h2><a href="tienda" class="sec-head-link">TIENDA</a></h2>
     </div>
-    <div class="cats">
-      <a href="tienda?cat=stems" class="cat" style="background-image:url('assets/img/products/volume-stem-front-load-plata.jpg')">
+    <div class="cats" id="catsGrid">
+      <a href="tienda?cat=stems" class="cat" data-cat="stems" style="background-image:url('assets/img/products/volume-stem-front-load-plata.jpg')">
+        <video muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="content"><h3>Cañas</h3></div>
       </a>
-      <a href="tienda?cat=manubrios" class="cat" style="background-image:url('assets/img/products/manubrio-cromoly-negro-01.jpg')">
+      <a href="tienda?cat=manubrios" class="cat" data-cat="manubrios" style="background-image:url('assets/img/products/manubrio-cromoly-negro-01.jpg')">
+        <video muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="content"><h3>Timón</h3></div>
       </a>
-      <a href="tienda?cat=horquillas" class="cat" style="background-image:url('assets/img/products/federal-horquilla-cromada.jpg')">
+      <a href="tienda?cat=horquillas" class="cat" data-cat="horquillas" style="background-image:url('assets/img/products/federal-horquilla-cromada.jpg')">
+        <video muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="content"><h3>Tenedores</h3></div>
       </a>
-      <a href="tienda?cat=bielas" class="cat" style="background-image:url('assets/img/products/mutany-savage-bielas-negro.jpg')">
+      <a href="tienda?cat=bielas" class="cat" data-cat="bielas" style="background-image:url('assets/img/products/mutany-savage-bielas-negro.jpg')">
+        <video muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="content"><h3>Bielas</h3></div>
       </a>
-      <a href="tienda?cat=manzana-trasera" class="cat" style="background-image:url('assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg')">
+      <a href="tienda?cat=manzana-trasera" class="cat" data-cat="manzana-trasera" style="background-image:url('assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg')">
+        <video muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="content"><h3>Manzanas</h3></div>
       </a>
-      <a href="tienda?cat=pinones" class="cat" style="background-image:url('assets/img/products/odyssey-pinon-28t-negro.jpg')">
+      <a href="tienda?cat=pinones" class="cat" data-cat="pinones" style="background-image:url('assets/img/products/odyssey-pinon-28t-negro.jpg')">
+        <video muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="content"><h3>Plato</h3></div>
       </a>
-      <a href="tienda?cat=sillines" class="cat" style="background-image:url('assets/img/products/cult-sillin-negro.jpg')">
+      <a href="tienda?cat=sillines" class="cat" data-cat="sillines" style="background-image:url('assets/img/products/cult-sillin-negro.jpg')">
+        <video muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="content"><h3>Sillas</h3></div>
       </a>
       <a href="tienda" class="cat cat-all">
@@ -771,6 +786,40 @@
       if (menu) menu.classList.toggle("open", !open);
     });
   });
+
+  /* ---- Category card videos (admin-managed, optional per category) ----
+     Loads assets/js/category-video.js above, a tiny {catKey: versionNumber}
+     map committed by admin.html's "Página principal" tab. A category with no
+     entry keeps showing its plain photo (the .cat's own background-image) —
+     nothing here ever removes that, the video is just an extra layer on top.
+     Lazy: the actual video file only starts downloading once its card is
+     about to scroll into view, so a homepage visit doesn't pull down every
+     category's clip up front. */
+  (function categoryVideos(){
+    var videoMap = window.ESCENA_CATEGORY_VIDEO_V || {};
+    var cards = document.querySelectorAll("#catsGrid .cat[data-cat]");
+    if (!cards.length || typeof IntersectionObserver === "undefined") return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        io.unobserve(entry.target);
+        var cat = entry.target.getAttribute("data-cat");
+        var v = videoMap[cat];
+        if (!v) return; // no clip uploaded for this category yet -> keep the photo
+        var vid = entry.target.querySelector("video");
+        if (!vid) return;
+        var source = document.createElement("source");
+        source.src = "assets/video/cat-" + cat + ".mp4?v=" + v;
+        source.type = "video/mp4";
+        vid.appendChild(source);
+        vid.addEventListener("loadeddata", function () { vid.classList.add("is-visible"); }, { once: true });
+        vid.load();
+        var playPromise = vid.play();
+        if (playPromise && playPromise.catch) playPromise.catch(function () {}); // autoplay can be blocked -> card just keeps showing the photo
+      });
+    }, { rootMargin: "200px" });
+    cards.forEach(function (c) { io.observe(c); });
+  })();
 
   /* ---- Hero image carousel ---- */
   (function heroCarousel(){
