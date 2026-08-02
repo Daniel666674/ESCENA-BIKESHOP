@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <!-- The admin-only "Quitar fondo" (background removal) feature loads
-       @huggingface/transformers on demand from jsdelivr (see loadBgPipeline
+       @huggingface/transformers on demand from jsdelivr (see runBgRemoval
        below). Two of its dependency's files use bare module specifiers
        that browsers can't resolve without an explicit entry — each one
        only surfaced on a real device after the previous one was fixed:
@@ -2057,10 +2057,15 @@
      slower per photo than isnet — WebGPU (when the browser supports it) keeps
      it usable; it falls back to CPU/WASM otherwise.
 
-     BG_ATTEMPTS is an ordered fallback list, tried until one loads. We can't
-     reach the model CDN from the dev sandbox to verify a repo/variant ahead of
-     time, so if the top choice ever isn't reachable the button still works via
-     the next proven model rather than dying. Edit the first entry to change the
+     bgAttempts() is an ordered fallback list. runBgRemoval() falls through it
+     on ANY failure of the current attempt — pipeline creation (e.g. the model/
+     CDN isn't reachable) or actual inference (e.g. a GPU hitting a WebGPU
+     shader limit that only shows up once you run the model, not when the
+     session is created) — and remembers a failed attempt for the rest of the
+     session instead of retrying it on every photo. We can't reach the model
+     CDN from the dev sandbox to verify a repo/variant/device combo ahead of
+     time, so this is what keeps the button working via the next proven
+     option rather than dying outright. Edit the first entry to change the
      primary model. */
   var TFJS_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0/dist/transformers.web.js";
   function bgAttempts() {
@@ -2071,24 +2076,44 @@
     list.push({ id: "briaai/RMBG-1.4", device: "wasm" });                        // proven fallback, trained for product photos
     return list;
   }
-  var bgPipelinePromise = null;
-  function loadBgPipeline(onProgress) {
-    if (bgPipelinePromise) return bgPipelinePromise;
-    bgPipelinePromise = import(/* webpackIgnore: true */ TFJS_URL).then(function (tfjs) {
-      var attempts = bgAttempts();
-      function tryAttempt(i) {
-        if (i >= attempts.length) throw new Error("no se pudo cargar el modelo de recorte");
-        return tfjs.pipeline("background-removal", attempts[i].id, {
-          device: attempts[i].device,
-          progress_callback: onProgress || function () {}
-        }).catch(function () { return tryAttempt(i + 1); });
-      }
-      return tryAttempt(0);
+  // An attempt can fail two different ways: pipeline CREATION (model/CDN
+  // unreachable, a bad import) or actual INFERENCE — real-device testing
+  // turned up a WebGPU shader limit ("Too many storage buffers in shader")
+  // that a GPU only hits once you actually run the model, not when the
+  // session is created. bgAttemptIndex is the lowest attempt not yet known
+  // bad THIS session; it only ever moves forward, so an attempt that fails
+  // once (either way) is never retried again and later photos skip straight
+  // past it instead of paying for a doomed load+run each time.
+  var bgAttemptIndex = 0;
+  var bgPipelineCache = {}; // attempt index -> pipeline promise
+  function getBgPipeline(index, onProgress) {
+    if (bgPipelineCache[index]) return bgPipelineCache[index];
+    var attempts = bgAttempts();
+    if (index >= attempts.length) return Promise.reject(new Error("no se pudo cargar el modelo de recorte"));
+    var p = import(/* webpackIgnore: true */ TFJS_URL).then(function (tfjs) {
+      return tfjs.pipeline("background-removal", attempts[index].id, {
+        device: attempts[index].device,
+        progress_callback: onProgress || function () {}
+      });
     });
-    // On failure, clear the cache so a later click can retry from scratch
-    // (a resolved pipeline stays cached and is reused for every subsequent photo).
-    bgPipelinePromise.catch(function () { bgPipelinePromise = null; });
-    return bgPipelinePromise;
+    bgPipelineCache[index] = p;
+    return p;
+  }
+  // Runs the pipeline on blobUrl, falling through bgAttempts() from the
+  // lowest not-yet-known-bad attempt on ANY failure (load or inference) —
+  // self-heals within a single click instead of making the admin retry.
+  function runBgRemoval(blobUrl, onProgress) {
+    function tryFrom(i) {
+      return getBgPipeline(i, onProgress).then(function (segmenter) {
+        return segmenter(blobUrl);
+      }).catch(function (e) {
+        delete bgPipelineCache[i];
+        if (bgAttemptIndex <= i) bgAttemptIndex = i + 1;
+        if (i + 1 < bgAttempts().length) return tryFrom(i + 1);
+        throw e;
+      });
+    }
+    return tryFrom(bgAttemptIndex);
   }
   // Sharpens the model's alpha mask toward solid 0/255 before a small blur,
   // so its soft, low-confidence edge doesn't show up as a visible halo
@@ -2159,9 +2184,7 @@
       return r.blob();
     }).then(function (srcBlob) {
       blobUrl = URL.createObjectURL(srcBlob);
-      return loadBgPipeline(onProgress);
-    }).then(function (segmenter) {
-      return segmenter(blobUrl);
+      return runBgRemoval(blobUrl, onProgress);
     }).then(function (result) {
       if (blobUrl) { URL.revokeObjectURL(blobUrl); blobUrl = null; }
       // The pipeline returns a RawImage (RGBA: the original with the predicted
