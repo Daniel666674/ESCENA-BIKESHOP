@@ -1259,5 +1259,20 @@ window.ESCENA_AUDIT = [
    "buje-cassette-negro-plata"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-02T07:55:55.931Z",
+  "actor": "daniel.f.acosta96@gmail.com",
+  "summary": "6 productos editados, 7 fotos subidas",
+  "created": [],
+  "edited": [
+   "buje-delantero-negro",
+   "aro_demolition_zero_plus_negro",
+   "shadow-buje-delantero-negro",
+   "cana-shadow-chula-48mm",
+   "escena-stem-grabado-plata",
+   "aros_stolen_chamber_cromados"
+  ],
+  "deleted": []
  }
 ];
