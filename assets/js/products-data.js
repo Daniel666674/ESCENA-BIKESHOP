@@ -1486,18 +1486,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1784332431720"
  },
  {
-  "slug": "cassette-profle-mini-derecho",
-  "n": "Cassette Profle Mini Derecho",
-  "brand": "Profile",
-  "cat": "manzana-trasera",
-  "spec": "9T · Cassette · 36H · Aluminio 6061 · Derecho",
-  "price": 1300000,
-  "sku": "sahsadhjfhjas",
-  "units": 2,
-  "order": 220,
-  "img": "assets/img/products/cassette-profle-mini-derecho.jpg?v=1784164462529"
- },
- {
   "slug": "marco-gw-destructor-azul-20-5",
   "n": "Marco GW Destructor Azul",
   "brand": "GW",
