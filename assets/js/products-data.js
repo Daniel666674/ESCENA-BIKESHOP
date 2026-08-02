@@ -2898,7 +2898,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "LHD",
   "order": 360,
-  "img": "assets/img/products/buje-cassette-negro-plata.jpg?v=1785655660897"
+  "img": "assets/img/products/buje-cassette-negro-plata.jpg?v=1785656306169"
  },
  {
   "slug": "odyssey-buje-cassette-negro",
