@@ -18,19 +18,27 @@
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <!-- The admin-only "Quitar fondo" (background removal) feature loads
        @huggingface/transformers on demand from jsdelivr (see loadBgPipeline
-       below). It bundles its own onnxruntime-web for the normal CPU/WASM
-       path, but its WebGPU backend is a separate lazy import of the bare
-       specifier "onnxruntime-web/webgpu" — browsers can't resolve a bare
-       specifier without an entry for it (confirmed on a real device: it
-       failed with "Failed to resolve module specifier onnxruntime-web/
-       webgpu" the moment WebGPU was attempted). Pinned to the exact
-       onnxruntime-web version @huggingface/transformers@4.2.0 depends on
-       (verified via its published package.json), at the exact dist file
-       its own "./webgpu" export map points to. -->
+       below). Two of its dependency's files use bare module specifiers
+       that browsers can't resolve without an explicit entry — each one
+       only surfaced on a real device after the previous one was fixed:
+         - transformers.web.js itself has a static "import { Tensor } from
+           'onnxruntime-common'" (real device error: "Failed to resolve
+           module specifier onnxruntime-common").
+         - onnxruntime-web's WebGPU backend is a separate lazy import of
+           "onnxruntime-web/webgpu" (real device error: "...module
+           specifier onnxruntime-web/webgpu").
+       Both are pinned to the EXACT versions @huggingface/transformers@4.2.0
+       and onnxruntime-web actually depend on (verified via their published
+       package.json files, not guessed), at the exact dist file each
+       package's own export map points to for ESM — confirmed present by
+       downloading and inspecting the real tarballs. onnxruntime-common's
+       ESM entry only re-exports sibling files via relative imports (no
+       further bare specifiers), so this should be the end of the chain. -->
   <script type="importmap">
   {
     "imports": {
-      "onnxruntime-web/webgpu": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.26.0-dev.20260416-b7804b056c/dist/ort.webgpu.bundle.min.mjs"
+      "onnxruntime-web/webgpu": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.26.0-dev.20260416-b7804b056c/dist/ort.webgpu.bundle.min.mjs",
+      "onnxruntime-common": "https://cdn.jsdelivr.net/npm/onnxruntime-common@1.24.0-dev.20251116-b39e144322/dist/esm/index.js"
     }
   }
   </script>
