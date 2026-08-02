@@ -2573,9 +2573,8 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583",
-   "assets/img/products/cana-shadow-chula-48mm.jpg?v=1784053116105",
-   "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1784053122690"
+   "assets/img/products/cana-shadow-chula-48mm.jpg?v=1785657341311",
+   "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1785657342567"
   ],
   "sizes": [
    {
@@ -2584,7 +2583,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 860,
-  "img": "assets/img/products/cana-shadow-chula-48mm-3.jpg?v=1784053127583"
+  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1785657341311"
  },
  {
   "slug": "marco-cult-biggie-hammertone",
@@ -2966,7 +2965,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "tag": "TOP",
   "order": 730,
-  "img": "assets/img/products/buje-delantero-negro.jpg"
+  "img": "assets/img/products/buje-delantero-negro.jpg?v=1785657343691"
  },
  {
   "slug": "shadow-buje-delantero-negro",
@@ -2978,7 +2977,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "SHADOW-BUJE-DELANTERO-NEGRO",
   "units": 1,
   "order": 800,
-  "img": "assets/img/products/shadow-buje-delantero-negro.jpg"
+  "img": "assets/img/products/shadow-buje-delantero-negro.jpg?v=1785657344801"
  },
  {
   "slug": "buje-delantero-cromado",
@@ -3155,7 +3154,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 870,
-  "img": "assets/img/products/escena-stem-grabado-plata.jpg"
+  "img": "assets/img/products/escena-stem-grabado-plata.jpg?v=1785657345932"
  },
  {
   "slug": "federal-stem-plata",
@@ -4174,7 +4173,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "ARO_DEMOLITION_ZERO_PLUS_NEGRO",
   "units": 12,
   "order": 750,
-  "img": "assets/img/products/aro_demolition_zero_plus_negro.jpeg"
+  "img": "assets/img/products/aro_demolition_zero_plus_negro.jpg?v=1785657347055"
  },
  {
   "slug": "aros_eclat_bondi_cromados",
@@ -4211,7 +4210,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "AROS_STOLEN_CHAMBER_CROMADOS",
   "units": 12,
   "order": 880,
-  "img": "assets/img/products/aros_stolen_chamber_cromados.jpeg"
+  "img": "assets/img/products/aros_stolen_chamber_cromados.jpg?v=1785657348209"
  },
  {
   "slug": "coraza_cult_wafflecup_2.40",
