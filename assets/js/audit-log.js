@@ -1223,5 +1223,15 @@ window.ESCENA_AUDIT = [
    "kit-hardware-bielas-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-02T06:38:48.351Z",
+  "actor": "daniel.f.acosta96@gmail.com",
+  "summary": "1 producto eliminado",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "cassette-profle-mini-derecho"
+  ]
  }
 ];
