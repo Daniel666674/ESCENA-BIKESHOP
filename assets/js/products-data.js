@@ -36,28 +36,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/tall-order-ramp.jpg?v=1785529018434"
  },
  {
-  "n": "Tenedor Ontrail Nemesis",
-  "brand": "Ontrail",
-  "cat": "horquillas",
-  "spec": "Material Acero",
-  "price": 50000,
-  "sku": "TEN-ONT-001",
-  "units": 2,
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 1
-   },
-   {
-    "label": "Cromado",
-    "units": 1
-   }
-  ],
-  "slug": "tenedor-ontrail-nemesis",
-  "order": 1940,
-  "img": "assets/img/escena-logo.jpg"
- },
- {
   "n": "Tenedor Fiction Shank",
   "brand": "Fiction",
   "cat": "horquillas",
@@ -3767,7 +3745,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TORNILLOS-TITANIO-SILLIN-ARCOIRIS",
   "units": 12,
   "order": 1870,
-  "img": "assets/img/products/tornillos-titanio-sillin-arcoiris.jpg"
+  "img": "assets/img/products/tornillos-titanio-sillin-arcoiris.jpg?v=1785658006541"
  },
  {
   "slug": "tornillos-titanio-morado",
@@ -3779,7 +3757,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "TORNILLOS-TITANIO-MORADO",
   "units": 12,
   "order": 1700,
-  "img": "assets/img/products/tornillos-titanio-morado.jpg"
+  "img": "assets/img/products/tornillos-titanio-morado.jpg?v=1785658007701"
  },
  {
   "slug": "mutany-tornillos-negro",
@@ -3803,7 +3781,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "FEDERAL-TORNILLOS-NEGRO",
   "units": 12,
   "order": 1900,
-  "img": "assets/img/products/federal-tornillos-negro.jpg"
+  "img": "assets/img/products/federal-tornillos-negro.jpg?v=1785658008922"
  },
  {
   "slug": "tija-negra-01",
