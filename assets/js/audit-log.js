@@ -1288,5 +1288,20 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "tenedor-ontrail-nemesis"
   ]
+ },
+ {
+  "ts": "2026-08-02T08:15:37.001Z",
+  "actor": "daniel.f.acosta96@gmail.com",
+  "summary": "6 productos editados, 6 fotos subidas",
+  "created": [],
+  "edited": [
+   "buje-cassette-negro-plata",
+   "odyssey-buje-cassette-negro",
+   "stolen-buje-trasero-cassette-negro",
+   "mutany-mercury-elite-lhd-buje-negro",
+   "buje-cassette-negro-plata-02",
+   "buje-cassette-negro"
+  ],
+  "deleted": []
  }
 ];
