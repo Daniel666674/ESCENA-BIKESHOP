@@ -2072,10 +2072,23 @@
     return out;
   }
   function removeBgClientSide(dataUri, onProgress) {
-    return loadBgRemoveModule().then(function (mod) {
-      return mod.removeBackground(dataUri, {
-        output: { format: "image/png" },
-        progress: onProgress || function () {}
+    // Existing (already-published) photos are stored as a relative site path
+    // (e.g. "assets/img/products/foo.jpg"), not a data: URI — the library
+    // would otherwise try to resolve that relative path against its OWN CDN
+    // base (meant for model files), fetch a URL that doesn't exist there,
+    // and fail decoding the resulting HTML error page as an image
+    // ("Invalid format: text/html"). Fetching it ourselves into a real Blob
+    // first sidesteps that entirely, for both data: URIs and site paths.
+    var absoluteUrl = new URL(dataUri, location.href).href;
+    return fetch(absoluteUrl).then(function (r) {
+      if (!r.ok) throw new Error("no se pudo leer la foto original (HTTP " + r.status + ")");
+      return r.blob();
+    }).then(function (srcBlob) {
+      return loadBgRemoveModule().then(function (mod) {
+        return mod.removeBackground(srcBlob, {
+          output: { format: "image/png" },
+          progress: onProgress || function () {}
+        });
       });
     }).then(function (blob) {
       return createImageBitmap(blob);
