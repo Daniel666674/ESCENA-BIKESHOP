@@ -1249,5 +1249,15 @@ window.ESCENA_AUDIT = [
    "buje-cassette-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-02T07:38:28.637Z",
+  "actor": "daniel.f.acosta96@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "buje-cassette-negro-plata"
+  ],
+  "deleted": []
  }
 ];
