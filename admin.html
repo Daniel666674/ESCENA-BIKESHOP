@@ -1760,6 +1760,16 @@
   // i belongs to ("" = shown for every color, the default). Only meaningful
   // when the product has 2+ colors defined; drives imgColorMap on submit.
   var modalPhotoColors = [];
+  // Parallel to modalPhotos: the pre-"Quitar fondo" src for photo i, so a bad
+  // auto-cutout (reflective/hollow parts confuse the model) can be undone
+  // without re-uploading from the phone. Cleared (null) once undone, and reset
+  // whenever the modal opens for a different product.
+  var modalPhotoBgBackup = [];
+  // Count of in-flight "Quitar fondo" operations for the currently open modal.
+  // Closing the modal or saving while this is >0 would silently discard the
+  // in-progress edit (modalPhotos gets reassigned/read before the async result
+  // lands) — gate both on this instead.
+  var bgProcessing = 0;
   var modalSizes = [];
   var modalColors = [];
   // Multiple devices can publish close together. products-data.js and
@@ -2001,9 +2011,12 @@
      Runs entirely on the admin's own device via @imgly/background-removal
      (WebAssembly + onnxruntime-web), loaded on demand from a CDN the first
      time "Quitar fondo" is clicked. No server, no local setup, no photo
-     ever leaves the browser. The model (~40-80MB) downloads once per
-     browser and is cached by it afterward, so only the very first use on a
-     given device is slow. */
+     ever leaves the browser. Uses the library's full-precision "large"
+     model (see removeBgClientSide below) for the best accuracy on
+     reflective/chrome parts and parts with holes — bigger download than
+     the default, but it only happens once per browser (cached afterward),
+     and device:"gpu" uses WebGPU to run it when the browser supports it
+     (automatic fallback to CPU/WASM otherwise). */
   var BG_LIB_VERSION = "1.7.0";
   var bgRemoveModulePromise = null;
   function loadBgRemoveModule() {
@@ -2087,6 +2100,15 @@
       return loadBgRemoveModule().then(function (mod) {
         return mod.removeBackground(srcBlob, {
           output: { format: "image/png" },
+          // Full-precision model (vs. the library's "medium"/fp16 default) —
+          // meaningfully more accurate on the cases that were actually failing:
+          // reflective/chrome parts (mask biting into the product) and holes
+          // cut into a part (bolt holes, spoke cutouts left as a smudge instead
+          // of clean background). device:"gpu" pays for the extra compute: the
+          // library feature-detects WebGPU itself and falls back to CPU/WASM
+          // automatically when it's unavailable, so this is safe everywhere.
+          model: "large",
+          device: "gpu",
           progress: onProgress || function () {}
         });
       });
@@ -2648,7 +2670,8 @@
         '<div class="mv-bar">' +
         '<button type="button" class="mv mv-l" data-i="' + i + '" data-dir="-1"' + (i === 0 ? ' disabled' : '') + ' aria-label="Mover a la izquierda">&#8249;</button>' +
         '<button type="button" class="mv mv-rot" data-i="' + i + '" data-deg="90" aria-label="Rotar 90°">&#8635;</button>' +
-        '<button type="button" class="mv mv-bg" data-i="' + i + '" title="Quitar fondo (procesa en tu navegador, la primera vez descarga un modelo ~50MB)" aria-label="Quitar fondo">&#9986;</button>' +
+        '<button type="button" class="mv mv-bg" data-i="' + i + '" title="Quitar fondo (procesa en tu navegador; la primera vez descarga el modelo, puede tardar)" aria-label="Quitar fondo">&#9986;</button>' +
+        (modalPhotoBgBackup[i] ? '<button type="button" class="mv mv-undo" data-i="' + i + '" title="Deshacer quitar fondo (volver a la foto original)" aria-label="Deshacer quitar fondo">&#8617;</button>' : '') +
         '<button type="button" class="mv mv-r" data-i="' + i + '" data-dir="1"' + (i === n - 1 ? ' disabled' : '') + ' aria-label="Mover a la derecha">&#8250;</button>' +
         '</div>' +
         '</div>' + picker +
@@ -2732,6 +2755,8 @@
     document.getElementById("pmDuplicateBtn").style.display = p ? "" : "none";
     updateMarginReadout();
     modalPhotos = p ? p.imgs.slice() : [];
+    modalPhotoBgBackup = modalPhotos.map(function () { return null; });
+    bgProcessing = 0;
     // Reverse p.imgColorMap ({label: [indices]}) into one label per photo index.
     modalPhotoColors = modalPhotos.map(function () { return ""; });
     if (p && p.imgColorMap) {
@@ -2796,6 +2821,10 @@
     updateMarginReadout();
   }
   function closeProductModal() {
+    if (bgProcessing > 0) {
+      showToast("Espera a que termine de quitar el fondo antes de cerrar.");
+      return;
+    }
     document.getElementById("pmodalOverlay").classList.remove("show");
   }
 
@@ -3149,6 +3178,7 @@
           return compressDataUri(raw, 1200, 0.8).then(function (compressed) {
             modalPhotos.push(compressed);
             modalPhotoColors.push("");
+            modalPhotoBgBackup.push(null);
           }).catch(function (e) {
             var msg = (e && /negro/.test(e.message))
               ? '"' + file.name + '" salió en negro — probá de nuevo, o subila desde otro navegador (no desde WhatsApp/Instagram).'
@@ -3170,6 +3200,7 @@
         var rmI = parseInt(rm.getAttribute("data-i"), 10);
         modalPhotos.splice(rmI, 1);
         modalPhotoColors.splice(rmI, 1);
+        modalPhotoBgBackup.splice(rmI, 1);
         renderModalPhotos();
         return;
       }
@@ -3189,22 +3220,43 @@
       var bg = e.target.closest(".mv-bg");
       if (bg) {
         var bgI = parseInt(bg.getAttribute("data-i"), 10);
+        var bgSrc = modalPhotos[bgI];
         bg.disabled = true;
         bg.textContent = "…";
-        removeBgClientSide(modalPhotos[bgI], function (key, current, total) {
+        bgProcessing++;
+        removeBgClientSide(bgSrc, function (key, current, total) {
           if (key.indexOf("fetch:") === 0 && total) {
             bg.textContent = Math.round((current / total) * 100) + "%";
+          } else if (key.indexOf("compute:") === 0 && total) {
+            // No byte count during inference itself (only during the one-time
+            // model download), so show the step count instead — otherwise the
+            // button just shows a static "…" for however long inference takes
+            // (several seconds+ on CPU), which reads as frozen/broken.
+            bg.textContent = current + "/" + total;
           } else {
             bg.textContent = "…";
           }
         }).then(function (out) {
+          bgProcessing--;
+          modalPhotoBgBackup[bgI] = bgSrc;
           modalPhotos[bgI] = out;
           renderModalPhotos();
         }).catch(function (e2) {
+          bgProcessing--;
           showToast("No se pudo quitar el fondo: " + (e2 && e2.message || "error desconocido") + " — probá de nuevo o con otra foto.");
           bg.disabled = false;
           bg.textContent = "✂";
         });
+        return;
+      }
+      var undo = e.target.closest(".mv-undo");
+      if (undo) {
+        var undoI = parseInt(undo.getAttribute("data-i"), 10);
+        if (modalPhotoBgBackup[undoI]) {
+          modalPhotos[undoI] = modalPhotoBgBackup[undoI];
+          modalPhotoBgBackup[undoI] = null;
+          renderModalPhotos();
+        }
         return;
       }
       var mv = e.target.closest(".mv");
@@ -3214,6 +3266,7 @@
         if (j < 0 || j >= modalPhotos.length) return;
         var tmp = modalPhotos[i]; modalPhotos[i] = modalPhotos[j]; modalPhotos[j] = tmp;
         var tmpC = modalPhotoColors[i]; modalPhotoColors[i] = modalPhotoColors[j]; modalPhotoColors[j] = tmpC;
+        var tmpB = modalPhotoBgBackup[i]; modalPhotoBgBackup[i] = modalPhotoBgBackup[j]; modalPhotoBgBackup[j] = tmpB;
         renderModalPhotos();
       }
     });
@@ -3275,6 +3328,10 @@
 
     document.getElementById("pmodalForm").addEventListener("submit", function (e) {
       e.preventDefault();
+      if (bgProcessing > 0) {
+        showToast("Espera a que termine de quitar el fondo antes de guardar.");
+        return;
+      }
       var name = document.getElementById("pmName").value.trim();
       if (!name) return;
       var catVal = document.getElementById("pmCat").value;
