@@ -800,7 +800,6 @@
      so a homepage visit doesn't pull down every category's clip up front. */
   (function categoryVideos(){
     var videoMap = window.ESCENA_CATEGORY_VIDEO_V || {};
-    var extMime = { mp4: "video/mp4", mov: "video/quicktime", m4v: "video/x-m4v", webm: "video/webm" };
     var cards = document.querySelectorAll("#catsGrid .cat[data-cat]");
     if (!cards.length || typeof IntersectionObserver === "undefined") return;
     var io = new IntersectionObserver(function (entries) {
@@ -812,12 +811,12 @@
         if (!info || !info.v || !info.ext) return; // no clip uploaded for this category yet -> keep the photo
         var vid = entry.target.querySelector("video");
         if (!vid) return;
-        var source = document.createElement("source");
-        source.src = "assets/video/cat-" + cat + "." + info.ext + "?v=" + info.v;
-        source.type = extMime[info.ext] || "video/mp4";
-        vid.appendChild(source);
+        // Setting src directly (same as admin.html's own preview, which is
+        // confirmed working) rather than appending a <source> + calling
+        // load() — that indirection was only ever verified against a mocked
+        // video in tests, never proven against a real file end-to-end.
         vid.addEventListener("loadeddata", function () { vid.classList.add("is-visible"); }, { once: true });
-        vid.load();
+        vid.src = "assets/video/cat-" + cat + "." + info.ext + "?v=" + info.v;
         var playPromise = vid.play();
         if (playPromise && playPromise.catch) playPromise.catch(function () {}); // autoplay can be blocked -> card just keeps showing the photo
       });
