@@ -117,8 +117,16 @@
     }
 
     /* ============ PAGE HEADER ============ */
-    .page-head { background: var(--ink); padding: 2.6rem 1.5rem; }
-    .page-head .wrap { max-width: 1180px; margin: 0 auto; }
+    .page-head { position: relative; background: var(--ink); padding: 2.6rem 1.5rem; overflow: hidden; }
+    /* Optional video background (admin-managed, same source as the homepage
+       category cards — assets/js/category-video.js): shown when the
+       currently-selected category has one, see updatePageHeadVideo() below.
+       Falls back to the plain --ink background when it doesn't. */
+    .page-head-media { position: absolute; inset: 0; z-index: 0; }
+    .page-head-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s; }
+    .page-head-media video.is-visible { opacity: 1; }
+    .page-head-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(10,10,10,.88) 0%, rgba(10,10,10,.6) 55%, rgba(10,10,10,.75) 100%); pointer-events: none; }
+    .page-head .wrap { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; }
     .page-head .crumb { font-size: .74rem; color: rgba(255,255,255,.5); margin-bottom: .6rem; }
     .page-head .crumb a { color: rgba(255,255,255,.5); text-decoration: none; }
     .page-head .crumb a:hover { color: #fff; }
@@ -455,6 +463,8 @@ header.top-bar .brand .name { color: #fff; }
 
 <!-- ============ PAGE HEADER ============ -->
 <div class="page-head">
+  <div class="page-head-media" id="pageHeadMedia"></div>
+  <div class="page-head-overlay"></div>
   <div class="wrap">
     <div class="crumb"><a href="inicio">Inicio</a> / Tienda</div>
     <h1 id="pageTitle">TIENDA</h1>
@@ -590,6 +600,7 @@ header.top-bar .brand .name { color: #fff; }
 </a>
 
 <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+<script>document.write('<scr'+'ipt src="assets/js/category-video.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 <script>
 var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.published !== false; });  var WA = "573107630504";
   var PAGE_SIZE = 12;
@@ -683,8 +694,30 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
       '</article>';
   }
 
+  // Shows the same admin-managed video used on the homepage's category card
+  // (assets/js/category-video.js) as the black strip's background when the
+  // selected category has one; otherwise leaves it plain black. Guarded by
+  // pageHeadVideoCat so pagination clicks (same filter, different page)
+  // don't restart/reload the video on every click.
+  var pageHeadVideoCat = null;
+  function updatePageHeadVideo(filter){
+    if (filter === pageHeadVideoCat) return;
+    pageHeadVideoCat = filter;
+    var wrap = document.getElementById("pageHeadMedia");
+    if (!wrap) return;
+    var info = (window.ESCENA_CATEGORY_VIDEO_V || {})[filter];
+    if (!info || !info.v || !info.ext) { wrap.innerHTML = ""; return; }
+    wrap.innerHTML = '<video muted loop playsinline aria-hidden="true"></video>';
+    var vid = wrap.querySelector("video");
+    vid.addEventListener("loadeddata", function(){ vid.classList.add("is-visible"); }, { once: true });
+    vid.src = "assets/video/cat-" + filter + "." + info.ext + "?v=" + info.v;
+    var p = vid.play();
+    if (p && p.catch) p.catch(function(){}); // autoplay can be blocked -> strip just stays plain black
+  }
+
   function render(filter, page){
     currentFilter = filter;
+    updatePageHeadVideo(filter);
     var filtered = getFiltered(filter);
     var totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
     currentPage = Math.min(Math.max(1, page), totalPages);
