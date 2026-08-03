@@ -6,9 +6,5 @@ window.ESCENA_HERO_SLIDES = [
  {
   "id": "seed-2",
   "img": "assets/img/products/eclat-trippin-rin-negro.jpg"
- },
- {
-  "id": "seed-3",
-  "img": "assets/img/products/cult-bielas-negro.jpg"
  }
 ];
