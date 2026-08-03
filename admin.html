@@ -193,6 +193,7 @@
     .catvid-status { font-size: .7rem; font-weight: 700; letter-spacing: .04em; }
     .catvid-status.has-video { color: var(--violet-dark); }
     .catvid-status.no-video { color: var(--muted); }
+    .catvid-status.warn { color: var(--amber); }
     .catvid-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
     .catvid-actions .btn { flex: 1; }
 
@@ -2996,6 +2997,14 @@
     { key: "sillines", label: "Sillas" }
   ];
   var categoryVideoMap = {}; // {catKey: {v: versionNumber, ext: "mp4"|"mov"|...}}, loaded from window.ESCENA_CATEGORY_VIDEO_V
+  // Set when THIS browser's own preview couldn't decode/play a just-uploaded
+  // video (confirmed real case: an iPhone recording in "Alta eficiencia"
+  // records HEVC, which plays fine on the phone but most non-Apple browsers
+  // can't decode at all — the storefront then just silently keeps showing
+  // the photo forever, with no error anywhere). Surfacing it here, in the
+  // same browser and the same moment as the upload, beats the admin only
+  // finding out later by checking the live homepage on a different device.
+  var categoryVideoWarnings = {}; // {catKey: true}
   var CATEGORY_VIDEO_MAX_BYTES = 20 * 1024 * 1024;
   // iPhones default to recording .mov (QuickTime container, often HEVC video)
   // rather than .mp4 — rejecting anything that isn't literally ".mp4" made
@@ -3039,13 +3048,16 @@
     if (countEl) countEl.textContent = withVideo + " de " + HOMEPAGE_CATEGORY_CARDS.length + " con video";
     grid.innerHTML = HOMEPAGE_CATEGORY_CARDS.map(function (c) {
       var entry = categoryVideoMap[c.key];
+      var warn = entry && categoryVideoWarnings[c.key];
       var preview = entry
         ? '<video muted loop playsinline autoplay src="assets/video/cat-' + c.key + '.' + entry.ext + '?v=' + entry.v + '"></video>'
         : '<div class="catvid-empty">Sin video — se muestra la foto actual de esta categoría</div>';
+      var statusClass = warn ? "warn" : (entry ? "has-video" : "no-video");
+      var statusText = warn ? "⚠ Este navegador no pudo reproducirlo" : (entry ? "✓ Video activo" : "Sin video");
       return '<div class="catvid-card" data-cat="' + c.key + '">' +
         '<h4>' + esc(c.label) + '</h4>' +
         '<div class="catvid-preview">' + preview + '</div>' +
-        '<div class="catvid-status ' + (entry ? "has-video" : "no-video") + '">' + (entry ? "✓ Video activo" : "Sin video") + '</div>' +
+        '<div class="catvid-status ' + statusClass + '">' + statusText + '</div>' +
         '<div class="catvid-actions">' +
         '<button type="button" class="btn btn-outline btn-sm catvid-upload-btn" data-cat="' + c.key + '">' + (entry ? "Reemplazar" : "Subir video") + '</button>' +
         (entry ? '<button type="button" class="btn btn-outline btn-sm catvid-remove-btn" data-cat="' + c.key + '">Quitar</button>' : '') +
@@ -3062,6 +3074,7 @@
       return;
     }
     var ext = videoExtFromFile(file);
+    delete categoryVideoWarnings[catKey]; // a fresh upload deserves a fresh check, not the previous attempt's stale warning
     var btns = cardEl.querySelectorAll("button");
     btns.forEach(function (b) { b.disabled = true; });
     var uploadBtn = cardEl.querySelector(".catvid-upload-btn");
@@ -3085,6 +3098,16 @@
           categoryVideoMap[catKey] = entry;
           renderCategoryVideos();
           showToast("Video actualizado. La tienda se actualiza en ~1 minuto.");
+          // Check playback in THIS browser right now, using the preview
+          // <video> just rendered above — see categoryVideoWarnings.
+          var previewVideo = document.querySelector('.catvid-card[data-cat="' + catKey + '"] .catvid-preview video');
+          if (previewVideo) {
+            previewVideo.addEventListener("error", function () {
+              categoryVideoWarnings[catKey] = true;
+              renderCategoryVideos();
+              showToast("Se subió, pero este navegador no pudo reproducir el video — puede no verse para algunos visitantes. Si tu iPhone graba en \"Alta eficiencia\", cambiá a \"Más compatible\" en Cámara y volvé a subirlo.");
+            }, { once: true });
+          }
         })
         .catch(function (e) {
           showToast("No se pudo subir el video: " + (e && e.message || "error desconocido"));
