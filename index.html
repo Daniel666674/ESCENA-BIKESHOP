@@ -788,15 +788,19 @@
   });
 
   /* ---- Category card videos (admin-managed, optional per category) ----
-     Loads assets/js/category-video.js above, a tiny {catKey: versionNumber}
-     map committed by admin.html's "Página principal" tab. A category with no
-     entry keeps showing its plain photo (the .cat's own background-image) —
-     nothing here ever removes that, the video is just an extra layer on top.
-     Lazy: the actual video file only starts downloading once its card is
-     about to scroll into view, so a homepage visit doesn't pull down every
-     category's clip up front. */
+     Loads assets/js/category-video.js above, a tiny
+     {catKey: {v: versionNumber, ext: "mp4"|"mov"|...}} map committed by
+     admin.html's "Página principal" tab. The extension is whatever the
+     admin actually uploaded (iPhones default to .mov, not .mp4) — kept
+     as-is rather than mislabeled, so the <source type> matches the real
+     container. A category with no entry keeps showing its plain photo
+     (the .cat's own background-image) — nothing here ever removes that,
+     the video is just an extra layer on top. Lazy: the actual video file
+     only starts downloading once its card is about to scroll into view,
+     so a homepage visit doesn't pull down every category's clip up front. */
   (function categoryVideos(){
     var videoMap = window.ESCENA_CATEGORY_VIDEO_V || {};
+    var extMime = { mp4: "video/mp4", mov: "video/quicktime", m4v: "video/x-m4v", webm: "video/webm" };
     var cards = document.querySelectorAll("#catsGrid .cat[data-cat]");
     if (!cards.length || typeof IntersectionObserver === "undefined") return;
     var io = new IntersectionObserver(function (entries) {
@@ -804,13 +808,13 @@
         if (!entry.isIntersecting) return;
         io.unobserve(entry.target);
         var cat = entry.target.getAttribute("data-cat");
-        var v = videoMap[cat];
-        if (!v) return; // no clip uploaded for this category yet -> keep the photo
+        var info = videoMap[cat];
+        if (!info || !info.v || !info.ext) return; // no clip uploaded for this category yet -> keep the photo
         var vid = entry.target.querySelector("video");
         if (!vid) return;
         var source = document.createElement("source");
-        source.src = "assets/video/cat-" + cat + ".mp4?v=" + v;
-        source.type = "video/mp4";
+        source.src = "assets/video/cat-" + cat + "." + info.ext + "?v=" + info.v;
+        source.type = extMime[info.ext] || "video/mp4";
         vid.appendChild(source);
         vid.addEventListener("loadeddata", function () { vid.classList.add("is-visible"); }, { once: true });
         vid.load();

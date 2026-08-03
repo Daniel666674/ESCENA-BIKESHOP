@@ -724,7 +724,7 @@
 
       <section id="secPagina" style="display:none;">
       <h2 class="section-title">Página principal<span class="demo-tag" id="catVidCount">0 de 7 con video</span></h2>
-      <p class="section-sub">Reemplaza la foto de cada tarjeta de categoría en el inicio por un video corto (mudo, en loop) grabado en la tienda. Recomendado: 5-8 segundos, formato MP4, menos de 20MB — no se comprime automáticamente como las fotos, así que recórtalo/comprímelo antes de subir. Una categoría sin video sigue mostrando su foto normal.</p>
+      <p class="section-sub">Reemplaza la foto de cada tarjeta de categoría en el inicio por un video corto (mudo, en loop) grabado en la tienda. Recomendado: 5-8 segundos, menos de 20MB — no se comprime automáticamente como las fotos, así que recórtalo/comprímelo antes de subir. Acepta MP4 y MOV (los videos del iPhone se suben tal cual). <b>Tip iPhone:</b> si en Cámara → Formato tenés "Alta eficiencia" (el default), el video puede no reproducirse para visitantes con Android/Chrome — cambiá a "Más compatible" antes de grabar si querés evitar eso. Una categoría sin video sigue mostrando su foto normal.</p>
       <div class="catvid-grid" id="catVidGrid"></div>
       </section>
 
@@ -2995,8 +2995,25 @@
     { key: "pinones", label: "Plato" },
     { key: "sillines", label: "Sillas" }
   ];
-  var categoryVideoMap = {}; // {catKey: versionNumber}, loaded from window.ESCENA_CATEGORY_VIDEO_V
+  var categoryVideoMap = {}; // {catKey: {v: versionNumber, ext: "mp4"|"mov"|...}}, loaded from window.ESCENA_CATEGORY_VIDEO_V
   var CATEGORY_VIDEO_MAX_BYTES = 20 * 1024 * 1024;
+  // iPhones default to recording .mov (QuickTime container, often HEVC video)
+  // rather than .mp4 — rejecting anything that isn't literally ".mp4" made
+  // the button unusable from an iPhone. Accept the common video containers
+  // and keep the ORIGINAL extension all the way through storage/manifest/
+  // playback (see uploadCategoryVideo/renderCategoryVideos and index.html's
+  // categoryVideos()) instead of mislabeling a .mov file as .mp4, which
+  // browsers can be stricter about than the extension alone suggests.
+  var VIDEO_EXT_MIME = { mp4: "video/mp4", mov: "video/quicktime", m4v: "video/x-m4v", webm: "video/webm" };
+  function videoExtFromFile(file) {
+    var m = (file.name || "").toLowerCase().match(/\.([a-z0-9]+)$/);
+    if (m && VIDEO_EXT_MIME[m[1]]) return m[1];
+    var type = (file.type || "").toLowerCase();
+    if (type === "video/quicktime") return "mov";
+    if (type === "video/webm") return "webm";
+    if (type === "video/x-m4v") return "m4v";
+    return "mp4"; // default when neither the name nor the declared type is conclusive
+  }
   function parseRemoteObject(text) {
     if (!text) return {};
     var m = text.match(/window\.ESCENA_CATEGORY_VIDEO_V\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
@@ -3021,29 +3038,30 @@
     var countEl = document.getElementById("catVidCount");
     if (countEl) countEl.textContent = withVideo + " de " + HOMEPAGE_CATEGORY_CARDS.length + " con video";
     grid.innerHTML = HOMEPAGE_CATEGORY_CARDS.map(function (c) {
-      var v = categoryVideoMap[c.key];
-      var preview = v
-        ? '<video muted loop playsinline autoplay src="assets/video/cat-' + c.key + '.mp4?v=' + v + '"></video>'
+      var entry = categoryVideoMap[c.key];
+      var preview = entry
+        ? '<video muted loop playsinline autoplay src="assets/video/cat-' + c.key + '.' + entry.ext + '?v=' + entry.v + '"></video>'
         : '<div class="catvid-empty">Sin video — se muestra la foto actual de esta categoría</div>';
       return '<div class="catvid-card" data-cat="' + c.key + '">' +
         '<h4>' + esc(c.label) + '</h4>' +
         '<div class="catvid-preview">' + preview + '</div>' +
-        '<div class="catvid-status ' + (v ? "has-video" : "no-video") + '">' + (v ? "✓ Video activo" : "Sin video") + '</div>' +
+        '<div class="catvid-status ' + (entry ? "has-video" : "no-video") + '">' + (entry ? "✓ Video activo" : "Sin video") + '</div>' +
         '<div class="catvid-actions">' +
-        '<button type="button" class="btn btn-outline btn-sm catvid-upload-btn" data-cat="' + c.key + '">' + (v ? "Reemplazar" : "Subir video") + '</button>' +
-        (v ? '<button type="button" class="btn btn-outline btn-sm catvid-remove-btn" data-cat="' + c.key + '">Quitar</button>' : '') +
+        '<button type="button" class="btn btn-outline btn-sm catvid-upload-btn" data-cat="' + c.key + '">' + (entry ? "Reemplazar" : "Subir video") + '</button>' +
+        (entry ? '<button type="button" class="btn btn-outline btn-sm catvid-remove-btn" data-cat="' + c.key + '">Quitar</button>' : '') +
         '</div>' +
         '</div>';
     }).join("");
   }
   function uploadCategoryVideo(catKey, file, cardEl) {
     if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
-    var isMp4 = file.type === "video/mp4" || /\.mp4$/i.test(file.name);
-    if (!isMp4) { showToast("Subí un video en formato MP4."); return; }
+    var isVideo = (file.type || "").indexOf("video/") === 0 || /\.(mp4|mov|m4v|webm)$/i.test(file.name || "");
+    if (!isVideo) { showToast("Subí un archivo de video (MP4, MOV o WEBM)."); return; }
     if (file.size > CATEGORY_VIDEO_MAX_BYTES) {
       showToast("El video pesa " + (file.size / 1024 / 1024).toFixed(1) + "MB — recórtalo a unos 5-8 segundos y comprímelo (máx 20MB) antes de subir.");
       return;
     }
+    var ext = videoExtFromFile(file);
     var btns = cardEl.querySelectorAll("button");
     btns.forEach(function (b) { b.disabled = true; });
     var uploadBtn = cardEl.querySelector(".catvid-upload-btn");
@@ -3057,14 +3075,14 @@
     };
     reader.onload = function () {
       var b64 = String(reader.result).split(",")[1];
-      var path = "assets/video/cat-" + catKey + ".mp4";
+      var path = "assets/video/cat-" + catKey + "." + ext;
       ghPutWithRetry(path, "Add category video (" + catKey + ") via admin panel", function () { return b64; }, true)
         .then(function () {
-          var v = Date.now();
-          return commitCategoryVideoManifest(catKey, v).then(function () { return v; });
+          var entry = { v: Date.now(), ext: ext };
+          return commitCategoryVideoManifest(catKey, entry).then(function () { return entry; });
         })
-        .then(function (v) {
-          categoryVideoMap[catKey] = v;
+        .then(function (entry) {
+          categoryVideoMap[catKey] = entry;
           renderCategoryVideos();
           showToast("Video actualizado. La tienda se actualiza en ~1 minuto.");
         })
@@ -3096,7 +3114,7 @@
     var grid = document.getElementById("catVidGrid");
     if (!grid) return;
     var fileInput = document.createElement("input");
-    fileInput.type = "file"; fileInput.accept = "video/mp4"; fileInput.style.display = "none";
+    fileInput.type = "file"; fileInput.accept = "video/*"; fileInput.style.display = "none";
     document.body.appendChild(fileInput);
     var pendingCard = null;
     fileInput.addEventListener("change", function (e) {
