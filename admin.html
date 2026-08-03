@@ -188,7 +188,7 @@
     .catvid-card { background: #fff; border: 1px solid var(--card-line); border-radius: 14px; padding: 1rem; box-shadow: var(--card-shadow); display: flex; flex-direction: column; gap: .7rem; }
     .catvid-card h4 { font-size: .9rem; font-weight: 700; }
     .catvid-preview { position: relative; aspect-ratio: 4/3; border-radius: 10px; overflow: hidden; background: var(--panel); display: flex; align-items: center; justify-content: center; }
-    .catvid-preview video { width: 100%; height: 100%; object-fit: cover; }
+    .catvid-preview video, .catvid-preview img.catvid-preview-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
     .catvid-preview .catvid-empty { font-size: .72rem; color: var(--muted); text-align: center; padding: 0 .8rem; }
     .catvid-status { font-size: .7rem; font-weight: 700; letter-spacing: .04em; }
     .catvid-status.has-video { color: var(--violet-dark); }
@@ -724,7 +724,14 @@
       </section>
 
       <section id="secPagina" style="display:none;">
-      <h2 class="section-title">Página principal<span class="demo-tag" id="catVidCount">0 de 7 con video</span></h2>
+      <h2 class="section-title">Página principal</h2>
+
+      <h3 class="section-title" style="font-size:1.15rem;">Hero (carrusel del inicio)<span class="demo-tag" id="heroSlideCount">0 slides</span></h3>
+      <p class="section-sub">Las fotos/videos grandes que rotan arriba de todo en el inicio. Agrega, quita y reordena slides — cada uno es una foto, con un video opcional encima (se comprime y recorta a 8s automáticamente, igual que los videos de categoría). Al menos una foto es obligatoria; máximo 8 slides.</p>
+      <div class="catvid-grid" id="heroSlidesGrid"></div>
+      <button type="button" class="btn btn-violet btn-sm" id="heroSlideAddBtn" style="margin-top:1rem;">+ Agregar slide</button>
+
+      <h3 class="section-title" style="font-size:1.15rem; margin-top:2.4rem;">Categorías<span class="demo-tag" id="catVidCount">0 de 7 con video</span></h3>
       <p class="section-sub">Reemplaza la foto de cada tarjeta de categoría en el inicio por un video corto (mudo, en loop) grabado en la tienda. Se comprime automáticamente al subir (como las fotos) y se recorta a los primeros 8 segundos, así que no hace falta editarlo antes — subí el clip tal cual sale de la cámara, MP4 o MOV. Si tu navegador no puede comprimir (poco común), avisa y sube el original — en ese caso mantené el clip corto y liviano vos mismo (máx 20MB). Una categoría sin video sigue mostrando su foto normal.</p>
       <div class="catvid-grid" id="catVidGrid"></div>
       </section>
@@ -965,6 +972,7 @@
 
 <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 <script>document.write('<scr'+'ipt src="assets/js/category-video.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+<script>document.write('<scr'+'ipt src="assets/js/hero-slides.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 <!-- sales-log.js is intentionally NOT loaded here as a public script tag —
      it's not deployed to the public site at all (see deploy.yml's exclude
      list). Revenue data should only be readable by an authenticated admin,
@@ -2996,6 +3004,272 @@
     sellingIdx = null;
   }
 
+  /* ---- Página principal: hero carousel ----
+     The homepage's hero carousel (index.html #heroCarousel) is a variable-
+     length, reorderable list of slides — unlike the category cards' fixed 7
+     slots, so this needs its own array-shaped manifest (assets/js/
+     hero-slides.js: [{id, img, video?: {v, ext}}]) and a different, merge-
+     by-transform commit pattern: every mutation (add/remove/reorder/replace
+     photo or video) re-fetches the freshest remote array and applies just
+     that one change on top of it, the same safety reasoning as
+     mergeCatalog()/commitCategoryVideoManifest() but expressed as a
+     transform function instead of a flat key, since reordering isn't
+     representable as "touch one key". Each slide's photo is required (it's
+     the poster/fallback and what shows with no video); the video is
+     optional and reuses compressVideoFile()/videoExtFromFile() from the
+     category-video code below unchanged. */
+  var heroSlides = []; // [{id, img, video?}], loaded from window.ESCENA_HERO_SLIDES
+  var HERO_SLIDE_MAX = 8;
+  var heroSlideWarnings = {}; // id -> true, same purpose as categoryVideoWarnings
+  function parseRemoteHeroSlides(text) {
+    if (!text) return [];
+    var m = text.match(/window\.ESCENA_HERO_SLIDES\s*=\s*(\[[\s\S]*\])\s*;?\s*$/);
+    if (!m) return [];
+    try { var arr = JSON.parse(m[1]); return Array.isArray(arr) ? arr : []; } catch (e) { return []; }
+  }
+  // transformFn receives the FRESHEST remote array (never a stale local
+  // snapshot) on every attempt, including 409 retries — return null to
+  // abort the write (e.g. the slide to remove is already gone).
+  function commitHeroSlides(transformFn) {
+    return ghPutWithRetry("assets/js/hero-slides.js", "Update hero slides via admin panel", function (remoteText) {
+      var next = transformFn(parseRemoteHeroSlides(remoteText));
+      if (next === null) return null;
+      return "window.ESCENA_HERO_SLIDES = " + JSON.stringify(next, null, 1) + ";\n";
+    }, false);
+  }
+  function genHeroSlideId() { return "h" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+  function renderHeroSlides() {
+    var grid = document.getElementById("heroSlidesGrid");
+    if (!grid) return;
+    var countEl = document.getElementById("heroSlideCount");
+    if (countEl) countEl.textContent = heroSlides.length + (heroSlides.length === 1 ? " slide" : " slides");
+    var addBtn = document.getElementById("heroSlideAddBtn");
+    if (addBtn) addBtn.disabled = heroSlides.length >= HERO_SLIDE_MAX;
+    grid.innerHTML = heroSlides.map(function (s, i) {
+      var vid = s.video;
+      var warn = heroSlideWarnings[s.id];
+      var videoTag = vid ? '<video muted loop playsinline autoplay src="assets/video/hero-' + s.id + '.' + vid.ext + '?v=' + vid.v + '"></video>' : "";
+      var statusClass = warn ? "warn" : (vid ? "has-video" : "no-video");
+      var statusText = warn ? "⚠ Este navegador no pudo reproducir el video" : (vid ? "✓ Con video" : "Solo foto");
+      return '<div class="catvid-card" data-id="' + s.id + '">' +
+        '<h4>Slide ' + (i + 1) + '</h4>' +
+        '<div class="catvid-preview"><img class="catvid-preview-img" src="' + esc(s.img) + '" alt="" />' + videoTag + '</div>' +
+        '<div class="catvid-status ' + statusClass + '">' + statusText + '</div>' +
+        '<div class="catvid-actions" style="flex-wrap:wrap;">' +
+        '<button type="button" class="btn btn-outline btn-sm heroslide-up-btn" data-id="' + s.id + '" title="Mover arriba"' + (i === 0 ? " disabled" : "") + '>&uarr;</button>' +
+        '<button type="button" class="btn btn-outline btn-sm heroslide-down-btn" data-id="' + s.id + '" title="Mover abajo"' + (i === heroSlides.length - 1 ? " disabled" : "") + '>&darr;</button>' +
+        '<button type="button" class="btn btn-outline btn-sm heroslide-photo-btn" data-id="' + s.id + '">Cambiar foto</button>' +
+        '<button type="button" class="btn btn-outline btn-sm heroslide-video-btn" data-id="' + s.id + '">' + (vid ? "Reemplazar video" : "+ Video") + '</button>' +
+        (vid ? '<button type="button" class="btn btn-outline btn-sm heroslide-video-rm-btn" data-id="' + s.id + '">Quitar video</button>' : "") +
+        '<button type="button" class="btn btn-outline btn-sm heroslide-remove-btn" data-id="' + s.id + '" style="color:#c0392b;border-color:#c0392b;">Quitar slide</button>' +
+        '</div>' +
+        '</div>';
+    }).join("");
+  }
+  function setHeroCardBusy(id, busy) {
+    var card = document.querySelector('.catvid-card[data-id="' + id + '"]');
+    if (card) card.querySelectorAll("button").forEach(function (b) { b.disabled = busy; });
+    return card;
+  }
+  function addHeroSlide(file) {
+    if (heroSlides.length >= HERO_SLIDE_MAX) { showToast("Máximo " + HERO_SLIDE_MAX + " slides — quita uno antes de agregar otro."); return; }
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    var addBtn = document.getElementById("heroSlideAddBtn");
+    var originalLabel = addBtn.textContent;
+    addBtn.disabled = true; addBtn.textContent = "Subiendo…";
+    var id = genHeroSlideId();
+    var reader = new FileReader();
+    reader.onerror = function () { showToast("No se pudo leer el archivo."); addBtn.disabled = false; addBtn.textContent = originalLabel; };
+    reader.onload = function () {
+      compressDataUri(String(reader.result), 1920, 0.82).then(function (compressed) {
+        var b64 = compressed.split(",")[1];
+        var path = "assets/img/hero/slide-" + id + ".jpg";
+        return ghPutWithRetry(path, "Add hero slide photo (" + id + ") via admin panel", function () { return b64; }, true).then(function () {
+          var slide = { id: id, img: path + "?v=" + Date.now() };
+          return commitHeroSlides(function (arr) { arr.push(slide); return arr; }).then(function () { return slide; });
+        });
+      }).then(function (slide) {
+        heroSlides.push(slide);
+        renderHeroSlides();
+        showToast("Slide agregado. La tienda se actualiza en ~1 minuto.");
+      }).catch(function (e) {
+        showToast("No se pudo agregar el slide: " + (e && e.message || "error desconocido"));
+      }).then(function () {
+        addBtn.disabled = heroSlides.length >= HERO_SLIDE_MAX; addBtn.textContent = originalLabel;
+      });
+    };
+    reader.readAsDataURL(file);
+  }
+  function replaceHeroSlidePhoto(id, file) {
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    var card = setHeroCardBusy(id, true);
+    var reader = new FileReader();
+    reader.onerror = function () { showToast("No se pudo leer el archivo."); setHeroCardBusy(id, false); };
+    reader.onload = function () {
+      compressDataUri(String(reader.result), 1920, 0.82).then(function (compressed) {
+        var b64 = compressed.split(",")[1];
+        var path = "assets/img/hero/slide-" + id + ".jpg";
+        return ghPutWithRetry(path, "Update hero slide photo (" + id + ") via admin panel", function () { return b64; }, true).then(function () {
+          var newImg = path + "?v=" + Date.now();
+          return commitHeroSlides(function (arr) {
+            var found = arr.some(function (s) { if (s.id === id) { s.img = newImg; return true; } return false; });
+            return found ? arr : null;
+          }).then(function () { return newImg; });
+        });
+      }).then(function (newImg) {
+        var local = heroSlides.filter(function (s) { return s.id === id; })[0];
+        if (local) local.img = newImg;
+        renderHeroSlides();
+        showToast("Foto actualizada. La tienda se actualiza en ~1 minuto.");
+      }).catch(function (e) {
+        showToast("No se pudo actualizar la foto: " + (e && e.message || "error desconocido"));
+        setHeroCardBusy(id, false);
+      });
+    };
+    reader.readAsDataURL(file);
+  }
+  function uploadHeroSlideVideo(id, file) {
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    var isVideo = (file.type || "").indexOf("video/") === 0 || /\.(mp4|mov|m4v|webm)$/i.test(file.name || "");
+    if (!isVideo) { showToast("Subí un archivo de video (MP4, MOV o WEBM)."); return; }
+    if (file.size > 300 * 1024 * 1024) {
+      showToast("El archivo es demasiado grande (" + (file.size / 1024 / 1024).toFixed(0) + "MB) — recórtalo antes de subir.");
+      return;
+    }
+    delete heroSlideWarnings[id];
+    setHeroCardBusy(id, true);
+    compressVideoFile(file).then(function (compressed) {
+      var uploadFile = compressed || file;
+      var ext = compressed ? "webm" : videoExtFromFile(file);
+      if (uploadFile.size > CATEGORY_VIDEO_MAX_BYTES) {
+        var err = new Error("El video pesa " + (uploadFile.size / 1024 / 1024).toFixed(1) + "MB" + (compressed ? " incluso después de comprimirlo" : "") + " — recórtalo a unos 5-8 segundos antes de subir (máx 20MB).");
+        err.userFacing = true;
+        throw err;
+      }
+      return new Promise(function (resolve, reject) {
+        var reader = new FileReader();
+        reader.onerror = function () { reject(new Error("No se pudo leer el archivo.")); };
+        reader.onload = function () { resolve(String(reader.result).split(",")[1]); };
+        reader.readAsDataURL(uploadFile);
+      }).then(function (b64) {
+        var path = "assets/video/hero-" + id + "." + ext;
+        return ghPutWithRetry(path, "Add hero slide video (" + id + ") via admin panel", function () { return b64; }, true).then(function () {
+          var video = { v: Date.now(), ext: ext };
+          return commitHeroSlides(function (arr) {
+            var found = arr.some(function (s) { if (s.id === id) { s.video = video; return true; } return false; });
+            return found ? arr : null;
+          }).then(function () { return video; });
+        });
+      });
+    }).then(function (video) {
+      var local = heroSlides.filter(function (s) { return s.id === id; })[0];
+      if (local) local.video = video;
+      renderHeroSlides();
+      showToast("Video del slide actualizado. La tienda se actualiza en ~1 minuto.");
+      var previewVideo = document.querySelector('.catvid-card[data-id="' + id + '"] .catvid-preview video');
+      if (previewVideo) {
+        previewVideo.addEventListener("error", function () {
+          heroSlideWarnings[id] = true;
+          renderHeroSlides();
+          showToast("Se subió, pero este navegador no pudo reproducir el video — puede no verse para algunos visitantes. Si tu iPhone graba en \"Alta eficiencia\", cambiá a \"Más compatible\" en Cámara y volvé a subirlo.");
+        }, { once: true });
+      }
+    }).catch(function (e) {
+      showToast((e && e.userFacing ? "" : "No se pudo subir el video: ") + (e && e.message || "error desconocido"));
+      setHeroCardBusy(id, false);
+      renderHeroSlides();
+    });
+  }
+  function removeHeroSlideVideo(id) {
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    if (!confirm("¿Quitar el video de este slide? Volverá a mostrarse solo la foto.")) return;
+    setHeroCardBusy(id, true);
+    commitHeroSlides(function (arr) {
+      var found = arr.some(function (s) { if (s.id === id) { delete s.video; return true; } return false; });
+      return found ? arr : null;
+    }).then(function () {
+      var local = heroSlides.filter(function (s) { return s.id === id; })[0];
+      if (local) delete local.video;
+      delete heroSlideWarnings[id];
+      renderHeroSlides();
+      showToast("Video quitado — la tienda se actualiza en ~1 minuto.");
+    }).catch(function (e) {
+      showToast("No se pudo quitar: " + (e && e.message || "error desconocido"));
+      renderHeroSlides();
+    });
+  }
+  function removeHeroSlide(id) {
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    if (heroSlides.length <= 1) { showToast("Tiene que quedar al menos un slide."); return; }
+    if (!confirm("¿Quitar este slide del carrusel?")) return;
+    setHeroCardBusy(id, true);
+    commitHeroSlides(function (arr) { return arr.filter(function (s) { return s.id !== id; }); }).then(function () {
+      heroSlides = heroSlides.filter(function (s) { return s.id !== id; });
+      delete heroSlideWarnings[id];
+      renderHeroSlides();
+      showToast("Slide eliminado — la tienda se actualiza en ~1 minuto.");
+    }).catch(function (e) {
+      showToast("No se pudo quitar: " + (e && e.message || "error desconocido"));
+      renderHeroSlides();
+    });
+  }
+  function moveHeroSlide(id, dir) {
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    var i = heroSlides.findIndex(function (s) { return s.id === id; });
+    var j = i + dir;
+    if (i < 0 || j < 0 || j >= heroSlides.length) return;
+    setHeroCardBusy(id, true);
+    commitHeroSlides(function (arr) {
+      var ai = arr.findIndex(function (s) { return s.id === id; });
+      var aj = ai + dir;
+      if (ai < 0 || aj < 0 || aj >= arr.length) return null;
+      var tmp = arr[ai]; arr[ai] = arr[aj]; arr[aj] = tmp;
+      return arr;
+    }).then(function () {
+      var tmp = heroSlides[i]; heroSlides[i] = heroSlides[j]; heroSlides[j] = tmp;
+      renderHeroSlides();
+    }).catch(function (e) {
+      showToast("No se pudo reordenar: " + (e && e.message || "error desconocido"));
+      renderHeroSlides();
+    });
+  }
+  function initHeroSlides() {
+    heroSlides = (window.ESCENA_HERO_SLIDES || []).slice();
+    renderHeroSlides();
+    var grid = document.getElementById("heroSlidesGrid");
+    var addBtn = document.getElementById("heroSlideAddBtn");
+    if (!grid || !addBtn) return;
+    var photoInput = document.createElement("input");
+    photoInput.type = "file"; photoInput.accept = "image/*"; photoInput.style.display = "none";
+    var videoInput = document.createElement("input");
+    videoInput.type = "file"; videoInput.accept = "video/*"; videoInput.style.display = "none";
+    document.body.appendChild(photoInput); document.body.appendChild(videoInput);
+    var pendingId = null; // which slide a photo/video pick is for ("" = the "add slide" flow)
+    photoInput.addEventListener("change", function (e) {
+      var file = e.target.files && e.target.files[0];
+      e.target.value = "";
+      if (!file) return;
+      if (pendingId === "") addHeroSlide(file); else if (pendingId) replaceHeroSlidePhoto(pendingId, file);
+    });
+    videoInput.addEventListener("change", function (e) {
+      var file = e.target.files && e.target.files[0];
+      e.target.value = "";
+      if (file && pendingId) uploadHeroSlideVideo(pendingId, file);
+    });
+    addBtn.addEventListener("click", function () { pendingId = ""; photoInput.click(); });
+    grid.addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-id]");
+      if (!btn) return;
+      var id = btn.getAttribute("data-id");
+      if (btn.classList.contains("heroslide-up-btn")) moveHeroSlide(id, -1);
+      else if (btn.classList.contains("heroslide-down-btn")) moveHeroSlide(id, 1);
+      else if (btn.classList.contains("heroslide-photo-btn")) { pendingId = id; photoInput.click(); }
+      else if (btn.classList.contains("heroslide-video-btn")) { pendingId = id; videoInput.click(); }
+      else if (btn.classList.contains("heroslide-video-rm-btn")) removeHeroSlideVideo(id);
+      else if (btn.classList.contains("heroslide-remove-btn")) removeHeroSlide(id);
+    });
+  }
+
   /* ---- Página principal: category card videos ----
      The homepage's category cards (index.html #catsGrid) can show a short
      looping video instead of their static photo. This is a small, fixed set
@@ -3282,6 +3556,7 @@
       showToast("No se pudo cargar el registro de actividad");
     });
     initCategoryVideos();
+    initHeroSlides();
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
       invPage = 1;

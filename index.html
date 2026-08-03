@@ -43,6 +43,7 @@
   <script src="assets/js/wholesale.js?v=1"></script>
   <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
   <script>document.write('<scr'+'ipt src="assets/js/category-video.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+  <script>document.write('<scr'+'ipt src="assets/js/hero-slides.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 
   <!-- ============ Fonts ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -166,6 +167,12 @@
     .hero-carousel { position: absolute; inset: 0; z-index: 0; }
     .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center 35%; opacity: 0; transition: opacity 1.1s ease; }
     .hero-slide.is-active { opacity: 1; }
+    /* Optional per-slide video (admin-managed) — sits on top of the slide's
+       own background-image photo, invisible until it's actually decoded a
+       frame (same reasoning as the category cards: the photo is the poster
+       until the video is truly ready). */
+    .hero-slide video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; opacity: 0; transition: opacity .6s; }
+    .hero-slide video.is-visible { opacity: 1; }
     .hero-bg-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.72) 38%, rgba(10,10,10,.4) 68%, rgba(10,10,10,.55) 100%); }
     .hero-dots { position: absolute; z-index: 2; left: 50%; bottom: 1.6rem; transform: translateX(-50%); display: flex; gap: .5rem; }
     .hero-dots button { width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(255,255,255,.6); background: rgba(255,255,255,.25); padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
@@ -482,13 +489,9 @@
 
 <!-- ============ HERO (split) ============ -->
 <section class="hero">
-  <div class="hero-carousel" id="heroCarousel" aria-hidden="true">
-    <div class="hero-slide is-active" style="background-image:url('assets/img/products/federal-horquilla-cromada.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('assets/img/products/eclat-trippin-rin-negro.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('assets/img/products/cult-bielas-negro.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('assets/img/products/bsd-stem-negro.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('assets/img/products/odyssey-buje-cassette-negro.jpg')"></div>
-  </div>
+  <!-- Populated from window.ESCENA_HERO_SLIDES by heroCarousel() below —
+       admin-managed via admin.html's "Página principal" tab. -->
+  <div class="hero-carousel" id="heroCarousel" aria-hidden="true"></div>
   <div class="hero-bg-overlay"></div>
   <div class="hero-dots" id="heroDots" role="tablist" aria-label="Fotos destacadas"></div>
   <div class="wrap">
@@ -829,8 +832,41 @@
     var wrap = document.getElementById("heroCarousel");
     var dotsWrap = document.getElementById("heroDots");
     if (!wrap || !dotsWrap) return;
+    // Admin-managed via admin.html's "Página principal" tab: each slide is a
+    // photo, optionally with a short video layered on top (same fade-in-once-
+    // ready pattern as the category cards). Only the ACTIVE slide's video is
+    // ever loaded/playing — switching slides pauses the outgoing one and
+    // starts the incoming one — so a hero with several video slides doesn't
+    // download/decode all of them at once.
+    var slideData = window.ESCENA_HERO_SLIDES || [];
+    wrap.innerHTML = slideData.map(function (s, i) {
+      var bg = "background-image:url('" + String(s.img || "").replace(/'/g, "%27") + "')";
+      var videoEl = (s.video && s.video.ext && s.video.v) ? '<video muted loop playsinline preload="none" aria-hidden="true"></video>' : "";
+      return '<div class="hero-slide' + (i === 0 ? ' is-active' : '') + '" style="' + bg + '">' + videoEl + '</div>';
+    }).join("");
     var slides = Array.prototype.slice.call(wrap.querySelectorAll(".hero-slide"));
-    if (slides.length < 2) return;
+    if (!slides.length) return;
+
+    function activateSlideMedia(i) {
+      var data = slideData[i], slide = slides[i];
+      var vid = slide && slide.querySelector("video");
+      if (!vid || !data || !data.video) return;
+      if (!vid.getAttribute("src")) {
+        vid.addEventListener("loadeddata", function () { vid.classList.add("is-visible"); }, { once: true });
+        vid.src = "assets/video/hero-" + data.id + "." + data.video.ext + "?v=" + data.video.v;
+      }
+      var p = vid.play();
+      if (p && p.catch) p.catch(function () {}); // autoplay can be blocked -> slide just keeps showing the photo
+    }
+    function deactivateSlideMedia(i) {
+      var slide = slides[i];
+      var vid = slide && slide.querySelector("video");
+      if (vid && !vid.paused) vid.pause();
+    }
+    activateSlideMedia(0); // first slide is visible immediately on page load
+
+    if (slides.length < 2) return; // nothing to cycle, but its own video (if any) still plays
+
     var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var idx = 0, timer = null;
 
@@ -840,17 +876,26 @@
     var dots = Array.prototype.slice.call(dotsWrap.querySelectorAll("button"));
 
     function show(i){
+      var prevIdx = idx;
       idx = (i + slides.length) % slides.length;
       slides.forEach(function(s, n){ s.classList.toggle("is-active", n === idx); });
       dots.forEach(function(d, n){ d.classList.toggle("is-active", n === idx); });
+      if (prevIdx !== idx) deactivateSlideMedia(prevIdx);
+      activateSlideMedia(idx);
     }
     function next(){ show(idx + 1); }
+    // A video slide gets to play close to its full (capped-at-8s) length
+    // instead of being cut off by the fixed 5s photo timing.
+    function currentSlideDelay(){
+      var data = slideData[idx];
+      return (data && data.video) ? 8000 : 5000;
+    }
     function start(){
       if (reduceMotion) return;
       stop();
-      timer = setInterval(next, 5000);
+      timer = setTimeout(function () { next(); start(); }, currentSlideDelay());
     }
-    function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+    function stop(){ if (timer) { clearTimeout(timer); timer = null; } }
 
     dotsWrap.addEventListener("click", function(e){
       var btn = e.target.closest("button[data-i]");
