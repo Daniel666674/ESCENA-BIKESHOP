@@ -1001,6 +1001,12 @@
     "ivan.escena@gmail.com",
     "tiaghinoacosta@gmail.com"
   ];
+  // "Página principal" (hero + category-video management) is restricted to
+  // this one account — hidden from the nav entirely for the other allowed
+  // admins above. This is a UI-level restriction only: anyone with their own
+  // GitHub token could still hit the API directly, same as for any other
+  // file in the repo — there's no real backend here to enforce a hard wall.
+  var OWNER_ONLY_EMAIL = "daniel.f.acosta96@gmail.com";
   /* ---- Real analytics (GA4 Data API + Search Console API) ----
      GA4_PROPERTY_ID is the NUMERIC property id (GA4 → Admin → Property Settings),
      not the "G-…" Measurement ID. Requires the Analytics Data API and Search
@@ -1196,9 +1202,22 @@
   var adminApp = document.getElementById("adminApp");
   var appInited = false;
 
+  function isOwnerOnlySession() {
+    return (sessionStorage.getItem(GOOGLE_AUTH_KEY) || "").toLowerCase() === OWNER_ONLY_EMAIL;
+  }
+  function applyOwnerOnlySections() {
+    var isOwner = isOwnerOnlySession();
+    var navBtn = document.querySelector('.admin-nav-btn[data-section="secPagina"]');
+    if (navBtn) navBtn.style.display = isOwner ? "" : "none";
+    if (!isOwner) {
+      var sec = document.getElementById("secPagina");
+      if (sec) sec.style.display = "none";
+    }
+  }
   function showApp() {
     gate.style.display = "none";
     adminApp.classList.add("show");
+    applyOwnerOnlySections();
     if (!appInited) { appInited = true; initDashboard(); initInventory(); initAdminNav(); }
   }
   function showGate() {
@@ -1268,6 +1287,7 @@
     });
   }
   function showAdminSection(id) {
+    if (id === "secPagina" && !isOwnerOnlySession()) return; // restricted — see OWNER_ONLY_EMAIL/applyOwnerOnlySections
     ["secResumen", "secAnaliticas", "secInventario", "secPagina", "secActividad"].forEach(function (secId) {
       var el = document.getElementById(secId);
       if (el) el.style.display = secId === id ? "" : "none";
