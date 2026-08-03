@@ -2,9 +2,5 @@ window.ESCENA_HERO_SLIDES = [
  {
   "id": "seed-1",
   "img": "assets/img/products/federal-horquilla-cromada.jpg"
- },
- {
-  "id": "seed-2",
-  "img": "assets/img/products/eclat-trippin-rin-negro.jpg"
  }
 ];
