@@ -725,7 +725,7 @@
 
       <section id="secPagina" style="display:none;">
       <h2 class="section-title">Página principal<span class="demo-tag" id="catVidCount">0 de 7 con video</span></h2>
-      <p class="section-sub">Reemplaza la foto de cada tarjeta de categoría en el inicio por un video corto (mudo, en loop) grabado en la tienda. Recomendado: 5-8 segundos, menos de 20MB — no se comprime automáticamente como las fotos, así que recórtalo/comprímelo antes de subir. Acepta MP4 y MOV (los videos del iPhone se suben tal cual). <b>Tip iPhone:</b> si en Cámara → Formato tenés "Alta eficiencia" (el default), el video puede no reproducirse para visitantes con Android/Chrome — cambiá a "Más compatible" antes de grabar si querés evitar eso. Una categoría sin video sigue mostrando su foto normal.</p>
+      <p class="section-sub">Reemplaza la foto de cada tarjeta de categoría en el inicio por un video corto (mudo, en loop) grabado en la tienda. Se comprime automáticamente al subir (como las fotos) y se recorta a los primeros 8 segundos, así que no hace falta editarlo antes — subí el clip tal cual sale de la cámara, MP4 o MOV. Si tu navegador no puede comprimir (poco común), avisa y sube el original — en ese caso mantené el clip corto y liviano vos mismo (máx 20MB). Una categoría sin video sigue mostrando su foto normal.</p>
       <div class="catvid-grid" id="catVidGrid"></div>
       </section>
 
@@ -3065,57 +3065,126 @@
         '</div>';
     }).join("");
   }
+  // Client-side video re-encode (the video equivalent of compressDataUri()
+  // for photos, which video never had until this real case: a raw 16MB
+  // iPhone clip loaded so slowly and decoded so heavily that playback was
+  // visibly choppy). Draws the source video onto a small canvas and
+  // re-encodes via MediaRecorder into VP8/VP9 WebM, capping resolution,
+  // bitrate, AND duration — a big/high-res/long source becomes a small,
+  // cheap-to-decode file regardless of what the phone actually recorded.
+  // This also sidesteps any HEVC/MOV playback-compatibility question
+  // entirely, since the OUTPUT is always WebM (broadly playable) even
+  // though decoding the SOURCE still relies on the uploading browser's own
+  // codec support (fine — that's the device doing the upload, separate
+  // from whichever browsers later visit the site). Resolves null if the
+  // browser can't do this (older Safari has patchy MediaRecorder/
+  // captureStream support) — the caller then falls back to uploading the
+  // original file unmodified rather than blocking the upload.
+  var CATEGORY_VIDEO_MAX_DURATION = 8; // seconds
+  var CATEGORY_VIDEO_TARGET_LONG_EDGE = 640; // px -- small looping card background, not full-screen
+  var CATEGORY_VIDEO_BITRATE = 1500000; // ~1.5 Mbps -- plenty for a small muted loop
+  function compressVideoFile(file) {
+    return new Promise(function (resolve) {
+      if (typeof MediaRecorder === "undefined" || !window.HTMLCanvasElement || !HTMLCanvasElement.prototype.captureStream) { resolve(null); return; }
+      var srcUrl = URL.createObjectURL(file);
+      var video = document.createElement("video");
+      video.muted = true; video.playsInline = true; video.src = srcUrl;
+      var settled = false;
+      function finish(result) { if (settled) return; settled = true; URL.revokeObjectURL(srcUrl); resolve(result); }
+      video.onerror = function () { finish(null); };
+      video.onloadedmetadata = function () {
+        var w = video.videoWidth, h = video.videoHeight;
+        if (!w || !h) { finish(null); return; }
+        var scale = Math.min(1, CATEGORY_VIDEO_TARGET_LONG_EDGE / Math.max(w, h));
+        var cw = Math.max(2, Math.round(w * scale)), ch = Math.max(2, Math.round(h * scale));
+        var canvas = document.createElement("canvas");
+        canvas.width = cw; canvas.height = ch;
+        var ctx = canvas.getContext("2d");
+        var stream, recorder;
+        try {
+          stream = canvas.captureStream(24);
+          var mimeType = MediaRecorder.isTypeSupported("video/webm;codecs=vp9") ? "video/webm;codecs=vp9" : "video/webm;codecs=vp8";
+          recorder = new MediaRecorder(stream, { mimeType: mimeType, videoBitsPerSecond: CATEGORY_VIDEO_BITRATE });
+        } catch (e) { finish(null); return; }
+        var chunks = [];
+        recorder.ondataavailable = function (e) { if (e.data && e.data.size) chunks.push(e.data); };
+        recorder.onerror = function () { finish(null); };
+        recorder.onstop = function () { finish(chunks.length ? new Blob(chunks, { type: "video/webm" }) : null); };
+        var duration = Math.min(video.duration || CATEGORY_VIDEO_MAX_DURATION, CATEGORY_VIDEO_MAX_DURATION);
+        var rafId = null;
+        function drawLoop() {
+          if (video.paused || video.ended) return;
+          ctx.drawImage(video, 0, 0, cw, ch);
+          rafId = requestAnimationFrame(drawLoop);
+        }
+        video.onplay = function () {
+          recorder.start();
+          drawLoop();
+          setTimeout(function () {
+            if (rafId) cancelAnimationFrame(rafId);
+            video.pause();
+            try { recorder.stop(); } catch (e) { finish(null); }
+          }, duration * 1000 + 200);
+        };
+        video.play().catch(function () { finish(null); });
+      };
+    });
+  }
   function uploadCategoryVideo(catKey, file, cardEl) {
     if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
     var isVideo = (file.type || "").indexOf("video/") === 0 || /\.(mp4|mov|m4v|webm)$/i.test(file.name || "");
     if (!isVideo) { showToast("Subí un archivo de video (MP4, MOV o WEBM)."); return; }
-    if (file.size > CATEGORY_VIDEO_MAX_BYTES) {
-      showToast("El video pesa " + (file.size / 1024 / 1024).toFixed(1) + "MB — recórtalo a unos 5-8 segundos y comprímelo (máx 20MB) antes de subir.");
+    if (file.size > 300 * 1024 * 1024) { // sanity ceiling before even trying to decode/compress it
+      showToast("El archivo es demasiado grande (" + (file.size / 1024 / 1024).toFixed(0) + "MB) — recórtalo antes de subir.");
       return;
     }
-    var ext = videoExtFromFile(file);
     delete categoryVideoWarnings[catKey]; // a fresh upload deserves a fresh check, not the previous attempt's stale warning
     var btns = cardEl.querySelectorAll("button");
     btns.forEach(function (b) { b.disabled = true; });
     var uploadBtn = cardEl.querySelector(".catvid-upload-btn");
     var originalLabel = uploadBtn.textContent;
-    uploadBtn.textContent = "Subiendo…";
-    var reader = new FileReader();
-    reader.onerror = function () {
-      showToast("No se pudo leer el archivo.");
+    uploadBtn.textContent = "Comprimiendo…";
+    compressVideoFile(file).then(function (compressed) {
+      var uploadFile = compressed || file;
+      var ext = compressed ? "webm" : videoExtFromFile(file);
+      if (uploadFile.size > CATEGORY_VIDEO_MAX_BYTES) {
+        var err = new Error("El video pesa " + (uploadFile.size / 1024 / 1024).toFixed(1) + "MB" + (compressed ? " incluso después de comprimirlo" : "") + " — recórtalo a unos 5-8 segundos antes de subir (máx 20MB).");
+        err.userFacing = true;
+        throw err;
+      }
+      uploadBtn.textContent = "Subiendo…";
+      return new Promise(function (resolve, reject) {
+        var reader = new FileReader();
+        reader.onerror = function () { reject(new Error("No se pudo leer el archivo.")); };
+        reader.onload = function () { resolve(String(reader.result).split(",")[1]); };
+        reader.readAsDataURL(uploadFile);
+      }).then(function (b64) {
+        var path = "assets/video/cat-" + catKey + "." + ext;
+        return ghPutWithRetry(path, "Add category video (" + catKey + ") via admin panel", function () { return b64; }, true)
+          .then(function () {
+            var entry = { v: Date.now(), ext: ext };
+            return commitCategoryVideoManifest(catKey, entry).then(function () { return entry; });
+          });
+      });
+    }).then(function (entry) {
+      categoryVideoMap[catKey] = entry;
+      renderCategoryVideos();
+      showToast("Video actualizado. La tienda se actualiza en ~1 minuto.");
+      // Check playback in THIS browser right now, using the preview
+      // <video> just rendered above — see categoryVideoWarnings.
+      var previewVideo = document.querySelector('.catvid-card[data-cat="' + catKey + '"] .catvid-preview video');
+      if (previewVideo) {
+        previewVideo.addEventListener("error", function () {
+          categoryVideoWarnings[catKey] = true;
+          renderCategoryVideos();
+          showToast("Se subió, pero este navegador no pudo reproducir el video — puede no verse para algunos visitantes. Si tu iPhone graba en \"Alta eficiencia\", cambiá a \"Más compatible\" en Cámara y volvé a subirlo.");
+        }, { once: true });
+      }
+    }).catch(function (e) {
+      showToast((e && e.userFacing ? "" : "No se pudo subir el video: ") + (e && e.message || "error desconocido"));
       btns.forEach(function (b) { b.disabled = false; });
       uploadBtn.textContent = originalLabel;
-    };
-    reader.onload = function () {
-      var b64 = String(reader.result).split(",")[1];
-      var path = "assets/video/cat-" + catKey + "." + ext;
-      ghPutWithRetry(path, "Add category video (" + catKey + ") via admin panel", function () { return b64; }, true)
-        .then(function () {
-          var entry = { v: Date.now(), ext: ext };
-          return commitCategoryVideoManifest(catKey, entry).then(function () { return entry; });
-        })
-        .then(function (entry) {
-          categoryVideoMap[catKey] = entry;
-          renderCategoryVideos();
-          showToast("Video actualizado. La tienda se actualiza en ~1 minuto.");
-          // Check playback in THIS browser right now, using the preview
-          // <video> just rendered above — see categoryVideoWarnings.
-          var previewVideo = document.querySelector('.catvid-card[data-cat="' + catKey + '"] .catvid-preview video');
-          if (previewVideo) {
-            previewVideo.addEventListener("error", function () {
-              categoryVideoWarnings[catKey] = true;
-              renderCategoryVideos();
-              showToast("Se subió, pero este navegador no pudo reproducir el video — puede no verse para algunos visitantes. Si tu iPhone graba en \"Alta eficiencia\", cambiá a \"Más compatible\" en Cámara y volvé a subirlo.");
-            }, { once: true });
-          }
-        })
-        .catch(function (e) {
-          showToast("No se pudo subir el video: " + (e && e.message || "error desconocido"));
-          btns.forEach(function (b) { b.disabled = false; });
-          uploadBtn.textContent = originalLabel;
-        });
-    };
-    reader.readAsDataURL(file);
+    });
   }
   function removeCategoryVideo(catKey, cardEl) {
     if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
