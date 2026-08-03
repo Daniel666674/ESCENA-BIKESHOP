@@ -10,9 +10,5 @@ window.ESCENA_HERO_SLIDES = [
  {
   "id": "seed-3",
   "img": "assets/img/products/cult-bielas-negro.jpg"
- },
- {
-  "id": "seed-4",
-  "img": "assets/img/products/bsd-stem-negro.jpg"
  }
 ];
