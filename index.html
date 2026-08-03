@@ -827,6 +827,36 @@
     cards.forEach(function (c) { io.observe(c); });
   })();
 
+  /* ---- Pre-cache category/hero videos ----
+     A <link rel="prefetch"> only tells the browser to fetch the bytes into
+     its HTTP cache in the background, at low priority — it does NOT create
+     a <video>, decode a frame, or play anything, so this doesn't fight with
+     the lazy activation above (still the only thing that actually shows/
+     plays a video). The effect: by the time a card scrolls into view or the
+     hero carousel reaches a video slide, the file is usually already cached
+     and appears instantly instead of visibly popping in after a fresh
+     network fetch. Cheap to do now that compression keeps these small
+     (roughly 1-2MB each) — this would have been wasteful back when a raw
+     phone upload could be 16MB. */
+  (function prefetchVideos(){
+    var urls = [];
+    var catMap = window.ESCENA_CATEGORY_VIDEO_V || {};
+    Object.keys(catMap).forEach(function (cat) {
+      var v = catMap[cat];
+      if (v && v.v && v.ext) urls.push("assets/video/cat-" + cat + "." + v.ext + "?v=" + v.v);
+    });
+    (window.ESCENA_HERO_SLIDES || []).forEach(function (s) {
+      if (s.video && s.video.v && s.video.ext) urls.push("assets/video/hero-" + s.id + "." + s.video.ext + "?v=" + s.video.v);
+    });
+    urls.forEach(function (u) {
+      var link = document.createElement("link");
+      link.rel = "prefetch";
+      link.setAttribute("as", "video");
+      link.href = u;
+      document.head.appendChild(link);
+    });
+  })();
+
   /* ---- Hero image carousel ---- */
   (function heroCarousel(){
     var wrap = document.getElementById("heroCarousel");

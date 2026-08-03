@@ -3139,8 +3139,8 @@
     delete heroSlideWarnings[id];
     setHeroCardBusy(id, true);
     compressVideoFile(file).then(function (compressed) {
-      var uploadFile = compressed || file;
-      var ext = compressed ? "webm" : videoExtFromFile(file);
+      var uploadFile = compressed ? compressed.blob : file;
+      var ext = compressed ? compressed.ext : videoExtFromFile(file);
       if (uploadFile.size > CATEGORY_VIDEO_MAX_BYTES) {
         var err = new Error("El video pesa " + (uploadFile.size / 1024 / 1024).toFixed(1) + "MB" + (compressed ? " incluso después de comprimirlo" : "") + " — recórtalo a unos 5-8 segundos antes de subir (máx 20MB).");
         err.userFacing = true;
@@ -3362,18 +3362,19 @@
   // Client-side video re-encode (the video equivalent of compressDataUri()
   // for photos, which video never had until this real case: a raw 16MB
   // iPhone clip loaded so slowly and decoded so heavily that playback was
-  // visibly choppy). Draws the source video onto a small canvas and
-  // re-encodes via MediaRecorder into VP8/VP9 WebM, capping resolution,
-  // bitrate, AND duration — a big/high-res/long source becomes a small,
-  // cheap-to-decode file regardless of what the phone actually recorded.
-  // This also sidesteps any HEVC/MOV playback-compatibility question
-  // entirely, since the OUTPUT is always WebM (broadly playable) even
-  // though decoding the SOURCE still relies on the uploading browser's own
-  // codec support (fine — that's the device doing the upload, separate
-  // from whichever browsers later visit the site). Resolves null if the
-  // browser can't do this (older Safari has patchy MediaRecorder/
-  // captureStream support) — the caller then falls back to uploading the
-  // original file unmodified rather than blocking the upload.
+  // visibly choppy — AND, worse, only played on some devices at all). Draws
+  // the source video onto a small canvas and re-encodes via MediaRecorder,
+  // capping resolution, bitrate, AND duration — a big/high-res/long source
+  // becomes a small, cheap-to-decode file regardless of what the phone
+  // actually recorded. Tries WebM (VP9/VP8, what Chrome/Firefox support)
+  // THEN MP4 (H.264, what Safari supports instead — Safari has no WebM
+  // MediaRecorder support at all) — real bug this fixed: only trying WebM
+  // meant compression silently no-op'd on Safari/iPhone uploads, so the
+  // original (often HEVC, unplayable on non-Apple browsers) file got
+  // uploaded untouched. Whichever format succeeds is still far more widely
+  // playable than an arbitrary source codec/container. Resolves null if
+  // NEITHER family is supported (the caller then falls back to uploading
+  // the original file unmodified rather than blocking the upload).
   var CATEGORY_VIDEO_MAX_DURATION = 8; // seconds
   var CATEGORY_VIDEO_TARGET_LONG_EDGE = 640; // px -- small looping card background, not full-screen
   var CATEGORY_VIDEO_BITRATE = 1500000; // ~1.5 Mbps -- plenty for a small muted loop
@@ -3394,16 +3395,35 @@
         var canvas = document.createElement("canvas");
         canvas.width = cw; canvas.height = ch;
         var ctx = canvas.getContext("2d");
-        var stream, recorder;
+        var stream, recorder, containerExt;
         try {
           stream = canvas.captureStream(24);
-          var mimeType = MediaRecorder.isTypeSupported("video/webm;codecs=vp9") ? "video/webm;codecs=vp9" : "video/webm;codecs=vp8";
-          recorder = new MediaRecorder(stream, { mimeType: mimeType, videoBitsPerSecond: CATEGORY_VIDEO_BITRATE });
+          // Chrome/Firefox support MediaRecorder->WebM but not ->MP4; Safari
+          // is the exact opposite (no WebM at all, MP4/H.264 only) — trying
+          // only WebM meant compression silently no-op'd on Safari/iPhone
+          // (isTypeSupported false for both candidates -> constructor
+          // throws -> caught -> finish(null) -> caller uploads the original,
+          // uncompressed, possibly-HEVC file instead). Try both families so
+          // compression actually succeeds regardless of which browser the
+          // admin is uploading from.
+          var candidates = [
+            ["video/webm;codecs=vp9", "webm"],
+            ["video/webm;codecs=vp8", "webm"],
+            ["video/mp4;codecs=avc1.42E01E", "mp4"],
+            ["video/mp4", "mp4"]
+          ];
+          for (var ci = 0; ci < candidates.length; ci++) {
+            if (MediaRecorder.isTypeSupported(candidates[ci][0])) { containerExt = candidates[ci][1]; break; }
+          }
+          if (!containerExt) { finish(null); return; }
+          recorder = new MediaRecorder(stream, { mimeType: candidates[ci][0], videoBitsPerSecond: CATEGORY_VIDEO_BITRATE });
         } catch (e) { finish(null); return; }
         var chunks = [];
         recorder.ondataavailable = function (e) { if (e.data && e.data.size) chunks.push(e.data); };
         recorder.onerror = function () { finish(null); };
-        recorder.onstop = function () { finish(chunks.length ? new Blob(chunks, { type: "video/webm" }) : null); };
+        recorder.onstop = function () {
+          finish(chunks.length ? { blob: new Blob(chunks, { type: "video/" + containerExt }), ext: containerExt } : null);
+        };
         var duration = Math.min(video.duration || CATEGORY_VIDEO_MAX_DURATION, CATEGORY_VIDEO_MAX_DURATION);
         var rafId = null;
         function drawLoop() {
@@ -3439,8 +3459,8 @@
     var originalLabel = uploadBtn.textContent;
     uploadBtn.textContent = "Comprimiendo…";
     compressVideoFile(file).then(function (compressed) {
-      var uploadFile = compressed || file;
-      var ext = compressed ? "webm" : videoExtFromFile(file);
+      var uploadFile = compressed ? compressed.blob : file;
+      var ext = compressed ? compressed.ext : videoExtFromFile(file);
       if (uploadFile.size > CATEGORY_VIDEO_MAX_BYTES) {
         var err = new Error("El video pesa " + (uploadFile.size / 1024 / 1024).toFixed(1) + "MB" + (compressed ? " incluso después de comprimirlo" : "") + " — recórtalo a unos 5-8 segundos antes de subir (máx 20MB).");
         err.userFacing = true;
