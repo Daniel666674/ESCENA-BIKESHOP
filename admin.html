@@ -1044,7 +1044,7 @@
   var dirty = false; // unpublished changes exist
   // Categories where one product commonly comes in multiple physical sizes,
   // each with its own stock count (crank length, sprocket teeth, frame top-tube,
-  // stem length, bar width). p.sizes = [{label, units}]; p.units is kept as the
+  // stem length, bar width, fork offset). p.sizes = [{label, units}]; p.units is kept as the
   // maintained sum of p.sizes[].units so every existing units-based consumer
   // (KPI totals, low-stock badges, CSV export, bulk price adjust) keeps working
   // unchanged. Everything else stays on the plain flat p.units field.
@@ -1053,7 +1053,7 @@
   // fields) and the storefront page's primary variant selector is labeled
   // "Talla" with real per-size stock. See isSizeCat()/isColorReal() below.
   var SIZE_CATEGORIES = {
-    bielas: 1, pinones: 1, marcos: 1, stems: 1, manubrios: 1,
+    bielas: 1, pinones: 1, marcos: 1, stems: 1, manubrios: 1, horquillas: 1,
     cascos: 1, guantes: 1, rodilleras: 1, canilleras: 1, tobilleras: 1, "rodi-cani-tobilleras": 1,
     camisetas: 1, gorros: 1, gorras: 1, hoodies: 1, chaquetas: 1, pantalones: 1, medias: 1, tenis: 1
   };
