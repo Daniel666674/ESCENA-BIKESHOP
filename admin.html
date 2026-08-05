@@ -3415,7 +3415,17 @@
   // the original file unmodified rather than blocking the upload).
   var CATEGORY_VIDEO_MAX_DURATION = 30; // seconds
   var CATEGORY_VIDEO_TARGET_LONG_EDGE = 1920; // px -- real HD (1080p-class); source resolution still wins if it's smaller
-  var CATEGORY_VIDEO_BITRATE = 8000000; // ~8 Mbps -- enough headroom to keep 1080p-ish motion looking crisp, not blocky
+  // Bitrate scales with the ACTUAL output resolution instead of one flat
+  // number — a flat 8Mbps regardless of size was a real bug: a source that
+  // stayed at, say, 832x464 (below the target above, so untouched) got
+  // encoded at the same bitrate a full 1920px clip would need, producing a
+  // needlessly huge, slow-to-load file with zero quality gain over a
+  // properly-sized bitrate (real case: 29MB and laggy for a small clip that
+  // only needed ~2MB). ~0.12 bits/pixel/frame is a normal "clean web video"
+  // target; floor/ceiling keep it sane at either extreme.
+  var CATEGORY_VIDEO_BITRATE_BPP = 0.12;
+  var CATEGORY_VIDEO_BITRATE_MIN = 1200000; // ~1.2 Mbps floor -- even a tiny source stays reasonably clean
+  var CATEGORY_VIDEO_BITRATE_MAX = 10000000; // ~10 Mbps ceiling -- caps a full 1920px-long-edge encode
   // When compressVideoFile() can't produce output (e.g. a browser whose
   // MediaRecorder doesn't support any of the candidates below — real case:
   // an admin uploading from Safari/iPhone got a silent compression no-op),
@@ -3474,7 +3484,8 @@
             if (MediaRecorder.isTypeSupported(candidates[ci][0])) { containerExt = candidates[ci][1]; break; }
           }
           if (!containerExt) { finish(null); return; }
-          recorder = new MediaRecorder(stream, { mimeType: candidates[ci][0], videoBitsPerSecond: CATEGORY_VIDEO_BITRATE });
+          var bitrate = Math.max(CATEGORY_VIDEO_BITRATE_MIN, Math.min(CATEGORY_VIDEO_BITRATE_MAX, Math.round(cw * ch * 24 * CATEGORY_VIDEO_BITRATE_BPP)));
+          recorder = new MediaRecorder(stream, { mimeType: candidates[ci][0], videoBitsPerSecond: bitrate });
         } catch (e) { finish(null); return; }
         var chunks = [];
         recorder.ondataavailable = function (e) { if (e.data && e.data.size) chunks.push(e.data); };
