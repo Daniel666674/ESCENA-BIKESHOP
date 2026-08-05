@@ -14,5 +14,9 @@ window.ESCENA_CATEGORY_VIDEO_V = {
  "bielas": {
   "v": 1785922089611,
   "ext": "mp4"
+ },
+ "horquillas": {
+  "v": 1785922164710,
+  "ext": "mp4"
  }
 };
