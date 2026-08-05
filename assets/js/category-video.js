@@ -10,5 +10,9 @@ window.ESCENA_CATEGORY_VIDEO_V = {
  "stems": {
   "v": 1785921986316,
   "ext": "mp4"
+ },
+ "bielas": {
+  "v": 1785922089611,
+  "ext": "mp4"
  }
 };
