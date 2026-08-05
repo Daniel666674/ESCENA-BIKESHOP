@@ -24,7 +24,7 @@ window.ESCENA_CATEGORY_VIDEO_V = {
   "ext": "mp4"
  },
  "pinones": {
-  "v": 1785922383891,
+  "v": 1785922614321,
   "ext": "mp4"
  }
 };
