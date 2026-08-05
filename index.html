@@ -914,11 +914,11 @@
       activateSlideMedia(idx);
     }
     function next(){ show(idx + 1); }
-    // A video slide gets to play close to its full (capped-at-20s) length
+    // A video slide gets to play close to its full (capped-at-30s) length
     // instead of being cut off by the fixed 5s photo timing.
     function currentSlideDelay(){
       var data = slideData[idx];
-      return (data && data.video) ? 20000 : 5000;
+      return (data && data.video) ? 30000 : 5000;
     }
     function start(){
       if (reduceMotion) return;
