@@ -869,10 +869,14 @@
   /* ---- Admin-managed page text (hero copy + section headings) ----
      assets/js/site-text.js is a flat {field: string} config, edited from
      admin.html's "Página principal" tab. Every target element already has
-     its current real copy sitting in the HTML above as the default — this
-     only OVERWRITES textContent for fields that are actually set, so a
-     missing/failed manifest load or a blank field never leaves a section
-     empty, just showing today's copy unchanged. */
+     its current real copy sitting in the HTML above as a fallback default —
+     but once a field has actually been saved through that form, it's shown
+     EXACTLY as saved, including blank on purpose (the admin needs to be
+     able to clear a field and have it actually go blank, not silently keep
+     old copy). So the rule is by KEY PRESENCE, not truthiness: a key that's
+     flat-out missing from the manifest (the whole file failed to load, or
+     this field predates the manifest) keeps its HTML default; a key that's
+     present, even as "", is used as-is. */
   (function siteText(){
     var t = window.ESCENA_SITE_TEXT || {};
     var map = {
@@ -887,10 +891,10 @@
       txtCtaHeading: "ctaHeading", txtCtaSubtext: "ctaSubtext", txtCtaBtn: "ctaBtn"
     };
     Object.keys(map).forEach(function (elId) {
-      var val = t[map[elId]];
-      if (!val) return;
+      var field = map[elId];
+      if (!(field in t)) return;
       var el = document.getElementById(elId);
-      if (el) el.textContent = val;
+      if (el) el.textContent = t[field];
     });
   })();
 

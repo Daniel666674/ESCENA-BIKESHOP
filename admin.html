@@ -3669,18 +3669,20 @@
     if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
     var btn = document.getElementById("siteTextSaveBtn");
     var statusEl = document.getElementById("siteTextStatus");
+    // Every field is saved exactly as typed, including blank — a field left
+    // empty on purpose shows empty on the site, it does NOT silently fall
+    // back to old hardcoded copy (see index.html's siteText() renderer,
+    // which only keeps its default when the key is missing entirely, not
+    // when it's present-but-empty).
     var formValues = {};
     SITE_TEXT_FIELDS.forEach(function (f) {
       var el = document.getElementById(siteTextFieldId(f));
-      var v = el ? el.value.trim() : "";
-      if (v) formValues[f] = v;
+      formValues[f] = el ? el.value.trim() : "";
     });
     btn.disabled = true; btn.textContent = "Guardando…";
     ghPutWithRetry("assets/js/site-text.js", "Update homepage text via admin panel", function (remoteText) {
       var obj = parseRemoteSiteText(remoteText);
-      SITE_TEXT_FIELDS.forEach(function (f) {
-        if (formValues[f]) obj[f] = formValues[f]; else delete obj[f];
-      });
+      SITE_TEXT_FIELDS.forEach(function (f) { obj[f] = formValues[f]; });
       return "window.ESCENA_SITE_TEXT = " + JSON.stringify(obj, null, 1) + ";\n";
     }, false).then(function () {
       siteText = formValues;
