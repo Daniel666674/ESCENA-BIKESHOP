@@ -3139,6 +3139,19 @@
     delete heroSlideWarnings[id];
     setHeroCardBusy(id, true);
     compressVideoFile(file).then(function (compressed) {
+      if (compressed) return compressed;
+      // Compression wasn't available in this browser -> the original file
+      // would upload completely untouched, with no duration cap applied.
+      // Refuse anything way over the limit instead of silently publishing it.
+      return probeVideoDuration(file).then(function (dur) {
+        if (dur && isFinite(dur) && dur > CATEGORY_VIDEO_MAX_DURATION) {
+          var durErr = new Error("Tu navegador no pudo comprimir el video automáticamente y dura " + Math.round(dur) + "s — recórtalo a máx " + CATEGORY_VIDEO_MAX_DURATION + " segundos antes de subir (o probá desde otro navegador).");
+          durErr.userFacing = true;
+          throw durErr;
+        }
+        return null;
+      });
+    }).then(function (compressed) {
       var uploadFile = compressed ? compressed.blob : file;
       var ext = compressed ? compressed.ext : videoExtFromFile(file);
       if (uploadFile.size > CATEGORY_VIDEO_MAX_BYTES) {
@@ -3378,6 +3391,26 @@
   var CATEGORY_VIDEO_MAX_DURATION = 20; // seconds
   var CATEGORY_VIDEO_TARGET_LONG_EDGE = 960; // px -- small looping card background, not full-screen
   var CATEGORY_VIDEO_BITRATE = 4000000; // ~4 Mbps -- room for longer/heavier clips at the higher resolution above
+  // When compressVideoFile() can't produce output (e.g. a browser whose
+  // MediaRecorder doesn't support any of the candidates below — real case:
+  // an admin uploading from Safari/iPhone got a silent compression no-op),
+  // the caller falls back to uploading the ORIGINAL file completely
+  // untouched, with none of compressVideoFile's duration/resolution caps
+  // applied. That let a 28s clip go live as a "video" meant to be an 8-20s
+  // loop. This reads just the source's duration (far more widely supported
+  // than MediaRecorder) so that fallback path can still refuse anything
+  // way over the cap instead of silently publishing it.
+  function probeVideoDuration(file) {
+    return new Promise(function (resolve) {
+      var url = URL.createObjectURL(file);
+      var v = document.createElement("video");
+      v.muted = true; v.src = url;
+      var done = false;
+      function finish(d) { if (done) return; done = true; URL.revokeObjectURL(url); resolve(d); }
+      v.onloadedmetadata = function () { finish(v.duration); };
+      v.onerror = function () { finish(null); };
+    });
+  }
   function compressVideoFile(file) {
     return new Promise(function (resolve) {
       if (typeof MediaRecorder === "undefined" || !window.HTMLCanvasElement || !HTMLCanvasElement.prototype.captureStream) { resolve(null); return; }
@@ -3459,6 +3492,19 @@
     var originalLabel = uploadBtn.textContent;
     uploadBtn.textContent = "Comprimiendo…";
     compressVideoFile(file).then(function (compressed) {
+      if (compressed) return compressed;
+      // Compression wasn't available in this browser -> the original file
+      // would upload completely untouched, with no duration cap applied.
+      // Refuse anything way over the limit instead of silently publishing it.
+      return probeVideoDuration(file).then(function (dur) {
+        if (dur && isFinite(dur) && dur > CATEGORY_VIDEO_MAX_DURATION) {
+          var durErr = new Error("Tu navegador no pudo comprimir el video automáticamente y dura " + Math.round(dur) + "s — recórtalo a máx " + CATEGORY_VIDEO_MAX_DURATION + " segundos antes de subir (o probá desde otro navegador).");
+          durErr.userFacing = true;
+          throw durErr;
+        }
+        return null;
+      });
+    }).then(function (compressed) {
       var uploadFile = compressed ? compressed.blob : file;
       var ext = compressed ? compressed.ext : videoExtFromFile(file);
       if (uploadFile.size > CATEGORY_VIDEO_MAX_BYTES) {
