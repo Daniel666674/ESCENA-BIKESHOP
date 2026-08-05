@@ -1,7 +1,7 @@
 window.ESCENA_SITE_TEXT = {
- "heroKicker": "BMX Shop · Bogotá, Colombia",
+ "heroKicker": "Tienda BMX · Bogotá, Colombia",
  "heroTagline": "Partes que aguantan calle",
- "heroLead": "Más de 100 partes originales de las marcas que mueven la escena: cañas, timones, tenedores, bielas, manzanas, platos, pedales, sillines y más. Directo de la tienda a tu bici — pides por WhatsApp, montas y ruedas.",
+ "heroLead": "Todo lo que tu BMX necesita, de las marcas que mueven la escena. Más de 100 partes originales, probadas por riders que sí ruedan. Pides por WhatsApp, montas y ruedas.",
  "heroBtnPrimary": "Ver la tienda",
  "heroBtnGhost": "Pedir por WhatsApp",
  "heroStat1N": "100+",
