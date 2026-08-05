@@ -3840,19 +3840,24 @@
   // stored/reversible property, so canvas width/height are swapped for
   // 90/270 and every drawn frame is rotated around the canvas center to
   // match.
+  // Logs WHY it bailed (console.warn, tagged "compressVideoFile:") at every
+  // null-returning branch -- purely diagnostic, no behavior change. Added
+  // after a real report of rotate failing silently on desktop Chrome (where
+  // every one of these should normally succeed), to turn the next repro
+  // into a one-line answer instead of another guess-and-redeploy cycle.
   function compressVideoFile(file, rotationDeg) {
     rotationDeg = rotationDeg || 0;
     return new Promise(function (resolve) {
-      if (typeof MediaRecorder === "undefined" || !window.HTMLCanvasElement || !HTMLCanvasElement.prototype.captureStream) { resolve(null); return; }
+      if (typeof MediaRecorder === "undefined" || !window.HTMLCanvasElement || !HTMLCanvasElement.prototype.captureStream) { console.warn("compressVideoFile: no MediaRecorder/captureStream support"); resolve(null); return; }
       var srcUrl = URL.createObjectURL(file);
       var video = document.createElement("video");
       video.muted = true; video.playsInline = true; video.src = srcUrl;
       var settled = false;
       function finish(result) { if (settled) return; settled = true; URL.revokeObjectURL(srcUrl); resolve(result); }
-      video.onerror = function () { finish(null); };
+      video.onerror = function () { console.warn("compressVideoFile: source video failed to decode", video.error); finish(null); };
       video.onloadedmetadata = function () {
         var w = video.videoWidth, h = video.videoHeight;
-        if (!w || !h) { finish(null); return; }
+        if (!w || !h) { console.warn("compressVideoFile: no video dimensions after loadedmetadata", w, h); finish(null); return; }
         var scale = Math.min(1, CATEGORY_VIDEO_TARGET_LONG_EDGE / Math.max(w, h));
         var dw = Math.max(2, Math.round(w * scale)), dh = Math.max(2, Math.round(h * scale));
         var swapped = rotationDeg === 90 || rotationDeg === 270;
@@ -3880,14 +3885,15 @@
           for (var ci = 0; ci < candidates.length; ci++) {
             if (MediaRecorder.isTypeSupported(candidates[ci][0])) { containerExt = candidates[ci][1]; break; }
           }
-          if (!containerExt) { finish(null); return; }
+          if (!containerExt) { console.warn("compressVideoFile: no MediaRecorder mimeType supported", candidates.map(function (c) { return c[0]; })); finish(null); return; }
           var bitrate = Math.max(CATEGORY_VIDEO_BITRATE_MIN, Math.min(CATEGORY_VIDEO_BITRATE_MAX, Math.round(cw * ch * 24 * CATEGORY_VIDEO_BITRATE_BPP)));
           recorder = new MediaRecorder(stream, { mimeType: candidates[ci][0], videoBitsPerSecond: bitrate });
-        } catch (e) { finish(null); return; }
+        } catch (e) { console.warn("compressVideoFile: captureStream/MediaRecorder construction threw", e); finish(null); return; }
         var chunks = [];
         recorder.ondataavailable = function (e) { if (e.data && e.data.size) chunks.push(e.data); };
-        recorder.onerror = function () { finish(null); };
+        recorder.onerror = function (e) { console.warn("compressVideoFile: MediaRecorder onerror", e); finish(null); };
         recorder.onstop = function () {
+          if (!chunks.length) console.warn("compressVideoFile: recorder stopped with zero chunks recorded");
           finish(chunks.length ? { blob: new Blob(chunks, { type: "video/" + containerExt }), ext: containerExt } : null);
         };
         var duration = Math.min(video.duration || CATEGORY_VIDEO_MAX_DURATION, CATEGORY_VIDEO_MAX_DURATION);
@@ -3911,10 +3917,10 @@
           setTimeout(function () {
             if (rafId) cancelAnimationFrame(rafId);
             video.pause();
-            try { recorder.stop(); } catch (e) { finish(null); }
+            try { recorder.stop(); } catch (e) { console.warn("compressVideoFile: recorder.stop() threw", e); finish(null); }
           }, duration * 1000 + 200);
         };
-        video.play().catch(function () { finish(null); });
+        video.play().catch(function (e) { console.warn("compressVideoFile: video.play() rejected", e); finish(null); });
       };
     });
   }
