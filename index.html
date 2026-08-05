@@ -161,6 +161,14 @@
     @media (max-width: 640px) { .utility .u-info { display: none; } }
 
     /* Site header styles now live in assets/css/site-header.css */
+    /* index.html only: while the sticky header is still overlapping the hero
+       (see heroHeaderReveal() below), let it go noticeably more transparent
+       so the blurred hero video shows through instead of the usual solid
+       dark bar. Scoped to .over-hero (added/removed by scroll position) so
+       every other page keeps the normal, more opaque/legible header — they
+       have no video behind it to reveal, just page content. */
+    .site-header.over-hero { background: rgba(10, 10, 10, .14); }
+    .site-header.over-hero.scrolled { background: rgba(10, 10, 10, .22); }
 
     /* ============ HERO (split layout) ============ */
     .hero { position: relative; background: var(--ink); padding: 6rem 1.5rem; overflow: hidden; min-height: 82vh; display: flex; align-items: center; isolation: isolate; }
@@ -951,6 +959,22 @@
     }, { passive: true });
 
     start();
+  })();
+
+  /* While the sticky header is still overlapping the hero (it sits directly
+     above the hero in the DOM, so scrolling past the header's own height is
+     what makes it start covering the hero instead of empty space), add
+     .over-hero so it goes transparent/blurred over the video instead of its
+     usual solid bar (see the .site-header.over-hero rule above). Cleared
+     once scrolled past the hero into #tienda's white background, where the
+     normal opaque header is what keeps the white nav text legible. */
+  (function heroHeaderReveal(){
+    var hdr = document.querySelector(".site-header");
+    var heroEl = document.querySelector(".hero");
+    if (!hdr || !heroEl) return;
+    function tick() { hdr.classList.toggle("over-hero", window.scrollY < heroEl.offsetHeight); }
+    window.addEventListener("scroll", tick, { passive: true });
+    tick();
   })();
 
   /* The moving brand marquee lives in the global top strip, built by
