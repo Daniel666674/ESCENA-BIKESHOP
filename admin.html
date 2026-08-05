@@ -54,6 +54,7 @@
       --blue: #2563EB; --blue-bg: #EFF4FF;
       --amber: #B45309; --amber-bg: #FEF6E7;
       --red: #DC2626; --red-bg: #FDECEC;
+      --green: #16A34A; --green-bg: #E7F8EF;
       --card-line: #ECE9F4; --card-shadow: 0 1px 2px rgba(30,20,60,.04), 0 8px 24px rgba(30,20,60,.05);
     }
     body { background: var(--app-bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
@@ -102,7 +103,7 @@
     #secInventario .demo-tag { background: var(--violet-bg); border: none; color: var(--violet-dark); border-radius: 999px; padding: .25rem .7rem; font-weight: 700; }
 
     /* ---- KPI tiles ---- */
-    .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.6rem; }
+    .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.6rem; }
     @media (max-width: 900px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 480px) { .kpi-row { grid-template-columns: 1fr; } }
     #secInventario .kpi { background: #fff; border: 1px solid var(--card-line); border-radius: 14px; padding: 1.1rem 1.2rem; box-shadow: var(--card-shadow); display: flex; align-items: flex-start; gap: .8rem; }
@@ -112,6 +113,7 @@
     #secInventario .kpi[data-tone="blue"] .kpi-icon { background: var(--blue-bg); color: var(--blue); }
     #secInventario .kpi[data-tone="amber"] .kpi-icon { background: var(--amber-bg); color: var(--amber); }
     #secInventario .kpi[data-tone="red"] .kpi-icon { background: var(--red-bg); color: var(--red); }
+    #secInventario .kpi[data-tone="green"] .kpi-icon { background: var(--green-bg); color: var(--green); }
     .kpi .lbl { font-size: .74rem; color: var(--muted); font-weight: 500; margin-bottom: .35rem; }
     .kpi .val { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.5rem; letter-spacing: -.01em; }
     .kpi .delta { font-size: .74rem; font-weight: 700; margin-top: .3rem; }
@@ -257,6 +259,11 @@
     .units-badge { display: inline-flex; align-items: center; font-weight: 600; font-size: .76rem; color: var(--muted); }
     .inv-card-variants { display: flex; gap: .3rem; flex-wrap: wrap; margin-top: .3rem; }
     .mini-badge { display: inline-block; background: var(--violet-bg); color: var(--violet-dark); font-size: .6rem; font-weight: 700; padding: .14rem .45rem; border-radius: 999px; }
+    .margin-badge { display: inline-block; font-size: .6rem; font-weight: 700; padding: .14rem .45rem; border-radius: 999px; white-space: nowrap; }
+    .margin-badge.good { background: #E7F8EF; color: #16A34A; }
+    .margin-badge.mid { background: var(--amber-bg); color: var(--amber); }
+    .margin-badge.low { background: var(--red-bg); color: var(--red); }
+    .margin-badge.none { background: var(--amber-bg); color: var(--amber); }
     .inv-card-actions { display: flex; gap: .4rem; margin-top: .65rem; }
     .inv-card-actions button { flex: 1; background: none; border: 1px solid var(--card-line); border-radius: 7px; padding: .45rem .3rem; font-size: .68rem; font-weight: 700; cursor: pointer; font-family: inherit; color: var(--ink); }
     .inv-card-actions button:hover { background: var(--panel); }
@@ -491,6 +498,11 @@
           <div class="val" id="kpiSalesTotal">$0</div>
         </div>
         <div class="kpi">
+          <div class="lbl">Ganancia realizada</div>
+          <div class="val" id="kpiSalesProfit">$0</div>
+          <div class="delta" id="kpiSalesProfitNote"></div>
+        </div>
+        <div class="kpi">
           <div class="lbl">Pedidos registrados</div>
           <div class="val" id="kpiOrdersCount">0</div>
         </div>
@@ -653,6 +665,10 @@
           <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-4a2 2 0 1 1 0-4h4z"/></svg></div>
           <div><div class="lbl">Valor del inventario</div><div class="val" id="kpiInvValue">$0</div></div>
         </div>
+        <div class="kpi" data-tone="green">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <div><div class="lbl">Ganancia potencial</div><div class="val" id="kpiInvProfit">$0</div><div class="delta" id="kpiInvProfitNote"></div></div>
+        </div>
         <div class="kpi" data-tone="blue">
           <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
           <div><div class="lbl">Unidades totales</div><div class="val" id="kpiUnitsTotal">0</div></div>
@@ -674,6 +690,7 @@
       <div class="inv-actions-row">
         <button type="button" class="btn btn-violet btn-sm" id="invAddBtn">+ Agregar producto</button>
         <button type="button" class="btn btn-outline btn-sm" id="invBulkBtn">Edición masiva</button>
+        <button type="button" class="btn btn-outline btn-sm" id="invBulkCostBtn">Costo masivo</button>
         <button type="button" class="btn btn-outline btn-sm" id="invImportBtn">Importar CSV/JSON</button>
         <input type="file" id="invImportFile" accept=".json,.csv" style="display:none;" />
         <div class="inv-more-wrap">
@@ -958,6 +975,14 @@
         <div class="pmodal-field">
           <label>Precio unitario (COP)</label>
           <input type="number" id="smPrice" min="0" step="1000" required />
+        </div>
+        <div class="pmodal-field">
+          <label>Costo unitario (COP) <span class="pm-label-note">(opcional)</span></label>
+          <input type="number" id="smCost" min="0" step="1000" placeholder="Del producto" />
+        </div>
+        <div class="pmodal-field">
+          <label>Ganancia estimada</label>
+          <div class="pmodal-margin-readout" id="smProfitReadout">—</div>
         </div>
         <div class="pmodal-field">
           <label>Comprador (opcional)</label>
@@ -1533,6 +1558,22 @@
     document.getElementById("kpiSalesTotal").textContent = cop(totalRevenue);
     document.getElementById("kpiOrdersCount").textContent = String(orders);
     document.getElementById("kpiTicketAvg").textContent = cop(orders ? totalRevenue / orders : 0);
+
+    // Only sales that captured a cost at the time (r.profit is set) count
+    // toward realized profit — older sales recorded before this existed, or
+    // any sale where cost genuinely wasn't known, are excluded rather than
+    // treated as $0 cost (which would inflate this the same way the old
+    // per-product margin readout used to).
+    var salesWithProfit = salesLog.filter(function (r) { return typeof r.profit === "number"; });
+    var totalProfit = salesWithProfit.reduce(function (s, r) { return s + r.profit; }, 0);
+    var profitEl = document.getElementById("kpiSalesProfit");
+    var profitNoteEl = document.getElementById("kpiSalesProfitNote");
+    if (profitEl) profitEl.textContent = cop(totalProfit);
+    if (profitNoteEl) {
+      profitNoteEl.textContent = (orders && salesWithProfit.length < orders)
+        ? "de " + salesWithProfit.length + " de " + orders + " venta" + (orders === 1 ? "" : "s") + " con costo"
+        : "";
+    }
 
     var byProduct = {};
     salesLog.forEach(function (r) {
@@ -2602,7 +2643,8 @@
         '</div>'
       : '';
     var variantBadges = (p.sizes && p.sizes.length ? '<span class="mini-badge">' + p.sizes.length + ' talla' + (p.sizes.length > 1 ? "s" : "") + '</span>' : '') +
-      (p.colors && p.colors.length ? '<span class="mini-badge">' + p.colors.length + ' color' + (p.colors.length > 1 ? "es" : "") + '</span>' : '');
+      (p.colors && p.colors.length ? '<span class="mini-badge">' + p.colors.length + ' color' + (p.colors.length > 1 ? "es" : "") + '</span>' : '') +
+      marginBadgeHTML(p);
     return '<article class="inv-card" data-idx="' + idx + '">' +
       '<div class="inv-card-ph"><img src="' + p.imgs[0] + '" alt="" loading="lazy" />' + countBadge + statusHTML + ordHTML + '</div>' +
       '<div class="inv-card-body">' +
@@ -2623,6 +2665,22 @@
     return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
   function cop(n) { return "$" + Math.round(n || 0).toLocaleString("es-CO"); }
+  // Shared margin-tier logic — same thresholds as the product modal's
+  // "Resumen financiero" (updateMarginReadout): >=40% Excelente, >=20%
+  // Buena, else Baja. Once saved, p.cost can't distinguish a genuine $0
+  // cost from a never-entered one (see updateMarginReadout's live "" vs
+  // "0" distinction, which only exists transiently in the open form) — so
+  // here, and everywhere reading from stored data, cost<=0 just means "no
+  // cost recorded" and shows as such instead of a fabricated 100% margin.
+  function marginPct(price, cost) { return price ? ((price - cost) / price) * 100 : 0; }
+  function marginTier(pct) { return pct >= 40 ? ["good", "Excelente"] : pct >= 20 ? ["mid", "Buena"] : ["low", "Baja"]; }
+  function marginBadgeHTML(p) {
+    var price = p.price || 0, cost = p.cost || 0;
+    if (!price) return "";
+    if (!cost) return '<span class="margin-badge none">Sin costo</span>';
+    var tier = marginTier(marginPct(price, cost));
+    return '<span class="margin-badge ' + tier[0] + '">' + marginPct(price, cost).toFixed(0) + '% margen</span>';
+  }
 
   var sortState = { key: null, dir: 1 };
   // Same fallback logic the storefront uses (tienda.html/protecciones.html
@@ -2664,6 +2722,7 @@
   }
   function renderInvKpis() {
     var value = 0, unitsTotal = 0, low = 0, out = 0;
+    var profit = 0, productsWithCost = 0, productsWithoutCost = 0;
     inventoryCatalog.forEach(function (p) {
       var u = p.units || 0;
       value += u * (p.price || 0);
@@ -2671,15 +2730,33 @@
       if (p.published !== false) {
         if (u <= 0) out++; else if (u <= 3) low++;
       }
+      // "Potential profit" only counts products with a real cost on file —
+      // silently treating a missing cost as $0 would inflate this the same
+      // way it used to inflate the per-product margin readout (see
+      // updateMarginReadout). Products with no cost are tallied separately
+      // instead, so the gap stays visible rather than hidden inside a
+      // rounded-off total.
+      if (u > 0) {
+        if (p.cost) { profit += u * ((p.price || 0) - p.cost); productsWithCost++; }
+        else productsWithoutCost++;
+      }
     });
     var elValue = document.getElementById("kpiInvValue");
     var elUnits = document.getElementById("kpiUnitsTotal");
     var elLow = document.getElementById("kpiLowStock");
     var elOut = document.getElementById("kpiOutStock");
+    var elProfit = document.getElementById("kpiInvProfit");
+    var elProfitNote = document.getElementById("kpiInvProfitNote");
     if (elValue) elValue.textContent = cop(value);
     if (elUnits) elUnits.textContent = String(unitsTotal);
     if (elLow) elLow.textContent = String(low);
     if (elOut) elOut.textContent = String(out);
+    if (elProfit) elProfit.textContent = cop(profit);
+    if (elProfitNote) {
+      elProfitNote.textContent = productsWithoutCost
+        ? "de " + productsWithCost + " producto" + (productsWithCost === 1 ? "" : "s") + " con costo (" + productsWithoutCost + " sin costo)"
+        : (productsWithCost ? "de " + productsWithCost + " productos con costo" : "ningún producto tiene costo registrado");
+    }
   }
 
   function statusTierOf(p) {
@@ -2920,19 +2997,32 @@
   }
   function updateMarginReadout() {
     var price = parseFloat(document.getElementById("pmPrice").value) || 0;
-    var cost = parseFloat(document.getElementById("pmCost").value) || 0;
+    var costInput = document.getElementById("pmCost").value;
+    var hasCost = costInput !== ""; // "0" (a real, entered zero cost) counts as having a cost -- only a BLANK field means unknown
+    var cost = parseFloat(costInput) || 0;
     var priceEl = document.getElementById("pmFinPrice");
     var costEl = document.getElementById("pmFinCost");
     var marginEl = document.getElementById("pmFinMargin");
     var tagEl = document.getElementById("pmFinMarginTag");
     if (!priceEl) return; // sell modal etc. don't have these — guard just in case
     priceEl.textContent = cop(price);
-    costEl.textContent = cop(cost);
-    if (!price) { marginEl.textContent = "—%"; tagEl.textContent = ""; return; }
+    costEl.textContent = hasCost ? cop(cost) : "Sin costo";
+    if (!price) { marginEl.textContent = "—%"; tagEl.textContent = ""; tagEl.className = ""; return; }
+    if (!hasCost) {
+      // Treating an unset cost as $0 silently showed a false "100% margen,
+      // Excelente" on every product with no cost entered (which, checked
+      // against the live catalog, was literally all 195 products) — a real
+      // business-accuracy bug, not just an incomplete number. Show it as
+      // genuinely unknown instead of a fabricated number.
+      marginEl.textContent = "—%";
+      tagEl.textContent = "Falta costo";
+      tagEl.className = "tier-mid";
+      return;
+    }
     var margin = ((price - cost) / price) * 100;
     marginEl.textContent = margin.toFixed(0) + "%";
     var tier = margin >= 40 ? ["Excelente", "tier-good"] : margin >= 20 ? ["Buena", "tier-mid"] : ["Baja", "tier-low"];
-    tagEl.textContent = cost ? tier[0] : "";
+    tagEl.textContent = tier[0];
     tagEl.className = tier[1];
   }
   // Live "Vista previa" card in the modal's right column — reflects the form
@@ -2977,6 +3067,11 @@
     var qty = parseInt(document.getElementById("smQty").value, 10) || 0;
     var price = parseFloat(document.getElementById("smPrice").value) || 0;
     document.getElementById("smTotalReadout").textContent = cop(qty * price);
+    var costInput = document.getElementById("smCost").value;
+    var profitEl = document.getElementById("smProfitReadout");
+    if (costInput === "") { profitEl.textContent = "—"; return; } // no cost entered -> can't show a real profit figure, not "same as revenue"
+    var cost = parseFloat(costInput) || 0;
+    profitEl.textContent = cop(qty * (price - cost));
   }
   // A product tracks real stock through at most one variant dimension at a
   // time: sizes (multi-size product) or colors (isColorReal — colors as the
@@ -3004,6 +3099,13 @@
     qtyEl.disabled = units <= 0;
     submitBtn.disabled = units <= 0;
     submitBtn.textContent = units <= 0 ? (variant ? "Sin stock para esta opción" : "Sin stock para vender") : "Registrar venta";
+    // A color variant can carry its own price override (colors[].price, the
+    // same field the storefront's color picker already reads) — follow it
+    // here too, so selling that color records the right revenue instead of
+    // always defaulting to the base product price regardless of which
+    // color was actually picked. Sizes have no price override, so this is
+    // a no-op for size-based products (variant.price is simply undefined).
+    if (p) document.getElementById("smPrice").value = (variant && variant.price > 0) ? variant.price : (p.price || 0);
     updateSellTotal();
   }
   function openSellModal(idx) {
@@ -3024,7 +3126,9 @@
     }
     var units = p.units || 0;
     document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock" + (list ? (kind === "sizes" ? " (todas las tallas)" : " (todos los colores)") : "");
-    document.getElementById("smPrice").value = p.price || 0;
+    // smPrice is set below by applySellUnitsLimit(), which follows the
+    // selected variant's price override when it has one.
+    document.getElementById("smCost").value = p.cost ? p.cost : ""; // blank (not "0") when the product has no cost recorded -- same "unknown, not free" distinction as the product modal
     document.getElementById("smBuyer").value = "";
     document.getElementById("smPhone").value = "";
     document.getElementById("smPayment").value = "Efectivo";
@@ -3903,6 +4007,7 @@
     });
     document.getElementById("smQty").addEventListener("input", updateSellTotal);
     document.getElementById("smPrice").addEventListener("input", updateSellTotal);
+    document.getElementById("smCost").addEventListener("input", updateSellTotal);
     document.getElementById("smSize").addEventListener("change", applySellUnitsLimit);
     document.getElementById("smodalForm").addEventListener("submit", function (e) {
       e.preventDefault();
@@ -3922,6 +4027,19 @@
         p.units = (p.units || 0) - qty;
       }
       markDirty(p.slug);
+      // Cost is snapshotted onto the sale record itself, not looked up live
+      // from the product later — p.cost can change (restocked at a new
+      // price, or entered for the first time), and a historical sale's real
+      // profit shouldn't drift with it. Left out entirely (not defaulted to
+      // 0) when no cost was entered, so a sale with unknown cost reads as
+      // "profit unknown" downstream, never a fabricated "profit = revenue".
+      var costInput = document.getElementById("smCost").value;
+      var saleExtra = variant ? (kind === "sizes" ? { size: variant.label } : { color: variant.label }) : {};
+      if (costInput !== "") {
+        var unitCost = parseFloat(costInput) || 0;
+        saleExtra.unitCost = unitCost;
+        saleExtra.profit = qty * (price - unitCost);
+      }
       salesLog.push(Object.assign({
         date: new Date().toISOString(),
         slug: p.slug, n: p.n, sku: p.sku, brand: p.brand,
@@ -3930,7 +4048,7 @@
         phone: document.getElementById("smPhone").value.trim(),
         payment: document.getElementById("smPayment").value,
         notes: document.getElementById("smNotes").value.trim()
-      }, variant ? (kind === "sizes" ? { size: variant.label } : { color: variant.label }) : {}));
+      }, saleExtra));
       salesDirty = true;
       saveCatalog();
       renderSalesSummary();
@@ -4260,7 +4378,7 @@
     });
 
     document.getElementById("invExportCsvBtn").addEventListener("click", function () {
-      var headers = ["slug", "n", "brand", "cat", "spec", "price", "sku", "units", "tag", "order", "imgs", "sizes", "colors", "imgFit"];
+      var headers = ["slug", "n", "brand", "cat", "spec", "price", "cost", "sku", "units", "tag", "order", "imgs", "sizes", "colors", "imgFit"];
       var rows = [headers.join(",")];
       inventoryCatalog.forEach(function (p) {
         rows.push(headers.map(function (h) {
@@ -4338,6 +4456,41 @@
       renderInventory(f);
       showToast("Precios ajustados " + (f2 >= 0 ? "+" : "") + f2 + "% — revisa y Publica");
     });
+
+    // Bulk-set cost — mainly for backfilling: most products won't have a
+    // cost on file yet (margin can't be shown for them until they do, see
+    // updateMarginReadout/marginBadgeHTML), and entering it one product at a
+    // time via the modal isn't realistic for a large catalog. Two input
+    // shapes in one prompt rather than a whole new modal, matching the
+    // existing bulk-price tool's prompt()-based pattern:
+    //   "$50000"  -> flat COP cost for every filtered product (a batch that
+    //                really did all cost the same, e.g. one supplier order)
+    //   "60"      -> cost = 60% of THAT product's own current price (a
+    //                quick estimate when exact per-product costs aren't at
+    //                hand yet — each product keeps its own ratio-based cost,
+    //                not one flat number)
+    document.getElementById("invBulkCostBtn").addEventListener("click", function () {
+      var f = document.getElementById("invSearch").value.trim();
+      var set = f ? inventoryCatalog.filter(matchFilter(f)) : inventoryCatalog;
+      var input = prompt(
+        "Definir costo de " + set.length + " producto(s) filtrado(s).\n" +
+        "Escribe un % del precio de venta de cada uno (ej: 60) o un valor fijo en COP con $ adelante (ej: $50000)."
+      );
+      if (input === null || input.trim() === "") return;
+      var trimmed = input.trim();
+      var isFlat = trimmed.charAt(0) === "$";
+      var num = parseFloat(isFlat ? trimmed.slice(1) : trimmed);
+      if (isNaN(num) || num < 0) { alert("Valor inválido."); return; }
+      set.forEach(function (p) {
+        p.cost = isFlat ? Math.round(num) : Math.max(0, Math.round(p.price * (num / 100) / 1000) * 1000);
+        markDirty(p.slug);
+      });
+      saveCatalog();
+      renderInventory(f);
+      showToast(isFlat
+        ? "Costo fijado en " + cop(num) + " — revisa y Publica"
+        : "Costo fijado en " + num + "% del precio de cada producto — revisa y Publica");
+    });
   }
 
   function matchFilter(f) {
@@ -4357,6 +4510,7 @@
       var cells = splitCsvLine(line), o = {};
       headers.forEach(function (h, i) { o[h] = cells[i]; });
       if (o.price !== undefined) o.price = parseFloat(o.price) || 0;
+      if (o.cost !== undefined) o.cost = parseFloat(o.cost) || 0;
       if (o.units !== undefined) o.units = parseInt(o.units, 10) || 0;
       if (o.order !== undefined) { var ordN = parseInt(o.order, 10); if (isNaN(ordN)) delete o.order; else o.order = ordN; }
       if (o.imgs) o.imgs = String(o.imgs).split("|").filter(Boolean);
