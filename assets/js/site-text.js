@@ -1,0 +1,23 @@
+window.ESCENA_SITE_TEXT = {
+ "heroKicker": "BMX Shop · Bogotá, Colombia",
+ "heroTagline": "Partes que aguantan calle",
+ "heroLead": "Más de 100 partes originales de las marcas que mueven la escena: cañas, timones, tenedores, bielas, manzanas, platos, pedales, sillines y más. Directo de la tienda a tu bici — pides por WhatsApp, montas y ruedas.",
+ "heroBtnPrimary": "Ver la tienda",
+ "heroBtnGhost": "Pedir por WhatsApp",
+ "heroStat1N": "100+",
+ "heroStat1L": "Partes en stock",
+ "heroStat2N": "32",
+ "heroStat2L": "Depts. Colombia",
+ "catEyebrow": "Encontrá tu parte",
+ "catHeading": "TIENDA",
+ "storyEyebrow": "Somos ESCENA",
+ "storyP1": "ESCENA Bike Shop nació de rodar en Bogotá. Somos riders montando una tienda para riders: partes que probamos, marcas en las que confiamos y precios sin vueltas. Acá no vendemos cualquier cosa — vendemos lo que nos montaríamos nosotros.",
+ "storyP2": "Del street al park, del primer 180 al bunny hop de tu vida: si la calle te llama, nosotros te montamos la bici.",
+ "igEyebrow": "La escena en vivo",
+ "igHeading": "INSTAGRAM / @ESCENABIKESHOP",
+ "faqEyebrow": "Preguntas frecuentes",
+ "faqHeading": "FAQ / LO BÁSICO",
+ "ctaHeading": "¿LISTO PARA RODAR?",
+ "ctaSubtext": "Escríbenos por WhatsApp y armamos tu pedido. Respondemos en horario hábil, de lunes a sábado.",
+ "ctaBtn": "Hablar con ESCENA"
+};

@@ -734,6 +734,39 @@
       <h3 class="section-title" style="font-size:1.15rem; margin-top:2.4rem;">Categorías<span class="demo-tag" id="catVidCount">0 de 7 con video</span></h3>
       <p class="section-sub">Reemplaza la foto de cada tarjeta de categoría en el inicio por un video corto (mudo, en loop) grabado en la tienda. Se comprime automáticamente al subir (como las fotos) y se recorta a los primeros 30 segundos, así que no hace falta editarlo antes — subí el clip tal cual sale de la cámara, MP4 o MOV. Si tu navegador no puede comprimir (poco común), avisa y sube el original — en ese caso mantené el clip liviano vos mismo (máx 60MB). Una categoría sin video sigue mostrando su foto normal.</p>
       <div class="catvid-grid" id="catVidGrid"></div>
+
+      <h3 class="section-title" style="font-size:1.15rem; margin-top:2.4rem;">Textos del inicio</h3>
+      <p class="section-sub">El texto del hero y los títulos/intros de cada sección más abajo en la página de inicio. Los enlaces y botones de WhatsApp no cambian, solo lo que se lee. Deja un campo vacío para volver al texto de siempre.</p>
+      <div class="pmodal-grid" style="max-width:820px;">
+        <div class="pmodal-field span2"><label>Hero — línea pequeña arriba del título</label><input type="text" id="stHeroKicker" /></div>
+        <div class="pmodal-field span2"><label>Hero — tagline</label><input type="text" id="stHeroTagline" /></div>
+        <div class="pmodal-field span2"><label>Hero — texto principal</label><textarea id="stHeroLead" rows="3"></textarea></div>
+        <div class="pmodal-field"><label>Botón "Ver la tienda"</label><input type="text" id="stHeroBtnPrimary" /></div>
+        <div class="pmodal-field"><label>Botón WhatsApp (hero)</label><input type="text" id="stHeroBtnGhost" /></div>
+        <div class="pmodal-field"><label>Estadística 1 — número</label><input type="text" id="stHeroStat1N" /></div>
+        <div class="pmodal-field"><label>Estadística 1 — texto</label><input type="text" id="stHeroStat1L" /></div>
+        <div class="pmodal-field"><label>Estadística 2 — número</label><input type="text" id="stHeroStat2N" /></div>
+        <div class="pmodal-field"><label>Estadística 2 — texto</label><input type="text" id="stHeroStat2L" /></div>
+
+        <div class="pmodal-field"><label>Categorías — antetítulo</label><input type="text" id="stCatEyebrow" /></div>
+        <div class="pmodal-field"><label>Categorías — título</label><input type="text" id="stCatHeading" /></div>
+
+        <div class="pmodal-field span2"><label>Nuestra historia — antetítulo</label><input type="text" id="stStoryEyebrow" /></div>
+        <div class="pmodal-field span2"><label>Nuestra historia — párrafo 1</label><textarea id="stStoryP1" rows="3"></textarea></div>
+        <div class="pmodal-field span2"><label>Nuestra historia — párrafo 2</label><textarea id="stStoryP2" rows="2"></textarea></div>
+
+        <div class="pmodal-field"><label>Instagram — antetítulo</label><input type="text" id="stIgEyebrow" /></div>
+        <div class="pmodal-field"><label>Instagram — título</label><input type="text" id="stIgHeading" /></div>
+
+        <div class="pmodal-field"><label>FAQ — antetítulo</label><input type="text" id="stFaqEyebrow" /></div>
+        <div class="pmodal-field"><label>FAQ — título</label><input type="text" id="stFaqHeading" /></div>
+
+        <div class="pmodal-field span2"><label>Franja final — título</label><input type="text" id="stCtaHeading" /></div>
+        <div class="pmodal-field span2"><label>Franja final — texto</label><input type="text" id="stCtaSubtext" /></div>
+        <div class="pmodal-field"><label>Franja final — botón</label><input type="text" id="stCtaBtn" /></div>
+      </div>
+      <button type="button" class="btn btn-violet btn-sm" id="siteTextSaveBtn" style="margin-top:1rem;">Guardar textos</button>
+      <p class="pmodal-sizes-total" id="siteTextStatus"></p>
       </section>
 
       <section id="secActividad" style="display:none;">
@@ -973,6 +1006,7 @@
 <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 <script>document.write('<scr'+'ipt src="assets/js/category-video.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 <script>document.write('<scr'+'ipt src="assets/js/hero-slides.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+<script>document.write('<scr'+'ipt src="assets/js/site-text.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 <!-- sales-log.js is intentionally NOT loaded here as a public script tag —
      it's not deployed to the public site at all (see deploy.yml's exclude
      list). Revenue data should only be readable by an authenticated admin,
@@ -3596,6 +3630,75 @@
       btns.forEach(function (b) { b.disabled = false; });
     });
   }
+  /* ---- Página principal: site text (hero copy + section headings) ----
+     A flat {field: string} config (assets/js/site-text.js) for the hero's
+     copy and each section's eyebrow/heading/intro further down the home
+     page — NOT a full CMS, just the handful of text blocks an owner
+     actually wants to tweak without a developer (product cards, FAQ
+     answers, footer, etc. stay hardcoded). index.html only overwrites a
+     field's default hardcoded text when the manifest value is non-empty,
+     so a blank field or a failed manifest load never leaves a section
+     looking broken. Same immediate-publish pattern as category videos/hero
+     slides (commits and goes live right away, no separate "Publicar"
+     step) and the same always-refetch-freshest-remote pattern as every
+     other small manifest here, for two devices editing close together. */
+  var SITE_TEXT_FIELDS = [
+    "heroKicker", "heroTagline", "heroLead", "heroBtnPrimary", "heroBtnGhost",
+    "heroStat1N", "heroStat1L", "heroStat2N", "heroStat2L",
+    "catEyebrow", "catHeading",
+    "storyEyebrow", "storyP1", "storyP2",
+    "igEyebrow", "igHeading",
+    "faqEyebrow", "faqHeading",
+    "ctaHeading", "ctaSubtext", "ctaBtn"
+  ];
+  var siteText = {};
+  function siteTextFieldId(f) { return "st" + f.charAt(0).toUpperCase() + f.slice(1); }
+  function parseRemoteSiteText(text) {
+    if (!text) return {};
+    var m = text.match(/window\.ESCENA_SITE_TEXT\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+    if (!m) return {};
+    try { var o = JSON.parse(m[1]); return (o && typeof o === "object") ? o : {}; } catch (e) { return {}; }
+  }
+  function renderSiteTextForm() {
+    SITE_TEXT_FIELDS.forEach(function (f) {
+      var el = document.getElementById(siteTextFieldId(f));
+      if (el) el.value = siteText[f] || "";
+    });
+  }
+  function saveSiteText() {
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    var btn = document.getElementById("siteTextSaveBtn");
+    var statusEl = document.getElementById("siteTextStatus");
+    var formValues = {};
+    SITE_TEXT_FIELDS.forEach(function (f) {
+      var el = document.getElementById(siteTextFieldId(f));
+      var v = el ? el.value.trim() : "";
+      if (v) formValues[f] = v;
+    });
+    btn.disabled = true; btn.textContent = "Guardando…";
+    ghPutWithRetry("assets/js/site-text.js", "Update homepage text via admin panel", function (remoteText) {
+      var obj = parseRemoteSiteText(remoteText);
+      SITE_TEXT_FIELDS.forEach(function (f) {
+        if (formValues[f]) obj[f] = formValues[f]; else delete obj[f];
+      });
+      return "window.ESCENA_SITE_TEXT = " + JSON.stringify(obj, null, 1) + ";\n";
+    }, false).then(function () {
+      siteText = formValues;
+      renderSiteTextForm();
+      if (statusEl) statusEl.textContent = "Guardado — la tienda se actualiza en ~1 minuto.";
+      showToast("Textos guardados. La tienda se actualiza en ~1 minuto.");
+    }).catch(function (e) {
+      showToast("No se pudo guardar: " + (e && e.message || "error desconocido"));
+    }).then(function () {
+      btn.disabled = false; btn.textContent = "Guardar textos";
+    });
+  }
+  function initSiteText() {
+    siteText = Object.assign({}, window.ESCENA_SITE_TEXT || {});
+    renderSiteTextForm();
+    var btn = document.getElementById("siteTextSaveBtn");
+    if (btn) btn.addEventListener("click", saveSiteText);
+  }
   function initCategoryVideos() {
     categoryVideoMap = Object.assign({}, window.ESCENA_CATEGORY_VIDEO_V || {});
     renderCategoryVideos();
@@ -3659,6 +3762,7 @@
     });
     initCategoryVideos();
     initHeroSlides();
+    initSiteText();
 
     document.getElementById("invSearch").addEventListener("input", function (e) {
       invPage = 1;
