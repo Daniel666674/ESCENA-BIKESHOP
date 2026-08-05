@@ -727,7 +727,7 @@
       <h2 class="section-title">Página principal</h2>
 
       <h3 class="section-title" style="font-size:1.15rem;">Hero (carrusel del inicio)<span class="demo-tag" id="heroSlideCount">0 slides</span></h3>
-      <p class="section-sub">Las fotos/videos grandes que rotan arriba de todo en el inicio. Agrega, quita y reordena slides — cada uno es una foto, con un video opcional encima (se comprime y recorta a 30s automáticamente, igual que los videos de categoría). Al menos una foto es obligatoria; máximo 8 slides.</p>
+      <p class="section-sub">Las fotos/videos grandes que rotan arriba de todo en el inicio. Agrega, quita y reordena slides — cada uno es una foto, un video, o ambos (el video opcional se comprime y recorta a 30s automáticamente, igual que los videos de categoría). Cada slide necesita al menos una foto o un video; máximo 8 slides.</p>
       <div class="catvid-grid" id="heroSlidesGrid"></div>
       <button type="button" class="btn btn-violet btn-sm" id="heroSlideAddBtn" style="margin-top:1rem;">+ Agregar slide</button>
 
@@ -3049,18 +3049,20 @@
       var vid = s.video;
       var warn = heroSlideWarnings[s.id];
       var videoTag = vid ? '<video muted loop playsinline autoplay src="assets/video/hero-' + s.id + '.' + vid.ext + '?v=' + vid.v + '"></video>' : "";
+      var imgTag = s.img ? '<img class="catvid-preview-img" src="' + esc(s.img) + '" alt="" />' : "";
       var statusClass = warn ? "warn" : (vid ? "has-video" : "no-video");
-      var statusText = warn ? "⚠ Este navegador no pudo reproducir el video" : (vid ? "✓ Con video" : "Solo foto");
+      var statusText = warn ? "⚠ Este navegador no pudo reproducir el video" : (vid && s.img ? "✓ Con video" : vid ? "✓ Solo video" : "Solo foto");
       return '<div class="catvid-card" data-id="' + s.id + '">' +
         '<h4>Slide ' + (i + 1) + '</h4>' +
-        '<div class="catvid-preview"><img class="catvid-preview-img" src="' + esc(s.img) + '" alt="" />' + videoTag + '</div>' +
+        '<div class="catvid-preview">' + imgTag + videoTag + '</div>' +
         '<div class="catvid-status ' + statusClass + '">' + statusText + '</div>' +
         '<div class="catvid-actions" style="flex-wrap:wrap;">' +
         '<button type="button" class="btn btn-outline btn-sm heroslide-up-btn" data-id="' + s.id + '" title="Mover arriba"' + (i === 0 ? " disabled" : "") + '>&uarr;</button>' +
         '<button type="button" class="btn btn-outline btn-sm heroslide-down-btn" data-id="' + s.id + '" title="Mover abajo"' + (i === heroSlides.length - 1 ? " disabled" : "") + '>&darr;</button>' +
-        '<button type="button" class="btn btn-outline btn-sm heroslide-photo-btn" data-id="' + s.id + '">Cambiar foto</button>' +
+        '<button type="button" class="btn btn-outline btn-sm heroslide-photo-btn" data-id="' + s.id + '">' + (s.img ? "Cambiar foto" : "+ Foto") + '</button>' +
+        (s.img && vid ? '<button type="button" class="btn btn-outline btn-sm heroslide-photo-rm-btn" data-id="' + s.id + '">Quitar foto</button>' : "") +
         '<button type="button" class="btn btn-outline btn-sm heroslide-video-btn" data-id="' + s.id + '">' + (vid ? "Reemplazar video" : "+ Video") + '</button>' +
-        (vid ? '<button type="button" class="btn btn-outline btn-sm heroslide-video-rm-btn" data-id="' + s.id + '">Quitar video</button>' : "") +
+        (vid && s.img ? '<button type="button" class="btn btn-outline btn-sm heroslide-video-rm-btn" data-id="' + s.id + '">Quitar video</button>' : "") +
         '<button type="button" class="btn btn-outline btn-sm heroslide-remove-btn" data-id="' + s.id + '" style="color:#c0392b;border-color:#c0392b;">Quitar slide</button>' +
         '</div>' +
         '</div>';
@@ -3211,6 +3213,28 @@
       renderHeroSlides();
     });
   }
+  // Only offered when the slide has a video to fall back on (a slide always
+  // needs at least one of img/video — see the button visibility rule in
+  // renderHeroSlides). Leaves the now-unreferenced photo file in the repo,
+  // same as removeHeroSlideVideo does for videos — nothing else reads it
+  // once the manifest no longer points to it.
+  function removeHeroSlidePhoto(id) {
+    if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
+    if (!confirm("¿Quitar la foto de este slide? Se mostrará solo el video.")) return;
+    setHeroCardBusy(id, true);
+    commitHeroSlides(function (arr) {
+      var found = arr.some(function (s) { if (s.id === id && s.video) { delete s.img; return true; } return false; });
+      return found ? arr : null;
+    }).then(function () {
+      var local = heroSlides.filter(function (s) { return s.id === id; })[0];
+      if (local && local.video) delete local.img;
+      renderHeroSlides();
+      showToast("Foto quitada — la tienda se actualiza en ~1 minuto.");
+    }).catch(function (e) {
+      showToast("No se pudo quitar: " + (e && e.message || "error desconocido"));
+      renderHeroSlides();
+    });
+  }
   function removeHeroSlide(id) {
     if (!getToken()) { showToast("Sesión expirada — vuelve a entrar"); showGate(); return; }
     if (heroSlides.length <= 1) { showToast("Tiene que quedar al menos un slide."); return; }
@@ -3277,6 +3301,7 @@
       if (btn.classList.contains("heroslide-up-btn")) moveHeroSlide(id, -1);
       else if (btn.classList.contains("heroslide-down-btn")) moveHeroSlide(id, 1);
       else if (btn.classList.contains("heroslide-photo-btn")) { pendingId = id; photoInput.click(); }
+      else if (btn.classList.contains("heroslide-photo-rm-btn")) removeHeroSlidePhoto(id);
       else if (btn.classList.contains("heroslide-video-btn")) { pendingId = id; videoInput.click(); }
       else if (btn.classList.contains("heroslide-video-rm-btn")) removeHeroSlideVideo(id);
       else if (btn.classList.contains("heroslide-remove-btn")) removeHeroSlide(id);

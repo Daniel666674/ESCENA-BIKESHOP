@@ -878,7 +878,11 @@
     // download/decode all of them at once.
     var slideData = window.ESCENA_HERO_SLIDES || [];
     wrap.innerHTML = slideData.map(function (s, i) {
-      var bg = "background-image:url('" + String(s.img || "").replace(/'/g, "%27") + "')";
+      // Photo is optional (video-only slides are allowed) -- omit the
+      // declaration entirely rather than pointing at an empty url(), so a
+      // video-only slide just shows the .hero's own dark background until
+      // its video is ready, with no missing-image request/flash.
+      var bg = s.img ? "background-image:url('" + String(s.img).replace(/'/g, "%27") + "')" : "";
       var videoEl = (s.video && s.video.ext && s.video.v) ? '<video muted loop playsinline preload="none" aria-hidden="true"></video>' : "";
       return '<div class="hero-slide' + (i === 0 ? ' is-active' : '') + '" style="' + bg + '">' + videoEl + '</div>';
     }).join("");
