@@ -727,12 +727,12 @@
       <h2 class="section-title">Página principal</h2>
 
       <h3 class="section-title" style="font-size:1.15rem;">Hero (carrusel del inicio)<span class="demo-tag" id="heroSlideCount">0 slides</span></h3>
-      <p class="section-sub">Las fotos/videos grandes que rotan arriba de todo en el inicio. Agrega, quita y reordena slides — cada uno es una foto, con un video opcional encima (se comprime y recorta a 8s automáticamente, igual que los videos de categoría). Al menos una foto es obligatoria; máximo 8 slides.</p>
+      <p class="section-sub">Las fotos/videos grandes que rotan arriba de todo en el inicio. Agrega, quita y reordena slides — cada uno es una foto, con un video opcional encima (se comprime y recorta a 20s automáticamente, igual que los videos de categoría). Al menos una foto es obligatoria; máximo 8 slides.</p>
       <div class="catvid-grid" id="heroSlidesGrid"></div>
       <button type="button" class="btn btn-violet btn-sm" id="heroSlideAddBtn" style="margin-top:1rem;">+ Agregar slide</button>
 
       <h3 class="section-title" style="font-size:1.15rem; margin-top:2.4rem;">Categorías<span class="demo-tag" id="catVidCount">0 de 7 con video</span></h3>
-      <p class="section-sub">Reemplaza la foto de cada tarjeta de categoría en el inicio por un video corto (mudo, en loop) grabado en la tienda. Se comprime automáticamente al subir (como las fotos) y se recorta a los primeros 8 segundos, así que no hace falta editarlo antes — subí el clip tal cual sale de la cámara, MP4 o MOV. Si tu navegador no puede comprimir (poco común), avisa y sube el original — en ese caso mantené el clip corto y liviano vos mismo (máx 20MB). Una categoría sin video sigue mostrando su foto normal.</p>
+      <p class="section-sub">Reemplaza la foto de cada tarjeta de categoría en el inicio por un video corto (mudo, en loop) grabado en la tienda. Se comprime automáticamente al subir (como las fotos) y se recorta a los primeros 20 segundos, así que no hace falta editarlo antes — subí el clip tal cual sale de la cámara, MP4 o MOV. Si tu navegador no puede comprimir (poco común), avisa y sube el original — en ese caso mantené el clip liviano vos mismo (máx 40MB). Una categoría sin video sigue mostrando su foto normal.</p>
       <div class="catvid-grid" id="catVidGrid"></div>
       </section>
 
@@ -3142,7 +3142,7 @@
       var uploadFile = compressed ? compressed.blob : file;
       var ext = compressed ? compressed.ext : videoExtFromFile(file);
       if (uploadFile.size > CATEGORY_VIDEO_MAX_BYTES) {
-        var err = new Error("El video pesa " + (uploadFile.size / 1024 / 1024).toFixed(1) + "MB" + (compressed ? " incluso después de comprimirlo" : "") + " — recórtalo a unos 5-8 segundos antes de subir (máx 20MB).");
+        var err = new Error("El video pesa " + (uploadFile.size / 1024 / 1024).toFixed(1) + "MB" + (compressed ? " incluso después de comprimirlo" : "") + " — recórtalo a unos 15-20 segundos antes de subir (máx 40MB).");
         err.userFacing = true;
         throw err;
       }
@@ -3299,7 +3299,7 @@
   // same browser and the same moment as the upload, beats the admin only
   // finding out later by checking the live homepage on a different device.
   var categoryVideoWarnings = {}; // {catKey: true}
-  var CATEGORY_VIDEO_MAX_BYTES = 20 * 1024 * 1024;
+  var CATEGORY_VIDEO_MAX_BYTES = 40 * 1024 * 1024;
   // iPhones default to recording .mov (QuickTime container, often HEVC video)
   // rather than .mp4 — rejecting anything that isn't literally ".mp4" made
   // the button unusable from an iPhone. Accept the common video containers
@@ -3375,9 +3375,9 @@
   // playable than an arbitrary source codec/container. Resolves null if
   // NEITHER family is supported (the caller then falls back to uploading
   // the original file unmodified rather than blocking the upload).
-  var CATEGORY_VIDEO_MAX_DURATION = 8; // seconds
-  var CATEGORY_VIDEO_TARGET_LONG_EDGE = 640; // px -- small looping card background, not full-screen
-  var CATEGORY_VIDEO_BITRATE = 1500000; // ~1.5 Mbps -- plenty for a small muted loop
+  var CATEGORY_VIDEO_MAX_DURATION = 20; // seconds
+  var CATEGORY_VIDEO_TARGET_LONG_EDGE = 960; // px -- small looping card background, not full-screen
+  var CATEGORY_VIDEO_BITRATE = 4000000; // ~4 Mbps -- room for longer/heavier clips at the higher resolution above
   function compressVideoFile(file) {
     return new Promise(function (resolve) {
       if (typeof MediaRecorder === "undefined" || !window.HTMLCanvasElement || !HTMLCanvasElement.prototype.captureStream) { resolve(null); return; }
@@ -3462,7 +3462,7 @@
       var uploadFile = compressed ? compressed.blob : file;
       var ext = compressed ? compressed.ext : videoExtFromFile(file);
       if (uploadFile.size > CATEGORY_VIDEO_MAX_BYTES) {
-        var err = new Error("El video pesa " + (uploadFile.size / 1024 / 1024).toFixed(1) + "MB" + (compressed ? " incluso después de comprimirlo" : "") + " — recórtalo a unos 5-8 segundos antes de subir (máx 20MB).");
+        var err = new Error("El video pesa " + (uploadFile.size / 1024 / 1024).toFixed(1) + "MB" + (compressed ? " incluso después de comprimirlo" : "") + " — recórtalo a unos 15-20 segundos antes de subir (máx 40MB).");
         err.userFacing = true;
         throw err;
       }
