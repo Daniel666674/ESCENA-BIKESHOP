@@ -829,6 +829,12 @@
         // video in tests, never proven against a real file end-to-end.
         vid.addEventListener("loadeddata", function () { vid.classList.add("is-visible"); }, { once: true });
         vid.src = "assets/video/cat-" + cat + "." + info.ext + "?v=" + info.v;
+        // Optional admin-set framing (admin.html's "Guardar encuadre"). Set
+        // directly on the <video> itself, NOT on .cat -- .cat already has
+        // its own hover transform (translateY lift) and an inline transform
+        // here would silently override that on every card with a zoom set.
+        if (info.pos) vid.style.objectPosition = info.pos;
+        if (info.zoom && info.zoom > 100) vid.style.transform = "scale(" + (info.zoom / 100) + ")";
         var playPromise = vid.play();
         if (playPromise && playPromise.catch) playPromise.catch(function () {}); // autoplay can be blocked -> card just keeps showing the photo
       });
@@ -915,9 +921,19 @@
       // declaration entirely rather than pointing at an empty url(), so a
       // video-only slide just shows the .hero's own dark background until
       // its video is ready, with no missing-image request/flash.
-      var bg = s.img ? "background-image:url('" + String(s.img).replace(/'/g, "%27") + "')" : "";
-      var videoEl = (s.video && s.video.ext && s.video.v) ? '<video muted loop playsinline preload="none" aria-hidden="true"></video>' : "";
-      return '<div class="hero-slide' + (i === 0 ? ' is-active' : '') + '" style="' + bg + '">' + videoEl + '</div>';
+      var bg = s.img ? "background-image:url('" + String(s.img).replace(/'/g, "%27") + "');" : "";
+      // zoom/pos are optional admin-set framing (admin.html's "Guardar
+      // encuadre" -- rotate/zoom/position editor). Applied to the slide div
+      // itself so both its background photo AND a child video (a transform
+      // affects the whole rendered subtree) scale together from one stored
+      // value; object-position still needs setting on the video separately
+      // since a transform doesn't propagate other CSS property values.
+      var frameStyle = "";
+      if (s.pos) frameStyle += "background-position:" + s.pos + ";";
+      if (s.zoom && s.zoom > 100) frameStyle += "transform:scale(" + (s.zoom / 100) + ");";
+      var videoStyle = s.pos ? ' style="object-position:' + s.pos + '"' : "";
+      var videoEl = (s.video && s.video.ext && s.video.v) ? '<video muted loop playsinline preload="none" aria-hidden="true"' + videoStyle + '></video>' : "";
+      return '<div class="hero-slide' + (i === 0 ? ' is-active' : '') + '" style="' + bg + frameStyle + '">' + videoEl + '</div>';
     }).join("");
     var slides = Array.prototype.slice.call(wrap.querySelectorAll(".hero-slide"));
     if (!slides.length) return;

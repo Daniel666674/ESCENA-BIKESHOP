@@ -711,6 +711,11 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
     var vid = wrap.querySelector("video");
     vid.addEventListener("loadeddata", function(){ vid.classList.add("is-visible"); }, { once: true });
     vid.src = "assets/video/cat-" + filter + "." + info.ext + "?v=" + info.v;
+    // Same admin-set framing as the homepage card (admin.html's "Guardar
+    // encuadre") -- .page-head has no competing transform, so this can go
+    // straight on the video.
+    if (info.pos) vid.style.objectPosition = info.pos;
+    if (info.zoom && info.zoom > 100) vid.style.transform = "scale(" + (info.zoom / 100) + ")";
     var p = vid.play();
     if (p && p.catch) p.catch(function(){}); // autoplay can be blocked -> strip just stays plain black
   }
