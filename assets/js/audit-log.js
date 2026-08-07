@@ -1434,5 +1434,15 @@ window.ESCENA_AUDIT = [
    "bielas-cult-hawk-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:14:15.467Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "bielas-stranger-level-8t-negra"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
