@@ -28,11 +28,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Cromoly · Plata",
   "price": 880000,
   "sku": "BIE-FIT-001",
-  "units": 0,
+  "units": 1,
   "sizes": [
    {
     "label": "165mm",
-    "units": 0
+    "units": 1
    }
   ],
   "slug": "bielas-fitbikeco-blunt-negra",
@@ -2729,7 +2729,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "mutany-savage-bielas-negro",
-  "n": "Bielas Mutanty Savage 170MM",
+  "n": "Bielas Mutanty Savage Negra",
   "brand": "Mutanty",
   "cat": "bielas",
   "spec": "Cromoly · 48 estrías · 170mm · Negro",
@@ -2759,7 +2759,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "fiend-bielas-negro",
-  "n": "Bielas Fiend Segment Negras 165MM",
+  "n": "Bielas Fiend Segment Negras",
   "brand": "Fiend",
   "cat": "bielas",
   "spec": "Cromoly · 48 estrías · 22mm hueco eje · 165mm · Negro · 3pc",
@@ -3057,13 +3057,13 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "kit-hardware-bielas-plata",
-  "n": "Bielas Federal Vice Cromadas 160MM - 165MM - 170MM",
+  "n": "Bielas Federal Vice Cromadas",
   "brand": "Federal",
   "cat": "bielas",
   "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Tapas · Plata · Cromoly tratado al calor",
   "price": 930000,
   "sku": "KIT-HARDWARE-BIELAS-PLATA",
-  "units": 2,
+  "units": 3,
   "sizes": [
    {
     "label": "160mm",
@@ -3071,7 +3071,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "165mm",
-    "units": 0
+    "units": 1
    },
    {
     "label": "170mm",
@@ -3087,13 +3087,13 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "kit-hardware-bielas-negro",
-  "n": "Bielas Federal Vice Negras 160MM - 165MM - 170MM",
+  "n": "Bielas Federal Vice Negras",
   "brand": "Federal",
   "cat": "bielas",
   "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Tapas · Negro · Cromoly tratado al calor",
   "price": 890000,
   "sku": "KIT-HARDWARE-BIELAS-NEGRO",
-  "units": 2,
+  "units": 4,
   "sizes": [
    {
     "label": "160mm",
@@ -3101,11 +3101,11 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "165mm",
-    "units": 0
+    "units": 1
    },
    {
     "label": "170mm",
-    "units": 0
+    "units": 1
    }
   ],
   "order": 60,
