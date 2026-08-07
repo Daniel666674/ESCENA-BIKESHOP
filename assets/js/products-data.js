@@ -84,11 +84,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Cromoly · Plata",
   "price": 880000,
   "sku": "BIE-FIT-001",
-  "units": 0,
+  "units": 1,
   "sizes": [
    {
     "label": "165mm",
-    "units": 0
+    "units": 1
    }
   ],
   "slug": "bielas-fitbikeco-blunt-negra",
