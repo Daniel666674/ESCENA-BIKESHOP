@@ -1380,5 +1380,15 @@ window.ESCENA_AUDIT = [
    "fiend-bielas-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T20:59:12.912Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "bielas-cult-hawk-cromada"
+  ],
+  "deleted": []
  }
 ];
