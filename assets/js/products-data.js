@@ -3830,7 +3830,7 @@ window.ESCENA_PRODUCTS = [
   "units": 4,
   "order": 40,
   "imgs": [
-   "assets/img/products/demolition-punos-rojo-negro.jpg?v=1786140213151",
+   "assets/img/products/demolition-punos-rojo-negro.jpg?v=1786140269254",
    "assets/img/products/demolition-punos-rojo-negro-2.jpg?v=1786140214619"
   ],
   "colors": [
@@ -3853,7 +3853,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "img": "assets/img/products/demolition-punos-rojo-negro.jpg?v=1786140213151"
+  "img": "assets/img/products/demolition-punos-rojo-negro.jpg?v=1786140269254"
  },
  {
   "slug": "cult-vans-punos-morado",
