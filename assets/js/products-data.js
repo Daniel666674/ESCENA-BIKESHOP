@@ -3785,9 +3785,9 @@ window.ESCENA_PRODUCTS = [
   "units": 9,
   "order": 30,
   "imgs": [
-   "assets/img/products/fiend-punos-rojo-blanco.jpg?v=1786139903862",
-   "assets/img/products/fiend-punos-rojo-blanco-2.jpg?v=1786139905392",
-   "assets/img/products/fiend-punos-rojo-blanco-3.jpg?v=1786139906921"
+   "assets/img/products/fiend-punos-rojo-blanco.jpg?v=1786140197047",
+   "assets/img/products/fiend-punos-rojo-blanco-2.jpg?v=1786140205179",
+   "assets/img/products/fiend-punos-rojo-blanco-3.jpg?v=1786140206852"
   ],
   "colors": [
    {
@@ -3817,19 +3817,43 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "img": "assets/img/products/fiend-punos-rojo-blanco.jpg?v=1786139903862"
+  "img": "assets/img/products/fiend-punos-rojo-blanco.jpg?v=1786140197047"
  },
  {
   "slug": "demolition-punos-rojo-negro",
-  "n": "Grips Demolition Rojo/Negro",
+  "n": "Grips Demolition Axes",
   "brand": "Demolition",
   "cat": "punos",
-  "spec": "Goma · 149mm-155mm · patrón hongo · Rojo/Negro",
-  "price": 56000,
-  "sku": "DEMOLITION-PUNOS-ROJO-NEGRO",
-  "units": 12,
+  "spec": "Goma · 149mm-155mm · patrón hongo ·",
+  "price": 50000,
+  "sku": "GRP-DMO-001",
+  "units": 4,
   "order": 40,
-  "img": "assets/img/products/demolition-punos-rojo-negro.jpg"
+  "imgs": [
+   "assets/img/products/demolition-punos-rojo-negro.jpg?v=1786140213151",
+   "assets/img/products/demolition-punos-rojo-negro-2.jpg?v=1786140214619"
+  ],
+  "colors": [
+   {
+    "label": "Rojo/Morado",
+    "units": 2,
+    "price": 50000
+   },
+   {
+    "label": "Amarillo/Morado",
+    "units": 2,
+    "price": 50000
+   }
+  ],
+  "imgColorMap": {
+   "Rojo/Morado": [
+    0
+   ],
+   "Amarillo/Morado": [
+    1
+   ]
+  },
+  "img": "assets/img/products/demolition-punos-rojo-negro.jpg?v=1786140213151"
  },
  {
   "slug": "cult-vans-punos-morado",
