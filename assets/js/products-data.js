@@ -476,40 +476,41 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: Acero Largo: 740MM",
   "price": 50000,
   "sku": "TMN-GWB-004",
-  "units": 0,
-  "tag": "Agotado",
+  "units": 2,
   "sizes": [
    {
     "label": "740mm",
-    "units": 0
+    "units": 2
    }
   ],
   "slug": "timon-gw-gorila-4pc-negro",
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944288272",
-   "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1785352578738"
+   "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1785352578738",
+   "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944288272"
   ],
   "colors": [
    {
     "label": "Morado",
-    "units": 2
+    "units": 2,
+    "price": 50000
    },
    {
     "label": "Negro",
-    "units": 0
+    "units": 0,
+    "price": 50000
    }
   ],
   "imgColorMap": {
-   "Negro": [
+   "Morado": [
     0
    ],
-   "Morado": [
+   "Negro": [
     1
    ]
   },
   "order": 100,
-  "img": "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1784944288272"
+  "img": "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1785352578738"
  },
  {
   "n": "Timon Gw Destructor",
