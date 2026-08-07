@@ -8,7 +8,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIE-CLT-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/bielas-cult-hawk-cromada.jpg?v=1786135738295",
+   "assets/img/products/bielas-cult-hawk-cromada.jpg?v=1786136319354",
    "assets/img/products/bielas-cult-hawk-cromada-2.jpg?v=1786135739804"
   ],
   "sizes": [
@@ -19,7 +19,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "bielas-cult-hawk-cromada",
   "order": 10,
-  "img": "assets/img/products/bielas-cult-hawk-cromada.jpg?v=1786135738295"
+  "img": "assets/img/products/bielas-cult-hawk-cromada.jpg?v=1786136319354"
  },
  {
   "n": "Bielas Fitbikeco BLunt Negra",
