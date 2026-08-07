@@ -3813,9 +3813,9 @@ window.ESCENA_PRODUCTS = [
   "units": 30,
   "order": 0,
   "imgs": [
-   "assets/img/products/cult-vans-punos-morado.jpg?v=1786139180399",
-   "assets/img/products/cult-vans-punos-morado-2.jpg?v=1786139181599",
-   "assets/img/products/cult-vans-punos-morado-3.jpg?v=1786139182682"
+   "assets/img/products/cult-vans-punos-morado.jpg?v=1786139234683",
+   "assets/img/products/cult-vans-punos-morado-2.jpg?v=1786139235569",
+   "assets/img/products/cult-vans-punos-morado-3.jpg?v=1786139236731"
   ],
   "colors": [
    {
@@ -3834,7 +3834,18 @@ window.ESCENA_PRODUCTS = [
     "price": 55000
    }
   ],
-  "img": "assets/img/products/cult-vans-punos-morado.jpg?v=1786139180399"
+  "imgColorMap": {
+   "Morado": [
+    0
+   ],
+   "Cafe": [
+    1
+   ],
+   "Negro": [
+    2
+   ]
+  },
+  "img": "assets/img/products/cult-vans-punos-morado.jpg?v=1786139234683"
  },
  {
   "slug": "tornillos-titanio-arcoiris-01",
