@@ -2975,20 +2975,36 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "kit-eje-espaciadores-plata",
-  "n": "Bielas Fitbikeco Blunt Cromadas 165MM",
+  "n": "Bielas Fitbikeco Blunt",
   "brand": "Fitbikeco",
   "cat": "bielas",
   "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Cromoly · Plata",
   "price": 930000,
   "sku": "KIT-EJE-ESPACIADORES-PLATA",
-  "units": 1,
+  "units": 3,
   "sizes": [
    {
     "label": "165mm",
-    "units": 1
+    "units": 3
    }
   ],
   "order": 230,
+  "imgs": [
+   "assets/img/products/kit-eje-espaciadores-plata.jpg?v=1785608153030",
+   "assets/img/products/kit-eje-espaciadores-plata-2.jpg?v=1786124212899"
+  ],
+  "colors": [
+   {
+    "label": "Cromada",
+    "units": 2,
+    "price": 930000
+   },
+   {
+    "label": "Negro",
+    "units": 1,
+    "price": 880000
+   }
+  ],
   "img": "assets/img/products/kit-eje-espaciadores-plata.jpg?v=1785608153030"
  },
  {
