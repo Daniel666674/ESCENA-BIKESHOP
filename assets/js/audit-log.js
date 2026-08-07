@@ -1361,5 +1361,24 @@ window.ESCENA_AUDIT = [
    "mutany-savage-bielas-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T20:49:24.750Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 8 productos editados, 2 fotos subidas",
+  "created": [
+   "bielas-cult-hawk-cromada"
+  ],
+  "edited": [
+   "cult-bielas-negro",
+   "mutany-savage-bielas-negro",
+   "colony-bielas-negro",
+   "kit-hardware-bielas-negro",
+   "kit-hardware-bielas-plata",
+   "bielas-fitbikeco-blunt-negra",
+   "kit-eje-espaciadores-plata",
+   "fiend-bielas-negro"
+  ],
+  "deleted": []
  }
 ];
