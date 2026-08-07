@@ -1455,5 +1455,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:23:20.486Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "bielas-optimus-medusa-derecha-8t"
+  ],
+  "deleted": []
  }
 ];
