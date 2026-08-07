@@ -19,12 +19,18 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Bielas Optimus medusa Derecha 8T",
   "brand": "Optimus",
-  "cat": "piezas",
+  "cat": "bielas",
   "spec": "Material Cromolio Eje 19mm Incluye Caja Mid",
   "price": 150000,
   "sku": "PZA-OPT-001",
   "units": 5,
   "slug": "bielas-optimus-medusa-derecha-8t",
+  "sizes": [
+   {
+    "label": "175mm",
+    "units": 5
+   }
+  ],
   "img": "assets/img/products/bielas-optimus-medusa-derecha-8t.jpg?v=1786137733224"
  },
  {
