@@ -3751,7 +3751,7 @@ window.ESCENA_PRODUCTS = [
   "imgs": [
    "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140937999",
    "assets/img/products/odyssey-punos-negro-gris-2.jpg?v=1786140939092",
-   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1786140940339"
+   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1786141462260"
   ],
   "colors": [
    {
@@ -3776,9 +3776,6 @@ window.ESCENA_PRODUCTS = [
    ],
    "Negro/Translucido": [
     1
-   ],
-   "Negro": [
-    2
    ]
   },
   "img": "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140937999"
