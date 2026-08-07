@@ -3041,20 +3041,21 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly tratado al calor · 22mm · 48 estrías · Negro · 165mm disponible",
   "price": 880000,
   "sku": "COLONY-BIELAS-NEGRO",
-  "units": 2,
+  "units": 1,
   "sizes": [
    {
-    "label": "Única",
-    "units": 2
+    "label": "165mm",
+    "units": 1
    }
   ],
   "order": 70,
   "imgs": [
-   "assets/img/products/colony-bielas-negro.jpg?v=1785608515667",
+   "assets/img/products/colony-bielas-negro.jpg?v=1786136842307",
    "assets/img/products/colony-bielas-negro-2.jpg?v=1785608517173",
-   "assets/img/products/colony-bielas-negro-3.jpg?v=1785608518092"
+   "assets/img/products/colony-bielas-negro-3.jpg?v=1785608518092",
+   "assets/img/products/colony-bielas-negro.jpg?v=1785608515667"
   ],
-  "img": "assets/img/products/colony-bielas-negro.jpg?v=1785608515667"
+  "img": "assets/img/products/colony-bielas-negro.jpg?v=1786136842307"
  },
  {
   "slug": "kit-hardware-bielas-plata",
