@@ -1827,7 +1827,7 @@ window.ESCENA_PRODUCTS = [
     5
    ]
   },
-  "order": 1800,
+  "order": 80,
   "img": "assets/img/products/grips-dailygrind.jpg?v=1784153759831"
  },
  {
@@ -1936,7 +1936,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 1810,
+  "order": 90,
   "img": "assets/img/products/grips-fiend-flangeless.jpg?v=1784139481764"
  },
  {
@@ -1947,32 +1947,25 @@ window.ESCENA_PRODUCTS = [
   "spec": "Goma · 153mm · Flangeless · nervadura tetraédrica",
   "price": 50000,
   "sku": "GRP-FND-001",
-  "units": 2,
-  "tag": "Nuevo!",
+  "units": 8,
   "imgs": [
-   "assets/img/products/grips-fiend-palmere.jpg?v=1784139484875",
-   "assets/img/products/grips-fiend-palmere-2.jpg?v=1784139486656"
+   "assets/img/products/grips-fiend-palmere.jpg?v=1786138927536",
+   "assets/img/products/grips-fiend-palmere-2.jpg?v=1786138929948"
   ],
   "colors": [
    {
     "label": "Negro",
-    "units": 1
+    "units": 4,
+    "price": 50000
    },
    {
     "label": "Morado",
-    "units": 1
+    "units": 4,
+    "price": 50000
    }
   ],
-  "imgColorMap": {
-   "Negro": [
-    0
-   ],
-   "Morado": [
-    1
-   ]
-  },
-  "order": 1820,
-  "img": "assets/img/products/grips-fiend-palmere.jpg?v=1784139484875"
+  "order": 20,
+  "img": "assets/img/products/grips-fiend-palmere.jpg?v=1786138927536"
  },
  {
   "slug": "grips-federal-command-negro",
@@ -1988,7 +1981,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/grips-federal-command-negro.jpg?v=1784139488275",
    "assets/img/products/grips-federal-command-negro-2.jpg?v=1784139489794"
   ],
-  "order": 1830,
+  "order": 100,
   "img": "assets/img/products/grips-federal-command-negro.jpg?v=1784139488275"
  },
  {
@@ -2091,7 +2084,7 @@ window.ESCENA_PRODUCTS = [
     5
    ]
   },
-  "order": 1840,
+  "order": 110,
   "img": "assets/img/products/grips-s-m-mike-hoder-3.jpg?v=1784138431279"
  },
  {
@@ -3735,9 +3728,9 @@ window.ESCENA_PRODUCTS = [
   "spec": "Goma · 167mm · 32mm · Rojo/Amarillo/Verde",
   "price": 55000,
   "sku": "CULT-PUNOS-RASTA",
-  "units": 12,
-  "order": 1750,
-  "img": "assets/img/products/cult-punos-rasta.jpg"
+  "units": 3,
+  "order": 10,
+  "img": "assets/img/products/cult-punos-rasta.jpg?v=1786138931862"
  },
  {
   "slug": "odyssey-punos-negro-gris",
@@ -3748,7 +3741,7 @@ window.ESCENA_PRODUCTS = [
   "price": 55000,
   "sku": "ODYSSEY-PUNOS-NEGRO-GRIS",
   "units": 12,
-  "order": 1760,
+  "order": 50,
   "img": "assets/img/products/odyssey-punos-negro-gris.jpg"
  },
  {
@@ -3760,7 +3753,7 @@ window.ESCENA_PRODUCTS = [
   "price": 55000,
   "sku": "FEDERAL-PUNOS-GRIS",
   "units": 12,
-  "order": 1770,
+  "order": 60,
   "img": "assets/img/products/federal-punos-gris.jpg"
  },
  {
@@ -3772,7 +3765,7 @@ window.ESCENA_PRODUCTS = [
   "price": 55000,
   "sku": "FIEND-PUNOS-NEGRO",
   "units": 12,
-  "order": 1780,
+  "order": 70,
   "img": "assets/img/products/fiend-punos-negro.jpg"
  },
  {
@@ -3785,7 +3778,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "FIEND-PUNOS-ROJO-BLANCO",
   "units": 12,
   "tag": "Edición",
-  "order": 1730,
+  "order": 30,
   "img": "assets/img/products/fiend-punos-rojo-blanco.jpg"
  },
  {
@@ -3797,21 +3790,53 @@ window.ESCENA_PRODUCTS = [
   "price": 56000,
   "sku": "DEMOLITION-PUNOS-ROJO-NEGRO",
   "units": 12,
-  "order": 1740,
+  "order": 40,
   "img": "assets/img/products/demolition-punos-rojo-negro.jpg"
  },
  {
   "slug": "cult-vans-punos-morado",
-  "n": "Grips Cult x Vans Morado",
+  "n": "Grips Cult x Vans",
   "brand": "Cult",
   "cat": "punos",
-  "spec": "Goma · Colab Vans · Morado",
-  "price": 62000,
+  "spec": "Material Goma - Diseño de Vans",
+  "price": 55000,
   "sku": "CULT-VANS-PUNOS-MORADO",
-  "units": 12,
-  "tag": "Colab",
-  "order": 1690,
-  "img": "assets/img/products/cult-vans-punos-morado.jpg"
+  "units": 30,
+  "order": 0,
+  "imgs": [
+   "assets/img/products/cult-vans-punos-morado.jpg?v=1786138933763",
+   "assets/img/products/cult-vans-punos-morado-2.jpg?v=1786138935922",
+   "assets/img/products/cult-vans-punos-morado-3.jpg?v=1786138937609"
+  ],
+  "colors": [
+   {
+    "label": "Morado",
+    "units": 10,
+    "price": 55000
+   },
+   {
+    "label": "Cafe",
+    "units": 20,
+    "price": 55000
+   },
+   {
+    "label": "Negro",
+    "units": 0,
+    "price": 55000
+   }
+  ],
+  "imgColorMap": {
+   "Morado": [
+    0
+   ],
+   "Cafe": [
+    1
+   ],
+   "Negro": [
+    2
+   ]
+  },
+  "img": "assets/img/products/cult-vans-punos-morado.jpg?v=1786138933763"
  },
  {
   "slug": "tornillos-titanio-arcoiris-01",
