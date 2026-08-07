@@ -1490,5 +1490,26 @@ window.ESCENA_AUDIT = [
    "bielas-fitbikeco-blunt-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:42:23.736Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "12 productos editados, 6 fotos subidas",
+  "created": [],
+  "edited": [
+   "cult-vans-punos-morado",
+   "fiend-punos-rojo-blanco",
+   "demolition-punos-rojo-negro",
+   "cult-punos-rasta",
+   "odyssey-punos-negro-gris",
+   "federal-punos-gris",
+   "fiend-punos-negro",
+   "grips-dailygrind",
+   "grips-fiend-flangeless",
+   "grips-fiend-palmere",
+   "grips-federal-command-negro",
+   "grips-s-m-mike-hoder"
+  ],
+  "deleted": []
  }
 ];
