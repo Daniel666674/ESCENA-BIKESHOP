@@ -1323,5 +1323,15 @@ window.ESCENA_AUDIT = [
    "kit-eje-espaciadores-plata"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T17:38:02.602Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "kit-eje-espaciadores-plata"
+  ],
+  "deleted": []
  }
 ];
