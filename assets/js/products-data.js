@@ -3749,9 +3749,9 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "order": 50,
   "imgs": [
-   "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140798098",
-   "assets/img/products/odyssey-punos-negro-gris-2.jpg?v=1786140799774",
-   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1786140801437"
+   "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140937999",
+   "assets/img/products/odyssey-punos-negro-gris-2.jpg?v=1786140939092",
+   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1786140940339"
   ],
   "colors": [
    {
@@ -3770,7 +3770,18 @@ window.ESCENA_PRODUCTS = [
     "price": 48000
    }
   ],
-  "img": "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140798098"
+  "imgColorMap": {
+   "Morado/Negro": [
+    0
+   ],
+   "Negro/Translucido": [
+    1
+   ],
+   "Negro": [
+    2
+   ]
+  },
+  "img": "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140937999"
  },
  {
   "slug": "federal-punos-gris",
