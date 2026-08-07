@@ -1623,5 +1623,15 @@ window.ESCENA_AUDIT = [
    "demolition-punos-rojo-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T22:04:45.754Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "demolition-punos-rojo-negro"
+  ],
+  "deleted": []
  }
 ];
