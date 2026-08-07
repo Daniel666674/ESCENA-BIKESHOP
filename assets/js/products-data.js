@@ -49,20 +49,18 @@ window.ESCENA_PRODUCTS = [
   ],
   "colors": [
    {
-    "label": "NegroNegro",
-    "units": 1,
-    "price": 400000
+    "label": "Negro",
+    "units": 1
    },
    {
     "label": "Cromado",
-    "units": 1,
-    "price": 420000
+    "units": 1
    }
   ],
   "slug": "tenedor-fiction-shank",
   "order": 420,
   "imgColorMap": {
-   "NegroNegro": [
+   "Negro": [
     0
    ],
    "Cromado": [
@@ -70,6 +68,12 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 2
+   }
+  ],
   "img": "assets/img/products/tenedor-fiction-shank.jpg?v=1785502335887"
  },
  {
