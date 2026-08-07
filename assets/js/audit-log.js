@@ -1424,5 +1424,15 @@ window.ESCENA_AUDIT = [
    "colony-bielas-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:08:38.289Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "bielas-cult-hawk-cromada"
+  ],
+  "deleted": []
  }
 ];
