@@ -1949,8 +1949,8 @@ window.ESCENA_PRODUCTS = [
   "sku": "GRP-FND-001",
   "units": 8,
   "imgs": [
-   "assets/img/products/grips-fiend-palmere.jpg?v=1786138927536",
-   "assets/img/products/grips-fiend-palmere-2.jpg?v=1786138929948"
+   "assets/img/products/grips-fiend-palmere.jpg?v=1786138986160",
+   "assets/img/products/grips-fiend-palmere-2.jpg?v=1786138989706"
   ],
   "colors": [
    {
@@ -1965,7 +1965,15 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 20,
-  "img": "assets/img/products/grips-fiend-palmere.jpg?v=1786138927536"
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Morado": [
+    1
+   ]
+  },
+  "img": "assets/img/products/grips-fiend-palmere.jpg?v=1786138986160"
  },
  {
   "slug": "grips-federal-command-negro",
