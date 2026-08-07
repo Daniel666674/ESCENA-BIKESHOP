@@ -3739,7 +3739,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CULT-PUNOS-RASTA",
   "units": 3,
   "order": 10,
-  "img": "assets/img/products/cult-punos-rasta.jpg?v=1786139290308"
+  "img": "assets/img/products/cult-punos-rasta.jpg?v=1786139460982"
  },
  {
   "slug": "odyssey-punos-negro-gris",
