@@ -3740,15 +3740,37 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "odyssey-punos-negro-gris",
-  "n": "Grips Odyssey Negro/Gris",
+  "n": "Grips Odyssey Broc",
   "brand": "Odyssey",
   "cat": "punos",
-  "spec": "Goma · Negro/Gris",
-  "price": 55000,
+  "spec": "Goma · Firma de Broc Raifor Logo Broc en los extremos Diseño acanalado cómodo Par Ends incluidos 160 mm de longitud",
+  "price": 48000,
   "sku": "ODYSSEY-PUNOS-NEGRO-GRIS",
-  "units": 12,
+  "units": 1,
   "order": 50,
-  "img": "assets/img/products/odyssey-punos-negro-gris.jpg"
+  "imgs": [
+   "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140798098",
+   "assets/img/products/odyssey-punos-negro-gris-2.jpg?v=1786140799774",
+   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1786140801437"
+  ],
+  "colors": [
+   {
+    "label": "Morado/Negro",
+    "units": 1,
+    "price": 48000
+   },
+   {
+    "label": "Negro/Translucido",
+    "units": 0,
+    "price": 48000
+   },
+   {
+    "label": "Negro",
+    "units": 0,
+    "price": 48000
+   }
+  ],
+  "img": "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140798098"
  },
  {
   "slug": "federal-punos-gris",
