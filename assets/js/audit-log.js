@@ -1465,5 +1465,20 @@ window.ESCENA_AUDIT = [
    "bielas-optimus-medusa-derecha-8t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:24:25.228Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "6 productos editados",
+  "created": [],
+  "edited": [
+   "bielas-stranger-level-8t-negra",
+   "bielas-optimus-medusa-derecha-8t-cromada",
+   "bielas-optimus-medusa-derecha-8t",
+   "fiend-bielas-negro",
+   "kit-eje-espaciadores-plata",
+   "bielas-fitbikeco-blunt-negra"
+  ],
+  "deleted": []
  }
 ];
