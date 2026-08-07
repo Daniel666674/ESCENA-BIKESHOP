@@ -1602,5 +1602,15 @@ window.ESCENA_AUDIT = [
    "cult-punos-rasta"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:58:30.642Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "fiend-punos-rojo-blanco"
+  ],
+  "deleted": []
  }
 ];
