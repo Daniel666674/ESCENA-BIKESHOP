@@ -1414,5 +1414,15 @@ window.ESCENA_AUDIT = [
    "bielas-cult-hawk-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:07:27.561Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "colony-bielas-negro"
+  ],
+  "deleted": []
  }
 ];
