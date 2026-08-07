@@ -1541,5 +1541,15 @@ window.ESCENA_AUDIT = [
    "cult-vans-punos-morado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:47:38.387Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cult-vans-punos-morado"
+  ],
+  "deleted": []
  }
 ];
