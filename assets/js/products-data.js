@@ -3776,16 +3776,48 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "fiend-punos-rojo-blanco",
-  "n": "Grips Fiend Rojo/Blanco",
+  "n": "Grips Fiend Flangeless",
   "brand": "Fiend",
   "cat": "punos",
   "spec": "Goma · Rojo/Blanco splash",
-  "price": 58000,
+  "price": 50000,
   "sku": "FIEND-PUNOS-ROJO-BLANCO",
-  "units": 12,
-  "tag": "Edición",
+  "units": 9,
   "order": 30,
-  "img": "assets/img/products/fiend-punos-rojo-blanco.jpg"
+  "imgs": [
+   "assets/img/products/fiend-punos-rojo-blanco.jpg?v=1786139903862",
+   "assets/img/products/fiend-punos-rojo-blanco-2.jpg?v=1786139905392",
+   "assets/img/products/fiend-punos-rojo-blanco-3.jpg?v=1786139906921"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 3,
+    "price": 50000
+   },
+   {
+    "label": "Negro/Translucido",
+    "units": 3,
+    "price": 50000
+   },
+   {
+    "label": "Rojo/Translucido",
+    "units": 3,
+    "price": 50000
+   }
+  ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Negro/Translucido": [
+    1
+   ],
+   "Rojo/Translucido": [
+    2
+   ]
+  },
+  "img": "assets/img/products/fiend-punos-rojo-blanco.jpg?v=1786139903862"
  },
  {
   "slug": "demolition-punos-rojo-negro",
