@@ -1,5 +1,27 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bielas Cult Hawk Cromada",
+  "brand": "Cult",
+  "cat": "bielas",
+  "spec": "",
+  "price": 890000,
+  "sku": "BIE-CLT-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/bielas-cult-hawk-cromada.jpg?v=1786135738295",
+   "assets/img/products/bielas-cult-hawk-cromada-2.jpg?v=1786135739804"
+  ],
+  "sizes": [
+   {
+    "label": "165mm",
+    "units": 1
+   }
+  ],
+  "slug": "bielas-cult-hawk-cromada",
+  "order": 10,
+  "img": "assets/img/products/bielas-cult-hawk-cromada.jpg?v=1786135738295"
+ },
+ {
   "n": "Bielas Fitbikeco BLunt Negra",
   "brand": "Fitbikeco",
   "cat": "bielas",
@@ -14,7 +36,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "bielas-fitbikeco-blunt-negra",
-  "order": 30,
+  "order": 40,
   "img": "assets/img/products/bielas-fitbikeco-blunt-negra.jpg?v=1786124766552"
  },
  {
@@ -2728,7 +2750,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 70,
+  "order": 80,
   "imgs": [
    "assets/img/products/mutany-savage-bielas-negro.jpg?v=1785609361166",
    "assets/img/products/mutany-savage-bielas-negro-2.jpg?v=1785609362290"
@@ -2751,7 +2773,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 10,
+  "order": 20,
   "imgs": [
    "assets/img/products/fiend-bielas-negro.jpg?v=1785608582606",
    "assets/img/products/fiend-bielas-negro-2.jpg?v=1785608584038"
@@ -2760,17 +2782,17 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "cult-bielas-negro",
-  "n": "Bielas Cult Hawk 165",
+  "n": "Bielas Cult Hawk Negra",
   "brand": "Cult",
   "cat": "bielas",
   "spec": "Cromoly tratado al calor · 22mm eje · 48 estrías · 165mm · Negro",
   "price": 790000,
   "sku": "CULT-BIELAS-NEGRO",
-  "units": 1,
+  "units": 2,
   "sizes": [
    {
     "label": "165mm",
-    "units": 1
+    "units": 2
    }
   ],
   "order": 0,
@@ -3006,7 +3028,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 20,
+  "order": 30,
   "imgFit": "cover",
   "img": "assets/img/products/kit-eje-espaciadores-plata.jpg?v=1785608153030"
  },
@@ -3025,7 +3047,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 60,
+  "order": 70,
   "imgs": [
    "assets/img/products/colony-bielas-negro.jpg?v=1785608515667",
    "assets/img/products/colony-bielas-negro-2.jpg?v=1785608517173",
@@ -3056,7 +3078,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 40,
+  "order": 50,
   "imgs": [
    "assets/img/products/kit-hardware-bielas-plata.jpg?v=1785608267823",
    "assets/img/products/kit-hardware-bielas-plata-2.jpg?v=1785608269052"
@@ -3086,7 +3108,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 50,
+  "order": 60,
   "imgs": [
    "assets/img/products/kit-hardware-bielas-negro.jpg?v=1785608385789",
    "assets/img/products/kit-hardware-bielas-negro-2.jpg?v=1785608386815",
