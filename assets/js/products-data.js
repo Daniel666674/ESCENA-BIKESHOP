@@ -1,5 +1,23 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bielas Fitbikeco BLunt Negra",
+  "brand": "Fitbikeco",
+  "cat": "bielas",
+  "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Cromoly · Plata",
+  "price": 880000,
+  "sku": "BIE-FIT-001",
+  "units": 0,
+  "sizes": [
+   {
+    "label": "165mm",
+    "units": 0
+   }
+  ],
+  "slug": "bielas-fitbikeco-blunt-negra",
+  "order": 30,
+  "img": "assets/img/products/bielas-fitbikeco-blunt-negra.jpg?v=1786124766552"
+ },
+ {
   "n": "Tenedor colony sweet thoot",
   "brand": "Colony",
   "cat": "horquillas",
@@ -2710,7 +2728,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 390,
+  "order": 70,
   "imgs": [
    "assets/img/products/mutany-savage-bielas-negro.jpg?v=1785609361166",
    "assets/img/products/mutany-savage-bielas-negro-2.jpg?v=1785609362290"
@@ -2733,7 +2751,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 290,
+  "order": 10,
   "imgs": [
    "assets/img/products/fiend-bielas-negro.jpg?v=1785608582606",
    "assets/img/products/fiend-bielas-negro-2.jpg?v=1785608584038"
@@ -2755,7 +2773,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 310,
+  "order": 0,
   "imgs": [
    "assets/img/products/cult-bielas-negro.jpg?v=1785609165474",
    "assets/img/products/cult-bielas-negro-2.jpg?v=1785608692072"
@@ -2975,45 +2993,21 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "kit-eje-espaciadores-plata",
-  "n": "Bielas Fitbikeco Blunt",
+  "n": "Bielas Fitbikeco Blunt Cromada",
   "brand": "Fitbikeco",
   "cat": "bielas",
   "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Cromoly · Plata",
   "price": 930000,
   "sku": "KIT-EJE-ESPACIADORES-PLATA",
-  "units": 3,
+  "units": 2,
   "sizes": [
    {
     "label": "165mm",
-    "units": 3
+    "units": 2
    }
   ],
-  "order": 230,
+  "order": 20,
   "imgFit": "cover",
-  "imgs": [
-   "assets/img/products/kit-eje-espaciadores-plata.jpg?v=1785608153030",
-   "assets/img/products/kit-eje-espaciadores-plata-2.jpg?v=1786124358048"
-  ],
-  "colors": [
-   {
-    "label": "Cromada",
-    "units": 2,
-    "price": 930000
-   },
-   {
-    "label": "Negro",
-    "units": 1,
-    "price": 880000
-   }
-  ],
-  "imgColorMap": {
-   "Cromada": [
-    0
-   ],
-   "Negro": [
-    1
-   ]
-  },
   "img": "assets/img/products/kit-eje-espaciadores-plata.jpg?v=1785608153030"
  },
  {
@@ -3031,7 +3025,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 280,
+  "order": 60,
   "imgs": [
    "assets/img/products/colony-bielas-negro.jpg?v=1785608515667",
    "assets/img/products/colony-bielas-negro-2.jpg?v=1785608517173",
@@ -3062,7 +3056,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 240,
+  "order": 40,
   "imgs": [
    "assets/img/products/kit-hardware-bielas-plata.jpg?v=1785608267823",
    "assets/img/products/kit-hardware-bielas-plata-2.jpg?v=1785608269052"
@@ -3092,7 +3086,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 270,
+  "order": 50,
   "imgs": [
    "assets/img/products/kit-hardware-bielas-negro.jpg?v=1785608385789",
    "assets/img/products/kit-hardware-bielas-negro-2.jpg?v=1785608386815",
