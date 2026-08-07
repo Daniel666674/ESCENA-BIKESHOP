@@ -1950,7 +1950,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "GRP-FND-001",
   "units": 8,
   "imgs": [
-   "assets/img/products/grips-fiend-palmere.jpg?v=1786138986160",
+   "assets/img/products/grips-fiend-palmere.jpg?v=1786139516975",
    "assets/img/products/grips-fiend-palmere-2.jpg?v=1786138989706"
   ],
   "colors": [
@@ -1967,14 +1967,11 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 20,
   "imgColorMap": {
-   "Negro": [
-    0
-   ],
    "Morado": [
     1
    ]
   },
-  "img": "assets/img/products/grips-fiend-palmere.jpg?v=1786138986160"
+  "img": "assets/img/products/grips-fiend-palmere.jpg?v=1786139516975"
  },
  {
   "slug": "grips-federal-command-negro",
@@ -3739,7 +3736,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CULT-PUNOS-RASTA",
   "units": 3,
   "order": 10,
-  "img": "assets/img/products/cult-punos-rasta.jpg?v=1786139460982"
+  "img": "assets/img/products/cult-punos-rasta.jpg?v=1786139522117"
  },
  {
   "slug": "odyssey-punos-negro-gris",
