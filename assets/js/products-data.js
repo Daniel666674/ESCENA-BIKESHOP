@@ -14,6 +14,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "bielas-optimus-medusa-derecha-8t-cromada",
+  "order": 100,
   "img": "assets/img/products/bielas-optimus-medusa-derecha-8t-cromada.jpg?v=1786137731603"
  },
  {
@@ -31,6 +32,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
+  "order": 110,
   "img": "assets/img/products/bielas-optimus-medusa-derecha-8t.jpg?v=1786137733224"
  },
  {
@@ -48,6 +50,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "bielas-stranger-level-8t-negra",
+  "order": 90,
   "img": "assets/img/products/bielas-stranger-level-8t-negra.jpg?v=1786137250599"
  },
  {
@@ -81,15 +84,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Cromoly · Plata",
   "price": 880000,
   "sku": "BIE-FIT-001",
-  "units": 1,
+  "units": 0,
   "sizes": [
    {
     "label": "165mm",
-    "units": 1
+    "units": 0
    }
   ],
   "slug": "bielas-fitbikeco-blunt-negra",
-  "order": 40,
+  "order": 30,
   "img": "assets/img/products/bielas-fitbikeco-blunt-negra.jpg?v=1786124766552"
  },
  {
@@ -2812,7 +2815,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "fiend-bielas-negro",
-  "n": "Bielas Fiend Segment Negras",
+  "n": "Bielas Fiend Segment Negras 165MM",
   "brand": "Fiend",
   "cat": "bielas",
   "spec": "Cromoly · 48 estrías · 22mm hueco eje · 165mm · Negro · 3pc",
@@ -2826,7 +2829,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 20,
+  "order": 40,
   "imgs": [
    "assets/img/products/fiend-bielas-negro.jpg?v=1785608582606",
    "assets/img/products/fiend-bielas-negro-2.jpg?v=1785608584038"
@@ -3081,7 +3084,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 30,
+  "order": 20,
   "imgFit": "cover",
   "img": "assets/img/products/kit-eje-espaciadores-plata.jpg?v=1785608153030"
  },
