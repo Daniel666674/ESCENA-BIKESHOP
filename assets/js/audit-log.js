@@ -1404,5 +1404,15 @@ window.ESCENA_AUDIT = [
    "mutany-savage-bielas-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:05:45.867Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "bielas-cult-hawk-cromada"
+  ],
+  "deleted": []
  }
 ];
