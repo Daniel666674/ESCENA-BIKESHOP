@@ -1343,5 +1343,23 @@ window.ESCENA_AUDIT = [
    "kit-eje-espaciadores-plata"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T17:46:21.289Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 7 productos editados, 1 foto subida",
+  "created": [
+   "bielas-fitbikeco-blunt-negra"
+  ],
+  "edited": [
+   "kit-eje-espaciadores-plata",
+   "kit-hardware-bielas-plata",
+   "kit-hardware-bielas-negro",
+   "colony-bielas-negro",
+   "fiend-bielas-negro",
+   "cult-bielas-negro",
+   "mutany-savage-bielas-negro"
+  ],
+  "deleted": []
  }
 ];
