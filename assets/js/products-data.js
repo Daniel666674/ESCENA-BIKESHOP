@@ -2991,7 +2991,7 @@ window.ESCENA_PRODUCTS = [
   "order": 230,
   "imgs": [
    "assets/img/products/kit-eje-espaciadores-plata.jpg?v=1785608153030",
-   "assets/img/products/kit-eje-espaciadores-plata-2.jpg?v=1786124212899"
+   "assets/img/products/kit-eje-espaciadores-plata-2.jpg?v=1786124278930"
   ],
   "colors": [
    {
@@ -3005,6 +3005,14 @@ window.ESCENA_PRODUCTS = [
     "price": 880000
    }
   ],
+  "imgColorMap": {
+   "Cromada": [
+    0
+   ],
+   "Negro": [
+    1
+   ]
+  },
   "img": "assets/img/products/kit-eje-espaciadores-plata.jpg?v=1785608153030"
  },
  {
