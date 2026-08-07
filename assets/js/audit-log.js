@@ -1612,5 +1612,16 @@ window.ESCENA_AUDIT = [
    "fiend-punos-rojo-blanco"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T22:03:41.868Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 5 fotos subidas",
+  "created": [],
+  "edited": [
+   "fiend-punos-rojo-blanco",
+   "demolition-punos-rojo-negro"
+  ],
+  "deleted": []
  }
 ];
