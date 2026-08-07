@@ -1521,5 +1521,15 @@ window.ESCENA_AUDIT = [
    "grips-fiend-palmere"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:45:22.124Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-gw-gorila-4pc-negro"
+  ],
+  "deleted": []
  }
 ];
