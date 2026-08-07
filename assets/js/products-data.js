@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bielas Stranger Level 8T Negra",
+  "brand": "Stranger",
+  "cat": "bielas",
+  "spec": "Material Cromolio Sanko Japones 4130 tratadas al calor Eje 19mm 8 Estrías  Incluye Caja Primo Mid 19mm Compatible para plato Derecho e Izquierdo Peso: 987 gramos",
+  "price": 420000,
+  "sku": "BIE-STR-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "165mm",
+    "units": 1
+   }
+  ],
+  "slug": "bielas-stranger-level-8t-negra",
+  "img": "assets/img/products/bielas-stranger-level-8t-negra.jpg?v=1786137250599"
+ },
+ {
   "n": "Bielas Cult Hawk Cromada",
   "brand": "Cult",
   "cat": "bielas",
