@@ -1531,5 +1531,15 @@ window.ESCENA_AUDIT = [
    "timon-gw-gorila-4pc-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:46:25.927Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "cult-vans-punos-morado"
+  ],
+  "deleted": []
  }
 ];
