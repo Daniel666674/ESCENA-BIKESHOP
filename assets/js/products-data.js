@@ -1,5 +1,33 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bielas Optimus medusa Derecha 8T Cromada",
+  "brand": "Optimus",
+  "cat": "bielas",
+  "spec": "Material Cromolio Eje 19mm Incluye Caja Mid",
+  "price": 160000,
+  "sku": "BIE-OPT-001",
+  "units": 5,
+  "sizes": [
+   {
+    "label": "175mm",
+    "units": 5
+   }
+  ],
+  "slug": "bielas-optimus-medusa-derecha-8t-cromada",
+  "img": "assets/img/products/bielas-optimus-medusa-derecha-8t-cromada.jpg?v=1786137731603"
+ },
+ {
+  "n": "Bielas Optimus medusa Derecha 8T",
+  "brand": "Optimus",
+  "cat": "piezas",
+  "spec": "Material Cromolio Eje 19mm Incluye Caja Mid",
+  "price": 150000,
+  "sku": "PZA-OPT-001",
+  "units": 5,
+  "slug": "bielas-optimus-medusa-derecha-8t",
+  "img": "assets/img/products/bielas-optimus-medusa-derecha-8t.jpg?v=1786137733224"
+ },
+ {
   "n": "Bielas Stranger Level 8T Negra",
   "brand": "Stranger",
   "cat": "bielas",
