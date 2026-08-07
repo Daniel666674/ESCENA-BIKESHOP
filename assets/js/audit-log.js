@@ -1511,5 +1511,15 @@ window.ESCENA_AUDIT = [
    "grips-s-m-mike-hoder"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:43:24.121Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "grips-fiend-palmere"
+  ],
+  "deleted": []
  }
 ];
