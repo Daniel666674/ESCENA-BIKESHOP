@@ -1390,5 +1390,19 @@ window.ESCENA_AUDIT = [
    "bielas-cult-hawk-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-07T21:03:57.011Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos editados",
+  "created": [],
+  "edited": [
+   "bielas-fitbikeco-blunt-negra",
+   "fiend-bielas-negro",
+   "kit-hardware-bielas-plata",
+   "kit-hardware-bielas-negro",
+   "mutany-savage-bielas-negro"
+  ],
+  "deleted": []
  }
 ];
