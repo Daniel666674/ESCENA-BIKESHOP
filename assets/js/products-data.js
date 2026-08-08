@@ -3751,23 +3751,20 @@ window.ESCENA_PRODUCTS = [
   "imgs": [
    "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140937999",
    "assets/img/products/odyssey-punos-negro-gris-2.jpg?v=1786140939092",
-   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1786141462260"
+   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1786230665371"
   ],
   "colors": [
    {
     "label": "Morado/Negro",
-    "units": 1,
-    "price": 48000
+    "units": 1
    },
    {
     "label": "Negro/Translucido",
-    "units": 0,
-    "price": 48000
+    "units": 0
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 48000
+    "units": 0
    }
   ],
   "imgColorMap": {
@@ -3776,6 +3773,9 @@ window.ESCENA_PRODUCTS = [
    ],
    "Negro/Translucido": [
     1
+   ],
+   "Negro": [
+    2
    ]
   },
   "img": "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140937999"
