@@ -2672,7 +2672,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "biggie hammertoe",
   "units": 2,
   "imgs": [
-   "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784313915335",
+   "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1786194877153",
    "assets/img/products/marco-cult-biggie-hammertone-2.jpg?v=1784313916815",
    "assets/img/products/marco-cult-biggie-hammertone-3.jpg?v=1784313918454",
    "assets/img/products/marco-cult-biggie-hammertone-4.jpg?v=1784313919935",
@@ -2689,7 +2689,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 140,
-  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1784313915335"
+  "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1786194877153"
  },
  {
   "slug": "cana-s-m-enduro-40mm-negra",
