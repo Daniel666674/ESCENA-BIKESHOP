@@ -1673,5 +1673,15 @@ window.ESCENA_AUDIT = [
    "fiend-reynolds-v3-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-08T13:14:39.812Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "marco-cult-biggie-hammertone"
+  ],
+  "deleted": []
  }
 ];
