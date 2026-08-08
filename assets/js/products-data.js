@@ -4345,7 +4345,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
   "units": 2,
   "imgs": [
-   "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315798448",
+   "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1786194790215",
    "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1784315799762",
    "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1784156646261",
    "assets/img/products/fiend-reynolds-v3-negro-5.jpg?v=1784156650039",
@@ -4358,7 +4358,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 110,
-  "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1784315798448"
+  "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1786194790215"
  },
  {
   "slug": "aro_demolition_zero_plus_negro",
