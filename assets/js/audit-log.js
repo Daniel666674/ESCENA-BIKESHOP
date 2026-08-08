@@ -1663,5 +1663,15 @@ window.ESCENA_AUDIT = [
    "odyssey-punos-negro-gris"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-08T13:13:12.932Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "fiend-reynolds-v3-negro"
+  ],
+  "deleted": []
  }
 ];
