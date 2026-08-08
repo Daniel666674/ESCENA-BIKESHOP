@@ -1710,5 +1710,15 @@ window.ESCENA_AUDIT = [
    "cult-havens-gate-alex-duleba-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-08T23:11:25.863Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "odyssey-punos-negro-gris"
+  ],
+  "deleted": []
  }
 ];
