@@ -1697,5 +1697,18 @@ window.ESCENA_AUDIT = [
    "total-marco-2075-blanco-azul"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-08T13:40:46.357Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "4 productos editados, 4 fotos subidas",
+  "created": [],
+  "edited": [
+   "fiend-reynolds-v3-negro",
+   "marco-cult-biggie-hammertone",
+   "cult-biggie-jaime-sintes-hammertone-negro",
+   "cult-havens-gate-alex-duleba-negro"
+  ],
+  "deleted": []
  }
 ];
