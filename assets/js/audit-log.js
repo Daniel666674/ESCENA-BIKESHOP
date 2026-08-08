@@ -1730,5 +1730,20 @@ window.ESCENA_AUDIT = [
    "odyssey-punos-negro-gris"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-08T23:30:56.354Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados, 2 productos eliminados, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "grips-dailygrind",
+   "federal-punos-gris",
+   "grips-federal-command-negro"
+  ],
+  "deleted": [
+   "fiend-punos-negro",
+   "grips-fiend-flangeless"
+  ]
  }
 ];
