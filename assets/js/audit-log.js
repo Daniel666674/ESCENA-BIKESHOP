@@ -1745,5 +1745,16 @@ window.ESCENA_AUDIT = [
    "fiend-punos-negro",
    "grips-fiend-flangeless"
   ]
+ },
+ {
+  "ts": "2026-08-08T23:36:25.434Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "grips-s-m-mike-hoder",
+   "grips-federal-command-negro"
+  ],
+  "deleted": []
  }
 ];
