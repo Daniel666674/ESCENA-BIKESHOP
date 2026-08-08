@@ -385,10 +385,10 @@ header.top-bar .brand .name { color: #fff; }
 
 <div class="pdp">
   <div>
-    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784325939777&quot;]" data-fit="auto">
+    <div class="pdp-image" id="pdpGallery" data-imgs="[&quot;../assets/img/products/total-marco-2075-blanco-azul.jpg?v=1786195793991&quot;]" data-fit="auto">
       <div class="pdp-image-blur" id="pdpBlur"></div>
       
-      <img id="pdpMainImg" src="../assets/img/products/total-marco-2075-blanco-azul.jpg?v=1784325939777" alt="Total BMX Marco - Total BMX" width="700" height="700" />
+      <img id="pdpMainImg" src="../assets/img/products/total-marco-2075-blanco-azul.jpg?v=1786195793991" alt="Total BMX Marco - Total BMX" width="700" height="700" />
       <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Ampliar imagen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
       <div class="pdp-dots" id="pdpDots"></div>
     </div>
@@ -429,36 +429,36 @@ header.top-bar .brand .name { color: #fff; }
 <div class="related">
   <h2>También te puede gustar</h2>
   <div class="related-grid">
-    <a class="r-card" href="marco-gw-destructor-azul-20-5">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069" alt="Marco GW Destructor Azul - GW BMX" loading="lazy" width="300" height="300" /></div>
+    <a class="r-card" href="marco-gw-destructor-morado">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-gw-destructor-morado.jpg?v=1785260741191" alt="Marco GW Destructor Morado - GW BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">GW</span>
-          <h3>Marco GW Destructor Azul</h3>
+          <h3>Marco GW Destructor Morado</h3>
           <div class="price">$180.000 COP</div>
         </div>
       </a>
-<a class="r-card" href="marco-federal-command-negro-20-5-x-cola-12-5">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009" alt="Marco Federal Command Negro - Federal BMX" loading="lazy" width="300" height="300" /></div>
+<a class="r-card" href="marco-profit-culver-gris-cromolio">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-profit-culver-gris-cromolio.jpg?v=1785260584825" alt="Marco Profit Culver Gris Cromolio - Profit BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
-          <span class="brand-lbl">Federal</span>
-          <h3>Marco Federal Command Negro</h3>
-          <div class="price">$1.660.000 COP</div>
+          <span class="brand-lbl">Profit</span>
+          <h3>Marco Profit Culver Gris Cromolio</h3>
+          <div class="price">$370.000 COP</div>
         </div>
       </a>
-<a class="r-card" href="marco-federal-chiller-20-75-cola-12-7">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784324778016" alt="Marco Federal Chiller - Federal BMX" loading="lazy" width="300" height="300" /></div>
+<a class="r-card" href="marco-wethepeople-message-verde">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-wethepeople-message-verde.jpg?v=1785260255097" alt="Marco Wethepeople Message Verde - Wethepeople BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
-          <span class="brand-lbl">Federal</span>
-          <h3>Marco Federal Chiller</h3>
-          <div class="price">$1.660.000 COP</div>
+          <span class="brand-lbl">Wethepeople</span>
+          <h3>Marco Wethepeople Message Verde</h3>
+          <div class="price">$1.790.000 COP</div>
         </div>
       </a>
-<a class="r-card" href="marco-gw-destructor-tornasol">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-gw-destructor-tornasol.jpg?v=1784326217980" alt="Marco GW Destructor Tornasol - GW BMX" loading="lazy" width="300" height="300" /></div>
+<a class="r-card" href="marco-colony-prisma-negro">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-colony-prisma-negro.jpg?v=1785259625448" alt="Marco Colony Prisma Negro - Colony BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
-          <span class="brand-lbl">GW</span>
-          <h3>Marco GW Destructor Tornasol</h3>
-          <div class="price">$250.000 COP</div>
+          <span class="brand-lbl">Colony</span>
+          <h3>Marco Colony Prisma Negro</h3>
+          <div class="price">$1.700.000 COP</div>
         </div>
       </a>
   </div>
@@ -742,6 +742,9 @@ header.top-bar .brand .name { color: #fff; }
   var stockHint = document.getElementById("pdpStockHint");
   var pdpActions = document.getElementById("pdpActions");
   var addCartBtn = pdpActions ? pdpActions.querySelector(".add-cart-btn") : null;
+  // The product's own base price, baked in at publish time — the fallback
+  // whenever a selected color has no price override of its own.
+  var basePrice = addCartBtn ? (parseFloat(addCartBtn.getAttribute("data-price")) || 0) : 0;
   var unitsAvail = parseInt((stockHint && stockHint.getAttribute("data-units")) || "12", 10);
   if (isNaN(unitsAvail)) unitsAvail = 12;
   var waLink = document.getElementById("pdpWaLink");
@@ -883,6 +886,23 @@ header.top-bar .brand .name { color: #fff; }
         });
         selected[group.id] = val;
         if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
+        // Color-specific price override: prefer the live catalog's price (an
+        // admin edit must show up immediately), fall back to what was baked
+        // into this button at publish time, and fall back again to the
+        // product's base price if this color has no override of its own.
+        if (group.id === "pdpVariantColor" && addCartBtn) {
+          var colorPrice = null;
+          if (liveList) {
+            var liveColor = liveList.filter(function (c) { return c.label === val; })[0];
+            if (liveColor && liveColor.price > 0) colorPrice = liveColor.price;
+          }
+          if (colorPrice === null) {
+            var cBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+            var baked = cBtn ? parseFloat(cBtn.getAttribute("data-price")) : NaN;
+            if (baked > 0) colorPrice = baked;
+          }
+          addCartBtn.setAttribute("data-price", colorPrice !== null ? colorPrice : basePrice);
+        }
         if (isRealSize) {
           var units = null;
           if (liveList) {
