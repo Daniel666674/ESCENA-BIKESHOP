@@ -4184,7 +4184,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CULT-SHORT",
   "units": 1,
   "imgs": [
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784313922616",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1786195106322",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1784313923821",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-3.jpg?v=1784313925313",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-4.jpg?v=1784313926605",
@@ -4197,7 +4197,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 150,
-  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1784313922616"
+  "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1786195106322"
  },
  {
   "slug": "fate-namaste-negro",
@@ -4320,7 +4320,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CULT-HAVENS-GATE-ALEX-DULEBA-NEGRO",
   "units": 1,
   "imgs": [
-   "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784315099008",
+   "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1786195107550",
    "assets/img/products/cult-havens-gate-alex-duleba-negro-2.jpg?v=1784315100361",
    "assets/img/products/cult-havens-gate-alex-duleba-negro-3.jpg?v=1784315101700",
    "assets/img/products/cult-havens-gate-alex-duleba-negro-4.jpg?v=1784315103015",
@@ -4333,7 +4333,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 160,
-  "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1784315099008"
+  "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1786195107550"
  },
  {
   "slug": "fiend-reynolds-v3-negro",
