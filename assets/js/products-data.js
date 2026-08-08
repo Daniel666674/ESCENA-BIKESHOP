@@ -3751,7 +3751,7 @@ window.ESCENA_PRODUCTS = [
   "imgs": [
    "assets/img/products/odyssey-punos-negro-gris.jpg?v=1786140937999",
    "assets/img/products/odyssey-punos-negro-gris-2.jpg?v=1786140939092",
-   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1786230665371"
+   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1786230747622"
   ],
   "colors": [
    {
