@@ -1756,5 +1756,15 @@ window.ESCENA_AUDIT = [
    "grips-federal-command-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-09T00:09:06.831Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 4 fotos subidas",
+  "created": [
+   "grips-primo-cali"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
