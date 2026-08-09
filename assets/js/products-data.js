@@ -1,5 +1,38 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Grips Stolen Kunfu",
+  "brand": "Stolen",
+  "cat": "punos",
+  "spec": "",
+  "price": 45000,
+  "sku": "GRP-STL-001",
+  "units": 6,
+  "imgs": [
+   "assets/img/products/grips-stolen-kunfu.jpg?v=1786234681753",
+   "assets/img/products/grips-stolen-kunfu-2.jpg?v=1786234683195",
+   "assets/img/products/grips-stolen-kunfu-3.jpg?v=1786234684572"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 2,
+    "price": 45000
+   },
+   {
+    "label": "Cafe",
+    "units": 2,
+    "price": 45000
+   },
+   {
+    "label": "Negro",
+    "units": 2,
+    "price": 45000
+   }
+  ],
+  "slug": "grips-stolen-kunfu",
+  "img": "assets/img/products/grips-stolen-kunfu.jpg?v=1786234681753"
+ },
+ {
   "n": "Grips Primo Cali",
   "brand": "Primo",
   "cat": "punos",
