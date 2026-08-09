@@ -1766,5 +1766,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-09T00:18:08.743Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "grips-stolen-kunfu"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
