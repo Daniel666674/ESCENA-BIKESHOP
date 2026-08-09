@@ -1,5 +1,59 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Grips Primo Cali",
+  "brand": "Primo",
+  "cat": "punos",
+  "spec": "Goma · 170mm · 31mm ·  insignia de Michael Harkous",
+  "price": 50000,
+  "sku": "GRP-PRM-001",
+  "units": 11,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/grips-primo-cali.jpg?v=1786234127612",
+   "assets/img/products/grips-primo-cali-2.jpg?v=1786234133109",
+   "assets/img/products/grips-primo-cali-3.jpg?v=1786234135799",
+   "assets/img/products/grips-primo-cali-4.jpg?v=1786234138290"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 6,
+    "price": 50000
+   },
+   {
+    "label": "Verde Militar",
+    "units": 3,
+    "price": 50000
+   },
+   {
+    "label": "Azul",
+    "units": 2,
+    "price": 50000
+   },
+   {
+    "label": "Aqua",
+    "units": 0,
+    "price": 50000
+   }
+  ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Azul": [
+    1
+   ],
+   "Verde Militar": [
+    2
+   ],
+   "Aqua": [
+    3
+   ]
+  },
+  "slug": "grips-primo-cali",
+  "img": "assets/img/products/grips-primo-cali.jpg?v=1786234127612"
+ },
+ {
   "n": "Bielas Optimus medusa Derecha 8T Cromada",
   "brand": "Optimus",
   "cat": "bielas",
