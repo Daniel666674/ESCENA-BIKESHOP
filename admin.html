@@ -3852,10 +3852,25 @@
       var srcUrl = URL.createObjectURL(file);
       var video = document.createElement("video");
       video.muted = true; video.playsInline = true; video.src = srcUrl;
+      // Some browsers are unreliable decoding/capturing a <video> that's
+      // never actually part of the document (a real report: rotate failing
+      // every time on desktop Chrome for a video whose plain on-page
+      // preview -- an ATTACHED <video> -- played fine) -- keep it in the
+      // DOM but fully invisible/inert so it behaves like any other playing
+      // video for decode/hardware-acceleration purposes.
+      video.style.cssText = "position:fixed;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;";
+      document.body.appendChild(video);
       var settled = false;
-      function finish(result) { if (settled) return; settled = true; URL.revokeObjectURL(srcUrl); resolve(result); }
-      video.onerror = function () { console.warn("compressVideoFile: source video failed to decode", video.error); finish(null); };
+      function finish(result) { if (settled) return; settled = true; URL.revokeObjectURL(srcUrl); video.remove(); resolve(result); }
+      // Safety net: if neither onerror nor onloadedmetadata ever fires (a
+      // silent hang, seen on some browser/codec combinations), don't leave
+      // the caller's button disabled forever -- resolve null after a
+      // generous wait so the UI recovers with a clear "try again" message.
+      var hangTimer = setTimeout(function () { console.warn("compressVideoFile: timed out waiting for the source video to load"); finish(null); }, 15000);
+      var clearHangTimer = function () { clearTimeout(hangTimer); };
+      video.onerror = function () { clearHangTimer(); console.warn("compressVideoFile: source video failed to decode", video.error); finish(null); };
       video.onloadedmetadata = function () {
+        clearHangTimer();
         var w = video.videoWidth, h = video.videoHeight;
         if (!w || !h) { console.warn("compressVideoFile: no video dimensions after loadedmetadata", w, h); finish(null); return; }
         var scale = Math.min(1, CATEGORY_VIDEO_TARGET_LONG_EDGE / Math.max(w, h));
