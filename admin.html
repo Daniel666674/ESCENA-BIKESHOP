@@ -3220,12 +3220,34 @@
   // media the slide/category has.
   function frameStyleAttr(zoom, pos, rotation) {
     var transforms = [];
-    if (rotation) transforms.push("rotate(" + rotation + "deg)");
+    if (rotation) {
+      transforms.push("rotate(" + rotation + "deg)");
+      // 4:3 preview cards — 90°/270° swaps effective W and H, so compensate.
+      if (rotation === 90 || rotation === 270) transforms.push("scale(" + (4 / 3).toFixed(4) + ")");
+    }
     if (zoom && zoom > 100) transforms.push("scale(" + (zoom / 100) + ")");
     var s = "";
     if (transforms.length) s += "transform:" + transforms.join(" ") + ";";
     if (pos) s += "object-position:" + pos + ";";
     return s;
+  }
+  // After rendering a grid, re-measure each preview container and correct the
+  // rotation-compensation scale for the actual rendered pixel dimensions.
+  function fixRotationScales(gridEl) {
+    if (!gridEl) return;
+    gridEl.querySelectorAll(".catvid-preview").forEach(function (preview) {
+      var media = preview.querySelector("video") || preview.querySelector("img.catvid-preview-img");
+      if (!media) return;
+      var t = media.style.transform || "";
+      var rotMatch = t.match(/rotate\((\d+)deg\)/);
+      if (!rotMatch) return;
+      var rot = parseInt(rotMatch[1], 10);
+      if (rot !== 90 && rot !== 270) return;
+      var w = preview.offsetWidth, h = preview.offsetHeight;
+      if (!w || !h) return;
+      var scale = (Math.max(w / h, h / w)).toFixed(4);
+      media.style.transform = t.replace(/scale\([^)]+\)/g, "") + " scale(" + scale + ")";
+    });
   }
   function renderHeroSlides() {
     var grid = document.getElementById("heroSlidesGrid");
@@ -3263,6 +3285,7 @@
         frameEditorHTML(s.zoom, s.pos) +
         '</div>';
     }).join("");
+    fixRotationScales(grid);
   }
   function setHeroCardBusy(id, busy) {
     var card = document.querySelector('.catvid-card[data-id="' + id + '"]');
@@ -3768,6 +3791,7 @@
         (entry ? frameEditorHTML(entry.zoom, entry.pos) : '') +
         '</div>';
     }).join("");
+    fixRotationScales(grid);
   }
   // Client-side video re-encode (the video equivalent of compressDataUri()
   // for photos, which video never had until this real case: a raw 16MB
