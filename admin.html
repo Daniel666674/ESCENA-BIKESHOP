@@ -1218,7 +1218,7 @@
     }).then(function (r) { return r.ok; }).catch(function () { return false; });
   }
   function ghGetFile(path) {
-    return ghFetch("/contents/" + path + "?ref=" + GH.branch, {}).then(function (r) {
+    return ghFetch("/contents/" + path + "?ref=" + GH.branch, { cache: "no-store" }).then(function (r) {
       if (r.status === 404) return { sha: null, text: null };
       if (!r.ok) throw new Error("GET " + path + " → " + r.status);
       return r.json().then(function (j) {
