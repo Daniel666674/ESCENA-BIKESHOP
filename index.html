@@ -838,7 +838,10 @@
         // its own hover transform (translateY lift) and an inline transform
         // here would silently override that on every card with a zoom set.
         if (info.pos) vid.style.objectPosition = info.pos;
-        if (info.zoom && info.zoom > 100) vid.style.transform = "scale(" + (info.zoom / 100) + ")";
+        var transforms = [];
+        if (info.rotation) transforms.push("rotate(" + info.rotation + "deg)");
+        if (info.zoom && info.zoom > 100) transforms.push("scale(" + (info.zoom / 100) + ")");
+        if (transforms.length) vid.style.transform = transforms.join(" ");
         var playPromise = vid.play();
         if (playPromise && playPromise.catch) playPromise.catch(function () {}); // autoplay can be blocked -> card just keeps showing the photo
       });
@@ -935,7 +938,10 @@
       var frameStyle = "";
       if (s.pos) frameStyle += "background-position:" + s.pos + ";";
       if (s.zoom && s.zoom > 100) frameStyle += "transform:scale(" + (s.zoom / 100) + ");";
-      var videoStyle = s.pos ? ' style="object-position:' + s.pos + '"' : "";
+      var vidCss = "";
+      if (s.video && s.video.rotation) vidCss += "transform:rotate(" + s.video.rotation + "deg);";
+      if (s.pos) vidCss += "object-position:" + s.pos + ";";
+      var videoStyle = vidCss ? ' style="' + vidCss + '"' : "";
       var videoEl = (s.video && s.video.ext && s.video.v) ? '<video muted loop playsinline preload="none" aria-hidden="true"' + videoStyle + '></video>' : "";
       return '<div class="hero-slide' + (i === 0 ? ' is-active' : '') + '" style="' + bg + frameStyle + '">' + videoEl + '</div>';
     }).join("");
