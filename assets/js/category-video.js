@@ -22,7 +22,8 @@ window.ESCENA_CATEGORY_VIDEO_V = {
  },
  "manzana-trasera": {
   "v": 1785922306544,
-  "ext": "mp4"
+  "ext": "mp4",
+  "rotation": 90
  },
  "pinones": {
   "v": 1785922771545,
