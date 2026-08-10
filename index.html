@@ -839,7 +839,15 @@
         // here would silently override that on every card with a zoom set.
         if (info.pos) vid.style.objectPosition = info.pos;
         var transforms = [];
-        if (info.rotation) transforms.push("rotate(" + info.rotation + "deg)");
+        if (info.rotation) {
+          transforms.push("rotate(" + info.rotation + "deg)");
+          // 90°/270° swaps the video's effective width and height inside a
+          // landscape card — scale up so it still covers the full container.
+          if (info.rotation === 90 || info.rotation === 270) {
+            var cW = entry.target.offsetWidth, cH = entry.target.offsetHeight;
+            if (cW && cH) transforms.push("scale(" + (Math.max(cW / cH, cH / cW)).toFixed(4) + ")");
+          }
+        }
         if (info.zoom && info.zoom > 100) transforms.push("scale(" + (info.zoom / 100) + ")");
         if (transforms.length) vid.style.transform = transforms.join(" ");
         var playPromise = vid.play();
@@ -955,6 +963,14 @@
       if (!vid.getAttribute("src")) {
         vid.addEventListener("loadeddata", function () { vid.classList.add("is-visible"); }, { once: true });
         vid.src = "assets/video/hero-" + data.id + "." + data.video.ext + "?v=" + data.video.v;
+        var rot = data.video.rotation;
+        if (rot === 90 || rot === 270) {
+          var sW = slide.offsetWidth, sH = slide.offsetHeight;
+          if (sW && sH) {
+            var existing = vid.style.transform || "";
+            vid.style.transform = existing + " scale(" + (Math.max(sW / sH, sH / sW)).toFixed(4) + ")";
+          }
+        }
       }
       var p = vid.play();
       if (p && p.catch) p.catch(function () {}); // autoplay can be blocked -> slide just keeps showing the photo
