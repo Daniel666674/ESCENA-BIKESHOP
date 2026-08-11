@@ -2007,7 +2007,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Top!",
   "imgs": [
-   "assets/img/products/plato-volume-guardia-28t.jpg?v=1786462132620",
+   "assets/img/products/plato-volume-guardia-28t.jpg?v=1786462861771",
    "assets/img/products/plato-volume-guardia-28t-2.jpg?v=1786462134096"
   ],
   "sizes": [
@@ -2017,7 +2017,8 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 790,
-  "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1786462132620"
+  "imgFit": "cover",
+  "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1786462861771"
  },
  {
   "slug": "marco-gw-destructor-tornasol",
@@ -2123,7 +2124,6 @@ window.ESCENA_PRODUCTS = [
   "price": 230000,
   "sku": "PLT-FAT-001",
   "units": 1,
-  "tag": "Top!",
   "sizes": [
    {
     "label": "28T",
@@ -2131,7 +2131,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 910,
-  "img": "assets/img/products/plato-fate-guardia-negro-28t.jpg?v=1786462135509"
+  "img": "assets/img/products/plato-fate-guardia-negro-28t.jpg?v=1786462863201"
  },
  {
   "slug": "pedales-fate-negro",
@@ -2314,9 +2314,8 @@ window.ESCENA_PRODUCTS = [
   "price": 240000,
   "sku": "PLT-ODY-001",
   "units": 1,
-  "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1786462140470",
+   "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1786462864738",
    "assets/img/products/plato-odyssey-big-boyd-28t-2.jpg?v=1786462141708"
   ],
   "sizes": [
@@ -2332,7 +2331,8 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 890,
-  "img": "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1786462140470"
+  "imgFit": "cover",
+  "img": "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1786462864738"
  },
  {
   "slug": "cana-fiend-mills-topload",
@@ -3580,7 +3580,6 @@ window.ESCENA_PRODUCTS = [
   "price": 230000,
   "sku": "CULT-PINON-NEGRO",
   "units": 5,
-  "tag": "TOP",
   "sizes": [
    {
     "label": "28T",
@@ -3588,7 +3587,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 920,
-  "img": "assets/img/products/cult-pinon-negro.jpg?v=1786462142847"
+  "img": "assets/img/products/cult-pinon-negro.jpg?v=1786462866069"
  },
  {
   "slug": "odyssey-pinon-28t-negro",
@@ -3608,10 +3607,10 @@ window.ESCENA_PRODUCTS = [
   "order": 600,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/odyssey-pinon-28t-negro.jpg?v=1786462144200",
+   "assets/img/products/odyssey-pinon-28t-negro.jpg?v=1786462867607",
    "assets/img/products/odyssey-pinon-28t-negro-2.jpg?v=1786462145489"
   ],
-  "img": "assets/img/products/odyssey-pinon-28t-negro.jpg?v=1786462144200"
+  "img": "assets/img/products/odyssey-pinon-28t-negro.jpg?v=1786462867607"
  },
  {
   "slug": "fiend-pinon-25t-negro",
@@ -3630,10 +3629,11 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 770,
   "imgs": [
-   "assets/img/products/fiend-pinon-25t-negro.jpg?v=1786462146573",
-   "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1786462148546"
+   "assets/img/products/fiend-pinon-25t-negro.jpg?v=1786462869038",
+   "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1786462870473"
   ],
-  "img": "assets/img/products/fiend-pinon-25t-negro.jpg?v=1786462146573"
+  "imgFit": "cover",
+  "img": "assets/img/products/fiend-pinon-25t-negro.jpg?v=1786462869038"
  },
  {
   "slug": "federal-pinon-gris",
