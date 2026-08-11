@@ -1833,5 +1833,15 @@ window.ESCENA_AUDIT = [
    "odyssey-pinon-28t-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-11T15:43:04.544Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "plato-federal-code-guard-cromado-28t"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
