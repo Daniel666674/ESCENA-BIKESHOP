@@ -1843,5 +1843,31 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-11T16:02:35.209Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "13 productos editados, 3 productos eliminados, 15 fotos subidas",
+  "created": [],
+  "edited": [
+   "silla-pivotal-fiend-reynolds-v2-zebra",
+   "silla-pivotal-fiend-reynolds-negra",
+   "silla-pivotal-fiend-mills",
+   "fiend-mills-sillin-negro",
+   "odyssey-sillin-floral",
+   "silla-pivotal-eighties-zebra",
+   "cult-sillin-negro",
+   "animal-sillin-camuflado",
+   "stolen-sillin-negro",
+   "cult-sillin-cuadros",
+   "fit-sillin-diamante-negro",
+   "silla-pivotal-fitbikeco-negra",
+   "silla-pivotal-fate-negra"
+  ],
+  "deleted": [
+   "plato-federal-bikes-codeguard-cromado-28t",
+   "fiend-mills-sillin-blanco",
+   "fiend-fiending-stem-negro"
+  ]
  }
 ];
