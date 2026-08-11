@@ -178,7 +178,7 @@
     .site-header.scrolled { background: rgba(10, 10, 10, .6); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom-color: rgba(255, 255, 255, .08); box-shadow: 0 4px 24px rgba(0, 0, 0, .35); }
 
     /* ============ HERO (split layout) ============ */
-    .hero { position: relative; background: var(--ink); padding: 6rem 1.5rem; overflow: hidden; min-height: 82vh; display: flex; align-items: center; isolation: isolate; }
+    .hero { position: relative; background: var(--ink); padding: calc(6rem + var(--hero-header-offset, 0px)) 1.5rem 6rem; overflow: hidden; min-height: 82vh; display: flex; align-items: center; isolation: isolate; }
     .hero-carousel { position: absolute; inset: 0; z-index: 0; }
     .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center 35%; opacity: 0; transition: opacity 1.1s ease; }
     .hero-slide.is-active { opacity: 1; }
@@ -206,7 +206,7 @@
     .hero-stats .l { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-top: .2rem; }
 
     @media (max-width: 900px) {
-      .hero { min-height: 62vh; padding: 3.6rem 1.5rem; text-align: center; }
+      .hero { min-height: 62vh; padding: calc(3.6rem + var(--hero-header-offset, 0px)) 1.5rem 3.6rem; text-align: center; }
       .hero-slide { background-position: center 22%; }
       .hero-bg-overlay { background: linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.75) 65%, rgba(10,10,10,.9) 100%); }
       .hero-copy { max-width: none; }
@@ -1054,22 +1054,34 @@
      transparent, directly over the hero video from the very top of the
      page. .site-header has no flow position to inherit anymore, so its
      "top" offset (right below the brand strip) is measured and reapplied
-     on load/resize. Solidifies via .scrolled, same scrollY > 50 threshold
-     assets/js/cart.js already uses for .site-header, kept in sync here. */
+     on load/resize. The hero's own text content (kicker/title/buttons) —
+     not the video, which stays full-bleed behind the bars — also needs to
+     clear the *combined* stack height (brand strip + header, incl. the
+     BMX/MTB/Skate world-tabs row), or on short mobile viewports it renders
+     visually on top of the nav instead of below it; --hero-header-offset
+     feeds that extra clearance to the .hero padding-top in the CSS above.
+     Solidifies via .scrolled, same scrollY > 50 threshold assets/js/cart.js
+     already uses for .site-header, kept in sync here. */
   (function stickyOverlayHeader(){
     var hdr = document.querySelector(".site-header");
     var strip = document.querySelector(".brand-strip");
     if (!hdr) return;
-    function positionHeader() { if (strip) hdr.style.top = strip.offsetHeight + "px"; }
+    function positionHeader() {
+      var stripH = strip ? strip.offsetHeight : 0;
+      hdr.style.top = stripH + "px";
+      document.documentElement.style.setProperty("--hero-header-offset", (stripH + hdr.offsetHeight) + "px");
+    }
     function tick() { if (strip) strip.classList.toggle("scrolled", window.scrollY > 50); }
     window.addEventListener("resize", positionHeader, { passive: true });
     window.addEventListener("scroll", tick, { passive: true });
-    // The strip's real height isn't known until its logo <img>s finish
-    // loading (it's just empty padding until then) — a one-shot measurement
-    // on script load locks in that too-small height. Watch it continuously
-    // instead so the header's offset self-corrects the moment images land.
-    if (strip && window.ResizeObserver) {
-      new ResizeObserver(positionHeader).observe(strip);
+    // Neither the strip's nor the header's real height is known until their
+    // content (logo <img>s, wrapped nav text) finishes loading/laying out —
+    // a one-shot measurement on script load locks in too-small values.
+    // Watch both continuously so the offsets self-correct as content lands.
+    if (window.ResizeObserver) {
+      var ro = new ResizeObserver(positionHeader);
+      if (strip) ro.observe(strip);
+      ro.observe(hdr);
     } else {
       window.addEventListener("load", positionHeader);
     }
