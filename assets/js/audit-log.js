@@ -1776,5 +1776,37 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-11T15:29:26.046Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "3 productos nuevos, 19 productos editados, 15 fotos subidas",
+  "created": [
+   "plato-mutanty-diamond-cromado-28t",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-federal-logo-guard-28t"
+  ],
+  "edited": [
+   "pedales-metal-negro-02",
+   "pedales-metal-negro-03",
+   "pedales-metal-negro-01",
+   "demolition-pedales-splash-blanco",
+   "demolition-pedales-splash-rojo",
+   "demolition-pedales-rosa",
+   "pedales-odyssey",
+   "pedales-demolition",
+   "pedales-plataforma-negro-01",
+   "pedales-stolen",
+   "pedales-fate-negro",
+   "pedales-wellgo-negro",
+   "odyssey-pinon-28t-negro",
+   "fiend-pinon-25t-negro",
+   "plato-volume-guardia-28t",
+   "plato-odyssey-big-boyd-28t",
+   "plato-fate-guardia-negro-28t",
+   "cult-pinon-negro",
+   "federal-pinon-gris"
+  ],
+  "deleted": []
  }
 ];
