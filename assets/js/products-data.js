@@ -1,5 +1,26 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plato Federal bikes CodeGuard Cromado 28T",
+  "brand": "Federal",
+  "cat": "pinones",
+  "spec": "Aluminio CNC (6061-T6) • Cromado • 28T",
+  "price": 270000,
+  "sku": "PLT-FED-002",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/plato-federal-bikes-codeguard-cromado-28t.jpg?v=1786462420734",
+   "assets/img/products/plato-federal-bikes-codeguard-cromado-28t-2.jpg?v=1786462422269"
+  ],
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1
+   }
+  ],
+  "slug": "plato-federal-bikes-codeguard-cromado-28t",
+  "img": "assets/img/products/plato-federal-bikes-codeguard-cromado-28t.jpg?v=1786462420734"
+ },
+ {
   "n": "Plato Mutanty Diamond Cromado 28T",
   "brand": "Mutanty",
   "cat": "pinones",
