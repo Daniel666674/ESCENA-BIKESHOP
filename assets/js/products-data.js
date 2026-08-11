@@ -1,5 +1,56 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plato Mutanty Diamond Cromado 28T",
+  "brand": "Mutanty",
+  "cat": "pinones",
+  "spec": "Aluminio (7075-T6) • Cromado • 28T",
+  "price": 240000,
+  "sku": "PLT-MUT-002",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1
+   }
+  ],
+  "slug": "plato-mutanty-diamond-cromado-28t",
+  "img": "assets/img/products/plato-mutanty-diamond-cromado-28t.jpg?v=1786462127985"
+ },
+ {
+  "n": "Plato Mutanty Diamond Negro 28T",
+  "brand": "Mutanty",
+  "cat": "pinones",
+  "spec": "Aluminio (7075-T6) • Negro • 28T",
+  "price": 240000,
+  "sku": "PLT-MUT-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1
+   }
+  ],
+  "slug": "plato-mutanty-diamond-negro-28t",
+  "img": "assets/img/products/plato-mutanty-diamond-negro-28t.jpg?v=1786462129400"
+ },
+ {
+  "n": "Plato Federal Logo Guard 28T",
+  "brand": "Federal",
+  "cat": "pinones",
+  "spec": "Aluminio (7075-T6) • Cubierta Nylon • Negro • 28T",
+  "price": 200000,
+  "sku": "PLT-FED-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1
+   }
+  ],
+  "slug": "plato-federal-logo-guard-28t",
+  "img": "assets/img/products/plato-federal-logo-guard-28t.jpg?v=1786462130878"
+ },
+ {
   "n": "Grips Stolen Kunfu",
   "brand": "Stolen",
   "cat": "punos",
@@ -1820,7 +1871,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1784153748363",
    "assets/img/products/pedales-wellgo-negro-3.jpg?v=1784153750038"
   ],
-  "order": 1710,
+  "order": 110,
   "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1784153746515"
  },
  {
@@ -1926,7 +1977,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "plato-volume-guardia-28t",
-  "n": "Plato Volume Guardia 28T",
+  "n": "Plato Volume Bikes “Melee” Guardia 28T",
   "brand": "Volume",
   "cat": "pinones",
   "spec": "28T · Aluminio CNC 7075 · Guardia · 24mm",
@@ -1935,10 +1986,8 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Top!",
   "imgs": [
-   "assets/img/products/plato-volume-guardia-28t.jpg?v=1784153770220",
-   "assets/img/products/plato-volume-guardia-28t-2.jpg?v=1784153772660",
-   "assets/img/products/plato-volume-guardia-28t-3.jpg?v=1784153774585",
-   "assets/img/products/plato-volume-guardia-28t-4.jpg?v=1784153776104"
+   "assets/img/products/plato-volume-guardia-28t.jpg?v=1786462132620",
+   "assets/img/products/plato-volume-guardia-28t-2.jpg?v=1786462134096"
   ],
   "sizes": [
    {
@@ -1947,7 +1996,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 790,
-  "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1784153770220"
+  "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1786462132620"
  },
  {
   "slug": "marco-gw-destructor-tornasol",
@@ -2054,10 +2103,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "PLT-FAT-001",
   "units": 1,
   "tag": "Top!",
-  "imgs": [
-   "assets/img/products/plato-fate-guardia-negro-28t.jpg?v=1784139491454",
-   "assets/img/products/plato-fate-guardia-negro-28t-2.jpg?v=1784139492852"
-  ],
   "sizes": [
    {
     "label": "28T",
@@ -2065,7 +2110,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 910,
-  "img": "assets/img/products/plato-fate-guardia-negro-28t.jpg?v=1784139491454"
+  "img": "assets/img/products/plato-fate-guardia-negro-28t.jpg?v=1786462135509"
  },
  {
   "slug": "pedales-fate-negro",
@@ -2082,7 +2127,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-fate-negro-2.jpg?v=1784139497268",
    "assets/img/products/pedales-fate-negro-3.jpg?v=1784139498920"
   ],
-  "order": 1670,
+  "order": 100,
   "img": "assets/img/products/pedales-fate-negro.jpg?v=1784139495189"
  },
  {
@@ -2250,9 +2295,8 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1784138469320",
-   "assets/img/products/plato-odyssey-big-boyd-28t-2.jpg?v=1784138471751",
-   "assets/img/products/plato-odyssey-big-boyd-28t-3.jpg?v=1784138474184"
+   "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1786462140470",
+   "assets/img/products/plato-odyssey-big-boyd-28t-2.jpg?v=1786462141708"
   ],
   "sizes": [
    {
@@ -2267,7 +2311,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 890,
-  "img": "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1784138469320"
+  "img": "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1786462140470"
  },
  {
   "slug": "cana-fiend-mills-topload",
@@ -2503,7 +2547,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-odyssey.jpg?v=1784059906159",
    "assets/img/products/pedales-odyssey-2.jpg?v=1784059908763"
   ],
-  "order": 1460,
+  "order": 60,
   "img": "assets/img/products/pedales-odyssey.jpg?v=1784059906159"
  },
  {
@@ -2593,7 +2637,7 @@ window.ESCENA_PRODUCTS = [
     13
    ]
   },
-  "order": 1470,
+  "order": 70,
   "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908"
  },
  {
@@ -2653,7 +2697,7 @@ window.ESCENA_PRODUCTS = [
     4
    ]
   },
-  "order": 1620,
+  "order": 90,
   "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983"
  },
  {
@@ -3410,7 +3454,7 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "PEDALES-PLATAFORMA-NEGRO-01",
   "units": 12,
-  "order": 1480,
+  "order": 80,
   "img": "assets/img/products/pedales-plataforma-negro-01.jpg"
  },
  {
@@ -3422,7 +3466,7 @@ window.ESCENA_PRODUCTS = [
   "price": 100000,
   "sku": "DEMOLITION-PEDALES-ROSA",
   "units": 12,
-  "order": 1450,
+  "order": 50,
   "img": "assets/img/products/demolition-pedales-rosa.jpg"
  },
  {
@@ -3434,7 +3478,7 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "PEDALES-METAL-NEGRO-01",
   "units": 12,
-  "order": 1290,
+  "order": 20,
   "img": "assets/img/products/pedales-metal-negro-01.jpg"
  },
  {
@@ -3446,7 +3490,7 @@ window.ESCENA_PRODUCTS = [
   "price": 135000,
   "sku": "PEDALES-METAL-NEGRO-02",
   "units": 12,
-  "order": 1260,
+  "order": 10,
   "img": "assets/img/products/pedales-metal-negro-02.jpg"
  },
  {
@@ -3458,7 +3502,7 @@ window.ESCENA_PRODUCTS = [
   "price": 135000,
   "sku": "PEDALES-METAL-NEGRO-03",
   "units": 12,
-  "order": 1270,
+  "order": 0,
   "img": "assets/img/products/pedales-metal-negro-03.jpg"
  },
  {
@@ -3471,7 +3515,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "DEMOLITION-PEDALES-SPLASH-BLANCO",
   "units": 12,
   "tag": "Edición",
-  "order": 1430,
+  "order": 30,
   "img": "assets/img/products/demolition-pedales-splash-blanco.jpg"
  },
  {
@@ -3484,7 +3528,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "DEMOLITION-PEDALES-SPLASH-ROJO",
   "units": 12,
   "tag": "Edición",
-  "order": 1440,
+  "order": 40,
   "img": "assets/img/products/demolition-pedales-splash-rojo.jpg"
  },
  {
@@ -3523,7 +3567,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 920,
-  "img": "assets/img/products/cult-pinon-negro.jpg"
+  "img": "assets/img/products/cult-pinon-negro.jpg?v=1786462142847"
  },
  {
   "slug": "odyssey-pinon-28t-negro",
@@ -3541,7 +3585,12 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 600,
-  "img": "assets/img/products/odyssey-pinon-28t-negro.jpg"
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/odyssey-pinon-28t-negro.jpg?v=1786462144200",
+   "assets/img/products/odyssey-pinon-28t-negro-2.jpg?v=1786462145489"
+  ],
+  "img": "assets/img/products/odyssey-pinon-28t-negro.jpg?v=1786462144200"
  },
  {
   "slug": "fiend-pinon-25t-negro",
@@ -3559,7 +3608,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 770,
-  "img": "assets/img/products/fiend-pinon-25t-negro.jpg"
+  "imgs": [
+   "assets/img/products/fiend-pinon-25t-negro.jpg?v=1786462146573",
+   "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1786462148546"
+  ],
+  "img": "assets/img/products/fiend-pinon-25t-negro.jpg?v=1786462146573"
  },
  {
   "slug": "federal-pinon-gris",
@@ -3577,7 +3630,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 1060,
-  "img": "assets/img/products/federal-pinon-gris.jpg"
+  "imgs": [
+   "assets/img/products/federal-pinon-gris.jpg?v=1786462149714",
+   "assets/img/products/federal-pinon-gris-2.jpg?v=1786462150949"
+  ],
+  "img": "assets/img/products/federal-pinon-gris.jpg?v=1786462149714"
  },
  {
   "slug": "bsd-guarda-pinon-negro",
