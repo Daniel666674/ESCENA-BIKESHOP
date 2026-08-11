@@ -162,15 +162,20 @@
     @media (max-width: 640px) { .utility .u-info { display: none; } }
 
     /* Site header styles now live in assets/css/site-header.css */
-    /* index.html only: while the sticky header is still overlapping the hero
-       (see heroHeaderReveal() below), let it go noticeably more transparent
-       so the blurred hero video shows through instead of the usual solid
-       dark bar. Scoped to .over-hero (added/removed by scroll position) so
-       every other page keeps the normal, more opaque/legible header — they
-       have no video behind it to reveal, just page content. */
-    .brand-strip.over-hero { background: transparent; }
-    .site-header.over-hero { background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom-color: transparent; }
-    .site-header.over-hero.scrolled { background: rgba(10, 10, 10, .28); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom-color: rgba(255, 255, 255, .08); }
+    /* index.html only: a sticky header reserves its own height in the normal
+       document flow, so the hero video never actually starts until *after*
+       that reserved gap — it can't be "revealed" by transparency alone. To
+       really float the header over the video from the very top of the page,
+       it has to leave the flow entirely (position: fixed) so the hero can
+       start at y:0, directly underneath it. Solidifies via the same
+       .scrolled class the rest of the site already uses (assets/js/cart.js,
+       scrollY > 50) — every other page keeps the normal sticky, opaque
+       header since they have no video behind it to reveal. */
+    .brand-strip, .site-header { position: fixed; left: 0; right: 0; z-index: 100; }
+    .brand-strip { top: 0; background: transparent; transition: background .4s; }
+    .brand-strip.scrolled { background: rgba(10, 10, 10, .6); }
+    .site-header { background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom-color: transparent; }
+    .site-header.scrolled { background: rgba(10, 10, 10, .6); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom-color: rgba(255, 255, 255, .08); box-shadow: 0 4px 24px rgba(0, 0, 0, .35); }
 
     /* ============ HERO (split layout) ============ */
     .hero { position: relative; background: var(--ink); padding: 6rem 1.5rem; overflow: hidden; min-height: 82vh; display: flex; align-items: center; isolation: isolate; }
@@ -1045,24 +1050,21 @@
     start();
   })();
 
-  /* While the sticky header is still overlapping the hero (it sits directly
-     above the hero in the DOM, so scrolling past the header's own height is
-     what makes it start covering the hero instead of empty space), add
-     .over-hero so it goes transparent/blurred over the video instead of its
-     usual solid bar (see the .site-header.over-hero rule above). Cleared
-     once scrolled past the hero into #tienda's white background, where the
-     normal opaque header is what keeps the white nav text legible. */
-  (function heroHeaderReveal(){
+  /* Both bars are position:fixed (see the CSS above) so they float, fully
+     transparent, directly over the hero video from the very top of the
+     page. .site-header has no flow position to inherit anymore, so its
+     "top" offset (right below the brand strip) is measured and reapplied
+     on load/resize. Solidifies via .scrolled, same scrollY > 50 threshold
+     assets/js/cart.js already uses for .site-header, kept in sync here. */
+  (function stickyOverlayHeader(){
     var hdr = document.querySelector(".site-header");
     var strip = document.querySelector(".brand-strip");
-    var heroEl = document.querySelector(".hero");
-    if (!hdr || !heroEl) return;
-    function tick() {
-      var over = window.scrollY < heroEl.offsetHeight;
-      hdr.classList.toggle("over-hero", over);
-      if (strip) strip.classList.toggle("over-hero", over);
-    }
+    if (!hdr) return;
+    function positionHeader() { if (strip) hdr.style.top = strip.offsetHeight + "px"; }
+    function tick() { if (strip) strip.classList.toggle("scrolled", window.scrollY > 50); }
+    window.addEventListener("resize", positionHeader, { passive: true });
     window.addEventListener("scroll", tick, { passive: true });
+    positionHeader();
     tick();
   })();
 
