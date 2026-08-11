@@ -1064,6 +1064,15 @@
     function tick() { if (strip) strip.classList.toggle("scrolled", window.scrollY > 50); }
     window.addEventListener("resize", positionHeader, { passive: true });
     window.addEventListener("scroll", tick, { passive: true });
+    // The strip's real height isn't known until its logo <img>s finish
+    // loading (it's just empty padding until then) — a one-shot measurement
+    // on script load locks in that too-small height. Watch it continuously
+    // instead so the header's offset self-corrects the moment images land.
+    if (strip && window.ResizeObserver) {
+      new ResizeObserver(positionHeader).observe(strip);
+    } else {
+      window.addEventListener("load", positionHeader);
+    }
     positionHeader();
     tick();
   })();
