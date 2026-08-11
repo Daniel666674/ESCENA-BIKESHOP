@@ -1808,5 +1808,15 @@ window.ESCENA_AUDIT = [
    "federal-pinon-gris"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-11T15:33:47.085Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "plato-federal-bikes-codeguard-cromado-28t"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
