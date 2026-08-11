@@ -21,27 +21,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/plato-federal-code-guard-cromado-28t.jpg?v=1786462978298"
  },
  {
-  "n": "Plato Federal bikes CodeGuard Cromado 28T",
-  "brand": "Federal",
-  "cat": "pinones",
-  "spec": "Aluminio CNC (6061-T6) • Cromado • 28T",
-  "price": 270000,
-  "sku": "PLT-FED-002",
-  "units": 1,
-  "imgs": [
-   "assets/img/products/plato-federal-bikes-codeguard-cromado-28t.jpg?v=1786462420734",
-   "assets/img/products/plato-federal-bikes-codeguard-cromado-28t-2.jpg?v=1786462422269"
-  ],
-  "sizes": [
-   {
-    "label": "28T",
-    "units": 1
-   }
-  ],
-  "slug": "plato-federal-bikes-codeguard-cromado-28t",
-  "img": "assets/img/products/plato-federal-bikes-codeguard-cromado-28t.jpg?v=1786462420734"
- },
- {
   "n": "Plato Mutanty Diamond Cromado 28T",
   "brand": "Mutanty",
   "cat": "pinones",
@@ -2087,7 +2066,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 1110,
+  "order": 60,
   "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1784139733693"
  },
  {
@@ -2181,15 +2160,13 @@ window.ESCENA_PRODUCTS = [
   "price": 205000,
   "sku": "SIL-FND-001",
   "units": 1,
-  "tag": "Edición Especial 🔥!",
   "imgs": [
-   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1784138416524",
-   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-2.jpg?v=1784138418470",
-   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-3.jpg?v=1784138420747",
-   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-4.jpg?v=1784138422794"
+   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1786464125091",
+   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-2.jpg?v=1786464126785",
+   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-3.jpg?v=1786464128082"
   ],
-  "order": 1010,
-  "img": "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1784138416524"
+  "order": 0,
+  "img": "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1786464125091"
  },
  {
   "slug": "grips-s-m-mike-hoder",
@@ -2240,7 +2217,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fitbikeco-negra-2.jpg?v=1784138441275",
    "assets/img/products/silla-pivotal-fitbikeco-negra-3.jpg?v=1784138443126"
   ],
-  "order": 1200,
+  "order": 120,
   "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1784138439638"
  },
  {
@@ -2275,14 +2252,9 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "SIL-FAT-001",
   "units": 2,
-  "tag": "Nuevo 🔥!",
-  "imgs": [
-   "assets/img/products/silla-pivotal-fate-negra.jpg?v=1784138452598",
-   "assets/img/products/silla-pivotal-fate-negra-2.jpg?v=1784138454479",
-   "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1784138456279"
-  ],
-  "order": 1280,
-  "img": "assets/img/products/silla-pivotal-fate-negra.jpg?v=1784138452598"
+  "order": 50,
+  "imgFit": "cover",
+  "img": "assets/img/products/silla-pivotal-fate-negra.jpg?v=1786464129501"
  },
  {
   "slug": "silla-pivotal-fiend-reynolds-negra",
@@ -2293,14 +2265,13 @@ window.ESCENA_PRODUCTS = [
   "price": 205000,
   "sku": "SIL-FND-002",
   "units": 1,
-  "tag": "Top 🔥!",
   "imgs": [
-   "assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1784138458192",
-   "assets/img/products/silla-pivotal-fiend-reynolds-negra-2.jpg?v=1784138459718",
-   "assets/img/products/silla-pivotal-fiend-reynolds-negra-3.jpg?v=1784138461542"
+   "assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1786464130916",
+   "assets/img/products/silla-pivotal-fiend-reynolds-negra-2.jpg?v=1786464132103"
   ],
-  "order": 1020,
-  "img": "assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1784138458192"
+  "order": 10,
+  "imgFit": "cover",
+  "img": "assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1786464130916"
  },
  {
   "slug": "silla-pivotal-fiend-mills",
@@ -2313,9 +2284,8 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "tag": "Nuevo 🔥!",
   "imgs": [
-   "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1784138463438",
-   "assets/img/products/silla-pivotal-fiend-mills-2.jpg?v=1784138465233",
-   "assets/img/products/silla-pivotal-fiend-mills-3.jpg?v=1784138467195"
+   "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1786464133600",
+   "assets/img/products/silla-pivotal-fiend-mills-2.jpg?v=1786464135581"
   ],
   "colors": [
    {
@@ -2323,8 +2293,9 @@ window.ESCENA_PRODUCTS = [
     "units": 3
    }
   ],
-  "order": 1040,
-  "img": "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1784138463438"
+  "order": 20,
+  "imgFit": "cover",
+  "img": "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1786464133600"
  },
  {
   "slug": "plato-odyssey-big-boyd-28t",
@@ -2901,19 +2872,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1784333440051"
  },
  {
-  "slug": "fiend-fiending-stem-negro",
-  "n": "Silla Fiend Negra",
-  "brand": "Fiend",
-  "cat": "sillines",
-  "spec": "Silla Fiend Negra",
-  "price": 195000,
-  "sku": "FIEND-FIENDING-SILLA-NEGRO",
-  "units": 1,
-  "tag": "Nacional",
-  "order": 1070,
-  "img": "assets/img/products/fiend-fiending-stem-negro.jpg"
- },
- {
   "slug": "mutany-savage-bielas-negro",
   "n": "Bielas Mutanty Savage Negra",
   "brand": "Mutanty",
@@ -3012,7 +2970,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CULT-SILLIN-CUADROS",
   "units": 12,
   "tag": "Edición Especial",
-  "order": 1150,
+  "order": 100,
   "img": "assets/img/products/cult-sillin-cuadros.jpg"
  },
  {
@@ -3403,28 +3361,22 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/federal-stem-negro.jpg"
  },
  {
-  "slug": "fiend-mills-sillin-blanco",
-  "n": "Silla Fiend Mills Blanca",
-  "brand": "Fiend",
-  "cat": "sillines",
-  "spec": "Pivotal · Cuero · Blanco · 3 piezas",
-  "price": 175000,
-  "sku": "FIEND-MILLS-SILLIN-BLANCO",
-  "units": 12,
-  "order": 1160,
-  "img": "assets/img/products/fiend-mills-sillin-blanco.jpg"
- },
- {
   "slug": "fiend-mills-sillin-negro",
   "n": "Silla Fiend Mills Negra",
   "brand": "Fiend",
   "cat": "sillines",
   "spec": "Pivotal · Cuero · Negro · 3 piezas",
-  "price": 175000,
+  "price": 200000,
   "sku": "FIEND-MILLS-SILLIN-NEGRO",
   "units": 12,
-  "order": 1170,
-  "img": "assets/img/products/fiend-mills-sillin-negro.jpg"
+  "order": 30,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/fiend-mills-sillin-negro.jpg?v=1786464137096",
+   "assets/img/products/fiend-mills-sillin-negro-2.jpg?v=1786464138253",
+   "assets/img/products/fiend-mills-sillin-negro-3.jpg?v=1786464139671"
+  ],
+  "img": "assets/img/products/fiend-mills-sillin-negro.jpg?v=1786464137096"
  },
  {
   "slug": "cult-sillin-negro",
@@ -3435,7 +3387,7 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "CULT-SILLIN-NEGRO",
   "units": 12,
-  "order": 1120,
+  "order": 70,
   "img": "assets/img/products/cult-sillin-negro.jpg"
  },
  {
@@ -3444,12 +3396,18 @@ window.ESCENA_PRODUCTS = [
   "brand": "Odyssey",
   "cat": "sillines",
   "spec": "Pivotal slim · Bordado floral · Denim",
-  "price": 185000,
+  "price": 250000,
   "sku": "ODYSSEY-SILLIN-FLORAL",
-  "units": 12,
-  "tag": "Edición",
-  "order": 1080,
-  "img": "assets/img/products/odyssey-sillin-floral.jpg"
+  "units": 1,
+  "order": 40,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/odyssey-sillin-floral.jpg?v=1786464140978",
+   "assets/img/products/odyssey-sillin-floral-2.jpg?v=1786464142200",
+   "assets/img/products/odyssey-sillin-floral-3.jpg?v=1786464143735",
+   "assets/img/products/odyssey-sillin-floral-4.jpg?v=1786464145009"
+  ],
+  "img": "assets/img/products/odyssey-sillin-floral.jpg?v=1786464140978"
  },
  {
   "slug": "animal-sillin-camuflado",
@@ -3460,7 +3418,7 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "ANIMAL-SILLIN-CAMUFLADO",
   "units": 12,
-  "order": 1130,
+  "order": 80,
   "img": "assets/img/products/animal-sillin-camuflado.jpg"
  },
  {
@@ -3472,7 +3430,7 @@ window.ESCENA_PRODUCTS = [
   "price": 175000,
   "sku": "FIT-SILLIN-DIAMANTE-NEGRO",
   "units": 12,
-  "order": 1180,
+  "order": 110,
   "img": "assets/img/products/fit-sillin-diamante-negro.jpg"
  },
  {
@@ -3484,7 +3442,7 @@ window.ESCENA_PRODUCTS = [
   "price": 178000,
   "sku": "STOLEN-SILLIN-NEGRO",
   "units": 12,
-  "order": 1140,
+  "order": 90,
   "img": "assets/img/products/stolen-sillin-negro.jpg"
  },
  {
