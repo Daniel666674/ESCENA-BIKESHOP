@@ -1,5 +1,26 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plato Federal Code Guard Cromado 28T",
+  "brand": "Federal",
+  "cat": "pinones",
+  "spec": "Aluminio CNC • Cromado • 28T",
+  "price": 270000,
+  "sku": "PLT-FED-002",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/plato-federal-code-guard-cromado-28t.jpg?v=1786462978298",
+   "assets/img/products/plato-federal-code-guard-cromado-28t-2.jpg?v=1786462979629"
+  ],
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1
+   }
+  ],
+  "slug": "plato-federal-code-guard-cromado-28t",
+  "img": "assets/img/products/plato-federal-code-guard-cromado-28t.jpg?v=1786462978298"
+ },
+ {
   "n": "Plato Federal bikes CodeGuard Cromado 28T",
   "brand": "Federal",
   "cat": "pinones",
