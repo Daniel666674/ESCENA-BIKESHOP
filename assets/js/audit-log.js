@@ -1899,5 +1899,15 @@ window.ESCENA_AUDIT = [
    "grips-s-m-passero"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-12T10:33:07.066Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "grips-s-m-passero"
+  ],
+  "deleted": []
  }
 ];
