@@ -22,8 +22,8 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/grips-s-m-passero.jpg?v=1786530783378",
-   "assets/img/products/grips-s-m-passero-2.jpg?v=1786530664593",
-   "assets/img/products/grips-s-m-passero-3.jpg?v=1786530665939"
+   "assets/img/products/grips-s-m-passero-2.jpg?v=1786531484846",
+   "assets/img/products/grips-s-m-passero-3.jpg?v=1786531486287"
   ],
   "colors": [
    {
@@ -31,7 +31,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    },
    {
-    "label": "Rojo",
+    "label": "Negro",
     "units": 2
    },
    {
@@ -44,10 +44,10 @@ window.ESCENA_PRODUCTS = [
    "Morado": [
     0
    ],
-   "Transparente": [
+   "Negro": [
     1
    ],
-   "Rojo": [
+   "Transparente": [
     2
    ]
   },
