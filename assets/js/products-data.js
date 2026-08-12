@@ -1,5 +1,52 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Grips Ontrail Yeti",
+  "brand": "Ontrail",
+  "cat": "punos",
+  "spec": "Goma · 165mm · 30mm · Incluye tapon",
+  "price": 20000,
+  "sku": "GRP-ONT-001",
+  "units": 85,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/grips-ontrail-yeti.jpg?v=1786533291231",
+   "assets/img/products/grips-ontrail-yeti-2.jpg?v=1786533292883",
+   "assets/img/products/grips-ontrail-yeti-3.jpg?v=1786533294671",
+   "assets/img/products/grips-ontrail-yeti-4.jpg?v=1786533296160",
+   "assets/img/products/grips-ontrail-yeti-5.jpg?v=1786533297542",
+   "assets/img/products/grips-ontrail-yeti-6.jpg?v=1786533299060"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 20,
+    "price": 20000
+   },
+   {
+    "label": "Rojo",
+    "units": 15,
+    "price": 20000
+   },
+   {
+    "label": "Gris",
+    "units": 20,
+    "price": 20000
+   },
+   {
+    "label": "Azul",
+    "units": 15,
+    "price": 20000
+   },
+   {
+    "label": "Cafe",
+    "units": 15,
+    "price": 20000
+   }
+  ],
+  "slug": "grips-ontrail-yeti",
+  "img": "assets/img/products/grips-ontrail-yeti.jpg?v=1786533291231"
+ },
+ {
   "n": "Grips STL Y2",
   "brand": "STL",
   "cat": "punos",
