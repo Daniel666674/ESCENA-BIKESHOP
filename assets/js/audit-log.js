@@ -2039,5 +2039,15 @@ window.ESCENA_AUDIT = [
    "timon-gw-destructor-tornasol"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-12T11:41:40.412Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "timon-cult-heavens-gate-4p-cromado"
+  ],
+  "deleted": []
  }
 ];
