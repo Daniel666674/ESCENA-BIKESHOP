@@ -1949,5 +1949,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-12T11:15:04.118Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 6 fotos subidas",
+  "created": [
+   "grips-ontrail-yeti"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
