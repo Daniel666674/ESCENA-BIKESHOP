@@ -1959,5 +1959,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-12T11:17:45.057Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "grips-subrosa-flangeless-dcr"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
