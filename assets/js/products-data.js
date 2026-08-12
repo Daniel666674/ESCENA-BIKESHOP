@@ -1,5 +1,85 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Grips STL Y2",
+  "brand": "STL",
+  "cat": "punos",
+  "spec": "Goma · 180mm · 32mm ·  Incluye tapon",
+  "price": 25000,
+  "sku": "GRP-STL-002",
+  "units": 18,
+  "imgs": [
+   "assets/img/products/grips-stl-y2.jpg?v=1786532164527",
+   "assets/img/products/grips-stl-y2-2.jpg?v=1786532166262",
+   "assets/img/products/grips-stl-y2-3.jpg?v=1786532168385",
+   "assets/img/products/grips-stl-y2-4.jpg?v=1786532169669",
+   "assets/img/products/grips-stl-y2-5.jpg?v=1786532170893",
+   "assets/img/products/grips-stl-y2-6.jpg?v=1786532172462",
+   "assets/img/products/grips-stl-y2-7.jpg?v=1786532174138"
+  ],
+  "colors": [
+   {
+    "label": "Morado/Negro",
+    "units": 1,
+    "price": 25000
+   },
+   {
+    "label": "Aqua/Negro",
+    "units": 5,
+    "price": 25000
+   },
+   {
+    "label": "Negro/Blanco",
+    "units": 0,
+    "price": 25000
+   },
+   {
+    "label": "Rojo/Negro",
+    "units": 4,
+    "price": 25000
+   },
+   {
+    "label": "Azul/blnaco",
+    "units": 2,
+    "price": 25000
+   },
+   {
+    "label": "Arcoiris",
+    "units": 3,
+    "price": 25000
+   },
+   {
+    "label": "Multicolor",
+    "units": 3,
+    "price": 25000
+   }
+  ],
+  "imgColorMap": {
+   "Morado/Negro": [
+    0
+   ],
+   "Arcoiris": [
+    1
+   ],
+   "Multicolor": [
+    2
+   ],
+   "Azul/blnaco": [
+    3
+   ],
+   "Rojo/Negro": [
+    4
+   ],
+   "Negro/Blanco": [
+    5
+   ],
+   "Aqua/Negro": [
+    6
+   ]
+  },
+  "slug": "grips-stl-y2",
+  "img": "assets/img/products/grips-stl-y2.jpg?v=1786532164527"
+ },
+ {
   "n": "Grips Stranger Piston",
   "brand": "Stranger",
   "cat": "punos",
