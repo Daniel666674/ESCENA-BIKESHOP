@@ -9,25 +9,22 @@ window.ESCENA_PRODUCTS = [
   "units": 6,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/grips-s-m-passero.jpg?v=1786530663113",
+   "assets/img/products/grips-s-m-passero.jpg?v=1786530783378",
    "assets/img/products/grips-s-m-passero-2.jpg?v=1786530664593",
    "assets/img/products/grips-s-m-passero-3.jpg?v=1786530665939"
   ],
   "colors": [
    {
     "label": "Morado",
-    "units": 2,
-    "price": 50000
+    "units": 2
    },
    {
     "label": "Rojo",
-    "units": 2,
-    "price": 50000
+    "units": 2
    },
    {
     "label": "Transparente",
-    "units": 2,
-    "price": 50000
+    "units": 2
    }
   ],
   "slug": "grips-s-m-passero",
@@ -42,7 +39,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "img": "assets/img/products/grips-s-m-passero.jpg?v=1786530663113"
+  "img": "assets/img/products/grips-s-m-passero.jpg?v=1786530783378"
  },
  {
   "n": "Plato Federal Code Guard Cromado 28T",
