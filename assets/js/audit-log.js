@@ -1979,5 +1979,15 @@ window.ESCENA_AUDIT = [
    "grips-subrosa-flangeless-dcr"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-12T11:24:49.954Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "grips-animal-edwin-v2"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
