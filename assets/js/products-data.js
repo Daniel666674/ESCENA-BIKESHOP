@@ -96,12 +96,20 @@ window.ESCENA_PRODUCTS = [
     "price": 45000
    },
    {
-    "label": "Negro",
+    "label": "Translucido",
     "units": 2,
     "price": 45000
    }
   ],
   "slug": "grips-stolen-kunfu",
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Cafe": [
+    1
+   ]
+  },
   "img": "assets/img/products/grips-stolen-kunfu.jpg?v=1786234681753"
  },
  {
