@@ -1,5 +1,39 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Grips S&M Passero",
+  "brand": "S&M",
+  "cat": "punos",
+  "spec": "Goma · 163mm · 30mm ·Nylon Estilo tapón con logotipo Sharpie Shield Rojo/Amarillo/Verde",
+  "price": 50000,
+  "sku": "GRP-SNM-002",
+  "units": 6,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/grips-s-m-passero.jpg?v=1786530612169",
+   "assets/img/products/grips-s-m-passero-2.jpg?v=1786530613478",
+   "assets/img/products/grips-s-m-passero-3.jpg?v=1786530615000"
+  ],
+  "colors": [
+   {
+    "label": "Morado",
+    "units": 2,
+    "price": 50000
+   },
+   {
+    "label": "Rojo",
+    "units": 2,
+    "price": 50000
+   },
+   {
+    "label": "Transparente",
+    "units": 2,
+    "price": 50000
+   }
+  ],
+  "slug": "grips-s-m-passero",
+  "img": "assets/img/products/grips-s-m-passero.jpg?v=1786530612169"
+ },
+ {
   "n": "Plato Federal Code Guard Cromado 28T",
   "brand": "Federal",
   "cat": "pinones",
