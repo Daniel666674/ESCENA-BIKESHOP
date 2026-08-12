@@ -9,7 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/grips-animal-edwin-v2.jpg?v=1786533882770",
+   "assets/img/products/grips-animal-edwin-v2.jpg?v=1786534102273",
    "assets/img/products/grips-animal-edwin-v2-2.jpg?v=1786533884104",
    "assets/img/products/grips-animal-edwin-v2-3.jpg?v=1786533885501"
   ],
@@ -31,7 +31,18 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "grips-animal-edwin-v2",
-  "img": "assets/img/products/grips-animal-edwin-v2.jpg?v=1786533882770"
+  "imgColorMap": {
+   "Verde": [
+    0
+   ],
+   "Amarillo": [
+    1
+   ],
+   "Negro": [
+    2
+   ]
+  },
+  "img": "assets/img/products/grips-animal-edwin-v2.jpg?v=1786534102273"
  },
  {
   "n": "Grips Subrosa Flangeless DCR",
