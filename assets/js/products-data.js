@@ -758,7 +758,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/timon-fiend-reynolds.jpg?v=1785354854411",
-   "assets/img/products/timon-fiend-reynolds.jpg?v=1785354576527"
+   "assets/img/products/timon-fiend-reynolds-2.jpg?v=1786535043175"
   ],
   "sizes": [
    {
@@ -773,11 +773,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Cromado",
-    "units": 2
+    "units": 2,
+    "price": 460000
    },
    {
     "label": "Negro",
-    "units": 0
+    "units": 0,
+    "price": 420000
    }
   ],
   "slug": "timon-fiend-reynolds",
