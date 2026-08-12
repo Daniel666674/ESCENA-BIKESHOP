@@ -691,7 +691,7 @@ var PROT_CATS = ["cascos","rodilleras","canilleras","tobilleras","rodi-cani-tobi
     render(e.target.dataset.filter, 1);
     var params = new URLSearchParams(window.location.search);
     params.set("cat", e.target.dataset.filter);
-    history.replaceState(null, "", "tienda?" + params.toString());
+    history.replaceState(null, "", "protecciones?" + params.toString());
   });
 
   /* ---- Brand banner (?brand= query param) ---- */
@@ -705,7 +705,7 @@ var PROT_CATS = ["cascos","rodilleras","canilleras","tobilleras","rodi-cani-tobi
     document.getElementById("brandBanner").hidden = true;
     var params = new URLSearchParams(window.location.search);
     params.delete("brand");
-    history.replaceState(null, "", params.toString() ? ("tienda?" + params.toString()) : "tienda");
+    history.replaceState(null, "", params.toString() ? ("protecciones?" + params.toString()) : "protecciones");
     render(currentFilter, 1);
   }
   document.getElementById("brandBannerClear").addEventListener("click", clearBrandBanner);

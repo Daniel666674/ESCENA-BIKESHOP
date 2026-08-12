@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ============ SEO ============ -->
-  <title>MTB — Próximamente | ESCENA BIKE SHOP</title>
-  <meta name="description" content="Partes y componentes MTB. Muy pronto en ESCENA BIKE SHOP." />
-  <meta name="keywords" content="MTB Colombia, partes MTB, ESCENA BIKE SHOP" />
+  <title>MTB — Bicicletas, Marcos, Tenedores y Llantas | ESCENA BIKE SHOP</title>
+  <meta name="description" content="MTB en ESCENA Bike Shop: bicicletas completas, timones, marcos, tenedores, llantas y accesorios. Filtra por categoría y pide por WhatsApp." />
+  <meta name="keywords" content="MTB Colombia, bicicleta montaña, marcos MTB, tenedores MTB, llantas MTB, Escena Bike Shop" />
   <meta name="author" content="ESCENA BIKE SHOP" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0A0A0A" />
@@ -21,13 +21,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ESCENA BIKE SHOP" />
   <meta property="og:locale" content="es_CO" />
-  <meta property="og:title" content="MTB — Próximamente | ESCENA BIKE SHOP" />
-  <meta property="og:description" content="Partes y componentes MTB. Muy pronto en ESCENA BIKE SHOP." />
+  <meta property="og:title" content="MTB — Bicicletas, Marcos, Tenedores y Llantas | ESCENA BIKE SHOP" />
+  <meta property="og:description" content="Bicicletas completas, timones, marcos, tenedores, llantas y accesorios de MTB. Pedidos por WhatsApp." />
   <meta property="og:url" content="https://escenabmx.com/mtb" />
   <meta property="og:image" content="https://escenabmx.com/assets/img/og-escena.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MTB — Próximamente | ESCENA BIKE SHOP" />
-  <meta name="twitter:description" content="Partes y componentes MTB. Muy pronto en ESCENA BIKE SHOP." />
+  <meta name="twitter:title" content="MTB — Bicicletas, Marcos, Tenedores y Llantas | ESCENA BIKE SHOP" />
+  <meta name="twitter:description" content="Bicicletas completas, timones, marcos, tenedores, llantas y accesorios de MTB." />
   <meta name="twitter:image" content="https://escenabmx.com/assets/img/og-escena.jpg" />
 
   <!-- ============ Icons / Manifest ============ -->
@@ -37,7 +37,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png?v=2" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2" />
   <link rel="stylesheet" href="assets/css/cart.css?v=2" />
-  <script>var ESCENA_ROOT = "";</script>
+  <link rel="stylesheet" href="assets/css/cookie-consent.css" />
+  <script src="assets/js/wholesale.js?v=1"></script>
 
   <!-- ============ Fonts ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,28 +59,39 @@
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg: #ffffff; --panel: #f6f6f4; --ink: #0A0A0A; --muted: #666; --line: #ececeb; }
+    :root {
+      --bg: #ffffff;
+      --panel: #f6f6f4;
+      --ink: #0A0A0A;
+      --muted: #666;
+      --line: #ececeb;
+    }
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     a { color: inherit; }
     img { max-width: 100%; display: block; }
-    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; font-weight: 700; text-decoration: none; border-radius: 4px; padding: .95rem 1.8rem; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; transition: transform .15s, opacity .2s; border: none; cursor: pointer; font-family: inherit; }
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: .04em; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; text-decoration: none; border-radius: 4px; padding: .95rem 1.8rem; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; transition: transform .15s, opacity .2s; }
     .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: #fff; color: var(--ink); border: 1px solid #fff; }
+    .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
     .btn-ink { background: var(--ink); color: #fff; }
-    .btn-ink:hover { opacity: .88; }
-    .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.4); }
-    .btn-ghost:hover { border-color: #fff; }
 
-    /* ---- utility / nav ---- */
+    /* ============ UTILITY STRIP ============ */
     .utility { background: var(--ink); color: rgba(255,255,255,.65); font-size: .72rem; letter-spacing: .04em; }
-    .utility .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 34px; }
+    .utility .wrap { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; height: 34px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
     .utility a { color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s; }
     .utility a:hover { color: #fff; }
     .utility .u-links { display: flex; gap: 1.2rem; }
     @media (max-width: 640px) { .utility .u-info { display: none; } }
 
-    header.top-bar { position: sticky; top: 0; z-index: 100; background: #fff; height: 68px; padding: 0 1.8rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    /* ============ TOP BAR / NAV ============ */
+    header.top-bar {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff; height: 68px; padding: 0 1.8rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
     .brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; }
     .brand .name { color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: 1.85rem; letter-spacing: .09em; }
     .nav-right { display: flex; align-items: center; gap: 1.3rem; }
@@ -104,43 +116,125 @@
       .nav-links { inset: 58px 0 0 0; }
     }
 
-    .breadcrumb { padding: 1.2rem 1.5rem 0; font-size: .78rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .3rem; max-width: 1180px; margin: 0 auto; }
-    .breadcrumb a { text-decoration: none; color: var(--muted); }
-    .breadcrumb a:hover { color: var(--ink); }
-    .breadcrumb .sep { opacity: .5; }
-    .breadcrumb .current { color: var(--ink); }
+    /* ============ PAGE HEADER ============ */
+    .page-head { background: var(--ink); padding: 2.6rem 1.5rem; }
+    .page-head .wrap { max-width: 1180px; margin: 0 auto; }
+    .page-head .crumb { font-size: .74rem; color: rgba(255,255,255,.5); margin-bottom: .6rem; }
+    .page-head .crumb a { color: rgba(255,255,255,.5); text-decoration: none; }
+    .page-head .crumb a:hover { color: #fff; }
+    .page-head h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.2rem, 6vw, 3.6rem); letter-spacing: .03em; line-height: 1; }
+    .page-head p { color: rgba(255,255,255,.6); margin-top: .5rem; font-size: .9rem; }
 
-    /* ---- hero ---- */
-    .ws-hero { background: var(--ink); padding: 3rem 1.5rem 3.5rem; }
-    .ws-hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: center; }
-    @media (max-width: 900px) { .ws-hero .wrap { grid-template-columns: 1fr; text-align: center; } }
-    .ws-hero .eyebrow { color: rgba(255,255,255,.65); font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; margin-bottom: .9rem; display: block; }
-    .ws-hero h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.4rem, 5.5vw, 4rem); line-height: .98; letter-spacing: .02em; }
-    .ws-hero h1 .accent-outline { color: transparent; -webkit-text-stroke: 2px #fff; }
-    .ws-hero p.lead { color: rgba(255,255,255,.72); font-size: .98rem; max-width: 480px; margin: 1.1rem 0 1.7rem; font-weight: 300; }
-    @media (max-width: 900px) { .ws-hero p.lead { margin-left: auto; margin-right: auto; } }
-    .ws-hero .btns { display: flex; gap: .8rem; flex-wrap: wrap; }
-    @media (max-width: 900px) { .ws-hero .btns { justify-content: center; } }
+    /* ============ SECTIONS / SHOP ============ */
+    section { padding: 3rem 1.5rem 4.5rem; }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .brand-banner { display: flex; align-items: center; gap: .9rem; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .8rem 1.1rem; margin-bottom: 1.2rem; font-size: .85rem; }
+    .brand-banner[hidden] { display: none; }
+    .brand-banner b { font-family: 'Bebas Neue', sans-serif; letter-spacing: .06em; font-size: 1.05rem; }
+    .brand-banner button { margin-left: auto; background: none; border: 1px solid var(--line); border-radius: 999px; padding: .35rem .9rem; font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; color: var(--muted); cursor: pointer; font-family: inherit; transition: all .15s; }
+    .brand-banner button:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+    /* ============ CATEGORY SIDEBAR ============ */
+    .tienda-layout { display: grid; grid-template-columns: 232px 1fr; gap: 2.2rem; align-items: start; }
+    .cat-sidebar { position: sticky; top: 88px; align-self: start; }
+    .cat-sidebar-label { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .85rem; padding-left: .2rem; }
+    .filters { display: flex; flex-direction: column; gap: .15rem; margin-bottom: 0; }
+    .filters button {
+      position: relative;
+      background: transparent; border: none; text-align: left;
+      padding: .62rem .2rem .62rem 1rem;
+      font-size: .82rem; letter-spacing: .01em; text-transform: none;
+      cursor: pointer; font-weight: 600; color: var(--muted);
+      font-family: inherit; border-radius: 7px;
+      transition: color .2s ease, background .25s ease, padding-left .2s ease;
+      overflow: hidden;
+    }
+    .filters button::before {
+      content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+      width: 3px; height: 0; background: var(--ink); border-radius: 0 3px 3px 0;
+      transition: height .22s ease;
+    }
+    .filters button:hover { color: var(--ink); background: var(--panel); padding-left: 1.3rem; }
+    .filters button:hover::before { height: 55%; }
+    .filters button.active { color: var(--ink); background: var(--panel); font-weight: 800; padding-left: 1.3rem; }
+    .filters button.active::before { height: 70%; background: var(--ink); }
+    @keyframes catPop { from { transform: scale(.97); opacity: .6; } to { transform: scale(1); opacity: 1; } }
+    .filters button.active { animation: catPop .22s ease; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+    @media (min-width: 1300px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); gap: .9rem; } }
+    @media (max-width: 480px) {
+      .grid { gap: .7rem; }
+      .card .body { padding: .75rem .75rem .9rem; }
+      .card h3 { font-size: .82rem; }
+      .card .price { font-size: 1.25rem; }
+      .card .brand-lbl { font-size: .6rem; }
+      .card .buy, .card .add-cart-btn { padding: .55rem .5rem; font-size: .64rem; }
+    }
 
-    .ws-perks { display: flex; flex-direction: column; gap: 1rem; }
-    .ws-perk { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 12px; padding: 1.1rem 1.3rem; display: flex; gap: .9rem; align-items: flex-start; }
-    .ws-perk .n { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: #fff; opacity: .5; line-height: 1; }
-    .ws-perk h3 { color: #fff; font-size: .92rem; margin-bottom: .25rem; }
-    .ws-perk p { color: rgba(255,255,255,.6); font-size: .8rem; }
+    @media (max-width: 900px) {
+      .tienda-layout { display: block; }
+      .cat-sidebar {
+        position: sticky; top: 68px; z-index: 40; background: var(--bg);
+        margin: 0 -1.5rem 1.6rem; padding: .9rem 1.5rem .1rem;
+        border-bottom: 1px solid var(--line);
+      }
+      .cat-sidebar-label { margin: 0 0 .55rem .2rem; }
+      .cat-sidebar::after {
+        content: ""; position: absolute; right: 0; top: 2.5rem; bottom: .5rem; width: 34px;
+        background: linear-gradient(to right, rgba(255,255,255,0), var(--bg) 75%);
+        pointer-events: none;
+      }
+      .filters {
+        display: flex; flex-direction: row; flex-wrap: nowrap; gap: .55rem;
+        overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity;
+        margin: 0 -1.5rem; padding: .1rem 1.5rem .5rem;
+        scrollbar-width: none;
+      }
+      .filters::-webkit-scrollbar { display: none; }
+      .filters button {
+        flex: 0 0 auto; scroll-snap-align: start;
+        background: #fff; border: 1px solid var(--line); border-radius: 999px;
+        padding: .6rem 1.15rem; font-size: .8rem; white-space: nowrap;
+      }
+      .filters button::before { display: none; }
+      .filters button:hover, .filters button.active { background: var(--ink); color: #fff; border-color: var(--ink); padding-left: 1.15rem; }
+    }
+    @media (max-width: 480px) {
+      .cat-sidebar { top: 58px; }
+    }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .15s; }
+    .card:hover { box-shadow: 0 14px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
+    .card .ph-link { display: block; }
+    .card .ph { position: relative; aspect-ratio: 1 / 1; background: #0A0A0A; overflow: hidden; }
+    .card .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .card:hover .ph img { transform: scale(1.05); }
+    .card .tag { position: absolute; top: .7rem; left: .7rem; background: #fff; color: var(--ink); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .55rem; border-radius: 3px; }
+    .card .body { padding: 1rem 1rem 1.2rem; display: flex; flex-direction: column; flex: 1; }
+    .card .brand-lbl { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .card h3 { font-size: .92rem; font-weight: 600; margin: .25rem 0 .1rem; line-height: 1.3; }
+    .card .title-link { color: var(--ink); text-decoration: none; }
+    .card .title-link:hover { text-decoration: underline; }
+    .card .card-spacer { flex: 1; min-height: .6rem; }
+    .card .price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .02em; margin-bottom: .7rem; }
+    .card .price-from { font-family: 'Inter', sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .card .buy { display: block; text-align: center; background: var(--ink); color: #fff; text-decoration: none; padding: .7rem; border-radius: 5px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s, color .2s; border: 1px solid var(--ink); }
+    .card .buy:hover { background: #fff; color: var(--ink); }
+    .card-actions { display: flex; flex-direction: column; gap: .5rem; }
+    .card-actions .add-cart-btn { padding: .65rem 1rem; font-size: .7rem; }
+    .empty-state { text-align: center; padding: 3rem 1rem; color: var(--muted); font-size: .9rem; }
 
-    /* ---- login section ---- */
-    .ws-login { padding: 4rem 1.5rem; }
-    .ws-login .wrap { max-width: 480px; }
-    .ws-login-card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 2.4rem 2rem; text-align: center; }
-    .ws-login-card h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: .03em; margin-bottom: .5rem; }
-    .ws-login-card p { font-size: .86rem; color: var(--muted); margin-bottom: 1.5rem; }
-    .ws-login-card .btn { width: 100%; }
-    .ws-divider { display: flex; align-items: center; gap: .8rem; margin: 1.6rem 0 1.3rem; color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
-    .ws-divider::before, .ws-divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-    .ws-request { font-size: .82rem; color: var(--muted); }
-    .ws-request a { color: var(--ink); font-weight: 700; text-decoration: underline; }
+    /* ============ PAGINATION (real navigation, no infinite scroll) ============ */
+    .pagination { display: flex; align-items: center; justify-content: center; gap: .5rem; margin-top: 2.8rem; flex-wrap: wrap; }
+    .page-btn { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: .6rem 1rem; font-size: .78rem; font-weight: 700; cursor: pointer; color: var(--ink); font-family: inherit; transition: all .15s; }
+    .page-btn:hover:not(:disabled) { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .page-btn:disabled { opacity: .3; cursor: not-allowed; }
+    .page-numbers { display: flex; gap: .35rem; flex-wrap: wrap; justify-content: center; }
+    .page-numbers button { background: #fff; border: 1px solid var(--line); border-radius: 6px; width: 38px; height: 38px; font-size: .8rem; font-weight: 700; cursor: pointer; color: var(--ink); font-family: inherit; transition: all .15s; }
+    .page-numbers button:hover { border-color: var(--ink); }
+    .page-numbers button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .page-info { text-align: center; font-size: .78rem; color: var(--muted); margin-top: 1rem; }
 
-    /* ---- footer ---- */
+    /* ============ FOOTER ============ */
     footer { background: var(--ink); color: rgba(255,255,255,.4); padding: 3.5rem 1.5rem 2rem; }
     footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; }
     @media (max-width: 720px) { footer .wrap { grid-template-columns: 1fr; gap: 2rem; } }
@@ -157,14 +251,18 @@
     .foot-social a:hover { opacity: .85; }
     .ico-whatsapp { background: #25D366 !important; }
     .ico-instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important; }
+    .ico-tiktok { background: #000 !important; }
+    .ico-facebook { background: #1877F2 !important; }
     .pay-row { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .4rem; }
     .pay-row span { font-size: .68rem; letter-spacing: .04em; color: rgba(255,255,255,.5); border: 1px solid rgba(255,255,255,.15); border-radius: 5px; padding: .25rem .5rem; }
     .foot-bottom { max-width: 1180px; margin: 2.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; font-size: .76rem; }
 
+    /* ============ FLOAT WHATSAPP ============ */
     .wa-float { position: fixed; bottom: 1.4rem; right: 1.4rem; z-index: 200; background: #25D366; color: #fff; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.25); text-decoration: none; transition: transform .15s; }
     .wa-float:hover { transform: scale(1.08); }
     .wa-float svg { width: 30px; height: 30px; fill: #fff; }
 
+    /* ============ NEWSLETTER MODAL ============ */
     .nl-overlay { position: fixed; inset: 0; z-index: 500; background: rgba(10,10,10,.72); display: none; align-items: center; justify-content: center; padding: 1.2rem; }
     .nl-overlay.show { display: flex; }
     .nl-modal { background: #fff; border-radius: 14px; max-width: 420px; width: 100%; padding: 2.2rem 1.8rem 1.8rem; position: relative; text-align: center; box-shadow: 0 30px 80px rgba(0,0,0,.4); }
@@ -181,9 +279,9 @@
     .nl-form button svg { width: 16px; height: 16px; fill: #fff; }
     .nl-skip { margin-top: .9rem; font-size: .76rem; color: var(--muted); text-decoration: underline; cursor: pointer; background: none; border: none; font-family: inherit; }
     .nl-note { font-size: .68rem; color: #999; margin-top: .8rem; }
-    .toast { position: fixed; bottom: 6.5rem; right: 1.4rem; z-index: 250; background: var(--ink); color: #fff; padding: .7rem 1.1rem; border-radius: 8px; font-size: .8rem; opacity: 0; transform: translateY(8px); transition: opacity .2s, transform .2s; pointer-events: none; }
-    .toast.show { opacity: 1; transform: translateY(0); }
-  
+
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
 /* ============ IMPACT NAV (bold bar) ============ */
 header.top-bar { background: var(--ink); border-bottom: none; }
 header.top-bar .brand .name { color: #fff; }
@@ -232,7 +330,6 @@ header.top-bar .brand .name { color: #fff; }
 .u-link-ico svg { width: 12px; height: 12px; fill: currentColor; flex-shrink: 0; }
 </style>
   <link rel="stylesheet" href="assets/css/site-header.css?v=13" />
-  <link rel="stylesheet" href="assets/css/cookie-consent.css" />
 </head>
 <body>
 
@@ -254,9 +351,6 @@ header.top-bar .brand .name { color: #fff; }
 
 <!-- ============ UTILITY STRIP ============ -->
 <!-- ============ NAV ============ -->
-<div class="brand-strip" aria-label="Marcas que manejamos">
-  <div class="brand-strip-track" id="brandStripTrack" aria-hidden="true"></div>
-</div>
 <div class="brand-strip" aria-label="Marcas que manejamos">
   <div class="brand-strip-track" id="brandStripTrack" aria-hidden="true"></div>
 </div>
@@ -328,7 +422,7 @@ header.top-bar .brand .name { color: #fff; }
           <a href="ropa?cat=accesorios">Accesorios</a>
         </div>
       </div>
-      <a href="tienda?promo=1" class="nav-promo" data-nav="promo">Promo</a>
+      <a href="mtb?promo=1" class="nav-promo" data-nav="promo">Promo</a>
     </nav>
     <div class="header-actions">
       <button class="search-btn" id="searchBtnHeader" aria-label="Buscar" aria-expanded="false" aria-controls="headerSearchPanel"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
@@ -353,21 +447,45 @@ header.top-bar .brand .name { color: #fff; }
   </nav>
 </header>
 
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="inicio">Inicio</a><span class="sep">/</span>
-  <span class="current">MTB</span>
-</nav>
+<!-- ============ PAGE HEADER ============ -->
+<div class="page-head">
+  <div class="wrap">
+    <div class="crumb"><a href="inicio">Inicio</a> / MTB</div>
+    <h1>MTB</h1>
+    <p id="pageSubtitle">Bicicletas completas, timones, marcos, tenedores, llantas y accesorios de montaña. Filtra por categoría y pide por WhatsApp.</p>
+  </div>
+</div>
 
-<!-- ============ HERO ============ -->
-<section class="ws-hero" style="min-height: 60vh; display: flex; align-items: center;">
-  <div class="wrap" style="grid-template-columns: 1fr; text-align: center;">
-    <div>
-      <span class="eyebrow">Nueva sección</span>
-      <h1>MTB<br /><span class="accent-outline">PRÓXIMAMENTE</span></h1>
-      <p class="lead" style="margin-left: auto; margin-right: auto;">Estamos armando el mundo MTB de ESCENA. Partes, componentes y todo para tu montaña. Escríbenos por WhatsApp y te avisamos apenas esté disponible.</p>
-      <div class="btns" style="justify-content: center;">
-        <a href="https://wa.me/573107630504?text=Hola%20ESCENA%2C%20quiero%20que%20me%20avisen%20cuando%20este%20disponible%20el%20mundo%20MTB" target="_blank" rel="noopener" class="btn btn-ink">Avísenme por WhatsApp</a>
-        <a href="tienda" class="btn btn-ghost">Ver Tienda BMX</a>
+<!-- ============ SHOP ============ -->
+<section>
+  <div class="wrap" id="tiendaTop">
+    <div class="brand-banner" id="brandBanner" hidden>
+      <span>Marca: <b id="brandBannerName"></b></span>
+      <button type="button" id="brandBannerClear">Quitar filtro ✕</button>
+    </div>
+    <div class="tienda-layout">
+      <aside class="cat-sidebar" id="catSidebar">
+        <p class="cat-sidebar-label">Categorías</p>
+        <div class="filters" id="filters">
+          <button data-filter="all">Todo</button>
+          <button data-filter="mtb-bicicletas">Bicicletas Completas</button>
+          <button data-filter="mtb-timones">Timones</button>
+          <button data-filter="mtb-marcos">Marcos</button>
+          <button data-filter="mtb-tenedores">Tenedores</button>
+          <button data-filter="mtb-llantas">Llantas</button>
+          <button data-filter="mtb-accesorios">Accesorios</button>
+        </div>
+      </aside>
+
+      <div class="tienda-main">
+        <div class="grid" id="grid"><!-- products injected by JS --></div>
+        <p class="page-info" id="pageInfo"></p>
+
+        <div class="pagination" id="pagination">
+          <button class="page-btn" id="prevBtn">‹ Anterior</button>
+          <div class="page-numbers" id="pageNumbers"></div>
+          <button class="page-btn" id="nextBtn">Siguiente ›</button>
+        </div>
       </div>
     </div>
   </div>
@@ -403,6 +521,8 @@ header.top-bar .brand .name { color: #fff; }
       <div class="foot-social">
         <a class="ico-whatsapp" href="https://wa.me/573107630504" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg></a>
         <a class="ico-instagram" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C8.74 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.336 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.014 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.898 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.898-.421-.419-.69-.824-.897-1.38-.165-.42-.36-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.06-1.17.255-1.814.42-2.234.207-.57.477-.96.897-1.381.419-.419.81-.689 1.379-.896.42-.166 1.051-.36 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
+        <a class="ico-tiktok" href="https://www.tiktok.com/@escenabmx" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.79 1.53V6.77a4.85 4.85 0 0 1-1.02-.08z"/></svg></a>
+        <a class="ico-facebook" href="https://www.facebook.com/escenabmxlatino/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
       </div>
       <div class="foot-contact">
         <p><strong>Dirección:</strong> Calle 51a Sur #81i-53, Villa Andrea/Kennedy, Bogotá, Colombia</p>
@@ -414,10 +534,14 @@ header.top-bar .brand .name { color: #fff; }
     </div>
     <div>
       <h4>Tienda</h4>
+      <a href="inicio#categorias">Categorías</a>
       <a href="tienda">Componentes</a>
+      <a href="mtb">MTB</a>
+      <a href="skate">Skate</a>
       <a href="armar-bmx">Arma tu BMX</a>
       <a href="blog">Blog</a>
       <a href="mayoristas">Mayoristas</a>
+      <a href="inicio#escena">La Escena</a>
       <a href="inicio#faq">Preguntas frecuentes</a>
     </div>
     <div>
@@ -437,19 +561,178 @@ header.top-bar .brand .name { color: #fff; }
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/573107630504?text=Hola%20ESCENA%2C%20tengo%20una%20tienda%20y%20quiero%20info%20sobre%20precios%20mayoristas" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+<a class="wa-float" href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20info%20de%20MTB" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
 </a>
 
 <div class="toast" id="toast"></div>
 
+<script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 <script>
-var WA = "573107630504";
+  var MTB_CATS = ["mtb-bicicletas","mtb-timones","mtb-marcos","mtb-tenedores","mtb-llantas","mtb-accesorios"];
+  var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.published !== false && MTB_CATS.indexOf(p.cat) !== -1; });
+  var WA = "573107630504";
+  var PAGE_SIZE = 12;
+  var currentFilter = "all";
+  var currentPage = 1;
+  var activeBrand = null;
+  var promoOnly = false; // ?promo=1
 
-/* ---- Mobile nav ---- */
-var burger = document.getElementById("burger"), nav = document.getElementById("nav");
-burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
-nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
+  function cop(n){
+    if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
+    return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
+  }
+  function cardPriceHTML(p){
+    if (p.colors && p.colors.length > 1) {
+      var prices = p.colors.map(function(c){ return c.price > 0 ? c.price : p.price; });
+      var min = Math.min.apply(null, prices), max = Math.max.apply(null, prices);
+      if (min !== max) return '<span class="price-from">Desde</span> ' + cop(min);
+    }
+    return cop(p.price);
+  }
+
+  function getFiltered(filter){
+    return PRODUCTS.filter(function(p){
+      var catOk = filter === "all" || p.cat === filter;
+      var brandOk = !activeBrand || (p.brand && p.brand.toLowerCase() === activeBrand.toLowerCase());
+      var promoOk = !promoOnly || p.promo === true;
+      return catOk && brandOk && promoOk;
+    }).sort(function(a, b){
+      var ao = (typeof a.order === "number") ? a.order : null;
+      var bo = (typeof b.order === "number") ? b.order : null;
+      if (ao !== null && bo !== null) return ao - bo;
+      if (ao !== null) return -1;
+      if (bo !== null) return 1;
+      return (b.price || 0) - (a.price || 0);
+    });
+  }
+
+    function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function slugOf(p){
+    if (p.slug) return p.slug;
+    var file = p.img.split("/").pop();
+    return file.replace(/\.[a-zA-Z0-9]+$/, "");
+  }
+
+  function cardHTML(p){
+    var wPrefix = (window.EscenaWholesale && window.EscenaWholesale.isActive()) ? "🏷️ PEDIDO MAYORISTA (15% aplicado)\n" : "";
+    var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
+    var hasDetailPage = p.img.indexOf("frame-placeholder") === -1;
+    var href = "producto/" + slugOf(p);
+    var agotado = (typeof p.units === "number" && p.units <= 0);
+    var promoHTML = p.promo ? '<span class="tag" style="background:var(--gold,#C79A3A);color:#fff;left:.7rem;right:auto;">PROMO</span>' : '';
+    var tagHTML = promoHTML + (agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+esc(p.tag)+'</span>' : ''));
+    return '<article class="card' + (agotado ? ' is-agotado' : '') + '">' +
+        (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
+          '<div class="ph">' + tagHTML +
+            '<img src="'+p.img+'" alt="'+esc(p.n)+(p.brand ? ' - '+esc(p.brand) : '')+'" loading="lazy" width="400" height="400"></div>' +
+        (hasDetailPage ? '</a>' : '</div>') +
+        '<div class="body">' +
+          '<span class="brand-lbl">'+esc(p.brand)+'</span>' +
+          '<h3>' + (hasDetailPage ? '<a class="title-link" href="'+href+'">'+esc(p.n)+'</a>' : esc(p.n)) + '</h3>' +
+          '<div class="card-spacer"></div>' +
+          '<div class="price">'+cardPriceHTML(p)+'</div>' +
+          '<div class="card-actions">' +
+            (agotado
+              ? '<span class="buy" style="opacity:.5;pointer-events:none;text-align:center;">Agotado</span>'
+              : '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
+                '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+esc(p.n)+'" data-brand="'+esc(p.brand)+'" data-price="'+p.price+'" data-img="'+p.img+'" data-units="'+(typeof p.units === "number" ? p.units : "")+'">Agregar al carrito</button>') +
+          '</div>' +
+        '</div>' +
+      '</article>';
+  }
+
+  function render(filter, page){
+    currentFilter = filter;
+    var filtered = getFiltered(filter);
+    var totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    currentPage = Math.min(Math.max(1, page), totalPages);
+    var start = (currentPage - 1) * PAGE_SIZE;
+    var pageItems = filtered.slice(start, start + PAGE_SIZE);
+
+    var g = document.getElementById("grid");
+    if (pageItems.length === 0) {
+      g.innerHTML = activeBrand
+        ? '<p class="empty-state">Todavía no tenemos MTB de ' + activeBrand + ' en esta categoría — pregúntanos por WhatsApp, puede que la consigamos.</p>'
+        : '<p class="empty-state">Estamos armando esta categoría — escríbenos por WhatsApp y te avisamos apenas esté disponible.</p>';
+    } else {
+      g.innerHTML = pageItems.map(cardHTML).join("");
+    }
+
+    var info = document.getElementById("pageInfo");
+    info.textContent = filtered.length === 0
+      ? ""
+      : "Mostrando " + (start + 1) + "–" + (start + pageItems.length) + " de " + filtered.length + " productos";
+
+    renderPagination(totalPages);
+  }
+
+  function renderPagination(totalPages){
+    var nums = document.getElementById("pageNumbers");
+    nums.innerHTML = "";
+    for (var i = 1; i <= totalPages; i++){
+      var b = document.createElement("button");
+      b.textContent = String(i);
+      if (i === currentPage) b.className = "active";
+      (function(n){
+        b.addEventListener("click", function(){ render(currentFilter, n); scrollToGridTop(); });
+      })(i);
+      nums.appendChild(b);
+    }
+    document.getElementById("prevBtn").disabled = currentPage <= 1;
+    document.getElementById("nextBtn").disabled = currentPage >= totalPages;
+  }
+
+  function scrollToGridTop(){
+    document.getElementById("tiendaTop").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  document.getElementById("prevBtn").addEventListener("click", function(){ render(currentFilter, currentPage - 1); scrollToGridTop(); });
+  document.getElementById("nextBtn").addEventListener("click", function(){ render(currentFilter, currentPage + 1); scrollToGridTop(); });
+
+  document.getElementById("filters").addEventListener("click", function(e){
+    if (e.target.tagName !== "BUTTON") return;
+    document.querySelectorAll("#filters button").forEach(function(b){ b.classList.remove("active"); });
+    e.target.classList.add("active");
+    render(e.target.dataset.filter, 1);
+    var params = new URLSearchParams(window.location.search);
+    params.set("cat", e.target.dataset.filter);
+    history.replaceState(null, "", "mtb?" + params.toString());
+  });
+
+  /* ---- Brand banner (?brand= query param) ---- */
+  function showBrandBanner(brand){
+    activeBrand = brand;
+    document.getElementById("brandBannerName").textContent = brand;
+    document.getElementById("brandBanner").hidden = false;
+  }
+  function clearBrandBanner(){
+    activeBrand = null;
+    document.getElementById("brandBanner").hidden = true;
+    var params = new URLSearchParams(window.location.search);
+    params.delete("brand");
+    history.replaceState(null, "", params.toString() ? ("mtb?" + params.toString()) : "mtb");
+    render(currentFilter, 1);
+  }
+  document.getElementById("brandBannerClear").addEventListener("click", clearBrandBanner);
+
+  /* ---- Init from ?cat= / ?brand= / ?promo= query params ---- */
+  var urlParams = new URLSearchParams(window.location.search);
+  var initialCat = urlParams.get("cat") || "all";
+  var initialBrand = urlParams.get("brand");
+  promoOnly = urlParams.get("promo") === "1";
+  if (initialBrand) showBrandBanner(initialBrand);
+  var initBtn = document.querySelector('#filters button[data-filter="' + initialCat + '"]') || document.querySelector('#filters button[data-filter="all"]');
+  document.querySelectorAll("#filters button").forEach(function(b){ b.classList.remove("active"); });
+  initBtn.classList.add("active");
+  render(initialCat, 1);
+
+  /* ---- Mobile nav ---- */
+  var burger = document.getElementById("burger"), nav = document.getElementById("nav");
+  burger.addEventListener("click", function(){ nav.classList.toggle("open"); });
+  nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.classList.remove("open"); });
 
   /* ---- Category submenu accordion (mobile) ---- */
   document.querySelectorAll(".nav-drop-toggle").forEach(function(btn){
@@ -461,12 +744,12 @@ nav.addEventListener("click", function(e){ if (e.target.tagName === "A") nav.cla
     });
   });
 
-/* ---- Newsletter popup (once per browser session) ---- */
-var nlOverlay = document.getElementById("nlOverlay");
-var nlClose = document.getElementById("nlClose");
-var nlSkip = document.getElementById("nlSkip");
-var nlForm = document.getElementById("nlForm");
-var nlOpenedFrom = null;
+  /* ---- Newsletter popup (once per browser session) ---- */
+  var nlOverlay = document.getElementById("nlOverlay");
+  var nlClose = document.getElementById("nlClose");
+  var nlSkip = document.getElementById("nlSkip");
+  var nlForm = document.getElementById("nlForm");
+  var nlOpenedFrom = null;
   function openNL(){
     nlOpenedFrom = document.activeElement;
     nlOverlay.classList.add("show");
@@ -474,26 +757,26 @@ var nlOpenedFrom = null;
     var phoneField = document.getElementById("nlPhone");
     if (phoneField) phoneField.focus();
   }
-function closeNL(){
+  function closeNL(){
     nlOverlay.classList.remove("show");
     if (nlOpenedFrom && typeof nlOpenedFrom.focus === "function") nlOpenedFrom.focus();
     nlOpenedFrom = null;
   }
-if (!sessionStorage.getItem("escena_nl_shown_v1")) setTimeout(openNL, 900);
-nlClose.addEventListener("click", closeNL);
-nlSkip.addEventListener("click", closeNL);
-nlOverlay.addEventListener("click", function(e){ if (e.target === nlOverlay) closeNL(); });
-document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeNL(); });
-nlForm.addEventListener("submit", function(e){
-  e.preventDefault();
-  var phone = document.getElementById("nlPhone").value.trim();
-  if (!phone) return;
-  var msg = encodeURIComponent("Hola ESCENA 🐕, quiero unirme al newsletter para enterarme de nuevos productos y promos. Mi WhatsApp es: " + phone);
-  window.open("https://wa.me/" + WA + "?text=" + msg, "_blank", "noopener");
-  closeNL();
-});
-
+  if (!sessionStorage.getItem("escena_nl_shown_v1")) setTimeout(openNL, 900);
+  nlClose.addEventListener("click", closeNL);
+  nlSkip.addEventListener("click", closeNL);
+  nlOverlay.addEventListener("click", function(e){ if (e.target === nlOverlay) closeNL(); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeNL(); });
+  nlForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    var phone = document.getElementById("nlPhone").value.trim();
+    if (!phone) return;
+    var msg = encodeURIComponent("Hola ESCENA 🐕, quiero unirme al newsletter para enterarme de nuevos productos y promos. Mi WhatsApp es: " + phone);
+    window.open("https://wa.me/" + WA + "?text=" + msg, "_blank", "noopener");
+    closeNL();
+  });
 </script>
+<script>var ESCENA_ROOT = "";</script>
 <script src="assets/js/cart.js?v=7"></script>
 <script src="assets/js/cookie-consent.js"></script>
 <script src="assets/js/analytics.js?v=1"></script>
