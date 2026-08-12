@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Grips Stranger Piston",
+  "brand": "Stranger",
+  "cat": "punos",
+  "spec": "Goma · 165mm · 32mm · incluye Tapon",
+  "price": 45000,
+  "sku": "GRP-STR-001",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "grips-stranger-piston",
+  "img": "assets/img/products/grips-stranger-piston.jpg?v=1786531001501"
+ },
+ {
   "n": "Grips S&M Passero",
   "brand": "S&M",
   "cat": "punos",
