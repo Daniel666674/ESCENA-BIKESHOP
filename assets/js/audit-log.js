@@ -2019,5 +2019,15 @@ window.ESCENA_AUDIT = [
    "grips-animal-edwin-v2"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-12T11:31:43.689Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-gw-gorila-4pc-negro"
+  ],
+  "deleted": []
  }
 ];
