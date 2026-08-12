@@ -958,20 +958,23 @@ window.ESCENA_PRODUCTS = [
   "imgs": [
    "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1784943613143",
    "assets/img/products/timon-gw-destructor-tornasol-2.jpg?v=1785351656165",
-   "assets/img/products/timon-gw-destructor-tornasol-3.jpg?v=1785351660031"
+   "assets/img/products/timon-gw-destructor-tornasol-3.jpg?v=1786534525202"
   ],
   "colors": [
    {
     "label": "Tornasol",
-    "units": 5
+    "units": 5,
+    "price": 80000
    },
    {
     "label": "Cromado",
-    "units": 2
+    "units": 2,
+    "price": 45000
    },
    {
     "label": "Negro",
-    "units": 0
+    "units": 0,
+    "price": 35000
    }
   ],
   "imgColorMap": {
