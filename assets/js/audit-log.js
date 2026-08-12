@@ -1999,5 +1999,15 @@ window.ESCENA_AUDIT = [
    "grips-stolen-kunfu"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-12T11:27:35.743Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "grips-ontrail-yeti"
+  ],
+  "deleted": []
  }
 ];
