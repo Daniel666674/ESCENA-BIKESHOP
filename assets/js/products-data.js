@@ -87,9 +87,31 @@ window.ESCENA_PRODUCTS = [
     "label": "Cafe",
     "units": 15,
     "price": 20000
+   },
+   {
+    "label": "Naranja",
+    "units": 0,
+    "price": 20000
    }
   ],
   "slug": "grips-ontrail-yeti",
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Azul": [
+    1
+   ],
+   "Gris": [
+    2
+   ],
+   "Rojo": [
+    4
+   ],
+   "Cafe": [
+    5
+   ]
+  },
   "img": "assets/img/products/grips-ontrail-yeti.jpg?v=1786533291231"
  },
  {
