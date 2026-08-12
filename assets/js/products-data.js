@@ -1,5 +1,39 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Grips Animal Edwin V2",
+  "brand": "Animal",
+  "cat": "punos",
+  "spec": "Goma · 165mm · 32mm · incluye Tapon",
+  "price": 50000,
+  "sku": "GRP-ANM-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/grips-animal-edwin-v2.jpg?v=1786533882770",
+   "assets/img/products/grips-animal-edwin-v2-2.jpg?v=1786533884104",
+   "assets/img/products/grips-animal-edwin-v2-3.jpg?v=1786533885501"
+  ],
+  "colors": [
+   {
+    "label": "Verde",
+    "units": 1,
+    "price": 50000
+   },
+   {
+    "label": "Negro",
+    "units": 0,
+    "price": 50000
+   },
+   {
+    "label": "Amarillo",
+    "units": 0,
+    "price": 50000
+   }
+  ],
+  "slug": "grips-animal-edwin-v2",
+  "img": "assets/img/products/grips-animal-edwin-v2.jpg?v=1786533882770"
+ },
+ {
   "n": "Grips Subrosa Flangeless DCR",
   "brand": "Subrosa",
   "cat": "punos",
