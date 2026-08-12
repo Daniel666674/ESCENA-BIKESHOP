@@ -1869,5 +1869,15 @@ window.ESCENA_AUDIT = [
    "fiend-mills-sillin-blanco",
    "fiend-fiending-stem-negro"
   ]
+ },
+ {
+  "ts": "2026-08-12T10:15:16.594Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "grips-stolen-kunfu"
+  ],
+  "deleted": []
  }
 ];
