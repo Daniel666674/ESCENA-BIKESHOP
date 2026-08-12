@@ -3,13 +3,13 @@ window.ESCENA_PRODUCTS = [
   "n": "Grips Subrosa Flangeless DCR",
   "brand": "Subrosa",
   "cat": "punos",
-  "spec": "",
+  "spec": "Goma · 170mm · 31mm · Incluye Tapon",
   "price": 45000,
   "sku": "GRP-SUB-001",
   "units": 2,
   "imgFit": "cover",
   "slug": "grips-subrosa-flangeless-dcr",
-  "img": "assets/img/products/grips-subrosa-flangeless-dcr.jpg?v=1786533460185"
+  "img": "assets/img/products/grips-subrosa-flangeless-dcr.jpg?v=1786533573798"
  },
  {
   "n": "Grips Ontrail Yeti",
