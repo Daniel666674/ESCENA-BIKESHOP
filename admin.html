@@ -2554,6 +2554,32 @@
       inventoryCatalog.forEach(function (p) {
         if (p.published === false && createdSlugs.indexOf(p.slug) > -1) { p.published = true; markDirty(p.slug); }
       });
+      // The catalog write is what actually makes every edit/new-product/price/
+      // stock change visible on the storefront (tienda.html/index.html read
+      // products-data.js directly) — it used to run dead last, after sitemap
+      // sync and the sales log. Since this whole pipeline is a sequential
+      // promise chain, any earlier step throwing (a stubborn 409, a flaky
+      // network call) aborted everything downstream, including this one —
+      // even though photos and pages from earlier steps may already be
+      // permanently committed. That left products fully edited/visible in
+      // this session's local inventoryCatalog (so the admin panel still
+      // showed them as expected) while products-data.js — the file that
+      // decides what actually shows up in the shop — never got the update.
+      // Moved up so it's no longer gated behind the two least-critical,
+      // most failure-prone steps below; if sitemap sync or the sales log
+      // fails now, the storefront is already correct and only that one
+      // auxiliary step needs a retry.
+      //
+      // See dirtySlugs/deletedSlugs + mergeCatalog(): only this session's
+      // actual changes get applied, on top of whatever's live right now —
+      // never a blind overwrite with this session's full in-memory snapshot.
+      btn.textContent = "Guardando catálogo…";
+      return ghPutWithRetry("assets/js/products-data.js", "Update catalog via admin panel", function (remoteText) {
+        var remoteArr = parseRemoteArray(remoteText, "ESCENA_PRODUCTS");
+        var merged = mergeCatalog(remoteArr, inventoryCatalog, dirtySlugs, deletedSlugs);
+        return "window.ESCENA_PRODUCTS = " + JSON.stringify(merged, null, 1) + ";\n";
+      }, false);
+    }).then(function () {
       // Reconcile sitemap.xml against every currently-published product, not just
       // this session's newly-onboarded ones (createdSlugs) — self-healing against
       // any product that reached the catalog without going through the normal
@@ -2575,10 +2601,6 @@
         return remoteText.replace("</urlset>", adds.join("\n") + "\n</urlset>");
       }, false);
     }).then(function () {
-      // Commit the sales log before the catalog: if a later step fails, the sale
-      // record (revenue accounting) is already safely committed, and the retry on
-      // the next publish only needs to re-land the catalog/stock update.
-      //
       // Sales are pure-additive (never edited/deleted after creation), so the
       // safe merge is simple: append only what THIS session added since it last
       // loaded/published (salesLog beyond salesBaselineCount) onto whatever's
@@ -2595,16 +2617,6 @@
         var merged = remoteSales.concat(newSales);
         return "window.ESCENA_SALES = " + JSON.stringify(merged, null, 1) + ";\n";
       }, false).then(function () { salesDirty = false; salesBaselineCount = salesLog.length; });
-    }).then(function () {
-      // See dirtySlugs/deletedSlugs + mergeCatalog(): only this session's actual
-      // changes get applied, on top of whatever's live right now — never a blind
-      // overwrite with this session's full in-memory snapshot.
-      btn.textContent = "Guardando catálogo…";
-      return ghPutWithRetry("assets/js/products-data.js", "Update catalog via admin panel", function (remoteText) {
-        var remoteArr = parseRemoteArray(remoteText, "ESCENA_PRODUCTS");
-        var merged = mergeCatalog(remoteArr, inventoryCatalog, dirtySlugs, deletedSlugs);
-        return "window.ESCENA_PRODUCTS = " + JSON.stringify(merged, null, 1) + ";\n";
-      }, false);
     }).then(function () {
       // Record what THIS publish actually did, attributed to the authenticated
       // admin — captured now, before dirtySlugs/deletedSlugs get cleared below.
@@ -2640,7 +2652,7 @@
       renderInventory(document.getElementById("invSearch").value.trim());
       showToast("¡Publicado! La tienda se actualiza en ~1 minuto.");
     }).catch(function (e) {
-      alert("Error al publicar:\n" + e.message + "\n\nNada se dañó — vuelve a intentar.");
+      alert("Error al publicar:\n" + e.message + "\n\nTus cambios siguen guardados aquí (nada se perdió) — vuelve a intentar. Si ya alcanzaste a ver \"Guardando catálogo…\", los precios/stock ya están en la tienda; solo falta reintentar el resto.");
     }).then(function () {
       publishing = false; btn.disabled = false; updatePendingUI();
     });
