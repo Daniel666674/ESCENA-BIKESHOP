@@ -22,15 +22,18 @@
    marquee after the first paint. Not needed anyway at .94 opacity — the
    blur added nothing visible over the already near-solid background. */
 .brand-strip { background: rgba(10, 10, 10, .48); overflow: hidden; padding: 9px 0; }
-.brand-strip-track { display: flex; width: max-content; animation: bsScroll 60s linear infinite; will-change: transform; -webkit-transform: translateZ(0); transform: translateZ(0); }
-@media (hover: hover) and (pointer: fine) { .brand-strip:hover .brand-strip-track { animation-play-state: paused; } }
+/* The scroll itself is driven by JS (assets/js/cart.js, rAF-stepped
+   transform) rather than a CSS @keyframes animation — iOS Safari has a
+   known bug where an infinite CSS transform animation inside an
+   overflow:hidden ancestor can freeze solid after the first paint, and a
+   JS-stepped transform never hits that freeze. will-change still hints the
+   compositor since the transform still updates every frame. */
+.brand-strip-track { display: flex; width: max-content; will-change: transform; -webkit-transform: translateZ(0); transform: translateZ(0); }
 .brand-strip-group { display: flex; align-items: center; flex-shrink: 0; }
 .brand-strip .bs-chip { display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin: 0 .4rem; }
 .brand-strip .bs-chip img { display: block; height: 44px; width: auto; max-width: 152px; object-fit: contain; background: #fff; border-radius: 6px; padding: 5px 14px; opacity: .9; transition: opacity .2s; }
 @media (hover: hover) and (pointer: fine) { .brand-strip .bs-chip:hover img { opacity: 1; } }
-@keyframes bsScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (max-width: 640px) { .brand-strip { padding: 7px 0; } .brand-strip .bs-chip img { height: 32px; max-width: 112px; padding: 4px 10px; } }
-@media (prefers-reduced-motion: reduce) { .brand-strip-track { animation: none; } }
 
 /* ---- Header shell ----
    Always a translucent black (frosted) bar, matching the dark brand strip
