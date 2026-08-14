@@ -1,7 +1,7 @@
 {
   "name": "ESCENA Admin",
   "short_name": "ESCENA Admin",
-  "description": "Panel interno de inventario y ventas de ESCENA BIKE SHOP.",
+  "description": "Panel interno de inventario y ventas de ESCENA BMX.",
   "lang": "es-CO",
   "start_url": "admin.html",
   "scope": ".",
