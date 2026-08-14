@@ -4,10 +4,6 @@ window.ESCENA_CATEGORY_VIDEO_V = {
   "ext": "mp4",
   "rotation": 270
  },
- "bielas": {
-  "v": 1785922089611,
-  "ext": "mp4"
- },
  "manzana-trasera": {
   "v": 1785922306544,
   "ext": "mp4",
