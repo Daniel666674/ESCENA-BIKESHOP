@@ -8,11 +8,6 @@ window.ESCENA_CATEGORY_VIDEO_V = {
   "ext": "mp4",
   "rotation": 270
  },
- "stems": {
-  "v": 1785921986316,
-  "ext": "mp4",
-  "rotation": 90
- },
  "bielas": {
   "v": 1785922089611,
   "ext": "mp4"
