@@ -401,7 +401,7 @@ header.top-bar .brand .name { color: #fff; }
     <p class="pdp-stock-hint" id="pdpStockHint" data-units="1"></p>
     <div class="pdp-variant" id="pdpVariantColor" data-prefix="Color" data-img-map="{&quot;Morada&quot;:[0,1,2],&quot;Azul&quot;:[3,4,5],&quot;Cromada&quot;:[6,7,8]}">
       <span class="pdp-variant-label">Color</span>
-      <div class="pdp-variant-options"><button type="button" data-value="Morada" class="is-active">Morada</button><button type="button" data-value="Cromada">Cromada</button><button type="button" data-value="Azul">Azul</button></div>
+      <div class="pdp-variant-options"><button type="button" data-value="Morada" data-units="1" class="is-active">Morada</button><button type="button" data-value="Cromada" data-units="1">Cromada</button><button type="button" data-value="Azul" data-units="1">Azul</button></div>
     </div>
     <p class="pdp-pick-hint" id="pdpPickHint" style="display:none;"></p>
     <div class="pdp-actions" id="pdpActions">
@@ -524,9 +524,6 @@ header.top-bar .brand .name { color: #fff; }
       <a href="../politica-cookies">Cookies</a>
       <div class="pay-row"><span class="pay-badge pay-nequi">Nequi</span><span class="pay-badge pay-davi">Daviplata</span><span class="pay-badge pay-transfer">Transferencia</span><span class="pay-badge pay-cash">Efectivo</span></div>
     </div>
-  </div>
-  <div class="foot-bottom">
-    <span>&copy; 2026 ESCENABMX. Todos los derechos reservados.</span>
   </div>
 </footer>
 
@@ -789,7 +786,7 @@ header.top-bar .brand .name { color: #fff; }
   var liveProduct = null;
   if (window.ESCENA_PRODUCTS) {
     liveProduct = window.ESCENA_PRODUCTS.filter(function (x) { return x.slug === "cana-shadow-ravage-topload"; })[0] || null;
-    var hasRealVariant = liveProduct && ((liveProduct.sizes && liveProduct.sizes.length > 1) || (liveProduct.colors && liveProduct.colors.length > 1 && !(liveProduct.sizes && liveProduct.sizes.length > 1)));
+    var hasRealVariant = liveProduct && ((liveProduct.sizes && liveProduct.sizes.length > 1) || (liveProduct.colors && liveProduct.colors.length > 1));
     if (liveProduct && typeof liveProduct.units === "number" && !hasRealVariant) {
       unitsAvail = liveProduct.units;
     }
@@ -823,6 +820,18 @@ header.top-bar .brand .name { color: #fff; }
     var groups = Array.prototype.slice.call(document.querySelectorAll(".pdp-variant"));
     if (!groups.length) return;
     var selected = {};
+    // Sizes and colors can BOTH be real (independently stocked) at once —
+    // each group's own stock is a separate pool, so the sellable qty is the
+    // minimum across whichever real groups the shopper has picked so far,
+    // not just whichever group was clicked most recently.
+    var selectedUnits = {};
+    function recomputeStock() {
+      var units = null;
+      groups.forEach(function (g) {
+        if (selectedUnits[g.id] != null) units = (units === null) ? selectedUnits[g.id] : Math.min(units, selectedUnits[g.id]);
+      });
+      if (units !== null) applyStock(units);
+    }
 
     function combinedVariant() {
       return groups.map(function (g) { return selected[g.id]; }).filter(Boolean).join(" / ");
@@ -851,7 +860,11 @@ header.top-bar .brand .name { color: #fff; }
     if (pickHint) pickHint.textContent = "Elige " + labels.join(" y ") + " para continuar";
 
     groups.forEach(function (group) {
-      var isRealSize = !!group.querySelector("button[data-units]");
+      // Whether THIS group carries its own real, per-option stock — sizes
+      // and colors are independent pools and can both be real on the same
+      // product (see hasColorStock in admin.html), so more than one group
+      // here can have data-units at once now.
+      var isRealGroup = !!group.querySelector("button[data-units]");
       var liveKey = GROUP_LIVE_KEY[group.id];
       var liveList = (liveProduct && liveKey) ? liveProduct[liveKey] : null;
 
@@ -871,7 +884,7 @@ header.top-bar .brand .name { color: #fff; }
       // Sync each button's stock/disabled state from the live catalog — an
       // option could have sold out (or come back) since this page was last
       // generated, independent of any full page regeneration.
-      if (isRealSize && liveList) {
+      if (isRealGroup && liveList) {
         group.querySelectorAll("button[data-value]").forEach(function (b) {
           var live = liveList.filter(function (s) { return s.label === b.getAttribute("data-value"); })[0];
           if (!live) return;
@@ -886,7 +899,24 @@ header.top-bar .brand .name { color: #fff; }
         });
         selected[group.id] = val;
         if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
-        if (isRealSize) {
+        // Color-specific price override: prefer the live catalog's price (an
+        // admin edit must show up immediately), fall back to what was baked
+        // into this button at publish time, and fall back again to the
+        // product's base price if this color has no override of its own.
+        if (group.id === "pdpVariantColor" && addCartBtn) {
+          var colorPrice = null;
+          if (liveList) {
+            var liveColor = liveList.filter(function (c) { return c.label === val; })[0];
+            if (liveColor && liveColor.price > 0) colorPrice = liveColor.price;
+          }
+          if (colorPrice === null) {
+            var cBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+            var baked = cBtn ? parseFloat(cBtn.getAttribute("data-price")) : NaN;
+            if (baked > 0) colorPrice = baked;
+          }
+          addCartBtn.setAttribute("data-price", colorPrice !== null ? colorPrice : basePrice);
+        }
+        if (isRealGroup) {
           var units = null;
           if (liveList) {
             var live = liveList.filter(function (s) { return s.label === val; })[0];
@@ -896,7 +926,12 @@ header.top-bar .brand .name { color: #fff; }
             var btn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
             units = btn ? (parseInt(btn.getAttribute("data-units"), 10) || 0) : 0;
           }
-          applyStock(units);
+          // This group's own pool — combined with any other selected real
+          // group's pool (the minimum across both) by recomputeStock(),
+          // not applied directly, so picking a size doesn't get overwritten
+          // by then picking a color (or vice versa).
+          selectedUnits[group.id] = units;
+          recomputeStock();
         }
         if (imgMap) pdpFilterGallery(imgMap[val] || null);
         refreshGate();

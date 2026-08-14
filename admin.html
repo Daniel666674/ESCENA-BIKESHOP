@@ -914,11 +914,11 @@
               </div>
               <div class="pmodal-field">
                 <label>Precio (COP)</label>
-                <input type="number" id="pmPrice" min="0" step="1000" required />
+                <input type="number" id="pmPrice" min="0" step="1" required />
               </div>
               <div class="pmodal-field">
                 <label>Costo (COP, interno)</label>
-                <input type="number" id="pmCost" min="0" step="1000" />
+                <input type="number" id="pmCost" min="0" step="1" />
               </div>
               <div class="pmodal-field span2">
                 <label>Notas internas <span class="pm-label-note">(no se publican)</span></label>
@@ -980,8 +980,12 @@
     <form id="smodalForm">
       <div class="pmodal-grid">
         <div class="pmodal-field span2" id="smSizeField" style="display:none;">
-          <label id="smSizeLabel">Talla vendida</label>
+          <label>Talla vendida</label>
           <select id="smSize"></select>
+        </div>
+        <div class="pmodal-field span2" id="smColorField" style="display:none;">
+          <label>Color vendido</label>
+          <select id="smColor"></select>
         </div>
         <div class="pmodal-field">
           <label>Cantidad vendida</label>
@@ -989,11 +993,11 @@
         </div>
         <div class="pmodal-field">
           <label>Precio unitario (COP)</label>
-          <input type="number" id="smPrice" min="0" step="1000" required />
+          <input type="number" id="smPrice" min="0" step="1" required />
         </div>
         <div class="pmodal-field">
           <label>Costo unitario (COP) <span class="pm-label-note">(opcional)</span></label>
-          <input type="number" id="smCost" min="0" step="1000" placeholder="Del producto" />
+          <input type="number" id="smCost" min="0" step="1" placeholder="Del producto" />
         </div>
         <div class="pmodal-field">
           <label>Ganancia estimada</label>
@@ -1203,12 +1207,28 @@
   function shopPageFor(cat) { return SHOP_PAGE_BY_CAT[cat] || "tienda"; }
   function sizesTotal(sizes) { return (sizes || []).reduce(function (s, x) { return s + (x.units || 0); }, 0); }
   // Colors work the same way as sizes (p.colors = [{label, units}]) but are
-  // available on every category, independent of talla. A product tracks real,
-  // per-unit stock through at most ONE of these two dimensions at a time —
-  // sizes wins when both are present (a size-category's sizes already own the
-  // real stock, so any colors added there are cosmetic-only, same pattern as
-  // the old manzana-trasera LHD/RHD selector: tags the message, no own stock).
+  // available on every category, independent of talla.
+  //
+  // isColorReal() governs which ONE dimension drives the aggregate p.units
+  // total when a product has sizes AND colors — sizes win there, matching
+  // the old manzana-trasera LHD/RHD pattern (tags the message, no own
+  // stock) for a size-category's colors.
+  //
+  // hasColorStock() is a SEPARATE, more permissive check used everywhere a
+  // specific color option needs to independently gate purchase/sale — the
+  // storefront's color selector (colorVariantHtmlFor), a page's initial
+  // stock display (genPage), and the admin's "Registrar venta" modal
+  // (sellVariantKind). Real-world catalog data confirmed this needs to be
+  // independent of isColorReal: 11 products have BOTH a mandatory size
+  // (from SIZE_CATEGORIES, e.g. handlebar width) and 2+ colors that are
+  // genuinely stocked separately (e.g. a specific color selling out while
+  // others remain available) — treating those colors as cosmetic-only
+  // (the old isColorReal-gated behavior) meant a sold-out color's page
+  // never disabled its buy button and never showed up in "Registrar
+  // venta" at all, since neither branch of the old single-dimension check
+  // matched a product with exactly one size and 2+ colors.
   function isColorReal(p) { return !isSizeCat(p.cat) && p.colors && p.colors.length > 1; }
+  function hasColorStock(p) { return !!(p && p.colors && p.colors.length > 1); }
 
   /* ============ GitHub API ============ */
   function getToken() { return sessionStorage.getItem(TOKEN_KEY) || localStorage.getItem(TOKEN_KEY) || ""; }
@@ -2427,12 +2447,13 @@
       '      <div class="pdp-variant-options">' + opts2 + '</div>\n' +
       '    </div>';
   }
-  // Independent second selector: real inventory-backed when the category has
-  // no mandatory size (isColorReal), cosmetic tag-only otherwise (a size
-  // product's talla already owns the real stock — see isColorReal).
+  // Independent second selector: real inventory-backed whenever there are
+  // 2+ colors (see hasColorStock) — independent of whether the category
+  // also has a mandatory size, so a sold-out color correctly disables
+  // itself even on a size-category product.
   function colorVariantHtmlFor(p) {
     if (!p.colors || p.colors.length < 2) return "";
-    var real = isColorReal(p);
+    var real = hasColorStock(p);
     var withStock = real ? p.colors.filter(function (c) { return (c.units || 0) > 0; }) : [];
     var activeLabel = (real ? (withStock[0] || p.colors[0]) : p.colors[0]).label;
     var opts = p.colors.map(function (c) {
@@ -2492,7 +2513,7 @@
     if (p.sizes && p.sizes.length > 1) {
       var withStock = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
       initialUnits = (withStock[0] || p.sizes[0] || { units: 0 }).units || 0;
-    } else if (isColorReal(p)) {
+    } else if (hasColorStock(p)) {
       var withStockC = p.colors.filter(function (c) { return (c.units || 0) > 0; });
       initialUnits = (withStockC[0] || p.colors[0] || { units: 0 }).units || 0;
     }
@@ -3008,7 +3029,7 @@
       return '<div class="pmodal-sizes-row pmodal-sizes-row-color">' +
         '<input type="text" placeholder="Ej: Negro, Cromado, Azul" data-i="' + i + '" data-f="label" value="' + esc(c.label || "") + '" />' +
         '<input type="number" min="0" step="1" placeholder="Stock" data-i="' + i + '" data-f="units" value="' + (typeof c.units === "number" ? c.units : "") + '" />' +
-        '<input type="number" min="0" step="500" placeholder="Precio base: ' + Math.round(basePrice).toLocaleString("es-CO") + '" data-i="' + i + '" data-f="price" value="' + (typeof c.price === "number" && c.price > 0 ? c.price : "") + '" title="Vacío = usa el precio base del producto" />' +
+        '<input type="number" min="0" step="1" placeholder="Precio base: ' + Math.round(basePrice).toLocaleString("es-CO") + '" data-i="' + i + '" data-f="price" value="' + (typeof c.price === "number" && c.price > 0 ? c.price : "") + '" title="Vacío = usa el precio base del producto" />' +
         '<button type="button" class="pmodal-size-rm" data-i="' + i + '" aria-label="Quitar color">&times;</button>' +
         '</div>';
     }).join("");
@@ -3153,61 +3174,84 @@
     var cost = parseFloat(costInput) || 0;
     profitEl.textContent = cop(qty * (price - cost));
   }
-  // A product tracks real stock through at most one variant dimension at a
-  // time: sizes (multi-size product) or colors (isColorReal — colors as the
-  // real dimension on a non-size category). Never both on the same product.
-  function sellVariantKind(p) {
-    if (p && p.sizes && p.sizes.length > 1) return "sizes";
-    if (p && isColorReal(p)) return "colors";
-    return null;
-  }
-  function sellSelectedVariant() {
+  // A product can independently track real stock through EITHER or BOTH
+  // dimensions at once — sizes (multi-size product) and/or colors
+  // (hasColorStock — 2+ colors, on any category). Real catalog data has 11
+  // products with both (e.g. a handlebar with one width but 2+ colors, each
+  // stocked separately) — the old "at most one dimension" model meant a
+  // sold-out color on those never showed up here at all, so a sale against
+  // it silently deducted from the wrong pool (or wasn't offered a choice).
+  // Each selected dimension is its own independent stock pool (there's no
+  // true per-combination matrix in the data model), so the sellable qty is
+  // the minimum across whichever dimensions this product actually has, and
+  // a sale deducts from each selected dimension's own pool.
+  function sellHasSizes(p) { return !!(p && p.sizes && p.sizes.length > 1); }
+  function sellHasColors(p) { return hasColorStock(p); }
+  function sellSelectedSize() {
     var p = inventoryCatalog[sellingIdx];
-    var kind = sellVariantKind(p);
-    if (!kind) return null;
+    if (!sellHasSizes(p)) return null;
     var sel = document.getElementById("smSize").value;
-    return p[kind].filter(function (x) { return x.label === sel; })[0] || null;
+    return p.sizes.filter(function (x) { return x.label === sel; })[0] || null;
+  }
+  function sellSelectedColor() {
+    var p = inventoryCatalog[sellingIdx];
+    if (!sellHasColors(p)) return null;
+    var sel = document.getElementById("smColor").value;
+    return p.colors.filter(function (x) { return x.label === sel; })[0] || null;
   }
   function applySellUnitsLimit() {
     var p = inventoryCatalog[sellingIdx];
-    var variant = sellSelectedVariant();
-    var units = variant ? (variant.units || 0) : (p ? (p.units || 0) : 0);
+    var size = sellSelectedSize();
+    var color = sellSelectedColor();
+    var pools = [];
+    if (size) pools.push(size.units || 0);
+    if (color) pools.push(color.units || 0);
+    var units = pools.length ? Math.min.apply(null, pools) : (p ? (p.units || 0) : 0);
     var qtyEl = document.getElementById("smQty");
     var submitBtn = document.querySelector("#smodalForm button[type=submit]");
     qtyEl.max = units;
     qtyEl.value = units > 0 ? Math.min(parseInt(qtyEl.value, 10) || 1, units) : 0;
     qtyEl.disabled = units <= 0;
     submitBtn.disabled = units <= 0;
-    submitBtn.textContent = units <= 0 ? (variant ? "Sin stock para esta opción" : "Sin stock para vender") : "Registrar venta";
-    // A color variant can carry its own price override (colors[].price, the
-    // same field the storefront's color picker already reads) — follow it
-    // here too, so selling that color records the right revenue instead of
-    // always defaulting to the base product price regardless of which
-    // color was actually picked. Sizes have no price override, so this is
-    // a no-op for size-based products (variant.price is simply undefined).
-    if (p) document.getElementById("smPrice").value = (variant && variant.price > 0) ? variant.price : (p.price || 0);
+    submitBtn.textContent = units <= 0 ? (pools.length ? "Sin stock para esta opción" : "Sin stock para vender") : "Registrar venta";
+    // A color can carry its own price override (colors[].price, the same
+    // field the storefront's color picker already reads) — follow it here
+    // too, so selling that color records the right revenue instead of
+    // always defaulting to the base product price. Sizes have no price
+    // override.
+    if (p) document.getElementById("smPrice").value = (color && color.price > 0) ? color.price : (p.price || 0);
     updateSellTotal();
   }
   function openSellModal(idx) {
     sellingIdx = idx;
     var p = inventoryCatalog[idx];
-    var kind = sellVariantKind(p);
-    var list = kind ? p[kind] : null;
+    var hasSizes = sellHasSizes(p);
+    var hasColors = sellHasColors(p);
     var sizeField = document.getElementById("smSizeField");
-    sizeField.style.display = list ? "" : "none";
-    if (list) {
-      document.getElementById("smSizeLabel").textContent = kind === "sizes" ? "Talla vendida" : "Color vendido";
-      document.getElementById("smSize").innerHTML = list.map(function (s) {
+    var colorField = document.getElementById("smColorField");
+    sizeField.style.display = hasSizes ? "" : "none";
+    colorField.style.display = hasColors ? "" : "none";
+    if (hasSizes) {
+      document.getElementById("smSize").innerHTML = p.sizes.map(function (s) {
         var out = (s.units || 0) <= 0;
         return '<option value="' + esc(s.label) + '"' + (out ? " disabled" : "") + '>' + esc(s.label) + " — " + (s.units || 0) + " en stock" + (out ? " (agotado)" : "") + "</option>";
       }).join("");
-      var withStock = list.filter(function (s) { return (s.units || 0) > 0; });
-      document.getElementById("smSize").value = (withStock[0] || list[0]).label;
+      var withStockS = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
+      document.getElementById("smSize").value = (withStockS[0] || p.sizes[0]).label;
+    }
+    if (hasColors) {
+      document.getElementById("smColor").innerHTML = p.colors.map(function (c) {
+        var out = (c.units || 0) <= 0;
+        return '<option value="' + esc(c.label) + '"' + (out ? " disabled" : "") + '>' + esc(c.label) + " — " + (c.units || 0) + " en stock" + (out ? " (agotado)" : "") + "</option>";
+      }).join("");
+      var withStockC = p.colors.filter(function (c) { return (c.units || 0) > 0; });
+      document.getElementById("smColor").value = (withStockC[0] || p.colors[0]).label;
     }
     var units = p.units || 0;
-    document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock" + (list ? (kind === "sizes" ? " (todas las tallas)" : " (todos los colores)") : "");
+    var suffix = hasSizes && hasColors ? " (todas las tallas y colores)" : hasSizes ? " (todas las tallas)" : hasColors ? " (todos los colores)" : "";
+    document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock" + suffix;
     // smPrice is set below by applySellUnitsLimit(), which follows the
-    // selected variant's price override when it has one.
+    // selected color's price override when it has one.
     document.getElementById("smCost").value = p.cost ? p.cost : ""; // blank (not "0") when the product has no cost recorded -- same "unknown, not free" distinction as the product modal
     document.getElementById("smBuyer").value = "";
     document.getElementById("smPhone").value = "";
@@ -4447,20 +4491,34 @@
     document.getElementById("smPrice").addEventListener("input", updateSellTotal);
     document.getElementById("smCost").addEventListener("input", updateSellTotal);
     document.getElementById("smSize").addEventListener("change", applySellUnitsLimit);
+    document.getElementById("smColor").addEventListener("change", applySellUnitsLimit);
     document.getElementById("smodalForm").addEventListener("submit", function (e) {
       e.preventDefault();
       if (sellingIdx === null) return;
       var p = inventoryCatalog[sellingIdx];
       var qty = parseInt(document.getElementById("smQty").value, 10) || 0;
       var price = parseFloat(document.getElementById("smPrice").value) || 0;
-      var kind = sellVariantKind(p);
-      var variant = sellSelectedVariant();
-      var available = variant ? (variant.units || 0) : (p.units || 0);
+      var size = sellSelectedSize();
+      var color = sellSelectedColor();
+      var pools = [];
+      if (size) pools.push(size.units || 0);
+      if (color) pools.push(color.units || 0);
+      var available = pools.length ? Math.min.apply(null, pools) : (p.units || 0);
       if (qty < 1) return;
-      if (qty > available) { alert("Solo hay " + available + " en stock" + (variant ? " para " + (kind === "sizes" ? "la talla " : "el color ") + variant.label : "") + " — no puedes registrar una venta de " + qty + "."); return; }
-      if (variant) {
-        variant.units -= qty;
-        p.units = sizesTotal(p[kind]);
+      if (qty > available) {
+        var whatOut = size && (size.units || 0) === available ? "la talla " + size.label
+          : color && (color.units || 0) === available ? "el color " + color.label : null;
+        alert("Solo hay " + available + " en stock" + (whatOut ? " para " + whatOut : "") + " — no puedes registrar una venta de " + qty + "."); return;
+      }
+      // Each selected dimension is its own independent stock pool (no true
+      // per-combination matrix), so a sale deducts from every pool this
+      // product actually tracks, not just one.
+      if (size) size.units -= qty;
+      if (color) color.units -= qty;
+      if (size || color) {
+        p.units = isSizeCat(p.cat) && p.sizes && p.sizes.length ? sizesTotal(p.sizes)
+          : hasColorStock(p) ? sizesTotal(p.colors)
+          : (p.units || 0) - qty;
       } else {
         p.units = (p.units || 0) - qty;
       }
@@ -4472,7 +4530,9 @@
       // 0) when no cost was entered, so a sale with unknown cost reads as
       // "profit unknown" downstream, never a fabricated "profit = revenue".
       var costInput = document.getElementById("smCost").value;
-      var saleExtra = variant ? (kind === "sizes" ? { size: variant.label } : { color: variant.label }) : {};
+      var saleExtra = {};
+      if (size) saleExtra.size = size.label;
+      if (color) saleExtra.color = color.label;
       if (costInput !== "") {
         var unitCost = parseFloat(costInput) || 0;
         saleExtra.unitCost = unitCost;
