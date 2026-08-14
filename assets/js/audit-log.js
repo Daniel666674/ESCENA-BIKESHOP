@@ -2059,5 +2059,15 @@ window.ESCENA_AUDIT = [
    "timon-fiend-reynolds"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-14T16:01:20.845Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-cult-heavens-gate-4p-cromado"
+  ],
+  "deleted": []
  }
 ];
