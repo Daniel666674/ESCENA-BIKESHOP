@@ -484,9 +484,6 @@ header.top-bar .brand .name { color: #fff; }
       <div class="pay-row"><span class="pay-badge pay-nequi">Nequi</span><span class="pay-badge pay-davi">Daviplata</span><span class="pay-badge pay-transfer">Transferencia</span><span class="pay-badge pay-cash">Efectivo</span></div>
     </div>
   </div>
-  <div class="foot-bottom">
-    <span>&copy; 2026 ESCENABMX. Todos los derechos reservados.</span>
-  </div>
 </footer>
 
 <a class="wa-float" href="{{WA_HREF}}" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg></a>
@@ -751,7 +748,12 @@ header.top-bar .brand .name { color: #fff; }
   var liveProduct = null;
   if (window.ESCENA_PRODUCTS) {
     liveProduct = window.ESCENA_PRODUCTS.filter(function (x) { return x.slug === "{{SLUG}}"; })[0] || null;
-    var hasRealVariant = liveProduct && ((liveProduct.sizes && liveProduct.sizes.length > 1) || (liveProduct.colors && liveProduct.colors.length > 1 && !(liveProduct.sizes && liveProduct.sizes.length > 1)));
+    // Sizes and colors are independent stock pools that can BOTH be real at
+    // once (e.g. one handlebar width but 2+ separately-stocked colors) — see
+    // admin.html's hasColorStock(). If either carries its own per-option
+    // stock, the flat aggregate below isn't the right number to show before
+    // a specific option is chosen; the per-group sync further down handles it.
+    var hasRealVariant = liveProduct && ((liveProduct.sizes && liveProduct.sizes.length > 1) || (liveProduct.colors && liveProduct.colors.length > 1));
     if (liveProduct && typeof liveProduct.units === "number" && !hasRealVariant) {
       unitsAvail = liveProduct.units;
     }
@@ -785,6 +787,18 @@ header.top-bar .brand .name { color: #fff; }
     var groups = Array.prototype.slice.call(document.querySelectorAll(".pdp-variant"));
     if (!groups.length) return;
     var selected = {};
+    // Sizes and colors can BOTH be real (independently stocked) at once —
+    // each group's own stock is a separate pool, so the sellable qty is the
+    // minimum across whichever real groups the shopper has picked so far,
+    // not just whichever group was clicked most recently.
+    var selectedUnits = {};
+    function recomputeStock() {
+      var units = null;
+      groups.forEach(function (g) {
+        if (selectedUnits[g.id] != null) units = (units === null) ? selectedUnits[g.id] : Math.min(units, selectedUnits[g.id]);
+      });
+      if (units !== null) applyStock(units);
+    }
 
     function combinedVariant() {
       return groups.map(function (g) { return selected[g.id]; }).filter(Boolean).join(" / ");
@@ -813,7 +827,11 @@ header.top-bar .brand .name { color: #fff; }
     if (pickHint) pickHint.textContent = "Elige " + labels.join(" y ") + " para continuar";
 
     groups.forEach(function (group) {
-      var isRealSize = !!group.querySelector("button[data-units]");
+      // Whether THIS group carries its own real, per-option stock — sizes
+      // and colors are independent pools and can both be real on the same
+      // product (see hasColorStock in admin.html), so more than one group
+      // here can have data-units at once now.
+      var isRealGroup = !!group.querySelector("button[data-units]");
       var liveKey = GROUP_LIVE_KEY[group.id];
       var liveList = (liveProduct && liveKey) ? liveProduct[liveKey] : null;
 
@@ -833,7 +851,7 @@ header.top-bar .brand .name { color: #fff; }
       // Sync each button's stock/disabled state from the live catalog — an
       // option could have sold out (or come back) since this page was last
       // generated, independent of any full page regeneration.
-      if (isRealSize && liveList) {
+      if (isRealGroup && liveList) {
         group.querySelectorAll("button[data-value]").forEach(function (b) {
           var live = liveList.filter(function (s) { return s.label === b.getAttribute("data-value"); })[0];
           if (!live) return;
@@ -865,7 +883,7 @@ header.top-bar .brand .name { color: #fff; }
           }
           addCartBtn.setAttribute("data-price", colorPrice !== null ? colorPrice : basePrice);
         }
-        if (isRealSize) {
+        if (isRealGroup) {
           var units = null;
           if (liveList) {
             var live = liveList.filter(function (s) { return s.label === val; })[0];
@@ -875,7 +893,12 @@ header.top-bar .brand .name { color: #fff; }
             var btn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
             units = btn ? (parseInt(btn.getAttribute("data-units"), 10) || 0) : 0;
           }
-          applyStock(units);
+          // This group's own pool — combined with any other selected real
+          // group's pool (the minimum across both) by recomputeStock(),
+          // not applied directly, so picking a size doesn't get overwritten
+          // by then picking a color (or vice versa).
+          selectedUnits[group.id] = units;
+          recomputeStock();
         }
         if (imgMap) pdpFilterGallery(imgMap[val] || null);
         refreshGate();
