@@ -11,7 +11,7 @@ window.ESCENA_SITE_TEXT = {
  "catEyebrow": "",
  "catHeading": "TIENDA",
  "storyEyebrow": "Somos ESCENA",
- "storyP1": "ESCENA BMX nació de rodar en Bogotá. Somos riders montando una tienda para riders: partes que probamos, marcas en las que confiamos y precios sin vueltas. Acá no vendemos cualquier cosa vendemos lo que montaríamos nosotros.",
+ "storyP1": "ESCENABMX nació de rodar en Bogotá. Somos riders montando una tienda para riders: partes que probamos, marcas en las que confiamos y precios sin vueltas. Acá no vendemos cualquier cosa vendemos lo que montaríamos nosotros.",
  "storyP2": "",
  "igEyebrow": "La escena en vivo",
  "igHeading": "INSTAGRAM / @ESCENABIKESHOP",

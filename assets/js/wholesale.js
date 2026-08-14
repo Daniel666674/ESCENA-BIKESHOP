@@ -63,7 +63,7 @@
           '<button type="button" class="wsale-textlink" id="wsaleLogoutModal">Cerrar sesión</button>' +
         '</div>' +
         '<form id="wsaleLoginForm">' +
-          '<img src="' + ROOT + 'assets/img/escena-logo.jpg" alt="ESCENA BMX" />' +
+          '<img src="' + ROOT + 'assets/img/escena-logo.jpg" alt="ESCENABMX" />' +
           '<h3>INICIAR SESIÓN</h3>' +
           '<p>Acceso para mayoristas y equipo ESCENA.</p>' +
           '<input type="email" id="wsaleEmail" placeholder="Correo" autocomplete="username" required />' +
