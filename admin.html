@@ -2196,7 +2196,23 @@
      CDN from the dev sandbox to verify a repo/variant/device combo ahead of
      time, so this is what keeps the button working via the next proven
      option rather than dying outright. Edit the first entry to change the
-     primary model. */
+     primary model.
+
+     BiRefNet_lite and RMBG-1.4 both turned out to ship a config.json with
+     model_type set to the architecture's class name ("SegformerFor...")
+     instead of the lowercase registry key ("segformer") that this exact
+     transformers.js version's AutoModelForSemanticSegmentation mapping
+     looks up — confirmed by pulling the real @huggingface/transformers
+     4.2.0 source from npm and tracing pipelines.js's `Unsupported model
+     type "${model_type}"` error back to registry.js's mapping table,
+     which DOES list 'segformer', just not under that capitalized key. So
+     it's a bad config on those model repos, not a version/CDN mismatch.
+     Xenova/modnet is appended as a last-resort fallback specifically
+     because it's this exact library version's own shipped default for
+     "background-removal" (see SUPPORTED_TASKS in pipelines/index.js) —
+     the one model guaranteed to have a config this pipeline dispatch
+     logic actually recognizes, at the cost of noticeably lower quality
+     than BiRefNet/RMBG on reflective or hole-heavy parts. */
   var TFJS_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0/dist/transformers.web.js";
   function bgAttempts() {
     var gpu = (typeof navigator !== "undefined" && navigator.gpu) ? "webgpu" : null;
@@ -2204,6 +2220,7 @@
     if (gpu) list.push({ id: "onnx-community/BiRefNet_lite", device: "webgpu" }); // SOTA, GPU-accelerated
     list.push({ id: "onnx-community/BiRefNet_lite", device: "wasm" });            // SOTA, CPU fallback
     list.push({ id: "briaai/RMBG-1.4", device: "wasm" });                        // proven fallback, trained for product photos
+    list.push({ id: "Xenova/modnet", device: "wasm" });                          // library's own default — lower quality, but its config is known-compatible
     return list;
   }
   // An attempt can fail two different ways: pipeline CREATION (model/CDN
