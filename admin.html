@@ -2215,10 +2215,22 @@
      than BiRefNet/RMBG on reflective or hole-heavy parts. */
   var TFJS_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0/dist/transformers.web.js";
   function bgAttempts() {
-    var gpu = (typeof navigator !== "undefined" && navigator.gpu) ? "webgpu" : null;
     var list = [];
-    if (gpu) list.push({ id: "onnx-community/BiRefNet_lite", device: "webgpu" }); // SOTA, GPU-accelerated
-    list.push({ id: "onnx-community/BiRefNet_lite", device: "wasm" });            // SOTA, CPU fallback
+    // BiRefNet_lite on WebGPU is deliberately NOT attempted: real-device
+    // testing hit a hard, deterministic failure —
+    // "Too many storage buffers in shader. Current: 17, Max is 16" — from
+    // onnxruntime-web's WebGPU backend. 16 storage buffers per shader stage
+    // is a common device/browser cap, not a rare one, and this is a fixed
+    // property of the model's compiled shader graph vs. the device's limit,
+    // not a transient condition — it fails the exact same way every single
+    // time on an affected device. Since bgAttemptIndex resets to 0 once all
+    // attempts are exhausted (so the tool can recover from real transient
+    // failures instead of staying permanently bricked), leaving this attempt
+    // in would mean every future click re-pays for and re-fails this exact
+    // doomed WebGPU attempt before ever reaching a model that can actually
+    // run. Only reinstate this if BiRefNet_lite's ONNX export is ever
+    // rebuilt with a shader graph that fits under 16 storage buffers.
+    list.push({ id: "onnx-community/BiRefNet_lite", device: "wasm" });            // SOTA, CPU
     list.push({ id: "briaai/RMBG-1.4", device: "wasm" });                        // proven fallback, trained for product photos
     list.push({ id: "Xenova/modnet", device: "wasm" });                          // library's own default — lower quality, but its config is known-compatible
     return list;
