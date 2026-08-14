@@ -4857,8 +4857,10 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgFit": "cover",
   "imgColorMap": {
+   "Cromado": [
+    0
+   ],
    "Negro": [
-    0,
     1
    ]
   },
