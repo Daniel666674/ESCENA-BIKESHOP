@@ -2232,6 +2232,18 @@
   // Runs the pipeline on blobUrl, falling through bgAttempts() from the
   // lowest not-yet-known-bad attempt on ANY failure (load or inference) —
   // self-heals within a single click instead of making the admin retry.
+  //
+  // If EVERY attempt fails (all 3 exhausted), bgAttemptIndex used to just
+  // sit at attempts.length forever — every later click for the rest of the
+  // session hit getBgPipeline's out-of-range guard immediately, without
+  // even trying the CDN again, and always showed that guard's generic "no
+  // se pudo cargar el modelo de recorte" instead of whatever the real
+  // underlying error was (a transient network blip, a one-off WebGPU
+  // hiccup on that specific photo, etc. — all indistinguishable from an
+  // actually-broken CDN once buried behind the generic message). Reset
+  // back to 0 on full exhaustion so the tool gets a genuine fresh attempt
+  // — and its real error, not a stale placeholder — next time instead of
+  // being permanently bricked for the rest of the session.
   function runBgRemoval(blobUrl, onProgress) {
     function tryFrom(i) {
       return getBgPipeline(i, onProgress).then(function (segmenter) {
@@ -2240,6 +2252,7 @@
         delete bgPipelineCache[i];
         if (bgAttemptIndex <= i) bgAttemptIndex = i + 1;
         if (i + 1 < bgAttempts().length) return tryFrom(i + 1);
+        bgAttemptIndex = 0;
         throw e;
       });
     }
