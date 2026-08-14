@@ -8,10 +8,6 @@ window.ESCENA_CATEGORY_VIDEO_V = {
   "v": 1785922089611,
   "ext": "mp4"
  },
- "horquillas": {
-  "v": 1785922164710,
-  "ext": "mp4"
- },
  "manzana-trasera": {
   "v": 1785922306544,
   "ext": "mp4",
