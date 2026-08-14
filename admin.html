@@ -301,8 +301,7 @@
     }
     .pmodal-field input:focus, .pmodal-field select:focus, .pmodal-field textarea:focus { outline: none; border-color: var(--ink); }
     .pmodal-margin-readout { border: 1.5px solid var(--line); border-radius: 8px; padding: .65rem .8rem; font-size: .86rem; font-weight: 700; background: var(--panel); }
-    .pmodal-sizes-row { display: grid; grid-template-columns: 1fr 110px auto; gap: .5rem; align-items: center; margin-bottom: .5rem; }
-    .pmodal-sizes-row-color { grid-template-columns: 1fr 90px 140px auto; }
+    .pmodal-sizes-row { display: grid; grid-template-columns: 1fr 90px 120px 120px auto; gap: .5rem; align-items: center; margin-bottom: .5rem; }
     .pmodal-sizes-row input { border: 1.5px solid var(--line); border-radius: 8px; padding: .6rem .7rem; font-size: .84rem; font-family: inherit; width: 100%; }
     .pmodal-sizes-row input:focus { outline: none; border-color: var(--ink); }
     .pmodal-sizes-row .pmodal-size-rm { width: 32px; height: 32px; border-radius: 8px; border: 1.5px solid var(--line); background: #fff; color: var(--muted); font-size: 1rem; cursor: pointer; line-height: 1; }
@@ -353,8 +352,7 @@
        as a table, no change to the row-rendering logic itself. */
     .pm-variant-table { border: 1px solid var(--card-line); border-radius: 10px; padding: .9rem 1rem 1rem; margin-bottom: 1rem; }
     .pm-variant-table:last-child { margin-bottom: 0; }
-    .pm-variant-head { display: grid; grid-template-columns: 1fr 110px auto; gap: .5rem; margin-bottom: .6rem; font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
-    .pm-variant-head-color { grid-template-columns: 1fr 90px 140px auto; }
+    .pm-variant-head { display: grid; grid-template-columns: 1fr 90px 120px 120px auto; gap: .5rem; margin-bottom: .6rem; font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
 
     .pm-pill-toggle { display: flex; border: 1.5px solid var(--card-line); border-radius: 999px; padding: .2rem; width: fit-content; }
     .pm-pill-toggle button { background: none; border: none; border-radius: 999px; padding: .4rem 1rem; font-size: .78rem; font-weight: 700; font-family: inherit; color: var(--muted); cursor: pointer; }
@@ -884,13 +882,13 @@
               <h4 class="pm-section-title">Variantes del producto</h4>
             </div>
             <div class="pm-variant-table" id="pmSizesField" style="display:none;">
-              <div class="pm-variant-head"><span>Talla</span><span>Stock</span><span></span></div>
+              <div class="pm-variant-head"><span>Talla</span><span>Stock</span><span>Precio (opcional)</span><span>Costo (opcional)</span><span></span></div>
               <div id="pmSizesRows"></div>
               <button type="button" class="pmodal-sizes-add" id="pmSizesAddBtn">+ Añadir talla</button>
               <p class="pmodal-sizes-total" id="pmSizesTotal"></p>
             </div>
             <div class="pm-variant-table">
-              <div class="pm-variant-head pm-variant-head-color"><span>Color</span><span>Stock</span><span>Precio (opcional)</span><span></span></div>
+              <div class="pm-variant-head"><span>Color</span><span>Stock</span><span>Precio (opcional)</span><span>Costo (opcional)</span><span></span></div>
               <div id="pmColorsRows"></div>
               <button type="button" class="pmodal-sizes-add" id="pmColorsAddBtn">+ Añadir color</button>
               <p class="pmodal-sizes-total" id="pmColorsTotal"></p>
@@ -3003,10 +3001,14 @@
 
   function renderModalSizes() {
     var wrap = document.getElementById("pmSizesRows");
+    var basePrice = parseFloat(document.getElementById("pmPrice").value) || 0;
+    var baseCost = parseFloat(document.getElementById("pmCost").value) || 0;
     wrap.innerHTML = modalSizes.map(function (s, i) {
       return '<div class="pmodal-sizes-row">' +
         '<input type="text" placeholder="Ej: 28T, 48mm, 20.75&quot;, 9.5&quot;" data-i="' + i + '" data-f="label" value="' + esc(s.label || "") + '" />' +
         '<input type="number" min="0" step="1" placeholder="Stock" data-i="' + i + '" data-f="units" value="' + (typeof s.units === "number" ? s.units : "") + '" />' +
+        '<input type="number" min="0" step="1" placeholder="Precio base: ' + Math.round(basePrice).toLocaleString("es-CO") + '" data-i="' + i + '" data-f="price" value="' + (typeof s.price === "number" && s.price > 0 ? s.price : "") + '" title="Vacío = usa el precio base del producto" />' +
+        '<input type="number" min="0" step="1" placeholder="Costo base: ' + Math.round(baseCost).toLocaleString("es-CO") + '" data-i="' + i + '" data-f="cost" value="' + (typeof s.cost === "number" && s.cost > 0 ? s.cost : "") + '" title="Vacío = usa el costo base del producto" />' +
         '<button type="button" class="pmodal-size-rm" data-i="' + i + '" aria-label="Quitar talla">&times;</button>' +
         '</div>';
     }).join("");
@@ -3025,11 +3027,13 @@
   function renderModalColors() {
     var wrap = document.getElementById("pmColorsRows");
     var basePrice = parseFloat(document.getElementById("pmPrice").value) || 0;
+    var baseCost = parseFloat(document.getElementById("pmCost").value) || 0;
     wrap.innerHTML = modalColors.map(function (c, i) {
-      return '<div class="pmodal-sizes-row pmodal-sizes-row-color">' +
+      return '<div class="pmodal-sizes-row">' +
         '<input type="text" placeholder="Ej: Negro, Cromado, Azul" data-i="' + i + '" data-f="label" value="' + esc(c.label || "") + '" />' +
         '<input type="number" min="0" step="1" placeholder="Stock" data-i="' + i + '" data-f="units" value="' + (typeof c.units === "number" ? c.units : "") + '" />' +
         '<input type="number" min="0" step="1" placeholder="Precio base: ' + Math.round(basePrice).toLocaleString("es-CO") + '" data-i="' + i + '" data-f="price" value="' + (typeof c.price === "number" && c.price > 0 ? c.price : "") + '" title="Vacío = usa el precio base del producto" />' +
+        '<input type="number" min="0" step="1" placeholder="Costo base: ' + Math.round(baseCost).toLocaleString("es-CO") + '" data-i="' + i + '" data-f="cost" value="' + (typeof c.cost === "number" && c.cost > 0 ? c.cost : "") + '" title="Vacío = usa el costo base del producto" />' +
         '<button type="button" class="pmodal-size-rm" data-i="' + i + '" aria-label="Quitar color">&times;</button>' +
         '</div>';
     }).join("");
@@ -3087,9 +3091,9 @@
         });
       });
     }
-    modalSizes = p && p.sizes ? p.sizes.map(function (s) { return { label: s.label, units: s.units }; }) : [];
+    modalSizes = p && p.sizes ? p.sizes.map(function (s) { return { label: s.label, units: s.units, price: s.price || 0, cost: s.cost || 0 }; }) : [];
     renderModalSizes();
-    modalColors = p && p.colors ? p.colors.map(function (c) { return { label: c.label, units: c.units, price: c.price || 0 }; }) : [];
+    modalColors = p && p.colors ? p.colors.map(function (c) { return { label: c.label, units: c.units, price: c.price || 0, cost: c.cost || 0 }; }) : [];
     renderModalColors();
     toggleUnitsVsSizes(cat);
     updatePreview();
@@ -3214,12 +3218,16 @@
     qtyEl.disabled = units <= 0;
     submitBtn.disabled = units <= 0;
     submitBtn.textContent = units <= 0 ? (pools.length ? "Sin stock para esta opción" : "Sin stock para vender") : "Registrar venta";
-    // A color can carry its own price override (colors[].price, the same
-    // field the storefront's color picker already reads) — follow it here
-    // too, so selling that color records the right revenue instead of
-    // always defaulting to the base product price. Sizes have no price
-    // override.
-    if (p) document.getElementById("smPrice").value = (color && color.price > 0) ? color.price : (p.price || 0);
+    // Sizes and colors can each carry their own price/cost override — follow
+    // whichever is selected (size takes precedence when both are set), so
+    // selling that variant records the right revenue/cost instead of always
+    // defaulting to the base product values.
+    if (p) {
+      document.getElementById("smPrice").value = (size && size.price > 0) ? size.price : (color && color.price > 0) ? color.price : (p.price || 0);
+      var smCostEl = document.getElementById("smCost");
+      var costVal = (size && size.cost > 0) ? size.cost : (color && color.cost > 0) ? color.cost : p.cost;
+      smCostEl.value = costVal ? costVal : "";
+    }
     updateSellTotal();
   }
   function openSellModal(idx) {
@@ -3250,9 +3258,8 @@
     var units = p.units || 0;
     var suffix = hasSizes && hasColors ? " (todas las tallas y colores)" : hasSizes ? " (todas las tallas)" : hasColors ? " (todos los colores)" : "";
     document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock" + suffix;
-    // smPrice is set below by applySellUnitsLimit(), which follows the
-    // selected color's price override when it has one.
-    document.getElementById("smCost").value = p.cost ? p.cost : ""; // blank (not "0") when the product has no cost recorded -- same "unknown, not free" distinction as the product modal
+    // smPrice/smCost are set below by applySellUnitsLimit(), which follows
+    // the selected size/color's price or cost override when it has one.
     document.getElementById("smBuyer").value = "";
     document.getElementById("smPhone").value = "";
     document.getElementById("smPayment").value = "Efectivo";
@@ -4744,7 +4751,7 @@
       updatePreview();
     });
     document.getElementById("pmSizesAddBtn").addEventListener("click", function () {
-      modalSizes.push({ label: "", units: 0 });
+      modalSizes.push({ label: "", units: 0, price: 0, cost: 0 });
       renderModalSizes();
       var inputs = document.querySelectorAll('#pmSizesRows input[data-f="label"]');
       if (inputs.length) inputs[inputs.length - 1].focus();
@@ -4754,7 +4761,9 @@
       if (i === null || !f) return;
       i = parseInt(i, 10);
       if (!modalSizes[i]) return;
-      modalSizes[i][f] = f === "units" ? (parseInt(e.target.value, 10) || 0) : e.target.value;
+      modalSizes[i][f] = f === "units" ? (parseInt(e.target.value, 10) || 0)
+        : (f === "price" || f === "cost") ? (parseFloat(e.target.value) || 0)
+        : e.target.value;
       document.getElementById("pmSizesTotal").textContent = "Total: " + sizesTotal(modalSizes) + " unidades en " + modalSizes.length + " talla(s).";
     });
     document.getElementById("pmSizesRows").addEventListener("click", function (e) {
@@ -4764,7 +4773,7 @@
       renderModalSizes();
     });
     document.getElementById("pmColorsAddBtn").addEventListener("click", function () {
-      modalColors.push({ label: "", units: 0, price: 0 });
+      modalColors.push({ label: "", units: 0, price: 0, cost: 0 });
       renderModalColors();
       var inputs = document.querySelectorAll('#pmColorsRows input[data-f="label"]');
       if (inputs.length) inputs[inputs.length - 1].focus();
@@ -4775,7 +4784,7 @@
       i = parseInt(i, 10);
       if (!modalColors[i]) return;
       modalColors[i][f] = f === "units" ? (parseInt(e.target.value, 10) || 0)
-        : f === "price" ? (parseFloat(e.target.value) || 0)
+        : (f === "price" || f === "cost") ? (parseFloat(e.target.value) || 0)
         : e.target.value;
       document.getElementById("pmColorsTotal").textContent = "Total: " + sizesTotal(modalColors) + " unidades en " + modalColors.length + " color(es).";
       renderModalColorsHint(document.getElementById("pmCat").value);
@@ -4814,12 +4823,22 @@
       };
       if (isSizeCat(catVal)) {
         fields.sizes = modalSizes
-          .map(function (s) { return { label: (s.label || "").trim(), units: s.units || 0 }; })
+          .map(function (s) {
+            var out = { label: (s.label || "").trim(), units: s.units || 0 };
+            if (s.price > 0) out.price = s.price;
+            if (s.cost > 0) out.cost = s.cost;
+            return out;
+          })
           .filter(function (s) { return s.label; });
         fields.units = sizesTotal(fields.sizes);
       }
       var validColorsInput = modalColors
-        .map(function (c) { var out = { label: (c.label || "").trim(), units: c.units || 0 }; if (c.price > 0) out.price = c.price; return out; })
+        .map(function (c) {
+          var out = { label: (c.label || "").trim(), units: c.units || 0 };
+          if (c.price > 0) out.price = c.price;
+          if (c.cost > 0) out.cost = c.cost;
+          return out;
+        })
         .filter(function (c) { return c.label; });
       if (validColorsInput.length) {
         fields.colors = validColorsInput;
