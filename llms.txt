@@ -1,11 +1,11 @@
-# ESCENA BMX
+# ESCENABMX
 
 > Tienda de partes y componentes BMX en Colombia con más de 100 productos en stock. Riders montando una tienda para riders: stems, manubrios, horquillas, bielas, bujes, piñones, pedales, sillines y más, de las mejores marcas, con pedidos por WhatsApp y envíos a todo el país.
 
-ESCENA BMX es un negocio colombiano especializado en componentes de BMX. Trabaja directamente con marcas reconocidas de la escena BMX mundial y despacha a los 32 departamentos de Colombia. La compra se realiza por WhatsApp y el pago se coordina por Nequi, Daviplata, transferencia bancaria o efectivo.
+ESCENABMX es un negocio colombiano especializado en componentes de BMX. Trabaja directamente con marcas reconocidas de la escena BMX mundial y despacha a los 32 departamentos de Colombia. La compra se realiza por WhatsApp y el pago se coordina por Nequi, Daviplata, transferencia bancaria o efectivo.
 
 ## Datos clave
-- Nombre: ESCENA BMX
+- Nombre: ESCENABMX
 - Ciudad: Bogotá, Cundinamarca, Colombia
 - País: Colombia
 - Categoría: Tienda de partes y componentes de BMX (BikeStore)
