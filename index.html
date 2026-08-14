@@ -162,20 +162,31 @@
     @media (max-width: 640px) { .utility .u-info { display: none; } }
 
     /* Site header styles now live in assets/css/site-header.css */
-    /* index.html only: a sticky header reserves its own height in the normal
-       document flow, so the hero video never actually starts until *after*
-       that reserved gap — it can't be "revealed" by transparency alone. To
-       really float the header over the video from the very top of the page,
-       it has to leave the flow entirely (position: fixed) so the hero can
-       start at y:0, directly underneath it. Solidifies via the same
-       .scrolled class the rest of the site already uses (assets/js/cart.js,
-       scrollY > 50) — every other page keeps the normal sticky, opaque
-       header since they have no video behind it to reveal. */
-    .brand-strip, .site-header { position: fixed; left: 0; right: 0; z-index: 100; }
-    .brand-strip { top: 0; background: transparent; transition: background .4s; }
-    .brand-strip.scrolled { background: rgba(10, 10, 10, .6); }
-    .site-header { background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom-color: transparent; }
+    /* index.html only: the brand strip stays in the normal document flow —
+       a plain, solid white bar above the hero, never overlapping the video
+       — while the nav below it still floats transparently over the hero.
+       A sticky header reserves its own height in normal flow, so the hero
+       video never actually starts until *after* that reserved gap — it
+       can't be "revealed" by transparency alone. To really float the header
+       over the video from the very top of the page, it has to leave the
+       flow entirely (position: fixed), positioned just below the (in-flow)
+       brand strip via JS (stickyOverlayHeader below), so the hero can start
+       right under the strip, with the header overlaid on top of it.
+       Solidifies via the same .scrolled class the rest of the site already
+       uses (assets/js/cart.js, scrollY > 50) — every other page keeps the
+       normal sticky, opaque header since they have no video behind it to
+       reveal. */
+    .brand-strip { background: #fff; }
+    .site-header { position: fixed; left: 0; right: 0; z-index: 100; background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom-color: transparent; }
     .site-header.scrolled { background: rgba(10, 10, 10, .6); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom-color: rgba(255, 255, 255, .08); box-shadow: 0 4px 24px rgba(0, 0, 0, .35); }
+    /* Homepage only: slightly larger desktop nav links/dropdowns than the
+       shared site-header.css default (1rem) — purely a size bump, same
+       colors/behavior. Scoped to desktop width since mobile already gets
+       its own larger size (.9rem) from the slide-down menu's own rules. */
+    @media (min-width: 981px) {
+      .site-header .nav-links > a, .site-header .nav-drop > a { font-size: 1.12rem; padding: .6rem .85rem; }
+      .site-header .world-tab { font-size: 1.02rem; }
+    }
 
     /* ============ HERO (split layout) ============ */
     .hero { position: relative; background: var(--ink); padding: calc(6rem + var(--hero-header-offset, 0px)) 1.5rem 6rem; overflow: hidden; min-height: 82vh; display: flex; align-items: center; isolation: isolate; }
@@ -341,7 +352,7 @@
     footer { background: var(--ink); color: rgba(255,255,255,.4); padding: 3.5rem 1.5rem 2rem; }
     footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; }
     @media (max-width: 720px) { footer .wrap { grid-template-columns: 1fr; gap: 2rem; } }
-    footer .brand-col img { width: 54px; border-radius: 50%; background: #fff; margin-bottom: .9rem; }
+    footer .brand-col img { width: 168px; height: auto; margin-bottom: .9rem; }
     footer .brand-col .name { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 1.6rem; letter-spacing: .1em; }
     footer .brand-col p { font-size: .82rem; margin-top: .5rem; max-width: 320px; }
     footer .foot-contact { margin-top: 1rem; } footer .foot-contact p { max-width: none; } footer .foot-contact a { display: inline; color: rgba(255,255,255,.7); }
@@ -741,7 +752,7 @@
 <footer>
   <div class="wrap">
     <div class="brand-col">
-      <img src="assets/img/escena-logo.jpg" alt="Logo ESCENABMX" width="54" />
+      <img src="assets/img/escena-wordmark.png?v=4" alt="ESCENABMX" width="168" height="31" />
       <div class="name">ESCENABMX</div>
       <p>Tienda de partes y componentes BMX en Colombia. Riders montando una tienda para riders.</p>
       <div class="foot-social">
@@ -1046,18 +1057,18 @@
     start();
   })();
 
-  /* Both bars are position:fixed (see the CSS above) so they float, fully
-     transparent, directly over the hero video from the very top of the
-     page. .site-header has no flow position to inherit anymore, so its
-     "top" offset (right below the brand strip) is measured and reapplied
-     on load/resize. The hero's own text content (kicker/title/buttons) —
-     not the video, which stays full-bleed behind the bars — also needs to
-     clear the *combined* stack height (brand strip + header, incl. the
-     BMX/MTB/Skate world-tabs row), or on short mobile viewports it renders
-     visually on top of the nav instead of below it; --hero-header-offset
-     feeds that extra clearance to the .hero padding-top in the CSS above.
-     Solidifies via .scrolled, same scrollY > 50 threshold assets/js/cart.js
-     already uses for .site-header, kept in sync here. */
+  /* The brand strip stays in normal document flow (solid white, never over
+     the video) — only .site-header is position:fixed (see the CSS above),
+     floating transparent directly over the hero from wherever the strip
+     ends. Its "top" offset (right below the in-flow strip) is measured and
+     reapplied on load/resize. The hero's own text content (kicker/title/
+     buttons) — not the video, which stays full-bleed behind the header —
+     also needs to clear the header's height (incl. the BMX/MTB/Skate
+     world-tabs row), or on short mobile viewports it renders visually on
+     top of the nav instead of below it; --hero-header-offset feeds that
+     clearance to the .hero padding-top in the CSS above. The strip itself
+     needs no scroll-driven state — it's solid white always; .site-header's
+     .scrolled toggle is handled globally by assets/js/cart.js. */
   (function stickyOverlayHeader(){
     var hdr = document.querySelector(".site-header");
     var strip = document.querySelector(".brand-strip");
@@ -1065,11 +1076,9 @@
     function positionHeader() {
       var stripH = strip ? strip.offsetHeight : 0;
       hdr.style.top = stripH + "px";
-      document.documentElement.style.setProperty("--hero-header-offset", (stripH + hdr.offsetHeight) + "px");
+      document.documentElement.style.setProperty("--hero-header-offset", hdr.offsetHeight + "px");
     }
-    function tick() { if (strip) strip.classList.toggle("scrolled", window.scrollY > 50); }
     window.addEventListener("resize", positionHeader, { passive: true });
-    window.addEventListener("scroll", tick, { passive: true });
     // Neither the strip's nor the header's real height is known until their
     // content (logo <img>s, wrapped nav text) finishes loading/laying out —
     // a one-shot measurement on script load locks in too-small values.
@@ -1082,7 +1091,6 @@
       window.addEventListener("load", positionHeader);
     }
     positionHeader();
-    tick();
   })();
 
   /* The moving brand marquee lives in the global top strip, built by
