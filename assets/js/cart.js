@@ -385,6 +385,36 @@
     }
     track.innerHTML = '<div class="brand-strip-group">' + groupHTML() +
       '</div><div class="brand-strip-group">' + groupHTML() + '</div>';
+
+    // Driven by rAF instead of a CSS @keyframes animation: iOS Safari has a
+    // known bug where an infinite CSS transform animation inside an
+    // overflow:hidden ancestor can freeze solid after the first paint (see
+    // the note in site-header.css) — a JS-stepped transform never hits that
+    // freeze, so the strip is guaranteed to actually move on every device.
+    if (!window.matchMedia || !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      var PX_PER_SEC = 32;
+      var half = 0;
+      function measure() { half = track.scrollWidth / 2; }
+      measure();
+      window.addEventListener("resize", measure, { passive: true });
+      var offset = 0;
+      var lastT = null;
+      var paused = false;
+      track.addEventListener("mouseenter", function () { paused = true; });
+      track.addEventListener("mouseleave", function () { paused = false; });
+      function step(t) {
+        if (lastT === null) lastT = t;
+        var dt = (t - lastT) / 1000;
+        lastT = t;
+        if (!paused && half > 0) {
+          offset -= PX_PER_SEC * dt;
+          if (offset <= -half) offset += half;
+          track.style.transform = "translateX(" + offset + "px)";
+        }
+        requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
   }
 
   /* Header search — icon toggles a small panel; submitting always navigates
