@@ -27,6 +27,14 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cajas-de-frente-bsd-highriser",
+  "imgColorMap": {
+   "Negra": [
+    0
+   ],
+   "Cromada": [
+    1
+   ]
+  },
   "img": "assets/img/products/cajas-de-frente-bsd-highriser.jpg?v=1787269249340"
  },
  {
