@@ -54,13 +54,13 @@ window.ESCENA_PRODUCTS = [
   "spec": "Tapa en aluminio 5mm de alto Incluye varios espaciadores Rodamientos de alto rodaje",
   "price": 140000,
   "sku": "CJF-ODY-001",
-  "units": 6,
+  "units": 5,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/cajas-integrado-odyssey.jpg?v=1787263394684",
    "assets/img/products/cajas-integrado-odyssey-2.jpg?v=1787263395987",
-   "assets/img/products/cajas-integrado-odyssey-3.jpg?v=1787263397595",
-   "assets/img/products/cajas-integrado-odyssey-4.jpg?v=1787263398981"
+   "assets/img/products/cajas-integrado-odyssey-4.jpg?v=1787263398981",
+   "assets/img/products/cajas-integrado-odyssey-3.jpg?v=1787263397595"
   ],
   "colors": [
    {
@@ -76,13 +76,13 @@ window.ESCENA_PRODUCTS = [
     "cost": 138000
    },
    {
-    "label": "Roja",
-    "units": 2,
+    "label": "Cromada",
+    "units": 1,
     "price": 140000,
     "cost": 138000
    },
    {
-    "label": "Cromada",
+    "label": "Roja",
     "units": 0,
     "price": 140000,
     "cost": 138000
@@ -95,10 +95,10 @@ window.ESCENA_PRODUCTS = [
    "Azul": [
     1
    ],
-   "Roja": [
+   "Cromada": [
     2
    ],
-   "Cromada": [
+   "Roja": [
     3
    ]
   },
@@ -4038,69 +4038,6 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "order": 1490,
   "img": "assets/img/products/mutany-guarda-pinon-negro.jpg"
- },
- {
-  "slug": "caja-pedalier-negra-01",
-  "n": "Frente Integrado Cult Crew Negra",
-  "brand": "Cult",
-  "cat": "caja-frente",
-  "spec": "Integrada · Rodamientos sellados · Aluminio · Negro",
-  "price": 120000,
-  "sku": "CAJA-PEDALIER-NEGRA-01",
-  "units": 4,
-  "order": 1360,
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 4,
-    "price": 120000,
-    "cost": 96000
-   }
-  ],
-  "img": "assets/img/products/caja-pedalier-negra-01.jpg?v=1787264682024"
- },
- {
-  "slug": "direccion-negra-set",
-  "n": "Cajas de Frente BSD",
-  "brand": "BSD",
-  "cat": "caja-frente",
-  "spec": "Integrada · Rodamientos sellados · Negro o Cromado",
-  "price": 130000,
-  "sku": "DIRECCION-NEGRA-BSD",
-  "units": 2,
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 1
-   },
-   {
-    "label": "Cromado",
-    "units": 1
-   }
-  ],
-  "order": 1300,
-  "img": "assets/img/products/direccion-negra-set.jpg"
- },
- {
-  "slug": "demolition-caja-pedalier-negra",
-  "n": "Cajas de Frente Demolition V2",
-  "brand": "Demolition",
-  "cat": "caja-frente",
-  "spec": "Integrada · Rodamientos sellados · Negro",
-  "price": 125000,
-  "sku": "DEMOLITION-CAJA-PEDALIER-NEGRA",
-  "units": 1,
-  "order": 1340,
-  "imgFit": "cover",
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 1,
-    "price": 125000,
-    "cost": 93750
-   }
-  ],
-  "img": "assets/img/products/demolition-caja-pedalier-negra.jpg?v=1787264656550"
  },
  {
   "slug": "cult-kit-rodamientos-bb",
