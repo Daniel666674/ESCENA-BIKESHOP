@@ -1,5 +1,30 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de frente Cult Match V2",
+  "brand": "Cult",
+  "cat": "caja-frente",
+  "spec": "Material: aluminio anodizado duro  Rodamientos: Sellados Separadores: 2 x 2 mm, 1 x 5 mm  Peso: 2,3 oz / 65,2 g / 0,14 lb",
+  "price": 120000,
+  "sku": "CJF-CLT-001",
+  "units": 4,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cajas-de-frente-cult-match-v2.jpg?v=1787265292813",
+   "assets/img/products/cajas-de-frente-cult-match-v2-2.jpg?v=1787265294936",
+   "assets/img/products/cajas-de-frente-cult-match-v2-3.jpg?v=1787265298107"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 4,
+    "price": 120000,
+    "cost": 96000
+   }
+  ],
+  "slug": "cajas-de-frente-cult-match-v2",
+  "img": "assets/img/products/cajas-de-frente-cult-match-v2.jpg?v=1787265292813"
+ },
+ {
   "n": "Frente integrado Tall seat Colony",
   "brand": "Colony",
   "cat": "caja-frente",
