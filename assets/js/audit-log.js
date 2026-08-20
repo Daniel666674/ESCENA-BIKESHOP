@@ -2089,5 +2089,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-20T22:14:03.174Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "cajas-integradas-tall-seat-colony"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
