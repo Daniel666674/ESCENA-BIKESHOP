@@ -34,6 +34,17 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cajas-de-frente-trueno-v2",
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Cromada": [
+    1
+   ],
+   "Tornasol": [
+    2
+   ]
+  },
   "img": "assets/img/products/cajas-de-frente-trueno-v2.jpg?v=1787267009973"
  },
  {
