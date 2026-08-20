@@ -2099,5 +2099,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-20T22:16:32.757Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "cajas-integrado-odyssey",
+   "cajas-integradas-tall-seat-colony"
+  ],
+  "deleted": []
  }
 ];
