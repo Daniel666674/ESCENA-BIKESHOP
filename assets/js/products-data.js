@@ -4083,15 +4083,24 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "demolition-caja-pedalier-negra",
-  "n": "Cajas de Frente Demolition Negra",
+  "n": "Cajas de Frente Demolition V2",
   "brand": "Demolition",
   "cat": "caja-frente",
   "spec": "Integrada · Rodamientos sellados · Negro",
   "price": 125000,
   "sku": "DEMOLITION-CAJA-PEDALIER-NEGRA",
-  "units": 3,
+  "units": 1,
   "order": 1340,
-  "img": "assets/img/products/demolition-caja-pedalier-negra.jpg"
+  "imgFit": "cover",
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1,
+    "price": 125000,
+    "cost": 93750
+   }
+  ],
+  "img": "assets/img/products/demolition-caja-pedalier-negra.jpg?v=1787264656550"
  },
  {
   "slug": "cult-kit-rodamientos-bb",
