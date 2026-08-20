@@ -4041,7 +4041,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "caja-pedalier-negra-01",
-  "n": "Cajas de Frente Cult Crew Negra",
+  "n": "Frente Integrado Cult Crew Negra",
   "brand": "Cult",
   "cat": "caja-frente",
   "spec": "Integrada · Rodamientos sellados · Aluminio · Negro",
@@ -4049,6 +4049,14 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAJA-PEDALIER-NEGRA-01",
   "units": 4,
   "order": 1360,
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 4,
+    "price": 120000,
+    "cost": 96000
+   }
+  ],
   "img": "assets/img/products/caja-pedalier-negra-01.jpg"
  },
  {
