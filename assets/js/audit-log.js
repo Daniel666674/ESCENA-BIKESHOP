@@ -2215,5 +2215,17 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-trueno-v2"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-20T23:40:56.207Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 2 fotos subidas",
+  "created": [
+   "cajas-de-frente-bsd-highriser"
+  ],
+  "edited": [],
+  "deleted": [
+   "odyssey-clavijas-negro-par"
+  ]
  }
 ];
