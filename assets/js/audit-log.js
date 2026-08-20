@@ -2174,5 +2174,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-20T22:51:01.792Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "cajas-de-frente-demolition-v2"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
