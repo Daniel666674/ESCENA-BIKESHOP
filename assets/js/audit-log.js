@@ -2140,5 +2140,19 @@ window.ESCENA_AUDIT = [
    "caja-pedalier-negra-01"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-20T22:28:35.046Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 3 productos eliminados",
+  "created": [],
+  "edited": [
+   "cajas-integrado-odyssey"
+  ],
+  "deleted": [
+   "caja-pedalier-negra-01",
+   "demolition-caja-pedalier-negra",
+   "direccion-negra-set"
+  ]
  }
 ];
