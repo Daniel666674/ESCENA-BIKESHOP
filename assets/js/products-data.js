@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de Frente Demolition V2",
+  "brand": "Demolition",
+  "cat": "caja-frente",
+  "spec": "Integrada · Rodamientos sellados · Aluminio · 2,6 onzas",
+  "price": 125000,
+  "sku": "CJF-DMO-001",
+  "units": 1,
+  "imgFit": "cover",
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1,
+    "price": 125000,
+    "cost": 100000
+   }
+  ],
+  "slug": "cajas-de-frente-demolition-v2",
+  "img": "assets/img/products/cajas-de-frente-demolition-v2.jpg?v=1787266253706"
+ },
+ {
   "n": "Frente Integrado Demolition V2",
   "brand": "Demolition",
   "cat": "piezas",
