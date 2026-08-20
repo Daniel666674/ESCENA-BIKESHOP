@@ -1,5 +1,42 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de Frente Trueno V2",
+  "brand": "Trueno",
+  "cat": "caja-frente",
+  "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
+  "price": 70000,
+  "sku": "CJF-TRU-001",
+  "units": 15,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cajas-de-frente-trueno-v2.jpg?v=1787267009973",
+   "assets/img/products/cajas-de-frente-trueno-v2-2.jpg?v=1787267011343",
+   "assets/img/products/cajas-de-frente-trueno-v2-3.jpg?v=1787267012847"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 5,
+    "price": 70000,
+    "cost": 50000
+   },
+   {
+    "label": "Cromada",
+    "units": 5,
+    "price": 60000,
+    "cost": 45000
+   },
+   {
+    "label": "Tornasol",
+    "units": 5,
+    "price": 60000,
+    "cost": 45000
+   }
+  ],
+  "slug": "cajas-de-frente-trueno-v2",
+  "img": "assets/img/products/cajas-de-frente-trueno-v2.jpg?v=1787267009973"
+ },
+ {
   "n": "Cajas de Frente Demolition V2",
   "brand": "Demolition",
   "cat": "caja-frente",
