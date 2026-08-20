@@ -2205,5 +2205,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-20T23:16:15.226Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cajas-de-frente-trueno-v2"
+  ],
+  "deleted": []
  }
 ];
