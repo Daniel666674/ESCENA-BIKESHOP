@@ -2154,5 +2154,15 @@ window.ESCENA_AUDIT = [
    "demolition-caja-pedalier-negra",
    "direccion-negra-set"
   ]
+ },
+ {
+  "ts": "2026-08-20T22:35:07.930Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "cajas-de-frente-cult-match-v2"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
