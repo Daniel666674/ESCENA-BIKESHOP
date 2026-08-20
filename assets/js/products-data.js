@@ -1,5 +1,35 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de frente BSD Highriser",
+  "brand": "BSD",
+  "cat": "caja-frente",
+  "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
+  "price": 130000,
+  "sku": "CJF-BSD-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cajas-de-frente-bsd-highriser.jpg?v=1787269249340",
+   "assets/img/products/cajas-de-frente-bsd-highriser-2.jpg?v=1787269250648"
+  ],
+  "colors": [
+   {
+    "label": "Negra",
+    "units": 1,
+    "price": 130000,
+    "cost": 104000
+   },
+   {
+    "label": "Cromada",
+    "units": 0,
+    "price": 130000,
+    "cost": 104000
+   }
+  ],
+  "slug": "cajas-de-frente-bsd-highriser",
+  "img": "assets/img/products/cajas-de-frente-bsd-highriser.jpg?v=1787269249340"
+ },
+ {
   "n": "Cajas de Frente Trueno V2",
   "brand": "Trueno",
   "cat": "caja-frente",
@@ -4201,18 +4231,6 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "order": 1850,
   "img": "assets/img/products/kit-rodamientos-bb-generico.jpg"
- },
- {
-  "slug": "odyssey-clavijas-negro-par",
-  "n": "Cajas de Frente Odyssey Negra",
-  "brand": "Odyssey",
-  "cat": "caja-frente",
-  "spec": "Aluminio CNC · Integrada · Negro",
-  "price": 140000,
-  "sku": "ODYSSEY-CAJAS-NEGRO-",
-  "units": 2,
-  "order": 1250,
-  "img": "assets/img/products/odyssey-clavijas-negro-par.jpg"
  },
  {
   "slug": "clavijas-negro-par",
