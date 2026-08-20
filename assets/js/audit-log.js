@@ -2110,5 +2110,15 @@ window.ESCENA_AUDIT = [
    "cajas-integradas-tall-seat-colony"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-20T22:21:28.359Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "caja-pedalier-negra-01"
+  ],
+  "deleted": []
  }
 ];
