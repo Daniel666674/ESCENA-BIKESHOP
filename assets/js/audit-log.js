@@ -2130,5 +2130,15 @@ window.ESCENA_AUDIT = [
    "demolition-caja-pedalier-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-20T22:24:48.360Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "caja-pedalier-negra-01"
+  ],
+  "deleted": []
  }
 ];
