@@ -4057,7 +4057,7 @@ window.ESCENA_PRODUCTS = [
     "cost": 96000
    }
   ],
-  "img": "assets/img/products/caja-pedalier-negra-01.jpg"
+  "img": "assets/img/products/caja-pedalier-negra-01.jpg?v=1787264682024"
  },
  {
   "slug": "direccion-negra-set",
