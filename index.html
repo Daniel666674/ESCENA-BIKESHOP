@@ -43,6 +43,7 @@
   <script src="assets/js/wholesale.js?v=1"></script>
   <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
   <script>document.write('<scr'+'ipt src="assets/js/category-video.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+  <script>document.write('<scr'+'ipt src="assets/js/category-photo.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
   <script>document.write('<scr'+'ipt src="assets/js/hero-slides.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
   <script>document.write('<scr'+'ipt src="assets/js/site-text.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 
@@ -819,6 +820,22 @@
       if (menu) menu.classList.toggle("open", !open);
     });
   });
+
+  /* ---- Category card cover photo (admin-managed, optional per category) ----
+     Loads assets/js/category-photo.js above, a tiny {catKey: "assets/img/..."}
+     map committed by admin.html's "Página principal" tab. A category with no
+     entry keeps its plain HTML-authored background-image (the .cat's own
+     inline style, set below) — this only overrides it when the admin has
+     explicitly picked a different photo. Runs before the video layer below
+     so an admin-picked photo is still the poster underneath an admin-picked
+     video, not fought over by two separate defaults. */
+  (function categoryPhotos(){
+    var photoMap = window.ESCENA_CATEGORY_PHOTO || {};
+    document.querySelectorAll("#catsGrid .cat[data-cat]").forEach(function (card) {
+      var src = photoMap[card.getAttribute("data-cat")];
+      if (src) card.style.backgroundImage = "url('" + src + "')";
+    });
+  })();
 
   /* ---- Category card videos (admin-managed, optional per category) ----
      Loads assets/js/category-video.js above, a tiny
