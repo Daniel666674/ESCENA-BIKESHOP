@@ -2079,5 +2079,15 @@ window.ESCENA_AUDIT = [
    "timon-gw-gorila-4pc-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-20T22:03:23.951Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 4 fotos subidas",
+  "created": [
+   "cajas-integrado-odyssey"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
