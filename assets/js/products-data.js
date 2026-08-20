@@ -1,6 +1,6 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Cajas integradas Tall seat Colony",
+  "n": "Frente integrado Tall seat Colony",
   "brand": "Colony",
   "cat": "caja-frente",
   "spec": "Estilo de altura de pila más alta Modelo 45/45 con grabado del logotipo de Colony. Peso: 55 gramos o 1,94 onzas.",
@@ -48,8 +48,8 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cajas-integradas-tall-seat-colony.jpg?v=1787264034267"
  },
  {
-  "n": "Cajas integrado Odyssey",
-  "brand": "odyssey",
+  "n": "Frente Integrado Odyssey Pro",
+  "brand": "Odyssey",
   "cat": "caja-frente",
   "spec": "Tapa en aluminio 5mm de alto Incluye varios espaciadores Rodamientos de alto rodaje",
   "price": 140000,
