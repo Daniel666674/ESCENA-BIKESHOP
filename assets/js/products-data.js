@@ -1,5 +1,53 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas integradas Tall seat Colony",
+  "brand": "Colony",
+  "cat": "caja-frente",
+  "spec": "Estilo de altura de pila más alta Modelo 45/45 con grabado del logotipo de Colony. Peso: 55 gramos o 1,94 onzas.",
+  "price": 120000,
+  "sku": "CJF-CLN-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cajas-integradas-tall-seat-colony.jpg?v=1787264034267",
+   "assets/img/products/cajas-integradas-tall-seat-colony-2.jpg?v=1787264035900",
+   "assets/img/products/cajas-integradas-tall-seat-colony-3.jpg?v=1787264037373"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1,
+    "price": 120000,
+    "cost": 96000
+   },
+   {
+    "label": "Rosado",
+    "units": 1,
+    "price": 120000,
+    "cost": 96000
+   },
+   {
+    "label": "Cromado",
+    "units": 0,
+    "price": 120000,
+    "cost": 96000
+   }
+  ],
+  "imgColorMap": {
+   "Rosado": [
+    0
+   ],
+   "Negro": [
+    1
+   ],
+   "Cromado": [
+    2
+   ]
+  },
+  "slug": "cajas-integradas-tall-seat-colony",
+  "img": "assets/img/products/cajas-integradas-tall-seat-colony.jpg?v=1787264034267"
+ },
+ {
   "n": "Cajas integrado Odyssey",
   "brand": "odyssey",
   "cat": "caja-frente",
