@@ -2195,5 +2195,15 @@ window.ESCENA_AUDIT = [
    "cajas-integrado-odyssey"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-20T23:03:38.566Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "cajas-de-frente-trueno-v2"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
