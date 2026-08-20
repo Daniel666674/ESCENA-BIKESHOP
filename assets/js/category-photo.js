@@ -1,0 +1,1 @@
+window.ESCENA_CATEGORY_PHOTO = {};
