@@ -1,5 +1,63 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas integrado Odyssey",
+  "brand": "odyssey",
+  "cat": "caja-frente",
+  "spec": "Tapa en aluminio 5mm de alto Incluye varios espaciadores Rodamientos de alto rodaje",
+  "price": 140000,
+  "sku": "CJF-ODY-001",
+  "units": 6,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cajas-integrado-odyssey.jpg?v=1787263394684",
+   "assets/img/products/cajas-integrado-odyssey-2.jpg?v=1787263395987",
+   "assets/img/products/cajas-integrado-odyssey-3.jpg?v=1787263397595",
+   "assets/img/products/cajas-integrado-odyssey-4.jpg?v=1787263398981"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 3,
+    "price": 140000,
+    "cost": 138000
+   },
+   {
+    "label": "Azul",
+    "units": 1,
+    "price": 140000,
+    "cost": 138000
+   },
+   {
+    "label": "Roja",
+    "units": 2,
+    "price": 140000,
+    "cost": 138000
+   },
+   {
+    "label": "Cromada",
+    "units": 0,
+    "price": 140000,
+    "cost": 138000
+   }
+  ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Azul": [
+    1
+   ],
+   "Roja": [
+    2
+   ],
+   "Cromada": [
+    3
+   ]
+  },
+  "slug": "cajas-integrado-odyssey",
+  "img": "assets/img/products/cajas-integrado-odyssey.jpg?v=1787263394684"
+ },
+ {
   "n": "Grips Animal Edwin V2",
   "brand": "Animal",
   "cat": "punos",
