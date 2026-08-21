@@ -2576,9 +2576,8 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "SLA",
   "units": 4,
-  "tag": "Edición Especial!",
   "imgs": [
-   "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787279149805",
+   "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787318254251",
    "assets/img/products/silla-pivotal-eighties-zebra-2.jpg?v=1787277837708",
    "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787277829455",
    "assets/img/products/silla-pivotal-eighties-zebra-4.jpg?v=1787279152721",
@@ -2608,7 +2607,8 @@ window.ESCENA_PRODUCTS = [
     5
    ]
   },
-  "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787279149805"
+  "imgFit": "cover",
+  "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787318254251"
  },
  {
   "slug": "grips-fiend-palmere",
@@ -2697,12 +2697,14 @@ window.ESCENA_PRODUCTS = [
   "sku": "SIL-FND-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1786464125091",
+   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1787318255784",
+   "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-2.jpg?v=1787318257014",
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-2.jpg?v=1786464126785",
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-3.jpg?v=1786464128082"
   ],
   "order": 0,
-  "img": "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1786464125091"
+  "imgFit": "cover",
+  "img": "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1787318255784"
  },
  {
   "slug": "grips-s-m-mike-hoder",
