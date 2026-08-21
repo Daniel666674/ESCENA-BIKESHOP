@@ -4040,32 +4040,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/pedales-metal-negro-03.jpg?v=1787273161211"
  },
  {
-  "slug": "demolition-pedales-splash-blanco",
-  "n": "Pedales Demolition Blanco/Negro",
-  "brand": "Demolition",
-  "cat": "pedales",
-  "spec": "Plataforma nylon · 10 pines · Splash blanco/negro",
-  "price": 105000,
-  "sku": "DEMOLITION-PEDALES-SPLASH-BLANCO",
-  "units": 12,
-  "tag": "Edición",
-  "order": 30,
-  "img": "assets/img/products/demolition-pedales-splash-blanco.jpg"
- },
- {
-  "slug": "demolition-pedales-splash-rojo",
-  "n": "Pedales Demolition Rojo/Blanco",
-  "brand": "Demolition",
-  "cat": "pedales",
-  "spec": "Plataforma nylon · 10 pines · Splash rojo/blanco",
-  "price": 105000,
-  "sku": "DEMOLITION-PEDALES-SPLASH-ROJO",
-  "units": 12,
-  "tag": "Edición",
-  "order": 40,
-  "img": "assets/img/products/demolition-pedales-splash-rojo.jpg"
- },
- {
   "slug": "pinon-snowflake-plata",
   "n": "Plato Eighties BodyGuard 28T",
   "brand": "Eighties",
