@@ -2578,12 +2578,10 @@ window.ESCENA_PRODUCTS = [
   "units": 4,
   "tag": "Edición Especial!",
   "imgs": [
-   "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1784139733693",
-   "assets/img/products/silla-pivotal-eighties-zebra-2.jpg?v=1784139735530",
-   "assets/img/products/silla-pivotal-eighties-zebra-3.jpg?v=1784139737122",
-   "assets/img/products/silla-pivotal-eighties-zebra-4.jpg?v=1784139738941",
-   "assets/img/products/silla-pivotal-eighties-zebra-5.jpg?v=1784139740476",
-   "assets/img/products/silla-pivotal-eighties-zebra-6.jpg?v=1784139742076"
+   "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787277829455",
+   "assets/img/products/silla-pivotal-eighties-zebra-2.jpg?v=1787277837708",
+   "assets/img/products/silla-pivotal-eighties-zebra-3.jpg?v=1787277855975",
+   "assets/img/products/silla-pivotal-eighties-zebra-4.jpg?v=1787277863308"
   ],
   "colors": [
    {
@@ -2596,7 +2594,17 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 60,
-  "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1784139733693"
+  "imgColorMap": {
+   "Blanco/Negro": [
+    0,
+    1
+   ],
+   "Morado/Negro": [
+    2,
+    3
+   ]
+  },
+  "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787277829455"
  },
  {
   "slug": "grips-fiend-palmere",
@@ -3893,8 +3901,13 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "CULT-SILLIN-NEGRO",
   "units": 12,
-  "order": 70,
-  "img": "assets/img/products/cult-sillin-negro.jpg"
+  "order": 80,
+  "imgs": [
+   "assets/img/products/cult-sillin-negro.jpg?v=1787277873760",
+   "assets/img/products/cult-sillin-negro-2.jpg?v=1787277877988",
+   "assets/img/products/cult-sillin-negro-3.jpg?v=1787277880381"
+  ],
+  "img": "assets/img/products/cult-sillin-negro.jpg?v=1787277873760"
  },
  {
   "slug": "odyssey-sillin-floral",
@@ -3924,8 +3937,12 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "ANIMAL-SILLIN-CAMUFLADO",
   "units": 12,
-  "order": 80,
-  "img": "assets/img/products/animal-sillin-camuflado.jpg"
+  "order": 70,
+  "imgs": [
+   "assets/img/products/animal-sillin-camuflado.jpg?v=1787277887365",
+   "assets/img/products/animal-sillin-camuflado-2.jpg?v=1787277891575"
+  ],
+  "img": "assets/img/products/animal-sillin-camuflado.jpg?v=1787277887365"
  },
  {
   "slug": "fit-sillin-diamante-negro",
