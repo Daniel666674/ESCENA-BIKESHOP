@@ -2470,7 +2470,6 @@ window.ESCENA_PRODUCTS = [
   "price": 80000,
   "sku": "CORAZA-INNOVA-TIRE-20-X-2-40",
   "units": 8,
-  "tag": "Nacional",
   "imgs": [
    "assets/img/products/coraza-innova-tire-20-x-2-40.jpg?v=1784157072000",
    "assets/img/products/coraza-innova-tire-20-x-2-40-2.jpg?v=1784157073737",
@@ -2542,7 +2541,6 @@ window.ESCENA_PRODUCTS = [
   "price": 60000,
   "sku": "PDL",
   "units": 2,
-  "tag": "Top!",
   "imgs": [
    "assets/img/products/pedales-wellgo-negro.jpg?v=1787276553829",
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1787276555684"
@@ -2660,7 +2658,6 @@ window.ESCENA_PRODUCTS = [
   "price": 270000,
   "sku": "PLT",
   "units": 1,
-  "tag": "Top!",
   "imgs": [
    "assets/img/products/plato-volume-guardia-28t.jpg?v=1786462861771",
    "assets/img/products/plato-volume-guardia-28t-2.jpg?v=1786462134096"
@@ -2778,7 +2775,6 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "GRP-FED-001",
   "units": 2,
-  "tag": "Top!",
   "order": 100,
   "img": "assets/img/products/grips-federal-command-negro.jpg?v=1786232104797"
  },
@@ -2809,7 +2805,6 @@ window.ESCENA_PRODUCTS = [
   "price": 65000,
   "sku": "PED-FAT-001",
   "units": 2,
-  "tag": "Nuevo 🔥!",
   "order": 100,
   "img": "assets/img/products/pedales-fate-negro.jpg?v=1787276557110"
  },
@@ -2875,7 +2870,6 @@ window.ESCENA_PRODUCTS = [
   "price": 160000,
   "sku": "SIL-FIT-001",
   "units": 1,
-  "tag": "Nuevo 🔥!",
   "imgs": [
    "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1787339887949",
    "assets/img/products/silla-pivotal-fitbikeco-negra-2.jpg?v=1787339294214",
@@ -3085,7 +3079,6 @@ window.ESCENA_PRODUCTS = [
   "price": 200000,
   "sku": "CAN-SHW-002",
   "units": 1,
-  "tag": "Edicion Especial 🔥",
   "imgs": [
    "assets/img/products/cana-shadow-ravage-topload.jpg?v=1784071868805",
    "assets/img/products/cana-shadow-ravage-topload-2.jpg?v=1784071870336",
@@ -3192,7 +3185,6 @@ window.ESCENA_PRODUCTS = [
   "price": 340000,
   "sku": "PZA-FIT-001",
   "units": 1,
-  "tag": "Top",
   "imgs": [
    "assets/img/products/plato-fitbikeco.jpg?v=1784069585656",
    "assets/img/products/plato-fitbikeco-2.jpg?v=1784069586958"
@@ -3240,7 +3232,6 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "PED-ODY-001",
   "units": 2,
-  "tag": "Caliente 🔥",
   "imgs": [
    "assets/img/products/pedales-odyssey.jpg?v=1784059906159",
    "assets/img/products/pedales-odyssey-2.jpg?v=1784059908763"
@@ -3256,7 +3247,6 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "PED-DMO-001",
   "units": 14,
-  "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/pedales-demolition.jpg?v=1787274790318",
    "assets/img/products/pedales-demolition-2.jpg?v=1787274792085",
@@ -3331,7 +3321,6 @@ window.ESCENA_PRODUCTS = [
   "price": 75000,
   "sku": "PED-STL-001",
   "units": 5,
-  "tag": "Colorido 🌈",
   "imgs": [
    "assets/img/products/pedales-stolen.jpg?v=1787345153809",
    "assets/img/products/pedales-stolen-2.jpg?v=1787276286905",
@@ -3577,7 +3566,6 @@ window.ESCENA_PRODUCTS = [
   "price": 870000,
   "sku": "FIEND-BIELAS-NEGRO",
   "units": 1,
-  "tag": "Top",
   "sizes": [
    {
     "label": "165mm",
@@ -3623,7 +3611,6 @@ window.ESCENA_PRODUCTS = [
   "price": 240000,
   "sku": "ECLAT-TRIPPIN-RIN-NEGRO",
   "units": 12,
-  "tag": "Top 🔥",
   "order": 900,
   "img": "assets/img/products/eclat-trippin-rin-negro.jpg"
  },
@@ -3699,7 +3686,6 @@ window.ESCENA_PRODUCTS = [
   "price": 600000,
   "sku": "STOLEN-BUJE-TRASERO-CASSETTE-NEGRO",
   "units": 1,
-  "tag": "RHD",
   "order": 380,
   "img": "assets/img/products/stolen-buje-trasero-cassette-negro.jpg?v=1785658525133"
  },
@@ -3712,7 +3698,6 @@ window.ESCENA_PRODUCTS = [
   "price": 760000,
   "sku": "FREECOASTER ODYSSEY-NEGRO-CROMADO",
   "units": 2,
-  "tag": "RHD",
   "order": 320,
   "img": "assets/img/products/buje-cassette-negro-cromado.jpg?v=1785493814976"
  },
@@ -3725,7 +3710,6 @@ window.ESCENA_PRODUCTS = [
   "price": 650000,
   "sku": "BUJE-CASSETTE-NEGRO-PLATA",
   "units": 1,
-  "tag": "LHD",
   "order": 360,
   "img": "assets/img/products/buje-cassette-negro-plata.jpg?v=1785658526086"
  },
@@ -3754,7 +3738,6 @@ window.ESCENA_PRODUCTS = [
   "price": 550000,
   "sku": "MUTANY-MERCURY-ELITE-LHD-BUJE-NEGRO",
   "units": 5,
-  "tag": "RHD-LHD",
   "order": 400,
   "img": "assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg?v=1785658527900"
  },
@@ -3767,7 +3750,6 @@ window.ESCENA_PRODUCTS = [
   "price": 550000,
   "sku": "MZT-MUT-001",
   "units": 5,
-  "tag": "RHD+LHD",
   "order": 410,
   "img": "assets/img/products/buje-cassette-negro-plata-02.jpg?v=1785658528919"
  },
@@ -3780,7 +3762,6 @@ window.ESCENA_PRODUCTS = [
   "price": 380000,
   "sku": "BUJE-CASSETTE-NEGRO",
   "units": 5,
-  "tag": "RHD-LHD",
   "order": 450,
   "img": "assets/img/products/buje-cassette-negro.jpg?v=1785658530177"
  },
@@ -4156,7 +4137,6 @@ window.ESCENA_PRODUCTS = [
   "price": 140000,
   "sku": "PLATO-EIGHTIES-28T",
   "units": 2,
-  "tag": "NUEVO",
   "sizes": [
    {
     "label": "28T",
@@ -4285,7 +4265,6 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "CULT-KIT-RODAMIENTOS-BB",
   "units": 4,
-  "tag": "19mm-22mm",
   "order": 1370,
   "img": "assets/img/products/cult-kit-rodamientos-bb.jpg"
  },
@@ -4298,7 +4277,6 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "ODYSSEY-KIT-RODAMIENTOS-BB",
   "units": 3,
-  "tag": "22mm",
   "order": 1380,
   "img": "assets/img/products/odyssey-kit-rodamientos-bb.jpg"
  },
@@ -4659,7 +4637,6 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "TIJA-NEGRA-01",
   "units": 12,
-  "tag": "Nacional",
   "order": 1860,
   "imgs": [
    "assets/img/products/tija-negra-01.jpg?v=1787344154212",
@@ -4677,7 +4654,6 @@ window.ESCENA_PRODUCTS = [
   "price": 160000,
   "sku": "TIJA-NEGRA-02",
   "units": 3,
-  "tag": "Top 🔥",
   "order": 1210,
   "imgs": [
    "assets/img/products/tija-negra-02.jpg?v=1787342183267",
@@ -4695,7 +4671,6 @@ window.ESCENA_PRODUCTS = [
   "price": 150000,
   "sku": "TIJA-NEGRA-CURVA",
   "units": 12,
-  "tag": "Top 🔥",
   "order": 1230,
   "imgs": [
    "assets/img/products/tija-negra-curva.jpg?v=1787344159027",
@@ -4713,7 +4688,6 @@ window.ESCENA_PRODUCTS = [
   "price": 220000,
   "sku": "BRAINSTORM-FREECOASTER-KIT-01",
   "units": 12,
-  "tag": "Top",
   "order": 950,
   "img": "assets/img/products/brainstorm-freecoaster-kit-01.jpg"
  },
@@ -4871,7 +4845,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1320000,
   "sku": "FATE-NAMASTE-NEGRO",
   "units": 4,
-  "tag": "Nacional",
   "sizes": [
    {
     "label": "20.4\"",
@@ -5060,7 +5033,6 @@ window.ESCENA_PRODUCTS = [
   "price": 210000,
   "sku": "AROS_FATE_NEGRO",
   "units": 12,
-  "tag": "Nacional",
   "order": 1000,
   "img": "assets/img/products/aros_fate_negro.jpeg"
  },
