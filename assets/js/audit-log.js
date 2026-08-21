@@ -2520,5 +2520,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T16:57:33.728Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto eliminado",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "fiend-mills-sillin-negro"
+  ]
  }
 ];
