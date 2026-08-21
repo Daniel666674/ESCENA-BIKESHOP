@@ -2470,5 +2470,16 @@ window.ESCENA_AUDIT = [
    "buje-delantero-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:55:58.739Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "cana-s-m-enduro-40mm-negra",
+   "cana-volume-bison-negra-frontload"
+  ],
+  "deleted": []
  }
 ];
