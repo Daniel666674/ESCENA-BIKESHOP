@@ -2791,12 +2791,13 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Nuevo 🔥!",
   "imgs": [
-   "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1784138439638",
-   "assets/img/products/silla-pivotal-fitbikeco-negra-2.jpg?v=1784138441275",
-   "assets/img/products/silla-pivotal-fitbikeco-negra-3.jpg?v=1784138443126"
+   "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1787339287810",
+   "assets/img/products/silla-pivotal-fitbikeco-negra-2.jpg?v=1787339294214",
+   "assets/img/products/silla-pivotal-fitbikeco-negra-3.jpg?v=1787339297122",
+   "assets/img/products/silla-pivotal-fitbikeco-negra-4.jpg?v=1787339299015"
   ],
   "order": 120,
-  "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1784138439638"
+  "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1787339287810"
  },
  {
   "slug": "cana-shadow-finest-negra-topload",
@@ -4015,12 +4016,12 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "order": 90,
   "imgs": [
-   "assets/img/products/stolen-sillin-negro.jpg?v=1787337349660",
+   "assets/img/products/stolen-sillin-negro.jpg?v=1787339300357",
    "assets/img/products/stolen-sillin-negro-3.jpg?v=1787278808312",
    "assets/img/products/stolen-sillin-negro.jpg?v=1787278802727",
    "assets/img/products/stolen-sillin-negro-2.jpg?v=1787278806057"
   ],
-  "img": "assets/img/products/stolen-sillin-negro.jpg?v=1787337349660"
+  "img": "assets/img/products/stolen-sillin-negro.jpg?v=1787339300357"
  },
  {
   "slug": "pedales-plataforma-negro-01",
