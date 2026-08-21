@@ -18,7 +18,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "• Tipo: Pivotal",
   "price": 200000,
   "sku": "SIL-CLT-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318930204",
@@ -2723,7 +2723,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Pivotal · Lona Zebra · Base reforzada · Relleno grueso",
   "price": 205000,
   "sku": "SIL-FND-001",
-  "units": 1,
+  "units": 0,
   "imgs": [
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1787318255784",
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-2.jpg?v=1787318257014",
@@ -2847,19 +2847,39 @@ window.ESCENA_PRODUCTS = [
   "spec": "Pivotal · Cuero · Base reforzada · 3 piezas",
   "price": 200000,
   "sku": "SIL-FND-003",
-  "units": 2,
+  "units": 4,
   "imgs": [
    "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1787318112420",
-   "assets/img/products/silla-pivotal-fiend-mills-2.jpg?v=1786464135581"
+   "assets/img/products/silla-pivotal-fiend-mills-2.jpg?v=1786464135581",
+   "assets/img/products/silla-pivotal-fiend-mills-3.jpg?v=1787331281858",
+   "assets/img/products/silla-pivotal-fiend-mills-4.jpg?v=1787331283428"
   ],
   "colors": [
    {
     "label": "Blanco",
-    "units": 3
+    "units": 0,
+    "price": 200000,
+    "cost": 160000
+   },
+   {
+    "label": "Negro",
+    "units": 4,
+    "price": 200000,
+    "cost": 160000
    }
   ],
   "order": 20,
   "imgFit": "cover",
+  "imgColorMap": {
+   "Blanco": [
+    0,
+    1
+   ],
+   "Negro": [
+    2,
+    3
+   ]
+  },
   "img": "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1787318112420"
  },
  {
@@ -3510,7 +3530,6 @@ window.ESCENA_PRODUCTS = [
   "price": 175000,
   "sku": "CULT-SILLIN-CUADROS",
   "units": 1,
-  "tag": "Edición Especial",
   "order": 100,
   "imgFit": "cover",
   "imgs": [
@@ -3936,13 +3955,13 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "cult-sillin-negro",
-  "n": "Silla Cult Negra",
+  "n": "Silla Cult Rasta",
   "brand": "Cult",
   "cat": "sillines",
   "spec": "Pivotal slim · Negro · Tela militar",
-  "price": 180000,
+  "price": 195000,
   "sku": "CULT-SILLIN-NEGRO",
-  "units": 12,
+  "units": 0,
   "order": 80,
   "imgs": [
    "assets/img/products/cult-sillin-negro-3.jpg?v=1787277880381",
@@ -3986,18 +4005,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/animal-sillin-camuflado-2.jpg?v=1787277891575"
   ],
   "img": "assets/img/products/animal-sillin-camuflado.jpg?v=1787279802283"
- },
- {
-  "slug": "fit-sillin-diamante-negro",
-  "n": "Silla Fit Bike Co Negra",
-  "brand": "Fit Bike Co",
-  "cat": "sillines",
-  "spec": "Pivotal slim · Textura · Negro",
-  "price": 175000,
-  "sku": "FIT-SILLIN-DIAMANTE-NEGRO",
-  "units": 12,
-  "order": 110,
-  "img": "assets/img/products/fit-sillin-diamante-negro.jpg"
  },
  {
   "slug": "stolen-sillin-negro",
