@@ -2418,12 +2418,11 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "tag": "Top!",
   "imgs": [
-   "assets/img/products/pedales-wellgo-negro.jpg?v=1784153746515",
-   "assets/img/products/pedales-wellgo-negro-2.jpg?v=1784153748363",
-   "assets/img/products/pedales-wellgo-negro-3.jpg?v=1784153750038"
+   "assets/img/products/pedales-wellgo-negro.jpg?v=1787276553829",
+   "assets/img/products/pedales-wellgo-negro-2.jpg?v=1787276555684"
   ],
   "order": 110,
-  "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1784153746515"
+  "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1787276553829"
  },
  {
   "slug": "tenedor-gw-destructor-tornasol",
@@ -2673,13 +2672,8 @@ window.ESCENA_PRODUCTS = [
   "sku": "PED-FAT-001",
   "units": 2,
   "tag": "Nuevo 🔥!",
-  "imgs": [
-   "assets/img/products/pedales-fate-negro.jpg?v=1784139495189",
-   "assets/img/products/pedales-fate-negro-2.jpg?v=1784139497268",
-   "assets/img/products/pedales-fate-negro-3.jpg?v=1784139498920"
-  ],
   "order": 100,
-  "img": "assets/img/products/pedales-fate-negro.jpg?v=1784139495189"
+  "img": "assets/img/products/pedales-fate-negro.jpg?v=1787276557110"
  },
  {
   "slug": "silla-pivotal-fiend-reynolds-v2-zebra",
