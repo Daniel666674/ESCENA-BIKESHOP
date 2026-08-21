@@ -3103,21 +3103,13 @@ window.ESCENA_PRODUCTS = [
   "units": 14,
   "tag": "Top 🔥",
   "imgs": [
-   "assets/img/products/pedales-demolition.jpg?v=1784059551908",
-   "assets/img/products/pedales-demolition-2.jpg?v=1784059553615",
-   "assets/img/products/pedales-demolition-3.jpg?v=1784262238206",
-   "assets/img/products/pedales-demolition-3.jpg?v=1784059555139",
-   "assets/img/products/pedales-demolition-4.jpg?v=1784059556618",
-   "assets/img/products/pedales-demolition-5.jpg?v=1784059558102",
-   "assets/img/products/pedales-demolition-12.jpg?v=1784059569860",
-   "assets/img/products/pedales-demolition-7.jpg?v=1784059561416",
-   "assets/img/products/pedales-demolition-8.jpg?v=1784059563785",
-   "assets/img/products/pedales-demolition-9.jpg?v=1784059565238",
-   "assets/img/products/pedales-demolition-11.jpg?v=1784262240124",
-   "assets/img/products/pedales-demolition-10.jpg?v=1784059566652",
-   "assets/img/products/pedales-demolition-14.jpg?v=1784059573260",
-   "assets/img/products/pedales-demolition-11.jpg?v=1784059568136",
-   "assets/img/products/pedales-demolition-15.jpg?v=1784059575864"
+   "assets/img/products/pedales-demolition.jpg?v=1787274790318",
+   "assets/img/products/pedales-demolition-2.jpg?v=1787274792085",
+   "assets/img/products/pedales-demolition-3.jpg?v=1787274793461",
+   "assets/img/products/pedales-demolition-4.jpg?v=1787274794894",
+   "assets/img/products/pedales-demolition-5.jpg?v=1787274796261",
+   "assets/img/products/pedales-demolition-6.jpg?v=1787274797612",
+   "assets/img/products/pedales-demolition-7.jpg?v=1787274799001"
   ],
   "slug": "pedales-demolition",
   "colors": [
@@ -3152,36 +3144,27 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgColorMap": {
    "Rojo Azul": [
-    0,
-    1
-   ],
-   "Negro": [
-    2,
-    3
-   ],
-   "Blanco Negro": [
-    4,
-    5
+    0
    ],
    "Morado Amarillo": [
-    6,
-    7
-   ],
-   "Blanco Lila": [
-    8,
-    9
+    1,
+    3
    ],
    "Azul Blanco": [
-    10,
-    11
+    2
+   ],
+   "Blanco Negro": [
+    4
+   ],
+   "Negro": [
+    5
    ],
    "Rojo Blanco": [
-    12,
-    13
+    6
    ]
   },
   "order": 70,
-  "img": "assets/img/products/pedales-demolition.jpg?v=1784059551908"
+  "img": "assets/img/products/pedales-demolition.jpg?v=1787274790318"
  },
  {
   "n": "Pedales Stolen",
