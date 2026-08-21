@@ -4783,8 +4783,8 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgs": [
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1786196439083",
-   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1784313923821",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-3.jpg?v=1784313925313",
+   "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-3.jpg?v=1787355383184",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-4.jpg?v=1784313926605",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-5.jpg?v=1784313928050"
   ],
