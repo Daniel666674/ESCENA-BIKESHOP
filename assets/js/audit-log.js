@@ -2768,5 +2768,15 @@ window.ESCENA_AUDIT = [
    "coraza_odyssey_supercircuit_2.40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T22:41:37.424Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 4 fotos subidas",
+  "created": [],
+  "edited": [
+   "coraza_cult_wafflecup_2.40"
+  ],
+  "deleted": []
  }
 ];
