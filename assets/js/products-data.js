@@ -3948,24 +3948,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/federal-stem-negro.jpg"
  },
  {
-  "slug": "fiend-mills-sillin-negro",
-  "n": "Silla Fiend Mills Negra",
-  "brand": "Fiend",
-  "cat": "sillines",
-  "spec": "Pivotal · Cuero · Negro · 3 piezas",
-  "price": 200000,
-  "sku": "FIEND-MILLS-SILLIN-NEGRO",
-  "units": 12,
-  "order": 30,
-  "imgFit": "cover",
-  "imgs": [
-   "assets/img/products/fiend-mills-sillin-negro.jpg?v=1786464137096",
-   "assets/img/products/fiend-mills-sillin-negro-2.jpg?v=1786464138253",
-   "assets/img/products/fiend-mills-sillin-negro-3.jpg?v=1786464139671"
-  ],
-  "img": "assets/img/products/fiend-mills-sillin-negro.jpg?v=1786464137096"
- },
- {
   "slug": "cult-sillin-negro",
   "n": "Silla Cult Rasta",
   "brand": "Cult",
