@@ -2541,5 +2541,15 @@ window.ESCENA_AUDIT = [
    "stolen-sillin-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T18:51:00.335Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 4 fotos subidas",
+  "created": [],
+  "edited": [
+   "cult-sillin-cuadros"
+  ],
+  "deleted": []
  }
 ];
