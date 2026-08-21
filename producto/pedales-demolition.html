@@ -399,7 +399,7 @@ header.top-bar .brand .name { color: #fff; }
     <h1>Pedales Demolition</h1>
     <div class="pdp-price">$95.000 COP</div>
     <p class="pdp-stock-hint" id="pdpStockHint" data-units="2"></p>
-    <div class="pdp-variant" id="pdpVariantColor" data-prefix="Color" data-img-map="{&quot;Rojo Azul&quot;:[0],&quot;Morado Amarillo&quot;:[1,3],&quot;Azul Blanco&quot;:[2],&quot;Blanco Negro&quot;:[4],&quot;Negro&quot;:[5],&quot;Rojo Blanco&quot;:[6]}">
+    <div class="pdp-variant" id="pdpVariantColor" data-prefix="Color" data-img-map="{&quot;Rojo Azul&quot;:[0],&quot;Morado Amarillo&quot;:[1],&quot;Azul Blanco&quot;:[2],&quot;Blanco Lila&quot;:[3],&quot;Blanco Negro&quot;:[4],&quot;Negro&quot;:[5],&quot;Rojo Blanco&quot;:[6]}">
       <span class="pdp-variant-label">Color</span>
       <div class="pdp-variant-options"><button type="button" data-value="Rojo Azul" data-units="2" class="is-active">Rojo Azul</button><button type="button" data-value="Negro" data-units="2">Negro</button><button type="button" data-value="Blanco Negro" data-units="2">Blanco Negro</button><button type="button" data-value="Morado Amarillo" data-units="2">Morado Amarillo</button><button type="button" data-value="Blanco Lila" data-units="2">Blanco Lila</button><button type="button" data-value="Azul Blanco" data-units="2">Azul Blanco</button><button type="button" data-value="Rojo Blanco" data-units="2">Rojo Blanco</button></div>
     </div>
@@ -431,7 +431,7 @@ header.top-bar .brand .name { color: #fff; }
   <h2>También te puede gustar</h2>
   <div class="related-grid">
     <a class="r-card" href="pedales-wellgo-negro">
-        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Top!</span><img src="../assets/img/products/pedales-wellgo-negro.jpg?v=1784153746515" alt="Pedales Wellgo Negro - Wellgo BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Top!</span><img src="../assets/img/products/pedales-wellgo-negro.jpg?v=1787276553829" alt="Pedales Wellgo Negro - Wellgo BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Wellgo</span>
           <h3>Pedales Wellgo Negro</h3>
@@ -439,7 +439,7 @@ header.top-bar .brand .name { color: #fff; }
         </div>
       </a>
 <a class="r-card" href="pedales-fate-negro">
-        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Nuevo 🔥!</span><img src="../assets/img/products/pedales-fate-negro.jpg?v=1784139495189" alt="Pedales Fate Negro - Fate BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Nuevo 🔥!</span><img src="../assets/img/products/pedales-fate-negro.jpg?v=1787276557110" alt="Pedales Fate Negro - Fate BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Fate</span>
           <h3>Pedales Fate Negro</h3>
@@ -455,7 +455,7 @@ header.top-bar .brand .name { color: #fff; }
         </div>
       </a>
 <a class="r-card" href="pedales-stolen">
-        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Colorido 🌈</span><img src="../assets/img/products/pedales-stolen.jpg?v=1784058795983" alt="Pedales Stolen - Stolen BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="ph" style="position:relative;"><span class="tag" style="position:absolute;top:.5rem;left:.5rem;background:#fff;color:#0A0A0A;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .45rem;border-radius:3px;">Colorido 🌈</span><img src="../assets/img/products/pedales-stolen.jpg?v=1787276283897" alt="Pedales Stolen - Stolen BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Stolen</span>
           <h3>Pedales Stolen</h3>
@@ -831,6 +831,22 @@ header.top-bar .brand .name { color: #fff; }
     // minimum across whichever real groups the shopper has picked so far,
     // not just whichever group was clicked most recently.
     var selectedUnits = {};
+    // Either group can carry its own price override for the selected option
+    // (admin.html's per-size/per-color Precio field). When both are set on
+    // the same product, size wins — matches admin.html's sell-modal
+    // precedence, so the two tools never disagree about which price is
+    // "the" price for a given selection.
+    var selectedPrice = {};
+    var PRICE_GROUP_PRIORITY = ["pdpVariant", "pdpVariantColor"];
+    function recomputePrice() {
+      if (!addCartBtn) return;
+      var price = null;
+      for (var i = 0; i < PRICE_GROUP_PRIORITY.length; i++) {
+        var gid = PRICE_GROUP_PRIORITY[i];
+        if (selectedPrice[gid] != null) { price = selectedPrice[gid]; break; }
+      }
+      addCartBtn.setAttribute("data-price", price !== null ? price : basePrice);
+    }
     function recomputeStock() {
       var units = null;
       groups.forEach(function (g) {
@@ -905,23 +921,23 @@ header.top-bar .brand .name { color: #fff; }
         });
         selected[group.id] = val;
         if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
-        // Color-specific price override: prefer the live catalog's price (an
-        // admin edit must show up immediately), fall back to what was baked
-        // into this button at publish time, and fall back again to the
-        // product's base price if this color has no override of its own.
-        if (group.id === "pdpVariantColor" && addCartBtn) {
-          var colorPrice = null;
-          if (liveList) {
-            var liveColor = liveList.filter(function (c) { return c.label === val; })[0];
-            if (liveColor && liveColor.price > 0) colorPrice = liveColor.price;
-          }
-          if (colorPrice === null) {
-            var cBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
-            var baked = cBtn ? parseFloat(cBtn.getAttribute("data-price")) : NaN;
-            if (baked > 0) colorPrice = baked;
-          }
-          addCartBtn.setAttribute("data-price", colorPrice !== null ? colorPrice : basePrice);
+        // This group's own price override for the selected option: prefer
+        // the live catalog's price (an admin edit must show up immediately),
+        // fall back to what was baked into this button at publish time, or
+        // null if this option has no override of its own. recomputePrice()
+        // resolves the final price across whichever group(s) have one set.
+        var ownPrice = null;
+        if (liveList) {
+          var liveOpt = liveList.filter(function (x) { return x.label === val; })[0];
+          if (liveOpt && liveOpt.price > 0) ownPrice = liveOpt.price;
         }
+        if (ownPrice === null) {
+          var optBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+          var baked = optBtn ? parseFloat(optBtn.getAttribute("data-price")) : NaN;
+          if (baked > 0) ownPrice = baked;
+        }
+        selectedPrice[group.id] = ownPrice;
+        recomputePrice();
         if (isRealGroup) {
           var units = null;
           if (liveList) {
