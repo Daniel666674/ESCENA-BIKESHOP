@@ -2493,5 +2493,22 @@ window.ESCENA_AUDIT = [
    "cana-shadow-chula-48mm"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T16:54:56.006Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "6 productos editados, 1 producto eliminado, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "cult-sillin-cuadros",
+   "silla-pivotal-cult-old-skool",
+   "cult-sillin-negro",
+   "silla-pivotal-fiend-reynolds-v2-zebra",
+   "silla-pivotal-fiend-reynolds-negra",
+   "silla-pivotal-fiend-mills"
+  ],
+  "deleted": [
+   "fit-sillin-diamante-negro"
+  ]
  }
 ];
