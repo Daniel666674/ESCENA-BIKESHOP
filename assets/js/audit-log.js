@@ -3042,5 +3042,23 @@ window.ESCENA_AUDIT = [
    "fiend-reynolds-v3-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T23:30:07.253Z",
+  "actor": "daniel.f.acosta96@gmail.com",
+  "summary": "1 producto nuevo, 4 productos editados, 2 productos eliminados, 9 fotos subidas",
+  "created": [
+   "cana-federal-front-load-negra"
+  ],
+  "edited": [
+   "stem-plata-pulido",
+   "cana-cult-salvation-v4-negra-topload",
+   "cana-shadow-chula-48mm",
+   "federal-stem-plata"
+  ],
+  "deleted": [
+   "escena-stem-grabado-plata",
+   "federal-stem-negro"
+  ]
  }
 ];
