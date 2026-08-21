@@ -401,7 +401,7 @@ header.top-bar .brand .name { color: #fff; }
     <p class="pdp-stock-hint" id="pdpStockHint" data-units="5"></p>
     <div class="pdp-variant" id="pdpVariantColor" data-prefix="Color" data-img-map="{&quot;Negro&quot;:[0],&quot;Cromada&quot;:[1],&quot;Tornasol&quot;:[2]}">
       <span class="pdp-variant-label">Color</span>
-      <div class="pdp-variant-options"><button type="button" data-value="Negro" data-units="5" data-price="70000" class="is-active">Negro</button><button type="button" data-value="Cromada" data-units="5" data-price="60000">Cromada</button><button type="button" data-value="Tornasol" data-units="5" data-price="60000">Tornasol</button></div>
+      <div class="pdp-variant-options"><button type="button" data-value="Negro" data-units="5" data-price="60000" class="is-active">Negro</button><button type="button" data-value="Cromada" data-units="5" data-price="60000">Cromada</button><button type="button" data-value="Tornasol" data-units="5" data-price="70000">Tornasol</button></div>
     </div>
     <p class="pdp-pick-hint" id="pdpPickHint" style="display:none;"></p>
     <div class="pdp-actions" id="pdpActions">
@@ -433,7 +433,23 @@ header.top-bar .brand .name { color: #fff; }
 <div class="related">
   <h2>También te puede gustar</h2>
   <div class="related-grid">
-    <a class="r-card" href="cajas-de-frente-demolition-v2">
+    <a class="r-card" href="cajas-de-frente-rant-ur">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/cajas-de-frente-rant-ur.jpg?v=1787341078749" alt="Cajas de frente Rant UR - Rant BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Rant</span>
+          <h3>Cajas de frente Rant UR</h3>
+          <div class="price">$95.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="cajas-de-frente-bsd-highriser">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/cajas-de-frente-bsd-highriser.jpg?v=1787269249340" alt="Cajas de frente BSD Highriser - BSD BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">BSD</span>
+          <h3>Cajas de frente BSD Highriser</h3>
+          <div class="price">$130.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="cajas-de-frente-demolition-v2">
         <div class="ph" style="position:relative;"><img src="../assets/img/products/cajas-de-frente-demolition-v2.jpg?v=1787266253706" alt="Cajas de Frente Demolition V2 - Demolition BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Demolition</span>
@@ -447,22 +463,6 @@ header.top-bar .brand .name { color: #fff; }
           <span class="brand-lbl">Cult</span>
           <h3>Cajas de frente Cult Match V2</h3>
           <div class="price">$120.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="cajas-integradas-tall-seat-colony">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/cajas-integradas-tall-seat-colony.jpg?v=1787264034267" alt="Cajas de frente Tall seat Colony - Colony BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Colony</span>
-          <h3>Cajas de frente Tall seat Colony</h3>
-          <div class="price">$120.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="cajas-integrado-odyssey">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/cajas-integrado-odyssey.jpg?v=1787263394684" alt="Cajas de Frente Odyssey Pro - Odyssey BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Odyssey</span>
-          <h3>Cajas de Frente Odyssey Pro</h3>
-          <div class="price">$140.000 COP</div>
         </div>
       </a>
   </div>
@@ -834,6 +834,22 @@ header.top-bar .brand .name { color: #fff; }
     // minimum across whichever real groups the shopper has picked so far,
     // not just whichever group was clicked most recently.
     var selectedUnits = {};
+    // Either group can carry its own price override for the selected option
+    // (admin.html's per-size/per-color Precio field). When both are set on
+    // the same product, size wins — matches admin.html's sell-modal
+    // precedence, so the two tools never disagree about which price is
+    // "the" price for a given selection.
+    var selectedPrice = {};
+    var PRICE_GROUP_PRIORITY = ["pdpVariant", "pdpVariantColor"];
+    function recomputePrice() {
+      if (!addCartBtn) return;
+      var price = null;
+      for (var i = 0; i < PRICE_GROUP_PRIORITY.length; i++) {
+        var gid = PRICE_GROUP_PRIORITY[i];
+        if (selectedPrice[gid] != null) { price = selectedPrice[gid]; break; }
+      }
+      addCartBtn.setAttribute("data-price", price !== null ? price : basePrice);
+    }
     function recomputeStock() {
       var units = null;
       groups.forEach(function (g) {
@@ -908,23 +924,23 @@ header.top-bar .brand .name { color: #fff; }
         });
         selected[group.id] = val;
         if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
-        // Color-specific price override: prefer the live catalog's price (an
-        // admin edit must show up immediately), fall back to what was baked
-        // into this button at publish time, and fall back again to the
-        // product's base price if this color has no override of its own.
-        if (group.id === "pdpVariantColor" && addCartBtn) {
-          var colorPrice = null;
-          if (liveList) {
-            var liveColor = liveList.filter(function (c) { return c.label === val; })[0];
-            if (liveColor && liveColor.price > 0) colorPrice = liveColor.price;
-          }
-          if (colorPrice === null) {
-            var cBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
-            var baked = cBtn ? parseFloat(cBtn.getAttribute("data-price")) : NaN;
-            if (baked > 0) colorPrice = baked;
-          }
-          addCartBtn.setAttribute("data-price", colorPrice !== null ? colorPrice : basePrice);
+        // This group's own price override for the selected option: prefer
+        // the live catalog's price (an admin edit must show up immediately),
+        // fall back to what was baked into this button at publish time, or
+        // null if this option has no override of its own. recomputePrice()
+        // resolves the final price across whichever group(s) have one set.
+        var ownPrice = null;
+        if (liveList) {
+          var liveOpt = liveList.filter(function (x) { return x.label === val; })[0];
+          if (liveOpt && liveOpt.price > 0) ownPrice = liveOpt.price;
         }
+        if (ownPrice === null) {
+          var optBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+          var baked = optBtn ? parseFloat(optBtn.getAttribute("data-price")) : NaN;
+          if (baked > 0) ownPrice = baked;
+        }
+        selectedPrice[group.id] = ownPrice;
+        recomputePrice();
         if (isRealGroup) {
           var units = null;
           if (liveList) {
