@@ -27,6 +27,14 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cajas-de-frente-rant-ur",
+  "imgColorMap": {
+   "Negra": [
+    0
+   ],
+   "Cromada": [
+    1
+   ]
+  },
   "img": "assets/img/products/cajas-de-frente-rant-ur.jpg?v=1787341078749"
  },
  {
