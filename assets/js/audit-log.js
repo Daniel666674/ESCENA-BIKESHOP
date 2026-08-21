@@ -3082,5 +3082,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "coraza-innova-tire-20-x-2-40"
   ]
+ },
+ {
+  "ts": "2026-08-21T23:36:33.003Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "cult-biggie-jaime-sintes-hammertone-negro"
+  ],
+  "deleted": []
  }
 ];
