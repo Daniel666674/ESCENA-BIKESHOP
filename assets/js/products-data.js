@@ -4940,8 +4940,8 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgs": [
    "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1786196440985",
-   "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1787353819100",
    "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1784156646261",
+   "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1787354818808",
    "assets/img/products/fiend-reynolds-v3-negro-5.jpg?v=1784156650039",
    "assets/img/products/fiend-reynolds-v3-negro-4.jpg?v=1784156648375"
   ],
