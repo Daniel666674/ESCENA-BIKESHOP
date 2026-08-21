@@ -2438,5 +2438,16 @@ window.ESCENA_AUDIT = [
    "buje-delantero-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:52:08.689Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos editados, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "manzana-cult-crew-negra",
+   "buje-delantero-cromado"
+  ],
+  "deleted": []
  }
 ];
