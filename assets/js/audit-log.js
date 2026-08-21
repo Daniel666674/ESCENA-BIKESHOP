@@ -3032,5 +3032,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "coraza_odyssey_supercircuit_2.40"
   ]
+ },
+ {
+  "ts": "2026-08-21T23:27:02.702Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "fiend-reynolds-v3-negro"
+  ],
+  "deleted": []
  }
 ];
