@@ -3690,7 +3690,6 @@ window.ESCENA_PRODUCTS = [
   "price": 300000,
   "sku": "BUJE-DELANTERO-NEGRO",
   "units": 3,
-  "tag": "TOP",
   "order": 730,
   "img": "assets/img/products/buje-delantero-negro.jpg?v=1785657343691"
  },
