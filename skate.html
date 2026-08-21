@@ -164,11 +164,9 @@
     @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); gap: .9rem; } }
     @media (max-width: 480px) {
       .grid { gap: .7rem; }
-      .card .body { padding: .75rem .75rem .9rem; }
+      .card .ph { height: 150px; }
       .card h3 { font-size: .82rem; }
-      .card .price { font-size: 1.25rem; }
-      .card .brand-lbl { font-size: .6rem; }
-      .card .buy, .card .add-cart-btn { padding: .55rem .5rem; font-size: .64rem; }
+      .card .price { font-size: .82rem; }
     }
 
     @media (max-width: 900px) {
@@ -202,35 +200,29 @@
     @media (max-width: 480px) {
       .cat-sidebar { top: 58px; }
     }
-    .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .15s; }
-    .card:hover { box-shadow: 0 14px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
+    /* Flat, frameless card: no border/background box around the photo (every
+       product photo is already shot on white, same as the page background,
+       so a box just adds a visible edge nothing needs) and no add-to-cart
+       button -- this is a browse/lookbook grid, not a cart flow; interested
+       shoppers go to the product page (or WhatsApp) to actually order. */
+    .card { background: transparent; display: flex; flex-direction: column; text-align: center; }
     .card .ph-link { display: block; }
-    .card .ph { position: relative; aspect-ratio: 1 / 1; background: #0A0A0A; overflow: hidden; }
-    /* Automatic photo formatting (default, no admin tuning needed): the whole
-       photo is always shown (object-fit:contain, never cropped), any
-       letterbox space around it filled with a blurred copy of the same photo
-       instead of dead black bars -- same technique already used on the
-       product page. A product can still opt into a hard crop-to-fill square
-       (imgFit:"cover" in admin.html) via .fit-cover, which drops the blur
-       layer and switches to object-fit:cover. */
-    .card .ph-blur { position: absolute; z-index: 0; inset: -12%; background-size: cover; background-position: center; filter: blur(22px) brightness(.65); }
-    .card .ph img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; transition: transform .4s; transform: scale(var(--img-zoom, 1)); }
-    .card .ph.fit-cover .ph-blur { display: none; }
+    .card .ph { position: relative; height: 230px; background: transparent; }
+    .card .ph img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; transition: transform .25s; transform: scale(var(--img-zoom, 1)); }
     .card .ph.fit-cover img { object-fit: cover; }
-    .card:hover .ph img { transform: scale(calc(var(--img-zoom, 1) * 1.05)); }
-    .card .tag { position: absolute; z-index: 2; top: .7rem; left: .7rem; background: #fff; color: var(--ink); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .55rem; border-radius: 3px; }
-    .card .body { padding: 1rem 1rem 1.2rem; display: flex; flex-direction: column; flex: 1; }
-    .card .brand-lbl { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
-    .card h3 { font-size: .92rem; font-weight: 600; margin: .25rem 0 .1rem; line-height: 1.3; }
+    .card:hover .ph img { transform: scale(calc(var(--img-zoom, 1) * 1.03)); }
+    .card.is-agotado .ph img { opacity: .45; }
+    .card .tag { position: absolute; z-index: 2; top: 0; left: 0; background: #c0392b; color: #fff; font-size: .68rem; font-weight: 700; padding: .3rem .6rem; border-radius: 4px; }
+    .card .body { padding: .8rem 0 0; display: flex; flex-direction: column; align-items: center; }
+    .card h3 { font-size: .92rem; font-weight: 700; margin: 0; line-height: 1.3; }
     .card .title-link { color: var(--ink); text-decoration: none; }
     .card .title-link:hover { text-decoration: underline; }
-    .card .card-spacer { flex: 1; min-height: .6rem; }
-    .card .price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .02em; margin-bottom: .7rem; }
+    .card .price { font-family: 'Inter', sans-serif; font-size: .92rem; font-weight: 700; margin: .3rem 0 0; }
     .card .price-from { font-family: 'Inter', sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
-    .card .buy { display: block; text-align: center; background: var(--ink); color: #fff; text-decoration: none; padding: .7rem; border-radius: 5px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s, color .2s; border: 1px solid var(--ink); }
-    .card .buy:hover { background: #fff; color: var(--ink); }
-    .card-actions { display: flex; flex-direction: column; gap: .5rem; }
-    .card-actions .add-cart-btn { padding: .65rem 1rem; font-size: .7rem; }
+    .card .agotado-lbl { font-size: .74rem; font-weight: 700; color: var(--muted); margin-top: .5rem; }
+    .card .swatches { display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem; margin-top: .55rem; }
+    .card .swatch-size { border: 1px solid var(--line); border-radius: 4px; padding: .18rem .4rem; font-size: .64rem; font-weight: 700; color: var(--ink); background: #fff; }
+    .card .swatch-color { width: 18px; height: 18px; border-radius: 4px; border: 1px solid rgba(0,0,0,.15); }
     .empty-state { text-align: center; padding: 3rem 1rem; color: var(--muted); font-size: .9rem; }
 
     /* ============ PAGINATION (real navigation, no infinite scroll) ============ */
@@ -436,7 +428,6 @@ header.top-bar .brand .name { color: #fff; }
     </nav>
     <div class="header-actions">
       <button class="search-btn" id="searchBtnHeader" aria-label="Buscar" aria-expanded="false" aria-controls="headerSearchPanel"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
-      <button class="wishlist-btn" id="wishlistBtnHeader" aria-label="Lista de deseos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.72-4.35-9.33-8.36C.98 9.1 1.53 5.7 4.36 4.06c2.34-1.36 5.2-.7 6.77 1.44L12 6.4l.87-1.9C14.44 3.36 17.3 2.7 19.64 4.06c2.83 1.64 3.38 5.04 1.69 8.58C18.72 16.65 12 21 12 21z"/></svg><span class="cart-badge" id="wishlistBadgeHeader">0</span></button>
       <button class="cart-btn" id="cartBtnHeader" aria-label="Ver carrito">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         <span class="cart-badge" id="cartBadgeHeader">0</span>
@@ -587,7 +578,7 @@ header.top-bar .brand .name { color: #fff; }
 
   function cop(n){
     if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
-    return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
+    return "$ " + Math.round(n).toLocaleString("es-CO");
   }
   function cardPriceHTML(p){
     if (p.colors && p.colors.length > 1) {
@@ -622,6 +613,11 @@ header.top-bar .brand .name { color: #fff; }
     var file = p.img.split("/").pop();
     return file.replace(/\.[a-zA-Z0-9]+$/, "");
   }
+  // Accent-insensitive lowercase, so "café"/"cafe" and "Café" all match a
+  // COLOR_SWATCH_MAP key.
+  function normText(s){
+    return String(s == null ? "" : s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  }
 
   // Cover-photo crop, admin-set via the frame editor in the product modal
   // (imgPos/imgZoom) -- lets a photo that isn't naturally square (or isn't
@@ -632,32 +628,70 @@ header.top-bar .brand .name { color: #fff; }
     if (p.imgZoom && p.imgZoom > 100) s += "--img-zoom:" + (p.imgZoom / 100) + ";";
     return s;
   }
+  // Best-effort color-name -> swatch background, covering the Spanish (and a
+  // few English) color words that actually show up in this catalog's color
+  // labels. Solid colors map to a flat hex; a handful of common
+  // multi-tone finishes (arcoiris, zebra, rasta, camuflado, tornasol/oil
+  // slick, cromado) get a gradient standing in for the real pattern. Anything
+  // unrecognized falls back to a light neutral square rather than guessing.
+  var COLOR_SWATCH_MAP = {
+    negro: "#1a1a1a", black: "#1a1a1a",
+    blanco: "#fff", white: "#fff",
+    gris: "#9a9a9a", gray: "#9a9a9a", grey: "#9a9a9a",
+    plata: "#c7c9cc", plateado: "#c7c9cc", silver: "#c7c9cc",
+    azul: "#2563eb", blue: "#2563eb",
+    rojo: "#dc2626", red: "#dc2626",
+    verde: "#16a34a", green: "#16a34a",
+    amarillo: "#eab308", yellow: "#eab308",
+    morado: "#7c3aed", violeta: "#7c3aed", purple: "#7c3aed",
+    rosa: "#ec4899", pink: "#ec4899",
+    naranja: "#f97316", orange: "#f97316",
+    dorado: "#c9a227", gold: "#c9a227",
+    cafe: "#5c3a21", marron: "#5c3a21", brown: "#5c3a21",
+    turquesa: "#06b6d4", cyan: "#06b6d4",
+    cromado: "linear-gradient(135deg,#e2e4e6,#8a8f94,#e2e4e6)", chrome: "linear-gradient(135deg,#e2e4e6,#8a8f94,#e2e4e6)",
+    tornasol: "linear-gradient(135deg,#7c3aed,#2563eb,#ec4899)", oilslick: "linear-gradient(135deg,#7c3aed,#2563eb,#ec4899)",
+    arcoiris: "linear-gradient(90deg,#dc2626,#f97316,#eab308,#16a34a,#2563eb,#7c3aed)", rainbow: "linear-gradient(90deg,#dc2626,#f97316,#eab308,#16a34a,#2563eb,#7c3aed)",
+    zebra: "repeating-linear-gradient(45deg,#1a1a1a,#1a1a1a 3px,#fff 3px,#fff 6px)",
+    rasta: "linear-gradient(90deg,#16a34a,#eab308,#dc2626)",
+    camuflado: "linear-gradient(135deg,#4b5320,#6b7a3a,#3a4118)", camo: "linear-gradient(135deg,#4b5320,#6b7a3a,#3a4118)",
+    floral: "linear-gradient(135deg,#ec4899,#16a34a,#eab308)"
+  };
+  function colorSwatchBg(label){
+    var key = normText(label).replace(/[^a-z]/g, "");
+    return COLOR_SWATCH_MAP[key] || "#e5e5e5";
+  }
+  function swatchesHTML(p){
+    var out = "";
+    if (p.colors && p.colors.length > 1) {
+      out += '<div class="swatches">' + p.colors.map(function(c){
+        return '<span class="swatch-color" style="background:'+colorSwatchBg(c.label)+'" title="'+esc(c.label)+'"></span>';
+      }).join("") + '</div>';
+    }
+    if (p.sizes && p.sizes.length > 1) {
+      out += '<div class="swatches">' + p.sizes.map(function(s){
+        return '<span class="swatch-size">'+esc(s.label)+'</span>';
+      }).join("") + '</div>';
+    }
+    return out;
+  }
   function cardHTML(p){
-    var wPrefix = (window.EscenaWholesale && window.EscenaWholesale.isActive()) ? "🏷️ PEDIDO MAYORISTA (15% aplicado)\n" : "";
-    var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
     var hasDetailPage = p.img.indexOf("frame-placeholder") === -1;
     var href = "producto/" + slugOf(p);
     var agotado = (typeof p.units === "number" && p.units <= 0);
-    var promoHTML = p.promo ? '<span class="tag" style="background:var(--gold,#C79A3A);color:#fff;left:.7rem;right:auto;">PROMO</span>' : '';
-    var tagHTML = promoHTML + (agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+esc(p.tag)+'</span>' : ''));
+    var promoHTML = p.promo ? '<span class="tag">¡Oferta!</span>' : "";
+    var tagHTML = promoHTML || (p.tag ? '<span class="tag">'+esc(p.tag)+'</span>' : "");
     var fitCover = p.imgFit === "cover";
     return '<article class="card' + (agotado ? ' is-agotado' : '') + '">' +
         (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
           '<div class="ph' + (fitCover ? ' fit-cover' : '') + '">' + tagHTML +
-            (fitCover ? '' : '<div class="ph-blur" style="background-image:url(\''+p.img+'\')"></div>') +
             '<img src="'+p.img+'" alt="'+esc(p.n)+(p.brand ? ' - '+esc(p.brand) : '')+'" loading="lazy" width="400" height="400" style="'+coverFrameStyle(p)+'"></div>' +
         (hasDetailPage ? '</a>' : '</div>') +
         '<div class="body">' +
-          '<span class="brand-lbl">'+esc(p.brand)+'</span>' +
           '<h3>' + (hasDetailPage ? '<a class="title-link" href="'+href+'">'+esc(p.n)+'</a>' : esc(p.n)) + '</h3>' +
-          '<div class="card-spacer"></div>' +
           '<div class="price">'+cardPriceHTML(p)+'</div>' +
-          '<div class="card-actions">' +
-            (agotado
-              ? '<span class="buy" style="opacity:.5;pointer-events:none;text-align:center;">Agotado</span>'
-              : '<a class="buy" href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener">Pedir por WhatsApp</a>' +
-                '<button type="button" class="add-cart-btn" data-slug="'+slugOf(p)+'" data-n="'+esc(p.n)+'" data-brand="'+esc(p.brand)+'" data-price="'+p.price+'" data-img="'+p.img+'" data-units="'+(typeof p.units === "number" ? p.units : "")+'">Agregar al carrito</button>') +
-          '</div>' +
+          (agotado ? '<span class="agotado-lbl">Agotado</span>' : '') +
+          swatchesHTML(p) +
         '</div>' +
       '</article>';
   }
