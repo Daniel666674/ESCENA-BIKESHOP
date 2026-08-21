@@ -33,12 +33,13 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318930204",
+   "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787339654179",
+   "assets/img/products/silla-pivotal-cult-old-skool-3.jpg?v=1787318932558",
    "assets/img/products/silla-pivotal-cult-old-skool-2.jpg?v=1787318931434",
-   "assets/img/products/silla-pivotal-cult-old-skool-3.jpg?v=1787318932558"
+   "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318930204"
   ],
   "slug": "silla-pivotal-cult-old-skool",
-  "img": "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318930204"
+  "img": "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787339654179"
  },
  {
   "n": "Cajas de frente BSD Highriser",
