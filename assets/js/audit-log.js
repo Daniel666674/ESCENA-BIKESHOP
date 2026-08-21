@@ -2675,5 +2675,15 @@ window.ESCENA_AUDIT = [
    "pedales-demolition"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T20:39:27.865Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "cajas-de-frente-gw"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
