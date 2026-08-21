@@ -3487,10 +3487,25 @@ window.ESCENA_PRODUCTS = [
   "spec": "Pivotal slim · cuadros B/N · Denim",
   "price": 175000,
   "sku": "CULT-SILLIN-CUADROS",
-  "units": 12,
+  "units": 1,
   "tag": "Edición Especial",
   "order": 100,
-  "img": "assets/img/products/cult-sillin-cuadros.jpg"
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cult-sillin-cuadros.jpg?v=1787318616445",
+   "assets/img/products/cult-sillin-cuadros-2.jpg?v=1787318617615"
+  ],
+  "colors": [
+   {
+    "label": "BlBlan1",
+    "units": 1
+   },
+   {
+    "label": "Jjjkkiij",
+    "units": 0
+   }
+  ],
+  "img": "assets/img/products/cult-sillin-cuadros.jpg?v=1787318616445"
  },
  {
   "slug": "horquilla-cromoly-negra-01",
