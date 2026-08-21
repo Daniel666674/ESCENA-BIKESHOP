@@ -2314,5 +2314,15 @@ window.ESCENA_AUDIT = [
    "animal-sillin-camuflado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T02:20:14.834Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "stolen-sillin-negro"
+  ],
+  "deleted": []
  }
 ];
