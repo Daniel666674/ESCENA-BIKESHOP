@@ -3176,12 +3176,11 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "tag": "Colorido 🌈",
   "imgs": [
-   "assets/img/products/pedales-stolen.jpg?v=1784058795983",
-   "assets/img/products/pedales-stolen-3.jpg?v=1784058800908",
-   "assets/img/products/pedales-stolen-4.jpg?v=1784058803539",
-   "assets/img/products/pedales-stolen-5.jpg?v=1784058805501",
-   "assets/img/products/pedales-stolen-6.jpg?v=1784058808108",
-   "assets/img/products/pedales-stolen-2.jpg?v=1784058798429"
+   "assets/img/products/pedales-stolen.jpg?v=1787276283897",
+   "assets/img/products/pedales-stolen-2.jpg?v=1787276286905",
+   "assets/img/products/pedales-stolen-3.jpg?v=1787276288716",
+   "assets/img/products/pedales-stolen-4.jpg?v=1787276290286",
+   "assets/img/products/pedales-stolen-5.jpg?v=1787276291886"
   ],
   "slug": "pedales-stolen",
   "colors": [
@@ -3216,15 +3215,15 @@ window.ESCENA_PRODUCTS = [
    "Azul Aguamarina": [
     2
    ],
-   "Amarillo": [
+   "Azul": [
     3
    ],
-   "Azul": [
+   "Amarillo": [
     4
    ]
   },
   "order": 90,
-  "img": "assets/img/products/pedales-stolen.jpg?v=1784058795983"
+  "img": "assets/img/products/pedales-stolen.jpg?v=1787276283897"
  },
  {
   "slug": "cana-odyssey-cfl3",
@@ -3968,7 +3967,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PEDALES-PLATAFORMA-NEGRO-01",
   "units": 12,
   "order": 80,
-  "img": "assets/img/products/pedales-plataforma-negro-01.jpg"
+  "img": "assets/img/products/pedales-plataforma-negro-01.jpg?v=1787276293186"
  },
  {
   "slug": "demolition-pedales-rosa",
