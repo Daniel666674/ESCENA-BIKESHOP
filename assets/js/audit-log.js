@@ -2603,5 +2603,15 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-fiend-reynolds-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T19:38:05.682Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "cajas-de-frente-rant-ur"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
