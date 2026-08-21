@@ -2237,5 +2237,17 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-bsd-highriser"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T00:46:05.830Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "3 productos editados, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "pedales-metal-negro-03",
+   "pedales-metal-negro-02",
+   "pedales-metal-negro-01"
+  ],
+  "deleted": []
  }
 ];
