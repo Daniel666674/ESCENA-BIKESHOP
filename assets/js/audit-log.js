@@ -3060,5 +3060,17 @@ window.ESCENA_AUDIT = [
    "escena-stem-grabado-plata",
    "federal-stem-negro"
   ]
+ },
+ {
+  "ts": "2026-08-21T23:35:12.407Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 3 fotos subidas",
+  "created": [
+   "llanta-innova-camufladas"
+  ],
+  "edited": [],
+  "deleted": [
+   "coraza_innova_pro_2.40"
+  ]
  }
 ];
