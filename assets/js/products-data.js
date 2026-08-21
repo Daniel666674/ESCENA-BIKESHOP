@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Madero Trur skate co",
+  "brand": "Trur",
+  "cat": "skate-tablas",
+  "spec": "",
+  "price": 160000,
+  "sku": "SKT-TRU-002",
+  "units": 0,
+  "slug": "madero-trur-skate-co",
+  "img": "assets/img/products/madero-trur-skate-co.jpg?v=1787346656035"
+ },
+ {
   "n": "Cajas de frente Gw",
   "brand": "Gw",
   "cat": "caja-frente",
