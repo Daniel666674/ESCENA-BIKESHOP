@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Cult Old Skool",
+  "brand": "Cult",
+  "cat": "sillines",
+  "spec": "• Tipo: Pivotal",
+  "price": 200000,
+  "sku": "SIL-CLT-001",
+  "units": 0,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318841833",
+   "assets/img/products/silla-pivotal-cult-old-skool-2.jpg?v=1787318843058",
+   "assets/img/products/silla-pivotal-cult-old-skool-3.jpg?v=1787318844288"
+  ],
+  "slug": "silla-pivotal-cult-old-skool",
+  "img": "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318841833"
+ },
+ {
   "n": "Cajas de frente BSD Highriser",
   "brand": "BSD",
   "cat": "caja-frente",
