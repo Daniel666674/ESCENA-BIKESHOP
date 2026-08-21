@@ -2324,5 +2324,15 @@ window.ESCENA_AUDIT = [
    "stolen-sillin-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T02:26:15.872Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "silla-pivotal-eighties-zebra"
+  ],
+  "deleted": []
  }
 ];
