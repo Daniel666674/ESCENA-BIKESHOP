@@ -5122,7 +5122,14 @@ window.ESCENA_PRODUCTS = [
   "sku": "CORAZA_PRIMO_555_2.45",
   "units": 12,
   "order": 1320,
-  "img": "assets/img/products/coraza_primo_555_2.45.jpeg"
+  "imgs": [
+   "assets/img/products/coraza_primo_555_2.45.jpg?v=1787350561202",
+   "assets/img/products/coraza_primo_555_2.45-2.jpg?v=1787350563777",
+   "assets/img/products/coraza_primo_555_2.45-3.jpg?v=1787350566842",
+   "assets/img/products/coraza_primo_555_2.45-4.jpg?v=1787350569390",
+   "assets/img/products/coraza_primo_555_2.45-5.jpg?v=1787350572097"
+  ],
+  "img": "assets/img/products/coraza_primo_555_2.45.jpg?v=1787350561202"
  },
  {
   "slug": "timon-cult-heavens-gate-4p-cromado",
