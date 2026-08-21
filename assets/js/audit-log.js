@@ -2778,5 +2778,17 @@ window.ESCENA_AUDIT = [
    "coraza_cult_wafflecup_2.40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T22:51:56.256Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "coraza_odyssey_supercircuit_2.40",
+   "coraza_primo_555_2.45",
+   "coraza_cult_wafflecup_2.40"
+  ],
+  "deleted": []
  }
 ];
