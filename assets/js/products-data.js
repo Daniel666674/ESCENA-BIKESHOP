@@ -5110,7 +5110,14 @@ window.ESCENA_PRODUCTS = [
   "sku": "CORAZA_ODYSSEY_SUPERCIRCUIT_2.40",
   "units": 12,
   "order": 1390,
-  "img": "assets/img/products/coraza_odyssey_supercircuit_2.40.jpeg"
+  "imgs": [
+   "assets/img/products/coraza_odyssey_supercircuit_2.40.jpg?v=1787351353866",
+   "assets/img/products/coraza_odyssey_supercircuit_2.40-2.jpg?v=1787351355654",
+   "assets/img/products/coraza_odyssey_supercircuit_2.40-3.jpg?v=1787351357530",
+   "assets/img/products/coraza_odyssey_supercircuit_2.40-4.jpg?v=1787351359713",
+   "assets/img/products/coraza_odyssey_supercircuit_2.40-5.jpg?v=1787351362225"
+  ],
+  "img": "assets/img/products/coraza_odyssey_supercircuit_2.40.jpg?v=1787351353866"
  },
  {
   "slug": "coraza_primo_555_2.45",
