@@ -3907,11 +3907,11 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "order": 80,
   "imgs": [
+   "assets/img/products/cult-sillin-negro-3.jpg?v=1787277880381",
    "assets/img/products/cult-sillin-negro.jpg?v=1787277873760",
-   "assets/img/products/cult-sillin-negro-2.jpg?v=1787277877988",
-   "assets/img/products/cult-sillin-negro-3.jpg?v=1787277880381"
+   "assets/img/products/cult-sillin-negro-2.jpg?v=1787277877988"
   ],
-  "img": "assets/img/products/cult-sillin-negro.jpg?v=1787277873760"
+  "img": "assets/img/products/cult-sillin-negro-3.jpg?v=1787277880381"
  },
  {
   "slug": "odyssey-sillin-floral",
@@ -3943,10 +3943,11 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "order": 70,
   "imgs": [
+   "assets/img/products/animal-sillin-camuflado.jpg?v=1787279802283",
    "assets/img/products/animal-sillin-camuflado.jpg?v=1787277887365",
    "assets/img/products/animal-sillin-camuflado-2.jpg?v=1787277891575"
   ],
-  "img": "assets/img/products/animal-sillin-camuflado.jpg?v=1787277887365"
+  "img": "assets/img/products/animal-sillin-camuflado.jpg?v=1787279802283"
  },
  {
   "slug": "fit-sillin-diamante-negro",
