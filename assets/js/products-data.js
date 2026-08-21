@@ -5059,12 +5059,12 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "order": 1420,
   "imgs": [
-   "assets/img/products/coraza_cult_wafflecup_2.40.jpg?v=1787352083746",
    "assets/img/products/coraza_cult_wafflecup_2.40-2.jpg?v=1787352085456",
+   "assets/img/products/coraza_cult_wafflecup_2.40.jpg?v=1787352083746",
    "assets/img/products/coraza_cult_wafflecup_2.40-3.jpg?v=1787352087521",
    "assets/img/products/coraza_cult_wafflecup_2.40-4.jpg?v=1787352091579"
   ],
-  "img": "assets/img/products/coraza_cult_wafflecup_2.40.jpg?v=1787352083746"
+  "img": "assets/img/products/coraza_cult_wafflecup_2.40-2.jpg?v=1787352085456"
  },
  {
   "slug": "coraza_innova_pro_2.40",
@@ -5089,13 +5089,13 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "order": 1390,
   "imgs": [
+   "assets/img/products/coraza_odyssey_supercircuit_2.40-4.jpg?v=1787351359713",
    "assets/img/products/coraza_odyssey_supercircuit_2.40.jpg?v=1787351353866",
    "assets/img/products/coraza_odyssey_supercircuit_2.40-2.jpg?v=1787351355654",
    "assets/img/products/coraza_odyssey_supercircuit_2.40-3.jpg?v=1787351357530",
-   "assets/img/products/coraza_odyssey_supercircuit_2.40-4.jpg?v=1787351359713",
    "assets/img/products/coraza_odyssey_supercircuit_2.40-5.jpg?v=1787351362225"
   ],
-  "img": "assets/img/products/coraza_odyssey_supercircuit_2.40.jpg?v=1787351353866"
+  "img": "assets/img/products/coraza_odyssey_supercircuit_2.40-4.jpg?v=1787351359713"
  },
  {
   "slug": "coraza_primo_555_2.45",
@@ -5108,13 +5108,13 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "order": 1320,
   "imgs": [
+   "assets/img/products/coraza_primo_555_2.45-3.jpg?v=1787350566842",
    "assets/img/products/coraza_primo_555_2.45.jpg?v=1787350561202",
    "assets/img/products/coraza_primo_555_2.45-2.jpg?v=1787350563777",
-   "assets/img/products/coraza_primo_555_2.45-3.jpg?v=1787350566842",
    "assets/img/products/coraza_primo_555_2.45-4.jpg?v=1787350569390",
    "assets/img/products/coraza_primo_555_2.45-5.jpg?v=1787350572097"
   ],
-  "img": "assets/img/products/coraza_primo_555_2.45.jpg?v=1787350561202"
+  "img": "assets/img/products/coraza_primo_555_2.45-3.jpg?v=1787350566842"
  },
  {
   "slug": "timon-cult-heavens-gate-4p-cromado",
