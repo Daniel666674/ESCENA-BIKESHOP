@@ -3550,20 +3550,19 @@ window.ESCENA_PRODUCTS = [
   "order": 100,
   "imgFit": "cover",
   "imgs": [
+   "assets/img/products/cult-sillin-cuadros.jpg?v=1787338249733",
    "assets/img/products/cult-sillin-cuadros.jpg?v=1787318616445",
-   "assets/img/products/cult-sillin-cuadros-2.jpg?v=1787318617615"
+   "assets/img/products/cult-sillin-cuadros-3.jpg?v=1787338251655",
+   "assets/img/products/cult-sillin-cuadros-4.jpg?v=1787338253509",
+   "assets/img/products/cult-sillin-cuadros-5.jpg?v=1787338255458"
   ],
   "colors": [
    {
     "label": "BlBlan1",
     "units": 1
-   },
-   {
-    "label": "Jjjkkiij",
-    "units": 0
    }
   ],
-  "img": "assets/img/products/cult-sillin-cuadros.jpg?v=1787318616445"
+  "img": "assets/img/products/cult-sillin-cuadros.jpg?v=1787338249733"
  },
  {
   "slug": "horquilla-cromoly-negra-01",
