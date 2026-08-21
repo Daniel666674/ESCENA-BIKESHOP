@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Madero Trur",
+  "brand": "Trur",
+  "cat": "skate-tablas",
+  "spec": "Madera canandiese • Lija negra (incluida en el precio)•",
+  "price": 160000,
+  "sku": "SKT-TRU-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "madero-trur",
+  "img": "assets/img/products/madero-trur.jpg?v=1787331416470"
+ },
+ {
   "n": "Manzana Cult Crew Negra",
   "brand": "Cult",
   "cat": "manzana-delantera",
