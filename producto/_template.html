@@ -792,6 +792,22 @@ header.top-bar .brand .name { color: #fff; }
     // minimum across whichever real groups the shopper has picked so far,
     // not just whichever group was clicked most recently.
     var selectedUnits = {};
+    // Either group can carry its own price override for the selected option
+    // (admin.html's per-size/per-color Precio field). When both are set on
+    // the same product, size wins — matches admin.html's sell-modal
+    // precedence, so the two tools never disagree about which price is
+    // "the" price for a given selection.
+    var selectedPrice = {};
+    var PRICE_GROUP_PRIORITY = ["pdpVariant", "pdpVariantColor"];
+    function recomputePrice() {
+      if (!addCartBtn) return;
+      var price = null;
+      for (var i = 0; i < PRICE_GROUP_PRIORITY.length; i++) {
+        var gid = PRICE_GROUP_PRIORITY[i];
+        if (selectedPrice[gid] != null) { price = selectedPrice[gid]; break; }
+      }
+      addCartBtn.setAttribute("data-price", price !== null ? price : basePrice);
+    }
     function recomputeStock() {
       var units = null;
       groups.forEach(function (g) {
@@ -866,23 +882,23 @@ header.top-bar .brand .name { color: #fff; }
         });
         selected[group.id] = val;
         if (addCartBtn) addCartBtn.setAttribute("data-variant", combinedVariant());
-        // Color-specific price override: prefer the live catalog's price (an
-        // admin edit must show up immediately), fall back to what was baked
-        // into this button at publish time, and fall back again to the
-        // product's base price if this color has no override of its own.
-        if (group.id === "pdpVariantColor" && addCartBtn) {
-          var colorPrice = null;
-          if (liveList) {
-            var liveColor = liveList.filter(function (c) { return c.label === val; })[0];
-            if (liveColor && liveColor.price > 0) colorPrice = liveColor.price;
-          }
-          if (colorPrice === null) {
-            var cBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
-            var baked = cBtn ? parseFloat(cBtn.getAttribute("data-price")) : NaN;
-            if (baked > 0) colorPrice = baked;
-          }
-          addCartBtn.setAttribute("data-price", colorPrice !== null ? colorPrice : basePrice);
+        // This group's own price override for the selected option: prefer
+        // the live catalog's price (an admin edit must show up immediately),
+        // fall back to what was baked into this button at publish time, or
+        // null if this option has no override of its own. recomputePrice()
+        // resolves the final price across whichever group(s) have one set.
+        var ownPrice = null;
+        if (liveList) {
+          var liveOpt = liveList.filter(function (x) { return x.label === val; })[0];
+          if (liveOpt && liveOpt.price > 0) ownPrice = liveOpt.price;
         }
+        if (ownPrice === null) {
+          var optBtn = group.querySelector('button[data-value="' + val.replace(/"/g, '\\"') + '"]');
+          var baked = optBtn ? parseFloat(optBtn.getAttribute("data-price")) : NaN;
+          if (baked > 0) ownPrice = baked;
+        }
+        selectedPrice[group.id] = ownPrice;
+        recomputePrice();
         if (isRealGroup) {
           var units = null;
           if (liveList) {

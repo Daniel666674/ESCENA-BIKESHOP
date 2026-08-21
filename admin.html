@@ -886,7 +886,18 @@
 
           <section class="pm-section">
             <div class="pm-section-head">
-              <h4 class="pm-section-title">Variantes del producto</h4>
+              <h4 class="pm-section-title">Precio y variantes</h4>
+            </div>
+            <p class="pm-hint" style="margin-top:-.4rem; margin-bottom: 1rem;">El precio y costo de acá abajo son la base del producto. Si una talla o color necesita su propio precio (p. ej. una talla más grande cuesta más), ponéselo en su fila — vacío significa "usa el precio base".</p>
+            <div class="pmodal-grid" style="margin-bottom: 1.2rem;">
+              <div class="pmodal-field">
+                <label>Precio (COP)</label>
+                <input type="number" id="pmPrice" min="0" step="1" required />
+              </div>
+              <div class="pmodal-field">
+                <label>Costo (COP, interno)</label>
+                <input type="number" id="pmCost" min="0" step="1" />
+              </div>
             </div>
             <div class="pm-variant-table" id="pmSizesField" style="display:none;">
               <div class="pm-variant-head"><span>Talla</span><span>Stock</span><span>Precio (opcional)</span><span>Costo (opcional)</span><span></span></div>
@@ -916,14 +927,6 @@
                   <button type="button" data-val="1">En oferta</button>
                 </div>
                 <input type="checkbox" id="pmPromo" style="display:none;" />
-              </div>
-              <div class="pmodal-field">
-                <label>Precio (COP)</label>
-                <input type="number" id="pmPrice" min="0" step="1" required />
-              </div>
-              <div class="pmodal-field">
-                <label>Costo (COP, interno)</label>
-                <input type="number" id="pmCost" min="0" step="1" />
               </div>
               <div class="pmodal-field span2">
                 <label>Notas internas <span class="pm-label-note">(no se publican)</span></label>
@@ -2452,6 +2455,7 @@
       var opts = p.sizes.map(function (s) {
         var out = (s.units || 0) <= 0;
         return '<button type="button" data-value="' + esc(s.label) + '" data-units="' + (s.units || 0) + '"' +
+          (s.price > 0 ? ' data-price="' + s.price + '"' : '') +
           (s.label === activeLabel ? ' class="is-active"' : '') + (out ? ' disabled' : '') + '>' + esc(s.label) + '</button>';
       }).join("");
       return '<div class="pdp-variant" id="pdpVariant" data-prefix="Talla">\n' +
@@ -3039,6 +3043,21 @@
     var total = sizesTotal(modalSizes);
     document.getElementById("pmSizesTotal").textContent = modalSizes.length ? "Total: " + total + " unidades en " + modalSizes.length + " talla(s)." : "Sin tallas todavía.";
     if (typeof updatePreview === "function") updatePreview();
+  }
+  // Keeps the "Precio base: X" / "Costo base: X" placeholders on already-
+  // rendered variant rows in sync as the admin types into the base
+  // Precio/Costo fields — those placeholders are computed at render time,
+  // so without this they'd freeze at whatever the base fields held when a
+  // row was last added/removed, showing a stale (often "0") fallback value.
+  // Updates placeholder attributes directly rather than re-rendering the
+  // rows, so it never steals focus out of whatever the admin is typing in.
+  function refreshVariantPricePlaceholders() {
+    var basePrice = parseFloat(document.getElementById("pmPrice").value) || 0;
+    var baseCost = parseFloat(document.getElementById("pmCost").value) || 0;
+    var priceLabel = "Precio base: " + Math.round(basePrice).toLocaleString("es-CO");
+    var costLabel = "Costo base: " + Math.round(baseCost).toLocaleString("es-CO");
+    document.querySelectorAll('#pmSizesRows input[data-f="price"], #pmColorsRows input[data-f="price"]').forEach(function (el) { el.placeholder = priceLabel; });
+    document.querySelectorAll('#pmSizesRows input[data-f="cost"], #pmColorsRows input[data-f="cost"]').forEach(function (el) { el.placeholder = costLabel; });
   }
   function toggleUnitsVsSizes(cat) {
     var isSizes = isSizeCat(cat);
@@ -4710,8 +4729,8 @@
       renderInventory(document.getElementById("invSearch").value.trim());
     });
 
-    document.getElementById("pmPrice").addEventListener("input", updatePreview);
-    document.getElementById("pmCost").addEventListener("input", updatePreview);
+    document.getElementById("pmPrice").addEventListener("input", function () { updatePreview(); refreshVariantPricePlaceholders(); });
+    document.getElementById("pmCost").addEventListener("input", refreshVariantPricePlaceholders);
     document.getElementById("pmName").addEventListener("input", updatePreview);
     document.getElementById("pmUnits").addEventListener("input", updatePreview);
     // Auto-fill SKU (new products only) as brand/category are entered; stop the
