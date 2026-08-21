@@ -2644,5 +2644,16 @@ window.ESCENA_AUDIT = [
    "tija-negra-curva"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T20:29:27.855Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos editados, 6 fotos subidas",
+  "created": [],
+  "edited": [
+   "tija-negra-curva",
+   "tija-negra-01"
+  ],
+  "deleted": []
  }
 ];
