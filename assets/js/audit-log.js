@@ -2551,5 +2551,16 @@ window.ESCENA_AUDIT = [
    "cult-sillin-cuadros"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T19:08:24.664Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos editados, 5 fotos subidas",
+  "created": [],
+  "edited": [
+   "silla-pivotal-fitbikeco-negra",
+   "stolen-sillin-negro"
+  ],
+  "deleted": []
  }
 ];
