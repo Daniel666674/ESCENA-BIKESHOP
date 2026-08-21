@@ -2249,5 +2249,16 @@ window.ESCENA_AUDIT = [
    "pedales-metal-negro-01"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T00:49:23.725Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos eliminados",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "demolition-pedales-splash-blanco",
+   "demolition-pedales-splash-rojo"
+  ]
  }
 ];
