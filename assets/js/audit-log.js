@@ -2717,5 +2717,15 @@ window.ESCENA_AUDIT = [
    "pedales-stolen"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T21:11:00.194Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "madero-trur-skate-co"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
