@@ -2707,5 +2707,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "horquilla-cromoly-negra-01"
   ]
+ },
+ {
+  "ts": "2026-08-21T20:45:58.825Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "pedales-stolen"
+  ],
+  "deleted": []
  }
 ];
