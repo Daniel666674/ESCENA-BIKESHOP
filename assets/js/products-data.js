@@ -4642,7 +4642,12 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "tag": "Top 🔥",
   "order": 1210,
-  "img": "assets/img/products/tija-negra-02.jpg"
+  "imgs": [
+   "assets/img/products/tija-negra-02.jpg?v=1787342183267",
+   "assets/img/products/tija-negra-02-2.jpg?v=1787342184797",
+   "assets/img/products/tija-negra-02-3.jpg?v=1787342186313"
+  ],
+  "img": "assets/img/products/tija-negra-02.jpg?v=1787342183267"
  },
  {
   "slug": "tija-negra-curva",
