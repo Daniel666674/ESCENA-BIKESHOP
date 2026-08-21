@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Animal GHL",
+  "brand": "Animal",
+  "cat": "corazas",
+  "spec": "",
+  "price": 160000,
+  "sku": "COR-ANM-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/llanta-animal-ghl.jpg?v=1787354195634",
+   "assets/img/products/llanta-animal-ghl-2.jpg?v=1787354197347"
+  ],
+  "imgPos": "50% 100%",
+  "slug": "llanta-animal-ghl",
+  "img": "assets/img/products/llanta-animal-ghl.jpg?v=1787354195634"
+ },
+ {
   "n": "Cajas de frente Gw",
   "brand": "Gw",
   "cat": "caja-frente",
@@ -5018,25 +5035,6 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "order": 1630,
   "img": "assets/img/products/coraza_innova_pro_2.40.jpeg"
- },
- {
-  "slug": "coraza_odyssey_supercircuit_2.40",
-  "n": "Coraza Odyssey Supercircuit 2.40",
-  "brand": "Odyssey",
-  "cat": "corazas",
-  "spec": "20 x 2.40\" · Banda direccional · Negro",
-  "price": 120000,
-  "sku": "CORAZA_ODYSSEY_SUPERCIRCUIT_2.40",
-  "units": 12,
-  "order": 1390,
-  "imgs": [
-   "assets/img/products/coraza_odyssey_supercircuit_2.40-4.jpg?v=1787351359713",
-   "assets/img/products/coraza_odyssey_supercircuit_2.40.jpg?v=1787351353866",
-   "assets/img/products/coraza_odyssey_supercircuit_2.40-2.jpg?v=1787351355654",
-   "assets/img/products/coraza_odyssey_supercircuit_2.40-3.jpg?v=1787351357530",
-   "assets/img/products/coraza_odyssey_supercircuit_2.40-5.jpg?v=1787351362225"
-  ],
-  "img": "assets/img/products/coraza_odyssey_supercircuit_2.40-4.jpg?v=1787351359713"
  },
  {
   "slug": "coraza_primo_555_2.45",
