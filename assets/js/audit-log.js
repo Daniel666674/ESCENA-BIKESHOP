@@ -2572,5 +2572,15 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-fate-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T19:14:17.793Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "silla-pivotal-cult-old-skool"
+  ],
+  "deleted": []
  }
 ];
