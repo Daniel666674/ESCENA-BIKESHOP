@@ -4629,7 +4629,12 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "tag": "Nacional",
   "order": 1860,
-  "img": "assets/img/products/tija-negra-01.jpg"
+  "imgs": [
+   "assets/img/products/tija-negra-01.jpg?v=1787344154212",
+   "assets/img/products/tija-negra-01-2.jpg?v=1787344155699",
+   "assets/img/products/tija-negra-01-3.jpg?v=1787344157220"
+  ],
+  "img": "assets/img/products/tija-negra-01.jpg?v=1787344154212"
  },
  {
   "slug": "tija-negra-02",
@@ -4660,7 +4665,12 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "tag": "Top 🔥",
   "order": 1230,
-  "img": "assets/img/products/tija-negra-curva.jpg"
+  "imgs": [
+   "assets/img/products/tija-negra-curva.jpg?v=1787344159027",
+   "assets/img/products/tija-negra-curva-2.jpg?v=1787344160718",
+   "assets/img/products/tija-negra-curva-3.jpg?v=1787344162123"
+  ],
+  "img": "assets/img/products/tija-negra-curva.jpg?v=1787344159027"
  },
  {
   "slug": "brainstorm-freecoaster-kit-01",
