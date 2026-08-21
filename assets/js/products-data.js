@@ -9,7 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "manzana-cult-crew-negra",
-  "img": "assets/img/products/manzana-cult-crew-negra.jpg?v=1787320323180"
+  "img": "assets/img/products/manzana-cult-crew-negra.jpg?v=1787320441473"
  },
  {
   "n": "Silla Pivotal Cult Old Skool",
@@ -3717,7 +3717,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "order": 660,
   "imgFit": "cover",
-  "img": "assets/img/products/buje-delantero-cromado.jpg?v=1787320324613"
+  "img": "assets/img/products/buje-delantero-cromado.jpg?v=1787320442888"
  },
  {
   "slug": "kit-eje-espaciadores-plata",
