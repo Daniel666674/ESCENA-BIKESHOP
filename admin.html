@@ -1101,14 +1101,19 @@
     "daniel.f.acosta96@gmail.com",
     "escenabmx.co@gmail.com",
     "ivan.escena@gmail.com",
-    "tiaghinoacosta@gmail.com"
+    "tiaghinoacosta@gmail.com",
+    "camilor9507@gmail.com"
   ];
-  // "Página principal" (hero + category-video management) is restricted to
-  // this one account — hidden from the nav entirely for the other allowed
-  // admins above. This is a UI-level restriction only: anyone with their own
-  // GitHub token could still hit the API directly, same as for any other
-  // file in the repo — there's no real backend here to enforce a hard wall.
-  var OWNER_ONLY_EMAIL = "daniel.f.acosta96@gmail.com";
+  // "Página principal" (hero + category-video/photo management) is
+  // restricted to these accounts — hidden from the nav entirely for the
+  // other allowed admins above. This is a UI-level restriction only: anyone
+  // with their own GitHub token could still hit the API directly, same as
+  // for any other file in the repo — there's no real backend here to
+  // enforce a hard wall.
+  var OWNER_LEVEL_EMAILS = [
+    "daniel.f.acosta96@gmail.com",
+    "camilor9507@gmail.com"
+  ];
   /* ---- Real analytics (GA4 Data API + Search Console API) ----
      GA4_PROPERTY_ID is the NUMERIC property id (GA4 → Admin → Property Settings),
      not the "G-…" Measurement ID. Requires the Analytics Data API and Search
@@ -1332,7 +1337,8 @@
   var appInited = false;
 
   function isOwnerOnlySession() {
-    return (sessionStorage.getItem(GOOGLE_AUTH_KEY) || "").toLowerCase() === OWNER_ONLY_EMAIL;
+    var email = (sessionStorage.getItem(GOOGLE_AUTH_KEY) || "").toLowerCase();
+    return OWNER_LEVEL_EMAILS.map(function (e) { return e.toLowerCase(); }).indexOf(email) !== -1;
   }
   function applyOwnerOnlySections() {
     var isOwner = isOwnerOnlySession();
@@ -1416,7 +1422,7 @@
     });
   }
   function showAdminSection(id) {
-    if (id === "secPagina" && !isOwnerOnlySession()) return; // restricted — see OWNER_ONLY_EMAIL/applyOwnerOnlySections
+    if (id === "secPagina" && !isOwnerOnlySession()) return; // restricted — see OWNER_LEVEL_EMAILS/applyOwnerOnlySections
     ["secResumen", "secAnaliticas", "secInventario", "secPagina", "secActividad"].forEach(function (secId) {
       var el = document.getElementById(secId);
       if (el) el.style.display = secId === id ? "" : "none";
