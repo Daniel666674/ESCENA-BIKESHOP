@@ -6,15 +6,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "• Tipo: Pivotal",
   "price": 200000,
   "sku": "SIL-CLT-001",
-  "units": 0,
+  "units": 1,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318841833",
-   "assets/img/products/silla-pivotal-cult-old-skool-2.jpg?v=1787318843058",
-   "assets/img/products/silla-pivotal-cult-old-skool-3.jpg?v=1787318844288"
+   "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318930204",
+   "assets/img/products/silla-pivotal-cult-old-skool-2.jpg?v=1787318931434",
+   "assets/img/products/silla-pivotal-cult-old-skool-3.jpg?v=1787318932558"
   ],
   "slug": "silla-pivotal-cult-old-skool",
-  "img": "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318841833"
+  "img": "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318930204"
  },
  {
   "n": "Cajas de frente BSD Highriser",
