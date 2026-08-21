@@ -5045,7 +5045,11 @@ window.ESCENA_PRODUCTS = [
   "sku": "AROS_ECLAT_BONDI_CROMADOS",
   "units": 12,
   "order": 440,
-  "img": "assets/img/products/aros_eclat_bondi_cromados.jpg?v=1785655666793"
+  "imgs": [
+   "assets/img/products/aros_eclat_bondi_cromados.jpg?v=1787349564415",
+   "assets/img/products/aros_eclat_bondi_cromados.jpg?v=1785655666793"
+  ],
+  "img": "assets/img/products/aros_eclat_bondi_cromados.jpg?v=1787349564415"
  },
  {
   "slug": "aros_fate_negro",
