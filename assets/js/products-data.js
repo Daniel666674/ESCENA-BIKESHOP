@@ -2594,7 +2594,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "SLA",
   "units": 4,
   "imgs": [
-   "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787318254251",
+   "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787318881667",
    "assets/img/products/silla-pivotal-eighties-zebra-2.jpg?v=1787277837708",
    "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787277829455",
    "assets/img/products/silla-pivotal-eighties-zebra-4.jpg?v=1787279152721",
@@ -2625,7 +2625,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "imgFit": "cover",
-  "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787318254251"
+  "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787318881667"
  },
  {
   "slug": "grips-fiend-palmere",
