@@ -2292,5 +2292,15 @@ window.ESCENA_AUDIT = [
    "pedales-wellgo-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T01:51:41.916Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto eliminado",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "demolition-pedales-rosa"
+  ]
  }
 ];
