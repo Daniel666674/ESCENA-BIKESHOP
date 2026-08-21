@@ -2578,10 +2578,12 @@ window.ESCENA_PRODUCTS = [
   "units": 4,
   "tag": "Edición Especial!",
   "imgs": [
-   "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787277829455",
+   "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787279149805",
    "assets/img/products/silla-pivotal-eighties-zebra-2.jpg?v=1787277837708",
-   "assets/img/products/silla-pivotal-eighties-zebra-3.jpg?v=1787277855975",
-   "assets/img/products/silla-pivotal-eighties-zebra-4.jpg?v=1787277863308"
+   "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787277829455",
+   "assets/img/products/silla-pivotal-eighties-zebra-4.jpg?v=1787279152721",
+   "assets/img/products/silla-pivotal-eighties-zebra-4.jpg?v=1787277863308",
+   "assets/img/products/silla-pivotal-eighties-zebra-3.jpg?v=1787277855975"
   ],
   "colors": [
    {
@@ -2597,14 +2599,16 @@ window.ESCENA_PRODUCTS = [
   "imgColorMap": {
    "Blanco/Negro": [
     0,
-    1
+    1,
+    2
    ],
    "Morado/Negro": [
-    2,
-    3
+    3,
+    4,
+    5
    ]
   },
-  "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787277829455"
+  "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1787279149805"
  },
  {
   "slug": "grips-fiend-palmere",
