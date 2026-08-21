@@ -1,5 +1,35 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de frente Rant UR",
+  "brand": "Rant",
+  "cat": "caja-frente",
+  "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
+  "price": 95000,
+  "sku": "CJF-RNT-001",
+  "units": 3,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cajas-de-frente-rant-ur.jpg?v=1787341078749",
+   "assets/img/products/cajas-de-frente-rant-ur-2.jpg?v=1787341080293"
+  ],
+  "colors": [
+   {
+    "label": "Negra",
+    "units": 2,
+    "price": 95000,
+    "cost": 76000
+   },
+   {
+    "label": "Cromada",
+    "units": 1,
+    "price": 95000,
+    "cost": 76000
+   }
+  ],
+  "slug": "cajas-de-frente-rant-ur",
+  "img": "assets/img/products/cajas-de-frente-rant-ur.jpg?v=1787341078749"
+ },
+ {
   "n": "Madero Trur",
   "brand": "Trur",
   "cat": "skate-tablas",
