@@ -3072,5 +3072,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "coraza_innova_pro_2.40"
   ]
+ },
+ {
+  "ts": "2026-08-21T23:35:34.985Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto eliminado",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "coraza-innova-tire-20-x-2-40"
+  ]
  }
 ];
