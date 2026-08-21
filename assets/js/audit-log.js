@@ -2345,5 +2345,15 @@ window.ESCENA_AUDIT = [
    "animal-sillin-camuflado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:15:16.365Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "silla-pivotal-fiend-mills"
+  ],
+  "deleted": []
  }
 ];
