@@ -2510,5 +2510,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "fit-sillin-diamante-negro"
   ]
+ },
+ {
+  "ts": "2026-08-21T16:57:04.981Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "madero-trur"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
