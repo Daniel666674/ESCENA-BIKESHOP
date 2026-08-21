@@ -2582,5 +2582,16 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-cult-old-skool"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T19:18:13.534Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos editados, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "silla-pivotal-fitbikeco-negra",
+   "silla-pivotal-cult-old-skool"
+  ],
+  "deleted": []
  }
 ];
