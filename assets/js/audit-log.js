@@ -2481,5 +2481,17 @@ window.ESCENA_AUDIT = [
    "cana-volume-bison-negra-frontload"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:57:21.684Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "cana-volume-bison-frontload",
+   "cana-fiend-mills-topload",
+   "cana-shadow-chula-48mm"
+  ],
+  "deleted": []
  }
 ];
