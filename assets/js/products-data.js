@@ -1,5 +1,27 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Caña Federal Front Load Negra",
+  "brand": "Federal",
+  "cat": "stems",
+  "spec": "Alcance 50mm",
+  "price": 210000,
+  "sku": "CAN-FED-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/cana-federal-front-load-negra.jpg?v=1787354988160",
+   "assets/img/products/cana-federal-front-load-negra-2.jpg?v=1787354989452"
+  ],
+  "sizes": [
+   {
+    "label": "50MM",
+    "units": 1,
+    "price": 210000
+   }
+  ],
+  "slug": "cana-federal-front-load-negra",
+  "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1787354988160"
+ },
+ {
   "n": "Llanta Animal GHL",
   "brand": "Animal",
   "cat": "corazas",
@@ -3093,8 +3115,8 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgs": [
    "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1787319542875",
-   "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1787319544410",
-   "assets/img/products/cana-cult-salvation-v4-negra-topload-3.jpg?v=1787319545741"
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1787354990733",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-3.jpg?v=1787354991893"
   ],
   "sizes": [
    {
@@ -3360,18 +3382,27 @@ window.ESCENA_PRODUCTS = [
   "price": 250000,
   "sku": "Shadow chula",
   "units": 1,
-  "imgs": [
-   "assets/img/products/cana-shadow-chula-48mm.jpg?v=1785657341311",
-   "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1785657342567"
-  ],
   "sizes": [
    {
     "label": "48mm",
-    "units": 1
+    "units": 1,
+    "price": 250000
    }
   ],
   "order": 860,
-  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1785657341311"
+  "colors": [
+   {
+    "label": "Azul",
+    "units": 1,
+    "price": 250000
+   },
+   {
+    "label": "Cromado",
+    "units": 1,
+    "price": 250000
+   }
+  ],
+  "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1787354993089"
  },
  {
   "slug": "marco-cult-biggie-hammertone",
@@ -3905,29 +3936,12 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgs": [
-   "assets/img/products/stem-plata-pulido.jpg?v=1784333444499",
-   "assets/img/products/stem-plata-pulido-2.jpg?v=1784333445681"
+   "assets/img/products/stem-plata-pulido.jpg?v=1787354994194",
+   "assets/img/products/stem-plata-pulido-2.jpg?v=1787354995377"
   ],
   "order": 670,
-  "img": "assets/img/products/stem-plata-pulido.jpg?v=1784333444499"
- },
- {
-  "slug": "escena-stem-grabado-plata",
-  "n": "Caña Shadow",
-  "brand": "shadow",
-  "cat": "stems",
-  "spec": "Carga superior CNC",
-  "price": 250000,
-  "sku": "SHADOW-STEM-CHULA",
-  "units": 12,
-  "sizes": [
-   {
-    "label": "Única",
-    "units": 12
-   }
-  ],
-  "order": 870,
-  "img": "assets/img/products/escena-stem-grabado-plata.jpg?v=1785657345932"
+  "imgPos": "50% 0%",
+  "img": "assets/img/products/stem-plata-pulido.jpg?v=1787354994194"
  },
  {
   "slug": "federal-stem-plata",
@@ -3945,25 +3959,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 980,
-  "img": "assets/img/products/federal-stem-plata.jpg"
- },
- {
-  "slug": "federal-stem-negro",
-  "n": "Caña Federal Negra",
-  "brand": "Federal",
-  "cat": "stems",
-  "spec": "Carga frontal · Alcance 50mm · Negro mate",
-  "price": 210000,
-  "sku": "FEDERAL-STEM-NEGRO",
-  "units": 12,
-  "sizes": [
-   {
-    "label": "Única",
-    "units": 12
-   }
+  "imgs": [
+   "assets/img/products/federal-stem-plata.jpg?v=1787354996816",
+   "assets/img/products/federal-stem-plata-2.jpg?v=1787354997968"
   ],
-  "order": 990,
-  "img": "assets/img/products/federal-stem-negro.jpg"
+  "img": "assets/img/products/federal-stem-plata.jpg?v=1787354996816"
  },
  {
   "slug": "cult-sillin-negro",
