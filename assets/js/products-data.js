@@ -2418,7 +2418,6 @@ window.ESCENA_PRODUCTS = [
   "price": 330000,
   "sku": "CAN-VOL-002",
   "units": 1,
-  "tag": "Descuento",
   "imgs": [
    "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784330800302",
    "assets/img/products/cana-volume-bison-negra-frontload-3.jpg?v=1784326499224",
@@ -3348,7 +3347,6 @@ window.ESCENA_PRODUCTS = [
   "price": 350000,
   "sku": "S&MENDURO40",
   "units": 2,
-  "tag": "Nuevo",
   "sizes": [
    {
     "label": "40mm",
