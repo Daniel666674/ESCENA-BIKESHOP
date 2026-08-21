@@ -3964,18 +3964,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/pedales-plataforma-negro-01.jpg?v=1787276293186"
  },
  {
-  "slug": "demolition-pedales-rosa",
-  "n": "Pedales Demolition Rosa",
-  "brand": "Demolition",
-  "cat": "pedales",
-  "spec": "Plataforma nylon · 10 pines · Rosa",
-  "price": 100000,
-  "sku": "DEMOLITION-PEDALES-ROSA",
-  "units": 12,
-  "order": 50,
-  "img": "assets/img/products/demolition-pedales-rosa.jpg"
- },
- {
   "slug": "pedales-metal-negro-01",
   "n": "Pedales Plataforma Metal Negro",
   "brand": "FEDERAL",
