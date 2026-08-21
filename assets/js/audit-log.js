@@ -2697,5 +2697,15 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-gw"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T20:42:10.444Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto eliminado",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "horquilla-cromoly-negra-01"
+  ]
  }
 ];
