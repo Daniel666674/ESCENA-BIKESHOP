@@ -11,9 +11,7 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 15,
-    "price": 50000,
-    "cost": 40000
+    "units": 15
    }
   ],
   "slug": "cajas-de-frente-gw",
@@ -35,15 +33,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 4,
-    "price": 140000,
-    "cost": 112000
+    "units": 4
    },
    {
     "label": "Purpura",
-    "units": 0,
-    "price": 140000,
-    "cost": 112000
+    "units": 0
    }
   ],
   "slug": "cajas-de-frente-fiend-stack",
@@ -73,15 +67,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negra",
-    "units": 2,
-    "price": 95000,
-    "cost": 76000
+    "units": 2
    },
    {
     "label": "Cromada",
-    "units": 1,
-    "price": 95000,
-    "cost": 76000
+    "units": 1
    }
   ],
   "slug": "cajas-de-frente-rant-ur",
@@ -142,15 +132,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negra",
-    "units": 1,
-    "price": 130000,
-    "cost": 104000
+    "units": 1
    },
    {
     "label": "Cromada",
-    "units": 0,
-    "price": 130000,
-    "cost": 104000
+    "units": 0
    }
   ],
   "slug": "cajas-de-frente-bsd-highriser",
@@ -181,21 +167,15 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 5,
-    "price": 60000,
-    "cost": 48000
+    "units": 5
    },
    {
     "label": "Cromada",
-    "units": 5,
-    "price": 60000,
-    "cost": 48000
+    "units": 5
    },
    {
     "label": "Tornasol",
-    "units": 5,
-    "price": 70000,
-    "cost": 56000
+    "units": 5
    }
   ],
   "slug": "cajas-de-frente-trueno-v2",
@@ -224,9 +204,7 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
-    "price": 125000,
-    "cost": 100000
+    "units": 1
    }
   ],
   "slug": "cajas-de-frente-demolition-v2",
@@ -244,9 +222,7 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
-    "price": 125000,
-    "cost": 100000
+    "units": 1
    }
   ],
   "slug": "frente-integrado-demolition-v2",
@@ -269,9 +245,7 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 4,
-    "price": 120000,
-    "cost": 96000
+    "units": 4
    }
   ],
   "slug": "cajas-de-frente-cult-match-v2",
@@ -294,21 +268,15 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
-    "price": 120000,
-    "cost": 96000
+    "units": 1
    },
    {
     "label": "Rosado",
-    "units": 1,
-    "price": 120000,
-    "cost": 96000
+    "units": 1
    },
    {
     "label": "Cromado",
-    "units": 0,
-    "price": 120000,
-    "cost": 96000
+    "units": 0
    }
   ],
   "imgColorMap": {
@@ -343,27 +311,19 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 3,
-    "price": 140000,
-    "cost": 138000
+    "units": 3
    },
    {
     "label": "Azul",
-    "units": 1,
-    "price": 140000,
-    "cost": 138000
+    "units": 1
    },
    {
     "label": "Cromada",
-    "units": 1,
-    "price": 140000,
-    "cost": 138000
+    "units": 1
    },
    {
     "label": "Roja",
-    "units": 0,
-    "price": 140000,
-    "cost": 138000
+    "units": 0
    }
   ],
   "imgColorMap": {
@@ -400,18 +360,15 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Verde",
-    "units": 1,
-    "price": 50000
+    "units": 1
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 50000
+    "units": 0
    },
    {
     "label": "Amarillo",
-    "units": 0,
-    "price": 50000
+    "units": 0
    }
   ],
   "slug": "grips-animal-edwin-v2",
@@ -460,33 +417,27 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 20,
-    "price": 20000
+    "units": 20
    },
    {
     "label": "Rojo",
-    "units": 15,
-    "price": 20000
+    "units": 15
    },
    {
     "label": "Gris",
-    "units": 20,
-    "price": 20000
+    "units": 20
    },
    {
     "label": "Azul",
-    "units": 15,
-    "price": 20000
+    "units": 15
    },
    {
     "label": "Cafe",
-    "units": 15,
-    "price": 20000
+    "units": 15
    },
    {
     "label": "Naranja",
-    "units": 0,
-    "price": 20000
+    "units": 0
    }
   ],
   "slug": "grips-ontrail-yeti",
@@ -529,38 +480,31 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Morado/Negro",
-    "units": 1,
-    "price": 25000
+    "units": 1
    },
    {
     "label": "Aqua/Negro",
-    "units": 5,
-    "price": 25000
+    "units": 5
    },
    {
     "label": "Negro/Blanco",
-    "units": 0,
-    "price": 25000
+    "units": 0
    },
    {
     "label": "Rojo/Negro",
-    "units": 4,
-    "price": 25000
+    "units": 4
    },
    {
     "label": "Azul/blnaco",
-    "units": 2,
-    "price": 25000
+    "units": 2
    },
    {
     "label": "Arcoiris",
-    "units": 3,
-    "price": 25000
+    "units": 3
    },
    {
     "label": "Multicolor",
-    "units": 3,
-    "price": 25000
+    "units": 3
    }
   ],
   "imgColorMap": {
@@ -774,23 +718,19 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 6,
-    "price": 50000
+    "units": 6
    },
    {
     "label": "Verde Militar",
-    "units": 3,
-    "price": 50000
+    "units": 3
    },
    {
     "label": "Azul",
-    "units": 2,
-    "price": 50000
+    "units": 2
    },
    {
     "label": "Aqua",
-    "units": 0,
-    "price": 50000
+    "units": 0
    }
   ],
   "imgColorMap": {
@@ -922,6 +862,12 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "tenedor-colony-sweet-thoot",
   "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 1
+   }
+  ],
   "img": "assets/img/products/tenedor-colony-sweet-thoot.jpg?v=1785541248389"
  },
  {
@@ -935,11 +881,16 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Cromado",
-    "units": 1,
-    "price": 680000
+    "units": 1
    }
   ],
   "slug": "tall-order-ramp",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 1
+   }
+  ],
   "img": "assets/img/products/tall-order-ramp.jpg?v=1785529018434"
  },
  {
@@ -1068,13 +1019,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Cromado",
-    "units": 2,
-    "price": 390000
+    "units": 2
    },
    {
     "label": "Negro",
-    "units": 2,
-    "price": 370000
+    "units": 2
    }
   ],
   "imgColorMap": {
@@ -1157,13 +1106,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Cromado",
-    "units": 2,
-    "price": 460000
+    "units": 2
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 420000
+    "units": 0
    }
   ],
   "slug": "timon-fiend-reynolds",
@@ -1305,13 +1252,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Morado",
-    "units": 2,
-    "price": 50000
+    "units": 2
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 50000
+    "units": 0
    }
   ],
   "imgColorMap": {
@@ -1349,18 +1294,15 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Tornasol",
-    "units": 5,
-    "price": 80000
+    "units": 5
    },
    {
     "label": "Cromado",
-    "units": 2,
-    "price": 45000
+    "units": 2
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 35000
+    "units": 0
    }
   ],
   "imgColorMap": {
@@ -2560,18 +2502,15 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Tornasol",
-    "units": 4,
-    "price": 86000
+    "units": 4
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 55000
+    "units": 0
    },
    {
     "label": "Cromado",
-    "units": 1,
-    "price": 55000
+    "units": 1
    }
   ],
   "imgFit": "cover",
@@ -2592,6 +2531,12 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "order": 1520,
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 5
+   }
+  ],
   "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1785364188649"
  },
  {
@@ -2612,23 +2557,19 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Lava",
-    "units": 2,
-    "price": 50000
+    "units": 2
    },
    {
     "label": "Café",
-    "units": 2,
-    "price": 50000
+    "units": 2
    },
    {
     "label": "Morado",
-    "units": 1,
-    "price": 50000
+    "units": 1
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 50000
+    "units": 0
    }
   ],
   "imgColorMap": {
@@ -2749,13 +2690,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 4,
-    "price": 50000
+    "units": 4
    },
    {
     "label": "Morado",
-    "units": 4,
-    "price": 50000
+    "units": 4
    }
   ],
   "order": 20,
@@ -2955,15 +2894,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Blanco",
-    "units": 0,
-    "price": 200000,
-    "cost": 160000
+    "units": 0
    },
    {
     "label": "Negro",
-    "units": 4,
-    "price": 200000,
-    "cost": 160000
+    "units": 4
    }
   ],
   "order": 20,
@@ -3485,13 +3420,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Cromado",
-    "units": 1,
-    "price": 830000
+    "units": 1
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 800000
+    "units": 0
    }
   ],
   "imgColorMap": {
@@ -3502,6 +3435,12 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 1
+   }
+  ],
   "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1784327051012"
  },
  {
@@ -3656,13 +3595,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
-    "price": 690000
+    "units": 1
    },
    {
     "label": "Cromado",
-    "units": 1,
-    "price": 720000
+    "units": 1
    }
   ],
   "imgColorMap": {
@@ -3675,6 +3612,12 @@ window.ESCENA_PRODUCTS = [
   },
   "order": 330,
   "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "Única",
+    "units": 2
+   }
+  ],
   "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1785363973599"
  },
  {
@@ -4448,18 +4391,15 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 3,
-    "price": 50000
+    "units": 3
    },
    {
     "label": "Negro/Translucido",
-    "units": 3,
-    "price": 50000
+    "units": 3
    },
    {
     "label": "Rojo/Translucido",
-    "units": 3,
-    "price": 50000
+    "units": 3
    }
   ],
   "imgColorMap": {
@@ -4492,13 +4432,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Rojo/Morado",
-    "units": 2,
-    "price": 50000
+    "units": 2
    },
    {
     "label": "Amarillo/Morado",
-    "units": 2,
-    "price": 50000
+    "units": 2
    }
   ],
   "imgColorMap": {
@@ -4529,18 +4467,15 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Morado",
-    "units": 10,
-    "price": 55000
+    "units": 10
    },
    {
     "label": "Cafe",
-    "units": 20,
-    "price": 55000
+    "units": 20
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 55000
+    "units": 0
    }
   ],
   "imgColorMap": {
@@ -5142,13 +5077,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Cromado",
-    "units": 2,
-    "price": 400000
+    "units": 2
    },
    {
     "label": "Negro",
-    "units": 2,
-    "price": 380000
+    "units": 2
    }
   ],
   "imgFit": "cover",
@@ -5187,13 +5120,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 2,
-    "price": 370000
+    "units": 2
    },
    {
     "label": "Cromado",
-    "units": 2,
-    "price": 390000
+    "units": 2
    }
   ],
   "imgColorMap": {
@@ -5233,13 +5164,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 2,
-    "price": 380000
+    "units": 2
    },
    {
     "label": "Cromado",
-    "units": 2,
-    "price": 380000
+    "units": 2
    }
   ],
   "imgColorMap": {
@@ -5277,8 +5206,7 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
-    "price": 380000
+    "units": 1
    }
   ],
   "imgFit": "cover",
