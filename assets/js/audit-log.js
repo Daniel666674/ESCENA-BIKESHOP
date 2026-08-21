@@ -2386,5 +2386,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:28:04.914Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "silla-pivotal-eighties-zebra"
+  ],
+  "deleted": []
  }
 ];
