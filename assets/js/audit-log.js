@@ -2270,5 +2270,16 @@ window.ESCENA_AUDIT = [
    "pedales-demolition"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T01:38:17.498Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos editados, 6 fotos subidas",
+  "created": [],
+  "edited": [
+   "pedales-plataforma-negro-01",
+   "pedales-stolen"
+  ],
+  "deleted": []
  }
 ];
