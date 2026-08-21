@@ -136,20 +136,20 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "Negro",
     "units": 5,
-    "price": 70000,
-    "cost": 50000
+    "price": 60000,
+    "cost": 48000
    },
    {
     "label": "Cromada",
     "units": 5,
     "price": 60000,
-    "cost": 45000
+    "cost": 48000
    },
    {
     "label": "Tornasol",
     "units": 5,
-    "price": 60000,
-    "cost": 45000
+    "price": 70000,
+    "cost": 56000
    }
   ],
   "slug": "cajas-de-frente-trueno-v2",
