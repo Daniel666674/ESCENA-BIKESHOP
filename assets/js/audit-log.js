@@ -2613,5 +2613,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T19:39:16.101Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cajas-de-frente-rant-ur"
+  ],
+  "deleted": []
  }
 ];
