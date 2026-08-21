@@ -2593,5 +2593,15 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-cult-old-skool"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T19:24:30.038Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "silla-pivotal-fiend-reynolds-negra"
+  ],
+  "deleted": []
  }
 ];
