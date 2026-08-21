@@ -4002,14 +4002,18 @@ window.ESCENA_PRODUCTS = [
  {
   "slug": "pedales-metal-negro-01",
   "n": "Pedales Plataforma Metal Negro",
-  "brand": "",
+  "brand": "FEDERAL",
   "cat": "pedales",
   "spec": "Plataforma aluminio · 8 pines · Negro",
   "price": 130000,
   "sku": "PEDALES-METAL-NEGRO-01",
   "units": 12,
   "order": 20,
-  "img": "assets/img/products/pedales-metal-negro-01.jpg"
+  "imgs": [
+   "assets/img/products/pedales-metal-negro-01.jpg?v=1787273158339",
+   "assets/img/products/pedales-metal-negro-01-2.jpg?v=1787273159703"
+  ],
+  "img": "assets/img/products/pedales-metal-negro-01.jpg?v=1787273158339"
  },
  {
   "slug": "pedales-metal-negro-02",
@@ -4031,9 +4035,9 @@ window.ESCENA_PRODUCTS = [
   "spec": "Plataforma aluminio · 8 pines · Perfil bajo · Negro",
   "price": 135000,
   "sku": "PEDALES-METAL-NEGRO-03",
-  "units": 12,
+  "units": 6,
   "order": 0,
-  "img": "assets/img/products/pedales-metal-negro-03.jpg"
+  "img": "assets/img/products/pedales-metal-negro-03.jpg?v=1787273161211"
  },
  {
   "slug": "demolition-pedales-splash-blanco",
