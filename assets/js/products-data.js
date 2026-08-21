@@ -3286,11 +3286,13 @@ window.ESCENA_PRODUCTS = [
     0
    ],
    "Morado Amarillo": [
-    1,
-    3
+    1
    ],
    "Azul Blanco": [
     2
+   ],
+   "Blanco Lila": [
+    3
    ],
    "Blanco Negro": [
     4
