@@ -2758,5 +2758,15 @@ window.ESCENA_AUDIT = [
    "coraza_primo_555_2.45"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T22:29:31.830Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 5 fotos subidas",
+  "created": [],
+  "edited": [
+   "coraza_odyssey_supercircuit_2.40"
+  ],
+  "deleted": []
  }
 ];
