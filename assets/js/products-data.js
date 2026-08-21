@@ -3966,7 +3966,12 @@ window.ESCENA_PRODUCTS = [
   "sku": "STOLEN-SILLIN-NEGRO",
   "units": 12,
   "order": 90,
-  "img": "assets/img/products/stolen-sillin-negro.jpg"
+  "imgs": [
+   "assets/img/products/stolen-sillin-negro.jpg?v=1787278802727",
+   "assets/img/products/stolen-sillin-negro-2.jpg?v=1787278806057",
+   "assets/img/products/stolen-sillin-negro-3.jpg?v=1787278808312"
+  ],
+  "img": "assets/img/products/stolen-sillin-negro.jpg?v=1787278802727"
  },
  {
   "slug": "pedales-plataforma-negro-01",
