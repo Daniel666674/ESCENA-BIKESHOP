@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Cult Crew Negra",
+  "brand": "Cult",
+  "cat": "manzana-delantera",
+  "spec": "Carcasa aluminio 6061-T6 • Eje Hembra 36H • Rodamientos 2x Sellados 6902",
+  "price": 330000,
+  "sku": "MZD-CLT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "manzana-cult-crew-negra",
+  "img": "assets/img/products/manzana-cult-crew-negra.jpg?v=1787320193539"
+ },
+ {
   "n": "Silla Pivotal Cult Old Skool",
   "brand": "Cult",
   "cat": "sillines",
@@ -3704,7 +3716,8 @@ window.ESCENA_PRODUCTS = [
   "sku": "BUJE-DELANTERO-CROMADO",
   "units": 2,
   "order": 660,
-  "img": "assets/img/products/buje-delantero-cromado.jpg"
+  "imgFit": "cover",
+  "img": "assets/img/products/buje-delantero-cromado.jpg?v=1787320195073"
  },
  {
   "slug": "kit-eje-espaciadores-plata",
