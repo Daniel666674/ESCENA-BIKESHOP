@@ -3345,7 +3345,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "tag": "Colorido 🌈",
   "imgs": [
-   "assets/img/products/pedales-stolen.jpg?v=1787276283897",
+   "assets/img/products/pedales-stolen.jpg?v=1787345153809",
    "assets/img/products/pedales-stolen-2.jpg?v=1787276286905",
    "assets/img/products/pedales-stolen-3.jpg?v=1787276288716",
    "assets/img/products/pedales-stolen-4.jpg?v=1787276290286",
@@ -3392,7 +3392,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "order": 90,
-  "img": "assets/img/products/pedales-stolen.jpg?v=1787276283897"
+  "img": "assets/img/products/pedales-stolen.jpg?v=1787345153809"
  },
  {
   "slug": "cana-odyssey-cfl3",
