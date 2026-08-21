@@ -4879,7 +4879,13 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 120,
-  "img": "assets/img/products/wethepeople-doomsayer-negro.jpg?v=1784154923513"
+  "imgs": [
+   "assets/img/products/wethepeople-doomsayer-negro.jpg?v=1787353813246",
+   "assets/img/products/wethepeople-doomsayer-negro-2.jpg?v=1787353814871",
+   "assets/img/products/wethepeople-doomsayer-negro-3.jpg?v=1787353816393",
+   "assets/img/products/wethepeople-doomsayer-negro-4.jpg?v=1787353817763"
+  ],
+  "img": "assets/img/products/wethepeople-doomsayer-negro.jpg?v=1787353813246"
  },
  {
   "slug": "cult-havens-gate-alex-duleba-negro",
@@ -4917,7 +4923,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgs": [
    "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1786196440985",
-   "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1784315799762",
+   "assets/img/products/fiend-reynolds-v3-negro-2.jpg?v=1787353819100",
    "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1784156646261",
    "assets/img/products/fiend-reynolds-v3-negro-5.jpg?v=1784156650039",
    "assets/img/products/fiend-reynolds-v3-negro-4.jpg?v=1784156648375"
