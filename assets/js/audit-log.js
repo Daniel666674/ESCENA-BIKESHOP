@@ -2376,5 +2376,15 @@ window.ESCENA_AUDIT = [
    "cult-sillin-cuadros"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:27:28.587Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "silla-pivotal-cult-old-skool"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
