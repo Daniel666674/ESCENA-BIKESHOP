@@ -2727,5 +2727,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T21:22:47.389Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos eliminados",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "madero-trur",
+   "madero-trur-skate-co"
+  ]
  }
 ];
