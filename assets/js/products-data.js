@@ -2900,7 +2900,6 @@ window.ESCENA_PRODUCTS = [
   "price": 320000,
   "sku": "CAN-FND-001",
   "units": 1,
-  "tag": "Edición Especial",
   "imgs": [
    "assets/img/products/cana-fiend-mills-topload.jpg?v=1784330514456",
    "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1784330515383",
@@ -3047,7 +3046,6 @@ window.ESCENA_PRODUCTS = [
   "price": 330000,
   "sku": "CAN-VOL-001",
   "units": 1,
-  "tag": "Descuento 💸",
   "imgs": [
    "assets/img/products/cana-volume-bison-frontload.jpg?v=1785516828215",
    "assets/img/products/cana-volume-bison-frontload-2.jpg?v=1785516829649"
@@ -3295,7 +3293,6 @@ window.ESCENA_PRODUCTS = [
   "price": 250000,
   "sku": "Shadow chula",
   "units": 1,
-  "tag": "Top 🔥",
   "imgs": [
    "assets/img/products/cana-shadow-chula-48mm.jpg?v=1785657341311",
    "assets/img/products/cana-shadow-chula-48mm-2.jpg?v=1785657342567"
