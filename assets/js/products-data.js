@@ -1,5 +1,35 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de Frente Fiend Stack",
+  "brand": "Fiend",
+  "cat": "caja-frente",
+  "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm  ·  0.5 Lb",
+  "price": 140000,
+  "sku": "CJF-FND-001",
+  "units": 4,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cajas-de-frente-fiend-stack.jpg?v=1787344275682",
+   "assets/img/products/cajas-de-frente-fiend-stack-2.jpg?v=1787344277088"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 4,
+    "price": 140000,
+    "cost": 112000
+   },
+   {
+    "label": "Purpura",
+    "units": 0,
+    "price": 140000,
+    "cost": 112000
+   }
+  ],
+  "slug": "cajas-de-frente-fiend-stack",
+  "img": "assets/img/products/cajas-de-frente-fiend-stack.jpg?v=1787344275682"
+ },
+ {
   "n": "Cajas de frente Rant UR",
   "brand": "Rant",
   "cat": "caja-frente",
