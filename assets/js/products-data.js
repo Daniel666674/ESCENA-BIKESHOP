@@ -3014,11 +3014,9 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Nuevo",
   "imgs": [
-   "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1784071875410",
-   "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1784087352916",
-   "assets/img/products/cana-cult-salvation-v4-negra-topload-3.jpg?v=1784087354660",
-   "assets/img/products/cana-cult-salvation-v4-negra-topload-4.jpg?v=1784071879688",
-   "assets/img/products/cana-cult-salvation-v4-negra-topload-5.jpg?v=1784071881412"
+   "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1787319441188",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1787319442286",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-3.jpg?v=1787319443548"
   ],
   "sizes": [
    {
@@ -3027,7 +3025,8 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 710,
-  "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1784071875410"
+  "imgFit": "cover",
+  "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1787319441188"
  },
  {
   "slug": "cana-volume-bison-frontload",
