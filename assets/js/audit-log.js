@@ -2530,5 +2530,16 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "fiend-mills-sillin-negro"
   ]
+ },
+ {
+  "ts": "2026-08-21T18:35:57.078Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos editados, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "silla-pivotal-fate-negra",
+   "stolen-sillin-negro"
+  ],
+  "deleted": []
  }
 ];
