@@ -2416,5 +2416,15 @@ window.ESCENA_AUDIT = [
    "cana-cult-salvation-v4-negra-topload"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:39:10.568Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "cana-cult-salvation-v4-negra-topload"
+  ],
+  "deleted": []
  }
 ];
