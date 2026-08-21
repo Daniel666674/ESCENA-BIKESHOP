@@ -47,6 +47,14 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cajas-de-frente-fiend-stack",
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Purpura": [
+    1
+   ]
+  },
   "img": "assets/img/products/cajas-de-frente-fiend-stack.jpg?v=1787344275682"
  },
  {
