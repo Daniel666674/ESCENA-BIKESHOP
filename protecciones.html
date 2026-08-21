@@ -206,8 +206,8 @@
     .card:hover { box-shadow: 0 14px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
     .card .ph-link { display: block; }
     .card .ph { position: relative; aspect-ratio: 1 / 1; background: #0A0A0A; overflow: hidden; }
-    .card .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
-    .card:hover .ph img { transform: scale(1.05); }
+    .card .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; transform: scale(var(--img-zoom, 1)); }
+    .card:hover .ph img { transform: scale(calc(var(--img-zoom, 1) * 1.05)); }
     .card .tag { position: absolute; top: .7rem; left: .7rem; background: #fff; color: var(--ink); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .55rem; border-radius: 3px; }
     .card .body { padding: 1rem 1rem 1.2rem; display: flex; flex-direction: column; flex: 1; }
     .card .brand-lbl { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
@@ -605,6 +605,15 @@ var PROT_CATS = ["cascos","rodilleras","canilleras","tobilleras","rodi-cani-tobi
     return file.replace(/\.[a-zA-Z0-9]+$/, "");
   }
 
+  // Cover-photo crop, admin-set via the frame editor in the product modal
+  // (imgPos/imgZoom) -- lets a photo that isn't naturally square (or isn't
+  // centered on the interesting part) still land right inside this grid's
+  // hard 1:1 crop instead of getting an arbitrary center-crop.
+  function coverFrameStyle(p){
+    var s = "object-position:" + (p.imgPos || "50% 50%") + ";";
+    if (p.imgZoom && p.imgZoom > 100) s += "--img-zoom:" + (p.imgZoom / 100) + ";";
+    return s;
+  }
   function cardHTML(p){
     var wPrefix = (window.EscenaWholesale && window.EscenaWholesale.isActive()) ? "🏷️ PEDIDO MAYORISTA (15% aplicado)\n" : "";
     var msg = encodeURIComponent(wPrefix + "Hola ESCENA 🐕, quiero pedir: " + p.n + " (" + p.brand + ") — " + cop(p.price) + ". ¿Está disponible?");
@@ -615,7 +624,7 @@ var PROT_CATS = ["cascos","rodilleras","canilleras","tobilleras","rodi-cani-tobi
     return '<article class="card' + (agotado ? ' is-agotado' : '') + '">' +
         (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
           '<div class="ph">' + tagHTML +
-            '<img src="'+p.img+'" alt="'+esc(p.n)+(p.brand ? ' - '+esc(p.brand) : '')+' BMX" loading="lazy" width="400" height="400"></div>' +
+            '<img src="'+p.img+'" alt="'+esc(p.n)+(p.brand ? ' - '+esc(p.brand) : '')+' BMX" loading="lazy" width="400" height="400" style="'+coverFrameStyle(p)+'"></div>' +
         (hasDetailPage ? '</a>' : '</div>') +
         '<div class="body">' +
           '<span class="brand-lbl">'+esc(p.brand)+'</span>' +

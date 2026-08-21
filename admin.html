@@ -335,6 +335,18 @@
     .pmodal-actions { display: flex; gap: .7rem; margin-top: 1.4rem; }
     .pmodal-actions .btn { flex: 1; }
 
+    /* Cover-photo crop control: the tienda/mtb/protecciones/skate grid cards
+       and the admin's own inventory list all show imgs[0] inside a hard 1:1
+       object-fit:cover box (see .card .ph / .inv-card-ph) — off-center or
+       non-square photos get cropped with no say from the admin. This preview
+       mirrors that exact box so "what you see here" really is "what
+       customers see", with the same zoom+position frame-editor already used
+       for hero slides and category cards (see frameEditorHTML/frameStyleAttr). */
+    .pm-cover-frame { display: flex; gap: 1rem; align-items: flex-start; margin-top: .8rem; padding-top: .8rem; border-top: 1px dashed var(--card-line); }
+    .pm-cover-frame-preview { position: relative; width: 110px; height: 110px; flex-shrink: 0; border-radius: 8px; overflow: hidden; background: #0A0A0A; }
+    .pm-cover-frame-preview img { width: 100%; height: 100%; object-fit: cover; }
+    .pm-cover-frame .frame-editor { border-top: none; padding-top: 0; flex: 1; min-width: 0; }
+
     /* ---- Product modal: two-column redesign ---- */
     .pmodal-product { max-width: 1080px; padding: 2.2rem 2.4rem; }
     .pmodal-product h3 { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.5rem; letter-spacing: -.01em; margin-bottom: .2rem; }
@@ -846,12 +858,13 @@
             </div>
             <p class="pm-hint">Se comprimen automáticamente al subir. <b>&lsaquo; &rsaquo;</b> ordena, <b>&#8635;</b> rota, <b>&#9986;</b> quita el fondo (en tu navegador, sin instalar nada — la primera vez tarda por descargar el modelo). La primera foto ("Portada") es la que se muestra en la tienda.</p>
             <div class="pmodal-field" style="margin-top:.6rem;">
-              <label>Ajuste de la foto en la página <span class="pm-label-note">(cómo se ve en la tienda)</span></label>
+              <label>Ajuste de la foto en la página del producto <span class="pm-label-note">(la foto grande)</span></label>
               <select id="pmImgFit">
                 <option value="auto">Automático — muestra la foto completa (recomendado)</option>
                 <option value="cover">Rellenar el cuadro — puede recortar bordes</option>
               </select>
             </div>
+            <div class="pm-cover-frame" id="pmCoverFrameWrap" style="display:none;"></div>
           </section>
 
           <section class="pm-section">
@@ -1975,6 +1988,12 @@
   // without re-uploading from the phone. Cleared (null) once undone, and reset
   // whenever the modal opens for a different product.
   var modalPhotoBgBackup = [];
+  // How imgs[0] (the cover photo) gets cropped into the hard 1:1 boxes used
+  // by the tienda/mtb/protecciones/skate grid cards and the admin's own
+  // inventory list -- see renderCoverFrame(). Reset whenever the modal opens
+  // for a different product / new product.
+  var modalCoverZoom = 100;
+  var modalCoverPos = "";
   // Count of in-flight "Quitar fondo" operations for the currently open modal.
   // Closing the modal or saving while this is >0 would silently discard the
   // in-progress edit (modalPhotos gets reassigned/read before the async result
@@ -2095,6 +2114,8 @@
     if (!o.promo) delete o.promo; // default false; keep only when on sale
     delete o.cost; delete o.notes; // internal-only, never published
     if (o.imgFit === "auto" || !o.imgFit) delete o.imgFit; // default; keep only an explicit override
+    if (!o.imgZoom || o.imgZoom <= 100) delete o.imgZoom; // default; keep only an explicit zoom > 100%
+    if (!o.imgPos) delete o.imgPos; // default (centered); keep only an explicit crop position
     delete o._pageSnapshot; // internal-only, drives static page regeneration
     return o;
   }
@@ -2164,6 +2185,23 @@
     }
     return true;
   }
+
+  // Cheap probe for a low-resolution source *before* committing to it — once
+  // downscaled/compressed there's no way to tell "genuinely soft photo" from
+  // "just a small source", so the warning has to fire at upload time, using
+  // the ORIGINAL decoded dimensions, not whatever compressDataUri produces.
+  function imageDimsOf(dataUri) {
+    return new Promise(function (resolve) {
+      var img = new Image();
+      img.onload = function () { resolve({ w: img.width, h: img.height }); };
+      img.onerror = function () { resolve(null); };
+      img.src = dataUri;
+    });
+  }
+  // Below this, a photo will look visibly soft blown up to the product page's
+  // main image (~700px) or zoomed in the lightbox — worth flagging right when
+  // it's uploaded, while the admin can still easily grab a better source.
+  var LOW_RES_WARN_PX = 800;
 
   function compressDataUri(dataUri, maxDim, quality) {
     return new Promise(function (resolve, reject) {
@@ -2588,7 +2626,7 @@
       var u = uploads[i];
       var name = u.p.slug + (u.idx ? "-" + (u.idx + 1) : "") + ".jpg";
       var path = "assets/img/products/" + name;
-      return compressDataUri(u.src, 1200, 0.8).catch(function (e) {
+      return compressDataUri(u.src, 1600, 0.87).catch(function (e) {
         throw new Error("No pude procesar la foto de \"" + (u.p.n || u.p.slug) + "\" (" + e.message + "). Probá con una foto en formato JPG o PNG.");
       }).then(function (c) {
         var b64 = c.split(",")[1];
@@ -2773,7 +2811,7 @@
       (p.colors && p.colors.length ? '<span class="mini-badge">' + p.colors.length + ' color' + (p.colors.length > 1 ? "es" : "") + '</span>' : '') +
       marginBadgeHTML(p);
     return '<article class="inv-card" data-idx="' + idx + '">' +
-      '<div class="inv-card-ph"><img src="' + p.imgs[0] + '" alt="" loading="lazy" />' + countBadge + statusHTML + ordHTML + '</div>' +
+      '<div class="inv-card-ph"><img src="' + p.imgs[0] + '" alt="" loading="lazy" style="' + frameStyleAttr(p.imgZoom, p.imgPos) + '" />' + countBadge + statusHTML + ordHTML + '</div>' +
       '<div class="inv-card-body">' +
         '<span class="inv-card-brand" title="' + esc(p.brand) + '">' + esc(p.brand) + '</span>' +
         '<h3 class="inv-card-name" title="' + esc(p.n) + '">' + esc(p.n) + '</h3>' +
@@ -3024,7 +3062,27 @@
         '</div>' + picker +
         '</div>';
     }).join("");
+    renderCoverFrame();
     if (typeof updatePreview === "function") updatePreview();
+  }
+
+  // How imgs[0] gets cropped into the hard 1:1 boxes the storefront grids and
+  // the admin's own inventory list use (see the .pm-cover-frame CSS comment).
+  // Reuses the exact zoom+position frame-editor already built for hero
+  // slides/category cards (frameEditorHTML/frameStyleAttr) so it behaves and
+  // looks identically familiar, just scoped to this one preview box instead
+  // of a grid of cards.
+  function renderCoverFrame() {
+    var wrap = document.getElementById("pmCoverFrameWrap");
+    if (!wrap) return;
+    if (!modalPhotos.length) { wrap.style.display = "none"; wrap.innerHTML = ""; return; }
+    wrap.style.display = "flex";
+    wrap.innerHTML =
+      '<div class="pm-cover-frame-preview"><img src="' + modalPhotos[0] + '" alt="" style="' + frameStyleAttr(modalCoverZoom, modalCoverPos) + '" /></div>' +
+      '<div>' +
+      '<label style="display:block; font-size:.78rem; font-weight:700; margin-bottom:.5rem;">Encuadre de portada <span class="pm-label-note">(cómo se recorta en la tienda)</span></label>' +
+      frameEditorHTML(modalCoverZoom, modalCoverPos, true) +
+      '</div>';
   }
 
   function renderModalSizes() {
@@ -3125,6 +3183,8 @@
     modalPhotos = p ? p.imgs.slice() : [];
     modalPhotoBgBackup = modalPhotos.map(function () { return null; });
     bgProcessing = 0;
+    modalCoverZoom = (p && p.imgZoom) || 100;
+    modalCoverPos = (p && p.imgPos) || "";
     // Reverse p.imgColorMap ({label: [indices]}) into one label per photo index.
     modalPhotoColors = modalPhotos.map(function () { return ""; });
     if (p && p.imgColorMap) {
@@ -3360,7 +3420,7 @@
     { pos: "0% 50%", label: "←" }, { pos: "50% 50%", label: "•" }, { pos: "100% 50%", label: "→" },
     { pos: "0% 100%", label: "↙" }, { pos: "50% 100%", label: "↓" }, { pos: "100% 100%", label: "↘" }
   ];
-  function frameEditorHTML(zoom, pos) {
+  function frameEditorHTML(zoom, pos, noSaveBtn) {
     var z = zoom || 100;
     return '<div class="frame-editor">' +
       '<div class="frame-zoom-row"><label>Zoom</label><input type="range" class="frame-zoom-input" min="100" max="200" value="' + z + '" /><span class="frame-zoom-val">' + z + '%</span></div>' +
@@ -3369,7 +3429,7 @@
         return '<button type="button" class="frame-pos-btn' + (pos === g.pos ? ' is-active' : '') + '" data-pos="' + g.pos + '" title="Posición">' + g.label + '</button>';
       }).join("") +
       '</div>' +
-      '<button type="button" class="btn btn-outline btn-sm frame-save-btn">Guardar encuadre</button>' +
+      (noSaveBtn ? '' : '<button type="button" class="btn btn-outline btn-sm frame-save-btn">Guardar encuadre</button>') +
       '</div>';
   }
   // Live preview style for the admin's own <img>/<video> preview elements
@@ -4804,15 +4864,21 @@
           });
         }).then(function (raw) {
           if (!raw) return;
-          return compressDataUri(raw, 1200, 0.8).then(function (compressed) {
-            modalPhotos.push(compressed);
-            modalPhotoColors.push("");
-            modalPhotoBgBackup.push(null);
-          }).catch(function (e) {
-            var msg = (e && /negro/.test(e.message))
-              ? '"' + file.name + '" salió en negro — probá de nuevo, o subila desde otro navegador (no desde WhatsApp/Instagram).'
-              : 'No se pudo procesar "' + file.name + '" — probá con una foto en JPG o PNG.';
-            showToast(msg);
+          return imageDimsOf(raw).then(function (dims) {
+            if (dims && Math.max(dims.w, dims.h) < LOW_RES_WARN_PX) {
+              showToast('"' + file.name + '" es de baja resolución (' + dims.w + '×' + dims.h + 'px) — puede verse pixelada al ampliarla. Si tenés una versión más grande, subí esa en su lugar.');
+            }
+          }).then(function () {
+            return compressDataUri(raw, 1600, 0.87).then(function (compressed) {
+              modalPhotos.push(compressed);
+              modalPhotoColors.push("");
+              modalPhotoBgBackup.push(null);
+            }).catch(function (e) {
+              var msg = (e && /negro/.test(e.message))
+                ? '"' + file.name + '" salió en negro — probá de nuevo, o subila desde otro navegador (no desde WhatsApp/Instagram).'
+                : 'No se pudo procesar "' + file.name + '" — probá con una foto en JPG o PNG.';
+              showToast(msg);
+            });
           });
         });
       });
@@ -4912,6 +4978,27 @@
       modalPhotoColors[parseInt(sel.getAttribute("data-i"), 10)] = sel.value;
     });
 
+    // Cover-photo crop control (see renderCoverFrame) — live preview, no
+    // separate save step, same as every other field in this modal: it's
+    // just part of modalCoverZoom/modalCoverPos until the whole form submits.
+    document.getElementById("pmCoverFrameWrap").addEventListener("click", function (e) {
+      var posBtn = e.target.closest(".frame-pos-btn");
+      if (posBtn) {
+        modalCoverPos = posBtn.getAttribute("data-pos");
+        this.querySelectorAll(".frame-pos-btn").forEach(function (b) { b.classList.toggle("is-active", b === posBtn); });
+        var img = this.querySelector(".pm-cover-frame-preview img");
+        if (img) img.style.cssText = frameStyleAttr(modalCoverZoom, modalCoverPos);
+      }
+    });
+    document.getElementById("pmCoverFrameWrap").addEventListener("input", function (e) {
+      if (!e.target.classList.contains("frame-zoom-input")) return;
+      modalCoverZoom = parseInt(e.target.value, 10) || 100;
+      var valEl = this.querySelector(".frame-zoom-val");
+      if (valEl) valEl.textContent = modalCoverZoom + "%";
+      var img = this.querySelector(".pm-cover-frame-preview img");
+      if (img) img.style.cssText = frameStyleAttr(modalCoverZoom, modalCoverPos);
+    });
+
     document.getElementById("pmCat").addEventListener("change", function () {
       toggleUnitsVsSizes(this.value);
       refreshAutoSku();
@@ -4988,6 +5075,8 @@
         imgFit: document.getElementById("pmImgFit").value,
         imgs: modalPhotos.length ? modalPhotos : ["assets/img/escena-logo.jpg"]
       };
+      if (modalCoverZoom > 100) fields.imgZoom = modalCoverZoom; else fields.imgZoom = 0;
+      if (modalCoverPos) fields.imgPos = modalCoverPos; else fields.imgPos = "";
       if (isSizeCat(catVal)) {
         fields.sizes = modalSizes
           .map(function (s) {
