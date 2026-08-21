@@ -2426,5 +2426,17 @@ window.ESCENA_AUDIT = [
    "cana-cult-salvation-v4-negra-topload"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:50:00.907Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 2 fotos subidas",
+  "created": [
+   "manzana-cult-crew-negra"
+  ],
+  "edited": [
+   "buje-delantero-cromado"
+  ],
+  "deleted": []
  }
 ];
