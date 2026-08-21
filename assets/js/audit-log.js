@@ -3020,5 +3020,17 @@ window.ESCENA_AUDIT = [
    "wethepeople-doomsayer-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T23:16:42.809Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 2 fotos subidas",
+  "created": [
+   "llanta-animal-ghl"
+  ],
+  "edited": [],
+  "deleted": [
+   "coraza_odyssey_supercircuit_2.40"
+  ]
  }
 ];
