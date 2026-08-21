@@ -3969,10 +3969,10 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 980,
   "imgs": [
-   "assets/img/products/federal-stem-plata.jpg?v=1787354996816",
+   "assets/img/products/federal-stem-plata.jpg?v=1787355746343",
    "assets/img/products/federal-stem-plata-2.jpg?v=1787354997968"
   ],
-  "img": "assets/img/products/federal-stem-plata.jpg?v=1787354996816"
+  "img": "assets/img/products/federal-stem-plata.jpg?v=1787355746343"
  },
  {
   "slug": "cult-sillin-negro",
