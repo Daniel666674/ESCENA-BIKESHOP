@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de frente Gw",
+  "brand": "Gw",
+  "cat": "caja-frente",
+  "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
+  "price": 50000,
+  "sku": "CJF-GWB-001",
+  "units": 15,
+  "imgFit": "cover",
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 15,
+    "price": 50000,
+    "cost": 40000
+   }
+  ],
+  "slug": "cajas-de-frente-gw",
+  "img": "assets/img/products/cajas-de-frente-gw.jpg?v=1787344758372"
+ },
+ {
   "n": "Cajas de Frente Fiend Stack",
   "brand": "Fiend",
   "cat": "caja-frente",
