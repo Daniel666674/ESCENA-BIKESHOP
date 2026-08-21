@@ -3012,11 +3012,10 @@ window.ESCENA_PRODUCTS = [
   "price": 320000,
   "sku": "STEAM",
   "units": 1,
-  "tag": "Nuevo",
   "imgs": [
-   "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1787319441188",
-   "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1787319442286",
-   "assets/img/products/cana-cult-salvation-v4-negra-topload-3.jpg?v=1787319443548"
+   "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1787319542875",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1787319544410",
+   "assets/img/products/cana-cult-salvation-v4-negra-topload-3.jpg?v=1787319545741"
   ],
   "sizes": [
    {
@@ -3026,7 +3025,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 710,
   "imgFit": "cover",
-  "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1787319441188"
+  "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1787319542875"
  },
  {
   "slug": "cana-volume-bison-frontload",
