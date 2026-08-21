@@ -5086,7 +5086,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "CORAZA_CULT_WAFFLECUP_2.40",
   "units": 12,
   "order": 1420,
-  "img": "assets/img/products/coraza_cult_wafflecup_2.40.jpeg"
+  "imgs": [
+   "assets/img/products/coraza_cult_wafflecup_2.40.jpg?v=1787352083746",
+   "assets/img/products/coraza_cult_wafflecup_2.40-2.jpg?v=1787352085456",
+   "assets/img/products/coraza_cult_wafflecup_2.40-3.jpg?v=1787352087521",
+   "assets/img/products/coraza_cult_wafflecup_2.40-4.jpg?v=1787352091579"
+  ],
+  "img": "assets/img/products/coraza_cult_wafflecup_2.40.jpg?v=1787352083746"
  },
  {
   "slug": "coraza_innova_pro_2.40",
