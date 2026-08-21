@@ -2832,7 +2832,12 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "order": 50,
   "imgFit": "cover",
-  "img": "assets/img/products/silla-pivotal-fate-negra.jpg?v=1786464129501"
+  "imgs": [
+   "assets/img/products/silla-pivotal-fate-negra.jpg?v=1787337344165",
+   "assets/img/products/silla-pivotal-fate-negra.jpg?v=1786464129501",
+   "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1787337348095"
+  ],
+  "img": "assets/img/products/silla-pivotal-fate-negra.jpg?v=1787337344165"
  },
  {
   "slug": "silla-pivotal-fiend-reynolds-negra",
@@ -4011,11 +4016,12 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "order": 90,
   "imgs": [
+   "assets/img/products/stolen-sillin-negro.jpg?v=1787337349660",
+   "assets/img/products/stolen-sillin-negro-3.jpg?v=1787278808312",
    "assets/img/products/stolen-sillin-negro.jpg?v=1787278802727",
-   "assets/img/products/stolen-sillin-negro-2.jpg?v=1787278806057",
-   "assets/img/products/stolen-sillin-negro-3.jpg?v=1787278808312"
+   "assets/img/products/stolen-sillin-negro-2.jpg?v=1787278806057"
   ],
-  "img": "assets/img/products/stolen-sillin-negro.jpg?v=1787278802727"
+  "img": "assets/img/products/stolen-sillin-negro.jpg?v=1787337349660"
  },
  {
   "slug": "pedales-plataforma-negro-01",
