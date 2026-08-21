@@ -206,9 +206,19 @@
     .card:hover { box-shadow: 0 14px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
     .card .ph-link { display: block; }
     .card .ph { position: relative; aspect-ratio: 1 / 1; background: #0A0A0A; overflow: hidden; }
-    .card .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; transform: scale(var(--img-zoom, 1)); }
+    /* Automatic photo formatting (default, no admin tuning needed): the whole
+       photo is always shown (object-fit:contain, never cropped), any
+       letterbox space around it filled with a blurred copy of the same photo
+       instead of dead black bars -- same technique already used on the
+       product page. A product can still opt into a hard crop-to-fill square
+       (imgFit:"cover" in admin.html) via .fit-cover, which drops the blur
+       layer and switches to object-fit:cover. */
+    .card .ph-blur { position: absolute; z-index: 0; inset: -12%; background-size: cover; background-position: center; filter: blur(22px) brightness(.65); }
+    .card .ph img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; transition: transform .4s; transform: scale(var(--img-zoom, 1)); }
+    .card .ph.fit-cover .ph-blur { display: none; }
+    .card .ph.fit-cover img { object-fit: cover; }
     .card:hover .ph img { transform: scale(calc(var(--img-zoom, 1) * 1.05)); }
-    .card .tag { position: absolute; top: .7rem; left: .7rem; background: #fff; color: var(--ink); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .55rem; border-radius: 3px; }
+    .card .tag { position: absolute; z-index: 2; top: .7rem; left: .7rem; background: #fff; color: var(--ink); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .55rem; border-radius: 3px; }
     .card .body { padding: 1rem 1rem 1.2rem; display: flex; flex-direction: column; flex: 1; }
     .card .brand-lbl { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
     .card h3 { font-size: .92rem; font-weight: 600; margin: .25rem 0 .1rem; line-height: 1.3; }
@@ -630,9 +640,11 @@ header.top-bar .brand .name { color: #fff; }
     var agotado = (typeof p.units === "number" && p.units <= 0);
     var promoHTML = p.promo ? '<span class="tag" style="background:var(--gold,#C79A3A);color:#fff;left:.7rem;right:auto;">PROMO</span>' : '';
     var tagHTML = promoHTML + (agotado ? '<span class="tag" style="background:#c0392b;color:#fff;">Agotado</span>' : (p.tag ? '<span class="tag">'+esc(p.tag)+'</span>' : ''));
+    var fitCover = p.imgFit === "cover";
     return '<article class="card' + (agotado ? ' is-agotado' : '') + '">' +
         (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
-          '<div class="ph">' + tagHTML +
+          '<div class="ph' + (fitCover ? ' fit-cover' : '') + '">' + tagHTML +
+            (fitCover ? '' : '<div class="ph-blur" style="background-image:url(\''+p.img+'\')"></div>') +
             '<img src="'+p.img+'" alt="'+esc(p.n)+(p.brand ? ' - '+esc(p.brand) : '')+'" loading="lazy" width="400" height="400" style="'+coverFrameStyle(p)+'"></div>' +
         (hasDetailPage ? '</a>' : '</div>') +
         '<div class="body">' +

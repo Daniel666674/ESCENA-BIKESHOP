@@ -1090,12 +1090,27 @@
     var hdr = document.querySelector(".site-header");
     var strip = document.querySelector(".brand-strip");
     if (!hdr) return;
+    var stripH = 0;
+    // The header is position:fixed, so its "top" is a fixed distance from
+    // the VIEWPORT, not the document — it does not move on its own as the
+    // page scrolls. The brand strip above it, however, is in normal flow
+    // and scrolls away like any other content. Without this, "top" stayed
+    // pinned at the strip's height forever, so past the first stripH
+    // pixels of scroll a gap opened up above the header showing whatever
+    // page content was now scrolled underneath it. Recomputing on scroll
+    // closes that gap: the header tracks the strip's bottom edge as it
+    // scrolls out of view, then locks flush to the top once the strip is
+    // fully gone.
+    function repositionForScroll() {
+      hdr.style.top = Math.max(0, stripH - window.scrollY) + "px";
+    }
     function positionHeader() {
-      var stripH = strip ? strip.offsetHeight : 0;
-      hdr.style.top = stripH + "px";
+      stripH = strip ? strip.offsetHeight : 0;
+      repositionForScroll();
       document.documentElement.style.setProperty("--hero-header-offset", hdr.offsetHeight + "px");
     }
     window.addEventListener("resize", positionHeader, { passive: true });
+    window.addEventListener("scroll", repositionForScroll, { passive: true });
     // Neither the strip's nor the header's real height is known until their
     // content (logo <img>s, wrapped nav text) finishes loading/laying out —
     // a one-shot measurement on script load locks in too-small values.
