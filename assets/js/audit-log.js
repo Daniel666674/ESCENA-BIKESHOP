@@ -2334,5 +2334,16 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-eighties-zebra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T02:36:46.927Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "cult-sillin-negro",
+   "animal-sillin-camuflado"
+  ],
+  "deleted": []
  }
 ];
