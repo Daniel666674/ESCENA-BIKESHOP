@@ -2655,5 +2655,15 @@ window.ESCENA_AUDIT = [
    "tija-negra-01"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T20:31:22.625Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "cajas-de-frente-fiend-stack"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
