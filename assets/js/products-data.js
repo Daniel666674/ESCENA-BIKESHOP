@@ -3666,22 +3666,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cult-sillin-cuadros.jpg?v=1787338249733"
  },
  {
-  "slug": "horquilla-cromoly-negra-01",
-  "n": "Tenedor Rant Twin Peaks",
-  "brand": "Rant",
-  "cat": "horquillas",
-  "spec": "Cromoly · Tubo recto · Negro mate",
-  "price": 410000,
-  "sku": "HORQUILLA-CROMOLY-NEGRA-01",
-  "units": 1,
-  "imgs": [
-   "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785364403226",
-   "assets/img/products/horquilla-cromoly-negra-01.jpg"
-  ],
-  "order": 430,
-  "img": "assets/img/products/horquilla-cromoly-negra-01.jpg?v=1785364403226"
- },
- {
   "slug": "federal-horquilla-cromada",
   "n": "Tenedor Federal Assault",
   "brand": "Federal",
