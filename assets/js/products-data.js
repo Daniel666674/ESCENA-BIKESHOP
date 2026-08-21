@@ -1,5 +1,59 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Innova Camufladas",
+  "brand": "Innova",
+  "cat": "corazas",
+  "spec": "",
+  "price": 80000,
+  "sku": "COR-INN-001",
+  "units": 12,
+  "imgs": [
+   "assets/img/products/llanta-innova-camufladas.jpg?v=1787355305098",
+   "assets/img/products/llanta-innova-camufladas-2.jpg?v=1787355306346",
+   "assets/img/products/llanta-innova-camufladas-3.jpg?v=1787355307667"
+  ],
+  "slug": "llanta-innova-camufladas",
+  "colors": [
+   {
+    "label": "Negra/rojo",
+    "units": 2,
+    "price": 80000,
+    "cost": 64000
+   },
+   {
+    "label": "Negra/azul",
+    "units": 2,
+    "price": 80000,
+    "cost": 64000
+   },
+   {
+    "label": "Morado/Lila",
+    "units": 2,
+    "price": 80000,
+    "cost": 64000
+   },
+   {
+    "label": "Verde militar",
+    "units": 2,
+    "price": 80000,
+    "cost": 64000
+   },
+   {
+    "label": "Gris Claro",
+    "units": 2,
+    "price": 80000,
+    "cost": 64000
+   },
+   {
+    "label": "Gris Oscuro",
+    "units": 2,
+    "price": 80000,
+    "cost": 64000
+   }
+  ],
+  "img": "assets/img/products/llanta-innova-camufladas.jpg?v=1787355305098"
+ },
+ {
   "n": "Caña Federal Front Load Negra",
   "brand": "Federal",
   "cat": "stems",
@@ -5023,18 +5077,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/coraza_cult_wafflecup_2.40-4.jpg?v=1787352091579"
   ],
   "img": "assets/img/products/coraza_cult_wafflecup_2.40-2.jpg?v=1787352085456"
- },
- {
-  "slug": "coraza_innova_pro_2.40",
-  "n": "Coraza Innova Pro 2.40",
-  "brand": "Innova Tire",
-  "cat": "corazas",
-  "spec": "20 x 2.40\" · Negro · The Big Slick",
-  "price": 75000,
-  "sku": "CORAZA_INNOVA_PRO_2.40",
-  "units": 12,
-  "order": 1630,
-  "img": "assets/img/products/coraza_innova_pro_2.40.jpeg"
  },
  {
   "slug": "coraza_primo_555_2.45",
