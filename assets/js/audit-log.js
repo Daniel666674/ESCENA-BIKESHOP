@@ -2406,5 +2406,15 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-cult-old-skool"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:37:26.421Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "cana-cult-salvation-v4-negra-topload"
+  ],
+  "deleted": []
  }
 ];
