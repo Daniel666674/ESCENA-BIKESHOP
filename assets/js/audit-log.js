@@ -2633,5 +2633,16 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-trueno-v2"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T19:56:30.995Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos editados, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "tija-negra-02",
+   "tija-negra-curva"
+  ],
+  "deleted": []
  }
 ];
