@@ -2738,5 +2738,15 @@ window.ESCENA_AUDIT = [
    "madero-trur",
    "madero-trur-skate-co"
   ]
+ },
+ {
+  "ts": "2026-08-21T21:59:33.418Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "aros_eclat_bondi_cromados"
+  ],
+  "deleted": []
  }
 ];
