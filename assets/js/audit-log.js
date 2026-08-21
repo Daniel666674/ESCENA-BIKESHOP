@@ -2260,5 +2260,15 @@ window.ESCENA_AUDIT = [
    "demolition-pedales-splash-blanco",
    "demolition-pedales-splash-rojo"
   ]
+ },
+ {
+  "ts": "2026-08-21T01:13:22.129Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 7 fotos subidas",
+  "created": [],
+  "edited": [
+   "pedales-demolition"
+  ],
+  "deleted": []
  }
 ];
