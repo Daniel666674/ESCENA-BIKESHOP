@@ -2818,9 +2818,8 @@ window.ESCENA_PRODUCTS = [
   "price": 200000,
   "sku": "SIL-FND-003",
   "units": 2,
-  "tag": "Nuevo 🔥!",
   "imgs": [
-   "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1786464133600",
+   "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1787318112420",
    "assets/img/products/silla-pivotal-fiend-mills-2.jpg?v=1786464135581"
   ],
   "colors": [
@@ -2831,7 +2830,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 20,
   "imgFit": "cover",
-  "img": "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1786464133600"
+  "img": "assets/img/products/silla-pivotal-fiend-mills.jpg?v=1787318112420"
  },
  {
   "slug": "plato-odyssey-big-boyd-28t",
