@@ -1,16 +1,5 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Madero Trur skate co",
-  "brand": "Trur",
-  "cat": "skate-tablas",
-  "spec": "",
-  "price": 160000,
-  "sku": "SKT-TRU-002",
-  "units": 0,
-  "slug": "madero-trur-skate-co",
-  "img": "assets/img/products/madero-trur-skate-co.jpg?v=1787346656035"
- },
- {
   "n": "Cajas de frente Gw",
   "brand": "Gw",
   "cat": "caja-frente",
@@ -105,18 +94,6 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "img": "assets/img/products/cajas-de-frente-rant-ur.jpg?v=1787341078749"
- },
- {
-  "n": "Madero Trur",
-  "brand": "Trur",
-  "cat": "skate-tablas",
-  "spec": "Madera canandiese • Lija negra (incluida en el precio)•",
-  "price": 160000,
-  "sku": "SKT-TRU-001",
-  "units": 1,
-  "imgFit": "cover",
-  "slug": "madero-trur",
-  "img": "assets/img/products/madero-trur.jpg?v=1787331416470"
  },
  {
   "n": "Manzana Cult Crew Negra",
