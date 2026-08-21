@@ -2665,5 +2665,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T20:36:09.361Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "pedales-demolition"
+  ],
+  "deleted": []
  }
 ];
