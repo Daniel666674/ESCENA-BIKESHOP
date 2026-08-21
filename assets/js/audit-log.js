@@ -2281,5 +2281,16 @@ window.ESCENA_AUDIT = [
    "pedales-stolen"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T01:42:41.395Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos editados, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "pedales-fate-negro",
+   "pedales-wellgo-negro"
+  ],
+  "deleted": []
  }
 ];
