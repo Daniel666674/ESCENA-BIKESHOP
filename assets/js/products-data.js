@@ -33,13 +33,14 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "imgFit": "cover",
   "imgs": [
+   "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787339886141",
    "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787339654179",
    "assets/img/products/silla-pivotal-cult-old-skool-3.jpg?v=1787318932558",
    "assets/img/products/silla-pivotal-cult-old-skool-2.jpg?v=1787318931434",
    "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787318930204"
   ],
   "slug": "silla-pivotal-cult-old-skool",
-  "img": "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787339654179"
+  "img": "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1787339886141"
  },
  {
   "n": "Cajas de frente BSD Highriser",
@@ -2792,13 +2793,13 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "tag": "Nuevo 🔥!",
   "imgs": [
-   "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1787339287810",
+   "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1787339887949",
    "assets/img/products/silla-pivotal-fitbikeco-negra-2.jpg?v=1787339294214",
    "assets/img/products/silla-pivotal-fitbikeco-negra-3.jpg?v=1787339297122",
    "assets/img/products/silla-pivotal-fitbikeco-negra-4.jpg?v=1787339299015"
   ],
   "order": 120,
-  "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1787339287810"
+  "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1787339887949"
  },
  {
   "slug": "cana-shadow-finest-negra-topload",
