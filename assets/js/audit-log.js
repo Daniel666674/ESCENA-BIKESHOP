@@ -2460,5 +2460,15 @@ window.ESCENA_AUDIT = [
    "buje-delantero-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:54:53.165Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "buje-delantero-negro"
+  ],
+  "deleted": []
  }
 ];
