@@ -2834,11 +2834,11 @@ window.ESCENA_PRODUCTS = [
   "order": 50,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/silla-pivotal-fate-negra.jpg?v=1787337344165",
-   "assets/img/products/silla-pivotal-fate-negra.jpg?v=1786464129501",
-   "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1787337348095"
+   "assets/img/products/silla-pivotal-fate-negra.jpg?v=1787339410332",
+   "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1787337348095",
+   "assets/img/products/silla-pivotal-fate-negra.jpg?v=1786464129501"
   ],
-  "img": "assets/img/products/silla-pivotal-fate-negra.jpg?v=1787337344165"
+  "img": "assets/img/products/silla-pivotal-fate-negra.jpg?v=1787339410332"
  },
  {
   "slug": "silla-pivotal-fiend-reynolds-negra",
