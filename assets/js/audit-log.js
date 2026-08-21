@@ -2355,5 +2355,16 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-fiend-mills"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-21T13:17:41.125Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos editados, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "silla-pivotal-fiend-reynolds-v2-zebra",
+   "silla-pivotal-eighties-zebra"
+  ],
+  "deleted": []
  }
 ];
