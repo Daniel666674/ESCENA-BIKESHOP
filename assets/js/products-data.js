@@ -20,11 +20,11 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/rodamientos-hightime-mt4nfo52nmga.jpg?v=1787419527430",
+   "assets/img/products/rodamientos-hightime-mt4o5gluvce1.jpg?v=1787420729970",
    "assets/img/products/rodamientos-hightime-mt4nfq4mdv0i.jpg?v=1787419529593"
   ],
   "slug": "rodamientos-hightime",
-  "img": "assets/img/products/rodamientos-hightime-mt4nfo52nmga.jpg?v=1787419527430"
+  "img": "assets/img/products/rodamientos-hightime-mt4o5gluvce1.jpg?v=1787420729970"
  },
  {
   "n": "Rodamientos Monk MB-3",
