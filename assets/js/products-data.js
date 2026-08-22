@@ -1,5 +1,50 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Optimus Gold",
+  "brand": "Optimus",
+  "cat": "manzana-delantera",
+  "spec": "Delantero • Negro, Cromado, Azul, Dorada • Eje 10mm • Pernos 36H",
+  "price": 95000,
+  "sku": "MZD-OPT-001",
+  "units": 4,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/manzana-optimus-gold-mt4je5iuo4s3.jpg?v=1787412737070",
+   "assets/img/products/manzana-optimus-gold-mt4je6nibsrj.jpg?v=1787412738396",
+   "assets/img/products/manzana-optimus-gold-mt4je7ocpmdc.jpg?v=1787412739728",
+   "assets/img/products/manzana-optimus-gold-mt4je8pcby7y.jpg?v=1787412740853",
+   "assets/img/products/manzana-optimus-gold-mt4je9klmad9.jpg?v=1787412741978"
+  ],
+  "colors": [
+   {
+    "label": "Negro 1",
+    "units": 1,
+    "price": 95000,
+    "cost": 76000
+   },
+   {
+    "label": "Cirmado",
+    "units": 1,
+    "price": 95000,
+    "cost": 76000
+   },
+   {
+    "label": "Azul",
+    "units": 1,
+    "price": 95000,
+    "cost": 76000
+   },
+   {
+    "label": "Forada",
+    "units": 1,
+    "price": 95000,
+    "cost": 76000
+   }
+  ],
+  "slug": "manzana-optimus-gold",
+  "img": "assets/img/products/manzana-optimus-gold-mt4je5iuo4s3.jpg?v=1787412737070"
+ },
+ {
   "n": "Manzana Primo Balance",
   "brand": "Primo",
   "cat": "manzana-delantera",
