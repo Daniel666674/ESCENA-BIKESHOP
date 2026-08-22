@@ -814,6 +814,19 @@
         <div class="pmodal-field span2"><label>Franja final — texto</label><input type="text" id="stCtaSubtext" /></div>
         <div class="pmodal-field"><label>Franja final — botón</label><input type="text" id="stCtaBtn" /></div>
       </div>
+
+      <h3 class="section-title" style="font-size:1.15rem; margin-top:2.4rem;">Textos de categorías</h3>
+      <p class="section-sub">El título y subtítulo de la franja negra de cada página de catálogo (Tienda, MTB, Protecciones, Skate). Deja un campo vacío para volver al texto de siempre.</p>
+      <div class="pmodal-grid" style="max-width:820px;">
+        <div class="pmodal-field"><label>Tienda — título</label><input type="text" id="stTiendaTitle" /></div>
+        <div class="pmodal-field"><label>Tienda — subtítulo</label><input type="text" id="stTiendaSub" /></div>
+        <div class="pmodal-field"><label>MTB — título</label><input type="text" id="stMtbTitle" /></div>
+        <div class="pmodal-field"><label>MTB — subtítulo</label><input type="text" id="stMtbSub" /></div>
+        <div class="pmodal-field"><label>Protecciones — título</label><input type="text" id="stProteccionesTitle" /></div>
+        <div class="pmodal-field"><label>Protecciones — subtítulo</label><input type="text" id="stProteccionesSub" /></div>
+        <div class="pmodal-field"><label>Skate — título</label><input type="text" id="stSkateTitle" /></div>
+        <div class="pmodal-field"><label>Skate — subtítulo</label><input type="text" id="stSkateSub" /></div>
+      </div>
       <button type="button" class="btn btn-violet btn-sm" id="siteTextSaveBtn" style="margin-top:1rem;">Guardar textos</button>
       <p class="pmodal-sizes-total" id="siteTextStatus"></p>
       </section>
@@ -4440,7 +4453,9 @@
     "storyEyebrow", "storyP1", "storyP2",
     "igEyebrow", "igHeading",
     "faqEyebrow", "faqHeading",
-    "ctaHeading", "ctaSubtext", "ctaBtn"
+    "ctaHeading", "ctaSubtext", "ctaBtn",
+    "tiendaTitle", "tiendaSub", "mtbTitle", "mtbSub",
+    "proteccionesTitle", "proteccionesSub", "skateTitle", "skateSub"
   ];
   var siteText = {};
   function siteTextFieldId(f) { return "st" + f.charAt(0).toUpperCase() + f.slice(1); }
