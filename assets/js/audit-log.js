@@ -3146,5 +3146,15 @@ window.ESCENA_AUDIT = [
    "marco-federal-command-negro-20-5-x-cola-12-5"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T14:58:52.943Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "manzana-primo-balance"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
