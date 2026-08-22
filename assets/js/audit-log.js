@@ -3348,5 +3348,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T17:36:14.899Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "lija-diseno"
+  ],
+  "deleted": []
  }
 ];
