@@ -4880,6 +4880,15 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 200,
+  "imgs": [
+   "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1786195793991",
+   "assets/img/products/total-marco-2075-blanco-azul-mt4k2swd5xrr.jpg?v=1787413887712",
+   "assets/img/products/total-marco-2075-blanco-azul-mt4k2uhsmzuw.jpg?v=1787413889451",
+   "assets/img/products/total-marco-2075-blanco-azul-mt4k2vu3hs1x.jpg?v=1787413890954",
+   "assets/img/products/total-marco-2075-blanco-azul-mt4k2wzu6lq5.jpg?v=1787413892428",
+   "assets/img/products/total-marco-2075-blanco-azul-mt4k2y4shm14.jpg?v=1787413893804",
+   "assets/img/products/total-marco-2075-blanco-azul-mt4k2z70nxqg.jpg?v=1787413895322"
+  ],
   "img": "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1786195793991"
  },
  {
