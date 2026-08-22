@@ -8,7 +8,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-PRM-002",
   "units": 1,
   "slug": "manzana-primo-balance",
-  "img": "assets/img/products/manzana-primo-balance-mt4i73l7vu5v.jpg?v=1787410728337"
+  "img": "assets/img/products/manzana-primo-balance-mt4ie8ndrjpa.jpg?v=1787411061547"
  },
  {
   "n": "Manzana Primo N4FL",
@@ -20,7 +20,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "manzana-primo-n4fl",
-  "img": "assets/img/products/manzana-primo-n4fl-mt4i8kk973vw.jpg?v=1787410797454"
+  "img": "assets/img/products/manzana-primo-n4fl-mt4ie9t7if04.jpg?v=1787411062669"
  },
  {
   "n": "Manzana Federal Motion",
@@ -33,7 +33,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgPos": "50% 50%",
   "slug": "manzana-federal-motion",
-  "img": "assets/img/products/manzana-federal-motion-mt4i8m1a5ifg.jpg?v=1787410798683"
+  "img": "assets/img/products/manzana-federal-motion-mt4ieaodrfuv.jpg?v=1787411063781"
  },
  {
   "n": "Llanta Innova Camufladas",
@@ -3837,7 +3837,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "order": 660,
   "imgFit": "cover",
-  "img": "assets/img/products/buje-delantero-cromado-mt4hul4rtb7k.jpg?v=1787410144224"
+  "img": "assets/img/products/buje-delantero-cromado-mt4iebj9ri6p.jpg?v=1787411064921"
  },
  {
   "slug": "kit-eje-espaciadores-plata",
