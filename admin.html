@@ -2549,7 +2549,7 @@
     "manzana-trasera": { label: "Lado (rueda trasera)", prefix: "Lado", options: ["LHD", "RHD"] }
   };
   function sizeVariantHtmlFor(p) {
-    if (p.sizes && p.sizes.length > 1) {
+    if (p.sizes && p.sizes.length) {
       var withStock = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
       var activeLabel = (withStock[0] || p.sizes[0]).label;
       var opts = p.sizes.map(function (s) {
@@ -2636,7 +2636,7 @@
     // — the client-side selector re-caps it per size after that (see the
     // variant-selector script in producto/_template.html).
     var initialUnits = p.units;
-    if (p.sizes && p.sizes.length > 1) {
+    if (p.sizes && p.sizes.length) {
       var withStock = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
       initialUnits = (withStock[0] || p.sizes[0] || { units: 0 }).units || 0;
     } else if (hasColorStock(p)) {

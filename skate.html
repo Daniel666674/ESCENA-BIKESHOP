@@ -679,7 +679,7 @@ header.top-bar .brand .name { color: #fff; }
         return '<span class="swatch-color" style="background:'+colorSwatchBg(c.label)+'" title="'+esc(c.label)+'"></span>';
       }).join("") + '</div>';
     }
-    if (p.sizes && p.sizes.length > 1) {
+    if (p.sizes && p.sizes.length) {
       out += '<div class="swatches">' + p.sizes.map(function(s){
         return '<span class="swatch-size">'+esc(s.label)+'</span>';
       }).join("") + '</div>';
