@@ -3220,5 +3220,17 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T15:42:44.786Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 5 fotos subidas",
+  "created": [
+   "manzana-optimus-gold"
+  ],
+  "edited": [],
+  "deleted": [
+   "manzana-optimus-gold"
+  ]
  }
 ];
