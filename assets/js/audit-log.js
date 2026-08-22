@@ -3112,5 +3112,18 @@ window.ESCENA_AUDIT = [
    "cult-biggie-jaime-sintes-hammertone-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T14:49:10.475Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos nuevos, 1 producto editado, 3 fotos subidas",
+  "created": [
+   "manzana-primo-n4fl",
+   "manzana-federal-motion"
+  ],
+  "edited": [
+   "buje-delantero-cromado"
+  ],
+  "deleted": []
  }
 ];
