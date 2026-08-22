@@ -2477,8 +2477,9 @@ window.ESCENA_PRODUCTS = [
   "sku": "MRC-FED-001",
   "units": 2,
   "imgs": [
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784311588157"
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-mt4i40vfbkvz.jpg?v=1787410585092",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784311588157",
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009"
   ],
   "sizes": [
    {
@@ -2492,7 +2493,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgFit": "cover",
   "order": 180,
-  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009"
+  "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-mt4i40vfbkvz.jpg?v=1787410585092"
  },
  {
   "slug": "marco-federal-chiller-20-75-cola-12-7",
