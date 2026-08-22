@@ -3274,5 +3274,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "manzana-primo-balance"
   ]
+ },
+ {
+  "ts": "2026-08-22T17:03:06.414Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cana-volume-bison-negra-frontload"
+  ],
+  "deleted": []
  }
 ];
