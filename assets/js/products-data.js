@@ -1,5 +1,36 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Sunday Street Sweeper V2",
+  "brand": "Sunday",
+  "cat": "corazas",
+  "spec": "",
+  "price": 150000,
+  "sku": "COR-SUN-001",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/llanta-sunday-street-sweeper-v2-mt4or4xuualn.jpg?v=1787421741223",
+   "assets/img/products/llanta-sunday-street-sweeper-v2-mt4or6aw3l97.jpg?v=1787421742770"
+  ],
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 2,
+    "price": 150000,
+    "cost": 120000
+   }
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 2,
+    "price": 150000,
+    "cost": 120000
+   }
+  ],
+  "slug": "llanta-sunday-street-sweeper-v2",
+  "img": "assets/img/products/llanta-sunday-street-sweeper-v2-mt4or4xuualn.jpg?v=1787421741223"
+ },
+ {
   "n": "Llanta Federal Neptune",
   "brand": "Federal",
   "cat": "corazas",
