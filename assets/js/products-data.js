@@ -7,8 +7,9 @@ window.ESCENA_PRODUCTS = [
   "price": 270000,
   "sku": "MZD-PRM-002",
   "units": 1,
+  "imgZoom": 155,
   "slug": "manzana-primo-balance",
-  "img": "assets/img/products/manzana-primo-balance-mt4ie8ndrjpa.jpg?v=1787411061547"
+  "img": "assets/img/products/manzana-primo-balance-mt4iobxt81em.jpg?v=1787411532439"
  },
  {
   "n": "Manzana Primo N4FL",
