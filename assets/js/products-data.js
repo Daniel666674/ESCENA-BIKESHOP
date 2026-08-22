@@ -91,14 +91,17 @@ window.ESCENA_PRODUCTS = [
   "n": "Llanta Innova Camufladas",
   "brand": "Innova",
   "cat": "corazas",
-  "spec": "",
+  "spec": "Material resistente • Excelente agarre • Rin 20",
   "price": 80000,
   "sku": "COR-INN-001",
   "units": 12,
   "imgs": [
    "assets/img/products/llanta-innova-camufladas.jpg?v=1787355305098",
    "assets/img/products/llanta-innova-camufladas-2.jpg?v=1787355306346",
-   "assets/img/products/llanta-innova-camufladas-3.jpg?v=1787355307667"
+   "assets/img/products/llanta-innova-camufladas-3.jpg?v=1787355307667",
+   "assets/img/products/llanta-innova-camufladas-mt4nle7140ji.jpg?v=1787419796883",
+   "assets/img/products/llanta-innova-camufladas-mt4nli1fgguc.jpg?v=1787419800792",
+   "assets/img/products/llanta-innova-camufladas-mt4nll20mlcu.jpg?v=1787419803643"
   ],
   "slug": "llanta-innova-camufladas",
   "colors": [
@@ -134,11 +137,37 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "Gris Oscuro",
-    "units": 2,
+    "units": 2
+   }
+  ],
+  "sizes": [
+   {
+    "label": "2.40”Única",
+    "units": 12,
     "price": 80000,
     "cost": 64000
    }
   ],
+  "imgColorMap": {
+   "Negra/rojo": [
+    0
+   ],
+   "Gris Claro": [
+    1
+   ],
+   "Verde militar": [
+    2
+   ],
+   "Morado/Lila": [
+    3
+   ],
+   "Negra/azul": [
+    4
+   ],
+   "Gris Oscuro": [
+    5
+   ]
+  },
   "img": "assets/img/products/llanta-innova-camufladas.jpg?v=1787355305098"
  },
  {
