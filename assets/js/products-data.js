@@ -2527,7 +2527,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1784330800302",
    "assets/img/products/cana-volume-bison-negra-frontload-3.jpg?v=1784326499224",
    "assets/img/products/cana-volume-bison-negra-frontload-4.jpg?v=1784326500625",
-   "assets/img/products/cana-volume-bison-negra-frontload-5.jpg?v=1784326501904",
    "assets/img/products/cana-volume-bison-negra-frontload-6.jpg?v=1784326503247"
   ],
   "sizes": [
