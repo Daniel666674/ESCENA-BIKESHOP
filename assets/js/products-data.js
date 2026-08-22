@@ -1,5 +1,41 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Optimus Gold",
+  "brand": "Optimus",
+  "cat": "manzana-delantera",
+  "spec": "Delantero • Eje Full Cromo • Eje 10mm • Pernos 36H",
+  "price": 95000,
+  "sku": "MZD-OPT-001",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/manzana-optimus-gold-mt4mqcgyrg20.jpg?v=1787418345318",
+   "assets/img/products/manzana-optimus-gold-mt4mqe06ty10.jpg?v=1787418346648",
+   "assets/img/products/manzana-optimus-gold-mt4mqf14zi24.jpg?v=1787418348050",
+   "assets/img/products/manzana-optimus-gold-mt4mqg42qwwi.jpg?v=1787418349291",
+   "assets/img/products/manzana-optimus-gold-mt4mqh2ja60z.jpg?v=1787418350546"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1
+   },
+   {
+    "label": "Cromado",
+    "units": 1
+   },
+   {
+    "label": "Azul",
+    "units": 1
+   },
+   {
+    "label": "Dorada",
+    "units": 1
+   }
+  ],
+  "slug": "manzana-optimus-gold",
+  "img": "assets/img/products/manzana-optimus-gold-mt4mqcgyrg20.jpg?v=1787418345318"
+ },
+ {
   "n": "Manzana Primo N4FL",
   "brand": "Primo",
   "cat": "manzana-delantera",
