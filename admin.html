@@ -2033,6 +2033,19 @@
   function makeSlug(name) {
     return (name || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
   }
+  // Two new products with the same name (e.g. adding several "Lija Diseño"
+  // rows in a row, one per design, before renaming each) otherwise collide
+  // on makeSlug() and silently overwrite each other's product page/SKU/URL
+  // -- and since validateCatalog() only catches it at Publish time, by then
+  // several already exist locally with the identical slug, blocking
+  // publish entirely with a wall of "Código duplicado" errors and no
+  // indication which product needs fixing. Appending -2/-3/... up front
+  // guarantees every NEW product gets a unique slug the moment it's added.
+  function uniqueSlug(base, existingSlugs) {
+    var slug = base, n = 2;
+    while (existingSlugs[slug]) { slug = base + "-" + n; n++; }
+    return slug;
+  }
 
   function migrateProduct(p) {
     var slug = p.slug || slugOf(p) || makeSlug(p.n) || ("producto-" + Date.now());
@@ -4896,7 +4909,9 @@
       var src = inventoryCatalog[editingIdx];
       var copy = JSON.parse(JSON.stringify(src));
       copy.n = src.n + " (copia)";
-      copy.slug = makeSlug(copy.n) || ("producto-" + Date.now());
+      var copyExisting = {};
+      inventoryCatalog.forEach(function (p) { copyExisting[p.slug] = true; });
+      copy.slug = uniqueSlug(makeSlug(copy.n) || ("producto-" + Date.now()), copyExisting);
       copy.sku = genSku(copy.cat, copy.brand);
       copy.published = false;
       inventoryCatalog.unshift(copy);
@@ -5196,8 +5211,10 @@
         markDirty(cur.slug);
         showToast("Producto actualizado");
       } else {
-        var newSlug = makeSlug(name) || ("producto-" + Date.now());
-        fields.slug = newSlug;
+        var baseSlug = makeSlug(name) || ("producto-" + Date.now());
+        var existingSlugs = {};
+        inventoryCatalog.forEach(function (p) { existingSlugs[p.slug] = true; });
+        fields.slug = uniqueSlug(baseSlug, existingSlugs);
         fields.sku = fields.sku || genSku(catVal, fields.brand);
         fields.published = false; // goes live when Publicar generates its page
         inventoryCatalog.unshift(fields);
