@@ -3399,5 +3399,15 @@ window.ESCENA_AUDIT = [
    "rodamientos-hightime"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T17:54:59.213Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "llanta-alinetion-prowler"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
