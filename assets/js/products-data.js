@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Lija diseño",
+  "brand": "Skate terror",
+  "cat": "skate-lijas",
+  "spec": "Material base papel/tela carburo silicio • Adhesivo resistente al calor y frio • Dimension 83-84 cm Largo x 22-23 cm ancho • Estampado de alta calidad",
+  "price": 35000,
+  "sku": "SKL-SKA-002",
+  "units": 2,
+  "slug": "lija-diseno-2",
+  "img": "assets/img/products/lija-diseno-2-mt4ul19x90il.jpg?v=1787431534608"
+ },
+ {
   "n": "Llanta Cult Wafflecup Goma",
   "brand": "Cult",
   "cat": "corazas",
