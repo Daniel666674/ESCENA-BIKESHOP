@@ -3167,5 +3167,18 @@ window.ESCENA_AUDIT = [
    "manzana-federal-motion"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T15:04:30.889Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "4 productos editados, 4 fotos subidas",
+  "created": [],
+  "edited": [
+   "buje-delantero-cromado",
+   "manzana-primo-n4fl",
+   "manzana-federal-motion",
+   "manzana-primo-balance"
+  ],
+  "deleted": []
  }
 ];
