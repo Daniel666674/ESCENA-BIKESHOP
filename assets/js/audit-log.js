@@ -3136,5 +3136,15 @@ window.ESCENA_AUDIT = [
    "manzana-federal-motion"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T14:56:29.447Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "marco-federal-command-negro-20-5-x-cola-12-5"
+  ],
+  "deleted": []
  }
 ];
