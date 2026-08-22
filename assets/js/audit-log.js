@@ -3156,5 +3156,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T15:00:02.694Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos editados, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "manzana-primo-n4fl",
+   "manzana-federal-motion"
+  ],
+  "deleted": []
  }
 ];
