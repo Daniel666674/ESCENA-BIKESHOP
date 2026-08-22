@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Lija Diseño",
+  "brand": "Skate Terror",
+  "cat": "skate-lijas",
+  "spec": "Material base papel/tela carburo silicio • Adhesivo resistente al calor y frio • Dimension 83-84 cm Largo x 22-23 cm ancho • Estampado de alta calidad",
+  "price": 35000,
+  "sku": "SKL-SKA-001",
+  "units": 0,
+  "slug": "lija-diseno",
+  "img": "assets/img/products/lija-diseno-mt4nr24389hk.jpg?v=1787420058477"
+ },
+ {
   "n": "Rodamientos Hightime",
   "brand": "Hightime",
   "cat": "skate-rodamientos",
