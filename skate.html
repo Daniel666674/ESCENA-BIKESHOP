@@ -117,13 +117,13 @@
     }
 
     /* ============ PAGE HEADER ============ */
-    .page-head { background: var(--ink); padding: 2.6rem 1.5rem; }
+    .page-head { background: var(--ink); padding: 1.1rem 1.5rem; }
     .page-head .wrap { max-width: 1180px; margin: 0 auto; }
     .page-head .crumb { font-size: .74rem; color: rgba(255,255,255,.5); margin-bottom: .6rem; }
     .page-head .crumb a { color: rgba(255,255,255,.5); text-decoration: none; }
     .page-head .crumb a:hover { color: #fff; }
-    .page-head h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.2rem, 6vw, 3.6rem); letter-spacing: .03em; line-height: 1; }
-    .page-head p { color: rgba(255,255,255,.6); margin-top: .5rem; font-size: .9rem; }
+    .page-head h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1.5rem, 3.4vw, 2.1rem); letter-spacing: .03em; line-height: 1; }
+    .page-head p { color: rgba(255,255,255,.6); margin-top: .3rem; font-size: .82rem; }
 
     /* ============ SECTIONS / SHOP ============ */
     section { padding: 3rem 1.5rem 4.5rem; }
@@ -451,7 +451,7 @@ header.top-bar .brand .name { color: #fff; }
 <div class="page-head">
   <div class="wrap">
     <div class="crumb"><a href="inicio">Inicio</a> / Skate</div>
-    <h1>SKATE</h1>
+    <h1 id="pageTitle">SKATE</h1>
     <p id="pageSubtitle">Completas, tablas, lijas, ruedas, trucks, rodamientos y accesorios de skate. Filtra por categoría y pide por WhatsApp.</p>
   </div>
 </div>
@@ -565,6 +565,18 @@ header.top-bar .brand .name { color: #fff; }
 <div class="toast" id="toast"></div>
 
 <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+<script>document.write('<scr'+'ipt src="assets/js/site-text.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+<script>
+  // Admin-managed page-head title/subtitle (admin.html's "Página principal" ->
+  // "Textos de categorías" tab), same {field: string} manifest and by-key-
+  // presence rule as index.html's siteText() -- a missing key keeps the HTML
+  // default, a present (even blank) key overwrites it.
+  (function pageHeadText(){
+    var t = window.ESCENA_SITE_TEXT || {};
+    if ("skateTitle" in t) { var h = document.getElementById("pageTitle"); if (h) h.textContent = t.skateTitle; }
+    if ("skateSub" in t) { var s = document.getElementById("pageSubtitle"); if (s) s.textContent = t.skateSub; }
+  })();
+</script>
 <script>
   var SKATE_CATS = ["skate-completas","skate-tablas","skate-lijas","skate-ruedas","skate-trucks","skate-rodamientos","skate-accesorios"];
   var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.published !== false && SKATE_CATS.indexOf(p.cat) !== -1; });
