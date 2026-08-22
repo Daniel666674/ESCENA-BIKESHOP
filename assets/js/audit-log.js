@@ -3252,5 +3252,15 @@ window.ESCENA_AUDIT = [
    "total-marco-2075-blanco-azul"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T16:41:16.131Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "marco-gw-destructor-azul-20-5"
+  ],
+  "deleted": []
  }
 ];
