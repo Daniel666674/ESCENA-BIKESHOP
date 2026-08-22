@@ -2489,7 +2489,7 @@ window.ESCENA_PRODUCTS = [
   "imgs": [
    "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-mt4i40vfbkvz.jpg?v=1787410585092",
    "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1784311588157",
-   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5.jpg?v=1784324777009"
+   "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-mt4ifsbdy3f8.jpg?v=1787411133877"
   ],
   "sizes": [
    {
