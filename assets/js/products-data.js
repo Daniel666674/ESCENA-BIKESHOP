@@ -9,7 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "manzana-primo-n4fl",
-  "img": "assets/img/products/manzana-primo-n4fl-mt4huikk5jzd.jpg?v=1787410141769"
+  "img": "assets/img/products/manzana-primo-n4fl-mt4i0gk6fidw.jpg?v=1787410418578"
  },
  {
   "n": "Manzana Federal Motion",
@@ -22,7 +22,8 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgPos": "50% 50%",
   "slug": "manzana-federal-motion",
-  "img": "assets/img/products/manzana-federal-motion-mt4huk3tbggj.jpg?v=1787410143099"
+  "imgZoom": 106,
+  "img": "assets/img/products/manzana-federal-motion-mt4i0hoy9tog.jpg?v=1787410419701"
  },
  {
   "n": "Llanta Innova Camufladas",
