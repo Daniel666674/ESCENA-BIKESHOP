@@ -155,7 +155,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "2.40\"",
+    "label": "20x2.40\"",
     "units": 12,
     "price": 80000,
     "cost": 64000
@@ -216,12 +216,28 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/llanta-animal-ghl.jpg?v=1787354195634",
+   "assets/img/products/llanta-animal-ghl-mt4o3k7xeysz.jpg?v=1787420641513",
    "assets/img/products/llanta-animal-ghl-2.jpg?v=1787354197347"
   ],
   "imgPos": "50% 100%",
   "slug": "llanta-animal-ghl",
-  "img": "assets/img/products/llanta-animal-ghl.jpg?v=1787354195634"
+  "sizes": [
+   {
+    "label": "20x2.35\"",
+    "units": 2,
+    "price": 160000,
+    "cost": 128000
+   }
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 2,
+    "price": 160000,
+    "cost": 128000
+   }
+  ],
+  "img": "assets/img/products/llanta-animal-ghl-mt4o3k7xeysz.jpg?v=1787420641513"
  },
  {
   "n": "Cajas de frente Gw",
