@@ -3296,5 +3296,17 @@ window.ESCENA_AUDIT = [
    "manzana-cult-crew-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T17:06:38.841Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "3 productos editados, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "shadow-buje-delantero-negro",
+   "buje-delantero-negro",
+   "manzana-cult-crew-negra"
+  ],
+  "deleted": []
  }
 ];
