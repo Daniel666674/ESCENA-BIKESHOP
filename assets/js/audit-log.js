@@ -3338,5 +3338,15 @@ window.ESCENA_AUDIT = [
    "llanta-innova-camufladas"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T17:34:23.559Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "lija-diseno"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
