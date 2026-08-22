@@ -1245,6 +1245,26 @@
     do { sku = prefix + "-" + pad3(n); n++; } while (used[sku]);
     return sku;
   }
+  // A new product's SKU gets auto-assigned against THIS session's own local
+  // inventoryCatalog (see genSku above) -- which can't see a product another
+  // still-open session added around the same time in the same category+brand
+  // (same CAT-BRD prefix), or one published after this session first loaded.
+  // Both sessions' local genSku() calls land on the identical "next free"
+  // number, and neither session's own validateCatalog() catches it since
+  // each only ever checks its own local catalog, never the other session's
+  // still-unpublished addition -- so two real, similar products can end up
+  // sharing a SKU with no warning to either admin. Run right before writing,
+  // against the actual freshest merged state (re-checked on every publish
+  // retry, same as the rest of this write), so this catches it regardless of
+  // what caused it -- not just the two-sessions-at-once case.
+  function dedupeSkus(arr) {
+    var used = {};
+    arr.forEach(function (p) {
+      if (p.sku && !used[p.sku]) { used[p.sku] = 1; return; }
+      p.sku = genSku(p.cat, p.brand, used);
+      used[p.sku] = 1;
+    });
+  }
   var skuAuto = false; // true while the product modal is auto-filling SKU for a new product
   // Which department page (breadcrumb + "Volver a la tienda" link) a category's
   // product page belongs to. Falls back to tienda.html for every BMX-parts
@@ -2776,6 +2796,7 @@
       return ghPutWithRetry("assets/js/products-data.js", "Update catalog via admin panel", function (remoteText) {
         var remoteArr = parseRemoteArray(remoteText, "ESCENA_PRODUCTS");
         var merged = mergeCatalog(remoteArr, inventoryCatalog, dirtySlugs, deletedSlugs);
+        dedupeSkus(merged);
         return "window.ESCENA_PRODUCTS = " + JSON.stringify(merged, null, 1) + ";\n";
       }, false);
     }).then(function () {
