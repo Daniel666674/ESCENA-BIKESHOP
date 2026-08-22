@@ -157,7 +157,8 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "2.40\"",
     "units": 12,
-    "price": 80000
+    "price": 80000,
+    "cost": 64000
    }
   ],
   "imgColorMap": {
