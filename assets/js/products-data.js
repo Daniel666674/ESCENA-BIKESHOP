@@ -1,5 +1,30 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Primo N4FL",
+  "brand": "Primo",
+  "cat": "manzana-delantera",
+  "spec": "Delantero • Negro • Carcasa serie 6000 • Eje Chromoly 3/8” x 24tpi, pernos hembra • Rodamientos 2X Sellados 6902 • Guardias Nylon • 36H",
+  "price": 320000,
+  "sku": "MZD-PRM-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "manzana-primo-n4fl",
+  "img": "assets/img/products/manzana-primo-n4fl-mt4huikk5jzd.jpg?v=1787410141769"
+ },
+ {
+  "n": "Manzana Federal Motion",
+  "brand": "Federal",
+  "cat": "manzana-delantera",
+  "spec": "Delantero • Cromado • Carcasa Aluminio 6061-T6 • Eje Chromoly Hembra • Rodamientos Sellados 6002-2RS • Pernos Hembra 10mm • 36H",
+  "price": 300000,
+  "sku": "MZD-FED-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgPos": "50% 50%",
+  "slug": "manzana-federal-motion",
+  "img": "assets/img/products/manzana-federal-motion-mt4huk3tbggj.jpg?v=1787410143099"
+ },
+ {
   "n": "Llanta Innova Camufladas",
   "brand": "Innova",
   "cat": "corazas",
@@ -3800,7 +3825,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "order": 660,
   "imgFit": "cover",
-  "img": "assets/img/products/buje-delantero-cromado.jpg?v=1787320442888"
+  "img": "assets/img/products/buje-delantero-cromado-mt4hul4rtb7k.jpg?v=1787410144224"
  },
  {
   "slug": "kit-eje-espaciadores-plata",
