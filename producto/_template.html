@@ -925,6 +925,12 @@ header.top-bar .brand .name { color: #fff; }
         if (!btn || btn.disabled) return;
         applyValue(btn.getAttribute("data-value"));
       });
+
+      // A group with exactly one option (e.g. a tire that only comes in one
+      // size) has nothing to actually choose between — auto-select it
+      // instead of forcing a pointless click before the shopper can order.
+      var onlyBtn = group.querySelectorAll("button[data-value]");
+      if (onlyBtn.length === 1) applyValue(onlyBtn[0].getAttribute("data-value"));
     });
 
     // Block the WhatsApp link until a choice is made; flash the hint instead.
