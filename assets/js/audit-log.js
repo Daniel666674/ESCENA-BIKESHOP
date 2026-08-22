@@ -3125,5 +3125,16 @@ window.ESCENA_AUDIT = [
    "buje-delantero-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T14:53:43.807Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos editados, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "manzana-primo-n4fl",
+   "manzana-federal-motion"
+  ],
+  "deleted": []
  }
 ];
