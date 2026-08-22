@@ -3284,5 +3284,17 @@ window.ESCENA_AUDIT = [
    "cana-volume-bison-negra-frontload"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T17:05:58.262Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 5 fotos subidas",
+  "created": [
+   "manzana-optimus-gold"
+  ],
+  "edited": [
+   "manzana-cult-crew-negra"
+  ],
+  "deleted": []
  }
 ];
