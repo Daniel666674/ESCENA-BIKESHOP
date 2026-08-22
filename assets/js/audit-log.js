@@ -3180,5 +3180,15 @@ window.ESCENA_AUDIT = [
    "manzana-primo-balance"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T15:05:37.376Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "marco-federal-command-negro-20-5-x-cola-12-5"
+  ],
+  "deleted": []
  }
 ];
