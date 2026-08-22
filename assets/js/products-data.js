@@ -1,5 +1,36 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Alinetion Prowler",
+  "brand": "Alinetion",
+  "cat": "corazas",
+  "spec": "",
+  "price": 160000,
+  "sku": "COR-ALI-001",
+  "units": 3,
+  "imgs": [
+   "assets/img/products/llanta-alinetion-prowler-mt4ohhe0o4md.jpg?v=1787421291097",
+   "assets/img/products/llanta-alinetion-prowler-mt4ohizd0l2d.jpg?v=1787421292695"
+  ],
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 3,
+    "price": 160000,
+    "cost": 128000
+   }
+  ],
+  "colors": [
+   {
+    "label": "Negra",
+    "units": 3,
+    "price": 160000,
+    "cost": 128000
+   }
+  ],
+  "slug": "llanta-alinetion-prowler",
+  "img": "assets/img/products/llanta-alinetion-prowler-mt4ohhe0o4md.jpg?v=1787421291097"
+ },
+ {
   "n": "Lija Diseño",
   "brand": "Skate Terror",
   "cat": "skate-lijas",
