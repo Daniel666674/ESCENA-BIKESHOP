@@ -2102,6 +2102,10 @@
     });
     return cat.map(function (p) {
       p._pageSnapshot = pageSnapshotOf(p);
+      // Baseline for mergeCatalog()'s field-level 3-way merge: "what this
+      // session believed was live" for this product, in the same site-shaped
+      // form as the remote catalog. See mergeCatalog() for why this matters.
+      p._loadedSite = toSiteProduct(p);
       return p;
     });
   }
@@ -2132,6 +2136,7 @@
     if (!o.imgZoom || o.imgZoom <= 100) delete o.imgZoom; // default; keep only an explicit zoom > 100%
     if (!o.imgPos) delete o.imgPos; // default (centered); keep only an explicit crop position
     delete o._pageSnapshot; // internal-only, drives static page regeneration
+    delete o._loadedSite; // internal-only, drives mergeCatalog()'s field-level merge
     return o;
   }
   function parseRemoteArray(text, varName) {
@@ -2139,6 +2144,32 @@
     var m = text.match(new RegExp("window\\." + varName + "\\s*=\\s*(\\[[\\s\\S]*\\])\\s*;?\\s*$"));
     if (!m) throw new Error("No se pudo leer " + varName + " remoto");
     return JSON.parse(m[1]);
+  }
+  // Field-level 3-way merge for one dirty product: base = what this session
+  // believed was live when it loaded (p._loadedSite), local = this session's
+  // current edited state, remote = what's actually live right now. A field
+  // keeps LOCAL's value only if this session actually changed it since
+  // loading (local !== base); every other field keeps REMOTE's current
+  // value — so a concurrent session's change to a field we never touched
+  // (a new photo, a price bump, a stock sale) survives instead of being
+  // silently reverted by our stale copy of it. Falls back to "every field is
+  // local" (the old whole-object-overwrite behavior) when there's no base to
+  // diff against, e.g. a CSV/JSON-imported row that never went through
+  // loadCatalog() — matches the existing "imports have no baseline" note on
+  // pageNeedsRegen().
+  function fieldChanged(a, b) {
+    var av = a === undefined ? null : a, bv = b === undefined ? null : b;
+    return JSON.stringify(av) !== JSON.stringify(bv);
+  }
+  function mergeProductFields(localSite, baseSite, remoteSite) {
+    var keys = {};
+    [localSite, baseSite, remoteSite].forEach(function (o) { Object.keys(o).forEach(function (k) { keys[k] = true; }); });
+    var out = {};
+    Object.keys(keys).forEach(function (k) {
+      var v = fieldChanged(localSite[k], baseSite[k]) ? localSite[k] : remoteSite[k];
+      if (v !== undefined) out[k] = v;
+    });
+    return out;
   }
   // Merges this session's actual changes onto whatever products-data.js looks
   // like right now on the server, instead of overwriting the whole file with a
@@ -2149,7 +2180,10 @@
     var seen = {};
     var merged = remoteArr.filter(function (r) { return !deleted[r.slug]; }).map(function (r) {
       seen[r.slug] = true;
-      if (dirty[r.slug] && localBySlug[r.slug]) return toSiteProduct(localBySlug[r.slug]);
+      if (dirty[r.slug] && localBySlug[r.slug]) {
+        var p = localBySlug[r.slug];
+        return mergeProductFields(toSiteProduct(p), p._loadedSite || {}, r);
+      }
       return r; // untouched locally this session -> keep the server's current version verbatim
     });
     var newEntries = [];
@@ -2639,7 +2673,17 @@
     function commitPhotos(i) {
       if (i >= uploads.length) return Promise.resolve();
       var u = uploads[i];
-      var name = u.p.slug + (u.idx ? "-" + (u.idx + 1) : "") + ".jpg";
+      // Unique per-upload filename, NOT derived from the photo's array index.
+      // It used to be slug(+"-"+(idx+1))+".jpg" -- purely positional. Removing
+      // an earlier photo (or reordering) shifts every later photo's index left,
+      // and modalPhotos.splice() never renames/deletes the old file it left
+      // behind — so a brand-new upload could land at an index whose computed
+      // filename was ALREADY another still-referenced photo's live path,
+      // silently overwriting that unrelated photo's file on publish. A random
+      // id makes every upload's filename collision-proof regardless of how
+      // photos get reordered/removed beforehand; existing photos keep their
+      // old positional names untouched (only future uploads use this scheme).
+      var name = u.p.slug + "-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6) + ".jpg";
       var path = "assets/img/products/" + name;
       return compressDataUri(u.src, 1600, 0.87).catch(function (e) {
         throw new Error("No pude procesar la foto de \"" + (u.p.n || u.p.slug) + "\" (" + e.message + "). Probá con una foto en formato JPG o PNG.");
@@ -2790,6 +2834,13 @@
       });
     }).then(function () {
       dirty = false; clearDraft(); updatePendingUI();
+      // Refresh each published product's merge baseline to what just went
+      // live, so a LATER edit in this same still-open session diffs against
+      // current reality instead of this session's original page-load
+      // snapshot (which would otherwise make mergeCatalog() think every
+      // field this session ever touched is still "changed" forever, even
+      // fields nobody has edited since that earlier successful publish).
+      inventoryCatalog.forEach(function (p) { if (dirtySlugs[p.slug]) p._loadedSite = toSiteProduct(p); });
       dirtySlugs = {}; deletedSlugs = {};
       renderInventory(document.getElementById("invSearch").value.trim());
       showToast("¡Publicado! La tienda se actualiza en ~1 minuto.");
