@@ -3210,5 +3210,15 @@ window.ESCENA_AUDIT = [
    "manzana-primo-balance"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T15:32:25.555Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 5 fotos subidas",
+  "created": [
+   "manzana-optimus-gold"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
