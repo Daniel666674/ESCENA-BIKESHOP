@@ -3419,5 +3419,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T18:02:28.267Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "llanta-sunday-street-sweeper-v2"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
