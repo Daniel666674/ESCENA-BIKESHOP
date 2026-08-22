@@ -3368,5 +3368,15 @@ window.ESCENA_AUDIT = [
    "llanta-innova-camufladas"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T17:41:00.918Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "llanta-innova-camufladas"
+  ],
+  "deleted": []
  }
 ];
