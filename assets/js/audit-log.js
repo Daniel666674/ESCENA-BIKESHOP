@@ -3262,5 +3262,17 @@ window.ESCENA_AUDIT = [
    "marco-gw-destructor-azul-20-5"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T16:57:28.353Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 1 foto subida",
+  "created": [
+   "manzana-primo-balance"
+  ],
+  "edited": [],
+  "deleted": [
+   "manzana-primo-balance"
+  ]
  }
 ];
