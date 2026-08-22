@@ -3318,5 +3318,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T17:25:38.270Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "rodamientos-hightime"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
