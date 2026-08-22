@@ -1,5 +1,37 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Cult Wafflecup Goma",
+  "brand": "Cult",
+  "cat": "corazas",
+  "spec": "",
+  "price": 180000,
+  "sku": "COR-CLT-001",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/llanta-cult-wafflecup-goma-mt4pff3osfgm.jpg?v=1787422873957",
+   "assets/img/products/llanta-cult-wafflecup-goma-mt4pfgbpvf3a.jpg?v=1787422875167",
+   "assets/img/products/llanta-cult-wafflecup-goma-mt4pfh9bg3b4.jpg?v=1787422876451"
+  ],
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 4,
+    "price": 180000,
+    "cost": 144000
+   }
+  ],
+  "colors": [
+   {
+    "label": "Goma",
+    "units": 4,
+    "price": 180000,
+    "cost": 144000
+   }
+  ],
+  "slug": "llanta-cult-wafflecup-goma",
+  "img": "assets/img/products/llanta-cult-wafflecup-goma-mt4pff3osfgm.jpg?v=1787422873957"
+ },
+ {
   "n": "Llanta Sunday Street Sweeper V2",
   "brand": "Sunday",
   "cat": "corazas",
