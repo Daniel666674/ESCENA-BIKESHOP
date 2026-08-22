@@ -148,15 +148,16 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "Gris Oscuro",
-    "units": 2
+    "units": 2,
+    "price": 80000,
+    "cost": 64000
    }
   ],
   "sizes": [
    {
-    "label": "2.40”Única",
+    "label": "2.40\"",
     "units": 12,
-    "price": 80000,
-    "cost": 64000
+    "price": 80000
    }
   ],
   "imgColorMap": {
@@ -179,6 +180,7 @@ window.ESCENA_PRODUCTS = [
     5
    ]
   },
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-innova-camufladas.jpg?v=1787355305098"
  },
  {
