@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodamientos Hightime",
+  "brand": "Hightime",
+  "cat": "skate-rodamientos",
+  "spec": "Tamaño 608 Estandar Universal • Material Acero Cromado • Sellados ( Tapa Removible para limpieza/Lubricacion) • 8 Rodamientos + Espaciadores",
+  "price": 35000,
+  "sku": "SKB-HIG-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/rodamientos-hightime-mt4nfo52nmga.jpg?v=1787419527430",
+   "assets/img/products/rodamientos-hightime-mt4nfq4mdv0i.jpg?v=1787419529593"
+  ],
+  "slug": "rodamientos-hightime",
+  "img": "assets/img/products/rodamientos-hightime-mt4nfo52nmga.jpg?v=1787419527430"
+ },
+ {
   "n": "Rodamientos Monk MB-3",
   "brand": "Monk",
   "cat": "skate-rodamientos",
