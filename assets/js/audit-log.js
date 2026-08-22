@@ -3409,5 +3409,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T17:58:43.426Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "llanta-federal-neptune"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
