@@ -1,17 +1,5 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Manzana Primo Balance",
-  "brand": "Primo",
-  "cat": "manzana-delantera",
-  "spec": "Delantero • Negra • Carcasa Aluminio Serie • Eje Chromoly 3/8” x 24tpi • Pernos Hembra 10mm • Rodamientos 2X Sellados 6902 • Guardias Nylon integradas • 36H",
-  "price": 270000,
-  "sku": "MZD-PRM-002",
-  "units": 1,
-  "imgZoom": 155,
-  "slug": "manzana-primo-balance",
-  "img": "assets/img/products/manzana-primo-balance-mt4iobxt81em.jpg?v=1787411532439"
- },
- {
   "n": "Manzana Primo N4FL",
   "brand": "Primo",
   "cat": "manzana-delantera",
