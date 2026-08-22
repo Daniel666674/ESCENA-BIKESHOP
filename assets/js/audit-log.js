@@ -3308,5 +3308,15 @@ window.ESCENA_AUDIT = [
    "manzana-cult-crew-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T17:13:59.716Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "rodamientos-monk-mb-3"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
