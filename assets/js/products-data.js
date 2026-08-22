@@ -249,7 +249,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "manzana-cult-crew-negra",
-  "img": "assets/img/products/manzana-cult-crew-negra.jpg?v=1787320441473"
+  "img": "assets/img/products/manzana-cult-crew-negra-mt4mr819hie9.jpg?v=1787418385855"
  },
  {
   "n": "Silla Pivotal Cult Old Skool",
@@ -3828,7 +3828,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "BUJE-DELANTERO-NEGRO",
   "units": 3,
   "order": 730,
-  "img": "assets/img/products/buje-delantero-negro.jpg?v=1785657343691"
+  "img": "assets/img/products/buje-delantero-negro-mt4mr9a7v6ry.jpg?v=1787418387897"
  },
  {
   "slug": "shadow-buje-delantero-negro",
@@ -3840,7 +3840,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "SHADOW-BUJE-DELANTERO-NEGRO",
   "units": 1,
   "order": 800,
-  "img": "assets/img/products/shadow-buje-delantero-negro.jpg?v=1785657344801"
+  "img": "assets/img/products/shadow-buje-delantero-negro-mt4mrauxsxrr.jpg?v=1787418390518"
  },
  {
   "slug": "buje-delantero-cromado",
