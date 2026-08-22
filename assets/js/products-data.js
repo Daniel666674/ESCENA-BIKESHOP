@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodamientos Monk MB-3",
+  "brand": "Monk",
+  "cat": "skate-rodamientos",
+  "spec": "Tamaño 608 Estandar Universal • Material Acero • Sellados ( Tapa Removible para limpieza/Lubricacion)",
+  "price": 40000,
+  "sku": "SKB-MON-001",
+  "units": 2,
+  "slug": "rodamientos-monk-mb-3",
+  "img": "assets/img/products/rodamientos-monk-mb-3-mt4n0u8axx61.jpg?v=1787418834814"
+ },
+ {
   "n": "Manzana Optimus Gold",
   "brand": "Optimus",
   "cat": "manzana-delantera",
