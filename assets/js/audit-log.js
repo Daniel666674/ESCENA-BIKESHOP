@@ -3358,5 +3358,15 @@ window.ESCENA_AUDIT = [
    "lija-diseno"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T17:37:16.969Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "llanta-innova-camufladas"
+  ],
+  "deleted": []
  }
 ];
