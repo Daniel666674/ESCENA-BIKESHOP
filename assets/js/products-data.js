@@ -1,5 +1,33 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Federal Neptune",
+  "brand": "Federal",
+  "cat": "corazas",
+  "spec": "",
+  "price": 160000,
+  "sku": "COR-FED-001",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "20x2.35\"",
+    "units": 2,
+    "price": 160000,
+    "cost": 128000
+   }
+  ],
+  "colors": [
+   {
+    "label": "Negra",
+    "units": 2,
+    "price": 160000,
+    "cost": 128000
+   }
+  ],
+  "slug": "llanta-federal-neptune",
+  "img": "assets/img/products/llanta-federal-neptune-mt4omcenjal8.jpg?v=1787421518052"
+ },
+ {
   "n": "Llanta Alinetion Prowler",
   "brand": "Alinetion",
   "cat": "corazas",
