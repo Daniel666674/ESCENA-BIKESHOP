@@ -3429,5 +3429,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T18:21:22.274Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "llanta-cult-wafflecup-goma"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
