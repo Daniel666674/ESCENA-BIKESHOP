@@ -3200,5 +3200,15 @@ window.ESCENA_AUDIT = [
    "marco-federal-chiller-20-75-cola-12-7"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-22T15:12:16.995Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "manzana-primo-balance"
+  ],
+  "deleted": []
  }
 ];
