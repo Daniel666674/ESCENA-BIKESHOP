@@ -2515,7 +2515,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "MRC-FED-002",
   "units": 1,
   "imgs": [
-   "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784324778016",
+   "assets/img/products/marco-federal-chiller-20-75-cola-12-7-mt4ikekjxxbn.jpg?v=1787411352858",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1784311591232",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-3.jpg?v=1784311593072",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-4.jpg?v=1784311594918",
@@ -2531,7 +2531,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 190,
-  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7.jpg?v=1784324778016"
+  "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7-mt4ikekjxxbn.jpg?v=1787411352858"
  },
  {
   "slug": "cana-volume-bison-negra-frontload",
