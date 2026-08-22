@@ -2461,14 +2461,6 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "MRC",
   "units": 1,
-  "imgs": [
-   "assets/img/products/marco-gw-destructor-azul-20-5.jpg?v=1784157839069",
-   "assets/img/products/marco-gw-destructor-azul-20-5-2.jpg?v=1784157840425",
-   "assets/img/products/marco-gw-destructor-azul-20-5-3.jpg?v=1784157841860",
-   "assets/img/products/marco-gw-destructor-azul-20-5-4.jpg?v=1784157843230",
-   "assets/img/products/marco-gw-destructor-azul-20-5-5.jpg?v=1784157844826",
-   "assets/img/products/marco-gw-destructor-azul-20-5-6.jpg?v=1784157846889"
-  ],
   "sizes": [
    {
     "label": "20.5\"",
