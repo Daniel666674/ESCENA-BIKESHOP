@@ -4244,9 +4244,27 @@ window.ESCENA_PRODUCTS = [
   "spec": "Delantero · Doble sellado · Negro · 3/8\" eje · 14mm",
   "price": 300000,
   "sku": "BUJE-DELANTERO-NEGRO",
-  "units": 3,
+  "units": 1,
   "order": 730,
-  "img": "assets/img/products/buje-delantero-negro-mt4mr9a7v6ry.jpg?v=1787418387897"
+  "imgs": [
+   "assets/img/products/buje-delantero-negro-mt8yzu3vri8s.jpg?v=1787680808248",
+   "assets/img/products/buje-delantero-negro-mt8yzvp4c99j.jpg?v=1787680810173"
+  ],
+  "colors": [
+   {
+    "label": "Negra",
+    "units": 1,
+    "price": 300000,
+    "cost": 240000
+   },
+   {
+    "label": "Cromada",
+    "units": 0,
+    "price": 300000,
+    "cost": 240000
+   }
+  ],
+  "img": "assets/img/products/buje-delantero-negro-mt8yzu3vri8s.jpg?v=1787680808248"
  },
  {
   "slug": "shadow-buje-delantero-negro",
@@ -4259,19 +4277,6 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "order": 800,
   "img": "assets/img/products/shadow-buje-delantero-negro-mt4mrauxsxrr.jpg?v=1787418390518"
- },
- {
-  "slug": "buje-delantero-cromado",
-  "n": "Manzana Delantera Shadow Symbol Cromada",
-  "brand": "shadow",
-  "cat": "manzana-delantera",
-  "spec": "Delantero · Cromado · Doble sellado · 14mm Cromoly eje · Protectores incluidos",
-  "price": 330000,
-  "sku": "BUJE-DELANTERO-CROMADO",
-  "units": 2,
-  "order": 660,
-  "imgFit": "cover",
-  "img": "assets/img/products/buje-delantero-cromado-mt4iebj9ri6p.jpg?v=1787411064921"
  },
  {
   "slug": "kit-eje-espaciadores-plata",
