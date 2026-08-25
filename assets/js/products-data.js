@@ -1412,25 +1412,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/timon-federal-assaut.jpg?v=1785357421950"
  },
  {
-  "n": "Timon Fitbikeco Dugan Raw",
-  "brand": "Fitbikeco",
-  "cat": "manubrios",
-  "spec": "Material: cromolio con tratamiento medida: 9.25\"",
-  "price": 380000,
-  "sku": "TMN-FIT-001",
-  "units": 1,
-  "imgFit": "cover",
-  "sizes": [
-   {
-    "label": "9.25\"",
-    "units": 1
-   }
-  ],
-  "slug": "timon-fitbikeco-dugan-raw",
-  "order": 70,
-  "img": "assets/img/products/timon-fitbikeco-dugan-raw.jpg?v=1785357005874"
- },
- {
   "n": "Timon Colony Rick 4 Piezas",
   "brand": "Colony",
   "cat": "manubrios",
@@ -5517,6 +5498,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 80,
-  "img": "assets/img/products/manubrio-cromoly-negro-04.jpg?v=1785261215817"
+  "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1787676315470"
  }
 ];
