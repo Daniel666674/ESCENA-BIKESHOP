@@ -331,7 +331,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/lija-diseno-2-mt4ul19x90il.jpg?v=1787431534608"
  },
  {
-  "n": "Llanta Cult Wafflecup Goma",
+  "n": "Llanta Cult Wafflecup Goma - 2.40\"",
   "brand": "Cult",
   "cat": "corazas",
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
@@ -364,7 +364,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/llanta-cult-wafflecup-goma-mt4pff3osfgm.jpg?v=1787422873957"
  },
  {
-  "n": "Llanta Sunday Street Sweeper V2",
+  "n": "Llanta Sunday Street Sweeper V2 Negra - 2.40\"",
   "brand": "Sunday",
   "cat": "corazas",
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
@@ -396,7 +396,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/llanta-sunday-street-sweeper-v2-mt4or4xuualn.jpg?v=1787421741223"
  },
  {
-  "n": "Llanta Federal Neptune",
+  "n": "Llanta Federal Neptune - 2.35\"",
   "brand": "Federal",
   "cat": "corazas",
   "spec": "",
@@ -425,7 +425,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/llanta-federal-neptune-mt4omcenjal8.jpg?v=1787421518052"
  },
  {
-  "n": "Llanta Alinetion Prowler Negra",
+  "n": "Llanta Alinetion Prowler Negra - 2.40\"",
   "brand": "Alinetion",
   "cat": "corazas",
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
@@ -607,7 +607,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/manzana-federal-motion-mt8ym7zu9wwc.jpg?v=1787680172681"
  },
  {
-  "n": "Llanta Innova Camufladas",
+  "n": "Llanta Innova Camufladas - 2.40\"",
   "brand": "Innova",
   "cat": "corazas",
   "spec": "Material resistente • Excelente agarre • Rin 20",
@@ -716,7 +716,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1787354988160"
  },
  {
-  "n": "Llanta Animal GHL",
+  "n": "Llanta Animal GHL Negra - 2.30\"",
   "brand": "Animal",
   "cat": "corazas",
   "spec": "20 x 2.35\" · Doble compuesto · Negro",
@@ -5706,7 +5706,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "coraza_cult_wafflecup_2.40",
-  "n": "Coraza Cult Wafflecup Negra",
+  "n": "Coraza Cult Wafflecup Negra - 2.40\"",
   "brand": "Cult",
   "cat": "corazas",
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
@@ -5732,7 +5732,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "coraza_primo_555_2.45",
-  "n": "Llanta Primo 555",
+  "n": "Llanta Primo 555 - 2.45\"",
   "brand": "Primo",
   "cat": "corazas",
   "spec": "20 x 2.45\" · Banda direccional profundo · Negro",
