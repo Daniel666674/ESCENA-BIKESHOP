@@ -3493,5 +3493,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T17:14:40.053Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "grips-odi-xl-2"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
