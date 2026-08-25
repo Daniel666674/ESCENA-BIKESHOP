@@ -3568,5 +3568,17 @@ window.ESCENA_AUDIT = [
    "manzana-cult-crew-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T18:00:16.914Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 producto eliminado, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "buje-delantero-negro"
+  ],
+  "deleted": [
+   "buje-delantero-cromado"
+  ]
  }
 ];
