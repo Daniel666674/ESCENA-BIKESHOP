@@ -3755,5 +3755,22 @@ window.ESCENA_AUDIT = [
    "manzana-delantera-ontrail-nemesis-2"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T21:12:10.608Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "8 productos editados",
+  "created": [],
+  "edited": [
+   "coraza_primo_555_2.45",
+   "coraza_cult_wafflecup_2.40",
+   "llanta-cult-wafflecup-goma",
+   "llanta-federal-neptune",
+   "llanta-alinetion-prowler",
+   "llanta-animal-ghl",
+   "llanta-sunday-street-sweeper-v2",
+   "llanta-innova-camufladas"
+  ],
+  "deleted": []
  }
 ];
