@@ -3884,5 +3884,36 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T23:17:00.575Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "22 productos editados",
+  "created": [],
+  "edited": [
+   "llanta-cst-orbit-knobby-negra-rin-16-2-125",
+   "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
+   "llanta-chaoyang-cutting-edge-negra-2-25",
+   "llanta-optimus-black-burn-negra-2-35",
+   "coraza_primo_555_2.45",
+   "coraza_cult_wafflecup_2.40",
+   "llanta-cult-wafflecup-goma",
+   "llanta-alinetion-prowler",
+   "llanta-federal-neptune",
+   "llanta-animal-ghl",
+   "llanta-sunday-street-sweeper-v2",
+   "llanta-sunday-current-v2-negro-2-40",
+   "llanta-s-m-speedball-negra-2-40",
+   "llanta-odyssey-broc-negra-2-25-2-40",
+   "llanta-shadow-creeper-negra-2-40",
+   "llanta-subrosa-matt-ray-roja-2-40",
+   "llanta-mutanty-whipper-roja-2-40",
+   "llanta-mutanty-whipper-azul-2-40",
+   "llanta-innova-pro-big-slick-cafe-2-40",
+   "llanta-innova-camufladas",
+   "llanta-innova-pro-negra-2-40",
+   "llanta-tioga-factory-fs100-negra-2-10"
+  ],
+  "deleted": []
  }
 ];
