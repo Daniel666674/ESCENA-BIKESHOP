@@ -3613,5 +3613,15 @@ window.ESCENA_AUDIT = [
    "manzana-delantera-alienation-illunimati"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T19:05:15.455Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "manzana-primo-n4fl"
+  ],
+  "deleted": []
  }
 ];
