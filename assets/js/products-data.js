@@ -334,7 +334,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Llanta Cult Wafflecup Goma",
   "brand": "Cult",
   "cat": "corazas",
-  "spec": "",
+  "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 180000,
   "sku": "COR-CLT-001",
   "units": 4,
@@ -354,19 +354,20 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Goma",
-    "units": 4,
+    "units": 6,
     "price": 180000,
     "cost": 144000
    }
   ],
   "slug": "llanta-cult-wafflecup-goma",
+  "order": 20,
   "img": "assets/img/products/llanta-cult-wafflecup-goma-mt4pff3osfgm.jpg?v=1787422873957"
  },
  {
   "n": "Llanta Sunday Street Sweeper V2",
   "brand": "Sunday",
   "cat": "corazas",
-  "spec": "",
+  "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 150000,
   "sku": "COR-SUN-001",
   "units": 2,
@@ -391,6 +392,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-sunday-street-sweeper-v2",
+  "order": 60,
   "img": "assets/img/products/llanta-sunday-street-sweeper-v2-mt4or4xuualn.jpg?v=1787421741223"
  },
  {
@@ -419,13 +421,14 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-federal-neptune",
+  "order": 40,
   "img": "assets/img/products/llanta-federal-neptune-mt4omcenjal8.jpg?v=1787421518052"
  },
  {
-  "n": "Llanta Alinetion Prowler",
+  "n": "Llanta Alinetion Prowler Negra",
   "brand": "Alinetion",
   "cat": "corazas",
-  "spec": "",
+  "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 160000,
   "sku": "COR-ALI-001",
   "units": 3,
@@ -450,6 +453,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-alinetion-prowler",
+  "order": 30,
   "img": "assets/img/products/llanta-alinetion-prowler-mt4ohhe0o4md.jpg?v=1787421291097"
  },
  {
@@ -686,6 +690,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "imgFit": "cover",
+  "order": 70,
   "img": "assets/img/products/llanta-innova-camufladas.jpg?v=1787355305098"
  },
  {
@@ -714,7 +719,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Llanta Animal GHL",
   "brand": "Animal",
   "cat": "corazas",
-  "spec": "",
+  "spec": "20 x 2.35\" · Doble compuesto · Negro",
   "price": 160000,
   "sku": "COR-ANM-001",
   "units": 2,
@@ -741,6 +746,7 @@ window.ESCENA_PRODUCTS = [
     "cost": 128000
    }
   ],
+  "order": 50,
   "img": "assets/img/products/llanta-animal-ghl-mt4o3k7xeysz.jpg?v=1787420641513"
  },
  {
@@ -5700,38 +5706,54 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "coraza_cult_wafflecup_2.40",
-  "n": "Coraza Cult Wafflecup 2.40",
+  "n": "Coraza Cult Wafflecup Negra",
   "brand": "Cult",
   "cat": "corazas",
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
-  "price": 110000,
+  "price": 180000,
   "sku": "CORAZA_CULT_WAFFLECUP_2.40",
-  "units": 12,
-  "order": 1420,
+  "units": 1,
+  "order": 10,
   "imgs": [
    "assets/img/products/coraza_cult_wafflecup_2.40-2.jpg?v=1787352085456",
    "assets/img/products/coraza_cult_wafflecup_2.40.jpg?v=1787352083746",
    "assets/img/products/coraza_cult_wafflecup_2.40-3.jpg?v=1787352087521",
    "assets/img/products/coraza_cult_wafflecup_2.40-4.jpg?v=1787352091579"
   ],
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 1,
+    "price": 160000,
+    "cost": 144000
+   }
+  ],
   "img": "assets/img/products/coraza_cult_wafflecup_2.40-2.jpg?v=1787352085456"
  },
  {
   "slug": "coraza_primo_555_2.45",
-  "n": "Coraza Primo 555 2.45",
+  "n": "Llanta Primo 555",
   "brand": "Primo",
   "cat": "corazas",
   "spec": "20 x 2.45\" · Banda direccional profundo · Negro",
-  "price": 130000,
+  "price": 160000,
   "sku": "CORAZA_PRIMO_555_2.45",
-  "units": 12,
-  "order": 1320,
+  "units": 0,
+  "order": 0,
   "imgs": [
    "assets/img/products/coraza_primo_555_2.45-3.jpg?v=1787350566842",
    "assets/img/products/coraza_primo_555_2.45.jpg?v=1787350561202",
    "assets/img/products/coraza_primo_555_2.45-2.jpg?v=1787350563777",
    "assets/img/products/coraza_primo_555_2.45-4.jpg?v=1787350569390",
    "assets/img/products/coraza_primo_555_2.45-5.jpg?v=1787350572097"
+  ],
+  "sizes": [
+   {
+    "label": "20x2.45\"",
+    "units": 0,
+    "price": 160000,
+    "cost": 128000
+   }
   ],
   "img": "assets/img/products/coraza_primo_555_2.45-3.jpg?v=1787350566842"
  },
