@@ -5418,7 +5418,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgs": [
-   "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1785261213594",
+   "assets/img/products/manubrio-cromoly-negro-02-mt8wj8u60l6q.jpg?v=1787676675096",
    "assets/img/products/manubrio-cromoly-negro-02-2.jpg?v=1784310314405",
    "assets/img/products/manubrio-cromoly-negro-02-3.jpg?v=1785023024249",
    "assets/img/products/manubrio-cromoly-negro-02-4.jpg?v=1785023026023"
@@ -5436,7 +5436,6 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgColorMap": {
    "Negro": [
-    0,
     1
    ],
    "Cromado": [
@@ -5445,7 +5444,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "order": 20,
-  "img": "assets/img/products/manubrio-cromoly-negro-02.jpg?v=1785261213594"
+  "img": "assets/img/products/manubrio-cromoly-negro-02-mt8wj8u60l6q.jpg?v=1787676675096"
  },
  {
   "slug": "manubrio-cromoly-negro-03",
