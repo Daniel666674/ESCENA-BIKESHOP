@@ -3503,5 +3503,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T17:19:57.697Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "cajas-de-frente-totalbmx-negra"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
