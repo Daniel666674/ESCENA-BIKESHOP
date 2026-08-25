@@ -398,7 +398,10 @@ header.top-bar .brand .name { color: #fff; }
     <h1>Llanta Federal Neptune</h1>
     <div class="pdp-price">$160.000 COP</div>
     <p class="pdp-stock-hint" id="pdpStockHint" data-units="2"></p>
-    
+    <div class="pdp-variant" id="pdpVariant" data-prefix="Talla">
+      <span class="pdp-variant-label">Talla</span>
+      <div class="pdp-variant-options"><button type="button" data-value="20x2.35&quot;" data-units="2" data-price="160000" class="is-active">20x2.35&quot;</button></div>
+    </div>
     <p class="pdp-pick-hint" id="pdpPickHint" style="display:none;"></p>
     <div class="pdp-actions" id="pdpActions">
       <a class="btn btn-ink" id="pdpWaLink" href="https://wa.me/573107630504?text=Hola%20ESCENA%20%F0%9F%90%95%2C%20quiero%20pedir%3A%20Llanta%20Federal%20Neptune%20(Federal)%20%E2%80%94%20%24160.000%20COP.%20%C2%BFEst%C3%A1%20disponible%3F" target="_blank" rel="noopener">Pedir por WhatsApp</a>
@@ -426,11 +429,27 @@ header.top-bar .brand .name { color: #fff; }
 <div class="related">
   <h2>También te puede gustar</h2>
   <div class="related-grid">
-    <a class="r-card" href="llanta-alinetion-prowler">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/llanta-alinetion-prowler-mt4ohhe0o4md.jpg?v=1787421291097" alt="Llanta Alinetion Prowler - Alinetion BMX" loading="lazy" width="300" height="300" /></div>
+    <a class="r-card" href="llanta-cult-wafflecup-goma">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/llanta-cult-wafflecup-goma-mt4pff3osfgm.jpg?v=1787422873957" alt="Llanta Cult Wafflecup Goma - Cult BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Cult</span>
+          <h3>Llanta Cult Wafflecup Goma</h3>
+          <div class="price">$180.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="llanta-sunday-street-sweeper-v2">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/llanta-sunday-street-sweeper-v2-mt4or4xuualn.jpg?v=1787421741223" alt="Llanta Sunday Street Sweeper V2 - Sunday BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Sunday</span>
+          <h3>Llanta Sunday Street Sweeper V2</h3>
+          <div class="price">$150.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="llanta-alinetion-prowler">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/llanta-alinetion-prowler-mt4ohhe0o4md.jpg?v=1787421291097" alt="Llanta Alinetion Prowler Negra - Alinetion BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Alinetion</span>
-          <h3>Llanta Alinetion Prowler</h3>
+          <h3>Llanta Alinetion Prowler Negra</h3>
           <div class="price">$160.000 COP</div>
         </div>
       </a>
@@ -440,22 +459,6 @@ header.top-bar .brand .name { color: #fff; }
           <span class="brand-lbl">Innova</span>
           <h3>Llanta Innova Camufladas</h3>
           <div class="price">$80.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="llanta-animal-ghl">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/llanta-animal-ghl-mt4o3k7xeysz.jpg?v=1787420641513" alt="Llanta Animal GHL - Animal BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Animal</span>
-          <h3>Llanta Animal GHL</h3>
-          <div class="price">$160.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="coraza_cult_wafflecup_2.40">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/coraza_cult_wafflecup_2.40-2.jpg?v=1787352085456" alt="Coraza Cult Wafflecup 2.40 - Cult BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Cult</span>
-          <h3>Coraza Cult Wafflecup 2.40</h3>
-          <div class="price">$110.000 COP</div>
         </div>
       </a>
   </div>
@@ -961,6 +964,12 @@ header.top-bar .brand .name { color: #fff; }
         if (!btn || btn.disabled) return;
         applyValue(btn.getAttribute("data-value"));
       });
+
+      // A group with exactly one option (e.g. a tire that only comes in one
+      // size) has nothing to actually choose between — auto-select it
+      // instead of forcing a pointless click before the shopper can order.
+      var onlyBtn = group.querySelectorAll("button[data-value]");
+      if (onlyBtn.length === 1) applyValue(onlyBtn[0].getAttribute("data-value"));
     });
 
     // Block the WhatsApp link until a choice is made; flash the hint instead.
