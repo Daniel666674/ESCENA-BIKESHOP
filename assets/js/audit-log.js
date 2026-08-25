@@ -3873,5 +3873,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T23:14:47.808Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 4 fotos subidas",
+  "created": [
+   "llanta-cst-orbit-knobby-negra-rin-16-2-125",
+   "llanta-chaoyang-freestyle-bmx-rin-16-2-125"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
