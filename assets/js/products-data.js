@@ -419,7 +419,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "manzana-primo-n4fl",
-  "img": "assets/img/products/manzana-primo-n4fl-mt8ym6ibxxhr.jpg?v=1787680171002"
+  "img": "assets/img/products/manzana-primo-n4fl-mt91bhy75izw.jpg?v=1787684711192"
  },
  {
   "n": "Manzana Delantera Federal Motion",
