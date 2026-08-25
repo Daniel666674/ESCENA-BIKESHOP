@@ -3713,5 +3713,27 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T20:33:23.601Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 11 productos editados, 1 foto subida",
+  "created": [
+   "manzana-delantera-profile-mini-azul"
+  ],
+  "edited": [
+   "buje-delantero-negro",
+   "shadow-buje-delantero-negro",
+   "manzana-cult-crew-negra",
+   "manzana-primo-n4fl",
+   "manzana-delantera-alienation-venus",
+   "manzana-federal-motion",
+   "manzana-delantera-alienation-illunimati",
+   "manzana-delantera-primo-balance",
+   "manzana-delantera-stranger-ballast",
+   "manzana-optimus-gold",
+   "manzana-delantera-ontrail-nemesis-2"
+  ],
+  "deleted": []
  }
 ];
