@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Grips ODI XL",
+  "brand": "ODI",
+  "cat": "punos",
+  "spec": "Goma · Extralargos XL 230mm · diseño mushroom",
+  "price": 70000,
+  "sku": "GRP-ODI-001",
+  "units": 3,
+  "slug": "grips-odi-xl-2",
+  "img": "assets/img/products/grips-odi-xl-2-mt8xd8h9jcau.jpg?v=1787678074213"
+ },
+ {
   "n": "Grips Gw Gorila",
   "brand": "Gw",
   "cat": "punos",
