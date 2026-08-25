@@ -1,5 +1,20 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Delantera Ontrail Nemesis",
+  "brand": "Ontrail",
+  "cat": "piezas",
+  "spec": "Delantera • Doble sellado • 36 Huecos",
+  "price": 30000,
+  "sku": "PZA-ONT-001",
+  "units": 0,
+  "imgs": [
+   "assets/img/products/manzana-delantera-ontrail-nemesis-mt93uz21jwkf.jpg?v=1787688978840",
+   "assets/img/products/manzana-delantera-ontrail-nemesis-mt93v0616r69.jpg?v=1787688979899"
+  ],
+  "slug": "manzana-delantera-ontrail-nemesis",
+  "img": "assets/img/products/manzana-delantera-ontrail-nemesis-mt93uz21jwkf.jpg?v=1787688978840"
+ },
+ {
   "n": "Manzana Delantera Alienation Venus",
   "brand": "Alienation",
   "cat": "manzana-delantera",
