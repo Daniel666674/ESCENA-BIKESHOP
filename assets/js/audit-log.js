@@ -3590,5 +3590,15 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-fate-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T18:59:32.653Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "manzana-delantera-alienation-illunimati"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
