@@ -3463,5 +3463,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "timon-fitbikeco-dugan-raw"
   ]
+ },
+ {
+  "ts": "2026-08-25T16:51:33.169Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "manubrio-cromoly-negro-02"
+  ],
+  "deleted": []
  }
 ];
