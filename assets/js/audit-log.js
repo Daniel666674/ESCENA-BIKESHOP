@@ -3473,5 +3473,15 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-02"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T16:58:19.482Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "grips-odi-xl"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
