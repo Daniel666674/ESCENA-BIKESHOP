@@ -3841,5 +3841,26 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T22:03:55.104Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos nuevos, 7 productos editados, 4 fotos subidas",
+  "created": [
+   "llanta-innova-pro-big-slick-cafe-2-40",
+   "llanta-innova-pro-negra-2-40",
+   "llanta-mutanty-whipper-roja-2-40",
+   "llanta-mutanty-whipper-azul-2-40"
+  ],
+  "edited": [
+   "llanta-sunday-current-v2-negro-2-40",
+   "llanta-s-m-speedball-negra-2-40",
+   "llanta-odyssey-broc-negra-2-25-2-40",
+   "llanta-shadow-creeper-negra-2-40",
+   "llanta-subrosa-matt-ray-roja-2-40",
+   "llanta-tioga-factory-fs100-negra-2-10",
+   "llanta-innova-camufladas"
+  ],
+  "deleted": []
  }
 ];
