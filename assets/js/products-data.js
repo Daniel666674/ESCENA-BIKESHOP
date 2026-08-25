@@ -82,6 +82,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "cajas-de-frente-alienation-illuminati-oos",
+  "order": 10,
   "img": "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9jzc1in0.jpg?v=1787679581868"
  },
  {
@@ -93,7 +94,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CJF-FAT-001",
   "units": 2,
   "slug": "cajas-de-frente-fate-negra",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/cajas-de-frente-fate-negra-mt8xma1jbsqb.jpg?v=1787678495781"
  },
  {
@@ -106,7 +107,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "cajas-de-frente-totalbmx-negra",
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/cajas-de-frente-totalbmx-negra-mt8xji9htrq1.jpg?v=1787678366420"
  },
  {
@@ -617,7 +618,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cajas-de-frente-gw",
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/cajas-de-frente-gw.jpg?v=1787344758372"
  },
  {
@@ -687,7 +688,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/cajas-de-frente-rant-ur.jpg?v=1787341078749"
  },
  {
@@ -779,7 +780,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 20,
+  "order": 40,
   "img": "assets/img/products/cajas-de-frente-bsd-highriser.jpg?v=1787269249340"
  },
  {
@@ -822,7 +823,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/cajas-de-frente-trueno-v2.jpg?v=1787267009973"
  },
  {
@@ -841,7 +842,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cajas-de-frente-demolition-v2",
-  "order": 30,
+  "order": 50,
   "img": "assets/img/products/cajas-de-frente-demolition-v2.jpg?v=1787266253706"
  },
  {
@@ -883,7 +884,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cajas-de-frente-cult-match-v2",
-  "order": 40,
+  "order": 20,
   "img": "assets/img/products/cajas-de-frente-cult-match-v2.jpg?v=1787265292813"
  },
  {
@@ -926,7 +927,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "cajas-integradas-tall-seat-colony",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/cajas-integradas-tall-seat-colony.jpg?v=1787264034267"
  },
  {
@@ -977,7 +978,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "cajas-integrado-odyssey",
-  "order": 10,
+  "order": 30,
   "img": "assets/img/products/cajas-integrado-odyssey.jpg?v=1787263394684"
  },
  {
