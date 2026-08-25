@@ -3483,5 +3483,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T17:09:26.951Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "grips-gw-gorila"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
