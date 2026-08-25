@@ -3830,5 +3830,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T21:54:22.289Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 3 fotos subidas",
+  "created": [
+   "llanta-tioga-factory-fs100-negra-2-10",
+   "llanta-sunday-current-v2-negro-2-40"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
