@@ -323,7 +323,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-OPT-001",
   "units": 4,
   "imgs": [
-   "assets/img/products/manzana-optimus-gold-mt4mqcgyrg20.jpg?v=1787418345318",
    "assets/img/products/manzana-optimus-gold-mt4mqe06ty10.jpg?v=1787418346648",
    "assets/img/products/manzana-optimus-gold-mt4mqf14zi24.jpg?v=1787418348050",
    "assets/img/products/manzana-optimus-gold-mt4mqg42qwwi.jpg?v=1787418349291",
@@ -332,26 +331,48 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1
+    "units": 1,
+    "price": 95000,
+    "cost": 76000
    },
    {
     "label": "Cromado",
-    "units": 1
+    "units": 1,
+    "price": 95000,
+    "cost": 76000
    },
    {
     "label": "Azul",
-    "units": 1
+    "units": 1,
+    "price": 95000,
+    "cost": 76000
    },
    {
     "label": "Dorada",
-    "units": 1
+    "units": 1,
+    "price": 95000,
+    "cost": 76000
    }
   ],
   "slug": "manzana-optimus-gold",
-  "img": "assets/img/products/manzana-optimus-gold-mt4mqcgyrg20.jpg?v=1787418345318"
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Cromado": [
+    1
+   ],
+   "Azul": [
+    2
+   ],
+   "Dorada": [
+    3
+   ]
+  },
+  "img": "assets/img/products/manzana-optimus-gold-mt4mqe06ty10.jpg?v=1787418346648"
  },
  {
-  "n": "Manzana Primo N4FL",
+  "n": "Manzana Delantera Primo N4FL",
   "brand": "Primo",
   "cat": "manzana-delantera",
   "spec": "Delantero • Negro • Carcasa serie 6000 • Eje Chromoly 3/8” x 24tpi, pernos hembra • Rodamientos 2X Sellados 6902 • Guardias Nylon • 36H",
@@ -360,20 +381,46 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "manzana-primo-n4fl",
-  "img": "assets/img/products/manzana-primo-n4fl-mt4ie9t7if04.jpg?v=1787411062669"
+  "img": "assets/img/products/manzana-primo-n4fl-mt8ym6ibxxhr.jpg?v=1787680171002"
  },
  {
-  "n": "Manzana Federal Motion",
+  "n": "Manzana Delantera Federal Motion",
   "brand": "Federal",
   "cat": "manzana-delantera",
   "spec": "Delantero • Cromado • Carcasa Aluminio 6061-T6 • Eje Chromoly Hembra • Rodamientos Sellados 6002-2RS • Pernos Hembra 10mm • 36H",
   "price": 300000,
   "sku": "MZD-FED-001",
-  "units": 1,
+  "units": 2,
   "imgFit": "cover",
   "imgPos": "50% 50%",
   "slug": "manzana-federal-motion",
-  "img": "assets/img/products/manzana-federal-motion-mt4ieaodrfuv.jpg?v=1787411063781"
+  "imgs": [
+   "assets/img/products/manzana-federal-motion-mt8ym7zu9wwc.jpg?v=1787680172681",
+   "assets/img/products/manzana-federal-motion-mt8ym9ahactd.jpg?v=1787680174212"
+  ],
+  "colors": [
+   {
+    "label": "Cromada",
+    "units": 2,
+    "price": 300000,
+    "cost": 240000
+   },
+   {
+    "label": "Negra",
+    "units": 0,
+    "price": 300000,
+    "cost": 240000
+   }
+  ],
+  "imgColorMap": {
+   "Cromada": [
+    0
+   ],
+   "Negra": [
+    1
+   ]
+  },
+  "img": "assets/img/products/manzana-federal-motion-mt8ym7zu9wwc.jpg?v=1787680172681"
  },
  {
   "n": "Llanta Innova Camufladas",
@@ -606,7 +653,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cajas-de-frente-rant-ur.jpg?v=1787341078749"
  },
  {
-  "n": "Manzana Cult Crew Negra",
+  "n": "Manzana Delantera Cult Crew",
   "brand": "Cult",
   "cat": "manzana-delantera",
   "spec": "Delantero • Negro • Carcasa aluminio 6061-T6 • Eje Hembra 36H • Rodamientos 2x Sellados 6902",
@@ -615,7 +662,25 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "manzana-cult-crew-negra",
-  "img": "assets/img/products/manzana-cult-crew-negra-mt4mr819hie9.jpg?v=1787418385855"
+  "imgs": [
+   "assets/img/products/manzana-cult-crew-negra-mt8ymah0vy61.jpg?v=1787680178653",
+   "assets/img/products/manzana-cult-crew-negra-mt8ymdwdoydv.jpg?v=1787680180868"
+  ],
+  "colors": [
+   {
+    "label": "Negra",
+    "units": 1,
+    "price": 330000,
+    "cost": 264000
+   },
+   {
+    "label": "Cromada",
+    "units": 0,
+    "price": 330000,
+    "cost": 264000
+   }
+  ],
+  "img": "assets/img/products/manzana-cult-crew-negra-mt8ymah0vy61.jpg?v=1787680178653"
  },
  {
   "n": "Silla Pivotal Cult Old Skool",
