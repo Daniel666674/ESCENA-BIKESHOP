@@ -3800,5 +3800,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T21:28:00.008Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "llanta-alinetion-prowler"
+  ],
+  "deleted": []
  }
 ];
