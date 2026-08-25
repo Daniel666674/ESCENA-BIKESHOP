@@ -3673,5 +3673,15 @@ window.ESCENA_AUDIT = [
    "manzana-delantera-stranger-ballast"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T20:00:58.285Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "manzana-delantera-primo-balance"
+  ],
+  "deleted": []
  }
 ];
