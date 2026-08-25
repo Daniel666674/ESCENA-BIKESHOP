@@ -3623,5 +3623,25 @@ window.ESCENA_AUDIT = [
    "manzana-primo-n4fl"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T19:07:14.976Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "11 productos editados",
+  "created": [],
+  "edited": [
+   "cajas-de-frente-alienation-illuminati-oos",
+   "cajas-de-frente-gw",
+   "cajas-de-frente-trueno-v2",
+   "cajas-de-frente-fate-negra",
+   "cajas-de-frente-rant-ur",
+   "cajas-integradas-tall-seat-colony",
+   "cajas-de-frente-totalbmx-negra",
+   "cajas-de-frente-cult-match-v2",
+   "cajas-de-frente-demolition-v2",
+   "cajas-de-frente-bsd-highriser",
+   "cajas-integrado-odyssey"
+  ],
+  "deleted": []
  }
 ];
