@@ -3643,5 +3643,15 @@ window.ESCENA_AUDIT = [
    "cajas-integrado-odyssey"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T19:45:06.873Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "manzana-delantera-stranger-ballast"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
