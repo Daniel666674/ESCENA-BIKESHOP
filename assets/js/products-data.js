@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Delantera Alienation Venus",
+  "brand": "Alienation",
+  "cat": "manzana-delantera",
+  "spec": "Buje de alineación 6016 • Doble sellado • 36 Huecos • peso 275 grs",
+  "price": 300000,
+  "sku": "MZD-ALI-002",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/manzana-delantera-alienation-venus-mt93j3fo43r2.jpg?v=1787688425275",
+   "assets/img/products/manzana-delantera-alienation-venus-mt93j518pdte.jpg?v=1787688426529"
+  ],
+  "slug": "manzana-delantera-alienation-venus",
+  "img": "assets/img/products/manzana-delantera-alienation-venus-mt93j3fo43r2.jpg?v=1787688425275"
+ },
+ {
   "n": "Manzana Delantera Primo Balance",
   "brand": "Primo",
   "cat": "manzana-delantera",
