@@ -1,5 +1,34 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Delantera Stranger Ballast",
+  "brand": "Stranger",
+  "cat": "manzana-delantera",
+  "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm  ·  0.5 Lb",
+  "price": 260000,
+  "sku": "MZD-STR-001",
+  "units": 1,
+  "imgs": [
+   "assets/img/products/manzana-delantera-stranger-ballast-mt92qp4de4i0.jpg?v=1787687100090",
+   "assets/img/products/manzana-delantera-stranger-ballast-mt92qqiinbej.jpg?v=1787687101439"
+  ],
+  "colors": [
+   {
+    "label": "Cromada",
+    "units": 1,
+    "price": 260000,
+    "cost": 208000
+   },
+   {
+    "label": "Negra",
+    "units": 0,
+    "price": 260000,
+    "cost": 208000
+   }
+  ],
+  "slug": "manzana-delantera-stranger-ballast",
+  "img": "assets/img/products/manzana-delantera-stranger-ballast-mt92qp4de4i0.jpg?v=1787687100090"
+ },
+ {
   "n": "Manzana delantera Alienation Illunimati",
   "brand": "Alienation",
   "cat": "manzana-delantera",
