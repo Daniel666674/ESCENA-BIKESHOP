@@ -3693,5 +3693,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T20:16:23.987Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "manzana-delantera-ontrail-nemesis"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
