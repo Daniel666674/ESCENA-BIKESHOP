@@ -718,6 +718,14 @@ window.ESCENA_PRODUCTS = [
     "cost": 264000
    }
   ],
+  "imgColorMap": {
+   "Negra": [
+    0
+   ],
+   "Cromada": [
+    1
+   ]
+  },
   "img": "assets/img/products/manzana-cult-crew-negra-mt8ymah0vy61.jpg?v=1787680178653"
  },
  {
@@ -4302,6 +4310,14 @@ window.ESCENA_PRODUCTS = [
     "cost": 240000
    }
   ],
+  "imgColorMap": {
+   "Negra": [
+    0
+   ],
+   "Cromada": [
+    1
+   ]
+  },
   "img": "assets/img/products/buje-delantero-negro-mt8yzu3vri8s.jpg?v=1787680808248"
  },
  {
