@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de frente Fate Negra",
+  "brand": "Fate",
+  "cat": "caja-frente",
+  "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
+  "price": 85000,
+  "sku": "CJF-FAT-001",
+  "units": 0,
+  "slug": "cajas-de-frente-fate-negra",
+  "img": "assets/img/products/cajas-de-frente-fate-negra-mt8xma1jbsqb.jpg?v=1787678495781"
+ },
+ {
   "n": "Cajas de Frente Totalbmx Negra",
   "brand": "Totalbmx",
   "cat": "caja-frente",
