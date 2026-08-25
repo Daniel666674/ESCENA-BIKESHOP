@@ -469,10 +469,10 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/llanta-federal-neptune-mt4omcenjal8.jpg?v=1787421518052"
  },
  {
-  "n": "Llanta Alinetion Prowler Negra - 2.40\"",
+  "n": "Llanta Alinetion Prowler Negra - 2.25\" - 2.40\"",
   "brand": "Alinetion",
   "cat": "corazas",
-  "spec": "20 x 2.40\" · Doble compuesto · Negro",
+  "spec": "20 x 2.40\" · Doble compuesto · 2.25\" Keblar negra",
   "price": 160000,
   "sku": "COR-ALI-001",
   "units": 3,
@@ -486,6 +486,12 @@ window.ESCENA_PRODUCTS = [
     "units": 3,
     "price": 160000,
     "cost": 128000
+   },
+   {
+    "label": "20x2.25\"",
+    "units": 0,
+    "price": 180000,
+    "cost": 144000
    }
   ],
   "colors": [
