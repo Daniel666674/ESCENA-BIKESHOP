@@ -3451,5 +3451,17 @@ window.ESCENA_AUDIT = [
    "lija-diseno"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T16:45:19.998Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 producto eliminado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "manubrio-cromoly-negro-04"
+  ],
+  "deleted": [
+   "timon-fitbikeco-dugan-raw"
+  ]
  }
 ];
