@@ -3915,5 +3915,17 @@ window.ESCENA_AUDIT = [
    "llanta-tioga-factory-fs100-negra-2-10"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T23:30:49.038Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 3 fotos subidas",
+  "created": [
+   "llanta-theory-proven-blanca-2-40",
+   "llanta-odyssey-supercircuit-keblar-negra-2-40",
+   "llanta-odyssey-path-pro-negra-2-40"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
