@@ -2,6 +2,35 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Manzana Delantera Ontrail Nemesis",
   "brand": "Ontrail",
+  "cat": "manzana-delantera",
+  "spec": "Delanters · Rodamientos sellados · 36 Huecos ·  Eje 14mm",
+  "price": 30000,
+  "sku": "MZD-ONT-001",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt944793fgxt.jpg?v=1787689409682",
+   "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt9448lutrmz.jpg?v=1787689410920"
+  ],
+  "colors": [
+   {
+    "label": "Verde",
+    "units": 1,
+    "price": 30000,
+    "cost": 24000
+   },
+   {
+    "label": "Azul",
+    "units": 1,
+    "price": 30000,
+    "cost": 24000
+   }
+  ],
+  "slug": "manzana-delantera-ontrail-nemesis-2",
+  "img": "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt944793fgxt.jpg?v=1787689409682"
+ },
+ {
+  "n": "Manzana Delantera Ontrail Nemesis",
+  "brand": "Ontrail",
   "cat": "piezas",
   "spec": "Delantera • Doble sellado • 36 Huecos",
   "price": 30000,
