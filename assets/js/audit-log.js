@@ -3735,5 +3735,25 @@ window.ESCENA_AUDIT = [
    "manzana-delantera-ontrail-nemesis-2"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T20:36:36.247Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "11 productos editados",
+  "created": [],
+  "edited": [
+   "manzana-delantera-stranger-ballast",
+   "manzana-delantera-profile-mini-azul",
+   "buje-delantero-negro",
+   "manzana-cult-crew-negra",
+   "manzana-primo-n4fl",
+   "manzana-delantera-alienation-venus",
+   "manzana-federal-motion",
+   "manzana-delantera-alienation-illunimati",
+   "manzana-delantera-primo-balance",
+   "manzana-optimus-gold",
+   "manzana-delantera-ontrail-nemesis-2"
+  ],
+  "deleted": []
  }
 ];
