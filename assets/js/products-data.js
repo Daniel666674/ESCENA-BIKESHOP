@@ -1,5 +1,49 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Odyssey Broc Negra - 2.25\" - 2.40\"",
+  "brand": "Odyssey",
+  "cat": "corazas",
+  "spec": "",
+  "price": 160000,
+  "sku": "COR-ODY-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "20x2.25\"",
+    "units": 1,
+    "price": 160000,
+    "cost": 128000
+   },
+   {
+    "label": "20x2.40\"",
+    "units": 0,
+    "price": 160000,
+    "cost": 128000
+   }
+  ],
+  "slug": "llanta-odyssey-broc-negra-2-25-2-40",
+  "img": "assets/img/products/llanta-odyssey-broc-negra-2-25-2-40-mt96bykiz6db.jpg?v=1787693130876"
+ },
+ {
+  "n": "Llanta Subrosa Matt Ray Roja - 2.40\"",
+  "brand": "Subrosa",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Rojo",
+  "price": 150000,
+  "sku": "COR-SUB-001",
+  "units": 2,
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 2,
+    "price": 150000,
+    "cost": 120000
+   }
+  ],
+  "slug": "llanta-subrosa-matt-ray-roja-2-40",
+  "img": "assets/img/products/llanta-subrosa-matt-ray-roja-2-40-mt96bzwcbayu.jpg?v=1787693132253"
+ },
+ {
   "n": "Manzana Delantera Profile Mini Azul",
   "brand": "Profile",
   "cat": "manzana-delantera",
