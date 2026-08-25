@@ -118,6 +118,17 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "grips-gw-gorila",
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Morado": [
+    1
+   ],
+   "Rosa": [
+    2
+   ]
+  },
   "img": "assets/img/products/grips-gw-gorila-mt8x6eqen1z8.jpg?v=1787677755717"
  },
  {
