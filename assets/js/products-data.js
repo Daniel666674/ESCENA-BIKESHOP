@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Delantera Primo Balance",
+  "brand": "Primo",
+  "cat": "manzana-delantera",
+  "spec": "",
+  "price": 270000,
+  "sku": "MZD-PRM-002",
+  "units": 1,
+  "slug": "manzana-delantera-primo-balance",
+  "img": "assets/img/products/manzana-delantera-primo-balance-mt934w8xa78b.jpg?v=1787687762948"
+ },
+ {
   "n": "Manzana Delantera Stranger Ballast",
   "brand": "Stranger",
   "cat": "manzana-delantera",
