@@ -3789,5 +3789,16 @@ window.ESCENA_AUDIT = [
    "llanta-innova-camufladas"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T21:25:38.901Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 2 fotos subidas",
+  "created": [
+   "llanta-odyssey-broc-negra-2-25-2-40",
+   "llanta-subrosa-matt-ray-roja-2-40"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
