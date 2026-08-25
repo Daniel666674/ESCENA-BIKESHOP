@@ -3810,5 +3810,15 @@ window.ESCENA_AUDIT = [
    "llanta-alinetion-prowler"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T21:30:28.301Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "llanta-s-m-speedball-negra-2-40"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
