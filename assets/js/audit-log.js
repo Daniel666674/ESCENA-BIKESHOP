@@ -3523,5 +3523,27 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T17:39:50.280Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 11 productos editados, 3 fotos subidas",
+  "created": [
+   "cajas-de-frente-alienation-illuminati-oos"
+  ],
+  "edited": [
+   "cajas-de-frente-fiend-stack",
+   "cajas-integrado-odyssey",
+   "cajas-de-frente-bsd-highriser",
+   "cajas-de-frente-demolition-v2",
+   "cajas-de-frente-totalbmx-negra",
+   "cajas-de-frente-cult-match-v2",
+   "cajas-integradas-tall-seat-colony",
+   "cajas-de-frente-rant-ur",
+   "cajas-de-frente-fate-negra",
+   "cajas-de-frente-trueno-v2",
+   "cajas-de-frente-gw"
+  ],
+  "deleted": []
  }
 ];
