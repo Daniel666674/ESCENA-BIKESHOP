@@ -3820,5 +3820,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T21:43:25.308Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "llanta-shadow-creeper-negra-2-40"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
