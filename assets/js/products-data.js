@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta S&M Speedball Negra - 2.40\"",
+  "brand": "S&M",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
+  "price": 160000,
+  "sku": "COR-SNM-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 1,
+    "price": 160000,
+    "cost": 128000
+   }
+  ],
+  "slug": "llanta-s-m-speedball-negra-2-40",
+  "img": "assets/img/products/llanta-s-m-speedball-negra-2-40-mt96i6sypnnu.jpg?v=1787693421735"
+ },
+ {
   "n": "Llanta Odyssey Broc Negra - 2.25\" - 2.40\"",
   "brand": "Odyssey",
   "cat": "corazas",
