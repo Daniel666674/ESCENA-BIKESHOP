@@ -3580,5 +3580,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "buje-delantero-cromado"
   ]
+ },
+ {
+  "ts": "2026-08-25T18:00:50.321Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cajas-de-frente-fate-negra"
+  ],
+  "deleted": []
  }
 ];
