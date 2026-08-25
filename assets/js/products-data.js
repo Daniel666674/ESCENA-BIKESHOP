@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Delantera Profile Mini Azul",
+  "brand": "Profile",
+  "cat": "manzana-delantera",
+  "spec": "Delantera · Rodamientos sellados · 36 huecos ·  eje en cromo truercas de 14mm",
+  "price": 500000,
+  "sku": "MZD-PRO-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "manzana-delantera-profile-mini-azul",
+  "order": 0,
+  "img": "assets/img/products/manzana-delantera-profile-mini-azul-mt94gsx1gfyy.jpg?v=1787689997815"
+ },
+ {
   "n": "Manzana Delantera Ontrail Nemesis",
   "brand": "Ontrail",
   "cat": "manzana-delantera",
@@ -26,6 +39,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "manzana-delantera-ontrail-nemesis-2",
+  "order": 110,
   "img": "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt944793fgxt.jpg?v=1787689409682"
  },
  {
@@ -57,6 +71,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/manzana-delantera-alienation-venus-mt93j518pdte.jpg?v=1787688426529"
   ],
   "slug": "manzana-delantera-alienation-venus",
+  "order": 50,
   "img": "assets/img/products/manzana-delantera-alienation-venus-mt93j3fo43r2.jpg?v=1787688425275"
  },
  {
@@ -68,6 +83,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-PRM-002",
   "units": 1,
   "slug": "manzana-delantera-primo-balance",
+  "order": 80,
   "img": "assets/img/products/manzana-delantera-primo-balance-mt93b5l7in31.jpg?v=1787688054691"
  },
  {
@@ -105,6 +121,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "order": 90,
   "img": "assets/img/products/manzana-delantera-stranger-ballast-mt938rrdl4mp.jpg?v=1787687943425"
  },
  {
@@ -143,6 +160,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "manzana-delantera-alienation-illunimati",
+  "order": 70,
   "img": "assets/img/products/manzana-delantera-alienation-illunimati-mt91423bar53.jpg?v=1787684364402"
  },
  {
@@ -516,6 +534,7 @@ window.ESCENA_PRODUCTS = [
     3
    ]
   },
+  "order": 100,
   "img": "assets/img/products/manzana-optimus-gold-mt4mqe06ty10.jpg?v=1787418346648"
  },
  {
@@ -528,6 +547,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "manzana-primo-n4fl",
+  "order": 40,
   "img": "assets/img/products/manzana-primo-n4fl-mt91bhy75izw.jpg?v=1787684711192"
  },
  {
@@ -567,6 +587,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "order": 60,
   "img": "assets/img/products/manzana-federal-motion-mt8ym7zu9wwc.jpg?v=1787680172681"
  },
  {
@@ -835,6 +856,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "order": 30,
   "img": "assets/img/products/manzana-cult-crew-negra-mt8ymah0vy61.jpg?v=1787680178653"
  },
  {
@@ -4400,7 +4422,7 @@ window.ESCENA_PRODUCTS = [
   "price": 300000,
   "sku": "BUJE-DELANTERO-NEGRO",
   "units": 1,
-  "order": 730,
+  "order": 10,
   "imgs": [
    "assets/img/products/buje-delantero-negro-mt8yzu3vri8s.jpg?v=1787680808248",
    "assets/img/products/buje-delantero-negro-mt8yzvp4c99j.jpg?v=1787680810173"
@@ -4438,7 +4460,7 @@ window.ESCENA_PRODUCTS = [
   "price": 270000,
   "sku": "SHADOW-BUJE-DELANTERO-NEGRO",
   "units": 1,
-  "order": 800,
+  "order": 20,
   "img": "assets/img/products/shadow-buje-delantero-negro-mt4mrauxsxrr.jpg?v=1787418390518"
  },
  {
