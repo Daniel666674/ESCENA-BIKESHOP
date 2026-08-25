@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de Frente Totalbmx Negra",
+  "brand": "Totalbmx",
+  "cat": "caja-frente",
+  "spec": "",
+  "price": 120000,
+  "sku": "CJF-TOT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "cajas-de-frente-totalbmx-negra",
+  "img": "assets/img/products/cajas-de-frente-totalbmx-negra-mt8xji9htrq1.jpg?v=1787678366420"
+ },
+ {
   "n": "Grips ODI XL",
   "brand": "ODI",
   "cat": "punos",
