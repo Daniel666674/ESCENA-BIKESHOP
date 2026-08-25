@@ -3772,5 +3772,22 @@ window.ESCENA_AUDIT = [
    "llanta-innova-camufladas"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T21:15:44.704Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "8 productos editados",
+  "created": [],
+  "edited": [
+   "coraza_primo_555_2.45",
+   "coraza_cult_wafflecup_2.40",
+   "llanta-cult-wafflecup-goma",
+   "llanta-alinetion-prowler",
+   "llanta-federal-neptune",
+   "llanta-animal-ghl",
+   "llanta-sunday-street-sweeper-v2",
+   "llanta-innova-camufladas"
+  ],
+  "deleted": []
  }
 ];
