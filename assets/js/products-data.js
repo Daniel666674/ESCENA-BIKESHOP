@@ -1,5 +1,47 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Tioga Factory FS100 Negra - 2.10\"",
+  "brand": "Tioga",
+  "cat": "corazas",
+  "spec": "20 x 2.10\" · Banda direccional profundo · Negro",
+  "price": 80000,
+  "sku": "COR-TIO-001",
+  "units": 5,
+  "imgs": [
+   "assets/img/products/llanta-tioga-factory-fs100-negra-2-10-mt97cv103qjz.jpg?v=1787694852525",
+   "assets/img/products/llanta-tioga-factory-fs100-negra-2-10-mt97cwbxxcou.jpg?v=1787694853944"
+  ],
+  "sizes": [
+   {
+    "label": "20x2.10\"",
+    "units": 5,
+    "price": 80000,
+    "cost": 64000
+   }
+  ],
+  "slug": "llanta-tioga-factory-fs100-negra-2-10",
+  "img": "assets/img/products/llanta-tioga-factory-fs100-negra-2-10-mt97cv103qjz.jpg?v=1787694852525"
+ },
+ {
+  "n": "Llanta Sunday Current V2 Negro - 2.40\"",
+  "brand": "Sunday",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
+  "price": 160000,
+  "sku": "COR-SUN-002",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 1,
+    "price": 160000,
+    "cost": 128000
+   }
+  ],
+  "slug": "llanta-sunday-current-v2-negro-2-40",
+  "img": "assets/img/products/llanta-sunday-current-v2-negro-2-40-mt97cxfc7q4j.jpg?v=1787694855400"
+ },
+ {
   "n": "Llanta Shadow Creeper Negra - 2.40\"",
   "brand": "Shadow",
   "cat": "corazas",
