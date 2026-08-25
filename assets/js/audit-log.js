@@ -3862,5 +3862,16 @@ window.ESCENA_AUDIT = [
    "llanta-innova-camufladas"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T22:23:06.489Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 4 fotos subidas",
+  "created": [
+   "llanta-chaoyang-cutting-edge-negra-2-25",
+   "llanta-optimus-black-burn-negra-2-35"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
