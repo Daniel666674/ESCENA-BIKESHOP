@@ -3683,5 +3683,15 @@ window.ESCENA_AUDIT = [
    "manzana-delantera-primo-balance"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T20:07:10.980Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "manzana-delantera-alienation-venus"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
