@@ -1,5 +1,43 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Grips Gw Gorila",
+  "brand": "Gw",
+  "cat": "punos",
+  "spec": "",
+  "price": 10000,
+  "sku": "GRP-GWB-001",
+  "units": 10,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/grips-gw-gorila-mt8x6eqen1z8.jpg?v=1787677755717",
+   "assets/img/products/grips-gw-gorila-mt8x6gclllpt.jpg?v=1787677757333",
+   "assets/img/products/grips-gw-gorila-mt8x6hlhsymb.jpg?v=1787677758930"
+  ],
+  "imgZoom": 120,
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 8,
+    "price": 10000,
+    "cost": 8000
+   },
+   {
+    "label": "Morado",
+    "units": 1,
+    "price": 10000,
+    "cost": 8000
+   },
+   {
+    "label": "Rosa",
+    "units": 1,
+    "price": 10000,
+    "cost": 8000
+   }
+  ],
+  "slug": "grips-gw-gorila",
+  "img": "assets/img/products/grips-gw-gorila-mt8x6eqen1z8.jpg?v=1787677755717"
+ },
+ {
   "n": "Grips ODI XL",
   "brand": "ODI",
   "cat": "piezas",
