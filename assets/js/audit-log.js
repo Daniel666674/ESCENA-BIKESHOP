@@ -3555,5 +3555,18 @@ window.ESCENA_AUDIT = [
    "grips-gw-gorila"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T17:49:59.922Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados, 5 fotos subidas",
+  "created": [],
+  "edited": [
+   "manzana-optimus-gold",
+   "manzana-federal-motion",
+   "manzana-primo-n4fl",
+   "manzana-cult-crew-negra"
+  ],
+  "deleted": []
  }
 ];
