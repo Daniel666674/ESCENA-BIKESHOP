@@ -53,7 +53,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
   "price": 85000,
   "sku": "CJF-FAT-001",
-  "units": 0,
+  "units": 2,
   "slug": "cajas-de-frente-fate-negra",
   "order": 80,
   "img": "assets/img/products/cajas-de-frente-fate-negra-mt8xma1jbsqb.jpg?v=1787678495781"
