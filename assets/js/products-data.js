@@ -1,5 +1,51 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta CST Orbit Knobby Negra Rin 16 - 2.125\"",
+  "brand": "CST",
+  "cat": "corazas",
+  "spec": "16 x 2.125\" · Banda direccional profundo · Negro",
+  "price": 45000,
+  "sku": "COR-CST-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgPos": "50% 0%",
+  "sizes": [
+   {
+    "label": "16x2.125\"",
+    "units": 1,
+    "price": 45000,
+    "cost": 36000
+   }
+  ],
+  "slug": "llanta-cst-orbit-knobby-negra-rin-16-2-125",
+  "img": "assets/img/products/llanta-cst-orbit-knobby-negra-rin-16-2-125-mt9a85n17q91.jpg?v=1787699672009"
+ },
+ {
+  "n": "Llanta Chaoyang Freestyle Bmx Rin 16 - 2.125\"",
+  "brand": "Chaoyang",
+  "cat": "corazas",
+  "spec": "16 x 2.125\" · Banda direccional profundo · Negro",
+  "price": 45000,
+  "sku": "COR-CHA-002",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/llanta-chaoyang-freestyle-bmx-rin-16-2-125-mt9a872hdwt4.jpg?v=1787699673632",
+   "assets/img/products/llanta-chaoyang-freestyle-bmx-rin-16-2-125-mt9a88bkuy4q.jpg?v=1787699675597",
+   "assets/img/products/llanta-chaoyang-freestyle-bmx-rin-16-2-125-mt9a89u50s3d.jpg?v=1787699677260"
+  ],
+  "sizes": [
+   {
+    "label": "16x2.125\"",
+    "units": 2,
+    "price": 45000,
+    "cost": 36000
+   }
+  ],
+  "slug": "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
+  "img": "assets/img/products/llanta-chaoyang-freestyle-bmx-rin-16-2-125-mt9a872hdwt4.jpg?v=1787699673632"
+ },
+ {
   "n": "Llanta Chaoyang Cutting Edge Negra - 2.25\"",
   "brand": "Chaoyang",
   "cat": "corazas",
