@@ -1,5 +1,43 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana delantera Alienation Illunimati",
+  "brand": "Alienation",
+  "cat": "manzana-delantera",
+  "spec": "",
+  "price": 280000,
+  "sku": "MZD-ALI-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/manzana-delantera-alienation-illunimati-mt91423bar53.jpg?v=1787684364402",
+   "assets/img/products/manzana-delantera-alienation-illunimati-mt9143n6svn8.jpg?v=1787684365905"
+  ],
+  "colors": [
+   {
+    "label": "Negra",
+    "units": 1,
+    "price": 280000,
+    "cost": 224000
+   },
+   {
+    "label": "Cromada",
+    "units": 1,
+    "price": 280000,
+    "cost": 224000
+   }
+  ],
+  "imgColorMap": {
+   "Negra": [
+    0
+   ],
+   "Cromada": [
+    1
+   ]
+  },
+  "slug": "manzana-delantera-alienation-illunimati",
+  "img": "assets/img/products/manzana-delantera-alienation-illunimati-mt91423bar53.jpg?v=1787684364402"
+ },
+ {
   "n": "Cajas de frente Alienation Illuminati OOS",
   "brand": "Alienation",
   "cat": "caja-frente",
