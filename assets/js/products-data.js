@@ -1,5 +1,87 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Innova Pro Big Slick Cafe - 2.40\"",
+  "brand": "Innova",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Cafe",
+  "price": 80000,
+  "sku": "COR-INN-003",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 2,
+    "price": 80000,
+    "cost": 64000
+   }
+  ],
+  "slug": "llanta-innova-pro-big-slick-cafe-2-40",
+  "order": 140,
+  "img": "assets/img/products/llanta-innova-pro-big-slick-cafe-2-40-mt97p10kiseh.jpg?v=1787695420944"
+ },
+ {
+  "n": "Llanta Innova Pro Negra - 2.40\"",
+  "brand": "Innova",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
+  "price": 80000,
+  "sku": "COR-INN-002",
+  "units": 10,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 10,
+    "price": 80000,
+    "cost": 64000
+   }
+  ],
+  "slug": "llanta-innova-pro-negra-2-40",
+  "order": 160,
+  "img": "assets/img/products/llanta-innova-pro-negra-2-40-mt97p2xd9627.jpg?v=1787695422446"
+ },
+ {
+  "n": "Llanta Mutanty Whipper Roja - 2.40\"",
+  "brand": "Mutanty",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Rojo",
+  "price": 100000,
+  "sku": "COR-MUT-002",
+  "units": 2,
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 2,
+    "price": 100000,
+    "cost": 80000
+   }
+  ],
+  "slug": "llanta-mutanty-whipper-roja-2-40",
+  "order": 120,
+  "img": "assets/img/products/llanta-mutanty-whipper-roja-2-40-mt97p432jyue.jpg?v=1787695423856"
+ },
+ {
+  "n": "Llanta Mutanty Whipper Azul - 2.40\"",
+  "brand": "Mutanty",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Azul",
+  "price": 100000,
+  "sku": "COR-MUT-001",
+  "units": 2,
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 2,
+    "price": 100000,
+    "cost": 80000
+   }
+  ],
+  "slug": "llanta-mutanty-whipper-azul-2-40",
+  "order": 130,
+  "img": "assets/img/products/llanta-mutanty-whipper-azul-2-40-mt97p569adss.jpg?v=1787695425305"
+ },
+ {
   "n": "Llanta Tioga Factory FS100 Negra - 2.10\"",
   "brand": "Tioga",
   "cat": "corazas",
@@ -20,6 +102,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-tioga-factory-fs100-negra-2-10",
+  "order": 170,
   "img": "assets/img/products/llanta-tioga-factory-fs100-negra-2-10-mt97cv103qjz.jpg?v=1787694852525"
  },
  {
@@ -39,6 +122,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-sunday-current-v2-negro-2-40",
+  "order": 70,
   "img": "assets/img/products/llanta-sunday-current-v2-negro-2-40-mt97cxfc7q4j.jpg?v=1787694855400"
  },
  {
@@ -58,6 +142,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-shadow-creeper-negra-2-40",
+  "order": 100,
   "img": "assets/img/products/llanta-shadow-creeper-negra-2-40-mt96yvlbx5hf.jpg?v=1787694200174"
  },
  {
@@ -77,6 +162,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-s-m-speedball-negra-2-40",
+  "order": 80,
   "img": "assets/img/products/llanta-s-m-speedball-negra-2-40-mt96i6sypnnu.jpg?v=1787693421735"
  },
  {
@@ -102,6 +188,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-odyssey-broc-negra-2-25-2-40",
+  "order": 90,
   "img": "assets/img/products/llanta-odyssey-broc-negra-2-25-2-40-mt96bykiz6db.jpg?v=1787693130876"
  },
  {
@@ -121,6 +208,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-subrosa-matt-ray-roja-2-40",
+  "order": 110,
   "img": "assets/img/products/llanta-subrosa-matt-ray-roja-2-40-mt96bzwcbayu.jpg?v=1787693132253"
  },
  {
@@ -820,7 +908,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "imgFit": "cover",
-  "order": 70,
+  "order": 150,
   "img": "assets/img/products/llanta-innova-camufladas.jpg?v=1787355305098"
  },
  {
