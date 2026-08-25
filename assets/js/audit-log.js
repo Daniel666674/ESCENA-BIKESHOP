@@ -3600,5 +3600,18 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T19:00:39.261Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "manzana-cult-crew-negra",
+   "buje-delantero-negro",
+   "manzana-federal-motion",
+   "manzana-delantera-alienation-illunimati"
+  ],
+  "deleted": []
  }
 ];
