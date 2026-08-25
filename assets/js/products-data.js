@@ -1,5 +1,66 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Theory Proven Blanca - 2.40\"",
+  "brand": "Theory",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Blanca",
+  "price": 90000,
+  "sku": "COR-THE-001",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 2,
+    "price": 90000,
+    "cost": 72000
+   }
+  ],
+  "slug": "llanta-theory-proven-blanca-2-40",
+  "img": "assets/img/products/llanta-theory-proven-blanca-2-40-mt9asiojm1i9.jpg?v=1787700622876"
+ },
+ {
+  "n": "Llanta Odyssey Supercircuit Keblar Negra 2.40\"",
+  "brand": "Odyssey",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
+  "price": 220000,
+  "sku": "COR-ODY-003",
+  "units": 0,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 0,
+    "price": 220000,
+    "cost": 176000
+   }
+  ],
+  "slug": "llanta-odyssey-supercircuit-keblar-negra-2-40",
+  "order": 230,
+  "img": "assets/img/products/llanta-odyssey-supercircuit-keblar-negra-2-40-mt9askrguiae.jpg?v=1787700625237"
+ },
+ {
+  "n": "Llanta Odyssey Path Pro Negra - 2.40\"",
+  "brand": "Odyssey",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
+  "price": 160000,
+  "sku": "COR-ODY-002",
+  "units": 0,
+  "sizes": [
+   {
+    "label": "20x2.40\"",
+    "units": 0,
+    "price": 160000,
+    "cost": 128000
+   }
+  ],
+  "slug": "llanta-odyssey-path-pro-negra-2-40",
+  "order": 220,
+  "img": "assets/img/products/llanta-odyssey-path-pro-negra-2-40-mt9asml2vi72.jpg?v=1787700627574"
+ },
+ {
   "n": "Llanta CST Orbit Knobby Negra Rin 16 - 2.125\"",
   "brand": "CST",
   "cat": "corazas",
