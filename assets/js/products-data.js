@@ -19,8 +19,8 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-STR-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/manzana-delantera-stranger-ballast-mt92qp4de4i0.jpg?v=1787687100090",
-   "assets/img/products/manzana-delantera-stranger-ballast-mt92qqiinbej.jpg?v=1787687101439"
+   "assets/img/products/manzana-delantera-stranger-ballast-mt938rrdl4mp.jpg?v=1787687943425",
+   "assets/img/products/manzana-delantera-stranger-ballast-mt92qp4de4i0.jpg?v=1787687100090"
   ],
   "colors": [
    {
@@ -37,7 +37,15 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "manzana-delantera-stranger-ballast",
-  "img": "assets/img/products/manzana-delantera-stranger-ballast-mt92qp4de4i0.jpg?v=1787687100090"
+  "imgColorMap": {
+   "Cromada": [
+    0
+   ],
+   "Negra": [
+    1
+   ]
+  },
+  "img": "assets/img/products/manzana-delantera-stranger-ballast-mt938rrdl4mp.jpg?v=1787687943425"
  },
  {
   "n": "Manzana delantera Alienation Illunimati",
