@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Shadow Creeper Negra - 2.40\"",
+  "brand": "Shadow",
+  "cat": "corazas",
+  "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
+  "price": 150000,
+  "sku": "COR-SHW-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "20x2,40\"",
+    "units": 1,
+    "price": 150000,
+    "cost": 120000
+   }
+  ],
+  "slug": "llanta-shadow-creeper-negra-2-40",
+  "img": "assets/img/products/llanta-shadow-creeper-negra-2-40-mt96yvlbx5hf.jpg?v=1787694200174"
+ },
+ {
   "n": "Llanta S&M Speedball Negra - 2.40\"",
   "brand": "S&M",
   "cat": "corazas",
