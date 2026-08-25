@@ -3545,5 +3545,15 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-gw"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-25T17:40:32.606Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "grips-gw-gorila"
+  ],
+  "deleted": []
  }
 ];
