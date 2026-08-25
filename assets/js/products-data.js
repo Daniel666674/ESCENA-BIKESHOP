@@ -20,6 +20,7 @@ window.ESCENA_PRODUCTS = [
   "price": 30000,
   "sku": "MZD-ONT-001",
   "units": 2,
+  "imgFit": "cover",
   "imgs": [
    "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt944793fgxt.jpg?v=1787689409682",
    "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt9448lutrmz.jpg?v=1787689410920"
@@ -40,6 +41,14 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "manzana-delantera-ontrail-nemesis-2",
   "order": 110,
+  "imgColorMap": {
+   "Verde": [
+    0
+   ],
+   "Azul": [
+    1
+   ]
+  },
   "img": "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt944793fgxt.jpg?v=1787689409682"
  },
  {
@@ -83,6 +92,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-PRM-002",
   "units": 1,
   "slug": "manzana-delantera-primo-balance",
+  "imgFit": "cover",
   "order": 80,
   "img": "assets/img/products/manzana-delantera-primo-balance-mt93b5l7in31.jpg?v=1787688054691"
  },
@@ -121,6 +131,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "imgFit": "cover",
   "order": 90,
   "img": "assets/img/products/manzana-delantera-stranger-ballast-mt938rrdl4mp.jpg?v=1787687943425"
  },
@@ -534,6 +545,7 @@ window.ESCENA_PRODUCTS = [
     3
    ]
   },
+  "imgFit": "cover",
   "order": 100,
   "img": "assets/img/products/manzana-optimus-gold-mt4mqe06ty10.jpg?v=1787418346648"
  },
@@ -4415,7 +4427,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "buje-delantero-negro",
-  "n": "Manzana Colony Wasp Delantera Negra",
+  "n": "Manzana Colony Wasp Delantera",
   "brand": "Colony",
   "cat": "manzana-delantera",
   "spec": "Delantero · Doble sellado · Negro · 3/8\" eje · 14mm",
@@ -4449,6 +4461,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
+  "imgFit": "cover",
   "img": "assets/img/products/buje-delantero-negro-mt8yzu3vri8s.jpg?v=1787680808248"
  },
  {
