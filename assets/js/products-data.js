@@ -1,5 +1,50 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Chaoyang Cutting Edge Negra - 2.25\"",
+  "brand": "Chaoyang",
+  "cat": "corazas",
+  "spec": "20 x 2.25\" · Banda direccional profundo · Negro",
+  "price": 45000,
+  "sku": "COR-CHA-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/llanta-chaoyang-cutting-edge-negra-2-25-mt98dnsnam9b.jpg?v=1787696570232",
+   "assets/img/products/llanta-chaoyang-cutting-edge-negra-2-25-mt98dpq0kn1j.jpg?v=1787696571903",
+   "assets/img/products/llanta-chaoyang-cutting-edge-negra-2-25-mt98dr0f6z5v.jpg?v=1787696573562"
+  ],
+  "sizes": [
+   {
+    "label": "20x2.25\"",
+    "units": 2,
+    "price": 45000,
+    "cost": 36000
+   }
+  ],
+  "slug": "llanta-chaoyang-cutting-edge-negra-2-25",
+  "img": "assets/img/products/llanta-chaoyang-cutting-edge-negra-2-25-mt98dnsnam9b.jpg?v=1787696570232"
+ },
+ {
+  "n": "Llanta Optimus Black Burn Negra - 2.35\"",
+  "brand": "Optimus",
+  "cat": "corazas",
+  "spec": "20 x 2.35\" · Banda direccional profundo · Negro",
+  "price": 38000,
+  "sku": "COR-OPT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "20x2.35\"",
+    "units": 1,
+    "price": 38000,
+    "cost": 30400
+   }
+  ],
+  "slug": "llanta-optimus-black-burn-negra-2-35",
+  "img": "assets/img/products/llanta-optimus-black-burn-negra-2-35-mt98dsaikgps.jpg?v=1787696575067"
+ },
+ {
   "n": "Llanta Innova Pro Big Slick Cafe - 2.40\"",
   "brand": "Innova",
   "cat": "corazas",
