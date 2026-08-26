@@ -35,7 +35,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/madero-citysnake-koston-mtam5enes7w5.jpg?v=1787780164934"
  },
  {
-  "n": "Madero TRUR Skate Co.",
+  "n": "Madero TRUR Skate Co",
   "brand": "TRUR",
   "cat": "skate-tablas",
   "spec": "Material madera (maple) canadiense en 7 capas, prensadas y pegadas • Marca Nacional • Tabla + Lija",
