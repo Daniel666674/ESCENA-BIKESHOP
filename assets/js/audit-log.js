@@ -4014,5 +4014,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-26T22:02:06.389Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos nuevos, 2 fotos subidas",
+  "created": [
+   "kit-ruedas-x4",
+   "madero-koston-2"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
