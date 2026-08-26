@@ -1,5 +1,34 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Kit Ruedas X4",
+  "brand": "Black Market",
+  "cat": "skate-ruedas",
+  "spec": "Material Poliuretano (PU) •  Diámetro 50-52mm (Street) o  53-56 (Street + Park) • Durómetro 78a-87a (Suave), 90a101a (medio-duro street+park)",
+  "price": 65000,
+  "sku": "SKR-BLA-001",
+  "units": 2,
+  "slug": "kit-ruedas-x4",
+  "img": "assets/img/products/kit-ruedas-x4-mtan2q4rgcvz.jpg?v=1787781719753"
+ },
+ {
+  "n": "Madero Koston",
+  "brand": "Koston",
+  "cat": "skate-tablas",
+  "spec": "Material madera (maple) canadiense en 7 capas, prensadas y pegadas • Marca Nacional • Tabla + Lija",
+  "price": 130000,
+  "sku": "SKT-KOS-004",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "8.0",
+    "units": 1,
+    "price": 130000
+   }
+  ],
+  "slug": "madero-koston-2",
+  "img": "assets/img/products/madero-koston-2-mtan2rih0ys8.jpg?v=1787781720998"
+ },
+ {
   "n": "Madero Koston",
   "brand": "Koston",
   "cat": "skate-tablas",
