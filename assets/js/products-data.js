@@ -1,5 +1,82 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Madero CitySnake",
+  "brand": "Koston",
+  "cat": "skate-tablas",
+  "spec": "Material madera (maple) canadiense en 7 capas, prensadas y pegadas • Tabla + Lija • Marca nacional",
+  "price": 130000,
+  "sku": "SKT-KOS-002",
+  "units": 2,
+  "sizes": [
+   {
+    "label": "8.5",
+    "units": 2
+   }
+  ],
+  "slug": "madero-citysnake",
+  "img": "assets/img/products/madero-citysnake-mtam5d3r1qsl.jpg?v=1787780163434"
+ },
+ {
+  "n": "Madero CitySnake Koston",
+  "brand": "Koston",
+  "cat": "skate-tablas",
+  "spec": "Material madera (maple) canadiense en 7 capas, prensadas y pegadas • Tabla + Lija • Marca Nacional",
+  "price": 130000,
+  "sku": "SKT-KOS-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "8.5",
+    "units": 1,
+    "price": 130000
+   }
+  ],
+  "slug": "madero-citysnake-koston",
+  "img": "assets/img/products/madero-citysnake-koston-mtam5enes7w5.jpg?v=1787780164934"
+ },
+ {
+  "n": "Madero TRUR Skate Co.",
+  "brand": "TRUR",
+  "cat": "skate-tablas",
+  "spec": "Material madera (maple) canadiense en 7 capas, prensadas y pegadas • Marca Nacional • Tabla + Lija",
+  "price": 160000,
+  "sku": "SKT-TRU-001",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "8.38",
+    "units": 1,
+    "price": 160000
+   },
+   {
+    "label": "8.5",
+    "units": 1,
+    "price": 160000
+   }
+  ],
+  "slug": "madero-trur-skate-co",
+  "img": "assets/img/products/madero-trur-skate-co-mtam5ft2wdqg.jpg?v=1787780166335"
+ },
+ {
+  "n": "Madero Black Market",
+  "brand": "Skate Ter",
+  "cat": "skate-tablas",
+  "spec": "Material madera (maple) canadiense en 7 capas, prensadas y pegadas • Tabla + Lija • Ancho 8.5 • Largo 31¨ a 3.5¨",
+  "price": 160000,
+  "sku": "SKT-SKA-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "8.5¨",
+    "units": 1,
+    "price": 160000
+   }
+  ],
+  "slug": "madero-black-market",
+  "img": "assets/img/products/madero-black-market-mtam5gw0k203.jpg?v=1787780167735"
+ },
+ {
   "n": "Lija Negra",
   "brand": "Skate Terror",
   "cat": "skate-lijas",
