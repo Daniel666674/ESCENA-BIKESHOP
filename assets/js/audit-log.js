@@ -3980,5 +3980,18 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-26T21:36:16.798Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "4 productos nuevos, 4 fotos subidas",
+  "created": [
+   "madero-citysnake",
+   "madero-citysnake-koston",
+   "madero-trur-skate-co",
+   "madero-black-market"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
