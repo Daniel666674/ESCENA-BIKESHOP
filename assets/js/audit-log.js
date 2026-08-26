@@ -3969,5 +3969,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-26T21:02:45.300Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos nuevos, 2 fotos subidas",
+  "created": [
+   "lija-negra",
+   "lija-diseno-7"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
