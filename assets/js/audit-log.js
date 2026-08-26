@@ -3947,5 +3947,16 @@ window.ESCENA_AUDIT = [
    "llanta-cinema-nathan-williams-negro-2-50"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-26T20:49:18.579Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos nuevos, 2 fotos subidas",
+  "created": [
+   "lija-diseno-4",
+   "lija-diseno-3"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
