@@ -1,5 +1,34 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Lija Negra",
+  "brand": "Skate Terror",
+  "cat": "skate-lijas",
+  "spec": "",
+  "price": 27000,
+  "sku": "SKL-SKA-008",
+  "units": 2,
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 2,
+    "price": 27000
+   }
+  ],
+  "slug": "lija-negra",
+  "img": "assets/img/products/lija-negra-mtakye06ki2x.jpg?v=1787778158153"
+ },
+ {
+  "n": "Lija Diseño",
+  "brand": "Skate Terror",
+  "cat": "skate-lijas",
+  "spec": "Material base papel/tela carburo silicio • Adhesivo resistente al calor y frio • Dimension 83-84 cm Largo x 22-23 cm ancho • Estampado de alta calidad",
+  "price": 35000,
+  "sku": "SKL-SKA-007",
+  "units": 2,
+  "slug": "lija-diseno-7",
+  "img": "assets/img/products/lija-diseno-7-mtakyfd5o1ot.jpg?v=1787778159526"
+ },
+ {
   "n": "Lija Diseño",
   "brand": "Skate Terror",
   "cat": "skate-lijas",
