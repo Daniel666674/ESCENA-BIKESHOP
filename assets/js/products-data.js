@@ -1,5 +1,34 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Lija Diseño",
+  "brand": "Skate Terror",
+  "cat": "skate-lijas",
+  "spec": "Material base papel/tela carburo silicio • Adhesivo resistente al calor y frio • Dimension 83-84 cm Largo x 22-23 cm ancho • Estampado de alta calidad",
+  "price": 35000,
+  "sku": "SKL-SKA-004",
+  "units": 2,
+  "slug": "lija-diseno-4",
+  "img": "assets/img/products/lija-diseno-4-mtakgu2gl4vu.jpg?v=1787777339406"
+ },
+ {
+  "n": "Lija Diseño",
+  "brand": "Skate Terror",
+  "cat": "skate-lijas",
+  "spec": "Material base papel/tela carburo silicio • Adhesivo resistente al calor y frio • Dimension 83-84 cm Largo x 22-23 cm ancho • Estampado de alta calidad",
+  "price": 35000,
+  "sku": "SKL-SKA-003",
+  "units": 2,
+  "colors": [
+   {
+    "label": "Amarillo",
+    "units": 1,
+    "price": 35000
+   }
+  ],
+  "slug": "lija-diseno-3",
+  "img": "assets/img/products/lija-diseno-3-mtakgvm6w99u.jpg?v=1787777340970"
+ },
+ {
   "n": "Llanta Cinema Nathan Williams Negro - 2.50\"",
   "brand": "Cinema",
   "cat": "corazas",
