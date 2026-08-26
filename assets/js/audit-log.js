@@ -4003,5 +4003,16 @@ window.ESCENA_AUDIT = [
    "madero-trur-skate-co"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-26T21:50:52.508Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "2 productos nuevos, 2 fotos subidas",
+  "created": [
+   "madero-koston",
+   "madero-skate-terror"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
