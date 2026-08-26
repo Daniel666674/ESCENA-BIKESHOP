@@ -6,12 +6,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.50\" · Banda direccional profundo · Negro",
   "price": 150000,
   "sku": "COR-CIN-001",
-  "units": 0,
+  "units": 2,
   "imgFit": "cover",
   "sizes": [
    {
     "label": "20x2.50\"",
-    "units": 0,
+    "units": 2,
     "price": 150000,
     "cost": 120000
    }
