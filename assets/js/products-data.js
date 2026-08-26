@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Cinema Nathan Williams Negro - 2.50\"",
+  "brand": "Cinema",
+  "cat": "corazas",
+  "spec": "20 x 2.50\" · Banda direccional profundo · Negro",
+  "price": 150000,
+  "sku": "COR-CIN-001",
+  "units": 0,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "20x2.50\"",
+    "units": 0,
+    "price": 150000,
+    "cost": 120000
+   }
+  ],
+  "slug": "llanta-cinema-nathan-williams-negro-2-50",
+  "img": "assets/img/products/llanta-cinema-nathan-williams-negro-2-50-mt9bxnx3uium.jpg?v=1787702541970"
+ },
+ {
   "n": "Llanta Theory Proven Blanca - 2.40\"",
   "brand": "Theory",
   "cat": "corazas",
