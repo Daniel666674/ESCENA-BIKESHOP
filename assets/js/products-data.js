@@ -1,5 +1,41 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Madero Koston",
+  "brand": "Koston",
+  "cat": "skate-tablas",
+  "spec": "Material madera (maple) canadiense en 7 capas, prensadas y pegadas • Marca Nacional • Tabla + Lija",
+  "price": 130000,
+  "sku": "SKT-KOS-003",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "8.5",
+    "units": 1,
+    "price": 130000
+   }
+  ],
+  "slug": "madero-koston",
+  "img": "assets/img/products/madero-koston-mtamo8uize8p.jpg?v=1787781045126"
+ },
+ {
+  "n": "Madero Skate Terror",
+  "brand": "Skate Terror",
+  "cat": "skate-tablas",
+  "spec": "Material madera (maple) canadiense en 7 capas, prensadas y pegadas • Marca Nacional • Tabla + Lija",
+  "price": 160000,
+  "sku": "SKT-SKA-002",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "8.5",
+    "units": 1,
+    "price": 160000
+   }
+  ],
+  "slug": "madero-skate-terror",
+  "img": "assets/img/products/madero-skate-terror-mtamoayu4e9d.jpg?v=1787781046537"
+ },
+ {
   "n": "Madero CitySnake",
   "brand": "Koston",
   "cat": "skate-tablas",
