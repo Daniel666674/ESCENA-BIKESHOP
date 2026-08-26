@@ -3927,5 +3927,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-26T00:02:27.981Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "llanta-cinema-nathan-williams-negro-2-50"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
