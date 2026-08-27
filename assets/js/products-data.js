@@ -1,5 +1,32 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Cult Dak - Negro",
+  "brand": "85000",
+  "cat": "pedales",
+  "spec": "Superficie ancha - eje 4130",
+  "price": 85000,
+  "sku": "PED-850-001",
+  "units": 5,
+  "imgZoom": 116,
+  "imgPos": "50% 50%",
+  "slug": "pedales-cult-dak-negro",
+  "order": 10,
+  "img": "assets/img/products/pedales-cult-dak-negro-mtc46ewguvsa.jpg?v=1787870911880"
+ },
+ {
+  "n": "Pedales Odyssey Grandstand V2 Aluminio – Negro",
+  "brand": "Odyssey",
+  "cat": "pedales",
+  "spec": "Material Aluminio forjado",
+  "price": 170000,
+  "sku": "PED-ODY-002",
+  "units": 4,
+  "imgFit": "cover",
+  "slug": "pedales-odyssey-grandstand-v2-aluminio-negro",
+  "order": 0,
+  "img": "assets/img/products/pedales-odyssey-grandstand-v2-aluminio-negro-mtc46glkgm27.jpg?v=1787870913846"
+ },
+ {
   "n": "Plato GW Corona Negro",
   "brand": "GW",
   "cat": "pinones",
@@ -4079,7 +4106,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-wellgo-negro.jpg?v=1787276553829",
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1787276555684"
   ],
-  "order": 110,
+  "order": 100,
   "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1787276553829"
  },
  {
@@ -4353,7 +4380,7 @@ window.ESCENA_PRODUCTS = [
   "price": 65000,
   "sku": "PED-FAT-001",
   "units": 2,
-  "order": 100,
+  "order": 90,
   "img": "assets/img/products/pedales-fate-negro.jpg?v=1787276557110"
  },
  {
@@ -4785,7 +4812,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-odyssey.jpg?v=1784059906159",
    "assets/img/products/pedales-odyssey-2.jpg?v=1784059908763"
   ],
-  "order": 60,
+  "order": 50,
   "img": "assets/img/products/pedales-odyssey.jpg?v=1784059906159"
  },
  {
@@ -4859,7 +4886,7 @@ window.ESCENA_PRODUCTS = [
     6
    ]
   },
-  "order": 70,
+  "order": 60,
   "img": "assets/img/products/pedales-demolition.jpg?v=1787274790318"
  },
  {
@@ -4917,7 +4944,7 @@ window.ESCENA_PRODUCTS = [
     4
    ]
   },
-  "order": 90,
+  "order": 80,
   "img": "assets/img/products/pedales-stolen.jpg?v=1787345153809"
  },
  {
@@ -5634,7 +5661,7 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "PEDALES-PLATAFORMA-NEGRO-01",
   "units": 12,
-  "order": 80,
+  "order": 70,
   "img": "assets/img/products/pedales-plataforma-negro-01.jpg?v=1787276293186"
  },
  {
@@ -5646,7 +5673,7 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "PEDALES-METAL-NEGRO-01",
   "units": 12,
-  "order": 20,
+  "order": 40,
   "imgs": [
    "assets/img/products/pedales-metal-negro-01.jpg?v=1787273158339",
    "assets/img/products/pedales-metal-negro-01-2.jpg?v=1787273159703"
@@ -5662,7 +5689,7 @@ window.ESCENA_PRODUCTS = [
   "price": 135000,
   "sku": "PEDALES-METAL-NEGRO-02",
   "units": 12,
-  "order": 10,
+  "order": 30,
   "img": "assets/img/products/pedales-metal-negro-02.jpg"
  },
  {
@@ -5674,7 +5701,7 @@ window.ESCENA_PRODUCTS = [
   "price": 135000,
   "sku": "PEDALES-METAL-NEGRO-03",
   "units": 6,
-  "order": 0,
+  "order": 20,
   "img": "assets/img/products/pedales-metal-negro-03.jpg?v=1787273161211"
  },
  {
