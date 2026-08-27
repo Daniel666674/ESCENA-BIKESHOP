@@ -4239,20 +4239,36 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "plato-fate-guardia-negro-28t",
-  "n": "Plato Fate Guardia Negro 28T",
+  "n": "Plato Fate Guardia",
   "brand": "Fate",
   "cat": "pinones",
   "spec": "Guardia • Negro • 28T Aluminio 7075",
   "price": 230000,
   "sku": "PLT-FAT-001",
-  "units": 1,
+  "units": 2,
   "sizes": [
    {
     "label": "28T",
-    "units": 1
+    "units": 2
    }
   ],
   "order": 50,
+  "imgs": [
+   "assets/img/products/plato-fate-guardia-negro-28t-mtbxajpaxai3.jpg?v=1787859347513",
+   "assets/img/products/plato-fate-guardia-negro-28t-mtc1kpwr1mhm.jpg?v=1787866540609"
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1,
+    "price": 230000
+   },
+   {
+    "label": "Cromado",
+    "units": 1,
+    "price": 230000
+   }
+  ],
   "img": "assets/img/products/plato-fate-guardia-negro-28t-mtbxajpaxai3.jpg?v=1787859347513"
  },
  {
