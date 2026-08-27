@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plato Sunday sabretooth V2 Negro 28T",
+  "brand": "Sunday",
+  "cat": "pinones",
+  "spec": "Material Aluminio 6061  . Relacion 28T -",
+  "price": 130000,
+  "sku": "PLT-SUN-001",
+  "units": 20,
+  "imgZoom": 120,
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 20,
+    "price": 130000
+   }
+  ],
+  "slug": "plato-sunday-sabretooth-v2-negro-28t",
+  "order": 130,
+  "img": "assets/img/products/plato-sunday-sabretooth-v2-negro-28t-mtbzlyqatati.jpg?v=1787863239075"
+ },
+ {
   "n": "Plato S&M Goring 28T",
   "brand": "S&M",
   "cat": "pinones",
@@ -93,7 +113,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/plato-xposure-infinity-25t-mtby9bitqkmu.jpg?v=1787860969613"
  },
  {
@@ -112,7 +132,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-trueno-exotic-tornasol",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/plato-trueno-exotic-tornasol-mtby9fo7maek.jpg?v=1787860974270"
  },
  {
@@ -4399,7 +4419,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 150,
+  "order": 160,
   "imgFit": "cover",
   "img": "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1786462864738"
  },
