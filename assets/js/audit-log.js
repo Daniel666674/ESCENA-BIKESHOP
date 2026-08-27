@@ -4222,5 +4222,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T21:35:47.553Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "plato-fate-guardia-negro-28t"
+  ],
+  "deleted": []
  }
 ];
