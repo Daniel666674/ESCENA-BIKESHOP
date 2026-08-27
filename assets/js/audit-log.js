@@ -4074,5 +4074,15 @@ window.ESCENA_AUDIT = [
    "cult-pinon-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T19:38:56.765Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "pinon-snowflake-plata"
+  ],
+  "deleted": []
  }
 ];
