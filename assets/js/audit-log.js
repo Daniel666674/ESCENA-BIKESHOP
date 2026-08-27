@@ -4084,5 +4084,16 @@ window.ESCENA_AUDIT = [
    "pinon-snowflake-plata"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T19:43:25.083Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "plato-federal-code-guard-cromado-28t",
+   "fiend-pinon-25t-negro"
+  ],
+  "deleted": []
  }
 ];
