@@ -1,5 +1,68 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plato GW Corona Negro",
+  "brand": "GW",
+  "cat": "pinones",
+  "spec": "Material Acero - Relacion 25T",
+  "price": 9000,
+  "sku": "PLT-GWB-003",
+  "units": 10,
+  "imgZoom": 134,
+  "imgPos": "50% 50%",
+  "sizes": [
+   {
+    "label": "25T",
+    "units": 10,
+    "price": 9000
+   }
+  ],
+  "slug": "plato-gw-corona-negro-2",
+  "img": "assets/img/products/plato-gw-corona-negro-2-mtc2bs5knssc.jpg?v=1787867802658"
+ },
+ {
+  "n": "Plato GW Corona Negro",
+  "brand": "GW",
+  "cat": "pinones",
+  "spec": "Material Acero - Relacion 28T",
+  "price": 9000,
+  "sku": "PLT-GWB-002",
+  "units": 0,
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 0,
+    "price": 9000
+   }
+  ],
+  "colors": [
+   {
+    "label": "28T",
+    "units": 0
+   }
+  ],
+  "slug": "plato-gw-corona-negro",
+  "img": "assets/img/products/plato-gw-corona-negro-mtc2btia8ta6.jpg?v=1787867804093"
+ },
+ {
+  "n": "Plato GW KL215 Negro",
+  "brand": "GW",
+  "cat": "pinones",
+  "spec": "Material Aluminio 6061-T6 - Medida 25T",
+  "price": 35000,
+  "sku": "PLT-GWB-001",
+  "units": 10,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "25T",
+    "units": 10,
+    "price": 35000
+   }
+  ],
+  "slug": "plato-gw-kl215-negro",
+  "img": "assets/img/products/plato-gw-kl215-negro-mtc2bum5xvex.jpg?v=1787867805373"
+ },
+ {
   "n": "Plato Fiend Reynols Guardia Purpura",
   "brand": "Fiend",
   "cat": "pinones",
@@ -4471,6 +4534,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PLT-ODY-001",
   "units": 1,
   "imgs": [
+   "assets/img/products/plato-odyssey-big-boyd-28t-mtc2bvlpcms9.jpg?v=1787867807051",
    "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1786462864738",
    "assets/img/products/plato-odyssey-big-boyd-28t-2.jpg?v=1786462141708"
   ],
@@ -4492,7 +4556,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 180,
   "imgFit": "cover",
-  "img": "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1786462864738"
+  "img": "assets/img/products/plato-odyssey-big-boyd-28t-mtc2bvlpcms9.jpg?v=1787867807051"
  },
  {
   "slug": "cana-fiend-mills-topload",
