@@ -4025,5 +4025,17 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T17:12:41.517Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "fiend-reynolds-v3-negro",
+   "marco-profit-culver-gris-cromolio",
+   "marco-gw-destructor-azul-20-5"
+  ],
+  "deleted": []
  }
 ];
