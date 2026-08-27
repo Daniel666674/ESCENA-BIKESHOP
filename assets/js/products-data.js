@@ -1,5 +1,45 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Odyssey Twist Pro",
+  "brand": "Odyssey",
+  "cat": "pedales",
+  "spec": "Material Nylon -  una altura más delgada y más cóncavo",
+  "price": 95000,
+  "sku": "PED-ODY-003",
+  "units": 4,
+  "imgs": [
+   "assets/img/products/pedales-odyssey-twist-pro-mtc6h2h7p3j0.jpg?v=1787874768219",
+   "assets/img/products/pedales-odyssey-twist-pro-mtc6h463dvh1.jpg?v=1787874769803",
+   "assets/img/products/pedales-odyssey-twist-pro-mtc6h5e3bv8a.jpg?v=1787874771375",
+   "assets/img/products/pedales-odyssey-twist-pro-mtc6h6lr5f8x.jpg?v=1787874772765"
+  ],
+  "colors": [
+   {
+    "label": "Rosado",
+    "units": 2,
+    "price": 95000
+   },
+   {
+    "label": "Morado",
+    "units": 2,
+    "price": 95000
+   },
+   {
+    "label": "Negro/Morado",
+    "units": 0,
+    "price": 95000
+   },
+   {
+    "label": "Negro",
+    "units": 0,
+    "price": 95000
+   }
+  ],
+  "slug": "pedales-odyssey-twist-pro",
+  "order": 20,
+  "img": "assets/img/products/pedales-odyssey-twist-pro-mtc6h2h7p3j0.jpg?v=1787874768219"
+ },
+ {
   "n": "Pedales Cult Dak - Negro",
   "brand": "85000",
   "cat": "pedales",
@@ -4106,7 +4146,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-wellgo-negro.jpg?v=1787276553829",
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1787276555684"
   ],
-  "order": 100,
+  "order": 90,
   "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1787276553829"
  },
  {
@@ -4380,7 +4420,7 @@ window.ESCENA_PRODUCTS = [
   "price": 65000,
   "sku": "PED-FAT-001",
   "units": 2,
-  "order": 90,
+  "order": 80,
   "img": "assets/img/products/pedales-fate-negro.jpg?v=1787276557110"
  },
  {
@@ -4800,22 +4840,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1784324392434"
  },
  {
-  "slug": "pedales-odyssey",
-  "n": "Pedales Odyssey",
-  "brand": "Odyssey",
-  "cat": "pedales",
-  "spec": "Plataforma nylon · 12 pines · Morado",
-  "price": 95000,
-  "sku": "PED-ODY-001",
-  "units": 2,
-  "imgs": [
-   "assets/img/products/pedales-odyssey.jpg?v=1784059906159",
-   "assets/img/products/pedales-odyssey-2.jpg?v=1784059908763"
-  ],
-  "order": 50,
-  "img": "assets/img/products/pedales-odyssey.jpg?v=1784059906159"
- },
- {
   "n": "Pedales Demolition",
   "brand": "Demolition",
   "cat": "pedales",
@@ -4890,7 +4914,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/pedales-demolition.jpg?v=1787274790318"
  },
  {
-  "n": "Pedales Stolen",
+  "n": "Pedales Stolen Thermalite",
   "brand": "Stolen",
   "cat": "pedales",
   "spec": "Verde, Azul, AguaMarina, Rojo, Amarillo Florecente.",
@@ -4908,23 +4932,28 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Verde",
-    "units": 1
+    "units": 1,
+    "price": 75000
    },
    {
     "label": "Rojo",
-    "units": 1
+    "units": 1,
+    "price": 75000
    },
    {
     "label": "Azul Aguamarina",
-    "units": 1
+    "units": 1,
+    "price": 75000
    },
    {
     "label": "Amarillo",
-    "units": 1
+    "units": 1,
+    "price": 75000
    },
    {
     "label": "Azul",
-    "units": 1
+    "units": 1,
+    "price": 75000
    }
   ],
   "imgColorMap": {
@@ -4944,7 +4973,7 @@ window.ESCENA_PRODUCTS = [
     4
    ]
   },
-  "order": 80,
+  "order": 40,
   "img": "assets/img/products/pedales-stolen.jpg?v=1787345153809"
  },
  {
@@ -5673,24 +5702,12 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "PEDALES-METAL-NEGRO-01",
   "units": 12,
-  "order": 40,
+  "order": 50,
   "imgs": [
    "assets/img/products/pedales-metal-negro-01.jpg?v=1787273158339",
    "assets/img/products/pedales-metal-negro-01-2.jpg?v=1787273159703"
   ],
   "img": "assets/img/products/pedales-metal-negro-01.jpg?v=1787273158339"
- },
- {
-  "slug": "pedales-metal-negro-02",
-  "n": "Pedales Plataforma Metal Negro Par",
-  "brand": "",
-  "cat": "pedales",
-  "spec": "Plataforma aluminio · 8 pines · Negro",
-  "price": 135000,
-  "sku": "PEDALES-METAL-NEGRO-02",
-  "units": 12,
-  "order": 30,
-  "img": "assets/img/products/pedales-metal-negro-02.jpg"
  },
  {
   "slug": "pedales-metal-negro-03",
@@ -5701,7 +5718,7 @@ window.ESCENA_PRODUCTS = [
   "price": 135000,
   "sku": "PEDALES-METAL-NEGRO-03",
   "units": 6,
-  "order": 20,
+  "order": 30,
   "img": "assets/img/products/pedales-metal-negro-03.jpg?v=1787273161211"
  },
  {
