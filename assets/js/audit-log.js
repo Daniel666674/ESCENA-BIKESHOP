@@ -4273,5 +4273,26 @@ window.ESCENA_AUDIT = [
    "plato-odyssey-big-boyd-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T22:48:44.805Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 9 productos editados, 2 fotos subidas",
+  "created": [
+   "pedales-cult-dak-negro",
+   "pedales-odyssey-grandstand-v2-aluminio-negro"
+  ],
+  "edited": [
+   "pedales-odyssey",
+   "pedales-demolition",
+   "pedales-plataforma-negro-01",
+   "pedales-stolen",
+   "pedales-fate-negro",
+   "pedales-wellgo-negro",
+   "pedales-metal-negro-01",
+   "pedales-metal-negro-02",
+   "pedales-metal-negro-03"
+  ],
+  "deleted": []
  }
 ];
