@@ -4095,5 +4095,17 @@ window.ESCENA_AUDIT = [
    "fiend-pinon-25t-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T20:03:03.895Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 5 fotos subidas",
+  "created": [
+   "plato-xposure-infinity-25t",
+   "plato-trueno-exotic-tornasol",
+   "plato-trueno-exotic"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
