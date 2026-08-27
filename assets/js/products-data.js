@@ -5400,11 +5400,11 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "pinon-snowflake-plata",
-  "n": "Plato Eighties BodyGuard 28T",
+  "n": "Plato Eighties BodyGuard Raw 28T",
   "brand": "Eighties",
   "cat": "pinones",
   "spec": "28T · Aluminio CNC 7075 · Guardia · Peso 110g",
-  "price": 140000,
+  "price": 290000,
   "sku": "PLATO-EIGHTIES-28T",
   "units": 2,
   "sizes": [
@@ -5414,7 +5414,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 1240,
-  "img": "assets/img/products/pinon-snowflake-plata.jpg"
+  "img": "assets/img/products/pinon-snowflake-plata-mtbxeill8dz3.jpg?v=1787859532560"
  },
  {
   "slug": "cult-pinon-negro",
