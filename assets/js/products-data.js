@@ -7,6 +7,7 @@ window.ESCENA_PRODUCTS = [
   "price": 340000,
   "sku": "PLT-SNM-001",
   "units": 1,
+  "imgZoom": 111,
   "sizes": [
    {
     "label": "28T",
@@ -31,6 +32,7 @@ window.ESCENA_PRODUCTS = [
   "price": 340000,
   "sku": "PLT-FIT-001",
   "units": 1,
+  "imgZoom": 108,
   "sizes": [
    {
     "label": "28T",
@@ -4067,6 +4069,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 40,
   "imgFit": "cover",
+  "imgZoom": 118,
   "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1786462861771"
  },
  {
@@ -5601,7 +5604,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1786462870473"
   ],
   "imgFit": "cover",
-  "imgZoom": 120,
+  "imgZoom": 128,
   "img": "assets/img/products/fiend-pinon-25t-negro.jpg?v=1786462869038"
  },
  {
