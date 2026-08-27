@@ -2540,12 +2540,13 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 370000,
   "sku": "MRC-PRO-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "sizes": [
    {
     "label": "20”",
-    "units": 1
+    "units": 0,
+    "price": 370000
    }
   ],
   "colors": [
@@ -3714,11 +3715,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Acero · 20.5\" · Azul",
   "price": 180000,
   "sku": "MRC",
-  "units": 1,
+  "units": 0,
   "sizes": [
    {
     "label": "20.5\"",
-    "units": 1
+    "units": 0,
+    "price": 180000
    }
   ],
   "order": 1100,
@@ -6252,7 +6254,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.75\" · Negro",
   "price": 1900000,
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
-  "units": 2,
+  "units": 0,
   "imgs": [
    "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1786196440985",
    "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1784156646261",
@@ -6262,8 +6264,16 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
+    "label": "20.5\"",
+    "units": 0,
+    "price": 650000,
+    "cost": 520000
+   },
+   {
     "label": "20.75\"",
-    "units": 2
+    "units": 0,
+    "price": 650000,
+    "cost": 520000
    }
   ],
   "order": 110,
