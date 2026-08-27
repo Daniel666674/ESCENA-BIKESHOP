@@ -4107,5 +4107,29 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T20:04:10.606Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "15 productos editados",
+  "created": [],
+  "edited": [
+   "odyssey-pinon-28t-negro",
+   "fiend-pinon-25t-negro",
+   "plato-volume-guardia-28t",
+   "plato-odyssey-big-boyd-28t",
+   "plato-fate-guardia-negro-28t",
+   "cult-pinon-negro",
+   "federal-pinon-gris",
+   "pinon-snowflake-plata",
+   "plato-federal-code-guard-cromado-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-federal-logo-guard-28t",
+   "plato-trueno-exotic",
+   "plato-xposure-infinity-25t",
+   "plato-trueno-exotic-tornasol"
+  ],
+  "deleted": []
  }
 ];
