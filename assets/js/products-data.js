@@ -1,6 +1,6 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Plato Fiend Reynols Purpura",
+  "n": "Plato Fiend Reynols Guardia Purpura",
   "brand": "Fiend",
   "cat": "pinones",
   "spec": "Material Aluminio 6061 . 25T - Guardia",
@@ -15,10 +15,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-fiend-reynols-purpura",
+  "order": 120,
   "img": "assets/img/products/plato-fiend-reynols-purpura-mtbzwaexp3tk.jpg?v=1787863720921"
  },
  {
-  "n": "Plato Strangergram Guardia Negro 28T",
+  "n": "Plato Strangergram Guardia Negro",
   "brand": "Stranger",
   "cat": "pinones",
   "spec": "Material Aluminio 7075-T6  . 28T - Guardia",
@@ -38,10 +39,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-strangergram-guardia-negro-28t",
+  "order": 130,
   "img": "assets/img/products/plato-strangergram-guardia-negro-28t-mtbzwc0q5dmp.jpg?v=1787863722558"
  },
  {
-  "n": "Plato Sunday sabretooth V2 Negro 28T",
+  "n": "Plato Sunday sabretooth V2 Negro",
   "brand": "Sunday",
   "cat": "pinones",
   "spec": "Material Aluminio 6061  . Relacion 28T -",
@@ -57,11 +59,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-sunday-sabretooth-v2-negro-28t",
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/plato-sunday-sabretooth-v2-negro-28t-mtbzlyqatati.jpg?v=1787863239075"
  },
  {
-  "n": "Plato S&M Goring 28T",
+  "n": "Plato S&M Goring Guardia Gris",
   "brand": "S&M",
   "cat": "pinones",
   "spec": "Material Aluminio 6061 T-6 mecanizado por CNC - Guardia- Peso: 5.7 onzas",
@@ -86,7 +88,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/plato-s-m-goring-28t-mtbyv869obzl.jpg?v=1787861991329"
  },
  {
-  "n": "Plato Fitbikeco Key Guard V2",
+  "n": "Plato Fitbikeco Key Guiaard V2 Negro",
   "brand": "Fitbikeco",
   "cat": "pinones",
   "spec": "Material Aluminio 7075-T6  . 28T - Guardia",
@@ -106,7 +108,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/plato-fitbikeco-key-guard-v2-mtbyk4dpnz48.jpg?v=1787861473622"
  },
  {
-  "n": "Plato Xposure Infinity 25T",
+  "n": "Plato Xposure Infinity",
   "brand": "Xposure",
   "cat": "pinones",
   "spec": "Material Aluminio 7075 . 25T - Peso: 67 gramos",
@@ -154,7 +156,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 140,
+  "order": 160,
   "img": "assets/img/products/plato-xposure-infinity-25t-mtby9bitqkmu.jpg?v=1787860969613"
  },
  {
@@ -173,11 +175,11 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-trueno-exotic-tornasol",
-  "order": 150,
+  "order": 170,
   "img": "assets/img/products/plato-trueno-exotic-tornasol-mtby9fo7maek.jpg?v=1787860974270"
  },
  {
-  "n": "Plato Trueno Exotic",
+  "n": "Plato Trueno Exotic Guardia Negro",
   "brand": "Trueno",
   "cat": "pinones",
   "spec": "Material Aluminio 6061- T6 . 25T - 28T 107 gramos",
@@ -198,7 +200,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-trueno-exotic",
-  "order": 120,
+  "order": 150,
   "img": "assets/img/products/plato-trueno-exotic-mtby9gou9qqd.jpg?v=1787860975926"
  },
  {
@@ -2195,16 +2197,20 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/grips-s-m-passero.jpg?v=1786531628470"
  },
  {
-  "n": "Plato Mutanty Diamond Cromado 28T",
+  "n": "Plato Mutanty Diamond Guardia Cromado",
   "brand": "Mutanty",
   "cat": "pinones",
-  "spec": "Aluminio (7075-T6) • Cromado • 28T",
+  "spec": "Aluminio (7075-T6) • Cromado • 25T - 28T",
   "price": 240000,
   "sku": "PLT-MUT-002",
   "units": 1,
   "sizes": [
    {
     "label": "28T",
+    "units": 0
+   },
+   {
+    "label": "25T",
     "units": 1
    }
   ],
@@ -2213,14 +2219,18 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/plato-mutanty-diamond-cromado-28t.jpg?v=1786462127985"
  },
  {
-  "n": "Plato Mutanty Diamond Negro 28T",
+  "n": "Plato Mutanty Diamond Guardia Negro",
   "brand": "Mutanty",
   "cat": "pinones",
-  "spec": "Aluminio (7075-T6) • Negro • 28T",
+  "spec": "Aluminio (7075-T6) • Negro • 25T - 28T",
   "price": 240000,
   "sku": "PLT-MUT-001",
   "units": 1,
   "sizes": [
+   {
+    "label": "25T",
+    "units": 0
+   },
    {
     "label": "28T",
     "units": 1
@@ -2231,7 +2241,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/plato-mutanty-diamond-negro-28t.jpg?v=1786462129400"
  },
  {
-  "n": "Plato Federal Logo Guard 28T",
+  "n": "Plato Federal Logo Guardia",
   "brand": "Federal",
   "cat": "pinones",
   "spec": "Aluminio (7075-T6) • Cubierta Nylon • Negro • 28T",
@@ -4111,12 +4121,12 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "plato-volume-guardia-28t",
-  "n": "Plato Volume Bikes “Melee” Guardia 28T",
+  "n": "Plato Volume Bikes “Melee” Guardia Negro",
   "brand": "Volume",
   "cat": "pinones",
   "spec": "28T · Aluminio CNC 7075 · Guardia · 24mm",
   "price": 270000,
-  "sku": "PLT",
+  "sku": "PLT-VOL-001",
   "units": 1,
   "imgs": [
    "assets/img/products/plato-volume-guardia-28t.jpg?v=1786462861771",
@@ -4453,7 +4463,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "plato-odyssey-big-boyd-28t",
-  "n": "Plato Odyssey Big Boyd 28T",
+  "n": "Plato Odyssey Big Boyd Negro",
   "brand": "Odyssey",
   "cat": "pinones",
   "spec": "28T · Aluminio 7075-T6 · 5 Radios · Negro",
@@ -4467,7 +4477,11 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "28T",
-    "units": 1
+    "units": 0
+   },
+   {
+    "label": "30T",
+    "units": 0
    }
   ],
   "colors": [
@@ -4476,7 +4490,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 160,
+  "order": 180,
   "imgFit": "cover",
   "img": "assets/img/products/plato-odyssey-big-boyd-28t.jpg?v=1786462864738"
  },
@@ -5601,7 +5615,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "pinon-snowflake-plata",
-  "n": "Plato Eighties BodyGuard Raw 28T",
+  "n": "Plato Eighties BodyGuardia Raw",
   "brand": "Eighties",
   "cat": "pinones",
   "spec": "28T · Aluminio CNC 7075 · Guardia · Peso 110g",
@@ -5620,7 +5634,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "cult-pinon-negro",
-  "n": "Plato Cult Conviction Negro 28T",
+  "n": "Plato Cult Conviction Guardia Negro",
   "brand": "Cult",
   "cat": "pinones",
   "spec": "28T · Aluminio 7075 · Guardia Nylon · Negro",
@@ -5638,7 +5652,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "odyssey-pinon-28t-negro",
-  "n": "Plato Odyssey Utility Pro 28T",
+  "n": "Plato Odyssey Utility Pro Guardia Negro",
   "brand": "Odyssey",
   "cat": "pinones",
   "spec": "28T · Aluminio CNC 7075 · 8mm · Guardia Removible · Negro",
@@ -5662,7 +5676,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "fiend-pinon-25t-negro",
-  "n": "Plato Fiend Palmare Con Guardia Negro 25T",
+  "n": "Plato Fiend Palmare Con Guardia Negro",
   "brand": "Fiend",
   "cat": "pinones",
   "spec": "25T · Aluminio CNC 6061 · Guardia Nylon · Negro · Peso 86g",
@@ -5686,7 +5700,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "federal-pinon-gris",
-  "n": "Plato Federal Guardia Negro 28T",
+  "n": "Plato Federal Guardia Negro",
   "brand": "Federal",
   "cat": "pinones",
   "spec": "28T · Aluminio 6061 T6 · 6mm · Guardia Nylon · Negro",
