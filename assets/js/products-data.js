@@ -1,5 +1,98 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plato Xposure Infinity 25T",
+  "brand": "Xposure",
+  "cat": "pinones",
+  "spec": "Material Aluminio 7075 . 25T - Peso: 67 gramos",
+  "price": 90000,
+  "sku": "PLT-XPO-001",
+  "units": 10,
+  "imgs": [
+   "assets/img/products/plato-xposure-infinity-25t-mtby9bitqkmu.jpg?v=1787860969613",
+   "assets/img/products/plato-xposure-infinity-25t-mtby9d3h0vy8.jpg?v=1787860971252",
+   "assets/img/products/plato-xposure-infinity-25t-mtby9ed0skys.jpg?v=1787860972951"
+  ],
+  "sizes": [
+   {
+    "label": "25T",
+    "units": 10,
+    "price": 90000
+   }
+  ],
+  "colors": [
+   {
+    "label": "Azul",
+    "units": 4,
+    "price": 90000
+   },
+   {
+    "label": "Rojo",
+    "units": 4,
+    "price": 90000
+   },
+   {
+    "label": "Negro",
+    "units": 4,
+    "price": 90000
+   }
+  ],
+  "slug": "plato-xposure-infinity-25t",
+  "imgColorMap": {
+   "Azul": [
+    0
+   ],
+   "Rojo": [
+    1
+   ],
+   "Negro": [
+    2
+   ]
+  },
+  "img": "assets/img/products/plato-xposure-infinity-25t-mtby9bitqkmu.jpg?v=1787860969613"
+ },
+ {
+  "n": "Plato Trueno Exotic Tornasol",
+  "brand": "Trueno",
+  "cat": "pinones",
+  "spec": "Material Aluminio 6061- T6 . 25T  48 gramos",
+  "price": 65000,
+  "sku": "PLT-TRU-002",
+  "units": 2,
+  "sizes": [
+   {
+    "label": "25T",
+    "units": 2,
+    "price": 65000
+   }
+  ],
+  "slug": "plato-trueno-exotic-tornasol",
+  "img": "assets/img/products/plato-trueno-exotic-tornasol-mtby9fo7maek.jpg?v=1787860974270"
+ },
+ {
+  "n": "Plato Trueno Exotic",
+  "brand": "Trueno",
+  "cat": "pinones",
+  "spec": "Material Aluminio 6061- T6 . 25T - 28T 107 gramos",
+  "price": 155000,
+  "sku": "PLT-TRU-001",
+  "units": 3,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "25T",
+    "units": 3,
+    "price": 155000
+   },
+   {
+    "label": "28T",
+    "units": 0,
+    "price": 155000
+   }
+  ],
+  "slug": "plato-trueno-exotic",
+  "img": "assets/img/products/plato-trueno-exotic-mtby9gou9qqd.jpg?v=1787860975926"
+ },
+ {
   "n": "Kit Ruedas X4",
   "brand": "Black Market",
   "cat": "skate-ruedas",
