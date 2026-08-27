@@ -4063,5 +4063,16 @@ window.ESCENA_AUDIT = [
    "llanta-shadow-creeper-negra-2-40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T19:35:55.262Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "plato-fate-guardia-negro-28t",
+   "cult-pinon-negro"
+  ],
+  "deleted": []
  }
 ];
