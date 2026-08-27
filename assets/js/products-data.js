@@ -4054,10 +4054,10 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "plato-fate-guardia-negro-28t",
-  "n": "Plato Fate Guardia Negro 28T.",
+  "n": "Plato Fate Guardia Negro 28T",
   "brand": "Fate",
   "cat": "pinones",
-  "spec": "Guardia • Negro • 28T",
+  "spec": "Guardia • Negro • 28T Aluminio 7075",
   "price": 230000,
   "sku": "PLT-FAT-001",
   "units": 1,
@@ -4068,7 +4068,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 910,
-  "img": "assets/img/products/plato-fate-guardia-negro-28t.jpg?v=1786462863201"
+  "img": "assets/img/products/plato-fate-guardia-negro-28t-mtbxajpaxai3.jpg?v=1787859347513"
  },
  {
   "slug": "pedales-fate-negro",
@@ -5432,7 +5432,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 920,
-  "img": "assets/img/products/cult-pinon-negro.jpg?v=1786462866069"
+  "img": "assets/img/products/cult-pinon-negro-mtbxalh5e2ql.jpg?v=1787859349007"
  },
  {
   "slug": "odyssey-pinon-28t-negro",
