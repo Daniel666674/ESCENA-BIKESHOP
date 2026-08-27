@@ -4294,5 +4294,26 @@ window.ESCENA_AUDIT = [
    "pedales-metal-negro-03"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T23:52:59.864Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 7 productos editados, 2 productos eliminados, 4 fotos subidas",
+  "created": [
+   "pedales-odyssey-twist-pro"
+  ],
+  "edited": [
+   "pedales-wellgo-negro",
+   "pedales-fate-negro",
+   "pedales-stolen",
+   "pedales-plataforma-negro-01",
+   "pedales-demolition",
+   "pedales-metal-negro-01",
+   "pedales-metal-negro-03"
+  ],
+  "deleted": [
+   "pedales-metal-negro-02",
+   "pedales-odyssey"
+  ]
  }
 ];
