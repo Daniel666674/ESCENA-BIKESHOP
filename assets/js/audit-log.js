@@ -4131,5 +4131,30 @@ window.ESCENA_AUDIT = [
    "plato-trueno-exotic-tornasol"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T20:11:18.784Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 14 productos editados, 1 foto subida",
+  "created": [
+   "plato-fitbikeco-key-guard-v2"
+  ],
+  "edited": [
+   "plato-odyssey-big-boyd-28t",
+   "plato-trueno-exotic-tornasol",
+   "plato-xposure-infinity-25t",
+   "plato-trueno-exotic",
+   "plato-federal-logo-guard-28t",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "plato-federal-code-guard-cromado-28t",
+   "pinon-snowflake-plata",
+   "federal-pinon-gris",
+   "cult-pinon-negro",
+   "plato-fate-guardia-negro-28t",
+   "plato-volume-guardia-28t",
+   "fiend-pinon-25t-negro"
+  ],
+  "deleted": []
  }
 ];
