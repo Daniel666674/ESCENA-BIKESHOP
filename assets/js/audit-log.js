@@ -4259,5 +4259,19 @@ window.ESCENA_AUDIT = [
    "plato-trueno-exotic-tornasol"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T21:56:58.332Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 1 producto editado, 4 fotos subidas",
+  "created": [
+   "plato-gw-corona-negro-2",
+   "plato-gw-corona-negro",
+   "plato-gw-kl215-negro"
+  ],
+  "edited": [
+   "plato-odyssey-big-boyd-28t"
+  ],
+  "deleted": []
  }
 ];
