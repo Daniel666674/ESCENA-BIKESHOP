@@ -2011,6 +2011,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-federal-code-guard-cromado-28t",
+  "imgZoom": 123,
   "img": "assets/img/products/plato-federal-code-guard-cromado-28t.jpg?v=1786462978298"
  },
  {
@@ -5478,6 +5479,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1786462870473"
   ],
   "imgFit": "cover",
+  "imgZoom": 120,
   "img": "assets/img/products/fiend-pinon-25t-negro.jpg?v=1786462869038"
  },
  {
