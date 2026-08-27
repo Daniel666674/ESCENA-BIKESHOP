@@ -1,5 +1,29 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plato S&M Goring 28T",
+  "brand": "S&M",
+  "cat": "pinones",
+  "spec": "Material Aluminio 6061 T-6 mecanizado por CNC - Guardia- Peso: 5.7 onzas",
+  "price": 340000,
+  "sku": "PLT-SNM-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1,
+    "price": 340000
+   },
+   {
+    "label": "30T",
+    "units": 0,
+    "price": 340000
+   }
+  ],
+  "slug": "plato-s-m-goring-28t",
+  "order": 30,
+  "img": "assets/img/products/plato-s-m-goring-28t-mtbyv869obzl.jpg?v=1787861991329"
+ },
+ {
   "n": "Plato Fitbikeco Key Guard V2",
   "brand": "Fitbikeco",
   "cat": "pinones",
@@ -2108,29 +2132,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/grips-s-m-passero.jpg?v=1786531628470"
  },
  {
-  "n": "Plato Federal Code Guard Cromado 28T",
-  "brand": "Federal",
-  "cat": "pinones",
-  "spec": "Aluminio CNC • Cromado • 28T",
-  "price": 270000,
-  "sku": "PLT-FED-002",
-  "units": 1,
-  "imgs": [
-   "assets/img/products/plato-federal-code-guard-cromado-28t.jpg?v=1786462978298",
-   "assets/img/products/plato-federal-code-guard-cromado-28t-2.jpg?v=1786462979629"
-  ],
-  "sizes": [
-   {
-    "label": "28T",
-    "units": 1
-   }
-  ],
-  "slug": "plato-federal-code-guard-cromado-28t",
-  "imgZoom": 148,
-  "order": 80,
-  "img": "assets/img/products/plato-federal-code-guard-cromado-28t.jpg?v=1786462978298"
- },
- {
   "n": "Plato Mutanty Diamond Cromado 28T",
   "brand": "Mutanty",
   "cat": "pinones",
@@ -4064,7 +4065,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 30,
+  "order": 40,
   "imgFit": "cover",
   "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1786462861771"
  },
@@ -4187,7 +4188,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/plato-fate-guardia-negro-28t-mtbxajpaxai3.jpg?v=1787859347513"
  },
  {
@@ -5526,14 +5527,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "28T · Aluminio CNC 7075 · Guardia · Peso 110g",
   "price": 290000,
   "sku": "PLATO-EIGHTIES-28T",
-  "units": 2,
+  "units": 1,
   "sizes": [
    {
     "label": "28T",
-    "units": 2
+    "units": 1
    }
   ],
-  "order": 70,
+  "order": 80,
+  "imgZoom": 127,
   "img": "assets/img/products/pinon-snowflake-plata-mtbxeill8dz3.jpg?v=1787859532560"
  },
  {
@@ -5551,7 +5553,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/cult-pinon-negro-mtbxalh5e2ql.jpg?v=1787859349007"
  },
  {
@@ -5572,10 +5574,11 @@ window.ESCENA_PRODUCTS = [
   "order": 0,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/odyssey-pinon-28t-negro.jpg?v=1786462867607",
+   "assets/img/products/odyssey-pinon-28t-negro-mtbyv9ghr3ke.jpg?v=1787861992844",
    "assets/img/products/odyssey-pinon-28t-negro-2.jpg?v=1786462145489"
   ],
-  "img": "assets/img/products/odyssey-pinon-28t-negro.jpg?v=1786462867607"
+  "imgZoom": 116,
+  "img": "assets/img/products/odyssey-pinon-28t-negro-mtbyv9ghr3ke.jpg?v=1787861992844"
  },
  {
   "slug": "fiend-pinon-25t-negro",
@@ -5616,7 +5619,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 60,
+  "order": 70,
   "imgs": [
    "assets/img/products/federal-pinon-gris.jpg?v=1786462149714",
    "assets/img/products/federal-pinon-gris-2.jpg?v=1786462150949"
