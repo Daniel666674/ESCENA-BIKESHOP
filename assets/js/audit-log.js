@@ -4232,5 +4232,32 @@ window.ESCENA_AUDIT = [
    "plato-fate-guardia-negro-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T21:44:38.861Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "18 productos editados",
+  "created": [],
+  "edited": [
+   "cult-pinon-negro",
+   "plato-volume-guardia-28t",
+   "odyssey-pinon-28t-negro",
+   "fiend-pinon-25t-negro",
+   "plato-s-m-goring-28t",
+   "plato-fitbikeco-key-guard-v2",
+   "federal-pinon-gris",
+   "pinon-snowflake-plata",
+   "plato-mutanty-diamond-cromado-28t",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-federal-logo-guard-28t",
+   "plato-trueno-exotic",
+   "plato-sunday-sabretooth-v2-negro-28t",
+   "plato-xposure-infinity-25t",
+   "plato-odyssey-big-boyd-28t",
+   "plato-fiend-reynols-purpura",
+   "plato-strangergram-guardia-negro-28t",
+   "plato-trueno-exotic-tornasol"
+  ],
+  "deleted": []
  }
 ];
