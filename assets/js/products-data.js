@@ -1,5 +1,46 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plato Fiend Reynols Purpura",
+  "brand": "Fiend",
+  "cat": "pinones",
+  "spec": "Material Aluminio 6061 . 25T - Guardia",
+  "price": 290000,
+  "sku": "PLT-FND-001",
+  "units": 2,
+  "sizes": [
+   {
+    "label": "25T",
+    "units": 2,
+    "price": 290000
+   }
+  ],
+  "slug": "plato-fiend-reynols-purpura",
+  "img": "assets/img/products/plato-fiend-reynols-purpura-mtbzwaexp3tk.jpg?v=1787863720921"
+ },
+ {
+  "n": "Plato Strangergram Guardia Negro 28T",
+  "brand": "Stranger",
+  "cat": "pinones",
+  "spec": "Material Aluminio 7075-T6  . 28T - Guardia",
+  "price": 250000,
+  "sku": "PLT-STR-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "25T",
+    "units": 0,
+    "price": 250000
+   },
+   {
+    "label": "28T",
+    "units": 1,
+    "price": 250000
+   }
+  ],
+  "slug": "plato-strangergram-guardia-negro-28t",
+  "img": "assets/img/products/plato-strangergram-guardia-negro-28t-mtbzwc0q5dmp.jpg?v=1787863722558"
+ },
+ {
   "n": "Plato Sunday sabretooth V2 Negro 28T",
   "brand": "Sunday",
   "cat": "pinones",
