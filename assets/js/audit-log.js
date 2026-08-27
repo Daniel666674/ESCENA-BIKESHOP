@@ -4037,5 +4037,31 @@ window.ESCENA_AUDIT = [
    "marco-gw-destructor-azul-20-5"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T17:15:45.365Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "17 productos editados",
+  "created": [],
+  "edited": [
+   "llanta-cinema-nathan-williams-negro-2-50",
+   "llanta-theory-proven-blanca-2-40",
+   "llanta-odyssey-supercircuit-keblar-negra-2-40",
+   "llanta-odyssey-path-pro-negra-2-40",
+   "coraza_primo_555_2.45",
+   "llanta-optimus-black-burn-negra-2-35",
+   "llanta-chaoyang-cutting-edge-negra-2-25",
+   "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
+   "llanta-cst-orbit-knobby-negra-rin-16-2-125",
+   "llanta-tioga-factory-fs100-negra-2-10",
+   "llanta-innova-pro-negra-2-40",
+   "llanta-innova-camufladas",
+   "llanta-innova-pro-big-slick-cafe-2-40",
+   "llanta-mutanty-whipper-azul-2-40",
+   "llanta-mutanty-whipper-roja-2-40",
+   "llanta-subrosa-matt-ray-roja-2-40",
+   "llanta-shadow-creeper-negra-2-40"
+  ],
+  "deleted": []
  }
 ];
