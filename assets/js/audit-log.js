@@ -4195,5 +4195,21 @@ window.ESCENA_AUDIT = [
    "plato-volume-guardia-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T20:40:45.575Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 5 productos editados, 1 foto subida",
+  "created": [
+   "plato-sunday-sabretooth-v2-negro-28t"
+  ],
+  "edited": [
+   "plato-odyssey-big-boyd-28t",
+   "plato-trueno-exotic-tornasol",
+   "plato-xposure-infinity-25t",
+   "plato-trueno-exotic",
+   "plato-federal-logo-guard-28t"
+  ],
+  "deleted": []
  }
 ];
