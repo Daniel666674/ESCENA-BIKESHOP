@@ -4156,5 +4156,31 @@ window.ESCENA_AUDIT = [
    "fiend-pinon-25t-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-27T20:20:01.288Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 13 productos editados, 1 producto eliminado, 2 fotos subidas",
+  "created": [
+   "plato-s-m-goring-28t"
+  ],
+  "edited": [
+   "plato-mutanty-diamond-cromado-28t",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-federal-logo-guard-28t",
+   "plato-trueno-exotic",
+   "plato-xposure-infinity-25t",
+   "plato-trueno-exotic-tornasol",
+   "plato-odyssey-big-boyd-28t",
+   "pinon-snowflake-plata",
+   "federal-pinon-gris",
+   "cult-pinon-negro",
+   "plato-fate-guardia-negro-28t",
+   "plato-volume-guardia-28t",
+   "odyssey-pinon-28t-negro"
+  ],
+  "deleted": [
+   "plato-federal-code-guard-cromado-28t"
+  ]
  }
 ];
