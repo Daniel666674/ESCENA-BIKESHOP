@@ -4182,5 +4182,18 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "plato-federal-code-guard-cromado-28t"
   ]
+ },
+ {
+  "ts": "2026-08-27T20:36:57.863Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "plato-fitbikeco-key-guard-v2",
+   "fiend-pinon-25t-negro",
+   "plato-s-m-goring-28t",
+   "plato-volume-guardia-28t"
+  ],
+  "deleted": []
  }
 ];
