@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Herramienta Maiste",
+  "brand": "Maiste",
+  "cat": "skate-accesorios",
+  "spec": "Acero • Medida 3/8 (9,5mm) • Tuerca Kingpin 1/2 (12,7mm) • Tuercas Eje 9/16 (14mm)",
+  "price": 35000,
+  "sku": "SKA-MAI-001",
+  "units": 3,
+  "slug": "herramienta-maiste",
+  "img": "assets/img/products/herramienta-maiste-mteva8m3ra8r.jpg?v=1788037371695"
+ },
+ {
   "n": "Kit Ruedas MiniLogo X4",
   "brand": "MiniLogo",
   "cat": "skate-ruedas",
