@@ -4315,5 +4315,17 @@ window.ESCENA_AUDIT = [
    "pedales-metal-negro-02",
    "pedales-odyssey"
   ]
+ },
+ {
+  "ts": "2026-08-29T20:06:06.424Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "3 productos nuevos, 3 fotos subidas",
+  "created": [
+   "trucks-skate-terror",
+   "trucks-koston-2",
+   "trucks-koston"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
