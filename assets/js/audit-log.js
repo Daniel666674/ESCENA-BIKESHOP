@@ -4369,5 +4369,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-29T20:47:51.465Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "rodamientos-monk-mb5"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
