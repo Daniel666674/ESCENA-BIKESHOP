@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pivots Monk",
+  "brand": "Monk",
+  "cat": "skate-accesorios",
+  "spec": "Negro · Material poliuretano · Medida 16 - 17mm · Precio C/U",
+  "price": 2500,
+  "sku": "SKA-MON-001",
+  "units": 1,
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1
+   }
+  ],
+  "slug": "pivots-monk",
+  "img": "assets/img/products/pivots-monk-mtetwtishyh2.jpg?v=1788035066126"
+ },
+ {
   "n": "Trucks Maiste",
   "brand": "Maiste",
   "cat": "skate-trucks",
