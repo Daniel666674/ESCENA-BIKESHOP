@@ -4409,5 +4409,15 @@ window.ESCENA_AUDIT = [
    "kit-ruedas-minilogo-x4"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-29T21:02:56.036Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "herramienta-maiste"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
