@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodamientos Genericos",
+  "brand": "Genericos",
+  "cat": "skate-rodamientos",
+  "spec": "Rodamiento Generico • Medida Universal 608 •  Con banda metalica o de goma • Precio C/U",
+  "price": 3500,
+  "sku": "SKB-GEN-001",
+  "units": 3,
+  "slug": "rodamientos-genericos",
+  "img": "assets/img/products/rodamientos-genericos-mteuvk0tnsms.jpg?v=1788036686625"
+ },
+ {
   "n": "Rodamientos Monk MB5",
   "brand": "Monk",
   "cat": "skate-rodamientos",
