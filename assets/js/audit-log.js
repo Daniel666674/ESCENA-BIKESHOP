@@ -4379,5 +4379,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-29T20:51:31.867Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "rodamientos-genericos"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
