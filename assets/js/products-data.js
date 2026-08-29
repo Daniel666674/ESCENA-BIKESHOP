@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodamientos Monk MB5",
+  "brand": "Monk",
+  "cat": "skate-rodamientos",
+  "spec": "Tamaño 608 Estandar Universal • Material Acero • Sellados ( Tapa Removible para limpieza/Lubricacion)",
+  "price": 50000,
+  "sku": "SKB-MON-002",
+  "units": 1,
+  "slug": "rodamientos-monk-mb5",
+  "img": "assets/img/products/rodamientos-monk-mb5-mteuqub5m3bt.jpg?v=1788036466989"
+ },
+ {
   "n": "Truck Enigma Raw",
   "brand": "Enigma",
   "cat": "skate-trucks",
