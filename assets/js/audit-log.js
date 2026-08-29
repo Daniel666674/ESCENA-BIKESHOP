@@ -4429,5 +4429,15 @@ window.ESCENA_AUDIT = [
    "herramienta-maiste"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-29T21:05:03.728Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "llave-monk"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
