@@ -4419,5 +4419,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-29T21:03:50.211Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "herramienta-maiste"
+  ],
+  "deleted": []
  }
 ];
