@@ -1,5 +1,33 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tuerca Seguridad Central",
+  "brand": "Industrial",
+  "cat": "skate-accesorios",
+  "spec": "Tuerca Central •Tuerca Seguridad • Nacional",
+  "price": 1500,
+  "sku": "SKA-IND-002",
+  "units": 5,
+  "slug": "tuerca-seguridad-central",
+  "img": "assets/img/products/tuerca-seguridad-central-mtevjdkiteqf.jpg?v=1788037798489"
+ },
+ {
+  "n": "Tuerca Seguridad Lateral",
+  "brand": "Industrial",
+  "cat": "skate-accesorios",
+  "spec": "Tuerca lateral • Tuerca de seguridad  • Nacional 1/2 x 5/16 Pulgadas • Precio C/U",
+  "price": 1500,
+  "sku": "SKA-IND-001",
+  "units": 5,
+  "colors": [
+   {
+    "label": "Nego",
+    "units": 5
+   }
+  ],
+  "slug": "tuerca-seguridad-lateral",
+  "img": "assets/img/products/tuerca-seguridad-lateral-mtevjf4pmdy9.jpg?v=1788037799794"
+ },
+ {
   "n": "Llave Monk",
   "brand": "Monk",
   "cat": "skate-accesorios",
