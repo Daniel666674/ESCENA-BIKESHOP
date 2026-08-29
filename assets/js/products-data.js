@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Truck Enigma Raw",
+  "brand": "Enigma",
+  "cat": "skate-trucks",
+  "spec": "Material Aluminio de alta resistencia  · Medida 133mm (5.25) · Eje Hueco · Kingpin Hueco · Baseplate Perforaciones para mejor balance",
+  "price": 130000,
+  "sku": "STK-ENI-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "133mm",
+    "units": 1
+   }
+  ],
+  "slug": "truck-enigma-raw",
+  "img": "assets/img/products/truck-enigma-raw-mteu2f8mxk35.jpg?v=1788035327594"
+ },
+ {
   "n": "Pivots Monk",
   "brand": "Monk",
   "cat": "skate-accesorios",
