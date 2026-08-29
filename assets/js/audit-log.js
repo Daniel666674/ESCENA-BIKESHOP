@@ -4349,5 +4349,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "trucks-koston-2"
   ]
+ },
+ {
+  "ts": "2026-08-29T20:24:30.442Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "pivots-monk"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
