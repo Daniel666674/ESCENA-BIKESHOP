@@ -3,7 +3,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Herramienta Maiste",
   "brand": "Maiste",
   "cat": "skate-accesorios",
-  "spec": "Acero • Medida 3/8 (9,5mm) • Tuerca Kingpin 1/2 (12,7mm) • Tuercas Eje 9/16 (14mm)",
+  "spec": "Llave tipo T • Acero • Medida 3/8 (9,5mm) • Tuerca Kingpin 1/2 (12,7mm) • Tuercas Eje 9/16 (14mm)",
   "price": 35000,
   "sku": "SKA-MAI-001",
   "units": 3,
