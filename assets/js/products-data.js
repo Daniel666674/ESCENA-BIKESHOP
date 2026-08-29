@@ -1,5 +1,92 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Trucks  Skate Terror",
+  "brand": "Skate Terror",
+  "cat": "skate-trucks",
+  "spec": "Negro · Material Aleación de aluminio · Medida 149mm · Marca Nacional",
+  "price": 150000,
+  "sku": "STK-SKA-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "149mm",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Negro",
+    "units": 1
+   }
+  ],
+  "slug": "trucks-skate-terror",
+  "img": "assets/img/products/trucks-skate-terror-mtet90yxzpmv.jpg?v=1788033956044"
+ },
+ {
+  "n": "Trucks Koston",
+  "brand": "Koston",
+  "cat": "skate-trucks",
+  "spec": "Tornasol · Material Aluminio de alta resistencia  ·  Modelo Eric Koston V8  ·  Altura -53,5mm",
+  "price": 150000,
+  "sku": "STK-KOS-002",
+  "units": 3,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "5.2",
+    "units": 1
+   },
+   {
+    "label": "5.6",
+    "units": 1
+   },
+   {
+    "label": "5.8",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Tornasol",
+    "units": 1
+   }
+  ],
+  "slug": "trucks-koston-2",
+  "img": "assets/img/products/trucks-koston-2-mtet92a42i40.jpg?v=1788033957328"
+ },
+ {
+  "n": "Trucks Koston",
+  "brand": "Koston",
+  "cat": "skate-trucks",
+  "spec": "Material Aluminio de alta resistencia  ·  Modelo Eric Koston V8  ·  Altura -53,5mm",
+  "price": 150000,
+  "sku": "STK-KOS-001",
+  "units": 3,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "5.2",
+    "units": 1
+   },
+   {
+    "label": "5.6",
+    "units": 1
+   },
+   {
+    "label": "5.8",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Plateado",
+    "units": 1
+   }
+  ],
+  "slug": "trucks-koston",
+  "img": "assets/img/products/trucks-koston-mtet939s1u36.jpg?v=1788033958695"
+ },
+ {
   "n": "Pedales Odyssey Twist Pro",
   "brand": "Odyssey",
   "cat": "pedales",
