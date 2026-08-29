@@ -1,5 +1,28 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Trucks Maiste",
+  "brand": "Maiste",
+  "cat": "skate-trucks",
+  "spec": "Tornasol · Material Base de aluminio · Eje en acero · Medida 144mm (8.25) · Kingpin Central Hueco",
+  "price": 150000,
+  "sku": "STK-MAI-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "144mm",
+    "units": 1
+   }
+  ],
+  "colors": [
+   {
+    "label": "Tornasol",
+    "units": 1
+   }
+  ],
+  "slug": "trucks-maiste",
+  "img": "assets/img/products/trucks-maiste-mtetkd8wl7kn.jpg?v=1788034485115"
+ },
+ {
   "n": "Trucks  Skate Terror",
   "brand": "Skate Terror",
   "cat": "skate-trucks",
@@ -25,38 +48,6 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "trucks-skate-terror",
   "img": "assets/img/products/trucks-skate-terror-mtetatre0gv2.jpg?v=1788034039968"
- },
- {
-  "n": "Trucks Koston",
-  "brand": "Koston",
-  "cat": "skate-trucks",
-  "spec": "Tornasol · Material Aluminio de alta resistencia  ·  Modelo Eric Koston V8  ·  Altura -53,5mm",
-  "price": 150000,
-  "sku": "STK-KOS-002",
-  "units": 3,
-  "imgFit": "cover",
-  "sizes": [
-   {
-    "label": "5.2",
-    "units": 1
-   },
-   {
-    "label": "5.6",
-    "units": 1
-   },
-   {
-    "label": "5.8",
-    "units": 1
-   }
-  ],
-  "colors": [
-   {
-    "label": "Tornasol",
-    "units": 1
-   }
-  ],
-  "slug": "trucks-koston-2",
-  "img": "assets/img/products/trucks-koston-2-mtet92a42i40.jpg?v=1788033957328"
  },
  {
   "n": "Trucks Koston",
