@@ -7,6 +7,10 @@ window.ESCENA_PRODUCTS = [
   "price": 150000,
   "sku": "STK-SKA-001",
   "units": 1,
+  "imgs": [
+   "assets/img/products/trucks-skate-terror-mtetatre0gv2.jpg?v=1788034039968",
+   "assets/img/products/trucks-skate-terror-mtet90yxzpmv.jpg?v=1788033956044"
+  ],
   "sizes": [
    {
     "label": "149mm",
@@ -20,7 +24,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "trucks-skate-terror",
-  "img": "assets/img/products/trucks-skate-terror-mtet90yxzpmv.jpg?v=1788033956044"
+  "img": "assets/img/products/trucks-skate-terror-mtetatre0gv2.jpg?v=1788034039968"
  },
  {
   "n": "Trucks Koston",
