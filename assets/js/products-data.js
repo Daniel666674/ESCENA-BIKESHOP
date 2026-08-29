@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llave Monk",
+  "brand": "Monk",
+  "cat": "skate-accesorios",
+  "spec": "Llave tipo T • Acero • Medida 3/8 (9,5mm) • Tuerca Kingpin 1/2 (12,7mm) • Tuercas Eje 9/16 (14mm)",
+  "price": 30000,
+  "sku": "SKA-MON-002",
+  "units": 3,
+  "slug": "llave-monk",
+  "img": "assets/img/products/llave-monk-mtevcz57drx4.jpg?v=1788037499453"
+ },
+ {
   "n": "Herramienta Maiste",
   "brand": "Maiste",
   "cat": "skate-accesorios",
