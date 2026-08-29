@@ -163,7 +163,7 @@
     @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
     @media (max-width: 480px) {
       .grid { gap: .9rem; }
-      .card .ph { height: 195px; padding: .8rem; border-radius: 10px; }
+      .card .ph { height: 195px; }
       .card h3 { font-size: .88rem; }
       .card .price { font-size: .88rem; }
     }
@@ -199,22 +199,15 @@
     @media (max-width: 480px) {
       .cat-sidebar { top: 58px; }
     }
-    /* Flat, frameless card: no border around the photo and no add-to-cart
+    /* Flat, frameless card: no border/background box around the photo (every
+       product photo is already shot on white, same as the page background,
+       so a box just adds a visible edge nothing needs) and no add-to-cart
        button -- this is a browse/lookbook grid, not a cart flow; interested
-       shoppers go to the product page (or WhatsApp) to actually order.
-       The photo box DOES get a very light panel-tint background + padding
-       (no border, no shadow -- still frameless) since products vary wildly
-       in shape (a wide handlebar vs a tall helmet) and every photo is shot
-       on white: with a hard-height box and object-fit:contain, a wide/short
-       product ends up as a sliver floating in a sea of blank space, and a
-       light-background photo can all but disappear against the page's own
-       white. The tint gives every card a visible, consistent surface for
-       the photo to sit on regardless of its shape or how light the shot is. */
+       shoppers go to the product page (or WhatsApp) to actually order. */
     .card { background: transparent; display: flex; flex-direction: column; text-align: center; }
     .card .ph-link { display: block; }
-    .card .ph { position: relative; height: 300px; background: var(--panel); border-radius: 14px; padding: 1.1rem; box-sizing: border-box; overflow: hidden; }
+    .card .ph { position: relative; height: 300px; background: transparent; }
     .card .ph img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; transition: transform .25s; transform: scale(var(--img-zoom, 1)); }
-    .card .ph.fit-cover img { object-fit: cover; }
     .card:hover .ph img { transform: scale(calc(var(--img-zoom, 1) * 1.03)); }
     .card.is-agotado .ph img { opacity: .45; }
     .card .tag { position: absolute; z-index: 2; top: 0; left: 0; background: #c0392b; color: #fff; font-size: .68rem; font-weight: 700; padding: .3rem .6rem; border-radius: 4px; }
@@ -698,10 +691,11 @@ header.top-bar .brand .name { color: #fff; }
     var agotado = (typeof p.units === "number" && p.units <= 0);
     var promoHTML = p.promo ? '<span class="tag">¡Oferta!</span>' : "";
     var tagHTML = promoHTML || (p.tag ? '<span class="tag">'+esc(p.tag)+'</span>' : "");
-    var fitCover = p.imgFit === "cover";
+    // Grid cards always show the whole photo, never crop -- see tienda.html
+    // for why this stopped honoring p.imgFit ("cover") here.
     return '<article class="card' + (agotado ? ' is-agotado' : '') + '">' +
         (hasDetailPage ? '<a class="ph-link" href="'+href+'">' : '<div class="ph-link">') +
-          '<div class="ph' + (fitCover ? ' fit-cover' : '') + '">' + tagHTML +
+          '<div class="ph">' + tagHTML +
             '<img src="'+p.img+'" alt="'+esc(p.n)+(p.brand ? ' - '+esc(p.brand) : '')+'" loading="lazy" width="400" height="400" style="'+coverFrameStyle(p)+'"></div>' +
         (hasDetailPage ? '</a>' : '</div>') +
         '<div class="body">' +
