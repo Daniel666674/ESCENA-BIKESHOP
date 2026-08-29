@@ -4399,5 +4399,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-29T20:59:27.852Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "kit-ruedas-minilogo-x4"
+  ],
+  "deleted": []
  }
 ];
