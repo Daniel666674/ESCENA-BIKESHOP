@@ -4359,5 +4359,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-29T20:28:52.141Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "truck-enigma-raw"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
