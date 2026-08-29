@@ -4337,5 +4337,17 @@ window.ESCENA_AUDIT = [
    "trucks-skate-terror"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-29T20:14:50.032Z",
+  "actor": "tiaghinoacosta@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 1 foto subida",
+  "created": [
+   "trucks-maiste"
+  ],
+  "edited": [],
+  "deleted": [
+   "trucks-koston-2"
+  ]
  }
 ];
