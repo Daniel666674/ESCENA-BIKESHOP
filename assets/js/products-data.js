@@ -2,7 +2,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Kit Ruedas MiniLogo X4",
   "brand": "MiniLogo",
-  "cat": "piezas",
+  "cat": "skate-ruedas",
   "spec": "Material Uretano de alta calidad • Dureza (95A - 101A) • Ancho 30-32mm • Superficie Lisa",
   "price": 110000,
   "sku": "PZA-MIN-001",
