@@ -11,12 +11,12 @@ window.ESCENA_PRODUCTS = [
   "order": 20,
   "imgs": [
    "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848",
-   "assets/img/products/cadena-federal-escamada-cromada-mtgem837o6j8.jpg?v=1788130311246",
-   "assets/img/products/cadena-federal-escamada-cromada-mtgemafikb6h.jpg?v=1788130313428",
-   "assets/img/products/cadena-federal-escamada-cromada-mtgdu50yy1d4.jpg?v=1788129001056",
-   "assets/img/products/cadena-federal-escamada-cromada-mtgdu7hcw294.jpg?v=1788129003259",
-   "assets/img/products/cadena-federal-escamada-cromada-mtgdu96j0x4d.jpg?v=1788129005349",
-   "assets/img/products/cadena-federal-escamada-cromada-mtged83dw2su.jpg?v=1788129891924"
+   "assets/img/products/cadena-federal-escamada-cromada-mtgfikg46ajp.jpg?v=1788131820722",
+   "assets/img/products/cadena-federal-escamada-cromada-mtgfin5e3s8c.jpg?v=1788131822742",
+   "assets/img/products/cadena-federal-escamada-cromada-mtgfiopif705.jpg?v=1788131824437",
+   "assets/img/products/cadena-federal-escamada-cromada-mtgfiq0ma9cz.jpg?v=1788131826150",
+   "assets/img/products/cadena-federal-escamada-cromada-mtgfirc627pk.jpg?v=1788131827949",
+   "assets/img/products/cadena-federal-escamada-cromada-mtgfisq5e4iv.jpg?v=1788131829934"
   ],
   "colors": [
    {
@@ -39,7 +39,8 @@ window.ESCENA_PRODUCTS = [
    "NEGRA": [
     3,
     4,
-    5
+    5,
+    6
    ]
   },
   "img": "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848"
