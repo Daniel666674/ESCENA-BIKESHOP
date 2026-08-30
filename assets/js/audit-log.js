@@ -4537,5 +4537,16 @@ window.ESCENA_AUDIT = [
    "cadena-federal-escamada-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-30T22:45:02.962Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos editados, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "cadena-federal-escamada-cromada",
+   "cadena-tall-order-cromada-510"
+  ],
+  "deleted": []
  }
 ];
