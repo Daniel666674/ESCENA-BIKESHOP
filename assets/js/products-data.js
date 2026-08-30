@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "CADENA TALL ORDER CROMADA 510",
+  "brand": "TALL ORDER",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 75000,
+  "sku": "CAD-TAL-001",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/cadena-tall-order-cromada-510-mtg1gctei92f.jpg?v=1788108201682",
+   "assets/img/products/cadena-tall-order-cromada-510-mtg1gekyqnyo.jpg?v=1788108203434",
+   "assets/img/products/cadena-tall-order-cromada-510-mtg1gfxmz0pn.jpg?v=1788108205196"
+  ],
+  "slug": "cadena-tall-order-cromada-510",
+  "img": "assets/img/products/cadena-tall-order-cromada-510-mtg1gctei92f.jpg?v=1788108201682"
+ },
+ {
   "n": "Tuerca Seguridad Central",
   "brand": "Industrial",
   "cat": "skate-accesorios",
