@@ -4460,5 +4460,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-30T17:06:16.663Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "cadena-cult-escamada-cromada"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
