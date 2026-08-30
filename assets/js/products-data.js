@@ -7,13 +7,13 @@ window.ESCENA_PRODUCTS = [
   "price": 110000,
   "sku": "CAD-FED-001",
   "units": 2,
-  "imgs": [
-   "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848",
-   "assets/img/products/cadena-federal-escamada-cromada-mtg3tlnxwra7.jpg?v=1788112178817",
-   "assets/img/products/cadena-federal-escamada-cromada-mtg3tncy0ka9.jpg?v=1788112180403"
-  ],
   "slug": "cadena-federal-escamada-cromada",
   "order": 20,
+  "imgs": [
+   "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848",
+   "assets/img/products/cadena-federal-escamada-cromada-mtg3xoo2kmnz.jpg?v=1788112369041",
+   "assets/img/products/cadena-federal-escamada-cromada-mtg3xq4xqhxt.jpg?v=1788112370442"
+  ],
   "img": "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848"
  },
  {
