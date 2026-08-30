@@ -55,7 +55,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgs": [
    "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286",
-   "assets/img/products/cadena-cult-escamada-cromada-mtg29o7vbtyp.jpg?v=1788109569177"
+   "assets/img/products/cadena-cult-escamada-cromada-mtggapq6zx3b.jpg?v=1788133133688"
   ],
   "slug": "cadena-cult-escamada-cromada",
   "order": 0,
