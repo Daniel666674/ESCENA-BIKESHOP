@@ -8,7 +8,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAD-FED-001",
   "units": 2,
   "slug": "cadena-federal-escamada-cromada",
-  "order": 0,
+  "order": 20,
   "img": "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848"
  },
  {
@@ -24,7 +24,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-cult-escamada-cromada-mtg29o7vbtyp.jpg?v=1788109569177"
   ],
   "slug": "cadena-cult-escamada-cromada",
-  "order": 20,
+  "order": 0,
   "img": "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286"
  },
  {
