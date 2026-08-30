@@ -389,25 +389,26 @@ header.top-bar .brand .name { color: #fff; }
         <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-controls="navDropMenu" aria-label="Mostrar categorías de Partes"><span class="caret"></span></button>
         <div class="nav-drop-menu" id="navDropMenu">
           <div class="nav-drop-col">
-            <a href="tienda?cat=manubrios">Timón</a>
+            <a href="tienda?cat=manubrios">Timones</a>
             <a href="tienda?cat=stems">Cañas</a>
             <a href="tienda?cat=punos">Grips</a>
             <a href="tienda?cat=horquillas">Tenedores</a>
-            <a href="tienda?cat=caja-frente">Caja de Frente</a>
-            <a href="tienda?cat=manzana-delantera">Manzana Delantera</a>
-            <a href="tienda?cat=corazas">Corazas</a>
+            <a href="tienda?cat=caja-frente">Cajas de Frente</a>
+            <a href="tienda?cat=manzana-delantera">Manzanas Delanteras</a>
+            <a href="tienda?cat=llantas">Llantas</a>
           </div>
           <div class="nav-drop-col">
             <a href="tienda?cat=marcos">Marcos</a>
             <a href="tienda?cat=bielas">Bielas</a>
-            <a href="tienda?cat=pinones">Plato</a>
+            <a href="tienda?cat=pinones">Platos</a>
+            <a href="tienda?cat=cadenas">Cadenas</a>
             <a href="tienda?cat=pedales">Pedales</a>
             <a href="tienda?cat=sillines">Sillas</a>
             <a href="tienda?cat=tijas">Postes</a>
-            <a href="tienda?cat=caja-centro">Caja de Centro</a>
+            <a href="tienda?cat=caja-centro">Cajas de Centro</a>
           </div>
           <div class="nav-drop-col">
-            <a href="tienda?cat=manzana-trasera">Manzana Trasera</a>
+            <a href="tienda?cat=manzana-trasera">Manzanas Traseras</a>
             <a href="tienda?cat=rines">Rines</a>
             <a href="tienda?cat=clavijas">Pegs</a>
             <a href="tienda?cat=piezas">Piezas varias</a>
@@ -647,14 +648,14 @@ var SLOTS = [
   { key: "manzanaDelantera", label: "Manzana Delantera", cat: "manzana-delantera", segment: "manzanas", segLabel: "Manzanas" },
   { key: "manzanaTrasera", label: "Manzana Trasera", cat: "manzana-trasera", segment: "manzanas", segLabel: "Manzanas" },
   { key: "rines", label: "Rines", cat: "rines", segment: "ruedas", segLabel: "Ruedas" },
-  { key: "corazas", label: "Corazas", cat: "corazas", segment: "ruedas", segLabel: "Ruedas" },
+  { key: "llantas", label: "Llantas", cat: "llantas", segment: "ruedas", segLabel: "Ruedas" },
   { key: "clavijas", label: "Pegs", cat: "clavijas", segment: "ruedas", segLabel: "Ruedas" },
   { key: "tija", label: "Tija", cat: "tijas", segment: "tija", segLabel: "Tija" },
   { key: "silla", label: "Silla", cat: "sillines", segment: "silla", segLabel: "Silla" },
   { key: "pedales", label: "Pedales", cat: "pedales", segment: "pedales", segLabel: "Pedales" }
 ];
 /* peso base estimado por componente cuando aún no se elige (clavijas: 0 — son opcionales) */
-var DEFAULT_SLOT_WEIGHT = { marco: 2.1, tenedor: 0.62, direccion: 0.15, timon: 0.85, cana: 0.3, punos: 0.1, bielas: 1.55, cajapedalier: 0.25, plato: 0.12, manzanaDelantera: 0.35, manzanaTrasera: 0.85, rines: 1.0, corazas: 0.8, tija: 0.25, silla: 0.35, pedales: 0.4, clavijas: 0 };
+var DEFAULT_SLOT_WEIGHT = { marco: 2.1, tenedor: 0.62, direccion: 0.15, timon: 0.85, cana: 0.3, punos: 0.1, bielas: 1.55, cajapedalier: 0.25, plato: 0.12, manzanaDelantera: 0.35, manzanaTrasera: 0.85, rines: 1.0, llantas: 0.8, tija: 0.25, silla: 0.35, pedales: 0.4, clavijas: 0 };
 var FIXED_WEIGHT = 0.45; /* cadena y tornillería: no seleccionables por separado aquí */
 
 /* pestañas del configurador: agrupan varias partes cuando comparten segmento (ej: dirección + BB) */
@@ -870,7 +871,7 @@ var BOARD_POS = {
   bielas:       { l: 27, t: 80 },
   plato:        { l: 42, t: 82 },
   pedales:      { l: 59, t: 82 },
-  corazas:      { l: 73, t: 80 },
+  llantas:      { l: 73, t: 80 },
   clavijas:     { l: 86, t: 78 }
 };
 var BOARD_OUTLINE_SVG = '<svg class="arm-board-outline" viewBox="0 0 560 340" aria-hidden="true">' +

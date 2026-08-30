@@ -1157,11 +1157,11 @@
   var CATALOG_KEY = "escena_admin_catalog_v1"; // local draft cache only
   var CATEGORY_LABELS = {
     bicicletas: "Bicicletas", accesorios: "Accesorios",
-    marcos: "Marcos", stems: "Cañas", manubrios: "Timón", horquillas: "Tenedores",
-    bielas: "Bielas", "manzana-delantera": "Manzana Delantera", "manzana-trasera": "Manzana Trasera",
-    rines: "Rines", corazas: "Corazas", pinones: "Plato",
+    marcos: "Marcos", stems: "Cañas", manubrios: "Timones", horquillas: "Tenedores",
+    bielas: "Bielas", "manzana-delantera": "Manzanas Delanteras", "manzana-trasera": "Manzanas Traseras",
+    rines: "Rines", llantas: "Llantas", pinones: "Platos", cadenas: "Cadenas",
     pedales: "Pedales", sillines: "Sillas", tijas: "Postes", punos: "Grips",
-    "caja-frente": "Caja de Frente", "caja-centro": "Caja de Centro", clavijas: "Pegs",
+    "caja-frente": "Cajas de Frente", "caja-centro": "Cajas de Centro", clavijas: "Pegs",
     tornilleria: "Tornillería", piezas: "Piezas varias", herramientas: "Herramientas",
     camisetas: "Camisetas", gorros: "Gorros", gorras: "Gorras", hoodies: "Hoodies",
     chaquetas: "Chaquetas", pantalones: "Pantalones", medias: "Medias",
@@ -1188,7 +1188,7 @@
   // fields) and the storefront page's primary variant selector is labeled
   // "Talla" with real per-size stock. See isSizeCat()/isColorReal() below.
   var SIZE_CATEGORIES = {
-    bielas: 1, pinones: 1, marcos: 1, stems: 1, manubrios: 1, horquillas: 1, corazas: 1,
+    bielas: 1, pinones: 1, marcos: 1, stems: 1, manubrios: 1, horquillas: 1, llantas: 1,
     cascos: 1, guantes: 1, rodilleras: 1, canilleras: 1, tobilleras: 1, "rodi-cani-tobilleras": 1,
     camisetas: 1, gorros: 1, gorras: 1, hoodies: 1, chaquetas: 1, pantalones: 1, medias: 1, tenis: 1,
     "mtb-bicicletas": 1, "mtb-marcos": 1, "mtb-timones": 1, "mtb-tenedores": 1,
@@ -1204,8 +1204,8 @@
   var SKU_CAT_CODE = {
     bicicletas: "BIC", accesorios: "ACC",
     marcos: "MRC", stems: "CAN", manubrios: "TMN", horquillas: "TEN", bielas: "BIE",
-    "manzana-delantera": "MZD", "manzana-trasera": "MZT", rines: "RIN", corazas: "COR",
-    pinones: "PLT", pedales: "PED", sillines: "SIL", tijas: "PST", punos: "GRP",
+    "manzana-delantera": "MZD", "manzana-trasera": "MZT", rines: "RIN", llantas: "LLA",
+    pinones: "PLT", cadenas: "CAD", pedales: "PED", sillines: "SIL", tijas: "PST", punos: "GRP",
     "caja-frente": "CJF", "caja-centro": "CJC", clavijas: "PEG", tornilleria: "TOR",
     piezas: "PZA", herramientas: "HER",
     camisetas: "CAM", gorros: "GOR", gorras: "GRA", hoodies: "HOO", chaquetas: "CHA",
@@ -2074,7 +2074,10 @@
     m.n = p.n || "";
     m.brand = p.brand || "";
     m.cat = p.cat || "piezas";
-    var LEGACY_CAT = { bujes: "manzana-trasera", dc: "caja-centro" };
+    // Renamed categories auto-migrate on load, so a product still carrying an
+    // old key (an unpublished draft, a CSV exported before the rename) lands in
+    // the right place instead of silently falling back to "piezas".
+    var LEGACY_CAT = { bujes: "manzana-trasera", dc: "caja-centro", corazas: "llantas" };
     if (LEGACY_CAT[m.cat]) m.cat = LEGACY_CAT[m.cat];
     m.spec = p.spec || "";
     m.price = p.price || 0;
