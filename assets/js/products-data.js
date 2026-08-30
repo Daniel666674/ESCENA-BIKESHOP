@@ -1,5 +1,20 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena Cult Escamada Cromada",
+  "brand": "Cult",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 130000,
+  "sku": "CAD-CLT-001",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/cadena-cult-escamada-cromada-mtg29o7vbtyp.jpg?v=1788109569177",
+   "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286"
+  ],
+  "slug": "cadena-cult-escamada-cromada",
+  "img": "assets/img/products/cadena-cult-escamada-cromada-mtg29o7vbtyp.jpg?v=1788109569177"
+ },
+ {
   "n": "CADENA TALL ORDER CROMADA 510",
   "brand": "TALL ORDER",
   "cat": "cadenas",
