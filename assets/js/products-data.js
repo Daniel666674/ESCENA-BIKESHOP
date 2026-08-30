@@ -15,7 +15,8 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-federal-escamada-cromada-mtg3xq4xqhxt.jpg?v=1788112370442",
    "assets/img/products/cadena-federal-escamada-cromada-mtgdu50yy1d4.jpg?v=1788129001056",
    "assets/img/products/cadena-federal-escamada-cromada-mtgdu7hcw294.jpg?v=1788129003259",
-   "assets/img/products/cadena-federal-escamada-cromada-mtgdu96j0x4d.jpg?v=1788129005349"
+   "assets/img/products/cadena-federal-escamada-cromada-mtgdu96j0x4d.jpg?v=1788129005349",
+   "assets/img/products/cadena-federal-escamada-cromada-mtged83dw2su.jpg?v=1788129891924"
   ],
   "colors": [
    {
@@ -60,20 +61,45 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286"
  },
  {
-  "n": "CADENA TALL ORDER CROMADA 510",
+  "n": "CADENA TALL ORDER  510",
   "brand": "TALL ORDER",
   "cat": "cadenas",
   "spec": "",
   "price": 75000,
   "sku": "CAD-TAL-001",
-  "units": 2,
+  "units": 4,
   "imgs": [
    "assets/img/products/cadena-tall-order-cromada-510-mtg1gekyqnyo.jpg?v=1788108203434",
    "assets/img/products/cadena-tall-order-cromada-510-mtg1gctei92f.jpg?v=1788108201682",
-   "assets/img/products/cadena-tall-order-cromada-510-mtg1gfxmz0pn.jpg?v=1788108205196"
+   "assets/img/products/cadena-tall-order-cromada-510-mtg1gfxmz0pn.jpg?v=1788108205196",
+   "assets/img/products/cadena-tall-order-cromada-510-mtgedavpm4dm.jpg?v=1788129893996",
+   "assets/img/products/cadena-tall-order-cromada-510-mtgedch8t0du.jpg?v=1788129895973"
   ],
   "slug": "cadena-tall-order-cromada-510",
   "order": 10,
+  "colors": [
+   {
+    "label": "CROMADA",
+    "units": 2,
+    "price": 75000
+   },
+   {
+    "label": "NEGRA",
+    "units": 2,
+    "price": 75000
+   }
+  ],
+  "imgColorMap": {
+   "CROMADA": [
+    0,
+    1,
+    2
+   ],
+   "NEGRA": [
+    3,
+    4
+   ]
+  },
   "img": "assets/img/products/cadena-tall-order-cromada-510-mtg1gekyqnyo.jpg?v=1788108203434"
  },
  {
