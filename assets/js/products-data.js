@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena Federal Escamada Cromada",
+  "brand": "Federal",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 110000,
+  "sku": "CAD-FED-001",
+  "units": 2,
+  "slug": "cadena-federal-escamada-cromada",
+  "img": "assets/img/escena-logo.jpg"
+ },
+ {
   "n": "Cadena Cult Escamada Cromada",
   "brand": "Cult",
   "cat": "cadenas",
@@ -8,11 +19,11 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAD-CLT-001",
   "units": 2,
   "imgs": [
-   "assets/img/products/cadena-cult-escamada-cromada-mtg29o7vbtyp.jpg?v=1788109569177",
-   "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286"
+   "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286",
+   "assets/img/products/cadena-cult-escamada-cromada-mtg29o7vbtyp.jpg?v=1788109569177"
   ],
   "slug": "cadena-cult-escamada-cromada",
-  "img": "assets/img/products/cadena-cult-escamada-cromada-mtg29o7vbtyp.jpg?v=1788109569177"
+  "img": "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286"
  },
  {
   "n": "CADENA TALL ORDER CROMADA 510",
@@ -23,12 +34,12 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAD-TAL-001",
   "units": 2,
   "imgs": [
-   "assets/img/products/cadena-tall-order-cromada-510-mtg1gctei92f.jpg?v=1788108201682",
    "assets/img/products/cadena-tall-order-cromada-510-mtg1gekyqnyo.jpg?v=1788108203434",
+   "assets/img/products/cadena-tall-order-cromada-510-mtg1gctei92f.jpg?v=1788108201682",
    "assets/img/products/cadena-tall-order-cromada-510-mtg1gfxmz0pn.jpg?v=1788108205196"
   ],
   "slug": "cadena-tall-order-cromada-510",
-  "img": "assets/img/products/cadena-tall-order-cromada-510-mtg1gctei92f.jpg?v=1788108201682"
+  "img": "assets/img/products/cadena-tall-order-cromada-510-mtg1gekyqnyo.jpg?v=1788108203434"
  },
  {
   "n": "Tuerca Seguridad Central",
