@@ -11,8 +11,8 @@ window.ESCENA_PRODUCTS = [
   "order": 20,
   "imgs": [
    "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848",
-   "assets/img/products/cadena-federal-escamada-cromada-mtg3xoo2kmnz.jpg?v=1788112369041",
-   "assets/img/products/cadena-federal-escamada-cromada-mtg3xq4xqhxt.jpg?v=1788112370442",
+   "assets/img/products/cadena-federal-escamada-cromada-mtgem837o6j8.jpg?v=1788130311246",
+   "assets/img/products/cadena-federal-escamada-cromada-mtgemafikb6h.jpg?v=1788130313428",
    "assets/img/products/cadena-federal-escamada-cromada-mtgdu50yy1d4.jpg?v=1788129001056",
    "assets/img/products/cadena-federal-escamada-cromada-mtgdu7hcw294.jpg?v=1788129003259",
    "assets/img/products/cadena-federal-escamada-cromada-mtgdu96j0x4d.jpg?v=1788129005349",
