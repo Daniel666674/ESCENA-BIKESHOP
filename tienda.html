@@ -389,25 +389,26 @@ header.top-bar .brand .name { color: #fff; }
         <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-controls="navDropMenu" aria-label="Mostrar categorías de Partes"><span class="caret"></span></button>
         <div class="nav-drop-menu" id="navDropMenu">
           <div class="nav-drop-col">
-            <a href="tienda?cat=manubrios">Timón</a>
+            <a href="tienda?cat=manubrios">Timones</a>
             <a href="tienda?cat=stems">Cañas</a>
             <a href="tienda?cat=punos">Grips</a>
             <a href="tienda?cat=horquillas">Tenedores</a>
-            <a href="tienda?cat=caja-frente">Caja de Frente</a>
-            <a href="tienda?cat=manzana-delantera">Manzana Delantera</a>
-            <a href="tienda?cat=corazas">Corazas</a>
+            <a href="tienda?cat=caja-frente">Cajas de Frente</a>
+            <a href="tienda?cat=manzana-delantera">Manzanas Delanteras</a>
+            <a href="tienda?cat=llantas">Llantas</a>
           </div>
           <div class="nav-drop-col">
             <a href="tienda?cat=marcos">Marcos</a>
             <a href="tienda?cat=bielas">Bielas</a>
-            <a href="tienda?cat=pinones">Plato</a>
+            <a href="tienda?cat=pinones">Platos</a>
+            <a href="tienda?cat=cadenas">Cadenas</a>
             <a href="tienda?cat=pedales">Pedales</a>
             <a href="tienda?cat=sillines">Sillas</a>
             <a href="tienda?cat=tijas">Postes</a>
-            <a href="tienda?cat=caja-centro">Caja de Centro</a>
+            <a href="tienda?cat=caja-centro">Cajas de Centro</a>
           </div>
           <div class="nav-drop-col">
-            <a href="tienda?cat=manzana-trasera">Manzana Trasera</a>
+            <a href="tienda?cat=manzana-trasera">Manzanas Traseras</a>
             <a href="tienda?cat=rines">Rines</a>
             <a href="tienda?cat=clavijas">Pegs</a>
             <a href="tienda?cat=piezas">Piezas varias</a>
@@ -491,20 +492,21 @@ header.top-bar .brand .name { color: #fff; }
           <button data-filter="bicicletas">Bicicletas</button>
           <button data-filter="marcos">Marcos</button>
           <button data-filter="stems">Cañas</button>
-          <button data-filter="manubrios">Timón</button>
+          <button data-filter="manubrios">Timones</button>
           <button data-filter="horquillas">Tenedores</button>
           <button data-filter="bielas">Bielas</button>
-          <button data-filter="manzana-delantera">Manzana Delantera</button>
-          <button data-filter="manzana-trasera">Manzana Trasera</button>
+          <button data-filter="manzana-delantera">Manzanas Delanteras</button>
+          <button data-filter="manzana-trasera">Manzanas Traseras</button>
           <button data-filter="rines">Rines</button>
-          <button data-filter="corazas">Corazas</button>
-          <button data-filter="pinones">Plato</button>
+          <button data-filter="llantas">Llantas</button>
+          <button data-filter="pinones">Platos</button>
+          <button data-filter="cadenas">Cadenas</button>
           <button data-filter="pedales">Pedales</button>
           <button data-filter="sillines">Sillas</button>
           <button data-filter="tijas">Postes</button>
           <button data-filter="punos">Grips</button>
-          <button data-filter="caja-frente">Caja de Frente</button>
-          <button data-filter="caja-centro">Caja de Centro</button>
+          <button data-filter="caja-frente">Cajas de Frente</button>
+          <button data-filter="caja-centro">Cajas de Centro</button>
           <button data-filter="clavijas">Pegs</button>
           <button data-filter="tornilleria">Tornillería</button>
           <button data-filter="piezas">Piezas varias</button>
@@ -892,7 +894,11 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.publi
 
   /* ---- Init from ?cat= / ?brand= / ?q= query params ---- */
   var urlParams = new URLSearchParams(window.location.search);
+  // Categories that were renamed keep their old ?cat= value working, so links
+  // already shared/bookmarked/indexed don't dead-end on an empty grid.
+  var LEGACY_CAT = { corazas: "llantas", bujes: "manzana-trasera", dc: "caja-centro" };
   var initialCat = urlParams.get("cat") || "all";
+  if (LEGACY_CAT[initialCat]) initialCat = LEGACY_CAT[initialCat];
   var initialBrand = urlParams.get("brand");
   if (initialBrand) showBrandBanner(initialBrand);
   var initialQuery = urlParams.get("q");

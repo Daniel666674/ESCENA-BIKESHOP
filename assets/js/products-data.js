@@ -762,7 +762,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Cinema Nathan Williams Negro - 2.50\"",
   "brand": "Cinema",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.50\" · Banda direccional profundo · Negro",
   "price": 150000,
   "sku": "COR-CIN-001",
@@ -783,7 +783,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Theory Proven Blanca - 2.40\"",
   "brand": "Theory",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Blanca",
   "price": 90000,
   "sku": "COR-THE-001",
@@ -804,7 +804,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Odyssey Supercircuit Keblar Negra 2.40\"",
   "brand": "Odyssey",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
   "price": 220000,
   "sku": "COR-ODY-003",
@@ -825,7 +825,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Odyssey Path Pro Negra - 2.40\"",
   "brand": "Odyssey",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
   "price": 160000,
   "sku": "COR-ODY-002",
@@ -845,7 +845,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta CST Orbit Knobby Negra Rin 16 - 2.125\"",
   "brand": "CST",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "16 x 2.125\" · Banda direccional profundo · Negro",
   "price": 45000,
   "sku": "COR-CST-001",
@@ -867,7 +867,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Chaoyang Freestyle Bmx Rin 16 - 2.125\"",
   "brand": "Chaoyang",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "16 x 2.125\" · Banda direccional profundo · Negro",
   "price": 45000,
   "sku": "COR-CHA-002",
@@ -893,7 +893,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Chaoyang Cutting Edge Negra - 2.25\"",
   "brand": "Chaoyang",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.25\" · Banda direccional profundo · Negro",
   "price": 45000,
   "sku": "COR-CHA-001",
@@ -919,7 +919,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Optimus Black Burn Negra - 2.35\"",
   "brand": "Optimus",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.35\" · Banda direccional profundo · Negro",
   "price": 38000,
   "sku": "COR-OPT-001",
@@ -940,7 +940,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Innova Pro Big Slick Cafe - 2.40\"",
   "brand": "Innova",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Cafe",
   "price": 80000,
   "sku": "COR-INN-003",
@@ -961,7 +961,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Innova Pro Negra - 2.40\"",
   "brand": "Innova",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
   "price": 80000,
   "sku": "COR-INN-002",
@@ -982,7 +982,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Mutanty Whipper Roja - 2.40\"",
   "brand": "Mutanty",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Rojo",
   "price": 100000,
   "sku": "COR-MUT-002",
@@ -1002,7 +1002,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Mutanty Whipper Azul - 2.40\"",
   "brand": "Mutanty",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Azul",
   "price": 100000,
   "sku": "COR-MUT-001",
@@ -1022,7 +1022,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Tioga Factory FS100 Negra - 2.10\"",
   "brand": "Tioga",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.10\" · Banda direccional profundo · Negro",
   "price": 80000,
   "sku": "COR-TIO-001",
@@ -1046,7 +1046,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Sunday Current V2 Negro - 2.40\"",
   "brand": "Sunday",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
   "price": 160000,
   "sku": "COR-SUN-002",
@@ -1066,7 +1066,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Shadow Creeper Negra - 2.40\"",
   "brand": "Shadow",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
   "price": 150000,
   "sku": "COR-SHW-001",
@@ -1086,7 +1086,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta S&M Speedball Negra - 2.40\"",
   "brand": "S&M",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
   "price": 160000,
   "sku": "COR-SNM-001",
@@ -1106,7 +1106,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Odyssey Broc Negra - 2.25\" - 2.40\"",
   "brand": "Odyssey",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "",
   "price": 160000,
   "sku": "COR-ODY-001",
@@ -1132,7 +1132,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Subrosa Matt Ray Roja - 2.40\"",
   "brand": "Subrosa",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Banda direccional profundo · Rojo",
   "price": 150000,
   "sku": "COR-SUB-001",
@@ -1483,7 +1483,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Cult Wafflecup Goma - 2.40\"",
   "brand": "Cult",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 180000,
   "sku": "COR-CLT-001",
@@ -1516,7 +1516,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Sunday Street Sweeper V2 Negra - 2.40\"",
   "brand": "Sunday",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 150000,
   "sku": "COR-SUN-001",
@@ -1548,7 +1548,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Federal Neptune - 2.35\"",
   "brand": "Federal",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "",
   "price": 160000,
   "sku": "COR-FED-001",
@@ -1577,7 +1577,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Alinetion Prowler Negra - 2.25\" - 2.40\"",
   "brand": "Alinetion",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Doble compuesto · 2.25\" Keblar negra",
   "price": 160000,
   "sku": "COR-ALI-001",
@@ -1765,7 +1765,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Innova Camufladas - 2.40\"",
   "brand": "Innova",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "Material resistente • Excelente agarre • Rin 20",
   "price": 80000,
   "sku": "COR-INN-001",
@@ -1874,7 +1874,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Llanta Animal GHL Negra - 2.30\"",
   "brand": "Animal",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.35\" · Doble compuesto · Negro",
   "price": 160000,
   "sku": "COR-ANM-001",
@@ -6866,7 +6866,7 @@ window.ESCENA_PRODUCTS = [
   "slug": "coraza_cult_wafflecup_2.40",
   "n": "Coraza Cult Wafflecup Negra - 2.40\"",
   "brand": "Cult",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 180000,
   "sku": "CORAZA_CULT_WAFFLECUP_2.40",
@@ -6892,7 +6892,7 @@ window.ESCENA_PRODUCTS = [
   "slug": "coraza_primo_555_2.45",
   "n": "Llanta Primo 555 - 2.45\"",
   "brand": "Primo",
-  "cat": "corazas",
+  "cat": "llantas",
   "spec": "20 x 2.45\" · Banda direccional profundo · Negro",
   "price": 160000,
   "sku": "CORAZA_PRIMO_555_2.45",
