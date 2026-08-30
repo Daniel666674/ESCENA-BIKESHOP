@@ -1,19 +1,46 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Cadena Federal Escamada Cromada",
+  "n": "Cadena Federal Escamada",
   "brand": "Federal",
   "cat": "cadenas",
   "spec": "",
   "price": 110000,
   "sku": "CAD-FED-001",
-  "units": 2,
+  "units": 4,
   "slug": "cadena-federal-escamada-cromada",
   "order": 20,
   "imgs": [
    "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848",
    "assets/img/products/cadena-federal-escamada-cromada-mtg3xoo2kmnz.jpg?v=1788112369041",
-   "assets/img/products/cadena-federal-escamada-cromada-mtg3xq4xqhxt.jpg?v=1788112370442"
+   "assets/img/products/cadena-federal-escamada-cromada-mtg3xq4xqhxt.jpg?v=1788112370442",
+   "assets/img/products/cadena-federal-escamada-cromada-mtgdu50yy1d4.jpg?v=1788129001056",
+   "assets/img/products/cadena-federal-escamada-cromada-mtgdu7hcw294.jpg?v=1788129003259",
+   "assets/img/products/cadena-federal-escamada-cromada-mtgdu96j0x4d.jpg?v=1788129005349"
   ],
+  "colors": [
+   {
+    "label": "CROMADO",
+    "units": 2,
+    "price": 110000
+   },
+   {
+    "label": "NEGRA",
+    "units": 2,
+    "price": 110000
+   }
+  ],
+  "imgColorMap": {
+   "CROMADO": [
+    0,
+    1,
+    2
+   ],
+   "NEGRA": [
+    3,
+    4,
+    5
+   ]
+  },
   "img": "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848"
  },
  {
