@@ -73,7 +73,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-tall-order-cromada-510-mtg1gekyqnyo.jpg?v=1788108203434",
    "assets/img/products/cadena-tall-order-cromada-510-mtg1gctei92f.jpg?v=1788108201682",
    "assets/img/products/cadena-tall-order-cromada-510-mtg1gfxmz0pn.jpg?v=1788108205196",
-   "assets/img/products/cadena-tall-order-cromada-510-mtgedavpm4dm.jpg?v=1788129893996",
+   "assets/img/products/cadena-tall-order-cromada-510-mtgfoblye6xv.jpg?v=1788132088627",
    "assets/img/products/cadena-tall-order-cromada-510-mtgedch8t0du.jpg?v=1788129895973"
   ],
   "slug": "cadena-tall-order-cromada-510",
