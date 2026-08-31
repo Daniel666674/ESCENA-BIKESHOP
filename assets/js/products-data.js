@@ -23,7 +23,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/escena-logo.jpg"
  },
  {
-  "n": "Cadena KMC 410 Negra",
+  "n": "Cadena KMC 410",
   "brand": "KMC",
   "cat": "cadenas",
   "spec": "",
