@@ -4645,5 +4645,15 @@ window.ESCENA_AUDIT = [
    "cadena-kmc-410-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-31T01:50:13.713Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cadena-chain-economica-410"
+  ],
+  "deleted": []
  }
 ];
