@@ -4655,5 +4655,20 @@ window.ESCENA_AUDIT = [
    "cadena-chain-economica-410"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-31T05:04:27.172Z",
+  "actor": "daniel.f.acosta96@gmail.com",
+  "summary": "4 productos editados, 1 producto eliminado",
+  "created": [],
+  "edited": [
+   "eslabones-cadena-sueltos",
+   "frente-integrado-demolition-v2",
+   "manzana-delantera-ontrail-nemesis",
+   "grips-odi-xl"
+  ],
+  "deleted": [
+   "brainstorm-freecoaster-kit-03"
+  ]
  }
 ];
