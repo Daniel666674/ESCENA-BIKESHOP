@@ -30,6 +30,16 @@ window.ESCENA_PRODUCTS = [
   "price": 26000,
   "sku": "CAD-KMC-003",
   "units": 8,
+  "imgs": [
+   "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697",
+   "assets/img/products/cadena-kmc-410-negra-mtgkct6x6085.jpg?v=1788139948643",
+   "assets/img/products/cadena-kmc-410-negra-mtgkcuoz3zrd.jpg?v=1788139950171",
+   "assets/img/products/cadena-kmc-410-negra-mtgkcvvf39c6.jpg?v=1788139952259",
+   "assets/img/products/cadena-kmc-410-negra-mtgkcxhfyoeb.jpg?v=1788139954776",
+   "assets/img/products/cadena-kmc-410-negra-mtgkczfcanqm.jpg?v=1788139956420",
+   "assets/img/products/cadena-kmc-410-negra-mtgkd0p0iitw.jpg?v=1788139958685",
+   "assets/img/products/cadena-kmc-410-negra-mtgkd2fxr9gu.jpg?v=1788139961078"
+  ],
   "slug": "cadena-kmc-410-negra",
   "colors": [
    {
@@ -53,7 +63,25 @@ window.ESCENA_PRODUCTS = [
     "price": 26000
    }
   ],
-  "img": "assets/img/escena-logo.jpg"
+  "imgColorMap": {
+   "CROMADA": [
+    0,
+    1
+   ],
+   "NEGRA": [
+    2,
+    3
+   ],
+   "ROJA": [
+    4,
+    5
+   ],
+   "AZUL": [
+    6,
+    7
+   ]
+  },
+  "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
  {
   "n": "Cadena KMC Narrow cromada",
