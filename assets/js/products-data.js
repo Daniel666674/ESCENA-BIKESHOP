@@ -63,8 +63,12 @@ window.ESCENA_PRODUCTS = [
   "price": 75000,
   "sku": "CAD-KMC-002",
   "units": 2,
+  "imgs": [
+   "assets/img/products/cadena-kmc-narrow-cromada-mtgize250wp3.jpg?v=1788137643076",
+   "assets/img/products/cadena-kmc-narrow-cromada-mtgizfpgy0co.jpg?v=1788137644674"
+  ],
   "slug": "cadena-kmc-narrow-cromada",
-  "img": "assets/img/escena-logo.jpg"
+  "img": "assets/img/products/cadena-kmc-narrow-cromada-mtgize250wp3.jpg?v=1788137643076"
  },
  {
   "n": "Cadena KMC K1 Wide perforada cromada",
@@ -74,8 +78,12 @@ window.ESCENA_PRODUCTS = [
   "price": 80000,
   "sku": "CAD-KMC-001",
   "units": 2,
+  "imgs": [
+   "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizgxueqrd.jpg?v=1788137646277",
+   "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizi6ds84m.jpg?v=1788137647839"
+  ],
   "slug": "cadena-kmc-k1-wide-perforada-cromada",
-  "img": "assets/img/escena-logo.jpg"
+  "img": "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizgxueqrd.jpg?v=1788137646277"
  },
  {
   "n": "Cadena Federal Escamada",
@@ -132,8 +140,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAD-CLT-001",
   "units": 6,
   "imgs": [
-   "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286",
-   "assets/img/products/cadena-cult-escamada-cromada-mtggapq6zx3b.jpg?v=1788133133688"
+   "assets/img/products/cadena-cult-escamada-cromada-mtgizjdrr5lb.jpg?v=1788137649476",
+   "assets/img/products/cadena-cult-escamada-cromada-mtgizkn88ont.jpg?v=1788137651118",
+   "assets/img/products/cadena-cult-escamada-cromada-mtgizlwvobs1.jpg?v=1788137652726",
+   "assets/img/products/cadena-cult-escamada-cromada-mtgizn5is4fk.jpg?v=1788137654700",
+   "assets/img/products/cadena-cult-escamada-cromada-mtgizoodol0v.jpg?v=1788137656394",
+   "assets/img/products/cadena-cult-escamada-cromada-mtgizpzf4nw9.jpg?v=1788137658206",
+   "assets/img/products/cadena-cult-escamada-cromada-mtgizrdq0e28.jpg?v=1788137659958"
   ],
   "slug": "cadena-cult-escamada-cromada",
   "order": 0,
@@ -154,7 +167,22 @@ window.ESCENA_PRODUCTS = [
     "price": 130000
    }
   ],
-  "img": "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286"
+  "imgColorMap": {
+   "CROMADA": [
+    0,
+    1,
+    2
+   ],
+   "DORADA": [
+    3,
+    4
+   ],
+   "NEGRO": [
+    5,
+    6
+   ]
+  },
+  "img": "assets/img/products/cadena-cult-escamada-cromada-mtgizjdrr5lb.jpg?v=1788137649476"
  },
  {
   "n": "CADENA TALL ORDER  510",
