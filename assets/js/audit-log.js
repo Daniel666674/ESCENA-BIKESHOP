@@ -4625,5 +4625,15 @@ window.ESCENA_AUDIT = [
    "cadena-kmc-narrow-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-08-31T01:11:16.813Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cadena-kmc-410-negra"
+  ],
+  "deleted": []
  }
 ];
