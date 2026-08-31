@@ -1,5 +1,83 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena Chain Economica 410",
+  "brand": "CHAIN",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 13000,
+  "sku": "CAD-CHA-001",
+  "units": 4,
+  "colors": [
+   {
+    "label": "CROMADA",
+    "units": 2,
+    "price": 13000
+   },
+   {
+    "label": "NEGRA",
+    "units": 2,
+    "price": 13000
+   }
+  ],
+  "slug": "cadena-chain-economica-410",
+  "img": "assets/img/escena-logo.jpg"
+ },
+ {
+  "n": "Cadena KMC 410 Negra",
+  "brand": "KMC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 26000,
+  "sku": "CAD-KMC-003",
+  "units": 8,
+  "slug": "cadena-kmc-410-negra",
+  "colors": [
+   {
+    "label": "NEGRA",
+    "units": 2,
+    "price": 26000
+   },
+   {
+    "label": "CROMADA",
+    "units": 2,
+    "price": 26000
+   },
+   {
+    "label": "ROJA",
+    "units": 2,
+    "price": 26000
+   },
+   {
+    "label": "AZUL",
+    "units": 2,
+    "price": 26000
+   }
+  ],
+  "img": "assets/img/escena-logo.jpg"
+ },
+ {
+  "n": "Cadena KMC Narrow cromada",
+  "brand": "KMC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 75000,
+  "sku": "CAD-KMC-002",
+  "units": 2,
+  "slug": "cadena-kmc-narrow-cromada",
+  "img": "assets/img/escena-logo.jpg"
+ },
+ {
+  "n": "Cadena KMC K1 Wide perforada cromada",
+  "brand": "KMC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 80000,
+  "sku": "CAD-KMC-001",
+  "units": 2,
+  "slug": "cadena-kmc-k1-wide-perforada-cromada",
+  "img": "assets/img/escena-logo.jpg"
+ },
+ {
   "n": "Cadena Federal Escamada",
   "brand": "Federal",
   "cat": "cadenas",
@@ -46,19 +124,36 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848"
  },
  {
-  "n": "Cadena Cult Escamada Cromada",
+  "n": "Cadena Cult Escamada",
   "brand": "Cult",
   "cat": "cadenas",
   "spec": "",
   "price": 130000,
   "sku": "CAD-CLT-001",
-  "units": 2,
+  "units": 6,
   "imgs": [
    "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286",
    "assets/img/products/cadena-cult-escamada-cromada-mtggapq6zx3b.jpg?v=1788133133688"
   ],
   "slug": "cadena-cult-escamada-cromada",
   "order": 0,
+  "colors": [
+   {
+    "label": "CROMADA",
+    "units": 2,
+    "price": 130000
+   },
+   {
+    "label": "DORADA",
+    "units": 2,
+    "price": 130000
+   },
+   {
+    "label": "NEGRO",
+    "units": 2,
+    "price": 130000
+   }
+  ],
   "img": "assets/img/products/cadena-cult-escamada-cromada-mtg29pqx3hk1.jpg?v=1788109571286"
  },
  {
