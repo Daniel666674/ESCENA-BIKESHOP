@@ -1459,7 +1459,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Manzana Delantera Ontrail Nemesis",
   "brand": "Ontrail",
-  "cat": "piezas",
+  "cat": "manzana-delantera",
   "spec": "Delantera • Doble sellado • 36 Huecos",
   "price": 30000,
   "sku": "PZA-ONT-001",
@@ -1715,7 +1715,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Grips ODI XL",
   "brand": "ODI",
-  "cat": "piezas",
+  "cat": "punos",
   "spec": "Goma · Extralargo Xl 230mm · diseño mushroom",
   "price": 70000,
   "sku": "PZA-ODI-001",
@@ -2407,7 +2407,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Frente Integrado Demolition V2",
   "brand": "Demolition",
-  "cat": "piezas",
+  "cat": "caja-frente",
   "spec": "Integrada · Rodamientos sellados · Aluminio ·  Peso 2.6 onzas",
   "price": 125000,
   "sku": "PZA-DMO-001",
@@ -6750,18 +6750,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/brainstorm-freecoaster-kit-02.jpg?v=1788093948129"
  },
  {
-  "slug": "brainstorm-freecoaster-kit-03",
-  "n": "Kit Freecoaster Brainstorm III",
-  "brand": "Brainstorm",
-  "cat": "piezas",
-  "spec": "Kit de conversión freecoaster · Negro",
-  "price": 220000,
-  "sku": "BRAINSTORM-FREECOASTER-KIT-03",
-  "units": 12,
-  "order": 970,
-  "img": "assets/img/products/brainstorm-freecoaster-kit-03.jpg?v=1788093948129"
- },
- {
   "slug": "brainstorm-freecoaster-kit-04",
   "n": "Kit Freecoaster Brainstorm Par",
   "brand": "Brainstorm",
@@ -6775,7 +6763,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "eslabones-cadena-sueltos",
-  "n": "Eslabones de Cadena Sueltos",
+  "n": "Trinquetes para casette V1",
   "brand": "",
   "cat": "piezas",
   "spec": "Media caña · Acero negro",
