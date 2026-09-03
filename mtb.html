@@ -163,7 +163,6 @@
     @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
     @media (max-width: 480px) {
       .grid { gap: .9rem; }
-      .card .ph { height: 195px; }
       .card h3 { font-size: .88rem; }
       .card .price { font-size: .88rem; }
     }
@@ -206,7 +205,7 @@
        shoppers go to the product page (or WhatsApp) to actually order. */
     .card { background: transparent; display: flex; flex-direction: column; text-align: center; }
     .card .ph-link { display: block; }
-    .card .ph { position: relative; height: 300px; background: transparent; }
+    .card .ph { position: relative; aspect-ratio: 1 / 1; background: transparent; }
     .card .ph img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; transition: transform .25s; transform: scale(var(--img-zoom, 1)); }
     .card:hover .ph img { transform: scale(calc(var(--img-zoom, 1) * 1.03)); }
     .card.is-agotado .ph img { opacity: .45; }
