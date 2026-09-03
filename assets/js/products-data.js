@@ -5897,13 +5897,13 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/shadow-buje-delantero-negro-mt4mrauxsxrr.jpg?v=1788093948129"
  },
  {
-  "slug": "kit-eje-espaciadores-plata",
+  "slug": "bielas-fitbikeco-blunt-cromada",
   "n": "Bielas Fitbikeco Blunt Cromada",
   "brand": "Fitbikeco",
   "cat": "bielas",
-  "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Cromoly · Plata",
+  "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Cromoly · Cromado",
   "price": 930000,
-  "sku": "KIT-EJE-ESPACIADORES-PLATA",
+  "sku": "BIE-FIT-002",
   "units": 2,
   "sizes": [
    {
@@ -5912,8 +5912,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 20,
-  "imgFit": "cover",
-  "img": "assets/img/products/kit-eje-espaciadores-plata.jpg?v=1788093948129"
+  "img": "assets/img/products/bielas-fitbikeco-blunt-negra.jpg?v=1788000000001"
  },
  {
   "slug": "colony-bielas-negro",
