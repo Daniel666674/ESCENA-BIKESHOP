@@ -433,7 +433,6 @@ window.ESCENA_PRODUCTS = [
   "price": 150000,
   "sku": "STK-KOS-001",
   "units": 3,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "5.2",
@@ -519,7 +518,6 @@ window.ESCENA_PRODUCTS = [
   "price": 170000,
   "sku": "PED-ODY-002",
   "units": 4,
-  "imgFit": "cover",
   "slug": "pedales-odyssey-grandstand-v2-aluminio-negro",
   "order": 0,
   "img": "assets/img/products/pedales-odyssey-grandstand-v2-aluminio-negro-mtc46glkgm27.jpg?v=1788093948129"
@@ -576,7 +574,6 @@ window.ESCENA_PRODUCTS = [
   "price": 35000,
   "sku": "PLT-GWB-001",
   "units": 10,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "25T",
@@ -774,7 +771,6 @@ window.ESCENA_PRODUCTS = [
   "price": 155000,
   "sku": "PLT-TRU-001",
   "units": 3,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "25T",
@@ -899,7 +895,6 @@ window.ESCENA_PRODUCTS = [
   "price": 160000,
   "sku": "SKT-TRU-001",
   "units": 2,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "8.38",
@@ -1022,7 +1017,6 @@ window.ESCENA_PRODUCTS = [
   "price": 150000,
   "sku": "COR-CIN-001",
   "units": 2,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "20x2.50\"",
@@ -1043,7 +1037,6 @@ window.ESCENA_PRODUCTS = [
   "price": 90000,
   "sku": "COR-THE-001",
   "units": 2,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "20x2.40\"",
@@ -1064,7 +1057,6 @@ window.ESCENA_PRODUCTS = [
   "price": 220000,
   "sku": "COR-ODY-003",
   "units": 0,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "20x2.40\"",
@@ -1105,7 +1097,6 @@ window.ESCENA_PRODUCTS = [
   "price": 45000,
   "sku": "COR-CST-001",
   "units": 1,
-  "imgFit": "cover",
   "imgPos": "50% 0%",
   "sizes": [
    {
@@ -1127,7 +1118,6 @@ window.ESCENA_PRODUCTS = [
   "price": 45000,
   "sku": "COR-CHA-002",
   "units": 2,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/llanta-chaoyang-freestyle-bmx-rin-16-2-125-mt9a872hdwt4.jpg?v=1788093948129",
    "assets/img/products/llanta-chaoyang-freestyle-bmx-rin-16-2-125-mt9a88bkuy4q.jpg?v=1788093948129",
@@ -1153,7 +1143,6 @@ window.ESCENA_PRODUCTS = [
   "price": 45000,
   "sku": "COR-CHA-001",
   "units": 2,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/llanta-chaoyang-cutting-edge-negra-2-25-mt98dnsnam9b.jpg?v=1788093948129",
    "assets/img/products/llanta-chaoyang-cutting-edge-negra-2-25-mt98dpq0kn1j.jpg?v=1788093948129",
@@ -1179,7 +1168,6 @@ window.ESCENA_PRODUCTS = [
   "price": 38000,
   "sku": "COR-OPT-001",
   "units": 1,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "20x2.35\"",
@@ -1200,7 +1188,6 @@ window.ESCENA_PRODUCTS = [
   "price": 80000,
   "sku": "COR-INN-003",
   "units": 2,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "20x2.40\"",
@@ -1221,7 +1208,6 @@ window.ESCENA_PRODUCTS = [
   "price": 80000,
   "sku": "COR-INN-002",
   "units": 10,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "20x2.40\"",
@@ -1412,7 +1398,6 @@ window.ESCENA_PRODUCTS = [
   "price": 500000,
   "sku": "MZD-PRO-001",
   "units": 1,
-  "imgFit": "cover",
   "slug": "manzana-delantera-profile-mini-azul",
   "order": 0,
   "img": "assets/img/products/manzana-delantera-profile-mini-azul-mt94gsx1gfyy.jpg?v=1788093948129"
@@ -1425,7 +1410,6 @@ window.ESCENA_PRODUCTS = [
   "price": 30000,
   "sku": "MZD-ONT-001",
   "units": 2,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt944793fgxt.jpg?v=1788093948129",
    "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt9448lutrmz.jpg?v=1788093948129"
@@ -1479,7 +1463,6 @@ window.ESCENA_PRODUCTS = [
   "price": 300000,
   "sku": "MZD-ALI-002",
   "units": 2,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/manzana-delantera-alienation-venus-mt93j3fo43r2.jpg?v=1788093948129",
    "assets/img/products/manzana-delantera-alienation-venus-mt93j518pdte.jpg?v=1788093948129"
@@ -1497,7 +1480,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-PRM-002",
   "units": 1,
   "slug": "manzana-delantera-primo-balance",
-  "imgFit": "cover",
   "order": 80,
   "img": "assets/img/products/manzana-delantera-primo-balance-mt93b5l7in31.jpg?v=1788093948129"
  },
@@ -1536,7 +1518,6 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "imgFit": "cover",
   "order": 90,
   "img": "assets/img/products/manzana-delantera-stranger-ballast-mt938rrdl4mp.jpg?v=1788093948129"
  },
@@ -1548,7 +1529,6 @@ window.ESCENA_PRODUCTS = [
   "price": 280000,
   "sku": "MZD-ALI-001",
   "units": 2,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/manzana-delantera-alienation-illunimati-mt91423bar53.jpg?v=1788093948129",
    "assets/img/products/manzana-delantera-alienation-illunimati-mt9143n6svn8.jpg?v=1788093948129"
@@ -1647,7 +1627,6 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "CJF-TOT-001",
   "units": 1,
-  "imgFit": "cover",
   "slug": "cajas-de-frente-totalbmx-negra",
   "order": 60,
   "img": "assets/img/products/cajas-de-frente-totalbmx-negra-mt8xji9htrq1.jpg?v=1788093948129"
@@ -1671,7 +1650,6 @@ window.ESCENA_PRODUCTS = [
   "price": 10000,
   "sku": "GRP-GWB-001",
   "units": 10,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/grips-gw-gorila-mt8x6eqen1z8.jpg?v=1788093948129",
    "assets/img/products/grips-gw-gorila-mt8x6gclllpt.jpg?v=1788093948129",
@@ -1720,7 +1698,6 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "PZA-ODI-001",
   "units": 3,
-  "imgFit": "cover",
   "slug": "grips-odi-xl",
   "img": "assets/img/products/grips-odi-xl-mt8wrpbylgui.jpg?v=1788093948129"
  },
@@ -1808,7 +1785,6 @@ window.ESCENA_PRODUCTS = [
   "price": 160000,
   "sku": "COR-FED-001",
   "units": 2,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "20x2.35\"",
@@ -1886,7 +1862,6 @@ window.ESCENA_PRODUCTS = [
   "price": 35000,
   "sku": "SKB-HIG-001",
   "units": 2,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/rodamientos-hightime-mt4o5gluvce1.jpg?v=1788093948129",
    "assets/img/products/rodamientos-hightime-mt4nfq4mdv0i.jpg?v=1788093948129"
@@ -1960,7 +1935,6 @@ window.ESCENA_PRODUCTS = [
     3
    ]
   },
-  "imgFit": "cover",
   "order": 100,
   "img": "assets/img/products/manzana-optimus-gold-mt4mqe06ty10.jpg?v=1788093948129"
  },
@@ -1972,7 +1946,6 @@ window.ESCENA_PRODUCTS = [
   "price": 320000,
   "sku": "MZD-PRM-001",
   "units": 1,
-  "imgFit": "cover",
   "slug": "manzana-primo-n4fl",
   "order": 40,
   "img": "assets/img/products/manzana-primo-n4fl-mt91bhy75izw.jpg?v=1788093948129"
@@ -1985,7 +1958,6 @@ window.ESCENA_PRODUCTS = [
   "price": 300000,
   "sku": "MZD-FED-001",
   "units": 2,
-  "imgFit": "cover",
   "imgPos": "50% 50%",
   "slug": "manzana-federal-motion",
   "imgs": [
@@ -2100,7 +2072,6 @@ window.ESCENA_PRODUCTS = [
     5
    ]
   },
-  "imgFit": "cover",
   "order": 160,
   "img": "assets/img/products/llanta-innova-camufladas.jpg?v=1788093948129"
  },
@@ -2134,7 +2105,6 @@ window.ESCENA_PRODUCTS = [
   "price": 160000,
   "sku": "COR-ANM-001",
   "units": 2,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/llanta-animal-ghl-mt4o3k7xeysz.jpg?v=1788093948129",
    "assets/img/products/llanta-animal-ghl-2.jpg?v=1788093948129"
@@ -2168,7 +2138,6 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "CJF-GWB-001",
   "units": 15,
-  "imgFit": "cover",
   "colors": [
    {
     "label": "Negro",
@@ -2187,7 +2156,6 @@ window.ESCENA_PRODUCTS = [
   "price": 140000,
   "sku": "CJF-FND-001",
   "units": 4,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/cajas-de-frente-fiend-stack.jpg?v=1788093948129",
    "assets/img/products/cajas-de-frente-fiend-stack-2.jpg?v=1788093948129"
@@ -2222,7 +2190,6 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "CJF-RNT-001",
   "units": 3,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/cajas-de-frente-rant-ur.jpg?v=1788093948129",
    "assets/img/products/cajas-de-frente-rant-ur-2.jpg?v=1788093948129"
@@ -2257,7 +2224,6 @@ window.ESCENA_PRODUCTS = [
   "price": 330000,
   "sku": "MZD-CLT-001",
   "units": 1,
-  "imgFit": "cover",
   "slug": "manzana-cult-crew-negra",
   "imgs": [
    "assets/img/products/manzana-cult-crew-negra-mt8ymah0vy61.jpg?v=1788093948129",
@@ -2296,7 +2262,6 @@ window.ESCENA_PRODUCTS = [
   "price": 200000,
   "sku": "SIL-CLT-001",
   "units": 0,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1788093948129",
@@ -2315,7 +2280,6 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "CJF-BSD-001",
   "units": 1,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/cajas-de-frente-bsd-highriser.jpg?v=1788093948129",
    "assets/img/products/cajas-de-frente-bsd-highriser-2.jpg?v=1788093948129"
@@ -2350,7 +2314,6 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "CJF-TRU-001",
   "units": 15,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/cajas-de-frente-trueno-v2.jpg?v=1788093948129",
    "assets/img/products/cajas-de-frente-trueno-v2-2.jpg?v=1788093948129",
@@ -2393,7 +2356,6 @@ window.ESCENA_PRODUCTS = [
   "price": 125000,
   "sku": "CJF-DMO-001",
   "units": 1,
-  "imgFit": "cover",
   "colors": [
    {
     "label": "Negro",
@@ -2412,7 +2374,6 @@ window.ESCENA_PRODUCTS = [
   "price": 125000,
   "sku": "PZA-DMO-001",
   "units": 1,
-  "imgFit": "cover",
   "colors": [
    {
     "label": "Negro",
@@ -2430,7 +2391,6 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "CJF-CLT-001",
   "units": 4,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/cajas-de-frente-cult-match-v2.jpg?v=1788093948129",
    "assets/img/products/cajas-de-frente-cult-match-v2-2.jpg?v=1788093948129",
@@ -2454,7 +2414,6 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "CJF-CLN-001",
   "units": 2,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/cajas-integradas-tall-seat-colony.jpg?v=1788093948129",
    "assets/img/products/cajas-integradas-tall-seat-colony-2.jpg?v=1788093948129",
@@ -2497,7 +2456,6 @@ window.ESCENA_PRODUCTS = [
   "price": 140000,
   "sku": "CJF-ODY-001",
   "units": 5,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/cajas-integrado-odyssey.jpg?v=1788093948129",
    "assets/img/products/cajas-integrado-odyssey-2.jpg?v=1788093948129",
@@ -2548,7 +2506,6 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "GRP-ANM-001",
   "units": 1,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/grips-animal-edwin-v2.jpg?v=1788093948129",
    "assets/img/products/grips-animal-edwin-v2-2.jpg?v=1788093948129",
@@ -2590,7 +2547,6 @@ window.ESCENA_PRODUCTS = [
   "price": 45000,
   "sku": "GRP-SUB-001",
   "units": 2,
-  "imgFit": "cover",
   "slug": "grips-subrosa-flangeless-dcr",
   "img": "assets/img/products/grips-subrosa-flangeless-dcr.jpg?v=1788093948129"
  },
@@ -2602,7 +2558,6 @@ window.ESCENA_PRODUCTS = [
   "price": 20000,
   "sku": "GRP-ONT-001",
   "units": 85,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/grips-ontrail-yeti.jpg?v=1788093948129",
    "assets/img/products/grips-ontrail-yeti-2.jpg?v=1788093948129",
@@ -2738,7 +2693,6 @@ window.ESCENA_PRODUCTS = [
   "price": 45000,
   "sku": "GRP-STR-001",
   "units": 3,
-  "imgFit": "cover",
   "slug": "grips-stranger-piston",
   "img": "assets/img/products/grips-stranger-piston.jpg?v=1788093948129"
  },
@@ -2750,7 +2704,6 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "GRP-SNM-002",
   "units": 6,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/grips-s-m-passero.jpg?v=1788093948129",
    "assets/img/products/grips-s-m-passero.jpg?v=1788093948129",
@@ -2895,7 +2848,6 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "GRP-PRM-001",
   "units": 11,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/grips-primo-cali.jpg?v=1788093948129",
    "assets/img/products/grips-primo-cali-2.jpg?v=1788093948129",
@@ -3012,7 +2964,6 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "bielas-cult-hawk-cromada",
   "order": 10,
-  "imgFit": "cover",
   "img": "assets/img/products/bielas-cult-hawk-cromada.jpg?v=1788093948129"
  },
  {
@@ -3048,7 +2999,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tenedor-colony-sweet-thoot",
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "Única",
@@ -3112,7 +3062,6 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "Única",
@@ -3256,7 +3205,6 @@ window.ESCENA_PRODUCTS = [
   "price": 460000,
   "sku": "TMN-FND-001",
   "units": 2,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/timon-fiend-reynolds.jpg?v=1788093948129",
    "assets/img/products/timon-fiend-reynolds-2.jpg?v=1788093948129"
@@ -3325,7 +3273,6 @@ window.ESCENA_PRODUCTS = [
   "price": 370000,
   "sku": "MRC-PRO-001",
   "units": 0,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "20”",
@@ -3375,7 +3322,6 @@ window.ESCENA_PRODUCTS = [
   "price": 1700000,
   "sku": "MRC-CLN-001",
   "units": 1,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/marco-colony-prisma-negro.jpg?v=1788093948129",
    "assets/img/products/marco-colony-prisma-negro-2.jpg?v=1788093948129",
@@ -3413,7 +3359,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-gw-gorila-4pc-negro",
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1788093948129",
    "assets/img/products/timon-gw-gorila-4pc-negro.jpg?v=1788093948129"
@@ -3454,7 +3399,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-gw-destructor-tornasol",
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1788093948129",
    "assets/img/products/timon-gw-destructor-tornasol-2.jpg?v=1788093948129",
@@ -3988,7 +3932,6 @@ window.ESCENA_PRODUCTS = [
   "price": 350000,
   "sku": "CAS-PRO-002",
   "units": 6,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/casco-protec-full-cut-blanco.jpg?v=1788093948129",
    "assets/img/products/casco-protec-full-cut-blanco-2.jpg?v=1788093948129",
@@ -4229,7 +4172,6 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "TOB-R2P-001",
   "units": 1,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "Talla Unica",
@@ -4534,7 +4476,6 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "imgFit": "cover",
   "order": 180,
   "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-mt4i40vfbkvz.jpg?v=1788093948129"
  },
@@ -4587,7 +4528,6 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "imgFit": "cover",
   "order": 640,
   "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1788093948129"
  },
@@ -4630,7 +4570,6 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1788093948129",
    "assets/img/products/tenedor-gw-destructor-tornasol-2.jpg?v=1788093948129",
@@ -4704,7 +4643,6 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "order": 80,
-  "imgFit": "cover",
   "img": "assets/img/products/grips-dailygrind.jpg?v=1788093948129"
  },
  {
@@ -4727,7 +4665,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 40,
-  "imgFit": "cover",
   "imgZoom": 118,
   "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1788093948129"
  },
@@ -4789,7 +4726,6 @@ window.ESCENA_PRODUCTS = [
     5
    ]
   },
-  "imgFit": "cover",
   "img": "assets/img/products/silla-pivotal-eighties-zebra.jpg?v=1788093948129"
  },
  {
@@ -4897,7 +4833,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-3.jpg?v=1788093948129"
   ],
   "order": 0,
-  "imgFit": "cover",
   "img": "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1788093948129"
  },
  {
@@ -4985,7 +4920,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "SIL-FAT-001",
   "units": 2,
   "order": 50,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/silla-pivotal-fate-negra.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1788093948129",
@@ -5007,7 +4941,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fiend-reynolds-negra-2.jpg?v=1788093948129"
   ],
   "order": 10,
-  "imgFit": "cover",
   "img": "assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1788093948129"
  },
  {
@@ -5036,7 +4969,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 20,
-  "imgFit": "cover",
   "imgColorMap": {
    "Blanco": [
     0,
@@ -5080,7 +5012,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 180,
-  "imgFit": "cover",
   "img": "assets/img/products/plato-odyssey-big-boyd-28t-mtc2bvlpcms9.jpg?v=1788093948129"
  },
  {
@@ -5140,7 +5071,6 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "imgFit": "cover",
   "order": 700,
   "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1788093948129"
  },
@@ -5225,7 +5155,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 710,
-  "imgFit": "cover",
   "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1788093948129"
  },
  {
@@ -5293,7 +5222,6 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "imgFit": "cover",
   "order": 350,
   "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1788093948129"
  },
@@ -5458,7 +5386,6 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "imgFit": "cover",
   "order": 590,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1788093948129"
  },
@@ -5675,7 +5602,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cult-bielas-negro.jpg?v=1788093948129",
    "assets/img/products/cult-bielas-negro-2.jpg?v=1788093948129"
   ],
-  "imgFit": "cover",
   "img": "assets/img/products/cult-bielas-negro.jpg?v=1788093948129"
  },
  {
@@ -5700,7 +5626,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "CULT-SILLIN-CUADROS",
   "units": 1,
   "order": 100,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/cult-sillin-cuadros.jpg?v=1788093948129",
    "assets/img/products/cult-sillin-cuadros.jpg?v=1788093948129",
@@ -5748,7 +5673,6 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "order": 330,
-  "imgFit": "cover",
   "sizes": [
    {
     "label": "Única",
@@ -5881,7 +5805,6 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "imgFit": "cover",
   "img": "assets/img/products/buje-delantero-negro-mt8yzu3vri8s.jpg?v=1788093948129"
  },
  {
@@ -6094,7 +6017,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "ODYSSEY-SILLIN-FLORAL",
   "units": 1,
   "order": 40,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/odyssey-sillin-floral.jpg?v=1788093948129",
    "assets/img/products/odyssey-sillin-floral-2.jpg?v=1788093948129",
@@ -6231,7 +6153,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 0,
-  "imgFit": "cover",
   "imgs": [
    "assets/img/products/odyssey-pinon-28t-negro-mtbyv9ghr3ke.jpg?v=1788093948129",
    "assets/img/products/odyssey-pinon-28t-negro-2.jpg?v=1788093948129"
@@ -6259,7 +6180,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/fiend-pinon-25t-negro.jpg?v=1788093948129",
    "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1788093948129"
   ],
-  "imgFit": "cover",
   "imgZoom": 128,
   "img": "assets/img/products/fiend-pinon-25t-negro.jpg?v=1788093948129"
  },
@@ -6955,7 +6875,6 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "imgFit": "cover",
   "imgColorMap": {
    "Azul / Industrial": [
     0,
@@ -7190,7 +7109,6 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "imgFit": "cover",
   "imgColorMap": {
    "Cromado": [
     0
@@ -7222,7 +7140,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/manubrio-cromoly-negro-01-2.jpg?v=1788093948129",
    "assets/img/products/manubrio-cromoly-negro-01-3.jpg?v=1788093948129"
   ],
-  "imgFit": "cover",
   "colors": [
    {
     "label": "Negro",
@@ -7266,7 +7183,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/manubrio-cromoly-negro-02-3.jpg?v=1788093948129",
    "assets/img/products/manubrio-cromoly-negro-02-4.jpg?v=1788093948129"
   ],
-  "imgFit": "cover",
   "colors": [
    {
     "label": "Negro",
@@ -7314,7 +7230,6 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "imgFit": "cover",
   "order": 50,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1788093948129"
  },

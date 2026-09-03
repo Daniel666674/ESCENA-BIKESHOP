@@ -2675,7 +2675,7 @@
       TAG_SPAN: p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '',
       SPEC_ITEMS: specItems(p.spec, catLabel, p.brand), WA_HREF: waHrefFor(p), RELATED_SECTION: relatedFor(p),
       PRIMARY_IMG: esc("../" + ((p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg")),
-      IMG_FIT: (p.imgFit || "auto"),
+      IMG_FIT: "auto",
       GALLERY_JSON: gallery.json, GALLERY_DOTS: gallery.dots, GALLERY_THUMBS: gallery.thumbs,
       NAME_JSON: jsonEsc(p.n), BRAND_JSON: jsonEsc(p.brand || ""), SPEC_JSON: jsonEsc(p.spec || ""),
       CAT_LABEL_JSON: jsonEsc(catLabel), SKU_JSON: jsonEsc(sku),
