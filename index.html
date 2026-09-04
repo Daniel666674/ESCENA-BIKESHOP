@@ -678,6 +678,7 @@
       @media (max-width: 720px) { .video-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; } }
       @media (max-width: 440px) { .video-grid { grid-template-columns: 1fr; } }
       .video-card {
+        display: block;
         position: relative;
         aspect-ratio: 3 / 4;
         background: #fff;
@@ -685,6 +686,8 @@
         border-radius: 12px;
         overflow: hidden;
         cursor: pointer;
+        text-decoration: none;
+        color: inherit;
         transition: transform .15s, box-shadow .2s;
       }
       .video-card:hover {
@@ -773,41 +776,24 @@
         cursor: pointer;
         font-family: inherit;
       }
-      .video-card.loaded {
-        aspect-ratio: 9 / 16;
-        cursor: default;
-      }
-      .video-card.loaded .play-button,
-      .video-card.loaded .video-label,
-      .video-card.loaded .video-cover,
-      .video-card.loaded .video-thumbnail::before {
-        display: none;
-      }
-      .video-card.loaded .video-thumbnail {
-        background: #000;
-      }
-      .video-thumbnail iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-      .video-thumbnail blockquote {
-        width: 100%;
-      }
-      .video-thumbnail .video-fallback-link {
+      .video-card .external-hint {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 3;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, .5);
+        color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100%;
-        color: #fff;
-        text-decoration: underline;
-        padding: 1rem;
-        text-align: center;
-        font-size: .85rem;
+        font-size: .8rem;
+        backdrop-filter: blur(8px);
       }
     </style>
     <script src="assets/js/video-embeds.js?v=1788600000000"></script>
-    <script async src="https://www.instagram.com/embed.js"></script>
     <script>
       function initVideoGrid() {
         if (!window.VIDEO_EMBEDS) {
@@ -822,55 +808,19 @@
         );
         var VISIBLE_COUNT = 6;
 
-        // TikTok: skip their embed.js widget entirely. Its blockquote+script
-        // approach turned out unreliable in practice (confirmed live, not
-        // just in this sandbox — the widget's internal scan/rescan timing is
-        // undocumented and inconsistent). TikTok's oEmbed "html" always
-        // resolves to a plain player iframe once the widget succeeds — a
-        // fixed URL shape built from the video id alone (the only real input
-        // to the whole process, exactly like YouTube's embed/<id> pattern).
-        // Using that iframe directly is simpler, has nothing to retry, and
-        // plays natively inside the card — no third-party header/chrome at
-        // all, unlike Instagram's widget.
-        function renderTikTok(container, video) {
-          var citeMatch = /cite="([^"]+)"/.exec(video.code);
-          var idMatch = /data-video-id="([^"]+)"/.exec(video.code);
-          var cite = citeMatch ? citeMatch[1] : '';
-          var vidId = idMatch ? idMatch[1] : '';
-          if (!vidId) {
-            container.innerHTML = cite
-              ? '<a class="video-fallback-link" href="' + cite + '" target="_blank" rel="noopener">Ver en TikTok</a>'
-              : '';
-            return;
-          }
-          var iframe = document.createElement('iframe');
-          iframe.src = 'https://www.tiktok.com/embed/v2/' + vidId;
-          iframe.allow = 'encrypted-media;';
-          iframe.setAttribute('allowfullscreen', '');
-          iframe.loading = 'lazy';
-          iframe.title = video.platform + ' · ' + video.channel;
-          container.innerHTML = '';
-          container.appendChild(iframe);
-        }
-
-        // Instagram's instgrm.Embeds.process() is the real, documented API
-        // for turning a freshly-inserted .instagram-media blockquote into
-        // the rendered widget (unlike TikTok, this one is reliable and
-        // actually works — confirmed live). Its header/caption/"Ver perfil"
-        // chrome is part of the widget itself and can't be stripped from the
-        // outside (cross-origin iframe) — Instagram has no bare-video embed
-        // the way TikTok and YouTube do, so that chrome is unavoidable
-        // however it's shown, inline or not.
-        function renderInstagram(container, video, attempt) {
-          attempt = attempt || 0;
-          container.innerHTML = video.code;
-          if (window.instgrm && window.instgrm.Embeds && window.instgrm.Embeds.process) {
-            window.instgrm.Embeds.process(container);
-            return;
-          }
-          if (attempt < 20) {
-            setTimeout(function() { renderInstagram(container, video, attempt + 1); }, 250);
-          }
+        // Both platforms' official embeds bring their own unremovable chrome
+        // — Instagram's header + "Ver perfil" button, TikTok's iframe player
+        // padding itself with an unrelated "Videos relacionados" rail — and
+        // neither can be restyled from outside a cross-origin iframe. Two
+        // rounds of trying to make either look native on this grid confirmed
+        // that's structural, not a bug to fix with more JS. So the grid
+        // stays 100% our own styling always, and a click opens the real post
+        // on its real platform in a new tab — the only place a TikTok/IG
+        // video actually plays with its real, native UI (likes, comments,
+        // follow), with zero embed chrome or third-party script risk here.
+        function extractUrl(video) {
+          var m = /cite="([^"]+)"/.exec(video.code) || /data-instgrm-permalink="([^"]+)"/.exec(video.code);
+          return m ? m[1].replace(/&amp;/g, '&') : '#';
         }
 
         function fetchCover(video, coverEl) {
@@ -889,25 +839,18 @@
         }
 
         allEmbeds.forEach(function(video) {
-          var card = document.createElement('div');
+          var card = document.createElement('a');
           card.className = 'video-card';
+          card.href = extractUrl(video);
+          card.target = '_blank';
+          card.rel = 'noopener';
           card.innerHTML =
             '<div class="video-thumbnail">' +
               '<div class="video-cover"></div>' +
               '<div class="play-button"></div>' +
               '<div class="video-label">' + video.platform + ' · ' + video.channel + '</div>' +
-            '</div>';
-
-          card.addEventListener('click', function() {
-            if (card.classList.contains('loaded')) return;
-            card.classList.add('loaded');
-            var container = card.querySelector('.video-thumbnail');
-            if (video.platform === 'TikTok') {
-              renderTikTok(container, video);
-            } else {
-              renderInstagram(container, video);
-            }
-          });
+            '</div>' +
+            '<div class="external-hint" aria-hidden="true">↗</div>';
 
           fetchCover(video, card.querySelector('.video-cover'));
 
