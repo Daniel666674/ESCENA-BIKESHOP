@@ -793,7 +793,6 @@
       }
     </style>
     <script src="assets/js/video-embeds.js?v=1788000000001"></script>
-    <script async src="https://www.tiktok.com/embed.js"></script>
     <script async src="https://www.instagram.com/embed.js"></script>
     <script>
       function initVideoGrid() {
@@ -809,18 +808,30 @@
         );
         var VISIBLE_COUNT = 6;
 
-        function retryRender(container, attempt) {
-          var rendered = false;
-          if (window.tiktok && window.tiktok.embed) {
-            window.tiktok.embed.lib.render(container);
-            rendered = true;
+        // TikTok's embed.js has no public "reprocess new content" API — unlike
+        // Instagram's instgrm.Embeds.process(), it only scans the page for
+        // .tiktok-embed blockquotes once, when the script itself first runs.
+        // A blockquote injected later (our click-to-load cards) is invisible
+        // to that first scan. The documented community workaround (used by
+        // published embed libraries such as react-social-media-embed) is to
+        // force a fresh scan by loading a brand-new <script> tag every time.
+        function processTikTok(container) {
+          var old = document.getElementById('tiktok-embed-script');
+          if (old) old.remove();
+          var s = document.createElement('script');
+          s.id = 'tiktok-embed-script';
+          s.src = 'https://www.tiktok.com/embed.js?t=' + Date.now();
+          document.head.appendChild(s);
+        }
+
+        function processInstagram(container, attempt) {
+          attempt = attempt || 0;
+          if (window.instgrm && window.instgrm.Embeds && window.instgrm.Embeds.process) {
+            window.instgrm.Embeds.process(container);
+            return;
           }
-          if (window.instgrm && window.instgrm.Embed) {
-            window.instgrm.Embed.process(container);
-            rendered = true;
-          }
-          if (!rendered && attempt < 15) {
-            setTimeout(function() { retryRender(container, attempt + 1); }, 200);
+          if (attempt < 20) {
+            setTimeout(function() { processInstagram(container, attempt + 1); }, 250);
           }
         }
 
@@ -854,7 +865,11 @@
             card.classList.add('loaded');
             var container = card.querySelector('.video-thumbnail');
             container.innerHTML = video.code;
-            retryRender(container, 0);
+            if (video.platform === 'TikTok') {
+              processTikTok(container);
+            } else {
+              processInstagram(container);
+            }
           });
 
           fetchCover(video, card.querySelector('.video-cover'));
