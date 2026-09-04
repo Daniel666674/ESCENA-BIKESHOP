@@ -763,8 +763,38 @@
         height: 100%;
         border: none;
       }
+      .video-cover {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity .4s;
+        z-index: 0;
+      }
+      .video-cover.is-visible {
+        opacity: 1;
+      }
+      .video-thumbnail::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .6) 100%);
+        z-index: 1;
+        pointer-events: none;
+      }
+      .video-grid:not(.show-all) .video-card:nth-child(n+7) {
+        display: none;
+      }
+      #videoShowMoreBtn {
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+      }
     </style>
     <script src="assets/js/video-embeds.js?v=1788000000001"></script>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
     <script>
       function initVideoGrid() {
         if (!window.VIDEO_EMBEDS) {
@@ -777,30 +807,77 @@
           window.VIDEO_EMBEDS.instagram_escenabikeshop || [],
           window.VIDEO_EMBEDS.instagram_escenabmx || []
         );
+        var VISIBLE_COUNT = 6;
+
+        function retryRender(container, attempt) {
+          var rendered = false;
+          if (window.tiktok && window.tiktok.embed) {
+            window.tiktok.embed.lib.render(container);
+            rendered = true;
+          }
+          if (window.instgrm && window.instgrm.Embed) {
+            window.instgrm.Embed.process(container);
+            rendered = true;
+          }
+          if (!rendered && attempt < 15) {
+            setTimeout(function() { retryRender(container, attempt + 1); }, 200);
+          }
+        }
+
+        function fetchCover(video, coverEl) {
+          if (video.platform !== 'TikTok') return;
+          var m = /cite="([^"]+)"/.exec(video.code);
+          if (!m) return;
+          fetch('https://www.tiktok.com/oembed?url=' + encodeURIComponent(m[1]))
+            .then(function(r) { return r.ok ? r.json() : null; })
+            .then(function(data) {
+              if (data && data.thumbnail_url) {
+                coverEl.style.backgroundImage = 'url("' + data.thumbnail_url + '")';
+                coverEl.classList.add('is-visible');
+              }
+            })
+            .catch(function() {});
+        }
 
         allEmbeds.forEach(function(video) {
           var card = document.createElement('div');
           card.className = 'video-card';
-          card.innerHTML = '<div class="video-thumbnail"><div class="play-button"></div><div class="video-label">' + video.platform + ' · ' + video.channel + '</div></div>';
+          card.innerHTML =
+            '<div class="video-thumbnail">' +
+              '<div class="video-cover"></div>' +
+              '<div class="play-button"></div>' +
+              '<div class="video-label">' + video.platform + ' · ' + video.channel + '</div>' +
+            '</div>';
 
           card.addEventListener('click', function() {
-            if (!card.classList.contains('loaded')) {
-              card.classList.add('loaded');
-              var container = card.querySelector('.video-thumbnail');
-              container.innerHTML = video.code;
-
-              // Re-initialize TikTok/Instagram embeds
-              if (window.tiktok && window.tiktok.embed) {
-                window.tiktok.embed.lib.render(container);
-              }
-              if (window.instgrm && window.instgrm.Embed) {
-                window.instgrm.Embed.process(container);
-              }
-            }
+            if (card.classList.contains('loaded')) return;
+            card.classList.add('loaded');
+            var container = card.querySelector('.video-thumbnail');
+            container.innerHTML = video.code;
+            retryRender(container, 0);
           });
+
+          fetchCover(video, card.querySelector('.video-cover'));
 
           grid.appendChild(card);
         });
+
+        if (allEmbeds.length > VISIBLE_COUNT) {
+          var wrap = document.createElement('div');
+          wrap.style.textAlign = 'center';
+          wrap.style.marginTop = '2rem';
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.id = 'videoShowMoreBtn';
+          btn.className = 'btn btn-ink';
+          btn.textContent = 'Ver más videos';
+          btn.addEventListener('click', function() {
+            var expanded = grid.classList.toggle('show-all');
+            btn.textContent = expanded ? 'Ver menos' : 'Ver más videos';
+          });
+          wrap.appendChild(btn);
+          grid.insertAdjacentElement('afterend', wrap);
+        }
       }
 
       document.addEventListener('DOMContentLoaded', initVideoGrid);
