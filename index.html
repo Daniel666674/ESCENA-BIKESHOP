@@ -773,73 +773,37 @@
         cursor: pointer;
         font-family: inherit;
       }
-      .video-modal-backdrop {
-        position: fixed;
-        inset: 0;
-        background: rgba(10, 10, 10, .8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem 1rem;
-        z-index: 1000;
+      .video-card.loaded {
+        aspect-ratio: 9 / 16;
+        cursor: default;
       }
-      .video-modal-backdrop[hidden] {
+      .video-card.loaded .play-button,
+      .video-card.loaded .video-label,
+      .video-card.loaded .video-cover,
+      .video-card.loaded .video-thumbnail::before {
         display: none;
       }
-      .video-modal {
-        position: relative;
-        background: var(--ink);
-        border: 1px solid rgba(255, 255, 255, .12);
-        border-radius: 14px;
-        width: 100%;
-        max-width: 420px;
-        max-height: 90vh;
-        overflow: auto;
-        box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+      .video-card.loaded .video-thumbnail {
+        background: #000;
       }
-      .video-modal-close {
-        position: absolute;
-        top: .6rem;
-        right: .6rem;
-        z-index: 2;
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
+      .video-thumbnail iframe {
+        width: 100%;
+        height: 100%;
         border: none;
-        background: rgba(255, 255, 255, .15);
+      }
+      .video-thumbnail blockquote {
+        width: 100%;
+      }
+      .video-thumbnail .video-fallback-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
         color: #fff;
-        font-size: 1.2rem;
-        line-height: 1;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background .2s;
-      }
-      .video-modal-close:hover {
-        background: var(--gold);
-      }
-      .video-modal-body {
-        min-height: 220px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: rgba(255, 255, 255, .6);
-        font-size: .78rem;
-        letter-spacing: .04em;
-        text-transform: uppercase;
-        padding: 2rem 1rem;
+        text-decoration: underline;
+        padding: 1rem;
         text-align: center;
-      }
-      .video-modal-body blockquote,
-      .video-modal-body iframe {
-        width: 100%;
-      }
-      .video-modal-body iframe {
-        border: none;
-      }
-      .video-modal-body a {
-        color: var(--gold);
+        font-size: .85rem;
       }
     </style>
     <script src="assets/js/video-embeds.js?v=1788600000000"></script>
@@ -858,113 +822,54 @@
         );
         var VISIBLE_COUNT = 6;
 
-        // Instagram/TikTok's own official embeds always render with their
-        // native chrome (header bar, "Ver perfil" button, blue branding) —
-        // that can't be restyled from the outside (cross-origin iframe), and
-        // sitting inline in the middle of a dark, branded grid is exactly
-        // the "disruptive" look this section was redesigned to avoid. So
-        // instead of swapping a grid card's own content for the raw embed,
-        // playback opens in a modal: the grid stays 100% our own styling,
-        // and the platform's native widget is contained in its own popup —
-        // the same pattern most sites use for third-party video embeds.
-        var modalBackdrop = document.createElement('div');
-        modalBackdrop.className = 'video-modal-backdrop';
-        modalBackdrop.hidden = true;
-        modalBackdrop.innerHTML =
-          '<div class="video-modal">' +
-            '<button type="button" class="video-modal-close" aria-label="Cerrar">&times;</button>' +
-            '<div class="video-modal-body">Cargando video…</div>' +
-          '</div>';
-        document.body.appendChild(modalBackdrop);
-        var modalBody = modalBackdrop.querySelector('.video-modal-body');
-        var modalToken = 0;
-
-        function closeModal() {
-          modalToken++;
-          modalBackdrop.hidden = true;
-          modalBody.innerHTML = '';
-        }
-        modalBackdrop.querySelector('.video-modal-close').addEventListener('click', closeModal);
-        modalBackdrop.addEventListener('click', function(e) {
-          if (e.target === modalBackdrop) closeModal();
-        });
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && !modalBackdrop.hidden) closeModal();
-        });
-
-        // TikTok's embed.js has no public "reprocess new content" API — unlike
-        // Instagram's instgrm.Embeds.process(), it only scans the page for
-        // .tiktok-embed blockquotes once, when the script itself first runs.
-        // Reloading a fresh <script> tag (community workaround, confirmed
-        // against react-social-media-embed's source + its own README, which
-        // documents this exact trick) forces a rescan — but per that same
-        // README a single reload isn't guaranteed to land the first time, so
-        // that library verifies success and retries with a freshly-remounted
-        // blockquote if it doesn't. We do the same: watch for the <iframe>
-        // TikTok injects on success, and if it hasn't shown up after a few
-        // seconds, rebuild the blockquote (a brand-new element, not the one
-        // a failed attempt may have already marked as "seen") and try again.
-        // After all retries fail, fall back to a plain link to the video
-        // instead of leaving a dead, unstyled box. `token` guards against a
-        // stale retry chain from a closed/replaced modal overwriting whatever
-        // is showing now.
-        function processTikTok(container, video, token) {
+        // TikTok: skip their embed.js widget entirely. Its blockquote+script
+        // approach turned out unreliable in practice (confirmed live, not
+        // just in this sandbox — the widget's internal scan/rescan timing is
+        // undocumented and inconsistent). TikTok's oEmbed "html" always
+        // resolves to a plain player iframe once the widget succeeds — a
+        // fixed URL shape built from the video id alone (the only real input
+        // to the whole process, exactly like YouTube's embed/<id> pattern).
+        // Using that iframe directly is simpler, has nothing to retry, and
+        // plays natively inside the card — no third-party header/chrome at
+        // all, unlike Instagram's widget.
+        function renderTikTok(container, video) {
           var citeMatch = /cite="([^"]+)"/.exec(video.code);
           var idMatch = /data-video-id="([^"]+)"/.exec(video.code);
           var cite = citeMatch ? citeMatch[1] : '';
           var vidId = idMatch ? idMatch[1] : '';
-          var MAX_ATTEMPTS = 3;
-
-          function attempt(n) {
-            if (token !== modalToken) return;
-            container.innerHTML =
-              '<blockquote class="tiktok-embed" cite="' + cite + '" data-video-id="' + vidId + '" ' +
-              'style="max-width:100%;min-width:0;margin:0;"><section></section></blockquote>';
-
-            var old = document.getElementById('tiktok-embed-script');
-            if (old) old.remove();
-            var s = document.createElement('script');
-            s.id = 'tiktok-embed-script';
-            s.src = 'https://www.tiktok.com/embed.js?t=' + Date.now();
-            document.head.appendChild(s);
-
-            setTimeout(function() {
-              if (token !== modalToken) return;
-              if (container.querySelector('iframe')) return;
-              if (n < MAX_ATTEMPTS) {
-                attempt(n + 1);
-              } else if (cite) {
-                container.innerHTML =
-                  '<a href="' + cite + '" target="_blank" rel="noopener">Ver en TikTok</a>';
-              }
-            }, 4000);
+          if (!vidId) {
+            container.innerHTML = cite
+              ? '<a class="video-fallback-link" href="' + cite + '" target="_blank" rel="noopener">Ver en TikTok</a>'
+              : '';
+            return;
           }
-
-          attempt(1);
+          var iframe = document.createElement('iframe');
+          iframe.src = 'https://www.tiktok.com/embed/v2/' + vidId;
+          iframe.allow = 'encrypted-media;';
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.loading = 'lazy';
+          iframe.title = video.platform + ' · ' + video.channel;
+          container.innerHTML = '';
+          container.appendChild(iframe);
         }
 
-        function processInstagram(container, token, attempt) {
+        // Instagram's instgrm.Embeds.process() is the real, documented API
+        // for turning a freshly-inserted .instagram-media blockquote into
+        // the rendered widget (unlike TikTok, this one is reliable and
+        // actually works — confirmed live). Its header/caption/"Ver perfil"
+        // chrome is part of the widget itself and can't be stripped from the
+        // outside (cross-origin iframe) — Instagram has no bare-video embed
+        // the way TikTok and YouTube do, so that chrome is unavoidable
+        // however it's shown, inline or not.
+        function renderInstagram(container, video, attempt) {
           attempt = attempt || 0;
-          if (token !== modalToken) return;
+          container.innerHTML = video.code;
           if (window.instgrm && window.instgrm.Embeds && window.instgrm.Embeds.process) {
             window.instgrm.Embeds.process(container);
             return;
           }
           if (attempt < 20) {
-            setTimeout(function() { processInstagram(container, token, attempt + 1); }, 250);
-          }
-        }
-
-        function openModal(video) {
-          modalToken++;
-          var token = modalToken;
-          modalBody.innerHTML = 'Cargando video…';
-          modalBackdrop.hidden = false;
-          if (video.platform === 'TikTok') {
-            processTikTok(modalBody, video, token);
-          } else {
-            modalBody.innerHTML = video.code;
-            processInstagram(modalBody, token);
+            setTimeout(function() { renderInstagram(container, video, attempt + 1); }, 250);
           }
         }
 
@@ -994,7 +899,14 @@
             '</div>';
 
           card.addEventListener('click', function() {
-            openModal(video);
+            if (card.classList.contains('loaded')) return;
+            card.classList.add('loaded');
+            var container = card.querySelector('.video-thumbnail');
+            if (video.platform === 'TikTok') {
+              renderTikTok(container, video);
+            } else {
+              renderInstagram(container, video);
+            }
           });
 
           fetchCover(video, card.querySelector('.video-cover'));
