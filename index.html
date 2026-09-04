@@ -793,7 +793,7 @@
         backdrop-filter: blur(8px);
       }
     </style>
-    <script src="assets/js/video-embeds.js?v=1788600000000"></script>
+    <script src="assets/js/video-embeds.js?v=1789200000000"></script>
     <script>
       function initVideoGrid() {
         if (!window.VIDEO_EMBEDS) {
@@ -806,6 +806,17 @@
           window.VIDEO_EMBEDS.instagram_escenabikeshop || [],
           window.VIDEO_EMBEDS.instagram_escenabmx || []
         );
+        // Defensive: the same video has ended up listed twice under
+        // different keys in the data file before (a copy-paste mistake, not
+        // a rendering bug) — drop repeats by their real video URL so a
+        // future data edit can't silently reintroduce duplicate cards.
+        var seenUrls = {};
+        allEmbeds = allEmbeds.filter(function(video) {
+          var url = extractUrl(video);
+          if (seenUrls[url]) return false;
+          seenUrls[url] = true;
+          return true;
+        });
         var VISIBLE_COUNT = 6;
 
         // Both platforms' official embeds bring their own unremovable chrome
@@ -823,7 +834,19 @@
           return m ? m[1].replace(/&amp;/g, '&') : '#';
         }
 
-        function fetchCover(video, coverEl) {
+        // Instagram has no public thumbnail source (its real oEmbed needs a
+        // Meta app token, and its post pages can't be read cross-origin from
+        // the visitor's browser) — so unlike TikTok, its cover can only come
+        // from an image file supplied for that video. `video.thumbnail`, when
+        // set in video-embeds.js, is used as-is for any platform; TikTok
+        // additionally falls back to fetching its own oEmbed thumbnail_url
+        // when no manual thumbnail is set.
+        function applyCover(video, coverEl) {
+          if (video.thumbnail) {
+            coverEl.style.backgroundImage = 'url("' + video.thumbnail + '")';
+            coverEl.classList.add('is-visible');
+            return;
+          }
           if (video.platform !== 'TikTok') return;
           var m = /cite="([^"]+)"/.exec(video.code);
           if (!m) return;
@@ -852,7 +875,7 @@
             '</div>' +
             '<div class="external-hint" aria-hidden="true">↗</div>';
 
-          fetchCover(video, card.querySelector('.video-cover'));
+          applyCover(video, card.querySelector('.video-cover'));
 
           grid.appendChild(card);
         });
