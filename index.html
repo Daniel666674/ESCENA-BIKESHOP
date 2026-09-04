@@ -745,24 +745,6 @@
         border-radius: 6px;
         backdrop-filter: blur(8px);
       }
-      .video-card.loaded {
-        aspect-ratio: auto;
-        border-color: var(--ink);
-      }
-      .video-card.loaded .video-thumbnail {
-        background: black;
-      }
-      .video-card.loaded .play-button {
-        display: none;
-      }
-      .video-card.loaded .video-label {
-        display: none;
-      }
-      .video-card iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
       .video-cover {
         position: absolute;
         inset: 0;
@@ -791,6 +773,74 @@
         cursor: pointer;
         font-family: inherit;
       }
+      .video-modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 10, 10, .8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        z-index: 1000;
+      }
+      .video-modal-backdrop[hidden] {
+        display: none;
+      }
+      .video-modal {
+        position: relative;
+        background: var(--ink);
+        border: 1px solid rgba(255, 255, 255, .12);
+        border-radius: 14px;
+        width: 100%;
+        max-width: 420px;
+        max-height: 90vh;
+        overflow: auto;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+      }
+      .video-modal-close {
+        position: absolute;
+        top: .6rem;
+        right: .6rem;
+        z-index: 2;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, .15);
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 1;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background .2s;
+      }
+      .video-modal-close:hover {
+        background: var(--gold);
+      }
+      .video-modal-body {
+        min-height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, .6);
+        font-size: .78rem;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .video-modal-body blockquote,
+      .video-modal-body iframe {
+        width: 100%;
+      }
+      .video-modal-body iframe {
+        border: none;
+      }
+      .video-modal-body a {
+        color: var(--gold);
+      }
     </style>
     <script src="assets/js/video-embeds.js?v=1788600000000"></script>
     <script async src="https://www.instagram.com/embed.js"></script>
@@ -808,30 +858,113 @@
         );
         var VISIBLE_COUNT = 6;
 
+        // Instagram/TikTok's own official embeds always render with their
+        // native chrome (header bar, "Ver perfil" button, blue branding) —
+        // that can't be restyled from the outside (cross-origin iframe), and
+        // sitting inline in the middle of a dark, branded grid is exactly
+        // the "disruptive" look this section was redesigned to avoid. So
+        // instead of swapping a grid card's own content for the raw embed,
+        // playback opens in a modal: the grid stays 100% our own styling,
+        // and the platform's native widget is contained in its own popup —
+        // the same pattern most sites use for third-party video embeds.
+        var modalBackdrop = document.createElement('div');
+        modalBackdrop.className = 'video-modal-backdrop';
+        modalBackdrop.hidden = true;
+        modalBackdrop.innerHTML =
+          '<div class="video-modal">' +
+            '<button type="button" class="video-modal-close" aria-label="Cerrar">&times;</button>' +
+            '<div class="video-modal-body">Cargando video…</div>' +
+          '</div>';
+        document.body.appendChild(modalBackdrop);
+        var modalBody = modalBackdrop.querySelector('.video-modal-body');
+        var modalToken = 0;
+
+        function closeModal() {
+          modalToken++;
+          modalBackdrop.hidden = true;
+          modalBody.innerHTML = '';
+        }
+        modalBackdrop.querySelector('.video-modal-close').addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', function(e) {
+          if (e.target === modalBackdrop) closeModal();
+        });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && !modalBackdrop.hidden) closeModal();
+        });
+
         // TikTok's embed.js has no public "reprocess new content" API — unlike
         // Instagram's instgrm.Embeds.process(), it only scans the page for
         // .tiktok-embed blockquotes once, when the script itself first runs.
-        // A blockquote injected later (our click-to-load cards) is invisible
-        // to that first scan. The documented community workaround (used by
-        // published embed libraries such as react-social-media-embed) is to
-        // force a fresh scan by loading a brand-new <script> tag every time.
-        function processTikTok(container) {
-          var old = document.getElementById('tiktok-embed-script');
-          if (old) old.remove();
-          var s = document.createElement('script');
-          s.id = 'tiktok-embed-script';
-          s.src = 'https://www.tiktok.com/embed.js?t=' + Date.now();
-          document.head.appendChild(s);
+        // Reloading a fresh <script> tag (community workaround, confirmed
+        // against react-social-media-embed's source + its own README, which
+        // documents this exact trick) forces a rescan — but per that same
+        // README a single reload isn't guaranteed to land the first time, so
+        // that library verifies success and retries with a freshly-remounted
+        // blockquote if it doesn't. We do the same: watch for the <iframe>
+        // TikTok injects on success, and if it hasn't shown up after a few
+        // seconds, rebuild the blockquote (a brand-new element, not the one
+        // a failed attempt may have already marked as "seen") and try again.
+        // After all retries fail, fall back to a plain link to the video
+        // instead of leaving a dead, unstyled box. `token` guards against a
+        // stale retry chain from a closed/replaced modal overwriting whatever
+        // is showing now.
+        function processTikTok(container, video, token) {
+          var citeMatch = /cite="([^"]+)"/.exec(video.code);
+          var idMatch = /data-video-id="([^"]+)"/.exec(video.code);
+          var cite = citeMatch ? citeMatch[1] : '';
+          var vidId = idMatch ? idMatch[1] : '';
+          var MAX_ATTEMPTS = 3;
+
+          function attempt(n) {
+            if (token !== modalToken) return;
+            container.innerHTML =
+              '<blockquote class="tiktok-embed" cite="' + cite + '" data-video-id="' + vidId + '" ' +
+              'style="max-width:100%;min-width:0;margin:0;"><section></section></blockquote>';
+
+            var old = document.getElementById('tiktok-embed-script');
+            if (old) old.remove();
+            var s = document.createElement('script');
+            s.id = 'tiktok-embed-script';
+            s.src = 'https://www.tiktok.com/embed.js?t=' + Date.now();
+            document.head.appendChild(s);
+
+            setTimeout(function() {
+              if (token !== modalToken) return;
+              if (container.querySelector('iframe')) return;
+              if (n < MAX_ATTEMPTS) {
+                attempt(n + 1);
+              } else if (cite) {
+                container.innerHTML =
+                  '<a href="' + cite + '" target="_blank" rel="noopener">Ver en TikTok</a>';
+              }
+            }, 4000);
+          }
+
+          attempt(1);
         }
 
-        function processInstagram(container, attempt) {
+        function processInstagram(container, token, attempt) {
           attempt = attempt || 0;
+          if (token !== modalToken) return;
           if (window.instgrm && window.instgrm.Embeds && window.instgrm.Embeds.process) {
             window.instgrm.Embeds.process(container);
             return;
           }
           if (attempt < 20) {
-            setTimeout(function() { processInstagram(container, attempt + 1); }, 250);
+            setTimeout(function() { processInstagram(container, token, attempt + 1); }, 250);
+          }
+        }
+
+        function openModal(video) {
+          modalToken++;
+          var token = modalToken;
+          modalBody.innerHTML = 'Cargando video…';
+          modalBackdrop.hidden = false;
+          if (video.platform === 'TikTok') {
+            processTikTok(modalBody, video, token);
+          } else {
+            modalBody.innerHTML = video.code;
+            processInstagram(modalBody, token);
           }
         }
 
@@ -861,15 +994,7 @@
             '</div>';
 
           card.addEventListener('click', function() {
-            if (card.classList.contains('loaded')) return;
-            card.classList.add('loaded');
-            var container = card.querySelector('.video-thumbnail');
-            container.innerHTML = video.code;
-            if (video.platform === 'TikTok') {
-              processTikTok(container);
-            } else {
-              processInstagram(container);
-            }
+            openModal(video);
           });
 
           fetchCover(video, card.querySelector('.video-cover'));
