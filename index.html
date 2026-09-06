@@ -1183,6 +1183,14 @@
       var vidCss = "";
       if (s.video && s.video.rotation) vidCss += "transform:rotate(" + s.video.rotation + "deg);";
       if (s.pos) vidCss += "object-position:" + s.pos + ";";
+      // Portrait phone footage in this ultra-wide banner: object-fit:cover
+      // (the default, set in the stylesheet) has to blow the clip up until
+      // its width fills the banner, which crops the vast majority of its
+      // height -- most of the actual content ends up outside the frame no
+      // matter what object-position you pick. "contain" shows the whole
+      // clip letterboxed instead (the hero's own dark background + gradient
+      // overlay fill the sides, so it doesn't look like an empty gap).
+      if (s.video && s.video.fit === "contain") vidCss += "object-fit:contain;";
       var videoStyle = vidCss ? ' style="' + vidCss + '"' : "";
       var videoEl = (s.video && s.video.ext && s.video.v) ? '<video muted loop playsinline preload="none" aria-hidden="true"' + videoStyle + '></video>' : "";
       return '<div class="hero-slide' + (i === 0 ? ' is-active' : '') + '" style="' + bg + frameStyle + '">' + videoEl + '</div>';
