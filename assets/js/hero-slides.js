@@ -9,7 +9,7 @@ window.ESCENA_HERO_SLIDES = [
   "video": {
    "v": 1788697979769,
    "ext": "mp4",
-   "fit": "contain"
+   "fit": "card"
   }
  }
 ];
