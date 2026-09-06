@@ -6,10 +6,10 @@ window.ESCENA_HERO_SLIDES = [
  },
  {
   "id": "hmtpsl8nyuf32",
-  "pos": "center 20%",
   "video": {
    "v": 1788697979769,
-   "ext": "mp4"
+   "ext": "mp4",
+   "fit": "contain"
   }
  }
 ];

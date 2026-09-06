@@ -200,6 +200,11 @@
        until the video is truly ready). */
     .hero-slide video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; opacity: 0; transition: opacity .6s; }
     .hero-slide video.is-visible { opacity: 1; }
+    /* Ambient backdrop for a letterboxed (object-fit:contain) video: the same
+       clip, blurred and scaled past cover so the blur's soft edges never show,
+       filling the banner behind the sharp, uncropped copy on top. Turns the
+       letterbox bars into an intentional glow instead of dead space. */
+    .hero-slide video.hero-video-blur { filter: blur(60px) brightness(.55) saturate(1.15); transform: scale(1.2); }
     .hero-bg-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.72) 38%, rgba(10,10,10,.4) 68%, rgba(10,10,10,.55) 100%); }
     .hero-dots { position: absolute; z-index: 2; left: 50%; bottom: 1.6rem; transform: translateX(-50%); display: flex; gap: .5rem; }
     .hero-dots button { width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(255,255,255,.6); background: rgba(255,255,255,.25); padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
@@ -1197,7 +1202,15 @@
       // right where the hero's text overlay already needs a dark backdrop.
       if (s.video && s.video.fit === "contain") vidCss += "object-fit:contain;";
       var videoStyle = vidCss ? ' style="' + vidCss + '"' : "";
-      var videoEl = (s.video && s.video.ext && s.video.v) ? '<video muted loop playsinline preload="none" aria-hidden="true"' + videoStyle + '></video>' : "";
+      var videoEl = "";
+      if (s.video && s.video.ext && s.video.v) {
+        // A contained (uncropped) video also gets a blurred cover copy of the
+        // SAME clip behind it -- see .hero-video-blur above -- instead of
+        // showing plain letterbox bars. Both elements share one src and are
+        // driven together in activateSlideMedia/deactivateSlideMedia below.
+        if (s.video.fit === "contain") videoEl += '<video class="hero-video-blur" muted loop playsinline preload="none" aria-hidden="true"></video>';
+        videoEl += '<video muted loop playsinline preload="none" aria-hidden="true"' + videoStyle + '></video>';
+      }
       return '<div class="hero-slide' + (i === 0 ? ' is-active' : '') + '" style="' + bg + frameStyle + '">' + videoEl + '</div>';
     }).join("");
     var slides = Array.prototype.slice.call(wrap.querySelectorAll(".hero-slide"));
@@ -1205,27 +1218,33 @@
 
     function activateSlideMedia(i) {
       var data = slideData[i], slide = slides[i];
-      var vid = slide && slide.querySelector("video");
-      if (!vid || !data || !data.video) return;
-      if (!vid.getAttribute("src")) {
-        vid.addEventListener("loadeddata", function () { vid.classList.add("is-visible"); }, { once: true });
-        vid.src = "assets/video/hero-" + data.id + "." + data.video.ext + "?v=" + data.video.v;
-        var rot = data.video.rotation;
-        if (rot === 90 || rot === 270) {
-          var sW = slide.offsetWidth, sH = slide.offsetHeight;
-          if (sW && sH) {
-            var existing = vid.style.transform || "";
-            vid.style.transform = existing + " scale(" + (Math.max(sW / sH, sH / sW)).toFixed(4) + ")";
+      var vids = slide ? slide.querySelectorAll("video") : [];
+      if (!vids.length || !data || !data.video) return;
+      vids.forEach(function (vid) {
+        if (!vid.getAttribute("src")) {
+          vid.addEventListener("loadeddata", function () { vid.classList.add("is-visible"); }, { once: true });
+          vid.src = "assets/video/hero-" + data.id + "." + data.video.ext + "?v=" + data.video.v;
+          var rot = data.video.rotation;
+          // The blur backdrop's own scale(1.2) (see .hero-video-blur) lives in
+          // the stylesheet, not inline -- overwriting vid.style.transform here
+          // would blow it away. Rotation is a pixel-precise fix meant for the
+          // sharp foreground copy; the blurred backdrop doesn't need it.
+          if ((rot === 90 || rot === 270) && !vid.classList.contains("hero-video-blur")) {
+            var sW = slide.offsetWidth, sH = slide.offsetHeight;
+            if (sW && sH) {
+              var existing = vid.style.transform || "";
+              vid.style.transform = existing + " scale(" + (Math.max(sW / sH, sH / sW)).toFixed(4) + ")";
+            }
           }
         }
-      }
-      var p = vid.play();
-      if (p && p.catch) p.catch(function () {}); // autoplay can be blocked -> slide just keeps showing the photo
+        var p = vid.play();
+        if (p && p.catch) p.catch(function () {}); // autoplay can be blocked -> slide just keeps showing the photo
+      });
     }
     function deactivateSlideMedia(i) {
       var slide = slides[i];
-      var vid = slide && slide.querySelector("video");
-      if (vid && !vid.paused) vid.pause();
+      var vids = slide ? slide.querySelectorAll("video") : [];
+      vids.forEach(function (vid) { if (!vid.paused) vid.pause(); });
     }
     activateSlideMedia(0); // first slide is visible immediately on page load
 
