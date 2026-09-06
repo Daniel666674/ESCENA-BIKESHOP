@@ -2255,17 +2255,29 @@
   // "valid" JPEG that's really just a solid black square. This is what showed
   // up as black product photos: the corrupted image passed every existing
   // check (real JPEG header, well over 100 bytes) and got committed as-is.
-  // Sample a handful of pixels and check alpha — real drawn image data is
-  // always fully opaque (alpha 255); an untouched/failed canvas reads back as
-  // alpha 0 everywhere. A legitimately all-black *photo* still has alpha 255,
-  // so this can't false-positive on a dark product photo.
+  // Sample a handful of spread-out pixels and compare them — a real photo
+  // essentially never has byte-identical color+alpha at all 4 corners, the 4
+  // edge midpoints, AND the center simultaneously. A failed/empty canvas
+  // does, regardless of which flat color it failed to (fully transparent —
+  // the untouched canvas default; solid opaque black — the flattening a
+  // transparent canvas gets when exported to a format with no alpha channel,
+  // like JPEG; or solid white — the background compressDataUri now paints in
+  // before drawImage, see below). Checking a specific expected failure color
+  // (this used to only check alpha) missed real cases: the same PNG can be
+  // *partly* transparent (logo art on a transparent background, say) so the
+  // 9 sampled points land on opaque design pixels and pass, while the
+  // untouched-by-any-sample transparent areas in between still flatten to
+  // black across most of the image.
   function canvasLooksBlank(ctx, w, h) {
     var xs = [0, Math.floor(w / 2), w - 1];
     var ys = [0, Math.floor(h / 2), h - 1];
+    var first = null;
     for (var i = 0; i < xs.length; i++) {
       for (var j = 0; j < ys.length; j++) {
         var d = ctx.getImageData(xs[i], ys[j], 1, 1).data;
-        if (d[3] !== 0) return false; // found an opaque pixel — real image data
+        var key = d[0] + "," + d[1] + "," + d[2] + "," + d[3];
+        if (first === null) first = key;
+        else if (key !== first) return false; // real photos vary across 9 spread-out points
       }
     }
     return true;
@@ -2298,6 +2310,14 @@
           if (Math.max(w, h) > maxDim) { var s = maxDim / Math.max(w, h); w = Math.round(w * s); h = Math.round(h * s); }
           var c = document.createElement("canvas"); c.width = w; c.height = h;
           var ctx = c.getContext("2d");
+          // JPEG has no alpha channel, so any transparent pixel in the source
+          // (a PNG logo/graphic, a screenshot with cutouts, etc.) would
+          // otherwise flatten to solid black per the canvas spec — the photo
+          // "uploads fine" but renders as a black hole where it should show
+          // through. Paint an opaque white backdrop first so transparency
+          // resolves to white instead.
+          ctx.fillStyle = "#fff";
+          ctx.fillRect(0, 0, w, h);
           ctx.drawImage(img, 0, 0, w, h);
           if (canvasLooksBlank(ctx, w, h)) { reject(new Error("la foto salió en negro (fallo de memoria del navegador) — probá de nuevo o desde otro navegador")); return; }
           var out = c.toDataURL("image/jpeg", quality);
