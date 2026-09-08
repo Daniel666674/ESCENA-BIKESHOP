@@ -18,6 +18,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Regenerates assets/data/inventory.json and assets/data/sales-summary-<token>.json
+      # from assets/js/products-data.js and assets/js/sales-log.js on every deploy, so
+      # external reporting tools (Nexus) always read current data without needing any
+      # access of their own to this repo or to admin.html. Never committed to git —
+      # built fresh in this ephemeral checkout and uploaded below like any other asset.
+      # See tools/generate-feeds.py for why the sales feed is aggregate-only (no PII).
+      - name: Generate data feeds (inventory + sales summary)
+        run: python3 tools/generate-feeds.py
+
       - name: Deploy to Hostinger (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
