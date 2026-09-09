@@ -171,6 +171,10 @@
     lines.push("Hola ESCENA 🐕, quiero pedir:");
     items.forEach(function (i) {
       lines.push("• " + i.qty + "x " + i.n + " (" + i.brand + ")" + (i.variant ? " [" + i.variant + "]" : "") + " — " + cop(i.price * i.qty));
+      // Each product's own page has correct og:image/og:title/price, so its
+      // link unfurls into a photo preview inside WhatsApp — the closest thing
+      // to "show the actual product picture" that a wa.me message supports.
+      if (i.slug) lines.push("  https://escenabmx.com/producto/" + i.slug);
     });
     lines.push("Total: " + cop(cartTotal()));
     lines.push("¿Está todo disponible?");

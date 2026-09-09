@@ -2812,7 +2812,15 @@
     return "Hola ESCENA 🐕, quiero pedir: " + p.n + (p.brand ? " (" + p.brand + ")" : "") + " — " + copFmt(p.price) + " COP.";
   }
   function waHrefFor(p) {
-    return "https://wa.me/573107630504?text=" + encodeURIComponent(waMsgFor(p) + " ¿Está disponible?");
+    // The product URL is appended so the link unfurls into a photo/title/price
+    // preview inside WhatsApp (og:image + og:description already carry that
+    // for this page) — wa.me can't attach an image to the message directly,
+    // this is the closest it supports. assets/js/wholesale.js's
+    // rewriteStaticPDP() rebuilds this same href on every page load (so it
+    // stays right even without a republish), but the generated HTML should
+    // already be correct from the start too.
+    var url = "https://escenabmx.com/producto/" + p.slug;
+    return "https://wa.me/573107630504?text=" + encodeURIComponent(waMsgFor(p) + " ¿Está disponible?\n" + url);
   }
   // Cosmetic-only selector: no per-option stock, just tags the WhatsApp/cart
   // message. Real inventory-backed sizes (crank length, sprocket teeth, frame

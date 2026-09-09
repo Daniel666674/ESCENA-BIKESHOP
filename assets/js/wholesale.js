@@ -207,6 +207,17 @@
      correct whether or not wholesale pricing is active and whether or not the
      product has a variant selector — the variant selector calls this again
      (via refreshPDP) instead of maintaining its own copy of this message. */
+  // The product's own canonical URL — appended to the WhatsApp message so
+  // the link unfurls into a rich preview (photo, title, price already baked
+  // into that page's og:description) inside the chat. wa.me has no way to
+  // attach an image directly to a pre-filled message; a URL with correct
+  // Open Graph tags is the closest thing WhatsApp supports to "show the
+  // actual product, picture and price" in the message itself.
+  function pdpCanonicalUrl() {
+    var link = document.querySelector('link[rel="canonical"]');
+    return (link && link.getAttribute("href")) || location.href;
+  }
+
   function rewriteStaticPDP() {
     var btn = document.querySelector(".pdp-actions .add-cart-btn[data-price]");
     if (!btn) return;
@@ -223,7 +234,7 @@
       }
     }
 
-    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA 🐕, quiero pedir: " + n + " (" + brand + ") — " + cop(applyDiscount(raw)) + "." + pdpVariantSuffix() + " ¿Está disponible?");
+    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA 🐕, quiero pedir: " + n + " (" + brand + ") — " + cop(applyDiscount(raw)) + "." + pdpVariantSuffix() + " ¿Está disponible?\n" + pdpCanonicalUrl());
     var href = "https://wa.me/" + WA + "?text=" + msg;
     var buyLink = document.querySelector(".pdp-actions .btn-ink[href*=\"wa.me\"]");
     if (buyLink) buyLink.href = href;
