@@ -60,6 +60,8 @@ jobs:
             **/*.md
             assets/js/sales-log.js
             assets/js/audit-log.js
+            assets/js/bookings-data.js
+            worker/**
             tools/**
 
       - name: Verify the live site is actually serving our files
@@ -118,3 +120,17 @@ jobs:
             exit 1
           fi
           echo "OK: audit-log.js is not publicly reachable (HTTP $code)."
+
+      - name: Verify bookings-data.js is NOT publicly reachable
+        # Same regression guard as sales-log.js/audit-log.js, above:
+        # bookings-data.js holds customer names, phone numbers and notes for
+        # taller appointments and paint-job quote requests, and must never be
+        # servable from the public site. admin.html and the booking Worker
+        # both read/write it via the GitHub API instead.
+        run: |
+          code="$(curl -sL -o /dev/null -w '%{http_code}' "https://escenabmx.com/assets/js/bookings-data.js?cb=$(date +%s)" || echo 000)"
+          if [ "$code" = "200" ]; then
+            echo "::error::assets/js/bookings-data.js is publicly reachable (HTTP 200) — customer booking data is exposed. This must stay excluded from the public deploy."
+            exit 1
+          fi
+          echo "OK: bookings-data.js is not publicly reachable (HTTP $code)."
