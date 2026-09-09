@@ -2933,6 +2933,15 @@
       TAG_SPAN: p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '',
       SPEC_ITEMS: specItems(p.spec, catLabel, p.brand), WA_HREF: waHrefFor(p), RELATED_SECTION: relatedFor(p),
       PRIMARY_IMG: esc("../" + ((p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg")),
+      // Real cover photo when one was actually uploaded, else the generic
+      // logo/OG image — NEVER a guessed "assets/img/products/{slug}.jpg" path,
+      // which silently 404s for any product whose photo file has the
+      // hash-suffixed name the upload flow actually gives it (confirmed live:
+      // WhatsApp/Facebook link-preview crawlers get a 404 on that guess and
+      // fall back to showing the site favicon instead of the product photo).
+      IMG_REL: esc((p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg"),
+      OG_IMAGE: esc("https://escenabmx.com/" + ((p.imgs && p.imgs[0]) || "assets/img/og-escena.jpg")),
+      OG_IMAGE_JSON: jsonEsc("https://escenabmx.com/" + ((p.imgs && p.imgs[0]) || "assets/img/og-escena.jpg")),
       IMG_FIT: "auto",
       GALLERY_JSON: gallery.json, GALLERY_DOTS: gallery.dots, GALLERY_THUMBS: gallery.thumbs,
       NAME_JSON: jsonEsc(p.n), BRAND_JSON: jsonEsc(p.brand || ""), SPEC_JSON: jsonEsc(p.spec || ""),
