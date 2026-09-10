@@ -6182,7 +6182,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/odyssey-pinon-28t-negro-mtbyv9ghr3ke.jpg?v=1788093948129",
    "assets/img/products/odyssey-pinon-28t-negro-2.jpg?v=1788093948129"
   ],
-  "imgZoom": 116,
   "img": "assets/img/products/odyssey-pinon-28t-negro-mtbyv9ghr3ke.jpg?v=1788093948129"
  },
  {
