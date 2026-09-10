@@ -3272,7 +3272,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Wethepeople",
   "cat": "marcos",
   "spec": "Cr-Mo (4130) • Verde • 20.6” - 12.95”",
-  "price": 1790000,
+  "price": 1800000,
   "sku": "MRC-WTP-001",
   "units": 1,
   "sizes": [
@@ -3284,7 +3284,9 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Verde",
-    "units": 1
+    "units": 1,
+    "price": 1800000,
+    "cost": 1440000
    }
   ],
   "slug": "marco-wethepeople-message-verde",
@@ -6836,13 +6838,15 @@ window.ESCENA_PRODUCTS = [
   "brand": "Wethepeople",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.9\" · Negro",
-  "price": 1820000,
+  "price": 1800000,
   "sku": "WETHEPEOPLE-DOOMSAYER-NEGRO",
-  "units": 2,
+  "units": 0,
   "sizes": [
    {
     "label": "20.75\"",
-    "units": 2
+    "units": 0,
+    "price": 1800000,
+    "cost": 1440000
    }
   ],
   "order": 120,
@@ -6885,7 +6889,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Fiend",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.75\" · Negro",
-  "price": 1900000,
+  "price": 2100000,
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
   "units": 2,
   "imgs": [
