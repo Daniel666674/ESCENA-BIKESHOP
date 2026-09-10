@@ -4869,5 +4869,21 @@ window.ESCENA_AUDIT = [
    "cadena-cult-escamada-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:46:03.265Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 5 productos editados, 2 fotos subidas",
+  "created": [
+   "cadena-federal-escamada-cromada-2"
+  ],
+  "edited": [
+   "cadena-federal-escamada-cromada",
+   "cadena-tall-order-cromada-510",
+   "cadena-kmc-410-negra",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-k1-wide-perforada-cromada"
+  ],
+  "deleted": []
  }
 ];
