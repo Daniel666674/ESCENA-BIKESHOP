@@ -6887,7 +6887,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.75\" · Negro",
   "price": 1900000,
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
-  "units": 0,
+  "units": 2,
   "imgs": [
    "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1788093948129",
    "assets/img/products/fiend-reynolds-v3-negro-3.jpg?v=1788093948129",
@@ -6898,15 +6898,13 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.5\"",
-    "units": 0,
-    "price": 650000,
-    "cost": 520000
+    "units": 0
    },
    {
     "label": "20.75\"",
-    "units": 0,
-    "price": 650000,
-    "cost": 520000
+    "units": 2,
+    "price": 2100000,
+    "cost": 1680000
    }
   ],
   "order": 110,
