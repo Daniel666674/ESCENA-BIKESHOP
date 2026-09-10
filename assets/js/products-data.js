@@ -3012,7 +3012,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Fiction",
   "cat": "horquillas",
   "spec": "Material Cromolio Garantía de 6 Meses 26mm",
-  "price": 430000,
+  "price": 410000,
   "sku": "TEN-FIC-001",
   "units": 2,
   "imgs": [
@@ -3022,11 +3022,15 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1
+    "units": 1,
+    "price": 400000,
+    "cost": 320000
    },
    {
     "label": "Cromado",
-    "units": 1
+    "units": 1,
+    "price": 410000,
+    "cost": 328000
    }
   ],
   "slug": "tenedor-fiction-shank",
@@ -5648,9 +5652,9 @@ window.ESCENA_PRODUCTS = [
   "brand": "Federal",
   "cat": "horquillas",
   "spec": "Cromoly · 22mm offset · Cromado · 4130 tratado al calor",
-  "price": 730000,
+  "price": 690000,
   "sku": "FEDERAL-HORQUILLA-CROMADA",
-  "units": 2,
+  "units": 1,
   "imgs": [
    "assets/img/products/federal-horquilla-cromada.jpg?v=1788093948129",
    "assets/img/products/federal-horquilla-cromada-2.jpg?v=1788093948129"
@@ -5676,8 +5680,16 @@ window.ESCENA_PRODUCTS = [
   "order": 330,
   "sizes": [
    {
-    "label": "Única",
-    "units": 2
+    "label": "15mm",
+    "units": 0,
+    "price": 690000,
+    "cost": 552000
+   },
+   {
+    "label": "22mm",
+    "units": 1,
+    "price": 690000,
+    "cost": 552000
    }
   ],
   "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1788093948129"
