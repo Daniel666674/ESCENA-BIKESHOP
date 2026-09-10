@@ -4829,5 +4829,15 @@ window.ESCENA_AUDIT = [
    "plato-volume-guardia-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:22:06.078Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "odyssey-pinon-28t-negro"
+  ],
+  "deleted": []
  }
 ];
