@@ -1,28 +1,5 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Cadena Chain Economica 410",
-  "brand": "CHAIN",
-  "cat": "cadenas",
-  "spec": "",
-  "price": 13000,
-  "sku": "CAD-CHA-001",
-  "units": 4,
-  "colors": [
-   {
-    "label": "CROMADA",
-    "units": 2,
-    "price": 13000
-   },
-   {
-    "label": "NEGRA",
-    "units": 2,
-    "price": 13000
-   }
-  ],
-  "slug": "cadena-chain-economica-410",
-  "img": "assets/img/escena-logo.jpg"
- },
- {
   "n": "Cadena KMC 410",
   "brand": "KMC",
   "cat": "cadenas",
@@ -6643,42 +6620,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/tija-negra-curva-3.jpg?v=1788093948129"
   ],
   "img": "assets/img/products/tija-negra-curva.jpg?v=1788093948129"
- },
- {
-  "slug": "brainstorm-freecoaster-kit-01",
-  "n": "Kit Freecoaster Brainstorm",
-  "brand": "Brainstorm",
-  "cat": "piezas",
-  "spec": "Kit de conversión freecoaster · Negro",
-  "price": 220000,
-  "sku": "BRAINSTORM-FREECOASTER-KIT-01",
-  "units": 12,
-  "order": 950,
-  "img": "assets/img/products/brainstorm-freecoaster-kit-01.jpg?v=1788093948129"
- },
- {
-  "slug": "brainstorm-freecoaster-kit-02",
-  "n": "Kit Freecoaster Brainstorm II",
-  "brand": "Brainstorm",
-  "cat": "piezas",
-  "spec": "Kit de conversión freecoaster · Negro",
-  "price": 220000,
-  "sku": "BRAINSTORM-FREECOASTER-KIT-02",
-  "units": 12,
-  "order": 960,
-  "img": "assets/img/products/brainstorm-freecoaster-kit-02.jpg?v=1788093948129"
- },
- {
-  "slug": "brainstorm-freecoaster-kit-04",
-  "n": "Kit Freecoaster Brainstorm Par",
-  "brand": "Brainstorm",
-  "cat": "piezas",
-  "spec": "Kit de conversión freecoaster · Negro",
-  "price": 230000,
-  "sku": "BRAINSTORM-FREECOASTER-KIT-04",
-  "units": 12,
-  "order": 930,
-  "img": "assets/img/products/brainstorm-freecoaster-kit-04.jpg?v=1788093948129"
  },
  {
   "slug": "eslabones-cadena-sueltos",
