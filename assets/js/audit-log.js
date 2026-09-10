@@ -4754,5 +4754,34 @@ window.ESCENA_AUDIT = [
    "tenedor-fiction-shank"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:14:19.902Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 18 productos editados, 1 foto subida",
+  "created": [
+   "llanta-innova-pro-gris-2-40"
+  ],
+  "edited": [
+   "cajas-de-frente-alienation-illuminati-oos",
+   "llanta-theory-proven-blanca-2-40",
+   "llanta-odyssey-path-pro-negra-2-40",
+   "coraza_primo_555_2.45",
+   "llanta-optimus-black-burn-negra-2-35",
+   "llanta-chaoyang-cutting-edge-negra-2-25",
+   "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
+   "llanta-cst-orbit-knobby-negra-rin-16-2-125",
+   "llanta-tioga-factory-fs100-negra-2-10",
+   "llanta-innova-pro-negra-2-40",
+   "llanta-innova-camufladas",
+   "llanta-innova-pro-big-slick-cafe-2-40",
+   "llanta-mutanty-whipper-azul-2-40",
+   "llanta-mutanty-whipper-roja-2-40",
+   "llanta-subrosa-matt-ray-roja-2-40",
+   "llanta-shadow-creeper-negra-2-40",
+   "llanta-cinema-nathan-williams-negro-2-50",
+   "llanta-odyssey-supercircuit-keblar-negra-2-40"
+  ],
+  "deleted": []
  }
 ];
