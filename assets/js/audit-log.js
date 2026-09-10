@@ -4795,5 +4795,28 @@ window.ESCENA_AUDIT = [
    "bielas-optimus-medusa-derecha-8t-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:19:37.638Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "14 productos editados",
+  "created": [],
+  "edited": [
+   "plato-federal-logo-guard-28t",
+   "plato-gw-kl215-negro",
+   "plato-gw-corona-negro-2",
+   "plato-gw-corona-negro",
+   "plato-fiend-reynols-purpura",
+   "plato-strangergram-guardia-negro-28t",
+   "plato-sunday-sabretooth-v2-negro-28t",
+   "plato-trueno-exotic",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "pinon-snowflake-plata",
+   "federal-pinon-gris",
+   "cult-pinon-negro",
+   "plato-fate-guardia-negro-28t"
+  ],
+  "deleted": []
  }
 ];
