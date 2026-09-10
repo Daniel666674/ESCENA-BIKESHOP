@@ -4670,5 +4670,18 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "brainstorm-freecoaster-kit-03"
   ]
+ },
+ {
+  "ts": "2026-09-10T06:10:35.875Z",
+  "actor": "daniel.f.acosta96@gmail.com",
+  "summary": "4 productos eliminados",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "cadena-chain-economica-410",
+   "brainstorm-freecoaster-kit-02",
+   "brainstorm-freecoaster-kit-01",
+   "brainstorm-freecoaster-kit-04"
+  ]
  }
 ];
