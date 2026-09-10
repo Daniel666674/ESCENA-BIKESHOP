@@ -2890,7 +2890,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "bielas-optimus-medusa-derecha-8t-cromada",
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/bielas-optimus-medusa-derecha-8t-cromada.jpg?v=1788093948129"
  },
  {
@@ -2908,7 +2908,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 110,
+  "order": 100,
   "img": "assets/img/products/bielas-optimus-medusa-derecha-8t.jpg?v=1788093948129"
  },
  {
@@ -2916,7 +2916,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Stranger",
   "cat": "bielas",
   "spec": "Material Cromolio Sanko Japones 4130 tratadas al calor Eje 19mm 8 Estrías  Incluye Caja Primo Mid 19mm Compatible para plato Derecho e Izquierdo Peso: 987 gramos",
-  "price": 420000,
+  "price": 400000,
   "sku": "BIE-STR-001",
   "units": 1,
   "sizes": [
