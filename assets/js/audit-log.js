@@ -4783,5 +4783,17 @@ window.ESCENA_AUDIT = [
    "llanta-odyssey-supercircuit-keblar-negra-2-40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:17:15.980Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "bielas-stranger-level-8t-negra",
+   "bielas-optimus-medusa-derecha-8t",
+   "bielas-optimus-medusa-derecha-8t-cromada"
+  ],
+  "deleted": []
  }
 ];
