@@ -1,5 +1,58 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena Cult Escamada Dorada",
+  "brand": "130000",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 130000,
+  "sku": "CAD-130-001",
+  "units": 3,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-cult-escamada-dorada-mtw3yz84x735.jpg?v=1789079892193",
+   "assets/img/products/cadena-cult-escamada-dorada-mtw3z3s1ztp3.jpg?v=1789079895012",
+   "assets/img/products/cadena-cult-escamada-dorada-mtw3z5ycs37g.jpg?v=1789079901965"
+  ],
+  "slug": "cadena-cult-escamada-dorada",
+  "order": 20,
+  "img": "assets/img/products/cadena-cult-escamada-dorada-mtw3yz84x735.jpg?v=1789079892193"
+ },
+ {
+  "n": "Cadena Cult Escamada Negra",
+  "brand": "Cult",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 130000,
+  "sku": "CAD-CLT-002",
+  "units": 3,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-cult-escamada-negra-2-mtw3zbbh8abj.jpg?v=1789079907964",
+   "assets/img/products/cadena-cult-escamada-negra-2-mtw3zfy4gurf.jpg?v=1789079911954",
+   "assets/img/products/cadena-cult-escamada-negra-2-mtw3zj0yo2p2.jpg?v=1789079922497"
+  ],
+  "slug": "cadena-cult-escamada-negra-2",
+  "order": 10,
+  "img": "assets/img/products/cadena-cult-escamada-negra-2-mtw3zbbh8abj.jpg?v=1789079907964"
+ },
+ {
+  "n": "Cadena Cult Escamada Negra",
+  "brand": "130000",
+  "cat": "piezas",
+  "spec": "el Cult La cadena de medio eslabón - revestimiento de teflón con grabado Cult logotipos - Peso: 320 g/11,3 oz.",
+  "price": 130000,
+  "sku": "PZA-130-001",
+  "units": 0,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-cult-escamada-negra-mtw3zr5t6qgh.jpg?v=1789079925217",
+   "assets/img/products/cadena-cult-escamada-negra-mtw3zt9do6xp.jpg?v=1789079929687",
+   "assets/img/products/cadena-cult-escamada-negra-mtw3zwpj4bke.jpg?v=1789079932720"
+  ],
+  "slug": "cadena-cult-escamada-negra",
+  "img": "assets/img/products/cadena-cult-escamada-negra-mtw3zr5t6qgh.jpg?v=1789079925217"
+ },
+ {
   "n": "Llanta Innova Pro Gris 2.40\"",
   "brand": "Innova",
   "cat": "llantas",
@@ -77,6 +130,7 @@ window.ESCENA_PRODUCTS = [
     7
    ]
   },
+  "order": 70,
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
  {
@@ -92,6 +146,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-narrow-cromada-mtgizfpgy0co.jpg?v=1788137644674"
   ],
   "slug": "cadena-kmc-narrow-cromada",
+  "order": 60,
   "img": "assets/img/products/cadena-kmc-narrow-cromada-mtgize250wp3.jpg?v=1788137643076"
  },
  {
@@ -107,6 +162,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizi6ds84m.jpg?v=1788137647839"
   ],
   "slug": "cadena-kmc-k1-wide-perforada-cromada",
+  "order": 50,
   "img": "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizgxueqrd.jpg?v=1788137646277"
  },
  {
@@ -118,7 +174,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAD-FED-001",
   "units": 4,
   "slug": "cadena-federal-escamada-cromada",
-  "order": 20,
+  "order": 40,
   "imgs": [
    "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848",
    "assets/img/products/cadena-federal-escamada-cromada-mtgg5qsac5x5.jpg?v=1788132901516",
@@ -156,13 +212,13 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848"
  },
  {
-  "n": "Cadena Cult Escamada",
+  "n": "Cadena Cult Escamada Cromada",
   "brand": "Cult",
   "cat": "cadenas",
   "spec": "",
   "price": 130000,
   "sku": "CAD-CLT-001",
-  "units": 6,
+  "units": 3,
   "imgs": [
    "assets/img/products/cadena-cult-escamada-cromada-mtgizjdrr5lb.jpg?v=1788137649476",
    "assets/img/products/cadena-cult-escamada-cromada-mtgizkn88ont.jpg?v=1788137651118",
@@ -174,38 +230,6 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "cadena-cult-escamada-cromada",
   "order": 0,
-  "colors": [
-   {
-    "label": "CROMADA",
-    "units": 2,
-    "price": 130000
-   },
-   {
-    "label": "DORADA",
-    "units": 2,
-    "price": 130000
-   },
-   {
-    "label": "NEGRO",
-    "units": 2,
-    "price": 130000
-   }
-  ],
-  "imgColorMap": {
-   "CROMADA": [
-    0,
-    1,
-    2
-   ],
-   "DORADA": [
-    3,
-    4
-   ],
-   "NEGRO": [
-    5,
-    6
-   ]
-  },
   "img": "assets/img/products/cadena-cult-escamada-cromada-mtgizjdrr5lb.jpg?v=1788137649476"
  },
  {
@@ -224,7 +248,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-tall-order-cromada-510-mtgedch8t0du.jpg?v=1788129895973"
   ],
   "slug": "cadena-tall-order-cromada-510",
-  "order": 10,
+  "order": 30,
   "colors": [
    {
     "label": "CROMADA",
