@@ -4858,5 +4858,16 @@ window.ESCENA_AUDIT = [
    "cadena-cult-escamada-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:40:35.922Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "cadena-federal-escamada-cromada",
+   "cadena-cult-escamada-cromada"
+  ],
+  "deleted": []
  }
 ];
