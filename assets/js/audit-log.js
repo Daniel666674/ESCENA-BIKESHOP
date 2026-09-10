@@ -4818,5 +4818,16 @@ window.ESCENA_AUDIT = [
    "plato-fate-guardia-negro-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:20:50.100Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "fiend-pinon-25t-negro",
+   "plato-volume-guardia-28t"
+  ],
+  "deleted": []
  }
 ];
