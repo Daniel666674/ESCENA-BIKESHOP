@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena Federal Escamada Cromada",
+  "brand": "Federal",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 110000,
+  "sku": "CAD-FED-002",
+  "units": 4,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-federal-escamada-cromada-2-mtw488yarepc.jpg?v=1789080322877",
+   "assets/img/products/cadena-federal-escamada-cromada-2-mtw48c3ha47z.jpg?v=1789080335840"
+  ],
+  "slug": "cadena-federal-escamada-cromada-2",
+  "order": 40,
+  "img": "assets/img/products/cadena-federal-escamada-cromada-2-mtw488yarepc.jpg?v=1789080322877"
+ },
+ {
   "n": "Cadena Cult Escamada Dorada",
   "brand": "130000",
   "cat": "cadenas",
@@ -130,7 +147,7 @@ window.ESCENA_PRODUCTS = [
     7
    ]
   },
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
  {
@@ -146,7 +163,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-narrow-cromada-mtgizfpgy0co.jpg?v=1788137644674"
   ],
   "slug": "cadena-kmc-narrow-cromada",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/cadena-kmc-narrow-cromada-mtgize250wp3.jpg?v=1788137643076"
  },
  {
@@ -162,7 +179,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizi6ds84m.jpg?v=1788137647839"
   ],
   "slug": "cadena-kmc-k1-wide-perforada-cromada",
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizgxueqrd.jpg?v=1788137646277"
  },
  {
@@ -174,7 +191,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAD-FED-001",
   "units": 4,
   "slug": "cadena-federal-escamada-cromada",
-  "order": 40,
+  "order": 30,
   "imgs": [
    "assets/img/products/cadena-federal-escamada-cromada-mtgg5ukm037k.jpg?v=1788132905149",
    "assets/img/products/cadena-federal-escamada-cromada-mtgg5vweuflm.jpg?v=1788132907065",
@@ -217,7 +234,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-tall-order-cromada-510-mtgedch8t0du.jpg?v=1788129895973"
   ],
   "slug": "cadena-tall-order-cromada-510",
-  "order": 30,
+  "order": 50,
   "colors": [
    {
     "label": "CROMADA",
