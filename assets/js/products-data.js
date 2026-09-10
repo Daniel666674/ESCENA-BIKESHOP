@@ -166,7 +166,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizgxueqrd.jpg?v=1788137646277"
  },
  {
-  "n": "Cadena Federal Escamada",
+  "n": "Cadena Federal Escamada Negra",
   "brand": "Federal",
   "cat": "cadenas",
   "spec": "",
@@ -176,40 +176,13 @@ window.ESCENA_PRODUCTS = [
   "slug": "cadena-federal-escamada-cromada",
   "order": 40,
   "imgs": [
-   "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848",
-   "assets/img/products/cadena-federal-escamada-cromada-mtgg5qsac5x5.jpg?v=1788132901516",
-   "assets/img/products/cadena-federal-escamada-cromada-mtgg5t3gn0rp.jpg?v=1788132903430",
    "assets/img/products/cadena-federal-escamada-cromada-mtgg5ukm037k.jpg?v=1788132905149",
    "assets/img/products/cadena-federal-escamada-cromada-mtgg5vweuflm.jpg?v=1788132907065",
    "assets/img/products/cadena-federal-escamada-cromada-mtgg5xdljdlp.jpg?v=1788132909059",
    "assets/img/products/cadena-federal-escamada-cromada-mtgg5ywzmqr0.jpg?v=1788132911061"
   ],
-  "colors": [
-   {
-    "label": "CROMADO",
-    "units": 2,
-    "price": 110000
-   },
-   {
-    "label": "NEGRA",
-    "units": 2,
-    "price": 110000
-   }
-  ],
-  "imgColorMap": {
-   "CROMADO": [
-    0,
-    1,
-    2
-   ],
-   "NEGRA": [
-    3,
-    4,
-    5,
-    6
-   ]
-  },
-  "img": "assets/img/products/cadena-federal-escamada-cromada-mtg2nvlxbavl.jpg?v=1788110231848"
+  "imgFit": "cover",
+  "img": "assets/img/products/cadena-federal-escamada-cromada-mtgg5ukm037k.jpg?v=1788132905149"
  },
  {
   "n": "Cadena Cult Escamada Cromada",
@@ -222,11 +195,7 @@ window.ESCENA_PRODUCTS = [
   "imgs": [
    "assets/img/products/cadena-cult-escamada-cromada-mtgizjdrr5lb.jpg?v=1788137649476",
    "assets/img/products/cadena-cult-escamada-cromada-mtgizkn88ont.jpg?v=1788137651118",
-   "assets/img/products/cadena-cult-escamada-cromada-mtgizlwvobs1.jpg?v=1788137652726",
-   "assets/img/products/cadena-cult-escamada-cromada-mtgizn5is4fk.jpg?v=1788137654700",
-   "assets/img/products/cadena-cult-escamada-cromada-mtgizoodol0v.jpg?v=1788137656394",
-   "assets/img/products/cadena-cult-escamada-cromada-mtgizpzf4nw9.jpg?v=1788137658206",
-   "assets/img/products/cadena-cult-escamada-cromada-mtgizrdq0e28.jpg?v=1788137659958"
+   "assets/img/products/cadena-cult-escamada-cromada-mtgizlwvobs1.jpg?v=1788137652726"
   ],
   "slug": "cadena-cult-escamada-cromada",
   "order": 0,
