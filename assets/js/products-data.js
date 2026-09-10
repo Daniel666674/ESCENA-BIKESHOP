@@ -526,7 +526,7 @@ window.ESCENA_PRODUCTS = [
   "price": 9000,
   "sku": "PLT-GWB-003",
   "units": 10,
-  "imgZoom": 134,
+  "imgZoom": 103,
   "imgPos": "50% 50%",
   "sizes": [
    {
@@ -536,6 +536,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-gw-corona-negro-2",
+  "order": 200,
   "img": "assets/img/products/plato-gw-corona-negro-2-mtc2bs5knssc.jpg?v=1788093948129"
  },
  {
@@ -560,6 +561,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-gw-corona-negro",
+  "order": 210,
   "img": "assets/img/products/plato-gw-corona-negro-mtc2btia8ta6.jpg?v=1788093948129"
  },
  {
@@ -578,6 +580,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-gw-kl215-negro",
+  "order": 190,
   "img": "assets/img/products/plato-gw-kl215-negro-mtc2bum5xvex.jpg?v=1788093948129"
  },
  {
@@ -620,7 +623,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-strangergram-guardia-negro-28t",
-  "order": 130,
+  "order": 50,
   "img": "assets/img/products/plato-strangergram-guardia-negro-28t-mtbzwc0q5dmp.jpg?v=1788093948129"
  },
  {
@@ -640,7 +643,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-sunday-sabretooth-v2-negro-28t",
-  "order": 140,
+  "order": 130,
   "img": "assets/img/products/plato-sunday-sabretooth-v2-negro-28t-mtbzlyqatati.jpg?v=1788093948129"
  },
  {
@@ -780,7 +783,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-trueno-exotic",
-  "order": 150,
+  "order": 140,
   "img": "assets/img/products/plato-trueno-exotic-mtby9gou9qqd.jpg?v=1788093948129"
  },
  {
@@ -2742,7 +2745,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-mutanty-diamond-cromado-28t",
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/plato-mutanty-diamond-cromado-28t.jpg?v=1788093948129"
  },
  {
@@ -2764,7 +2767,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-mutanty-diamond-negro-28t",
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/plato-mutanty-diamond-negro-28t.jpg?v=1788093948129"
  },
  {
@@ -2774,15 +2777,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "Aluminio (7075-T6) • Cubierta Nylon • Negro • 28T",
   "price": 200000,
   "sku": "PLT-FED-001",
-  "units": 1,
+  "units": 0,
   "sizes": [
    {
     "label": "28T",
-    "units": 1
+    "units": 0
    }
   ],
   "slug": "plato-federal-logo-guard-28t",
-  "order": 110,
+  "order": 150,
   "img": "assets/img/products/plato-federal-logo-guard-28t.jpg?v=1788093948129"
  },
  {
@@ -4792,7 +4795,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 50,
+  "order": 70,
   "imgs": [
    "assets/img/products/plato-fate-guardia-negro-28t-mtbxajpaxai3.jpg?v=1788093948129",
    "assets/img/products/plato-fate-guardia-negro-28t-mtc1kpwr1mhm.jpg?v=1788093948129"
@@ -6137,8 +6140,8 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 80,
-  "imgZoom": 127,
+  "order": 60,
+  "imgPos": "100% 50%",
   "img": "assets/img/products/pinon-snowflake-plata-mtbxeill8dz3.jpg?v=1788093948129"
  },
  {
@@ -6156,7 +6159,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 60,
+  "order": 80,
   "img": "assets/img/products/cult-pinon-negro-mtbxalh5e2ql.jpg?v=1788093948129"
  },
  {
@@ -6220,7 +6223,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 70,
+  "order": 90,
   "imgs": [
    "assets/img/products/federal-pinon-gris.jpg?v=1788093948129",
    "assets/img/products/federal-pinon-gris-2.jpg?v=1788093948129"
