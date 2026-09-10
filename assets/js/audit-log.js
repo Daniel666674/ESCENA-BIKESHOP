@@ -4743,5 +4743,16 @@ window.ESCENA_AUDIT = [
    "tukanbikes-industrial-raw"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-10T21:51:43.767Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "federal-horquilla-cromada",
+   "tenedor-fiction-shank"
+  ],
+  "deleted": []
  }
 ];
