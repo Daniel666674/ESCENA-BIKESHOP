@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena Tallorder Negra 510",
+  "brand": "Tallorder",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 75000,
+  "sku": "CAD-TAL-002",
+  "units": 5,
+  "imgFit": "cover",
+  "slug": "cadena-tallorder-negra-510",
+  "order": 60,
+  "img": "assets/img/products/cadena-tallorder-negra-510-mtw4ga0rulcf.jpg?v=1789080695989"
+ },
+ {
   "n": "Cadena Federal Escamada Cromada",
   "brand": "Federal",
   "cat": "cadenas",
@@ -147,7 +160,7 @@ window.ESCENA_PRODUCTS = [
     7
    ]
   },
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
  {
@@ -163,7 +176,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-narrow-cromada-mtgizfpgy0co.jpg?v=1788137644674"
   ],
   "slug": "cadena-kmc-narrow-cromada",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/cadena-kmc-narrow-cromada-mtgize250wp3.jpg?v=1788137643076"
  },
  {
@@ -179,7 +192,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizi6ds84m.jpg?v=1788137647839"
   ],
   "slug": "cadena-kmc-k1-wide-perforada-cromada",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizgxueqrd.jpg?v=1788137646277"
  },
  {
@@ -219,46 +232,21 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cadena-cult-escamada-cromada-mtgizjdrr5lb.jpg?v=1788137649476"
  },
  {
-  "n": "CADENA TALL ORDER  510",
-  "brand": "TALL ORDER",
+  "n": "Cadena Tallorder Cromada 510",
+  "brand": "Tallorder",
   "cat": "cadenas",
   "spec": "",
   "price": 75000,
   "sku": "CAD-TAL-001",
-  "units": 4,
+  "units": 5,
   "imgs": [
-   "assets/img/products/cadena-tall-order-cromada-510-mtg1gekyqnyo.jpg?v=1788108203434",
+   "assets/img/products/cadena-tall-order-cromada-510-mtw4gbzpnqu0.jpg?v=1789080697661",
    "assets/img/products/cadena-tall-order-cromada-510-mtg1gctei92f.jpg?v=1788108201682",
-   "assets/img/products/cadena-tall-order-cromada-510-mtg1gfxmz0pn.jpg?v=1788108205196",
-   "assets/img/products/cadena-tall-order-cromada-510-mtgfoblye6xv.jpg?v=1788132088627",
-   "assets/img/products/cadena-tall-order-cromada-510-mtgedch8t0du.jpg?v=1788129895973"
+   "assets/img/products/cadena-tall-order-cromada-510-mtg1gfxmz0pn.jpg?v=1788108205196"
   ],
   "slug": "cadena-tall-order-cromada-510",
   "order": 50,
-  "colors": [
-   {
-    "label": "CROMADA",
-    "units": 2,
-    "price": 75000
-   },
-   {
-    "label": "NEGRA",
-    "units": 2,
-    "price": 75000
-   }
-  ],
-  "imgColorMap": {
-   "CROMADA": [
-    0,
-    1,
-    2
-   ],
-   "NEGRA": [
-    3,
-    4
-   ]
-  },
-  "img": "assets/img/products/cadena-tall-order-cromada-510-mtg1gekyqnyo.jpg?v=1788108203434"
+  "img": "assets/img/products/cadena-tall-order-cromada-510-mtw4gbzpnqu0.jpg?v=1789080697661"
  },
  {
   "n": "Tuerca Seguridad Central",
