@@ -2819,7 +2819,12 @@
     // rewriteStaticPDP() rebuilds this same href on every page load (so it
     // stays right even without a republish), but the generated HTML should
     // already be correct from the start too.
-    var url = "https://escenabmx.com/producto/" + p.slug;
+    // ?v= (from the cover photo's own version) busts WhatsApp/Facebook's
+    // per-URL preview cache — without it, a link already shared before a
+    // photo/og:image fix stays stuck showing whatever got cached the first
+    // time, since the crawler only re-fetches when the URL itself changes.
+    var imgV = (p.imgs && p.imgs[0] && p.imgs[0].indexOf("?v=") > -1) ? p.imgs[0].split("?v=")[1] : null;
+    var url = "https://escenabmx.com/producto/" + p.slug + (imgV ? "?v=" + imgV : "");
     return "https://wa.me/573107630504?text=" + encodeURIComponent(waMsgFor(p) + " ¿Está disponible?\n" + url);
   }
   // Cosmetic-only selector: no per-option stock, just tags the WhatsApp/cart

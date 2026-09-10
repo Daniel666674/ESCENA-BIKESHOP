@@ -213,9 +213,23 @@
   // attach an image directly to a pre-filled message; a URL with correct
   // Open Graph tags is the closest thing WhatsApp supports to "show the
   // actual product, picture and price" in the message itself.
+  //
+  // A bare canonical URL isn't enough on its own: WhatsApp/Facebook's crawler
+  // caches the unfurled preview PER EXACT URL, and that cache is sticky — once
+  // a broken preview (e.g. a 404'd og:image, like every page had before this
+  // fix) is cached against a URL, just fixing the server doesn't make
+  // WhatsApp re-fetch it. Any product link already shared/tested stays stuck
+  // showing the old broken preview indefinitely. Appending a ?v= tied to the
+  // product's own photo version makes each product's URL change whenever its
+  // cover photo does, so WhatsApp always treats it as a URL it hasn't seen
+  // and crawls fresh instead of serving a stale cached card.
   function pdpCanonicalUrl() {
     var link = document.querySelector('link[rel="canonical"]');
-    return (link && link.getAttribute("href")) || location.href;
+    var url = (link && link.getAttribute("href")) || location.href;
+    var btn = document.querySelector(".pdp-actions .add-cart-btn[data-img]");
+    var img = btn && btn.getAttribute("data-img");
+    var v = img && img.indexOf("?v=") > -1 ? img.split("?v=")[1] : null;
+    return v ? (url + "?v=" + v) : url;
   }
 
   function rewriteStaticPDP() {
