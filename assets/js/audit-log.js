@@ -4683,5 +4683,15 @@ window.ESCENA_AUDIT = [
    "brainstorm-freecoaster-kit-01",
    "brainstorm-freecoaster-kit-04"
   ]
+ },
+ {
+  "ts": "2026-09-10T21:10:01.729Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "fiend-reynolds-v3-negro"
+  ],
+  "deleted": []
  }
 ];
