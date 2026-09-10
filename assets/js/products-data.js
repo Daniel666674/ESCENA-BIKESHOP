@@ -3254,13 +3254,16 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20”",
     "units": 0,
-    "price": 370000
+    "price": 370000,
+    "cost": 296000
    }
   ],
   "colors": [
    {
     "label": "Gris",
-    "units": 1
+    "units": 1,
+    "price": 370000,
+    "cost": 296000
    }
   ],
   "slug": "marco-profit-culver-gris-cromolio",
@@ -6759,7 +6762,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Fate",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.4\"–20.75\" (dropout ajustable) · Negro",
-  "price": 1320000,
+  "price": 1300000,
   "sku": "FATE-NAMASTE-NEGRO",
   "units": 2,
   "sizes": [
@@ -6819,7 +6822,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Soldadura TIC - MIG · Tubo superior 20.4\" - 20.75\" - 21\"",
   "price": 360000,
   "sku": "TUKANBIKES-INDUSTRIAL-RAW",
-  "units": 4,
+  "units": 2,
   "imgs": [
    "assets/img/products/tukanbikes-industrial-raw.jpg?v=1788093948129",
    "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1788093948129",
@@ -6829,18 +6832,36 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "20.4\" - 20.75\" - 21\"",
-    "units": 4
+    "label": "20.4\"",
+    "units": 0,
+    "price": 360000,
+    "cost": 288000
+   },
+   {
+    "label": "20.75\"",
+    "units": 1,
+    "price": 360000,
+    "cost": 288000
+   },
+   {
+    "label": "21\"",
+    "units": 1,
+    "price": 360000,
+    "cost": 288000
    }
   ],
   "colors": [
    {
     "label": "Azul / Industrial",
-    "units": 2
+    "units": 2,
+    "price": 360000,
+    "cost": 288000
    },
    {
     "label": "Morado / Industrial",
-    "units": 2
+    "units": 2,
+    "price": 360000,
+    "cost": 288000
    }
   ],
   "imgColorMap": {
