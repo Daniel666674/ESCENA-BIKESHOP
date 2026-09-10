@@ -4839,5 +4839,24 @@ window.ESCENA_AUDIT = [
    "odyssey-pinon-28t-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:39:13.874Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 6 productos editados, 9 fotos subidas",
+  "created": [
+   "cadena-cult-escamada-dorada",
+   "cadena-cult-escamada-negra-2",
+   "cadena-cult-escamada-negra"
+  ],
+  "edited": [
+   "cadena-kmc-k1-wide-perforada-cromada",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-410-negra",
+   "cadena-federal-escamada-cromada",
+   "cadena-tall-order-cromada-510",
+   "cadena-cult-escamada-cromada"
+  ],
+  "deleted": []
  }
 ];
