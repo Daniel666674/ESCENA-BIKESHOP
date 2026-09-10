@@ -4731,5 +4731,17 @@ window.ESCENA_AUDIT = [
    "marco-gw-destructor-morado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-10T21:34:32.210Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "fate-namaste-negro",
+   "marco-profit-culver-gris-cromolio",
+   "tukanbikes-industrial-raw"
+  ],
+  "deleted": []
  }
 ];
