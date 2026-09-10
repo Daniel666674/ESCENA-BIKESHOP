@@ -4672,7 +4672,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 40,
-  "imgZoom": 118,
+  "imgPos": "100% 50%",
   "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1788093948129"
  },
  {
@@ -6205,7 +6205,8 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/fiend-pinon-25t-negro.jpg?v=1788093948129",
    "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1788093948129"
   ],
-  "imgZoom": 128,
+  "imgZoom": 108,
+  "imgPos": "0% 50%",
   "img": "assets/img/products/fiend-pinon-25t-negro.jpg?v=1788093948129"
  },
  {
