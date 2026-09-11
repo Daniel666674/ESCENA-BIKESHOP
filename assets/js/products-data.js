@@ -239,6 +239,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "cadena-kmc-410-negra",
   "order": 120,
+  "imgZoom": 137,
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
  {
