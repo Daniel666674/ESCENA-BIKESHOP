@@ -198,15 +198,20 @@
        ever needed, whatever mix of shapes gets uploaded next. */
     .hero { position: relative; background: var(--ink); overflow: hidden;
       padding: calc(var(--hero-header-offset, 0px) + 1rem) 0 2.4rem; }
-    .hero-wrap { width: 100%; max-width: 1500px; margin: 0 auto; padding: 0 1.5rem; }
-    .hero-promos-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .85rem; }
+    /* Full bleed on purpose: no max-width and no side padding, so the promo
+       row reaches both edges of the viewport with no dark margin beside it.
+       Only the little heading line is inset, so its text doesn't touch the
+       edge of the screen. */
+    .hero-wrap { width: 100%; }
+    .hero-promos-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+      margin-bottom: .7rem; padding: 0 1.5rem; }
     .hero-promos-head .eyebrow { color: var(--promo); font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; font-weight: 800; }
     .hero-promos-head a { color: rgba(255,255,255,.58); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
     .hero-promos-head a:hover { color: #fff; }
     /* flex-grow set to each card's own aspect ratio against a zero basis makes
        every width proportional to its ratio — which is exactly what makes the
        heights come out identical. Don't give these a flex-basis. */
-    .hero-promos { display: flex; gap: .9rem; align-items: flex-start; }
+    .hero-promos { display: flex; gap: 6px; align-items: flex-start; }
     .hero-promo { flex: var(--r, 1) 1 0; min-width: 0; display: block; text-decoration: none;
       background: #111; overflow: hidden; position: relative; transition: transform .25s ease; }
     .hero-promo:hover { transform: translateY(-4px); }
@@ -249,6 +254,7 @@
          hero compact, for any number of them. */
       .hero-promos { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
         scrollbar-width: none; padding-bottom: .2rem; }
+      .hero-promos-head { padding: 0 1.1rem; }
       .hero-promos::-webkit-scrollbar { display: none; }
       .hero-promo { flex: none; scroll-snap-align: start; }
       .hero-promo img, .hero-promo video { height: 228px; width: auto; }
