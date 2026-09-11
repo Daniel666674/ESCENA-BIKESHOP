@@ -5153,5 +5153,24 @@ window.ESCENA_AUDIT = [
    "pedales-demolition"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T22:41:57.557Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 7 productos editados, 2 fotos subidas",
+  "created": [
+   "pedales-cinema-tilt-plate-negro",
+   "pedales-cinema-tilt-negro"
+  ],
+  "edited": [
+   "pedales-metal-negro-01",
+   "pedales-demolition",
+   "pedales-plataforma-negro-01",
+   "pedales-fate-negro",
+   "pedales-wellgo-negro",
+   "pedales-odyssey-twist-pro",
+   "pedales-cult-dak-negro"
+  ],
+  "deleted": []
  }
 ];
