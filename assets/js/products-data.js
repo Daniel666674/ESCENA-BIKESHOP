@@ -567,7 +567,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Nylon -  una altura más delgada y más cóncavo",
   "price": 95000,
   "sku": "PED-ODY-003",
-  "units": 4,
+  "units": 9,
   "imgs": [
    "assets/img/products/pedales-odyssey-twist-pro-mtc6h2h7p3j0.jpg?v=1788093948129",
    "assets/img/products/pedales-odyssey-twist-pro-mtc6h463dvh1.jpg?v=1788093948129",
@@ -577,27 +577,24 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Rosado",
-    "units": 2,
-    "price": 95000
+    "units": 2
    },
    {
     "label": "Morado",
-    "units": 2,
-    "price": 95000
+    "units": 2
    },
    {
     "label": "Negro/Morado",
-    "units": 0,
-    "price": 95000
+    "units": 0
    },
    {
     "label": "Negro",
-    "units": 0,
-    "price": 95000
+    "units": 5
    }
   ],
   "slug": "pedales-odyssey-twist-pro",
   "order": 20,
+  "imgFit": "cover",
   "img": "assets/img/products/pedales-odyssey-twist-pro-mtc6h2h7p3j0.jpg?v=1788093948129"
  },
  {
