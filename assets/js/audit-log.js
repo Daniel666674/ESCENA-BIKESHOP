@@ -5143,5 +5143,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "pedales-stolen"
   ]
+ },
+ {
+  "ts": "2026-09-11T22:23:49.228Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "pedales-demolition"
+  ],
+  "deleted": []
  }
 ];
