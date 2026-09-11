@@ -4946,5 +4946,15 @@ window.ESCENA_AUDIT = [
    "odyssey-cadena-caja",
    "cadena-cinema-escamada-negra-2"
   ]
+ },
+ {
+  "ts": "2026-09-11T20:44:19.059Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "cadena-bsd-forever-cromada"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
