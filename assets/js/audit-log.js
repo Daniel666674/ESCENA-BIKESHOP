@@ -5088,5 +5088,15 @@ window.ESCENA_AUDIT = [
    "manzana-primo-n4fl"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T22:00:36.689Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "manzana-delantera-alienation-venus"
+  ],
+  "deleted": []
  }
 ];
