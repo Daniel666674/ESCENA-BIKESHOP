@@ -24,6 +24,7 @@ window.ESCENA_PRODUCTS = [
   "price": 90000,
   "sku": "PED-BSD-001",
   "units": 2,
+  "imgFit": "cover",
   "imgs": [
    "assets/img/products/pedales-bsd-safari-negro-mtxjyorwbvbi.jpg?v=1789167214706",
    "assets/img/products/pedales-bsd-safari-negro-mtxjyq9esuc5.jpg?v=1789167216749"
@@ -40,6 +41,7 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "PED-130-001",
   "units": 1,
+  "imgFit": "cover",
   "imgZoom": 136,
   "imgPos": "50% 50%",
   "slug": "pedales-cinema-tilt-plate-negro",
@@ -54,6 +56,7 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "PED-CIN-001",
   "units": 1,
+  "imgFit": "cover",
   "slug": "pedales-cinema-tilt-negro",
   "order": 50,
   "img": "assets/img/products/pedales-cinema-tilt-negro-mtxjjj3zb35i.jpg?v=1789166507478"
@@ -654,6 +657,20 @@ window.ESCENA_PRODUCTS = [
   "slug": "pedales-odyssey-twist-pro",
   "order": 30,
   "imgFit": "cover",
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Rosado": [
+    1
+   ],
+   "Morado": [
+    2
+   ],
+   "Negro/Morado": [
+    3
+   ]
+  },
   "img": "assets/img/products/pedales-odyssey-twist-pro-mtc6h2h7p3j0.jpg?v=1788093948129"
  },
  {
@@ -667,6 +684,7 @@ window.ESCENA_PRODUCTS = [
   "imgPos": "50% 50%",
   "slug": "pedales-cult-dak-negro",
   "order": 20,
+  "imgFit": "cover",
   "img": "assets/img/products/pedales-cult-dak-negro-mtc46ewguvsa.jpg?v=1788093948129"
  },
  {
@@ -679,6 +697,7 @@ window.ESCENA_PRODUCTS = [
   "units": 4,
   "slug": "pedales-odyssey-grandstand-v2-aluminio-negro",
   "order": 0,
+  "imgFit": "cover",
   "img": "assets/img/products/pedales-odyssey-grandstand-v2-aluminio-negro-mtc46glkgm27.jpg?v=1788093948129"
  },
  {
@@ -4709,6 +4728,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1788093948129"
   ],
   "order": 90,
+  "imgFit": "cover",
   "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1788093948129"
  },
  {
@@ -4981,6 +5001,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PED-FAT-001",
   "units": 4,
   "order": 80,
+  "imgFit": "cover",
   "img": "assets/img/products/pedales-fate-negro-mtxk1vjpiakf.jpg?v=1789167365435"
  },
  {
@@ -6090,18 +6111,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/stolen-sillin-negro.jpg?v=1788093948129"
  },
  {
-  "slug": "pedales-plataforma-negro-01",
-  "n": "Pedales Plataforma Negro",
-  "brand": "",
-  "cat": "pedales",
-  "spec": "Plataforma nylon · 12 pines · Negro",
-  "price": 95000,
-  "sku": "PEDALES-PLATAFORMA-NEGRO-01",
-  "units": 12,
-  "order": 60,
-  "img": "assets/img/products/pedales-plataforma-negro-01.jpg?v=1788093948129"
- },
- {
   "slug": "pedales-metal-negro-01",
   "n": "Pedales Federal Command Negro",
   "brand": "Federal",
@@ -6111,6 +6120,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PEDALES-METAL-NEGRO-01",
   "units": 5,
   "order": 40,
+  "imgFit": "cover",
   "img": "assets/img/products/pedales-metal-negro-01-mtxiv4hz9yb6.jpg?v=1789165368966"
  },
  {
