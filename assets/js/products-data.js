@@ -608,7 +608,6 @@ window.ESCENA_PRODUCTS = [
   "price": 85000,
   "sku": "PED-850-001",
   "units": 5,
-  "imgZoom": 116,
   "imgPos": "50% 50%",
   "slug": "pedales-cult-dak-negro",
   "order": 10,
