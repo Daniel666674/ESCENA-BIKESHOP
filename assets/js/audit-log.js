@@ -4914,5 +4914,37 @@ window.ESCENA_AUDIT = [
    "cadena-kmc-410-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T20:27:05.273Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 13 productos editados, 7 productos eliminados, 1 foto subida",
+  "created": [
+   "cadena-cinema-escamada-negra"
+  ],
+  "edited": [
+   "cadena-kmc-410-negra-2",
+   "cadena-kmc-410-roja",
+   "cadena-kmc-410-azul",
+   "cadena-kmc-410-negra",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-k1-wide-perforada-cromada",
+   "cadena-tallorder-negra-510",
+   "cadena-tall-order-cromada-510",
+   "cadena-federal-escamada-cromada-2",
+   "cadena-federal-escamada-cromada",
+   "cadena-cult-escamada-dorada",
+   "cadena-cult-escamada-negra-2",
+   "cadena-cult-escamada-cromada"
+  ],
+  "deleted": [
+   "cadena-cult-escamada-negra",
+   "plato-fitbikeco",
+   "mutany-eje-pedalier-p25",
+   "eslabones-cadena-sueltos",
+   "iron-fist-amarres-cable",
+   "odyssey-cadena-caja",
+   "cadena-cinema-escamada-negra-2"
+  ]
  }
 ];
