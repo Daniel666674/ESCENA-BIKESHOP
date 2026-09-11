@@ -5098,5 +5098,15 @@ window.ESCENA_AUDIT = [
    "manzana-delantera-alienation-venus"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T22:04:51.359Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "pedales-cult-dak-negro"
+  ],
+  "deleted": []
  }
 ];
