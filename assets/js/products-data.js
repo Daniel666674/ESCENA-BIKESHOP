@@ -1,5 +1,30 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Cinema TILT+ Plate Negro",
+  "brand": "130000",
+  "cat": "pedales",
+  "spec": "",
+  "price": 130000,
+  "sku": "PED-130-001",
+  "units": 1,
+  "imgZoom": 105,
+  "slug": "pedales-cinema-tilt-plate-negro",
+  "order": 10,
+  "img": "assets/img/products/pedales-cinema-tilt-plate-negro-mtxjjgnt9jrd.jpg?v=1789166505599"
+ },
+ {
+  "n": "Pedales Cinema TILT Negro",
+  "brand": "Cinema",
+  "cat": "pedales",
+  "spec": "",
+  "price": 95000,
+  "sku": "PED-CIN-001",
+  "units": 1,
+  "slug": "pedales-cinema-tilt-negro",
+  "order": 60,
+  "img": "assets/img/products/pedales-cinema-tilt-negro-mtxjjj3zb35i.jpg?v=1789166507478"
+ },
+ {
   "n": "Manzana Delantera Cult Crew Cromada",
   "brand": "Cult",
   "cat": "manzana-delantera",
@@ -593,7 +618,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "pedales-odyssey-twist-pro",
-  "order": 20,
+  "order": 30,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-odyssey-twist-pro-mtc6h2h7p3j0.jpg?v=1788093948129"
  },
@@ -607,7 +632,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgPos": "50% 50%",
   "slug": "pedales-cult-dak-negro",
-  "order": 10,
+  "order": 20,
   "img": "assets/img/products/pedales-cult-dak-negro-mtc46ewguvsa.jpg?v=1788093948129"
  },
  {
@@ -5391,7 +5416,7 @@ window.ESCENA_PRODUCTS = [
     6
    ]
   },
-  "order": 60,
+  "order": 50,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-demolition.jpg?v=1788093948129"
  },
@@ -6126,7 +6151,7 @@ window.ESCENA_PRODUCTS = [
   "price": 85000,
   "sku": "PEDALES-METAL-NEGRO-01",
   "units": 5,
-  "order": 50,
+  "order": 40,
   "img": "assets/img/products/pedales-metal-negro-01-mtxiv4hz9yb6.jpg?v=1789165368966"
  },
  {
