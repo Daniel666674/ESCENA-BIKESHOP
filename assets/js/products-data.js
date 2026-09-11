@@ -5392,6 +5392,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "order": 60,
+  "imgFit": "cover",
   "img": "assets/img/products/pedales-demolition.jpg?v=1788093948129"
  },
  {
