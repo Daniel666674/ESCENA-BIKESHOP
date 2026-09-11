@@ -40,7 +40,7 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "PED-130-001",
   "units": 1,
-  "imgZoom": 108,
+  "imgZoom": 136,
   "imgPos": "50% 50%",
   "slug": "pedales-cinema-tilt-plate-negro",
   "order": 10,
