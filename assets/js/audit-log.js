@@ -5189,5 +5189,16 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "pedales-demolition"
   ]
+ },
+ {
+  "ts": "2026-09-11T22:56:14.256Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "pedales-fate-negro",
+   "pedales-cinema-tilt-plate-negro"
+  ],
+  "deleted": []
  }
 ];
