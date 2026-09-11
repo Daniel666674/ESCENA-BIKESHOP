@@ -5172,5 +5172,22 @@ window.ESCENA_AUDIT = [
    "pedales-cult-dak-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T22:53:48.807Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 4 productos editados, 1 producto eliminado, 2 fotos subidas",
+  "created": [
+   "pedales-bsd-safari-negro"
+  ],
+  "edited": [
+   "pedales-cinema-tilt-negro",
+   "pedales-plataforma-negro-01",
+   "pedales-fate-negro",
+   "pedales-wellgo-negro"
+  ],
+  "deleted": [
+   "pedales-demolition"
+  ]
  }
 ];
