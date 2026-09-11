@@ -243,27 +243,30 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
  {
-  "n": "Cadena KMC Narrow cromada",
+  "n": "Cadenilla KMC Narrow K1",
   "brand": "KMC",
   "cat": "cadenas",
-  "spec": "",
+  "spec": "cadenilla para racing 1/2 x 3/32",
   "price": 75000,
   "sku": "CAD-KMC-002",
   "units": 2,
   "imgs": [
-   "assets/img/products/cadena-kmc-narrow-cromada-mtgize250wp3.jpg?v=1788137643076",
-   "assets/img/products/cadena-kmc-narrow-cromada-mtgizfpgy0co.jpg?v=1788137644674"
+   "assets/img/products/cadena-kmc-narrow-cromada-mtxh984u3elm.jpg?v=1789162667682",
+   "assets/img/products/cadena-kmc-narrow-cromada-mtgizfpgy0co.jpg?v=1788137644674",
+   "assets/img/products/cadena-kmc-narrow-cromada-mtxh99r68xo6.jpg?v=1789162669730"
   ],
   "slug": "cadena-kmc-narrow-cromada",
   "order": 100,
-  "img": "assets/img/products/cadena-kmc-narrow-cromada-mtgize250wp3.jpg?v=1788137643076"
+  "imgFit": "cover",
+  "imgPos": "50% 100%",
+  "img": "assets/img/products/cadena-kmc-narrow-cromada-mtxh984u3elm.jpg?v=1789162667682"
  },
  {
   "n": "Cadena KMC K1SL Wide perforada cromada",
   "brand": "KMC",
   "cat": "cadenas",
   "spec": "",
-  "price": 80000,
+  "price": 85000,
   "sku": "CAD-KMC-001",
   "units": 5,
   "imgs": [
