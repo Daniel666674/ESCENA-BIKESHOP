@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena CargoChain C410 Cromada",
+  "brand": "Cargo",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 13000,
+  "sku": "CAD-CAR-001",
+  "units": 10,
+  "imgFit": "cover",
+  "slug": "cadena-cargochain-c410-cromada",
+  "img": "assets/img/products/cadena-cargochain-c410-cromada-mtxg7nb76gie.jpg?v=1789160914050"
+ },
+ {
   "n": "Cadena TEC 410 Negra",
   "brand": "TEC",
   "cat": "cadenas",
