@@ -23,7 +23,8 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "PED-130-001",
   "units": 1,
-  "imgZoom": 105,
+  "imgZoom": 108,
+  "imgPos": "50% 50%",
   "slug": "pedales-cinema-tilt-plate-negro",
   "order": 10,
   "img": "assets/img/products/pedales-cinema-tilt-plate-negro-mtxjjgnt9jrd.jpg?v=1789166505599"
@@ -4961,9 +4962,9 @@ window.ESCENA_PRODUCTS = [
   "spec": "Negro",
   "price": 65000,
   "sku": "PED-FAT-001",
-  "units": 2,
+  "units": 4,
   "order": 80,
-  "img": "assets/img/products/pedales-fate-negro.jpg?v=1788093948129"
+  "img": "assets/img/products/pedales-fate-negro-mtxk1vjpiakf.jpg?v=1789167365435"
  },
  {
   "slug": "silla-pivotal-fiend-reynolds-v2-zebra",
