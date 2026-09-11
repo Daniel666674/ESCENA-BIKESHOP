@@ -1,5 +1,31 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Delantera Cult Crew Cromada",
+  "brand": "Cult",
+  "cat": "manzana-delantera",
+  "spec": "",
+  "price": 340000,
+  "sku": "MZD-CLT-002",
+  "units": 1,
+  "imgZoom": 119,
+  "slug": "manzana-delantera-cult-crew-cromada",
+  "order": 40,
+  "img": "assets/img/products/manzana-delantera-cult-crew-cromada-mtxhnpgd3tlc.jpg?v=1789163343438"
+ },
+ {
+  "n": "Manzana Alienation Iluminiati Cromada",
+  "brand": "Alienation",
+  "cat": "manzana-delantera",
+  "spec": "",
+  "price": 300000,
+  "sku": "MZD-ALI-003",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "manzana-alienation-iluminiati-cromada",
+  "order": 90,
+  "img": "assets/img/products/manzana-alienation-iluminiati-cromada-mtxhnr66oj40.jpg?v=1789163345261"
+ },
+ {
   "n": "Cadena CargoChain C410 Negra",
   "brand": "Cargo",
   "cat": "cadenas",
@@ -1487,10 +1513,6 @@ window.ESCENA_PRODUCTS = [
   "price": 30000,
   "sku": "MZD-ONT-001",
   "units": 2,
-  "imgs": [
-   "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt944793fgxt.jpg?v=1788093948129",
-   "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt9448lutrmz.jpg?v=1788093948129"
-  ],
   "colors": [
    {
     "label": "Verde",
@@ -1506,16 +1528,13 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "manzana-delantera-ontrail-nemesis-2",
-  "order": 110,
+  "order": 130,
   "imgColorMap": {
    "Verde": [
     0
-   ],
-   "Azul": [
-    1
    ]
   },
-  "img": "assets/img/products/manzana-delantera-ontrail-nemesis-2-mt944793fgxt.jpg?v=1788093948129"
+  "img": "assets/img/products/manzana-delantera-ontrail-nemesis-2-mtxhnsktb5sm.jpg?v=1789163346558"
  },
  {
   "n": "Manzana Delantera Ontrail Nemesis",
@@ -1530,6 +1549,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/manzana-delantera-ontrail-nemesis-mt93v0616r69.jpg?v=1788093948129"
   ],
   "slug": "manzana-delantera-ontrail-nemesis",
+  "order": 140,
   "img": "assets/img/products/manzana-delantera-ontrail-nemesis-mt93uz21jwkf.jpg?v=1788093948129"
  },
  {
@@ -1545,7 +1565,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/manzana-delantera-alienation-venus-mt93j518pdte.jpg?v=1788093948129"
   ],
   "slug": "manzana-delantera-alienation-venus",
-  "order": 50,
+  "order": 70,
   "img": "assets/img/products/manzana-delantera-alienation-venus-mt93j3fo43r2.jpg?v=1788093948129"
  },
  {
@@ -1557,7 +1577,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-PRM-002",
   "units": 1,
   "slug": "manzana-delantera-primo-balance",
-  "order": 80,
+  "order": 100,
   "img": "assets/img/products/manzana-delantera-primo-balance-mt93b5l7in31.jpg?v=1788093948129"
  },
  {
@@ -1595,7 +1615,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 90,
+  "order": 110,
   "img": "assets/img/products/manzana-delantera-stranger-ballast-mt938rrdl4mp.jpg?v=1788093948129"
  },
  {
@@ -1603,7 +1623,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Alienation",
   "cat": "manzana-delantera",
   "spec": "",
-  "price": 280000,
+  "price": 300000,
   "sku": "MZD-ALI-001",
   "units": 2,
   "imgs": [
@@ -1633,7 +1653,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "manzana-delantera-alienation-illunimati",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/manzana-delantera-alienation-illunimati-mt91423bar53.jpg?v=1788093948129"
  },
  {
@@ -2006,7 +2026,7 @@ window.ESCENA_PRODUCTS = [
     3
    ]
   },
-  "order": 100,
+  "order": 120,
   "img": "assets/img/products/manzana-optimus-gold-mt4mqe06ty10.jpg?v=1788093948129"
  },
  {
@@ -2018,7 +2038,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-PRM-001",
   "units": 1,
   "slug": "manzana-primo-n4fl",
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/manzana-primo-n4fl-mt91bhy75izw.jpg?v=1788093948129"
  },
  {
