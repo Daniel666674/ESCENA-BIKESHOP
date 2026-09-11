@@ -1,5 +1,122 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena TEC 410 Negra",
+  "brand": "TEC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 15000,
+  "sku": "CAD-TEC-001",
+  "units": 5,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-tec-410-negra-mtxg4xt1j4x7.jpg?v=1789160787794",
+   "assets/img/products/cadena-tec-410-negra-mtxg4z824ulm.jpg?v=1789160789583"
+  ],
+  "slug": "cadena-tec-410-negra",
+  "img": "assets/img/products/cadena-tec-410-negra-mtxg4xt1j4x7.jpg?v=1789160787794"
+ },
+ {
+  "n": "Cadena BSD Forever Negra",
+  "brand": "BSD",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 95000,
+  "sku": "CAD-BSD-002",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-bsd-forever-negra-mtxg2khjk9yt.jpg?v=1789160677369",
+   "assets/img/products/cadena-bsd-forever-negra-mtxg2m0pjnd3.jpg?v=1789160678847"
+  ],
+  "imgPos": "0% 50%",
+  "slug": "cadena-bsd-forever-negra",
+  "img": "assets/img/products/cadena-bsd-forever-negra-mtxg2khjk9yt.jpg?v=1789160677369"
+ },
+ {
+  "n": "Cadena BSD Forever Cromada",
+  "brand": "BSD",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 95000,
+  "sku": "CAD-BSD-001",
+  "units": 1,
+  "slug": "cadena-bsd-forever-cromada",
+  "imgs": [
+   "assets/img/products/cadena-bsd-forever-cromada-mtxfccb9a826.jpg?v=1789159454416",
+   "assets/img/products/cadena-bsd-forever-cromada-mtxg50lruy50.jpg?v=1789160791102"
+  ],
+  "order": 60,
+  "imgPos": "50% 50%",
+  "img": "assets/img/products/cadena-bsd-forever-cromada-mtxfccb9a826.jpg?v=1789159454416"
+ },
+ {
+  "n": "Cadena Cinema Escamada Negra",
+  "brand": "Cinema",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 145000,
+  "sku": "CAD-CIN-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgZoom": 106,
+  "slug": "cadena-cinema-escamada-negra",
+  "order": 0,
+  "img": "assets/img/products/cadena-cinema-escamada-negra-mtxeq4rov2yj.jpg?v=1789158417785"
+ },
+ {
+  "n": "Cadena KMC 410 Negra",
+  "brand": "KMC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 26000,
+  "sku": "CAD-KMC-006",
+  "units": 5,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-kmc-410-negra-2-mtxe89eu7h3g.jpg?v=1789157583806",
+   "assets/img/products/cadena-kmc-410-negra-2-mtxe8b0febsy.jpg?v=1789157585528"
+  ],
+  "slug": "cadena-kmc-410-negra-2",
+  "order": 120,
+  "img": "assets/img/products/cadena-kmc-410-negra-2-mtxe89eu7h3g.jpg?v=1789157583806"
+ },
+ {
+  "n": "Cadena KMC 410 Roja",
+  "brand": "KMC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 26000,
+  "sku": "CAD-KMC-005",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-kmc-410-roja-mtxe8cc8hrtb.jpg?v=1789157587601",
+   "assets/img/products/cadena-kmc-410-roja-mtxe8dxt8er5.jpg?v=1789157589188",
+   "assets/img/products/cadena-kmc-410-roja-mtxe8f5w0scc.jpg?v=1789157590913"
+  ],
+  "slug": "cadena-kmc-410-roja",
+  "order": 130,
+  "img": "assets/img/products/cadena-kmc-410-roja-mtxe8cc8hrtb.jpg?v=1789157587601"
+ },
+ {
+  "n": "Cadena KMC 410 Azul",
+  "brand": "KMC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 26000,
+  "sku": "CAD-KMC-004",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-kmc-410-azul-mtxe8ghtx6lc.jpg?v=1789157593039",
+   "assets/img/products/cadena-kmc-410-azul-mtxe8i4vhvtc.jpg?v=1789157595195",
+   "assets/img/products/cadena-kmc-410-azul-mtxe8jsre2o9.jpg?v=1789157597455"
+  ],
+  "slug": "cadena-kmc-410-azul",
+  "order": 140,
+  "img": "assets/img/products/cadena-kmc-410-azul-mtxe8ghtx6lc.jpg?v=1789157593039"
+ },
+ {
   "n": "Cadena Tallorder Negra 510",
   "brand": "Tallorder",
   "cat": "cadenas",
@@ -9,7 +126,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "cadena-tallorder-negra-510",
-  "order": 60,
+  "order": 80,
   "img": "assets/img/products/cadena-tallorder-negra-510-mtw4ga0rulcf.jpg?v=1789080695989"
  },
  {
@@ -26,7 +143,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-federal-escamada-cromada-2-mtw48c3ha47z.jpg?v=1789080335840"
   ],
   "slug": "cadena-federal-escamada-cromada-2",
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/cadena-federal-escamada-cromada-2-mtw488yarepc.jpg?v=1789080322877"
  },
  {
@@ -44,7 +161,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-cult-escamada-dorada-mtw3z5ycs37g.jpg?v=1789079901965"
   ],
   "slug": "cadena-cult-escamada-dorada",
-  "order": 20,
+  "order": 30,
   "img": "assets/img/products/cadena-cult-escamada-dorada-mtw3yz84x735.jpg?v=1789079892193"
  },
  {
@@ -62,25 +179,8 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-cult-escamada-negra-2-mtw3zj0yo2p2.jpg?v=1789079922497"
   ],
   "slug": "cadena-cult-escamada-negra-2",
-  "order": 10,
+  "order": 20,
   "img": "assets/img/products/cadena-cult-escamada-negra-2-mtw3zbbh8abj.jpg?v=1789079907964"
- },
- {
-  "n": "Cadena Cult Escamada Negra",
-  "brand": "130000",
-  "cat": "piezas",
-  "spec": "el Cult La cadena de medio eslabón - revestimiento de teflón con grabado Cult logotipos - Peso: 320 g/11,3 oz.",
-  "price": 130000,
-  "sku": "PZA-130-001",
-  "units": 0,
-  "imgFit": "cover",
-  "imgs": [
-   "assets/img/products/cadena-cult-escamada-negra-mtw3zr5t6qgh.jpg?v=1789079925217",
-   "assets/img/products/cadena-cult-escamada-negra-mtw3zt9do6xp.jpg?v=1789079929687",
-   "assets/img/products/cadena-cult-escamada-negra-mtw3zwpj4bke.jpg?v=1789079932720"
-  ],
-  "slug": "cadena-cult-escamada-negra",
-  "img": "assets/img/products/cadena-cult-escamada-negra-mtw3zr5t6qgh.jpg?v=1789079925217"
  },
  {
   "n": "Llanta Innova Pro Gris 2.40\"",
@@ -102,65 +202,20 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/llanta-innova-pro-gris-2-40-mtw344eh68fb.jpg?v=1789078448788"
  },
  {
-  "n": "Cadena KMC 410",
+  "n": "Cadena KMC 410 Cromada",
   "brand": "KMC",
   "cat": "cadenas",
   "spec": "",
   "price": 26000,
   "sku": "CAD-KMC-003",
-  "units": 8,
+  "units": 20,
   "imgs": [
    "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697",
    "assets/img/products/cadena-kmc-410-negra-mtgkct6x6085.jpg?v=1788139948643",
-   "assets/img/products/cadena-kmc-410-negra-mtgkcuoz3zrd.jpg?v=1788139950171",
-   "assets/img/products/cadena-kmc-410-negra-mtgkcvvf39c6.jpg?v=1788139952259",
-   "assets/img/products/cadena-kmc-410-negra-mtgkcxhfyoeb.jpg?v=1788139954776",
-   "assets/img/products/cadena-kmc-410-negra-mtgkczfcanqm.jpg?v=1788139956420",
-   "assets/img/products/cadena-kmc-410-negra-mtgkd0p0iitw.jpg?v=1788139958685",
-   "assets/img/products/cadena-kmc-410-negra-mtgkd2fxr9gu.jpg?v=1788139961078"
+   "assets/img/products/cadena-kmc-410-negra-mtxe8ljjteec.jpg?v=1789157599073"
   ],
   "slug": "cadena-kmc-410-negra",
-  "colors": [
-   {
-    "label": "NEGRA",
-    "units": 2,
-    "price": 26000
-   },
-   {
-    "label": "CROMADA",
-    "units": 2,
-    "price": 26000
-   },
-   {
-    "label": "ROJA",
-    "units": 2,
-    "price": 26000
-   },
-   {
-    "label": "AZUL",
-    "units": 2,
-    "price": 26000
-   }
-  ],
-  "imgColorMap": {
-   "CROMADA": [
-    0,
-    1
-   ],
-   "NEGRA": [
-    2,
-    3
-   ],
-   "ROJA": [
-    4,
-    5
-   ],
-   "AZUL": [
-    6,
-    7
-   ]
-  },
-  "order": 90,
+  "order": 120,
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
  {
@@ -176,7 +231,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-narrow-cromada-mtgizfpgy0co.jpg?v=1788137644674"
   ],
   "slug": "cadena-kmc-narrow-cromada",
-  "order": 80,
+  "order": 100,
   "img": "assets/img/products/cadena-kmc-narrow-cromada-mtgize250wp3.jpg?v=1788137643076"
  },
  {
@@ -192,7 +247,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizi6ds84m.jpg?v=1788137647839"
   ],
   "slug": "cadena-kmc-k1-wide-perforada-cromada",
-  "order": 70,
+  "order": 90,
   "img": "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizgxueqrd.jpg?v=1788137646277"
  },
  {
@@ -204,7 +259,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAD-FED-001",
   "units": 4,
   "slug": "cadena-federal-escamada-cromada",
-  "order": 30,
+  "order": 40,
   "imgs": [
    "assets/img/products/cadena-federal-escamada-cromada-mtgg5ukm037k.jpg?v=1788132905149",
    "assets/img/products/cadena-federal-escamada-cromada-mtgg5vweuflm.jpg?v=1788132907065",
@@ -228,7 +283,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-cult-escamada-cromada-mtgizlwvobs1.jpg?v=1788137652726"
   ],
   "slug": "cadena-cult-escamada-cromada",
-  "order": 0,
+  "order": 10,
   "img": "assets/img/products/cadena-cult-escamada-cromada-mtgizjdrr5lb.jpg?v=1788137649476"
  },
  {
@@ -245,7 +300,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-tall-order-cromada-510-mtg1gfxmz0pn.jpg?v=1788108205196"
   ],
   "slug": "cadena-tall-order-cromada-510",
-  "order": 50,
+  "order": 70,
   "img": "assets/img/products/cadena-tall-order-cromada-510-mtw4gbzpnqu0.jpg?v=1789080697661"
  },
  {
@@ -5187,22 +5242,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1788093948129"
  },
  {
-  "slug": "plato-fitbikeco",
-  "n": "Plato Fitbikeco",
-  "brand": "Fitbikeco",
-  "cat": "piezas",
-  "spec": "Negro Guardia 28T",
-  "price": 340000,
-  "sku": "PZA-FIT-001",
-  "units": 1,
-  "imgs": [
-   "assets/img/products/plato-fitbikeco.jpg?v=1788093948129",
-   "assets/img/products/plato-fitbikeco-2.jpg?v=1788093948129"
-  ],
-  "order": 580,
-  "img": "assets/img/products/plato-fitbikeco.jpg?v=1788093948129"
- },
- {
   "slug": "marco-fitbikeco-str-negro",
   "n": "Marco Fitbikeco STR Negro",
   "brand": "Fitbikeco",
@@ -6666,54 +6705,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/tija-negra-curva-3.jpg?v=1788093948129"
   ],
   "img": "assets/img/products/tija-negra-curva.jpg?v=1788093948129"
- },
- {
-  "slug": "eslabones-cadena-sueltos",
-  "n": "Trinquetes para casette V1",
-  "brand": "",
-  "cat": "piezas",
-  "spec": "Media caña · Acero negro",
-  "price": 30000,
-  "sku": "ESLABONES-CADENA-SUELTOS",
-  "units": 12,
-  "order": 1880,
-  "img": "assets/img/products/eslabones-cadena-sueltos.jpg?v=1788093948129"
- },
- {
-  "slug": "odyssey-cadena-caja",
-  "n": "Kit De Despinche",
-  "brand": "otro",
-  "cat": "piezas",
-  "spec": "Kit de despinche",
-  "price": 15000,
-  "sku": "KIT-DESPINCHE",
-  "units": 12,
-  "order": 1930,
-  "img": "assets/img/products/odyssey-cadena-caja.jpg?v=1788093948129"
- },
- {
-  "slug": "mutany-eje-pedalier-p25",
-  "n": "Eje de Pedalier Mutanty P25",
-  "brand": "Mutanty",
-  "cat": "piezas",
-  "spec": "Eje 22mm · P25 · Negro",
-  "price": 70000,
-  "sku": "MUTANY-EJE-PEDALIER-P25",
-  "units": 12,
-  "order": 1650,
-  "img": "assets/img/products/mutany-eje-pedalier-p25.jpg?v=1788093948129"
- },
- {
-  "slug": "iron-fist-amarres-cable",
-  "n": "Amarres de Cable Iron Fist",
-  "brand": "Iron Fist",
-  "cat": "piezas",
-  "spec": "Cinchos plásticos · Set",
-  "price": 20000,
-  "sku": "IRON-FIST-AMARRES-CABLE",
-  "units": 12,
-  "order": 1920,
-  "img": "assets/img/products/iron-fist-amarres-cable.jpg?v=1788093948129"
  },
  {
   "slug": "cult-multiherramienta-01",

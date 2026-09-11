@@ -4900,5 +4900,121 @@ window.ESCENA_AUDIT = [
    "cadena-kmc-k1-wide-perforada-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T20:13:40.860Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 1 producto editado, 9 fotos subidas",
+  "created": [
+   "cadena-kmc-410-negra-2",
+   "cadena-kmc-410-roja",
+   "cadena-kmc-410-azul"
+  ],
+  "edited": [
+   "cadena-kmc-410-negra"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-11T20:27:05.273Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 13 productos editados, 7 productos eliminados, 1 foto subida",
+  "created": [
+   "cadena-cinema-escamada-negra"
+  ],
+  "edited": [
+   "cadena-kmc-410-negra-2",
+   "cadena-kmc-410-roja",
+   "cadena-kmc-410-azul",
+   "cadena-kmc-410-negra",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-k1-wide-perforada-cromada",
+   "cadena-tallorder-negra-510",
+   "cadena-tall-order-cromada-510",
+   "cadena-federal-escamada-cromada-2",
+   "cadena-federal-escamada-cromada",
+   "cadena-cult-escamada-dorada",
+   "cadena-cult-escamada-negra-2",
+   "cadena-cult-escamada-cromada"
+  ],
+  "deleted": [
+   "cadena-cult-escamada-negra",
+   "plato-fitbikeco",
+   "mutany-eje-pedalier-p25",
+   "eslabones-cadena-sueltos",
+   "iron-fist-amarres-cable",
+   "odyssey-cadena-caja",
+   "cadena-cinema-escamada-negra-2"
+  ]
+ },
+ {
+  "ts": "2026-09-11T20:44:19.059Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "cadena-bsd-forever-cromada"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:01:09.568Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "9 productos editados",
+  "created": [],
+  "edited": [
+   "cadena-bsd-forever-cromada",
+   "cadena-kmc-410-azul",
+   "cadena-kmc-410-roja",
+   "cadena-kmc-410-negra-2",
+   "cadena-kmc-410-negra",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-k1-wide-perforada-cromada",
+   "cadena-tallorder-negra-510",
+   "cadena-tall-order-cromada-510"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:03:33.549Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "10 productos editados",
+  "created": [],
+  "edited": [
+   "cadena-bsd-forever-cromada",
+   "cadena-kmc-410-azul",
+   "cadena-kmc-410-roja",
+   "cadena-kmc-410-negra-2",
+   "cadena-kmc-410-negra",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-k1-wide-perforada-cromada",
+   "cadena-tallorder-negra-510",
+   "cadena-tall-order-cromada-510",
+   "cadena-federal-escamada-cromada-2"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:04:46.193Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "cadena-bsd-forever-negra"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:06:38.695Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 productos editados, 3 fotos subidas",
+  "created": [
+   "cadena-tec-410-negra"
+  ],
+  "edited": [
+   "cadena-bsd-forever-cromada",
+   "cadena-bsd-forever-negra"
+  ],
+  "deleted": []
  }
 ];
