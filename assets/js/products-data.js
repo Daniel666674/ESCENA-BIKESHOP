@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena BSD Forever Cromada",
+  "brand": "BSD",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 95000,
+  "sku": "CAD-BSD-001",
+  "units": 1,
+  "slug": "cadena-bsd-forever-cromada",
+  "img": "assets/img/products/cadena-bsd-forever-cromada-mtxfccb9a826.jpg?v=1789159454416"
+ },
+ {
   "n": "Cadena Cinema Escamada Negra",
   "brand": "Cinema",
   "cat": "cadenas",
