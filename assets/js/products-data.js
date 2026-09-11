@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales BSD Safari Negro",
+  "brand": "BSD",
+  "cat": "pedales",
+  "spec": "",
+  "price": 90000,
+  "sku": "PED-BSD-001",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/pedales-bsd-safari-negro-mtxjyorwbvbi.jpg?v=1789167214706",
+   "assets/img/products/pedales-bsd-safari-negro-mtxjyq9esuc5.jpg?v=1789167216749"
+  ],
+  "slug": "pedales-bsd-safari-negro",
+  "order": 70,
+  "img": "assets/img/products/pedales-bsd-safari-negro-mtxjyorwbvbi.jpg?v=1789167214706"
+ },
+ {
   "n": "Pedales Cinema TILT+ Plate Negro",
   "brand": "130000",
   "cat": "pedales",
@@ -21,7 +37,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PED-CIN-001",
   "units": 1,
   "slug": "pedales-cinema-tilt-negro",
-  "order": 60,
+  "order": 50,
   "img": "assets/img/products/pedales-cinema-tilt-negro-mtxjjj3zb35i.jpg?v=1789166507478"
  },
  {
@@ -5346,81 +5362,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1788093948129"
  },
  {
-  "n": "Pedales Demolition",
-  "brand": "Demolition",
-  "cat": "pedales",
-  "spec": "Azul con blanco , Rojo con blanco , Gris con Blanco, Negro, Morado con blanco, Morado con Amarillo.",
-  "price": 95000,
-  "sku": "PED-DMO-001",
-  "units": 14,
-  "imgs": [
-   "assets/img/products/pedales-demolition.jpg?v=1788093948129",
-   "assets/img/products/pedales-demolition-2.jpg?v=1788093948129",
-   "assets/img/products/pedales-demolition-3.jpg?v=1788093948129",
-   "assets/img/products/pedales-demolition-4.jpg?v=1788093948129",
-   "assets/img/products/pedales-demolition-5.jpg?v=1788093948129",
-   "assets/img/products/pedales-demolition-6.jpg?v=1788093948129",
-   "assets/img/products/pedales-demolition-7.jpg?v=1788093948129"
-  ],
-  "slug": "pedales-demolition",
-  "colors": [
-   {
-    "label": "Rojo Azul",
-    "units": 2
-   },
-   {
-    "label": "Negro",
-    "units": 2
-   },
-   {
-    "label": "Blanco Negro",
-    "units": 2
-   },
-   {
-    "label": "Morado Amarillo",
-    "units": 2
-   },
-   {
-    "label": "Blanco Lila",
-    "units": 2
-   },
-   {
-    "label": "Azul Blanco",
-    "units": 2
-   },
-   {
-    "label": "Rojo Blanco",
-    "units": 2
-   }
-  ],
-  "imgColorMap": {
-   "Rojo Azul": [
-    0
-   ],
-   "Morado Amarillo": [
-    1
-   ],
-   "Azul Blanco": [
-    2
-   ],
-   "Blanco Lila": [
-    3
-   ],
-   "Blanco Negro": [
-    4
-   ],
-   "Negro": [
-    5
-   ],
-   "Rojo Blanco": [
-    6
-   ]
-  },
-  "order": 50,
-  "imgFit": "cover",
-  "img": "assets/img/products/pedales-demolition.jpg?v=1788093948129"
- },
- {
   "slug": "cana-odyssey-cfl3",
   "n": "Caña Odyssey CFL3",
   "brand": "Odyssey",
@@ -6139,7 +6080,7 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "PEDALES-PLATAFORMA-NEGRO-01",
   "units": 12,
-  "order": 70,
+  "order": 60,
   "img": "assets/img/products/pedales-plataforma-negro-01.jpg?v=1788093948129"
  },
  {
