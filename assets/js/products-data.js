@@ -259,20 +259,22 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cadena-kmc-narrow-cromada-mtgize250wp3.jpg?v=1788137643076"
  },
  {
-  "n": "Cadena KMC K1 Wide perforada cromada",
+  "n": "Cadena KMC K1SL Wide perforada cromada",
   "brand": "KMC",
   "cat": "cadenas",
   "spec": "",
   "price": 80000,
   "sku": "CAD-KMC-001",
-  "units": 2,
+  "units": 5,
   "imgs": [
-   "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizgxueqrd.jpg?v=1788137646277",
-   "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizi6ds84m.jpg?v=1788137647839"
+   "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtxh36fdrpnk.jpg?v=1789162385279",
+   "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtxh37uns5o6.jpg?v=1789162387214",
+   "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtxh39cece5c.jpg?v=1789162388646"
   ],
   "slug": "cadena-kmc-k1-wide-perforada-cromada",
   "order": 90,
-  "img": "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtgizgxueqrd.jpg?v=1788137646277"
+  "imgFit": "cover",
+  "img": "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtxh36fdrpnk.jpg?v=1789162385279"
  },
  {
   "n": "Cadena Federal Escamada Negra",
