@@ -1,12 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Demolition Trooper Morado/Amarillo",
+  "brand": "Demolition",
+  "cat": "pedales",
+  "spec": "",
+  "price": 95000,
+  "sku": "PED-DMO-001",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "pedales-demolition-trooper-morado-amarillo",
+  "img": "assets/img/products/pedales-demolition-trooper-morado-amarillo-mtxknl9czpgm.jpg?v=1789168376322"
+ },
+ {
   "n": "Pedales Tallorder Catch Negro",
   "brand": "Tallorder",
   "cat": "pedales",
   "spec": "",
   "price": 80000,
   "sku": "PED-TAL-001",
-  "units": 0,
+  "units": 1,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/pedales-tallorder-catch-negro-mtxk8mxo5w8e.jpg?v=1789167679392",
