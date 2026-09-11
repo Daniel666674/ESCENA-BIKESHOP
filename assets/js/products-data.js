@@ -5395,53 +5395,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/pedales-demolition.jpg?v=1788093948129"
  },
  {
-  "n": "Pedales Stolen Thermalite",
-  "brand": "Stolen",
-  "cat": "pedales",
-  "spec": "",
-  "price": 75000,
-  "sku": "PED-STL-001",
-  "units": 9,
-  "imgs": [
-   "assets/img/products/pedales-stolen-mtxiq1rwc44d.jpg?v=1789165132016",
-   "assets/img/products/pedales-stolen.jpg?v=1788093948129",
-   "assets/img/products/pedales-stolen-3.jpg?v=1788093948129",
-   "assets/img/products/pedales-stolen-mtxiq38wn525.jpg?v=1789165137075",
-   "assets/img/products/pedales-stolen-mtxiq75gtuvl.jpg?v=1789165138932"
-  ],
-  "slug": "pedales-stolen",
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 5
-   },
-   {
-    "label": "Aqua",
-    "units": 1
-   },
-   {
-    "label": "Verde",
-    "units": 1
-   },
-   {
-    "label": "Amarillo",
-    "units": 1
-   },
-   {
-    "label": "Rosado",
-    "units": 1
-   }
-  ],
-  "imgColorMap": {
-   "Verde": [
-    1
-   ]
-  },
-  "order": 40,
-  "imgFit": "cover",
-  "img": "assets/img/products/pedales-stolen-mtxiq1rwc44d.jpg?v=1789165132016"
- },
- {
   "slug": "cana-odyssey-cfl3",
   "n": "Caña Odyssey CFL3",
   "brand": "Odyssey",
@@ -6165,19 +6118,15 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "pedales-metal-negro-01",
-  "n": "Pedales Plataforma Metal Negro",
-  "brand": "FEDERAL",
+  "n": "Pedales Federal Command Negro",
+  "brand": "Federal",
   "cat": "pedales",
   "spec": "Plataforma aluminio · 8 pines · Negro",
-  "price": 130000,
+  "price": 85000,
   "sku": "PEDALES-METAL-NEGRO-01",
-  "units": 12,
+  "units": 5,
   "order": 50,
-  "imgs": [
-   "assets/img/products/pedales-metal-negro-01.jpg?v=1788093948129",
-   "assets/img/products/pedales-metal-negro-01-2.jpg?v=1788093948129"
-  ],
-  "img": "assets/img/products/pedales-metal-negro-01.jpg?v=1788093948129"
+  "img": "assets/img/products/pedales-metal-negro-01-mtxiv4hz9yb6.jpg?v=1789165368966"
  },
  {
   "slug": "pinon-snowflake-plata",
