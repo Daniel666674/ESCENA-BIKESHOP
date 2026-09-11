@@ -5398,64 +5398,48 @@ window.ESCENA_PRODUCTS = [
   "n": "Pedales Stolen Thermalite",
   "brand": "Stolen",
   "cat": "pedales",
-  "spec": "Verde, Azul, AguaMarina, Rojo, Amarillo Florecente.",
+  "spec": "",
   "price": 75000,
   "sku": "PED-STL-001",
-  "units": 5,
+  "units": 9,
   "imgs": [
+   "assets/img/products/pedales-stolen-mtxiq1rwc44d.jpg?v=1789165132016",
    "assets/img/products/pedales-stolen.jpg?v=1788093948129",
-   "assets/img/products/pedales-stolen-2.jpg?v=1788093948129",
    "assets/img/products/pedales-stolen-3.jpg?v=1788093948129",
-   "assets/img/products/pedales-stolen-4.jpg?v=1788093948129",
-   "assets/img/products/pedales-stolen-5.jpg?v=1788093948129"
+   "assets/img/products/pedales-stolen-mtxiq38wn525.jpg?v=1789165137075",
+   "assets/img/products/pedales-stolen-mtxiq75gtuvl.jpg?v=1789165138932"
   ],
   "slug": "pedales-stolen",
   "colors": [
    {
+    "label": "Negro",
+    "units": 5
+   },
+   {
+    "label": "Aqua",
+    "units": 1
+   },
+   {
     "label": "Verde",
-    "units": 1,
-    "price": 75000
-   },
-   {
-    "label": "Rojo",
-    "units": 1,
-    "price": 75000
-   },
-   {
-    "label": "Azul Aguamarina",
-    "units": 1,
-    "price": 75000
+    "units": 1
    },
    {
     "label": "Amarillo",
-    "units": 1,
-    "price": 75000
+    "units": 1
    },
    {
-    "label": "Azul",
-    "units": 1,
-    "price": 75000
+    "label": "Rosado",
+    "units": 1
    }
   ],
   "imgColorMap": {
    "Verde": [
-    0
-   ],
-   "Rojo": [
     1
-   ],
-   "Azul Aguamarina": [
-    2
-   ],
-   "Azul": [
-    3
-   ],
-   "Amarillo": [
-    4
    ]
   },
   "order": 40,
-  "img": "assets/img/products/pedales-stolen.jpg?v=1788093948129"
+  "imgFit": "cover",
+  "img": "assets/img/products/pedales-stolen-mtxiq1rwc44d.jpg?v=1789165132016"
  },
  {
   "slug": "cana-odyssey-cfl3",
@@ -6194,18 +6178,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-metal-negro-01-2.jpg?v=1788093948129"
   ],
   "img": "assets/img/products/pedales-metal-negro-01.jpg?v=1788093948129"
- },
- {
-  "slug": "pedales-metal-negro-03",
-  "n": "Pedales Plataforma Metal Angular",
-  "brand": "",
-  "cat": "pedales",
-  "spec": "Plataforma aluminio · 8 pines · Perfil bajo · Negro",
-  "price": 135000,
-  "sku": "PEDALES-METAL-NEGRO-03",
-  "units": 6,
-  "order": 30,
-  "img": "assets/img/products/pedales-metal-negro-03.jpg?v=1788093948129"
  },
  {
   "slug": "pinon-snowflake-plata",
