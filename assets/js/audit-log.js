@@ -5026,5 +5026,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:15:49.516Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "cadena-cargochain-c410-negra"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
