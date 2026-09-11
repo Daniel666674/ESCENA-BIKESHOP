@@ -5254,5 +5254,17 @@ window.ESCENA_AUDIT = [
    "pedales-tallorder-catch-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T23:24:40.087Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 4 fotos subidas",
+  "created": [
+   "pedales-demolition-trooper-blanco-negro",
+   "pedales-demolition-trooper-rojo-blanco",
+   "pedales-demolition-trooper-azul-blanco"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
