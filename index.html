@@ -142,6 +142,7 @@
       --muted: #666;
       --line: #ececeb;
       --gold: #C79A3A;
+      --promo: #E8C547;
     }
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
@@ -189,71 +190,73 @@
       .site-header .world-tab { font-size: 1.02rem; }
     }
 
-    /* ============ HERO (full-bleed artwork) ============ */
-    /* The slides are social-format ARTWORK, not photographs — their layout is
-       their content, so cropping cuts headline type and product cutouts. The
-       current piece is a 2.26:1 banner, near enough the shape a hero wants,
-       so it runs as large as it fits at its exact ratio (zero crop) and the
-       copy sits in a band beneath it rather than on top: this artwork carries
-       its own headline and a busy product grid, so there is nowhere on it that
-       overlaid type would stay legible. */
-    .hero { --hero-stage-min: 180px; position: relative; background: var(--ink); overflow: hidden;
-      padding: calc(var(--hero-header-offset, 0px) + 1rem) 0 2.4rem;
-      display: flex; flex-direction: column; align-items: center; gap: clamp(1.1rem, 2.4vw, 1.9rem); }
-    /* The dots sit between the stage and the copy, so when there's only one
-       slide and this renders empty it still takes a share of the flex gap on
-       BOTH sides — doubling the space under the artwork for no reason. */
-    .hero-dots:empty { display: none; }
+    /* ============ HERO (promo row + brand block) ============ */
+    /* The promos are social-format artwork whose shape changes every time the
+       shop posts a new one — a 2.26:1 banner today, a 4:5 clip beside it. They
+       are laid out as a JUSTIFIED ROW: every card shares one height and keeps
+       its own natural width, so nothing is ever cropped and no letterbox is
+       ever needed, whatever mix of shapes gets uploaded next. */
+    .hero { position: relative; background: var(--ink); overflow: hidden;
+      padding: calc(var(--hero-header-offset, 0px) + 1rem) 0 2.4rem; }
+    .hero-wrap { width: 100%; max-width: 1500px; margin: 0 auto; padding: 0 1.5rem; }
+    .hero-promos-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .85rem; }
+    .hero-promos-head .eyebrow { color: var(--promo); font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; font-weight: 800; }
+    .hero-promos-head a { color: rgba(255,255,255,.58); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+    .hero-promos-head a:hover { color: #fff; }
+    /* flex-grow set to each card's own aspect ratio against a zero basis makes
+       every width proportional to its ratio — which is exactly what makes the
+       heights come out identical. Don't give these a flex-basis. */
+    .hero-promos { display: flex; gap: .9rem; align-items: flex-start; }
+    .hero-promo { flex: var(--r, 1) 1 0; min-width: 0; display: block; text-decoration: none;
+      background: #111; overflow: hidden; position: relative; transition: transform .25s ease; }
+    .hero-promo:hover { transform: translateY(-4px); }
+    .hero-promo img, .hero-promo video { display: block; width: 100%; height: auto; aspect-ratio: var(--r, 1); object-fit: cover; background: #111; }
+    .hero-promo video { opacity: 0; transition: opacity .5s; }
+    .hero-promo video.is-visible { opacity: 1; }
+    /* The clip fades in over its own poster, so the card never sits empty. */
+    .hero-promo .promo-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero-promo .promo-media { position: relative; }
+    /* A promo is an offer, so each card states what it is and links somewhere.
+       The bar sits under the art, never over it: these pieces are busy edge to
+       edge and overlaid type fights them. */
+    .promo-cap { display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+      padding: .6rem .85rem; background: var(--promo); color: var(--ink);
+      font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 800; }
+    .promo-cap .go { opacity: .65; white-space: nowrap; }
+    .promo-badge { position: absolute; top: .6rem; left: .6rem; display: inline-flex; align-items: center; gap: .35rem;
+      background: rgba(10,10,10,.72); color: #fff; font-size: .58rem; letter-spacing: .16em; text-transform: uppercase;
+      font-weight: 800; padding: .3rem .55rem; }
+    .promo-badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--promo); }
 
-    /* Sized in px by heroCarousel()'s layoutStage() to the largest box that
-       fits BOTH the viewport width and the height cap below while keeping the
-       slide's exact intrinsic ratio. Cap is what stops a 2.26:1 piece from
-       being 850px tall on a wide screen and pushing the buttons off-screen. */
-    .hero-stage { --hero-stage-cap: clamp(180px, 62vh, 760px);
-      position: relative; overflow: hidden;
-      /* Also declared as a real max-height, not just a custom property: a
-         custom property reads back from getComputedStyle as its raw token
-         stream ("clamp(200px, 58vh, 660px)"), whereas max-height reads back
-         resolved to px — which is how layoutStage() gets a usable number. It
-         doubles as the safety net if the script never runs. */
-      max-height: var(--hero-stage-cap);
-      width: var(--hero-stage-w, min(100%, 1180px)); height: var(--hero-stage-h, 520px);
-      transition: width .5s cubic-bezier(.4, 0, .2, 1), height .5s cubic-bezier(.4, 0, .2, 1); }
-    /* cover, not contain: the box is built to the slide's own ratio, so the
-       two are identical at rest — cover just avoids a hairline of background
-       showing through on sub-pixel rounding. */
-    .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; transition: opacity 1.1s ease; }
-    .hero-slide.is-active { opacity: 1; }
-    /* Optional per-slide video (admin-managed) — sits on top of the slide's
-       own background-image photo, invisible until it's actually decoded a
-       frame (same reasoning as the category cards: the photo is the poster
-       until the video is truly ready). */
-    .hero-slide video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s; }
-    .hero-slide video.is-visible { opacity: 1; }
-
-    .hero-copy { text-align: center; max-width: 720px; padding: 0 1.5rem; }
-    .hero-copy .kicker { color: rgba(255,255,255,.62); font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .7rem; display: block; }
-    .hero-copy h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.6rem, 5.2vw, 4.2rem); line-height: .92; letter-spacing: .02em; }
+    .hero-copy { text-align: center; max-width: 760px; margin: 0 auto; padding: clamp(1.8rem, 4vw, 2.8rem) 1.5rem 0; }
+    .hero-copy .kicker { color: rgba(255,255,255,.6); font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .6rem; display: block; }
+    .hero-copy h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.6rem, 5.4vw, 4.2rem); line-height: .92; letter-spacing: .02em; }
     .hero-copy h1 .accent-outline { color: transparent; -webkit-text-stroke: 2px #fff; }
-    .hero-copy .tagline { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1.05rem, 2.4vw, 1.4rem); letter-spacing: .07em; margin-top: .4rem; opacity: .9; }
-    .hero-copy p.lead { color: rgba(255,255,255,.8); font-size: .95rem; max-width: 540px; margin: .9rem auto 1.4rem; font-weight: 300; }
-    .hero-copy .btns { display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; margin-top: 1.1rem; }
-    .hero-stats { display: flex; gap: 2.2rem; margin-top: 1.6rem; flex-wrap: wrap; justify-content: center; }
-    .hero-stats .n { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 2rem; line-height: 1; }
-    .hero-stats .l { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-top: .2rem; }
+    .hero-copy .tagline { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1rem, 2.2vw, 1.35rem); letter-spacing: .07em; margin-top: .3rem; opacity: .9; }
+    .hero-copy p.lead { color: rgba(255,255,255,.8); font-size: .95rem; max-width: 540px; margin: .9rem auto 0; font-weight: 300; }
+    .hero-copy p.lead:empty { display: none; } /* admin can blank this out */
+    .hero-copy .btns { display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; margin-top: 1.2rem; }
+    /* What a first-time visitor actually needs to see before scrolling. */
+    .hero-rail { display: flex; justify-content: center; flex-wrap: wrap; gap: 0 2.2rem;
+      margin-top: 1.6rem; padding-top: 1.3rem; border-top: 1px solid rgba(255,255,255,.12); }
+    .hero-rail div { color: rgba(255,255,255,.8); font-size: .72rem; letter-spacing: .13em; text-transform: uppercase; padding: .3rem 0; }
+    .hero-rail b { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.02rem; letter-spacing: .06em; margin-right: .4rem; }
 
-    .hero-dots { display: flex; gap: .5rem; }
-    .hero-dots button { width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(255,255,255,.6); background: rgba(255,255,255,.25); padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
-    .hero-dots button.is-active { background: #fff; transform: scale(1.25); }
-
-    @media (max-width: 900px) {
-      .hero { padding: calc(var(--hero-header-offset, 0px) + .8rem) 0 2.4rem; gap: 1.6rem; }
-      /* A 2.26:1 banner is inherently a thin strip on a phone; let it take the
-         full width and give the cap room so a squarer piece can still breathe. */
-      .hero-stage { --hero-stage-cap: clamp(170px, 46vh, 420px); }
-      .hero-copy h1 { font-size: clamp(2.4rem, 11vw, 3.4rem); }
+    @media (max-width: 760px) {
+      /* Swipe strip on a phone. Stacking also works, but a 4:5 poster is ~430px
+         tall on its own and shoves the brand block and the CTAs off the screen.
+         A fixed height with natural widths keeps every promo uncropped AND the
+         hero compact, for any number of them. */
+      .hero-promos { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; padding-bottom: .2rem; }
+      .hero-promos::-webkit-scrollbar { display: none; }
+      .hero-promo { flex: none; scroll-snap-align: start; }
+      .hero-promo img, .hero-promo video { height: 228px; width: auto; }
+      .promo-cap { font-size: .6rem; letter-spacing: .1em; padding: .5rem .6rem; }
+      .hero-rail { gap: 0 1.1rem; }
+      .hero-rail div { font-size: .64rem; }
     }
-    @media (prefers-reduced-motion: reduce) { .hero-slide, .hero-stage { transition: none; } }
+    @media (prefers-reduced-motion: reduce) { .hero-promo, .hero-promo video { transition: none; } }
 
     /* ============ SECTIONS ============ */
     section { padding: 4.5rem 1.5rem; }
@@ -515,22 +518,29 @@
 
 <!-- ============ HERO (split) ============ -->
 <section class="hero">
-  <!-- Populated from window.ESCENA_HERO_SLIDES by heroCarousel() below —
-       admin-managed via admin.html's "Página principal" tab. -->
-  <div class="hero-stage" id="heroCarousel" aria-hidden="true"></div>
-  <div class="hero-dots" id="heroDots" role="tablist" aria-label="Fotos destacadas"></div>
+  <div class="hero-wrap" id="heroPromoBlock">
+    <div class="hero-promos-head">
+      <span class="eyebrow" id="txtPromoEyebrow">Promos de la semana</span>
+      <a href="tienda">Ver todo &rarr;</a>
+    </div>
+    <!-- Cards are built from window.ESCENA_HERO_SLIDES by heroPromos() below —
+         admin-managed via admin.html's "Página principal" tab. -->
+    <div class="hero-promos" id="heroPromos"></div>
+  </div>
   <div class="hero-copy">
-    <span class="kicker" id="txtHeroKicker">BMX Shop · Bogotá, Colombia</span>
+    <span class="kicker" id="txtHeroKicker">BMX Shop &middot; Bogot&aacute;, Colombia</span>
     <h1>ESCENA<span class="accent-outline">BMX</span></h1>
     <p class="tagline" id="txtHeroTagline">Partes que aguantan calle</p>
-    <p class="lead" id="txtHeroLead">Más de 100 partes originales de las marcas que mueven la escena: cañas, timones, tenedores, bielas, manzanas, platos, pedales, sillines y más. Directo de la tienda a tu bici — pides por WhatsApp, montas y ruedas.</p>
+    <p class="lead" id="txtHeroLead"></p>
     <div class="btns">
       <a href="tienda" class="btn btn-primary" id="txtHeroBtnPrimary">Ver la tienda</a>
       <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20info%20de%20partes%20BMX" target="_blank" rel="noopener" class="btn btn-ghost" id="txtHeroBtnGhost">Pedir por WhatsApp</a>
     </div>
-    <div class="hero-stats">
-      <div><div class="n" id="txtHeroStat1N">100+</div><div class="l" id="txtHeroStat1L">Partes en stock</div></div>
-      <div><div class="n" id="txtHeroStat2N">32</div><div class="l" id="txtHeroStat2L">Depts. Colombia</div></div>
+    <div class="hero-rail">
+      <div><b id="txtHeroStat1N">100+</b> <span id="txtHeroStat1L">Partes originales</span></div>
+      <div><b id="txtHeroStat2N">32</b> <span id="txtHeroStat2L">Departamentos</span></div>
+      <div><b>Taller</b> Agenda tu cita</div>
+      <div><b>Env&iacute;os</b> A toda Colombia</div>
     </div>
   </div>
 </section>
@@ -1143,212 +1153,99 @@
       var el = document.getElementById(elId);
       if (el) el.textContent = t[field];
     });
+    // The hero's trust rail carries two admin-editable stats alongside two
+    // fixed facts. Those stats are currently blanked in the manifest, and an
+    // item with no number and no label is just a gap in the row — so drop the
+    // empty ones here, after the text has been applied. Fill them back in from
+    // the admin panel and they reappear on their own.
+    Array.prototype.forEach.call(document.querySelectorAll(".hero-rail div"), function (item) {
+      if (!item.textContent.trim()) item.hidden = true;
+    });
   })();
 
-  /* ---- Hero image carousel ---- */
-  (function heroCarousel(){
-    var wrap = document.getElementById("heroCarousel");
-    var dotsWrap = document.getElementById("heroDots");
-    if (!wrap || !dotsWrap) return;
-    // Admin-managed via admin.html's "Página principal" tab: each slide is a
-    // photo, optionally with a short video layered on top (same fade-in-once-
-    // ready pattern as the category cards). Only the ACTIVE slide's video is
-    // ever loaded/playing — switching slides pauses the outgoing one and
-    // starts the incoming one — so a hero with several video slides doesn't
-    // download/decode all of them at once.
-    var slideData = window.ESCENA_HERO_SLIDES || [];
-    wrap.innerHTML = slideData.map(function (s, i) {
-      // Photo is optional (video-only slides are allowed) -- omit the
-      // declaration entirely rather than pointing at an empty url(), so a
-      // video-only slide just shows the .hero's own dark background until
-      // its video is ready, with no missing-image request/flash.
-      var bg = s.img ? "background-image:url('" + String(s.img).replace(/'/g, "%27") + "');" : "";
-      // zoom/pos are optional admin-set framing (admin.html's "Guardar
-      // encuadre" -- rotate/zoom/position editor). Applied to the slide div
-      // itself so both its background photo AND a child video (a transform
-      // affects the whole rendered subtree) scale together from one stored
-      // value; object-position still needs setting on the video separately
-      // since a transform doesn't propagate other CSS property values.
-      var frameStyle = "";
-      if (s.pos) frameStyle += "background-position:" + s.pos + ";";
-      if (s.zoom && s.zoom > 100) frameStyle += "transform:scale(" + (s.zoom / 100) + ");";
-      var vidCss = "";
-      if (s.video && s.video.rotation) vidCss += "transform:rotate(" + s.video.rotation + "deg);";
-      if (s.pos) vidCss += "object-position:" + s.pos + ";";
-      var videoStyle = vidCss ? ' style="' + vidCss + '"' : "";
-      var videoEl = (s.video && s.video.ext && s.video.v) ? '<video muted loop playsinline preload="none" aria-hidden="true"' + videoStyle + '></video>' : "";
-      return '<div class="hero-slide' + (i === 0 ? ' is-active' : '') + '" style="' + bg + frameStyle + '">' + videoEl + '</div>';
-    }).join("");
-    var slides = Array.prototype.slice.call(wrap.querySelectorAll(".hero-slide"));
-    if (!slides.length) return;
+  /* ---- Hero promo row ----
+     Every promo is on screen at once (see .hero-promos), so unlike the carousel
+     this replaced there is no rotation, no dots, no swipe state and no "only
+     load the active slide" bookkeeping — just cards. Admin-managed via
+     admin.html's "Página principal" tab. */
+  (function heroPromos(){
+    var row = document.getElementById("heroPromos");
+    var block = document.getElementById("heroPromoBlock");
+    if (!row) return;
+    var slides = (window.ESCENA_HERO_SLIDES || []).filter(function (s) {
+      return s && (s.img || (s.video && s.video.ext && s.video.v));
+    });
+    // With no promos configured the whole block goes away and the brand copy
+    // below stands on its own, rather than leaving an empty labelled shelf.
+    if (!slides.length) { if (block) block.hidden = true; return; }
 
-    /* ---- Panel shape ----
-       The panel takes the shape of whatever slide is showing (see
-       .hero-carousel), so nothing is ever cropped or letterboxed. Ratios are
-       MEASURED from each asset's real intrinsic size rather than stored in
-       the manifest, so a photo or clip of any proportion uploaded from the
-       admin panel later just works with no data to keep in sync. Until a
-       ratio is known the panel sits at the CSS fallback size. */
-    var slideRatios = [];
-    var activeIdx = 0;
-    function layoutStage() {
-      var r = slideRatios[activeIdx];
-      if (!r) return;
-      // Largest box that satisfies BOTH limits at the slide's exact ratio, so
-      // the artwork runs as big as it can with nothing cropped. The height cap
-      // comes from the stylesheet (--hero-stage-cap, which the stacked layout
-      // overrides) rather than being restated here, so retuning it in one
-      // place retunes both.
-      var maxW = document.documentElement.clientWidth;
-      var maxH = parseFloat(getComputedStyle(wrap).maxHeight); // resolved px; see .hero-stage
-      if (!maxW || !maxH) return;
-      // Give the artwork every pixel the rest of the hero isn't using, rather
-      // than a flat vh fraction: a flat cap has to be set pessimistically for
-      // short laptop screens, which then wastes height on tall ones. Measuring
-      // the copy block (it sits below and sizes independently of the stage, so
-      // this can't feed back) keeps the buttons above the fold everywhere while
-      // letting the artwork run as large as that allows.
-      var hero = wrap.parentNode, hcs = getComputedStyle(hero);
-      var copyEl = hero.querySelector(".hero-copy");
-      var chrome = parseFloat(hcs.paddingTop) + parseFloat(hcs.paddingBottom) +
-                   parseFloat(hcs.rowGap || 0) + (copyEl ? copyEl.offsetHeight : 0);
-      var avail = window.innerHeight - chrome;
-      if (avail > 0) maxH = Math.min(maxH, avail);
-      maxH = Math.max(maxH, parseFloat(hcs.getPropertyValue("--hero-stage-min")) || 180);
-      var w = Math.min(maxW, maxH * r);
-      wrap.style.setProperty("--hero-stage-w", Math.round(w) + "px");
-      wrap.style.setProperty("--hero-stage-h", Math.round(w / r) + "px");
-    }
-    function setRatio(i, w, h, rotation) {
-      if (!w || !h || slideRatios[i]) return;
-      // A 90/270 rotation swaps which side is which once it's rendered.
-      slideRatios[i] = (rotation === 90 || rotation === 270) ? (h / w) : (w / h);
-      if (i === activeIdx) layoutStage();
-    }
-    // Held in an array on purpose: a detached media element with nothing
-    // referencing it can be collected before its metadata ever arrives.
-    var probes = [];
-    slideData.forEach(function (s, i) {
-      // Photo wins when a slide has both: it's the poster the video fades in
-      // over, and the two are framed as one.
+    function esc(v) { return String(v).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+    row.innerHTML = slides.map(function (s) {
+      var vid = s.video;
+      var media;
+      if (vid) {
+        // preload="none" plus a poster: the card shows its still immediately and
+        // the clip only costs bandwidth once it's actually near the viewport.
+        var poster = s.poster ? ' poster="' + esc(s.poster) + '"' : "";
+        media = '<span class="promo-media">' +
+                (s.poster ? '<img class="promo-poster" src="' + esc(s.poster) + '" alt="" />' : "") +
+                '<video muted loop playsinline preload="none"' + poster +
+                ' data-src="assets/video/hero-' + esc(s.id) + '.' + esc(vid.ext) + '?v=' + esc(vid.v) + '"></video>' +
+                '</span>' +
+                '<span class="promo-badge">Video</span>';
+      } else {
+        media = '<img src="' + esc(s.img) + '" alt="' + esc(s.label || "Promo") + '" loading="lazy" />';
+      }
+      var cap = s.label
+        ? '<span class="promo-cap"><span>' + esc(s.label) + '</span><span class="go">Ver &rarr;</span></span>'
+        : "";
+      // --r drives the justified row: width proportional to ratio => equal
+      // heights. Measured below for any slide the manifest doesn't declare.
+      return '<a class="hero-promo" href="' + esc(s.href || "tienda") + '"' +
+             (s.ar > 0 ? ' style="--r:' + Number(s.ar).toFixed(4) + '"' : "") +
+             '>' + media + cap + '</a>';
+    }).join("");
+
+    var cards = Array.prototype.slice.call(row.querySelectorAll(".hero-promo"));
+
+    // Ratio fallback: a promo uploaded from the admin panel won't carry "ar",
+    // so measure the asset itself rather than making the manifest the only
+    // source of truth. Until it resolves the card sits at the CSS default.
+    slides.forEach(function (s, i) {
+      if (s.ar > 0 || !cards[i]) return;
+      var apply = function (w, h) { if (w && h) cards[i].style.setProperty("--r", (w / h).toFixed(4)); };
       if (s.img) {
         var probe = new Image();
-        probe.onload = function () { setRatio(i, probe.naturalWidth, probe.naturalHeight, null); };
+        probe.onload = function () { apply(probe.naturalWidth, probe.naturalHeight); };
         probe.src = s.img;
-        probes.push(probe);
-      } else if (s.video && s.video.ext && s.video.v) {
-        // Probed on a throwaway element rather than the real one: the real one
-        // only gets its src when its slide activates (see activateSlideMedia),
-        // which would leave the panel at the outgoing slide's shape and then
-        // visibly snap. preload="metadata" fetches just the header, and
-        // prefetchVideos() above has usually put the file in the HTTP cache by
-        // now, so this costs approximately nothing.
-        var probeVid = document.createElement("video");
-        probeVid.preload = "metadata";
-        probeVid.muted = true;
-        probeVid.addEventListener("loadedmetadata", function () {
-          setRatio(i, probeVid.videoWidth, probeVid.videoHeight, s.video.rotation);
-        }, { once: true });
-        // If the clip can't be decoded here at all, the panel would otherwise
-        // keep the OUTGOING slide's shape and sit there at the wrong size
-        // around an empty box. Fall back to portrait, which is what phone
-        // footage almost always is.
-        probeVid.addEventListener("error", function () { setRatio(i, 4, 5, null); }, { once: true });
-        probeVid.src = "assets/video/hero-" + s.id + "." + s.video.ext + "?v=" + s.video.v;
-        probes.push(probeVid);
+      } else {
+        var v = cards[i].querySelector("video");
+        if (v) v.addEventListener("loadedmetadata", function () { apply(v.videoWidth, v.videoHeight); }, { once: true });
       }
     });
-    var resizeTimer = null;
-    window.addEventListener("resize", function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(layoutStage, 120);
-    });
 
-    function activateSlideMedia(i) {
-      var data = slideData[i], slide = slides[i];
-      var vid = slide && slide.querySelector("video");
-      if (!vid || !data || !data.video) return;
-      if (!vid.getAttribute("src")) {
-        vid.addEventListener("loadeddata", function () { vid.classList.add("is-visible"); }, { once: true });
-        vid.src = "assets/video/hero-" + data.id + "." + data.video.ext + "?v=" + data.video.v;
-        var rot = data.video.rotation;
-        if (rot === 90 || rot === 270) {
-          var sW = slide.offsetWidth, sH = slide.offsetHeight;
-          if (sW && sH) {
-            var existing = vid.style.transform || "";
-            vid.style.transform = existing + " scale(" + (Math.max(sW / sH, sH / sW)).toFixed(4) + ")";
-          }
-        }
+    // Clips start only once their card is near the viewport, and pause when it
+    // leaves — several autoplaying videos decoding off-screen is the kind of
+    // thing that makes a phone hot for no reason.
+    var vids = Array.prototype.slice.call(row.querySelectorAll("video[data-src]"));
+    if (!vids.length) return;
+    function play(v) {
+      if (!v.getAttribute("src")) {
+        v.addEventListener("loadeddata", function () { v.classList.add("is-visible"); }, { once: true });
+        v.src = v.getAttribute("data-src");
       }
-      var p = vid.play();
-      if (p && p.catch) p.catch(function () {}); // autoplay can be blocked -> slide just keeps showing the photo
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {}); // autoplay blocked -> poster stays
     }
-    function deactivateSlideMedia(i) {
-      var slide = slides[i];
-      var vid = slide && slide.querySelector("video");
-      if (vid && !vid.paused) vid.pause();
-    }
-    activateSlideMedia(0); // first slide is visible immediately on page load
-    layoutStage();
-
-    if (slides.length < 2) return; // nothing to cycle, but its own video (if any) still plays
-
-    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var idx = 0, timer = null;
-
-    dotsWrap.innerHTML = slides.map(function(_, i){
-      return '<button type="button" class="' + (i === 0 ? 'is-active' : '') + '" data-i="' + i + '" aria-label="Foto ' + (i + 1) + '"></button>';
-    }).join("");
-    var dots = Array.prototype.slice.call(dotsWrap.querySelectorAll("button"));
-
-    function show(i){
-      var prevIdx = idx;
-      idx = (i + slides.length) % slides.length;
-      slides.forEach(function(s, n){ s.classList.toggle("is-active", n === idx); });
-      dots.forEach(function(d, n){ d.classList.toggle("is-active", n === idx); });
-      activeIdx = idx;
-      layoutStage(); // resize the stage to the incoming slide's own shape
-      if (prevIdx !== idx) deactivateSlideMedia(prevIdx);
-      activateSlideMedia(idx);
-    }
-    function next(){ show(idx + 1); }
-    // A video slide gets to play close to its full (capped-at-30s) length
-    // instead of being cut off by the fixed 5s photo timing.
-    function currentSlideDelay(){
-      var data = slideData[idx];
-      return (data && data.video) ? 30000 : 5000;
-    }
-    function start(){
-      if (reduceMotion) return;
-      stop();
-      timer = setTimeout(function () { next(); start(); }, currentSlideDelay());
-    }
-    function stop(){ if (timer) { clearTimeout(timer); timer = null; } }
-
-    dotsWrap.addEventListener("click", function(e){
-      var btn = e.target.closest("button[data-i]");
-      if (!btn) return;
-      show(parseInt(btn.getAttribute("data-i"), 10));
-      start();
-    });
-
-    var heroEl = wrap.closest(".hero");
-    if (heroEl) {
-      heroEl.addEventListener("mouseenter", stop);
-      heroEl.addEventListener("mouseleave", start);
-    }
-
-    var touchStartX = null;
-    wrap.addEventListener("touchstart", function(e){ touchStartX = e.touches[0].clientX; stop(); }, { passive: true });
-    wrap.addEventListener("touchend", function(e){
-      if (touchStartX === null) return;
-      var dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 40) show(idx + (dx < 0 ? 1 : -1));
-      touchStartX = null;
-      start();
-    }, { passive: true });
-
-    start();
+    if (!("IntersectionObserver" in window)) { vids.forEach(play); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) play(e.target);
+        else if (!e.target.paused) e.target.pause();
+      });
+    }, { rootMargin: "200px" });
+    vids.forEach(function (v) { io.observe(v); });
   })();
 
   /* The brand strip stays in normal document flow (solid white, never over
