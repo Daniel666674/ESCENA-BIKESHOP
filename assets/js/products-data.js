@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena TEC 410 Negra",
+  "brand": "TEC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 15000,
+  "sku": "CAD-TEC-001",
+  "units": 5,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-tec-410-negra-mtxg4xt1j4x7.jpg?v=1789160787794",
+   "assets/img/products/cadena-tec-410-negra-mtxg4z824ulm.jpg?v=1789160789583"
+  ],
+  "slug": "cadena-tec-410-negra",
+  "img": "assets/img/products/cadena-tec-410-negra-mtxg4xt1j4x7.jpg?v=1789160787794"
+ },
+ {
   "n": "Cadena BSD Forever Negra",
   "brand": "BSD",
   "cat": "cadenas",
@@ -25,6 +41,10 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAD-BSD-001",
   "units": 1,
   "slug": "cadena-bsd-forever-cromada",
+  "imgs": [
+   "assets/img/products/cadena-bsd-forever-cromada-mtxfccb9a826.jpg?v=1789159454416",
+   "assets/img/products/cadena-bsd-forever-cromada-mtxg50lruy50.jpg?v=1789160791102"
+  ],
   "order": 60,
   "imgPos": "50% 50%",
   "img": "assets/img/products/cadena-bsd-forever-cromada-mtxfccb9a826.jpg?v=1789159454416"
