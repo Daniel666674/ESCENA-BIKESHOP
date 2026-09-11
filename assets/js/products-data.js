@@ -1557,7 +1557,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Alienation",
   "cat": "manzana-delantera",
   "spec": "Buje de alineación 6016 • Doble sellado • 36 Huecos • peso 275 grs",
-  "price": 300000,
+  "price": 320000,
   "sku": "MZD-ALI-002",
   "units": 2,
   "imgs": [
