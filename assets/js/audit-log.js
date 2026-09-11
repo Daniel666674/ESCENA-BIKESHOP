@@ -5036,5 +5036,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:18:13.957Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cadena-kmc-410-negra"
+  ],
+  "deleted": []
  }
 ];
