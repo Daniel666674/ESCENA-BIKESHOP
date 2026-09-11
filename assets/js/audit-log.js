@@ -5108,5 +5108,15 @@ window.ESCENA_AUDIT = [
    "pedales-cult-dak-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T22:11:50.602Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "pedales-odyssey-twist-pro"
+  ],
+  "deleted": []
  }
 ];
