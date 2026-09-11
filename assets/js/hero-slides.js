@@ -1,15 +1,13 @@
 window.ESCENA_HERO_SLIDES = [
  {
   "id": "hmtps56qphhbo",
-  "img": "assets/img/hero/slide-hmtps56qphhbo.jpg?v=1788697225307",
-  "pos": "center 44%"
+  "img": "assets/img/hero/slide-hmtps56qphhbo.jpg?v=1789131600000"
  },
  {
   "id": "hmtpsl8nyuf32",
   "video": {
    "v": 1788697979769,
-   "ext": "mp4",
-   "fit": "card"
+   "ext": "mp4"
   }
  }
 ];

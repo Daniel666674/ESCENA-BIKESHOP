@@ -190,45 +190,70 @@
     }
 
     /* ============ HERO (split layout) ============ */
-    .hero { position: relative; background: var(--ink); padding: calc(6rem + var(--hero-header-offset, 0px)) 1.5rem 6rem; overflow: hidden; min-height: 82vh; display: flex; align-items: center; isolation: isolate; }
-    .hero-carousel { position: absolute; inset: 0; z-index: 0; }
-    .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center 35%; opacity: 0; transition: opacity 1.1s ease; }
+    /* The slides here are social-format artwork (an Instagram-shaped collage
+       poster, a 4:5 promo clip), not photographs. Their layout IS their
+       content: crop them and you cut headline text and product cutouts. So
+       the hero is a genuine two-column split -- copy on the left over the
+       brand's own dark ground, artwork on the right in a panel shaped to
+       whatever it's actually holding -- rather than a full-bleed background
+       the artwork has to be mangled to fill. */
+    .hero { position: relative; background: var(--ink); padding: calc(4.5rem + var(--hero-header-offset, 0px)) 1.5rem 4.5rem; overflow: hidden; min-height: 72vh; display: flex; align-items: center; isolation: isolate; }
+    /* The copy column is sized in its OWN right rather than as 1fr, for two
+       reasons: the panel beside it changes width from slide to slide, and a
+       flexible copy column would reflow the headline every time it did; and
+       "ESCENABMX" is a single unbreakable word ~520px wide at the h1's top
+       clamp, so the column has to be guaranteed wider than that or it spills
+       over the panel. The media column takes the remainder — a definite width
+       the panel can measure itself against without circularity. */
+    .hero .wrap { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: minmax(0, 37rem) minmax(0, 1fr); gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center; }
+    .hero-copy { max-width: 640px; }
+
+    /* ---- Media column ----
+       Height is RESERVED here, not left to whatever the current slide needs.
+       Otherwise a wide slide and a tall slide give the hero two different
+       heights and everything below it jumps by a couple hundred pixels every
+       time the carousel advances. This reservation is also the single source
+       of truth for how tall a panel may get: layoutPanel() measures it rather
+       than restating the clamp, so retuning it here retunes both. */
+    .hero-media { --hero-panel-cap: clamp(220px, 50vh, 470px);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.35rem;
+      height: calc(var(--hero-panel-cap) + 3rem); }
+    /* Rotated so the panel reads as a scrap pasted onto the page, matching the
+       collage language the artwork itself uses. */
+    .hero-frame { position: relative; transform: rotate(-1.5deg); }
+    /* Torn-paper backing, sized off the panel so it always hugs whatever
+       shape the panel currently is. The tear is clipped on THIS element --
+       never on the <video>, where a mask would cost a full-frame recomposite
+       every frame. drop-shadow (not box-shadow) is what follows a clip-path. */
+    .hero-paper { position: absolute; inset: -15px; z-index: 0; background: #f1efea;
+      filter: drop-shadow(0 20px 45px rgba(0, 0, 0, .55));
+      clip-path: polygon(0.0% -0.18%, 10.0% -0.71%, 20.0% 0.45%, 30.0% -1.28%, 40.0% 0.11%, 50.0% -0.4%, 60.0% -1.33%, 70.0% 0.02%, 80.0% -1.39%, 90.0% -0.13%, 100.0% -0.45%, 99.85% 10.0%, 100.98% 20.0%, 98.87% 30.0%, 99.17% 40.0%, 100.38% 50.0%, 101.34% 60.0%, 100.23% 70.0%, 99.69% 80.0%, 100.96% 90.0%, 99.52% 100.0%, 90.0% 99.57%, 80.0% 98.93%, 70.0% 98.85%, 60.0% 99.43%, 50.0% 100.95%, 40.0% 99.04%, 30.0% 100.24%, 20.0% 100.42%, 10.0% 99.74%, 0.0% 100.05%, -0.89% 90.0%, -0.88% 80.0%, 0.54% 70.0%, -0.22% 60.0%, -0.56% 50.0%, 0.26% 40.0%, -0.14% 30.0%, -0.6% 20.0%, 0.6% 10.0%); }
+    /* The panel takes the exact shape of whatever slide is showing, so nothing
+       is ever cropped and no letterbox bars are ever needed. Both dimensions
+       are set in px by heroCarousel()'s layoutPanel() from each asset's real
+       intrinsic size — the two current slides are 2.26:1 and 0.8:1, far too
+       different for one fixed dimension to serve both, and px on both axes is
+       also what lets the morph animate on both axes. The values below are only
+       the pre-measurement fallback. */
+    .hero-carousel { position: relative; z-index: 1; overflow: hidden; max-width: 100%;
+      width: var(--hero-panel-w, 380px); height: var(--hero-panel-h, 475px);
+      transition: width .55s cubic-bezier(.4, 0, .2, 1), height .55s cubic-bezier(.4, 0, .2, 1); }
+    /* contain, not cover: at rest the box matches the art exactly so the two
+       are identical, but mid-morph (while the width is still animating toward
+       the incoming slide's shape) contain shows a sliver of backing for half a
+       second instead of biting into the artwork. */
+    .hero-slide { position: absolute; inset: 0; background-size: contain; background-position: center; background-repeat: no-repeat; opacity: 0; transition: opacity 1.1s ease; }
     .hero-slide.is-active { opacity: 1; }
     /* Optional per-slide video (admin-managed) — sits on top of the slide's
        own background-image photo, invisible until it's actually decoded a
        frame (same reasoning as the category cards: the photo is the poster
        until the video is truly ready). */
-    .hero-slide video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; opacity: 0; transition: opacity .6s; }
+    .hero-slide video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .6s; }
     .hero-slide video.is-visible { opacity: 1; }
-    /* A portrait phone clip (this banner is landscape, ~2.4:1) doesn't work as
-       a full-bleed background at all: cover crops most of it away and contain
-       either leaves it tiny or needs a blurred fill that just looks muddy with
-       hard-edged graphics. Tried both. Showing it as its own framed card --
-       true size, correct aspect ratio, floating over the hero's plain dark
-       background -- reads as a deliberate design choice instead of a stretched
-       or cropped background fighting its own content. */
-    .hero-slide video.hero-video-card {
-      left: auto; right: 4%; top: 50%; bottom: auto;
-      transform: translateY(-50%);
-      width: auto; height: 78%; aspect-ratio: 4 / 5;
-      border-radius: 16px; box-shadow: 0 24px 70px rgba(0,0,0,.55);
-      object-fit: cover; object-position: center top;
-    }
-    @media (max-width: 900px) {
-      /* Text is centered and full-width on mobile (see the .hero media query
-         above) with nothing reserved on the sides, so keep the card in the
-         same right-anchored spot rather than switching layout strategy --
-         just smaller and lower so it reads as a corner accent behind the
-         centered text instead of competing with it. */
-      .hero-slide video.hero-video-card { right: 3%; top: auto; bottom: 4%; transform: none; height: 34%; }
-    }
-    .hero-bg-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.72) 38%, rgba(10,10,10,.4) 68%, rgba(10,10,10,.55) 100%); }
-    .hero-dots { position: absolute; z-index: 2; left: 50%; bottom: 1.6rem; transform: translateX(-50%); display: flex; gap: .5rem; }
+    .hero-dots { display: flex; gap: .5rem; }
     .hero-dots button { width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(255,255,255,.6); background: rgba(255,255,255,.25); padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
     .hero-dots button.is-active { background: #fff; transform: scale(1.25); }
-    @media (max-width: 900px) { .hero-dots { bottom: 1rem; } }
-    .hero .wrap { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; width: 100%; }
-    .hero-copy { max-width: 640px; }
     .hero-copy .kicker { color: #fff; font-size: .76rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .9rem; display: block; }
     .hero-copy h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.8rem, 6.5vw, 5rem); line-height: .92; letter-spacing: .02em; }
     .hero-copy h1 .accent-outline { color: transparent; -webkit-text-stroke: 2px #fff; }
@@ -240,15 +265,27 @@
     .hero-stats .l { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-top: .2rem; }
 
     @media (max-width: 900px) {
-      .hero { min-height: 62vh; padding: calc(3.6rem + var(--hero-header-offset, 0px)) 1.5rem 3.6rem; text-align: center; }
-      .hero-slide { background-position: center 22%; }
-      .hero-bg-overlay { background: linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.75) 65%, rgba(10,10,10,.9) 100%); }
+      .hero { min-height: 0; padding: calc(3.2rem + var(--hero-header-offset, 0px)) 1.5rem 3.2rem; text-align: center; }
+      /* minmax(0,…), not a bare 1fr: 1fr's automatic minimum refuses to shrink
+         below the panel's own pixel width, so the column would grow to match
+         the panel and layoutPanel() would then measure that inflated column
+         and grow the panel again, walking it off the edge of the screen. */
+      .hero .wrap { grid-template-columns: minmax(0, 1fr); gap: 2.4rem; }
       .hero-copy { max-width: none; }
       .hero-copy .btns { justify-content: center; }
       .hero-stats { justify-content: center; }
       .hero-copy p.lead { margin-left: auto; margin-right: auto; }
+      .hero-frame { transform: rotate(-1deg); }
+      .hero-paper { inset: -11px; }
+      /* Shorter cap when stacked: the column reserves this whether or not the
+         current slide needs it, and on a phone a tall reservation pushes the
+         store itself completely below the fold. Top-aligned rather than
+         centred so a short slide sits right under the copy and the unused part
+         of the reservation collects at the bottom, where it just reads as
+         section spacing instead of stranding the artwork in mid-air. */
+      .hero-media { --hero-panel-cap: clamp(200px, 40vh, 360px); justify-content: flex-start; }
     }
-    @media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }
+    @media (prefers-reduced-motion: reduce) { .hero-slide, .hero-carousel { transition: none; } }
 
     /* ============ SECTIONS ============ */
     section { padding: 4.5rem 1.5rem; }
@@ -509,11 +546,6 @@
 
 <!-- ============ HERO (split) ============ -->
 <section class="hero">
-  <!-- Populated from window.ESCENA_HERO_SLIDES by heroCarousel() below —
-       admin-managed via admin.html's "Página principal" tab. -->
-  <div class="hero-carousel" id="heroCarousel" aria-hidden="true"></div>
-  <div class="hero-bg-overlay"></div>
-  <div class="hero-dots" id="heroDots" role="tablist" aria-label="Fotos destacadas"></div>
   <div class="wrap">
     <div class="hero-copy">
       <span class="kicker" id="txtHeroKicker">BMX Shop · Bogotá, Colombia</span>
@@ -529,6 +561,15 @@
 
         <div><div class="n" id="txtHeroStat2N">32</div><div class="l" id="txtHeroStat2L">Depts. Colombia</div></div>
       </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-frame">
+        <div class="hero-paper" aria-hidden="true"></div>
+        <!-- Populated from window.ESCENA_HERO_SLIDES by heroCarousel() below —
+             admin-managed via admin.html's "Página principal" tab. -->
+        <div class="hero-carousel" id="heroCarousel" aria-hidden="true"></div>
+      </div>
+      <div class="hero-dots" id="heroDots" role="tablist" aria-label="Fotos destacadas"></div>
     </div>
   </div>
 </section>
@@ -1172,23 +1213,88 @@
       if (s.zoom && s.zoom > 100) frameStyle += "transform:scale(" + (s.zoom / 100) + ");";
       var vidCss = "";
       if (s.video && s.video.rotation) vidCss += "transform:rotate(" + s.video.rotation + "deg);";
-      // A portrait clip (see .hero-video-card above) doesn't work as a
-      // full-bleed background in this landscape banner -- shown instead as
-      // its own floating card, sized/positioned entirely by that CSS class,
-      // so the shared "pos" framing (meant for a full-bleed background/video)
-      // does not apply to it.
-      var videoClass = "";
-      if (s.video && s.video.fit === "card") {
-        videoClass = ' class="hero-video-card"';
-      } else if (s.pos) {
-        vidCss += "object-position:" + s.pos + ";";
-      }
+      if (s.pos) vidCss += "object-position:" + s.pos + ";";
       var videoStyle = vidCss ? ' style="' + vidCss + '"' : "";
-      var videoEl = (s.video && s.video.ext && s.video.v) ? '<video' + videoClass + ' muted loop playsinline preload="none" aria-hidden="true"' + videoStyle + '></video>' : "";
+      var videoEl = (s.video && s.video.ext && s.video.v) ? '<video muted loop playsinline preload="none" aria-hidden="true"' + videoStyle + '></video>' : "";
       return '<div class="hero-slide' + (i === 0 ? ' is-active' : '') + '" style="' + bg + frameStyle + '">' + videoEl + '</div>';
     }).join("");
     var slides = Array.prototype.slice.call(wrap.querySelectorAll(".hero-slide"));
     if (!slides.length) return;
+
+    /* ---- Panel shape ----
+       The panel takes the shape of whatever slide is showing (see
+       .hero-carousel), so nothing is ever cropped or letterboxed. Ratios are
+       MEASURED from each asset's real intrinsic size rather than stored in
+       the manifest, so a photo or clip of any proportion uploaded from the
+       admin panel later just works with no data to keep in sync. Until a
+       ratio is known the panel sits at the CSS fallback size. */
+    var mediaCol = wrap.closest(".hero-media"); // grid item: its width is the column's, set independently of us
+    var slideRatios = [];
+    var activeIdx = 0;
+    function layoutPanel() {
+      var r = slideRatios[activeIdx];
+      if (!r) return;
+      // Safe to measure the column and size the panel from it ONLY because
+      // both grid columns are minmax(0, …): that is what stops the column from
+      // being widened by the panel's own px width and feeding back into this
+      // measurement. Don't loosen those track sizes.
+      var colW = mediaCol ? mediaCol.clientWidth : 0;
+      if (!colW) return;
+      // Derived from the column's own reserved height rather than restating
+      // its clamp here, so the two can't drift apart when one is retuned (the
+      // stacked layout overrides that clamp, for one).
+      var gap = parseFloat(getComputedStyle(mediaCol).rowGap) || 0;
+      var maxH = mediaCol.clientHeight - dotsWrap.offsetHeight - gap;
+      if (maxH <= 0) return;
+      var w = Math.min(colW, maxH * r);
+      var h = w / r;
+      wrap.style.setProperty("--hero-panel-w", Math.round(w) + "px");
+      wrap.style.setProperty("--hero-panel-h", Math.round(h) + "px");
+    }
+    function setRatio(i, w, h, rotation) {
+      if (!w || !h || slideRatios[i]) return;
+      // A 90/270 rotation swaps which side is which once it's rendered.
+      slideRatios[i] = (rotation === 90 || rotation === 270) ? (h / w) : (w / h);
+      if (i === activeIdx) layoutPanel();
+    }
+    // Held in an array on purpose: a detached media element with nothing
+    // referencing it can be collected before its metadata ever arrives.
+    var probes = [];
+    slideData.forEach(function (s, i) {
+      // Photo wins when a slide has both: it's the poster the video fades in
+      // over, and the two are framed as one.
+      if (s.img) {
+        var probe = new Image();
+        probe.onload = function () { setRatio(i, probe.naturalWidth, probe.naturalHeight, null); };
+        probe.src = s.img;
+        probes.push(probe);
+      } else if (s.video && s.video.ext && s.video.v) {
+        // Probed on a throwaway element rather than the real one: the real one
+        // only gets its src when its slide activates (see activateSlideMedia),
+        // which would leave the panel at the outgoing slide's shape and then
+        // visibly snap. preload="metadata" fetches just the header, and
+        // prefetchVideos() above has usually put the file in the HTTP cache by
+        // now, so this costs approximately nothing.
+        var probeVid = document.createElement("video");
+        probeVid.preload = "metadata";
+        probeVid.muted = true;
+        probeVid.addEventListener("loadedmetadata", function () {
+          setRatio(i, probeVid.videoWidth, probeVid.videoHeight, s.video.rotation);
+        }, { once: true });
+        // If the clip can't be decoded here at all, the panel would otherwise
+        // keep the OUTGOING slide's shape and sit there at the wrong size
+        // around an empty box. Fall back to portrait, which is what phone
+        // footage almost always is.
+        probeVid.addEventListener("error", function () { setRatio(i, 4, 5, null); }, { once: true });
+        probeVid.src = "assets/video/hero-" + s.id + "." + s.video.ext + "?v=" + s.video.v;
+        probes.push(probeVid);
+      }
+    });
+    var resizeTimer = null;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(layoutPanel, 120);
+    });
 
     function activateSlideMedia(i) {
       var data = slideData[i], slide = slides[i];
@@ -1215,6 +1321,7 @@
       if (vid && !vid.paused) vid.pause();
     }
     activateSlideMedia(0); // first slide is visible immediately on page load
+    layoutPanel();
 
     if (slides.length < 2) return; // nothing to cycle, but its own video (if any) still plays
 
@@ -1231,6 +1338,8 @@
       idx = (i + slides.length) % slides.length;
       slides.forEach(function(s, n){ s.classList.toggle("is-active", n === idx); });
       dots.forEach(function(d, n){ d.classList.toggle("is-active", n === idx); });
+      activeIdx = idx;
+      layoutPanel(); // morph the panel to the incoming slide's own shape
       if (prevIdx !== idx) deactivateSlideMedia(prevIdx);
       activateSlideMedia(idx);
     }
