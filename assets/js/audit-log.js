@@ -4974,5 +4974,24 @@ window.ESCENA_AUDIT = [
    "cadena-tall-order-cromada-510"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:03:33.549Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "10 productos editados",
+  "created": [],
+  "edited": [
+   "cadena-bsd-forever-cromada",
+   "cadena-kmc-410-azul",
+   "cadena-kmc-410-roja",
+   "cadena-kmc-410-negra-2",
+   "cadena-kmc-410-negra",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-k1-wide-perforada-cromada",
+   "cadena-tallorder-negra-510",
+   "cadena-tall-order-cromada-510",
+   "cadena-federal-escamada-cromada-2"
+  ],
+  "deleted": []
  }
 ];
