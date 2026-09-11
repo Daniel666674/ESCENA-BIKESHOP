@@ -1,5 +1,28 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena CargoChain C410 Negra",
+  "brand": "Cargo",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 13000,
+  "sku": "CAD-CAR-001",
+  "units": 10,
+  "slug": "cadena-cargochain-c410-negra",
+  "img": "assets/img/products/cadena-cargochain-c410-negra-mtxggvd6h8hd.jpg?v=1789161345210"
+ },
+ {
+  "n": "Cadena CargoChain C410 Cromada",
+  "brand": "Cargo",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 13000,
+  "sku": "CAD-CAR-002",
+  "units": 10,
+  "imgFit": "cover",
+  "slug": "cadena-cargochain-c410-cromada",
+  "img": "assets/img/products/cadena-cargochain-c410-cromada-mtxg7nb76gie.jpg?v=1789160914050"
+ },
+ {
   "n": "Cadena TEC 410 Negra",
   "brand": "TEC",
   "cat": "cadenas",
@@ -216,6 +239,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "cadena-kmc-410-negra",
   "order": 120,
+  "imgZoom": 137,
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
  {
