@@ -189,103 +189,71 @@
       .site-header .world-tab { font-size: 1.02rem; }
     }
 
-    /* ============ HERO (split layout) ============ */
-    /* The slides here are social-format artwork (an Instagram-shaped collage
-       poster, a 4:5 promo clip), not photographs. Their layout IS their
-       content: crop them and you cut headline text and product cutouts. So
-       the hero is a genuine two-column split -- copy on the left over the
-       brand's own dark ground, artwork on the right in a panel shaped to
-       whatever it's actually holding -- rather than a full-bleed background
-       the artwork has to be mangled to fill. */
-    .hero { position: relative; background: var(--ink); padding: calc(4.5rem + var(--hero-header-offset, 0px)) 1.5rem 4.5rem; overflow: hidden; min-height: 72vh; display: flex; align-items: center; isolation: isolate; }
-    /* The copy column is sized in its OWN right rather than as 1fr, for two
-       reasons: the panel beside it changes width from slide to slide, and a
-       flexible copy column would reflow the headline every time it did; and
-       "ESCENABMX" is a single unbreakable word ~520px wide at the h1's top
-       clamp, so the column has to be guaranteed wider than that or it spills
-       over the panel. The media column takes the remainder — a definite width
-       the panel can measure itself against without circularity. */
-    .hero .wrap { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; width: 100%;
-      display: grid; grid-template-columns: minmax(0, 37rem) minmax(0, 1fr); gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center; }
-    .hero-copy { max-width: 640px; }
+    /* ============ HERO (full-bleed artwork) ============ */
+    /* The slides are social-format ARTWORK, not photographs — their layout is
+       their content, so cropping cuts headline type and product cutouts. The
+       current piece is a 2.26:1 banner, near enough the shape a hero wants,
+       so it runs as large as it fits at its exact ratio (zero crop) and the
+       copy sits in a band beneath it rather than on top: this artwork carries
+       its own headline and a busy product grid, so there is nowhere on it that
+       overlaid type would stay legible. */
+    .hero { --hero-stage-min: 180px; position: relative; background: var(--ink); overflow: hidden;
+      padding: calc(var(--hero-header-offset, 0px) + 1rem) 0 2.4rem;
+      display: flex; flex-direction: column; align-items: center; gap: clamp(1.1rem, 2.4vw, 1.9rem); }
+    /* The dots sit between the stage and the copy, so when there's only one
+       slide and this renders empty it still takes a share of the flex gap on
+       BOTH sides — doubling the space under the artwork for no reason. */
+    .hero-dots:empty { display: none; }
 
-    /* ---- Media column ----
-       Height is RESERVED here, not left to whatever the current slide needs.
-       Otherwise a wide slide and a tall slide give the hero two different
-       heights and everything below it jumps by a couple hundred pixels every
-       time the carousel advances. This reservation is also the single source
-       of truth for how tall a panel may get: layoutPanel() measures it rather
-       than restating the clamp, so retuning it here retunes both. */
-    .hero-media { --hero-panel-cap: clamp(220px, 50vh, 470px);
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.35rem;
-      height: calc(var(--hero-panel-cap) + 3rem); }
-    /* Rotated so the panel reads as a scrap pasted onto the page, matching the
-       collage language the artwork itself uses. */
-    .hero-frame { position: relative; transform: rotate(-1.5deg); }
-    /* Torn-paper backing, sized off the panel so it always hugs whatever
-       shape the panel currently is. The tear is clipped on THIS element --
-       never on the <video>, where a mask would cost a full-frame recomposite
-       every frame. drop-shadow (not box-shadow) is what follows a clip-path. */
-    .hero-paper { position: absolute; inset: -15px; z-index: 0; background: #f1efea;
-      filter: drop-shadow(0 20px 45px rgba(0, 0, 0, .55));
-      clip-path: polygon(0.0% -0.18%, 10.0% -0.71%, 20.0% 0.45%, 30.0% -1.28%, 40.0% 0.11%, 50.0% -0.4%, 60.0% -1.33%, 70.0% 0.02%, 80.0% -1.39%, 90.0% -0.13%, 100.0% -0.45%, 99.85% 10.0%, 100.98% 20.0%, 98.87% 30.0%, 99.17% 40.0%, 100.38% 50.0%, 101.34% 60.0%, 100.23% 70.0%, 99.69% 80.0%, 100.96% 90.0%, 99.52% 100.0%, 90.0% 99.57%, 80.0% 98.93%, 70.0% 98.85%, 60.0% 99.43%, 50.0% 100.95%, 40.0% 99.04%, 30.0% 100.24%, 20.0% 100.42%, 10.0% 99.74%, 0.0% 100.05%, -0.89% 90.0%, -0.88% 80.0%, 0.54% 70.0%, -0.22% 60.0%, -0.56% 50.0%, 0.26% 40.0%, -0.14% 30.0%, -0.6% 20.0%, 0.6% 10.0%); }
-    /* The panel takes the exact shape of whatever slide is showing, so nothing
-       is ever cropped and no letterbox bars are ever needed. Both dimensions
-       are set in px by heroCarousel()'s layoutPanel() from each asset's real
-       intrinsic size — the two current slides are 2.26:1 and 0.8:1, far too
-       different for one fixed dimension to serve both, and px on both axes is
-       also what lets the morph animate on both axes. The values below are only
-       the pre-measurement fallback. */
-    .hero-carousel { position: relative; z-index: 1; overflow: hidden; max-width: 100%;
-      width: var(--hero-panel-w, 380px); height: var(--hero-panel-h, 475px);
-      transition: width .55s cubic-bezier(.4, 0, .2, 1), height .55s cubic-bezier(.4, 0, .2, 1); }
-    /* contain, not cover: at rest the box matches the art exactly so the two
-       are identical, but mid-morph (while the width is still animating toward
-       the incoming slide's shape) contain shows a sliver of backing for half a
-       second instead of biting into the artwork. */
-    .hero-slide { position: absolute; inset: 0; background-size: contain; background-position: center; background-repeat: no-repeat; opacity: 0; transition: opacity 1.1s ease; }
+    /* Sized in px by heroCarousel()'s layoutStage() to the largest box that
+       fits BOTH the viewport width and the height cap below while keeping the
+       slide's exact intrinsic ratio. Cap is what stops a 2.26:1 piece from
+       being 850px tall on a wide screen and pushing the buttons off-screen. */
+    .hero-stage { --hero-stage-cap: clamp(180px, 62vh, 760px);
+      position: relative; overflow: hidden;
+      /* Also declared as a real max-height, not just a custom property: a
+         custom property reads back from getComputedStyle as its raw token
+         stream ("clamp(200px, 58vh, 660px)"), whereas max-height reads back
+         resolved to px — which is how layoutStage() gets a usable number. It
+         doubles as the safety net if the script never runs. */
+      max-height: var(--hero-stage-cap);
+      width: var(--hero-stage-w, min(100%, 1180px)); height: var(--hero-stage-h, 520px);
+      transition: width .5s cubic-bezier(.4, 0, .2, 1), height .5s cubic-bezier(.4, 0, .2, 1); }
+    /* cover, not contain: the box is built to the slide's own ratio, so the
+       two are identical at rest — cover just avoids a hairline of background
+       showing through on sub-pixel rounding. */
+    .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; transition: opacity 1.1s ease; }
     .hero-slide.is-active { opacity: 1; }
     /* Optional per-slide video (admin-managed) — sits on top of the slide's
        own background-image photo, invisible until it's actually decoded a
        frame (same reasoning as the category cards: the photo is the poster
        until the video is truly ready). */
-    .hero-slide video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .6s; }
+    .hero-slide video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s; }
     .hero-slide video.is-visible { opacity: 1; }
-    .hero-dots { display: flex; gap: .5rem; }
-    .hero-dots button { width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(255,255,255,.6); background: rgba(255,255,255,.25); padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
-    .hero-dots button.is-active { background: #fff; transform: scale(1.25); }
-    .hero-copy .kicker { color: #fff; font-size: .76rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .9rem; display: block; }
-    .hero-copy h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.8rem, 6.5vw, 5rem); line-height: .92; letter-spacing: .02em; }
+
+    .hero-copy { text-align: center; max-width: 720px; padding: 0 1.5rem; }
+    .hero-copy .kicker { color: rgba(255,255,255,.62); font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .7rem; display: block; }
+    .hero-copy h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.6rem, 5.2vw, 4.2rem); line-height: .92; letter-spacing: .02em; }
     .hero-copy h1 .accent-outline { color: transparent; -webkit-text-stroke: 2px #fff; }
-    .hero-copy .tagline { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1.1rem, 2.6vw, 1.5rem); letter-spacing: .07em; margin-top: .5rem; opacity: .9; }
-    .hero-copy p.lead { color: rgba(255,255,255,.8); font-size: .98rem; max-width: 480px; margin: 1.1rem 0 1.7rem; font-weight: 300; }
-    .hero-copy .btns { display: flex; gap: .8rem; flex-wrap: wrap; }
-    .hero-stats { display: flex; gap: 2.2rem; margin-top: 2.2rem; flex-wrap: wrap; }
+    .hero-copy .tagline { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1.05rem, 2.4vw, 1.4rem); letter-spacing: .07em; margin-top: .4rem; opacity: .9; }
+    .hero-copy p.lead { color: rgba(255,255,255,.8); font-size: .95rem; max-width: 540px; margin: .9rem auto 1.4rem; font-weight: 300; }
+    .hero-copy .btns { display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; margin-top: 1.1rem; }
+    .hero-stats { display: flex; gap: 2.2rem; margin-top: 1.6rem; flex-wrap: wrap; justify-content: center; }
     .hero-stats .n { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 2rem; line-height: 1; }
     .hero-stats .l { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-top: .2rem; }
 
+    .hero-dots { display: flex; gap: .5rem; }
+    .hero-dots button { width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(255,255,255,.6); background: rgba(255,255,255,.25); padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
+    .hero-dots button.is-active { background: #fff; transform: scale(1.25); }
+
     @media (max-width: 900px) {
-      .hero { min-height: 0; padding: calc(3.2rem + var(--hero-header-offset, 0px)) 1.5rem 3.2rem; text-align: center; }
-      /* minmax(0,…), not a bare 1fr: 1fr's automatic minimum refuses to shrink
-         below the panel's own pixel width, so the column would grow to match
-         the panel and layoutPanel() would then measure that inflated column
-         and grow the panel again, walking it off the edge of the screen. */
-      .hero .wrap { grid-template-columns: minmax(0, 1fr); gap: 2.4rem; }
-      .hero-copy { max-width: none; }
-      .hero-copy .btns { justify-content: center; }
-      .hero-stats { justify-content: center; }
-      .hero-copy p.lead { margin-left: auto; margin-right: auto; }
-      .hero-frame { transform: rotate(-1deg); }
-      .hero-paper { inset: -11px; }
-      /* Shorter cap when stacked: the column reserves this whether or not the
-         current slide needs it, and on a phone a tall reservation pushes the
-         store itself completely below the fold. Top-aligned rather than
-         centred so a short slide sits right under the copy and the unused part
-         of the reservation collects at the bottom, where it just reads as
-         section spacing instead of stranding the artwork in mid-air. */
-      .hero-media { --hero-panel-cap: clamp(200px, 40vh, 360px); justify-content: flex-start; }
+      .hero { padding: calc(var(--hero-header-offset, 0px) + .8rem) 0 2.4rem; gap: 1.6rem; }
+      /* A 2.26:1 banner is inherently a thin strip on a phone; let it take the
+         full width and give the cap room so a squarer piece can still breathe. */
+      .hero-stage { --hero-stage-cap: clamp(170px, 46vh, 420px); }
+      .hero-copy h1 { font-size: clamp(2.4rem, 11vw, 3.4rem); }
     }
-    @media (prefers-reduced-motion: reduce) { .hero-slide, .hero-carousel { transition: none; } }
+    @media (prefers-reduced-motion: reduce) { .hero-slide, .hero-stage { transition: none; } }
 
     /* ============ SECTIONS ============ */
     section { padding: 4.5rem 1.5rem; }
@@ -547,30 +515,22 @@
 
 <!-- ============ HERO (split) ============ -->
 <section class="hero">
-  <div class="wrap">
-    <div class="hero-copy">
-      <span class="kicker" id="txtHeroKicker">BMX Shop · Bogotá, Colombia</span>
-      <h1>ESCENA<span class="accent-outline">BMX</span></h1>
-      <p class="tagline" id="txtHeroTagline">Partes que aguantan calle</p>
-      <p class="lead" id="txtHeroLead">Más de 100 partes originales de las marcas que mueven la escena: cañas, timones, tenedores, bielas, manzanas, platos, pedales, sillines y más. Directo de la tienda a tu bici — pides por WhatsApp, montas y ruedas.</p>
-      <div class="btns">
-        <a href="tienda" class="btn btn-primary" id="txtHeroBtnPrimary">Ver la tienda</a>
-        <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20info%20de%20partes%20BMX" target="_blank" rel="noopener" class="btn btn-ghost" id="txtHeroBtnGhost">Pedir por WhatsApp</a>
-      </div>
-      <div class="hero-stats">
-        <div><div class="n" id="txtHeroStat1N">100+</div><div class="l" id="txtHeroStat1L">Partes en stock</div></div>
-
-        <div><div class="n" id="txtHeroStat2N">32</div><div class="l" id="txtHeroStat2L">Depts. Colombia</div></div>
-      </div>
+  <!-- Populated from window.ESCENA_HERO_SLIDES by heroCarousel() below —
+       admin-managed via admin.html's "Página principal" tab. -->
+  <div class="hero-stage" id="heroCarousel" aria-hidden="true"></div>
+  <div class="hero-dots" id="heroDots" role="tablist" aria-label="Fotos destacadas"></div>
+  <div class="hero-copy">
+    <span class="kicker" id="txtHeroKicker">BMX Shop · Bogotá, Colombia</span>
+    <h1>ESCENA<span class="accent-outline">BMX</span></h1>
+    <p class="tagline" id="txtHeroTagline">Partes que aguantan calle</p>
+    <p class="lead" id="txtHeroLead">Más de 100 partes originales de las marcas que mueven la escena: cañas, timones, tenedores, bielas, manzanas, platos, pedales, sillines y más. Directo de la tienda a tu bici — pides por WhatsApp, montas y ruedas.</p>
+    <div class="btns">
+      <a href="tienda" class="btn btn-primary" id="txtHeroBtnPrimary">Ver la tienda</a>
+      <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20info%20de%20partes%20BMX" target="_blank" rel="noopener" class="btn btn-ghost" id="txtHeroBtnGhost">Pedir por WhatsApp</a>
     </div>
-    <div class="hero-media">
-      <div class="hero-frame">
-        <div class="hero-paper" aria-hidden="true"></div>
-        <!-- Populated from window.ESCENA_HERO_SLIDES by heroCarousel() below —
-             admin-managed via admin.html's "Página principal" tab. -->
-        <div class="hero-carousel" id="heroCarousel" aria-hidden="true"></div>
-      </div>
-      <div class="hero-dots" id="heroDots" role="tablist" aria-label="Fotos destacadas"></div>
+    <div class="hero-stats">
+      <div><div class="n" id="txtHeroStat1N">100+</div><div class="l" id="txtHeroStat1L">Partes en stock</div></div>
+      <div><div class="n" id="txtHeroStat2N">32</div><div class="l" id="txtHeroStat2L">Depts. Colombia</div></div>
     </div>
   </div>
 </section>
@@ -1229,34 +1189,41 @@
        the manifest, so a photo or clip of any proportion uploaded from the
        admin panel later just works with no data to keep in sync. Until a
        ratio is known the panel sits at the CSS fallback size. */
-    var mediaCol = wrap.closest(".hero-media"); // grid item: its width is the column's, set independently of us
     var slideRatios = [];
     var activeIdx = 0;
-    function layoutPanel() {
+    function layoutStage() {
       var r = slideRatios[activeIdx];
       if (!r) return;
-      // Safe to measure the column and size the panel from it ONLY because
-      // both grid columns are minmax(0, …): that is what stops the column from
-      // being widened by the panel's own px width and feeding back into this
-      // measurement. Don't loosen those track sizes.
-      var colW = mediaCol ? mediaCol.clientWidth : 0;
-      if (!colW) return;
-      // Derived from the column's own reserved height rather than restating
-      // its clamp here, so the two can't drift apart when one is retuned (the
-      // stacked layout overrides that clamp, for one).
-      var gap = parseFloat(getComputedStyle(mediaCol).rowGap) || 0;
-      var maxH = mediaCol.clientHeight - dotsWrap.offsetHeight - gap;
-      if (maxH <= 0) return;
-      var w = Math.min(colW, maxH * r);
-      var h = w / r;
-      wrap.style.setProperty("--hero-panel-w", Math.round(w) + "px");
-      wrap.style.setProperty("--hero-panel-h", Math.round(h) + "px");
+      // Largest box that satisfies BOTH limits at the slide's exact ratio, so
+      // the artwork runs as big as it can with nothing cropped. The height cap
+      // comes from the stylesheet (--hero-stage-cap, which the stacked layout
+      // overrides) rather than being restated here, so retuning it in one
+      // place retunes both.
+      var maxW = document.documentElement.clientWidth;
+      var maxH = parseFloat(getComputedStyle(wrap).maxHeight); // resolved px; see .hero-stage
+      if (!maxW || !maxH) return;
+      // Give the artwork every pixel the rest of the hero isn't using, rather
+      // than a flat vh fraction: a flat cap has to be set pessimistically for
+      // short laptop screens, which then wastes height on tall ones. Measuring
+      // the copy block (it sits below and sizes independently of the stage, so
+      // this can't feed back) keeps the buttons above the fold everywhere while
+      // letting the artwork run as large as that allows.
+      var hero = wrap.parentNode, hcs = getComputedStyle(hero);
+      var copyEl = hero.querySelector(".hero-copy");
+      var chrome = parseFloat(hcs.paddingTop) + parseFloat(hcs.paddingBottom) +
+                   parseFloat(hcs.rowGap || 0) + (copyEl ? copyEl.offsetHeight : 0);
+      var avail = window.innerHeight - chrome;
+      if (avail > 0) maxH = Math.min(maxH, avail);
+      maxH = Math.max(maxH, parseFloat(hcs.getPropertyValue("--hero-stage-min")) || 180);
+      var w = Math.min(maxW, maxH * r);
+      wrap.style.setProperty("--hero-stage-w", Math.round(w) + "px");
+      wrap.style.setProperty("--hero-stage-h", Math.round(w / r) + "px");
     }
     function setRatio(i, w, h, rotation) {
       if (!w || !h || slideRatios[i]) return;
       // A 90/270 rotation swaps which side is which once it's rendered.
       slideRatios[i] = (rotation === 90 || rotation === 270) ? (h / w) : (w / h);
-      if (i === activeIdx) layoutPanel();
+      if (i === activeIdx) layoutStage();
     }
     // Held in an array on purpose: a detached media element with nothing
     // referencing it can be collected before its metadata ever arrives.
@@ -1294,7 +1261,7 @@
     var resizeTimer = null;
     window.addEventListener("resize", function () {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(layoutPanel, 120);
+      resizeTimer = setTimeout(layoutStage, 120);
     });
 
     function activateSlideMedia(i) {
@@ -1322,7 +1289,7 @@
       if (vid && !vid.paused) vid.pause();
     }
     activateSlideMedia(0); // first slide is visible immediately on page load
-    layoutPanel();
+    layoutStage();
 
     if (slides.length < 2) return; // nothing to cycle, but its own video (if any) still plays
 
@@ -1340,7 +1307,7 @@
       slides.forEach(function(s, n){ s.classList.toggle("is-active", n === idx); });
       dots.forEach(function(d, n){ d.classList.toggle("is-active", n === idx); });
       activeIdx = idx;
-      layoutPanel(); // morph the panel to the incoming slide's own shape
+      layoutStage(); // resize the stage to the incoming slide's own shape
       if (prevIdx !== idx) deactivateSlideMedia(prevIdx);
       activateSlideMedia(idx);
     }
