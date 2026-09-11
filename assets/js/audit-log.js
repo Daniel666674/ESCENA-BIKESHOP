@@ -5067,5 +5067,26 @@ window.ESCENA_AUDIT = [
    "cadena-kmc-k1-wide-perforada-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:49:41.348Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 9 productos editados, 3 fotos subidas",
+  "created": [
+   "manzana-delantera-cult-crew-cromada",
+   "manzana-alienation-iluminiati-cromada"
+  ],
+  "edited": [
+   "manzana-delantera-ontrail-nemesis-2",
+   "manzana-delantera-ontrail-nemesis",
+   "manzana-optimus-gold",
+   "manzana-delantera-stranger-ballast",
+   "manzana-delantera-primo-balance",
+   "manzana-delantera-alienation-illunimati",
+   "manzana-federal-motion",
+   "manzana-delantera-alienation-venus",
+   "manzana-primo-n4fl"
+  ],
+  "deleted": []
  }
 ];
