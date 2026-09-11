@@ -207,6 +207,31 @@
      correct whether or not wholesale pricing is active and whether or not the
      product has a variant selector — the variant selector calls this again
      (via refreshPDP) instead of maintaining its own copy of this message. */
+  // The product's own canonical URL — appended to the WhatsApp message so
+  // the link unfurls into a rich preview (photo, title, price already baked
+  // into that page's og:description) inside the chat. wa.me has no way to
+  // attach an image directly to a pre-filled message; a URL with correct
+  // Open Graph tags is the closest thing WhatsApp supports to "show the
+  // actual product, picture and price" in the message itself.
+  //
+  // A bare canonical URL isn't enough on its own: WhatsApp/Facebook's crawler
+  // caches the unfurled preview PER EXACT URL, and that cache is sticky — once
+  // a broken preview (e.g. a 404'd og:image, like every page had before this
+  // fix) is cached against a URL, just fixing the server doesn't make
+  // WhatsApp re-fetch it. Any product link already shared/tested stays stuck
+  // showing the old broken preview indefinitely. Appending a ?v= tied to the
+  // product's own photo version makes each product's URL change whenever its
+  // cover photo does, so WhatsApp always treats it as a URL it hasn't seen
+  // and crawls fresh instead of serving a stale cached card.
+  function pdpCanonicalUrl() {
+    var link = document.querySelector('link[rel="canonical"]');
+    var url = (link && link.getAttribute("href")) || location.href;
+    var btn = document.querySelector(".pdp-actions .add-cart-btn[data-img]");
+    var img = btn && btn.getAttribute("data-img");
+    var v = img && img.indexOf("?v=") > -1 ? img.split("?v=")[1] : null;
+    return v ? (url + "?v=" + v) : url;
+  }
+
   function rewriteStaticPDP() {
     var btn = document.querySelector(".pdp-actions .add-cart-btn[data-price]");
     if (!btn) return;
@@ -223,7 +248,7 @@
       }
     }
 
-    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA 🐕, quiero pedir: " + n + " (" + brand + ") — " + cop(applyDiscount(raw)) + "." + pdpVariantSuffix() + " ¿Está disponible?");
+    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA 🐕, quiero pedir: " + n + " (" + brand + ") — " + cop(applyDiscount(raw)) + "." + pdpVariantSuffix() + " ¿Está disponible?\n" + pdpCanonicalUrl());
     var href = "https://wa.me/" + WA + "?text=" + msg;
     var buyLink = document.querySelector(".pdp-actions .btn-ink[href*=\"wa.me\"]");
     if (buyLink) buyLink.href = href;

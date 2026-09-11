@@ -1,0 +1,13 @@
+name = "escena-booking"
+main = "booking-worker.js"
+compatibility_date = "2024-09-01"
+
+[vars]
+GITHUB_OWNER = "Daniel666674"
+GITHUB_REPO = "ESCENA-BIKESHOP"
+GITHUB_BRANCH = "main"
+ALLOWED_ORIGINS = "https://escenabmx.com,https://www.escenabmx.com"
+
+# GITHUB_TOKEN is a SECRET, not a var — never put it here.
+# Set it after deploying with:
+#   wrangler secret put GITHUB_TOKEN

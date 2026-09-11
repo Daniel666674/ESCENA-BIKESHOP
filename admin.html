@@ -507,6 +507,7 @@
       <button type="button" class="admin-nav-btn" data-section="secInventario">Inventario</button>
       <button type="button" class="admin-nav-btn" data-section="secPagina">Página principal</button>
       <button type="button" class="admin-nav-btn" data-section="secActividad">Actividad</button>
+      <button type="button" class="admin-nav-btn" data-section="secAgenda">Agenda</button>
     </div>
   </nav>
 
@@ -847,6 +848,79 @@
         </table>
       </div>
       <p class="empty-state" id="activityEmpty" style="display:none;">Todavía no hay actividad registrada.</p>
+      </section>
+
+      <section id="secAgenda" style="display:none;">
+      <h2 class="section-title">Agenda del taller<span class="demo-tag" id="agendaCount">0 reservas</span></h2>
+      <p class="section-sub">Mantenimiento y solicitudes de pintura agendadas desde <b>/agendar</b> — o agregadas acá a mano si te escribieron por WhatsApp antes de que el agendador en línea esté activo.</p>
+
+      <button type="button" class="btn btn-violet btn-sm" id="agendaAddToggleBtn" style="margin-bottom:1rem;">+ Agregar reserva manual</button>
+
+      <div id="agendaAddForm" style="display:none; background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:1.2rem; margin-bottom:1.5rem;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:.8rem;">
+          <div class="pmodal-field">
+            <label>Tipo</label>
+            <select id="agAddType">
+              <option value="mantenimiento">Mantenimiento</option>
+              <option value="pintura">Pintura (cotización)</option>
+            </select>
+          </div>
+          <div class="pmodal-field">
+            <label>Nombre del cliente</label>
+            <input type="text" id="agAddName" />
+          </div>
+          <div class="pmodal-field">
+            <label>WhatsApp</label>
+            <input type="text" id="agAddPhone" />
+          </div>
+          <div class="pmodal-field">
+            <label>Tipo de bici</label>
+            <input type="text" id="agAddBikeType" />
+          </div>
+          <div class="pmodal-field" id="agAddDateWrap">
+            <label>Fecha</label>
+            <input type="date" id="agAddDate" />
+          </div>
+          <div class="pmodal-field" id="agAddTimeWrap">
+            <label>Hora</label>
+            <input type="time" id="agAddTime" />
+          </div>
+          <div class="pmodal-field">
+            <label>Servicios (separados por coma)</label>
+            <input type="text" id="agAddServices" placeholder="Ej: Enrradiada, Punto de cadena" />
+          </div>
+          <div class="pmodal-field">
+            <label>Total (COP)</label>
+            <input type="number" id="agAddTotal" min="0" step="1000" />
+          </div>
+          <div class="pmodal-field" style="grid-column:1/-1;">
+            <label>Notas</label>
+            <input type="text" id="agAddNotes" />
+          </div>
+        </div>
+        <div style="display:flex; gap:.6rem; margin-top:1rem;">
+          <button type="button" class="btn btn-ink btn-sm" id="agAddSaveBtn">Guardar reserva</button>
+          <button type="button" class="btn btn-outline btn-sm" id="agAddCancelBtn">Cancelar</button>
+        </div>
+      </div>
+
+      <div class="inv-table-wrap" id="agendaTableWrap" style="display:none;">
+        <table class="inv-table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Tipo</th>
+              <th>Cliente</th>
+              <th>Servicios</th>
+              <th>Total</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="agendaBody"></tbody>
+        </table>
+      </div>
+      <p class="empty-state" id="agendaEmpty" style="display:none;">Todavía no hay reservas.</p>
       </section>
     </div>
   </main>
@@ -1474,7 +1548,7 @@
   }
   function showAdminSection(id) {
     if (id === "secPagina" && !isOwnerOnlySession()) return; // restricted — see OWNER_LEVEL_EMAILS/applyOwnerOnlySections
-    ["secResumen", "secAnaliticas", "secInventario", "secPagina", "secActividad"].forEach(function (secId) {
+    ["secResumen", "secAnaliticas", "secInventario", "secPagina", "secActividad", "secAgenda"].forEach(function (secId) {
       var el = document.getElementById(secId);
       if (el) el.style.display = secId === id ? "" : "none";
     });
@@ -1758,6 +1832,161 @@
     }).join("");
   }
 
+  /* ---- Agenda (taller: mantenimiento + pintura) ---- */
+  var STATUS_LABELS = {
+    pending: "Pendiente",
+    confirmed: "Confirmada",
+    completed: "Completada",
+    cancelled: "Cancelada",
+    quote_pending: "Cotización pendiente"
+  };
+  var STATUS_COLORS = {
+    pending: { bg: "#fff6d8", fg: "#8a6d00" },
+    confirmed: { bg: "#e5f7ef", fg: "#1a9c63" },
+    completed: { bg: "#eef0ff", fg: "#3949ab" },
+    cancelled: { bg: "#fdecea", fg: "#b3261e" },
+    quote_pending: { bg: "#f3e8ff", fg: "#7b2ff7" }
+  };
+  function loadBookings() {
+    return ghGetFile("assets/js/bookings-data.js").then(function (cur) {
+      bookingsLog = parseRemoteArray(cur.text, "ESCENA_BOOKINGS");
+      renderBookings();
+    }).catch(function (e) {
+      console.error("No se pudo cargar la agenda:", e);
+      showToast("No se pudo cargar la agenda");
+    });
+  }
+  // Re-reads the remote file fresh right before writing (ghPutWithRetry already
+  // retries on a 409 sha mismatch), so a transform always applies on top of
+  // whatever another device most recently saved instead of this session's
+  // possibly-stale in-memory copy.
+  function writeBookings(transformFn, message) {
+    return ghPutWithRetry("assets/js/bookings-data.js", message, function (remoteText) {
+      var remote = parseRemoteArray(remoteText, "ESCENA_BOOKINGS");
+      return "window.ESCENA_BOOKINGS = " + JSON.stringify(transformFn(remote), null, 1) + ";\n";
+    }, false).then(function () { return loadBookings(); });
+  }
+  function setBookingStatus(id, status) {
+    return writeBookings(function (remote) {
+      return remote.map(function (b) { return b.id === id ? Object.assign({}, b, { status: status }) : b; });
+    }, "Actualizar reserva " + id + " a " + status);
+  }
+  function deleteBooking(id) {
+    if (!confirm("¿Eliminar esta reserva? No se puede deshacer.")) return Promise.resolve();
+    return writeBookings(function (remote) {
+      return remote.filter(function (b) { return b.id !== id; });
+    }, "Eliminar reserva " + id);
+  }
+  function renderBookings() {
+    var countEl = document.getElementById("agendaCount");
+    var wrap = document.getElementById("agendaTableWrap");
+    var empty = document.getElementById("agendaEmpty");
+    var body = document.getElementById("agendaBody");
+    if (countEl) countEl.textContent = bookingsLog.length + (bookingsLog.length === 1 ? " reserva" : " reservas");
+    if (!bookingsLog.length) {
+      if (wrap) wrap.style.display = "none";
+      if (empty) empty.style.display = "";
+      return;
+    }
+    if (wrap) wrap.style.display = "";
+    if (empty) empty.style.display = "none";
+    var rows = bookingsLog.slice().sort(function (a, b) {
+      var ak = (a.date || "") + " " + (a.time || ""), bk = (b.date || "") + " " + (b.time || "");
+      return bk.localeCompare(ak); // most recent/soonest first isn't well-defined for quotes, so newest createdAt as tiebreak
+    }).sort(function (a, b) { return new Date(b.createdAt || 0) - new Date(a.createdAt || 0); });
+    body.innerHTML = rows.map(function (b) {
+      var when = b.date ? (esc(b.date) + (b.time ? " " + esc(b.time) : "")) : "—";
+      var services = Array.isArray(b.services) ? b.services.join(", ") : "";
+      var status = b.status || "pending";
+      var colors = STATUS_COLORS[status] || STATUS_COLORS.pending;
+      var label = STATUS_LABELS[status] || status;
+      var actions = [];
+      if (status === "pending" || status === "quote_pending") actions.push('<button type="button" class="btn btn-outline btn-sm" data-ag-action="confirm" data-id="' + esc(b.id) + '">Confirmar</button>');
+      if (status === "confirmed") actions.push('<button type="button" class="btn btn-outline btn-sm" data-ag-action="complete" data-id="' + esc(b.id) + '">Completar</button>');
+      if (status !== "cancelled" && status !== "completed") actions.push('<button type="button" class="btn btn-outline btn-sm" data-ag-action="cancel" data-id="' + esc(b.id) + '">Cancelar</button>');
+      actions.push('<button type="button" class="btn btn-outline btn-sm" data-ag-action="delete" data-id="' + esc(b.id) + '">Eliminar</button>');
+      return '<tr>' +
+        '<td data-label="Fecha">' + when + '</td>' +
+        '<td data-label="Tipo">' + (b.type === "pintura" ? "Pintura" : "Mantenimiento") + '</td>' +
+        '<td data-label="Cliente">' + esc(b.customerName || "") + (b.phone ? '<br><span style="color:var(--muted);font-size:.72rem;">' + esc(b.phone) + '</span>' : '') + '</td>' +
+        '<td data-label="Servicios">' + esc(services || b.notes || "") + '</td>' +
+        '<td data-label="Total">' + (b.total ? fmtInt(b.total) : "—") + '</td>' +
+        '<td data-label="Estado"><span class="demo-tag" style="background:' + colors.bg + ';color:' + colors.fg + ';">' + esc(label) + '</span></td>' +
+        '<td data-label="Acciones" style="white-space:nowrap;">' + actions.join(" ") + '</td>' +
+        '</tr>';
+    }).join("");
+  }
+  document.getElementById("agendaBody").addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-ag-action]");
+    if (!btn) return;
+    var id = btn.getAttribute("data-id");
+    var action = btn.getAttribute("data-ag-action");
+    btn.disabled = true;
+    var p;
+    if (action === "confirm") p = setBookingStatus(id, "confirmed");
+    else if (action === "complete") p = setBookingStatus(id, "completed");
+    else if (action === "cancel") p = setBookingStatus(id, "cancelled");
+    else if (action === "delete") p = deleteBooking(id);
+    else return;
+    p.then(function () { showToast("Agenda actualizada"); }).catch(function (e2) {
+      console.error(e2);
+      showToast("No se pudo actualizar la agenda");
+      btn.disabled = false;
+    });
+  });
+  document.getElementById("agendaAddToggleBtn").addEventListener("click", function () {
+    var form = document.getElementById("agendaAddForm");
+    form.style.display = form.style.display === "none" ? "" : "none";
+  });
+  document.getElementById("agAddCancelBtn").addEventListener("click", function () {
+    document.getElementById("agendaAddForm").style.display = "none";
+  });
+  document.getElementById("agAddType").addEventListener("change", function () {
+    var isPintura = this.value === "pintura";
+    document.getElementById("agAddDateWrap").style.display = isPintura ? "none" : "";
+    document.getElementById("agAddTimeWrap").style.display = isPintura ? "none" : "";
+  });
+  document.getElementById("agAddSaveBtn").addEventListener("click", function () {
+    var type = document.getElementById("agAddType").value;
+    var name = document.getElementById("agAddName").value.trim();
+    var phone = document.getElementById("agAddPhone").value.trim();
+    if (!name || !phone) { showToast("Nombre y WhatsApp son obligatorios"); return; }
+    var servicesText = document.getElementById("agAddServices").value.trim();
+    var entry = {
+      id: (type === "pintura" ? "pq_" : "bk_") + Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
+      createdAt: new Date().toISOString(),
+      type: type,
+      customerName: name,
+      phone: phone,
+      bikeType: document.getElementById("agAddBikeType").value.trim(),
+      notes: document.getElementById("agAddNotes").value.trim(),
+      status: type === "pintura" ? "quote_pending" : "pending"
+    };
+    if (type === "mantenimiento") {
+      entry.date = document.getElementById("agAddDate").value;
+      entry.time = document.getElementById("agAddTime").value;
+    }
+    if (servicesText) entry.services = servicesText.split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+    var total = parseInt(document.getElementById("agAddTotal").value, 10);
+    if (!isNaN(total)) entry.total = total;
+
+    var btn = this;
+    btn.disabled = true; btn.textContent = "Guardando…";
+    writeBookings(function (remote) { return remote.concat([entry]); }, "Agregar reserva manual: " + name)
+      .then(function () {
+        btn.disabled = false; btn.textContent = "Guardar reserva";
+        document.getElementById("agendaAddForm").style.display = "none";
+        ["agAddName", "agAddPhone", "agAddBikeType", "agAddNotes", "agAddServices", "agAddTotal", "agAddDate", "agAddTime"].forEach(function (id) {
+          document.getElementById(id).value = "";
+        });
+        showToast("Reserva agregada");
+      }).catch(function (e) {
+        console.error(e);
+        btn.disabled = false; btn.textContent = "Guardar reserva";
+        showToast("No se pudo guardar la reserva");
+      });
+  });
+
   function initDashboard() {
     var weeks = ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8"];
 
@@ -2013,6 +2242,7 @@
   var salesDirty = false; // unpublished sale records exist
   var salesBaselineCount = 0; // salesLog.length at last successful publish/load — everything past this is "mine, not yet committed"
   var auditLog = []; // per-user change history, shown in the Actividad tab
+  var bookingsLog = []; // taller: mantenimiento agendado + solicitudes de pintura, shown in the Agenda tab
   var modalPhotos = [];
   // Parallel to modalPhotos: modalPhotoColors[i] is the color label that photo
   // i belongs to ("" = shown for every color, the default). Only meaningful
@@ -2582,7 +2812,20 @@
     return "Hola ESCENA 🐕, quiero pedir: " + p.n + (p.brand ? " (" + p.brand + ")" : "") + " — " + copFmt(p.price) + " COP.";
   }
   function waHrefFor(p) {
-    return "https://wa.me/573107630504?text=" + encodeURIComponent(waMsgFor(p) + " ¿Está disponible?");
+    // The product URL is appended so the link unfurls into a photo/title/price
+    // preview inside WhatsApp (og:image + og:description already carry that
+    // for this page) — wa.me can't attach an image to the message directly,
+    // this is the closest it supports. assets/js/wholesale.js's
+    // rewriteStaticPDP() rebuilds this same href on every page load (so it
+    // stays right even without a republish), but the generated HTML should
+    // already be correct from the start too.
+    // ?v= (from the cover photo's own version) busts WhatsApp/Facebook's
+    // per-URL preview cache — without it, a link already shared before a
+    // photo/og:image fix stays stuck showing whatever got cached the first
+    // time, since the crawler only re-fetches when the URL itself changes.
+    var imgV = (p.imgs && p.imgs[0] && p.imgs[0].indexOf("?v=") > -1) ? p.imgs[0].split("?v=")[1] : null;
+    var url = "https://escenabmx.com/producto/" + p.slug + (imgV ? "?v=" + imgV : "");
+    return "https://wa.me/573107630504?text=" + encodeURIComponent(waMsgFor(p) + " ¿Está disponible?\n" + url);
   }
   // Cosmetic-only selector: no per-option stock, just tags the WhatsApp/cart
   // message. Real inventory-backed sizes (crank length, sprocket teeth, frame
@@ -2695,6 +2938,15 @@
       TAG_SPAN: p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '',
       SPEC_ITEMS: specItems(p.spec, catLabel, p.brand), WA_HREF: waHrefFor(p), RELATED_SECTION: relatedFor(p),
       PRIMARY_IMG: esc("../" + ((p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg")),
+      // Real cover photo when one was actually uploaded, else the generic
+      // logo/OG image — NEVER a guessed "assets/img/products/{slug}.jpg" path,
+      // which silently 404s for any product whose photo file has the
+      // hash-suffixed name the upload flow actually gives it (confirmed live:
+      // WhatsApp/Facebook link-preview crawlers get a 404 on that guess and
+      // fall back to showing the site favicon instead of the product photo).
+      IMG_REL: esc((p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg"),
+      OG_IMAGE: esc("https://escenabmx.com/" + ((p.imgs && p.imgs[0]) || "assets/img/og-escena.jpg")),
+      OG_IMAGE_JSON: jsonEsc("https://escenabmx.com/" + ((p.imgs && p.imgs[0]) || "assets/img/og-escena.jpg")),
       IMG_FIT: "auto",
       GALLERY_JSON: gallery.json, GALLERY_DOTS: gallery.dots, GALLERY_THUMBS: gallery.thumbs,
       NAME_JSON: jsonEsc(p.n), BRAND_JSON: jsonEsc(p.brand || ""), SPEC_JSON: jsonEsc(p.spec || ""),
@@ -4706,6 +4958,7 @@
       console.error("No se pudo cargar el registro de actividad:", e);
       showToast("No se pudo cargar el registro de actividad");
     });
+    loadBookings();
     initCategoryVideos();
     initCategoryPhotos();
     initHeroSlides();

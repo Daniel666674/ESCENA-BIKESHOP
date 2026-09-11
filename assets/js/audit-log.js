@@ -4670,5 +4670,235 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "brainstorm-freecoaster-kit-03"
   ]
+ },
+ {
+  "ts": "2026-09-10T06:10:35.875Z",
+  "actor": "daniel.f.acosta96@gmail.com",
+  "summary": "4 productos eliminados",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "cadena-chain-economica-410",
+   "brainstorm-freecoaster-kit-02",
+   "brainstorm-freecoaster-kit-01",
+   "brainstorm-freecoaster-kit-04"
+  ]
+ },
+ {
+  "ts": "2026-09-10T21:10:01.729Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "fiend-reynolds-v3-negro"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T21:14:24.857Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "fiend-reynolds-v3-negro",
+   "wethepeople-doomsayer-negro",
+   "marco-wethepeople-message-verde"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T21:31:03.676Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "17 productos editados",
+  "created": [],
+  "edited": [
+   "marco-cult-biggie-hammertone",
+   "cult-havens-gate-alex-duleba-negro",
+   "marco-colony-prisma-negro",
+   "marco-federal-command-negro-20-5-x-cola-12-5",
+   "marco-federal-chiller-20-75-cola-12-7",
+   "total-marco-2075-blanco-azul",
+   "fate-namaste-negro",
+   "marco-fitbikeco-str-negro",
+   "marco-gw-destructor-azul-20-5",
+   "fiend-reynolds-v3-negro",
+   "wethepeople-doomsayer-negro",
+   "marco-wethepeople-message-verde",
+   "cult-biggie-jaime-sintes-hammertone-negro",
+   "marco-profit-culver-gris-cromolio",
+   "tukanbikes-industrial-raw",
+   "marco-gw-destructor-tornasol",
+   "marco-gw-destructor-morado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T21:34:32.210Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "fate-namaste-negro",
+   "marco-profit-culver-gris-cromolio",
+   "tukanbikes-industrial-raw"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T21:51:43.767Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "federal-horquilla-cromada",
+   "tenedor-fiction-shank"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:14:19.902Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 18 productos editados, 1 foto subida",
+  "created": [
+   "llanta-innova-pro-gris-2-40"
+  ],
+  "edited": [
+   "cajas-de-frente-alienation-illuminati-oos",
+   "llanta-theory-proven-blanca-2-40",
+   "llanta-odyssey-path-pro-negra-2-40",
+   "coraza_primo_555_2.45",
+   "llanta-optimus-black-burn-negra-2-35",
+   "llanta-chaoyang-cutting-edge-negra-2-25",
+   "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
+   "llanta-cst-orbit-knobby-negra-rin-16-2-125",
+   "llanta-tioga-factory-fs100-negra-2-10",
+   "llanta-innova-pro-negra-2-40",
+   "llanta-innova-camufladas",
+   "llanta-innova-pro-big-slick-cafe-2-40",
+   "llanta-mutanty-whipper-azul-2-40",
+   "llanta-mutanty-whipper-roja-2-40",
+   "llanta-subrosa-matt-ray-roja-2-40",
+   "llanta-shadow-creeper-negra-2-40",
+   "llanta-cinema-nathan-williams-negro-2-50",
+   "llanta-odyssey-supercircuit-keblar-negra-2-40"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:17:15.980Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "bielas-stranger-level-8t-negra",
+   "bielas-optimus-medusa-derecha-8t",
+   "bielas-optimus-medusa-derecha-8t-cromada"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:19:37.638Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "14 productos editados",
+  "created": [],
+  "edited": [
+   "plato-federal-logo-guard-28t",
+   "plato-gw-kl215-negro",
+   "plato-gw-corona-negro-2",
+   "plato-gw-corona-negro",
+   "plato-fiend-reynols-purpura",
+   "plato-strangergram-guardia-negro-28t",
+   "plato-sunday-sabretooth-v2-negro-28t",
+   "plato-trueno-exotic",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "pinon-snowflake-plata",
+   "federal-pinon-gris",
+   "cult-pinon-negro",
+   "plato-fate-guardia-negro-28t"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:20:50.100Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "fiend-pinon-25t-negro",
+   "plato-volume-guardia-28t"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:22:06.078Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "odyssey-pinon-28t-negro"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:39:13.874Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 6 productos editados, 9 fotos subidas",
+  "created": [
+   "cadena-cult-escamada-dorada",
+   "cadena-cult-escamada-negra-2",
+   "cadena-cult-escamada-negra"
+  ],
+  "edited": [
+   "cadena-kmc-k1-wide-perforada-cromada",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-410-negra",
+   "cadena-federal-escamada-cromada",
+   "cadena-tall-order-cromada-510",
+   "cadena-cult-escamada-cromada"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:40:35.922Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "cadena-federal-escamada-cromada",
+   "cadena-cult-escamada-cromada"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:46:03.265Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 5 productos editados, 2 fotos subidas",
+  "created": [
+   "cadena-federal-escamada-cromada-2"
+  ],
+  "edited": [
+   "cadena-federal-escamada-cromada",
+   "cadena-tall-order-cromada-510",
+   "cadena-kmc-410-negra",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-k1-wide-perforada-cromada"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-10T22:51:44.080Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 4 productos editados, 2 fotos subidas",
+  "created": [
+   "cadena-tallorder-negra-510"
+  ],
+  "edited": [
+   "cadena-tall-order-cromada-510",
+   "cadena-kmc-410-negra",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-k1-wide-perforada-cromada"
+  ],
+  "deleted": []
  }
 ];
