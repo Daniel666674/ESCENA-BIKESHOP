@@ -1,5 +1,45 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Demolition Trooper Blanco/Negro",
+  "brand": "Demolition",
+  "cat": "pedales",
+  "spec": "",
+  "price": 95000,
+  "sku": "PED-DMO-004",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/pedales-demolition-trooper-blanco-negro-mtxl2dkp1b3l.jpg?v=1789169066524",
+   "assets/img/products/pedales-demolition-trooper-blanco-negro-mtxl2f4sur81.jpg?v=1789169067963"
+  ],
+  "slug": "pedales-demolition-trooper-blanco-negro",
+  "img": "assets/img/products/pedales-demolition-trooper-blanco-negro-mtxl2dkp1b3l.jpg?v=1789169066524"
+ },
+ {
+  "n": "Pedales Demolition Trooper Rojo/Blanco",
+  "brand": "Demolition",
+  "cat": "pedales",
+  "spec": "",
+  "price": 95000,
+  "sku": "PED-DMO-003",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "pedales-demolition-trooper-rojo-blanco",
+  "img": "assets/img/products/pedales-demolition-trooper-rojo-blanco-mtxl2g8rpmnm.jpg?v=1789169069817"
+ },
+ {
+  "n": "Pedales Demolition Trooper Azul/Blanco",
+  "brand": "Demolition",
+  "cat": "pedales",
+  "spec": "",
+  "price": 95000,
+  "sku": "PED-DMO-002",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "pedales-demolition-trooper-azul-blanco",
+  "img": "assets/img/products/pedales-demolition-trooper-azul-blanco-mtxl2ho9l07i.jpg?v=1789169071202"
+ },
+ {
   "n": "Pedales Demolition Trooper Morado/Amarillo",
   "brand": "Demolition",
   "cat": "pedales",
