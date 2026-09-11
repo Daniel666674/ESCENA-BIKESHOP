@@ -1,5 +1,55 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena KMC 410 Negra",
+  "brand": "KMC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 26000,
+  "sku": "CAD-KMC-006",
+  "units": 5,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-kmc-410-negra-2-mtxe89eu7h3g.jpg?v=1789157583806",
+   "assets/img/products/cadena-kmc-410-negra-2-mtxe8b0febsy.jpg?v=1789157585528"
+  ],
+  "slug": "cadena-kmc-410-negra-2",
+  "img": "assets/img/products/cadena-kmc-410-negra-2-mtxe89eu7h3g.jpg?v=1789157583806"
+ },
+ {
+  "n": "Cadena KMC 410 Roja",
+  "brand": "KMC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 26000,
+  "sku": "CAD-KMC-005",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-kmc-410-roja-mtxe8cc8hrtb.jpg?v=1789157587601",
+   "assets/img/products/cadena-kmc-410-roja-mtxe8dxt8er5.jpg?v=1789157589188",
+   "assets/img/products/cadena-kmc-410-roja-mtxe8f5w0scc.jpg?v=1789157590913"
+  ],
+  "slug": "cadena-kmc-410-roja",
+  "img": "assets/img/products/cadena-kmc-410-roja-mtxe8cc8hrtb.jpg?v=1789157587601"
+ },
+ {
+  "n": "Cadena KMC 410 Azul",
+  "brand": "KMC",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 26000,
+  "sku": "CAD-KMC-004",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-kmc-410-azul-mtxe8ghtx6lc.jpg?v=1789157593039",
+   "assets/img/products/cadena-kmc-410-azul-mtxe8i4vhvtc.jpg?v=1789157595195",
+   "assets/img/products/cadena-kmc-410-azul-mtxe8jsre2o9.jpg?v=1789157597455"
+  ],
+  "slug": "cadena-kmc-410-azul",
+  "img": "assets/img/products/cadena-kmc-410-azul-mtxe8ghtx6lc.jpg?v=1789157593039"
+ },
+ {
   "n": "Cadena Tallorder Negra 510",
   "brand": "Tallorder",
   "cat": "cadenas",
@@ -102,64 +152,19 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/llanta-innova-pro-gris-2-40-mtw344eh68fb.jpg?v=1789078448788"
  },
  {
-  "n": "Cadena KMC 410",
+  "n": "Cadena KMC 410 Cromada",
   "brand": "KMC",
   "cat": "cadenas",
   "spec": "",
   "price": 26000,
   "sku": "CAD-KMC-003",
-  "units": 8,
+  "units": 20,
   "imgs": [
    "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697",
    "assets/img/products/cadena-kmc-410-negra-mtgkct6x6085.jpg?v=1788139948643",
-   "assets/img/products/cadena-kmc-410-negra-mtgkcuoz3zrd.jpg?v=1788139950171",
-   "assets/img/products/cadena-kmc-410-negra-mtgkcvvf39c6.jpg?v=1788139952259",
-   "assets/img/products/cadena-kmc-410-negra-mtgkcxhfyoeb.jpg?v=1788139954776",
-   "assets/img/products/cadena-kmc-410-negra-mtgkczfcanqm.jpg?v=1788139956420",
-   "assets/img/products/cadena-kmc-410-negra-mtgkd0p0iitw.jpg?v=1788139958685",
-   "assets/img/products/cadena-kmc-410-negra-mtgkd2fxr9gu.jpg?v=1788139961078"
+   "assets/img/products/cadena-kmc-410-negra-mtxe8ljjteec.jpg?v=1789157599073"
   ],
   "slug": "cadena-kmc-410-negra",
-  "colors": [
-   {
-    "label": "NEGRA",
-    "units": 2,
-    "price": 26000
-   },
-   {
-    "label": "CROMADA",
-    "units": 2,
-    "price": 26000
-   },
-   {
-    "label": "ROJA",
-    "units": 2,
-    "price": 26000
-   },
-   {
-    "label": "AZUL",
-    "units": 2,
-    "price": 26000
-   }
-  ],
-  "imgColorMap": {
-   "CROMADA": [
-    0,
-    1
-   ],
-   "NEGRA": [
-    2,
-    3
-   ],
-   "ROJA": [
-    4,
-    5
-   ],
-   "AZUL": [
-    6,
-    7
-   ]
-  },
   "order": 90,
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
