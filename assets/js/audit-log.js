@@ -4993,5 +4993,15 @@ window.ESCENA_AUDIT = [
    "cadena-federal-escamada-cromada-2"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:04:46.193Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "cadena-bsd-forever-negra"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
