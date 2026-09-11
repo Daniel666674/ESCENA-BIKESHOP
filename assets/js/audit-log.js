@@ -5242,5 +5242,17 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "pedales-plataforma-negro-01"
   ]
+ },
+ {
+  "ts": "2026-09-11T23:13:04.481Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 1 foto subida",
+  "created": [
+   "pedales-demolition-trooper-morado-amarillo"
+  ],
+  "edited": [
+   "pedales-tallorder-catch-negro"
+  ],
+  "deleted": []
  }
 ];
