@@ -5003,5 +5003,18 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:06:38.695Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 productos editados, 3 fotos subidas",
+  "created": [
+   "cadena-tec-410-negra"
+  ],
+  "edited": [
+   "cadena-bsd-forever-cromada",
+   "cadena-bsd-forever-negra"
+  ],
+  "deleted": []
  }
 ];
