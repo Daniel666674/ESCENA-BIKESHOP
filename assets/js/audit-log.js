@@ -5221,5 +5221,26 @@ window.ESCENA_AUDIT = [
    "pedales-cinema-tilt-plate-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T23:06:59.063Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "10 productos editados, 1 producto eliminado",
+  "created": [],
+  "edited": [
+   "pedales-bsd-safari-negro",
+   "pedales-odyssey-grandstand-v2-aluminio-negro",
+   "pedales-cinema-tilt-plate-negro",
+   "pedales-cult-dak-negro",
+   "pedales-odyssey-twist-pro",
+   "pedales-metal-negro-01",
+   "pedales-cinema-tilt-negro",
+   "pedales-fate-negro",
+   "pedales-wellgo-negro",
+   "pedales-tallorder-catch-negro"
+  ],
+  "deleted": [
+   "pedales-plataforma-negro-01"
+  ]
  }
 ];
