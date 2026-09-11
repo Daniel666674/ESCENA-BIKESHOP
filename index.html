@@ -277,10 +277,21 @@
     @media (max-width: 720px) { .cats { grid-template-columns: repeat(2, 1fr); } }
     .cat {
       position: relative; border-radius: 12px; overflow: hidden; text-decoration: none; display: block;
-      min-height: 220px; background-size: cover; background-position: center;
+      min-height: 220px; background-position: center;
       transition: transform .3s, box-shadow .3s; isolation: isolate;
     }
-    .cat::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(10,10,10,.38) 0%, rgba(10,10,10,.5) 50%, rgba(10,10,10,.62) 100%); }
+    /* contain, not cover. These category photos are studio cutouts whose shapes
+       are wildly different and wildly non-card: a stem shot at 0.44, a handlebar
+       at 2.59, a hub at 2.66. Filling a 1.29 card with any of them cut the part
+       in half — cover showed barely a third of the stem's height and half the
+       handlebar's width. The photos all sit on the same pure, uniform white, so
+       matching the card to it makes the fit seamless rather than letterboxed:
+       no edge to see, just the whole part on its own field. */
+    .cat:not(.cat-all) { background-size: contain; background-repeat: no-repeat; background-color: #fff; }
+    /* Light over the art so the part reads and the card still separates from
+       the white section behind it, deep only at the bottom where the label is —
+       the old even scrim sat right across the middle of every product. */
+    .cat::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(10,10,10,.13) 0%, rgba(10,10,10,.18) 48%, rgba(10,10,10,.8) 100%); }
     /* Optional short clip per category (admin-managed, see categoryVideos()
        below) — sits behind the darkening gradient/content, on top of the card's
        own background-image photo. Starts invisible and fades in only once it's
@@ -290,7 +301,11 @@
     .cat video.is-visible { opacity: 1; }
     .cat:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(0,0,0,.22); }
     .cat .content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.2rem; text-align: center; }
+    /* Label to the foot of the card, in the deep end of the scrim, so it stops
+       landing on top of the product. .cat-all keeps its centred label. */
+    .cat:not(.cat-all) .content { justify-content: flex-end; }
     .cat h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; letter-spacing: .04em; color: #fff; }
+    .cat:not(.cat-all) h3 { text-shadow: 0 1px 12px rgba(0,0,0,.55); }
     .cat-all { background: var(--ink); display: flex; align-items: center; justify-content: center; }
     .cat-all::after { content: none; }
     .cat-all .content { color: #fff; }
