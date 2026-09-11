@@ -1,11 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Cadena CargoChain C410 Cromada",
+  "n": "Cadena CargoChain C410 Negra",
   "brand": "Cargo",
   "cat": "cadenas",
   "spec": "",
   "price": 13000,
   "sku": "CAD-CAR-001",
+  "units": 10,
+  "slug": "cadena-cargochain-c410-negra",
+  "img": "assets/img/products/cadena-cargochain-c410-negra-mtxggvd6h8hd.jpg?v=1789161345210"
+ },
+ {
+  "n": "Cadena CargoChain C410 Cromada",
+  "brand": "Cargo",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 13000,
+  "sku": "CAD-CAR-002",
   "units": 10,
   "imgFit": "cover",
   "slug": "cadena-cargochain-c410-cromada",
