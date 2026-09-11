@@ -5046,5 +5046,15 @@ window.ESCENA_AUDIT = [
    "cadena-kmc-410-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T21:33:14.967Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "cadena-kmc-k1-wide-perforada-cromada"
+  ],
+  "deleted": []
  }
 ];
