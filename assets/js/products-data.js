@@ -9,6 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "slug": "cadena-bsd-forever-cromada",
   "order": 60,
+  "imgPos": "50% 50%",
   "img": "assets/img/products/cadena-bsd-forever-cromada-mtxfccb9a826.jpg?v=1789159454416"
  },
  {
@@ -177,7 +178,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-410-negra-mtxe8ljjteec.jpg?v=1789157599073"
   ],
   "slug": "cadena-kmc-410-negra",
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
  {
