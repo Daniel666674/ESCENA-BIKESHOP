@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Tallorder Catch Negro",
+  "brand": "Tallorder",
+  "cat": "pedales",
+  "spec": "",
+  "price": 80000,
+  "sku": "PED-TAL-001",
+  "units": 0,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/pedales-tallorder-catch-negro-mtxk8mxo5w8e.jpg?v=1789167679392",
+   "assets/img/products/pedales-tallorder-catch-negro-mtxk8otc9u3b.jpg?v=1789167680874"
+  ],
+  "imgZoom": 101,
+  "slug": "pedales-tallorder-catch-negro",
+  "img": "assets/img/products/pedales-tallorder-catch-negro-mtxk8mxo5w8e.jpg?v=1789167679392"
+ },
+ {
   "n": "Pedales BSD Safari Negro",
   "brand": "BSD",
   "cat": "pedales",
