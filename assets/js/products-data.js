@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cadena BSD Forever Negra",
+  "brand": "BSD",
+  "cat": "cadenas",
+  "spec": "",
+  "price": 95000,
+  "sku": "CAD-BSD-002",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cadena-bsd-forever-negra-mtxg2khjk9yt.jpg?v=1789160677369",
+   "assets/img/products/cadena-bsd-forever-negra-mtxg2m0pjnd3.jpg?v=1789160678847"
+  ],
+  "imgPos": "0% 50%",
+  "slug": "cadena-bsd-forever-negra",
+  "img": "assets/img/products/cadena-bsd-forever-negra-mtxg2khjk9yt.jpg?v=1789160677369"
+ },
+ {
   "n": "Cadena BSD Forever Cromada",
   "brand": "BSD",
   "cat": "cadenas",
