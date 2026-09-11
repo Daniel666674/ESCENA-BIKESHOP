@@ -5200,5 +5200,15 @@ window.ESCENA_AUDIT = [
    "pedales-cinema-tilt-plate-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T23:01:28.439Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "pedales-tallorder-catch-negro"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
