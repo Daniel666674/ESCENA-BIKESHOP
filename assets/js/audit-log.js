@@ -5118,5 +5118,17 @@ window.ESCENA_AUDIT = [
    "pedales-odyssey-twist-pro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T22:19:10.441Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 producto eliminado, 3 fotos subidas",
+  "created": [],
+  "edited": [
+   "pedales-stolen"
+  ],
+  "deleted": [
+   "pedales-metal-negro-03"
+  ]
  }
 ];
