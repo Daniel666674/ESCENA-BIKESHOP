@@ -5210,5 +5210,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-11T23:02:33.329Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "pedales-cult-dak-negro",
+   "pedales-cinema-tilt-plate-negro"
+  ],
+  "deleted": []
  }
 ];
