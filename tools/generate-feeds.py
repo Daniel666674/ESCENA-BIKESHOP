@@ -54,12 +54,32 @@ def parse_window_assignment(path, var_name):
     return json.loads(m.group(1))
 
 
+def sellable_units(p):
+    """Unidades realmente vendibles: el producto suelto o su mejor variante.
+
+    Espejo en Python de available() en assets/js/stock.js — si una cambia,
+    la otra tiene que cambiar igual, o el feed dira algo distinto de lo que
+    muestra la tienda. Devuelve None cuando el catalogo no registra stock.
+    """
+    best = None
+    u = p.get("units")
+    if isinstance(u, (int, float)) and not isinstance(u, bool):
+        best = u
+    for v in (p.get("sizes") or []) + (p.get("colors") or []):
+        vu = v.get("units")
+        if isinstance(vu, (int, float)) and not isinstance(vu, bool):
+            if best is None or vu > best:
+                best = vu
+    return best
+
+
 def build_inventory():
     products = parse_window_assignment(PRODUCTS_JS, "ESCENA_PRODUCTS")
     out = []
     for p in products:
         if p.get("published") is False:
             continue
+        sellable = sellable_units(p)
         entry = {
             "slug": p.get("slug"),
             "sku": p.get("sku"),
@@ -68,6 +88,12 @@ def build_inventory():
             "category": p.get("cat"),
             "price": p.get("price"),
             "units": p.get("units"),
+            # El producto sigue en el feed aunque este agotado -- esto es un
+            # inventario, no la vitrina. "visible" dice si el sitio publico lo
+            # esta mostrando, para que Nexus pueda distinguir "no lo tenemos"
+            # de "lo tenemos pero nadie lo ve".
+            "sellableUnits": sellable,
+            "visible": not (sellable is not None and sellable <= 0),
         }
         variants = p.get("colors") or p.get("sizes")
         if variants:
@@ -80,6 +106,8 @@ def build_inventory():
         "generatedAt": None,  # filled in by main()
         "totalSkus": len(out),
         "totalUnits": sum(e.get("units") or 0 for e in out),
+        "visibleSkus": sum(1 for e in out if e["visible"]),
+        "hiddenSkus": sum(1 for e in out if not e["visible"]),
         "products": out,
     }
 
