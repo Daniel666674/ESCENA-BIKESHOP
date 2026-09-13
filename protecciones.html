@@ -527,6 +527,7 @@ header.top-bar .brand .name { color: #fff; }
 </a>
 
 <script>document.write('<scr'+'ipt src="assets/js/products-data.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
+<script src="assets/js/stock.js?v=1"></script>
 <script>document.write('<scr'+'ipt src="assets/js/site-text.js?v='+Math.floor(Date.now()/60000)+'"><\/scr'+'ipt>');</script>
 <script>
   // Admin-managed page-head title/subtitle (admin.html's "Página principal" ->
@@ -541,7 +542,11 @@ header.top-bar .brand .name { color: #fff; }
 </script>
 <script>
 var PROT_CATS = ["cascos","rodilleras","canilleras","tobilleras","rodi-cani-tobilleras","guantes"];
-  var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return p.published !== false && PROT_CATS.indexOf(p.cat) !== -1; });
+  // Agotado = oculto. La regla vive en assets/js/stock.js (única fuente de
+  // verdad, compartida con las páginas de producto). Si ese archivo no
+  // cargara, degradamos al filtro anterior en vez de romper la grilla.
+  var VISIBLE = (window.ESCENA_STOCK && window.ESCENA_STOCK.isVisible) || function(p){ return p.published !== false; };
+  var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return VISIBLE(p) && PROT_CATS.indexOf(p.cat) !== -1; });
   var WA = "573107630504";
   var PAGE_SIZE = 12;
   var currentFilter = "all";
@@ -649,7 +654,11 @@ var PROT_CATS = ["cascos","rodilleras","canilleras","tobilleras","rodi-cani-tobi
   function cardHTML(p){
     var hasDetailPage = p.img.indexOf("frame-placeholder") === -1;
     var href = "producto/" + slugOf(p);
-    var agotado = (typeof p.units === "number" && p.units <= 0);
+    // Red de seguridad: con el filtro VISIBLE de arriba ningún agotado llega
+    // hasta aquí. Se mantiene por si el catálogo cambia entre el filtrado y el
+    // pintado, y usa la MISMA regla (isOut) para no marcar "Agotado" un producto
+    // cuyo units está en 0 pero que todavía tiene una talla o un color con stock.
+    var agotado = window.ESCENA_STOCK ? window.ESCENA_STOCK.isOut(p) : (typeof p.units === "number" && p.units <= 0);
     var promoHTML = p.promo ? '<span class="tag">¡Oferta!</span>' : "";
     var tagHTML = promoHTML || (p.tag ? '<span class="tag">'+esc(p.tag)+'</span>' : "");
     // Grid cards always show the whole photo, never crop -- see tienda.html
