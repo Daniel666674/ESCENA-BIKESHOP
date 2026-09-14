@@ -5937,7 +5937,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 20,
-  "img": "assets/img/products/bielas-fitbikeco-blunt-negra.jpg?v=1788000000001"
+  "img": "assets/img/products/bielas-fitbikeco-blunt-cromada-mu1u8rjwm2sb.jpg?v=1789426349716"
  },
  {
   "slug": "colony-bielas-negro",
