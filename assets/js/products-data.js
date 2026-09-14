@@ -3149,11 +3149,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Cromolio Sanko Japones 4130 tratadas al calor Eje 19mm 8 Estrías  Incluye Caja Primo Mid 19mm Compatible para plato Derecho e Izquierdo Peso: 987 gramos",
   "price": 400000,
   "sku": "BIE-STR-001",
-  "units": 1,
+  "units": 0,
   "sizes": [
    {
     "label": "165mm",
-    "units": 1
+    "units": 0
    }
   ],
   "slug": "bielas-stranger-level-8t-negra",
@@ -5632,11 +5632,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · 48 estrías · 170mm · Negro",
   "price": 590000,
   "sku": "MUTANY-SAVAGE-BIELAS-NEGRO",
-  "units": 2,
+  "units": 1,
   "sizes": [
    {
     "label": "170mm",
-    "units": 2
+    "units": 1
    },
    {
     "label": "165mm",
