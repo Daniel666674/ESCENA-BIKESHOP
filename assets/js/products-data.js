@@ -5937,6 +5937,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 20,
+  "imgZoom": 106,
   "img": "assets/img/products/bielas-fitbikeco-blunt-cromada-mu1u8rjwm2sb.jpg?v=1789426349716"
  },
  {
