@@ -5298,5 +5298,21 @@ window.ESCENA_AUDIT = [
    "bielas-fitbikeco-blunt-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-14T23:16:44.634Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 4 productos editados, 2 fotos subidas",
+  "created": [
+   "llanta-optimus-black-burn-cara-roja-2-35",
+   "llanta-cult-fast-loose-negra-2-40"
+  ],
+  "edited": [
+   "llanta-odyssey-supercircuit-keblar-negra-2-40",
+   "coraza_primo_555_2.45",
+   "llanta-cinema-nathan-williams-negro-2-50",
+   "llanta-optimus-black-burn-negra-2-35"
+  ],
+  "deleted": []
  }
 ];
