@@ -5276,5 +5276,15 @@ window.ESCENA_AUDIT = [
    "bielas-fitbikeco-blunt-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-14T23:04:31.817Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "bielas-fitbikeco-blunt-cromada"
+  ],
+  "deleted": []
  }
 ];
