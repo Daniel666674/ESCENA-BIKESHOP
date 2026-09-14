@@ -5286,5 +5286,17 @@ window.ESCENA_AUDIT = [
    "bielas-fitbikeco-blunt-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-14T23:08:29.317Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "bielas-stranger-level-8t-negra",
+   "mutany-savage-bielas-negro",
+   "bielas-fitbikeco-blunt-negra"
+  ],
+  "deleted": []
  }
 ];
