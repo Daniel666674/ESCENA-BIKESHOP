@@ -1,5 +1,43 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Optimus Black Burn Cara Roja - 2.35\"",
+  "brand": "Optimus",
+  "cat": "llantas",
+  "spec": "",
+  "price": 38000,
+  "sku": "LLA-OPT-001",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "2.35\"",
+    "units": 2,
+    "price": 38000
+   }
+  ],
+  "slug": "llanta-optimus-black-burn-cara-roja-2-35",
+  "img": "assets/img/products/llanta-optimus-black-burn-cara-roja-2-35-mu1v3t6rxdkd.jpg?v=1789427795254"
+ },
+ {
+  "n": "Llanta Cult Fast & Loose Negra 2.40\"",
+  "brand": "Cult",
+  "cat": "llantas",
+  "spec": "",
+  "price": 150000,
+  "sku": "LLA-CLT-001",
+  "units": 6,
+  "sizes": [
+   {
+    "label": "2.40\"",
+    "units": 6,
+    "price": 160000
+   }
+  ],
+  "slug": "llanta-cult-fast-loose-negra-2-40",
+  "order": 230,
+  "img": "assets/img/products/llanta-cult-fast-loose-negra-2-40-mu1v3vhywtbh.jpg?v=1789427796889"
+ },
+ {
   "n": "Pedales Demolition Trooper Blanco/Negro",
   "brand": "Demolition",
   "cat": "pedales",
@@ -1257,7 +1295,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-cinema-nathan-williams-negro-2-50",
-  "order": 240,
+  "order": 250,
   "img": "assets/img/products/llanta-cinema-nathan-williams-negro-2-50-mt9bxnx3uium.jpg?v=1788093948129"
  },
  {
@@ -1297,7 +1335,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-odyssey-supercircuit-keblar-negra-2-40",
-  "order": 260,
+  "order": 270,
   "img": "assets/img/products/llanta-odyssey-supercircuit-keblar-negra-2-40-mt9askrguiae.jpg?v=1788093948129"
  },
  {
@@ -1406,7 +1444,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-optimus-black-burn-negra-2-35",
-  "order": 230,
+  "order": 240,
   "img": "assets/img/products/llanta-optimus-black-burn-negra-2-35-mt98dsaikgps.jpg?v=1788093948129"
  },
  {
@@ -7076,7 +7114,7 @@ window.ESCENA_PRODUCTS = [
   "price": 160000,
   "sku": "CORAZA_PRIMO_555_2.45",
   "units": 0,
-  "order": 250,
+  "order": 260,
   "imgs": [
    "assets/img/products/coraza_primo_555_2.45-3.jpg?v=1788093948129",
    "assets/img/products/coraza_primo_555_2.45.jpg?v=1788093948129",
