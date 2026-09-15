@@ -5680,5 +5680,28 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-cult-ajedrez-morada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T23:19:01.060Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 12 productos editados, 2 fotos subidas",
+  "created": [
+   "silla-pivotal-eclat-ios-negra"
+  ],
+  "edited": [
+   "silla-pivotal-subrosa-thrashed-verde-militar",
+   "silla-pivotal-volume-ftl-negra",
+   "silla-pivotal-fitbikeco-negra",
+   "stolen-sillin-negro",
+   "animal-sillin-camuflado",
+   "silla-pivotal-fate-negra",
+   "silla-pivotal-primo-breaker-logo-blanco",
+   "silla-pivotal-bsd-safari",
+   "silla-pivotal-odyssey-big-stitch-hilo-rojo",
+   "silla-pivotal-eighties-zebra",
+   "silla-pivotal-eighties-zebra-morado",
+   "silla-pivotal-odyssey-hilo-amarillo"
+  ],
+  "deleted": []
  }
 ];
