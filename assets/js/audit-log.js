@@ -5660,5 +5660,15 @@ window.ESCENA_AUDIT = [
    "cult-sillin-cuadros"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T22:50:19.871Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "silla-pivotal-cult-ajedrez-morada"
+  ],
+  "deleted": []
  }
 ];
