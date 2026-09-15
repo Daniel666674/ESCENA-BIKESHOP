@@ -5514,5 +5514,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T21:56:16.236Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "silla-pivotal-primo-breaker-logo-blanco"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
