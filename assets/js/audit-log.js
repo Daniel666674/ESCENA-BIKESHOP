@@ -5534,5 +5534,17 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-odyssey-hilo-amarillo"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T22:22:21.494Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 5 fotos subidas",
+  "created": [
+   "silla-pivotal-odyssey-big-stitch-hilo-rojo"
+  ],
+  "edited": [
+   "silla-pivotal-odyssey-hilo-amarillo"
+  ],
+  "deleted": []
  }
 ];
