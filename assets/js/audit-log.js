@@ -5472,5 +5472,15 @@ window.ESCENA_AUDIT = [
    "llanta-innova-camufladas"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T21:34:21.425Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "llanta-optimus-black-burn-negra-2-35"
+  ],
+  "deleted": []
  }
 ];
