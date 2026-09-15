@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Odyssey Big Stitch Hilo rojo",
+  "brand": "Odyssey",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "SIL-ODY-002",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38lg18jh24.jpg?v=1789510918940",
+   "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38li58ccg4.jpg?v=1789510922298",
+   "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38lkqirugx.jpg?v=1789510924730",
+   "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38lmm2hh4f.jpg?v=1789510926686"
+  ],
+  "imgZoom": 114,
+  "slug": "silla-pivotal-odyssey-big-stitch-hilo-rojo",
+  "img": "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38lg18jh24.jpg?v=1789510918940"
+ },
+ {
   "n": "Silla Pivotal Primo Breaker Logo Blanco",
   "brand": "Primo",
   "cat": "sillines",
@@ -17,7 +36,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o8e9sn56.jpg?v=1789509368261"
  },
  {
-  "n": "Silla Pivotal Odyssey Hilo Amarillo",
+  "n": "Silla Pivotal Odyssey Big Stitch Hilo Amarillo",
   "brand": "Odyssey",
   "cat": "sillines",
   "spec": "",
@@ -28,7 +47,8 @@ window.ESCENA_PRODUCTS = [
   "imgs": [
    "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jsytgrml.jpg?v=1789509162117",
    "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37juklq7qj.jpg?v=1789509163414",
-   "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jvkmio08.jpg?v=1789509164835"
+   "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jvkmio08.jpg?v=1789509164835",
+   "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu38lo4ewsx9.jpg?v=1789510929109"
   ],
   "imgZoom": 107,
   "imgPos": "50% 50%",
