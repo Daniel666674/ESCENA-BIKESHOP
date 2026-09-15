@@ -5353,5 +5353,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "llanta-optimus-black-burn-cara-roja-2-35"
   ]
+ },
+ {
+  "ts": "2026-09-15T20:23:01.158Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "pedales-demolition-trooper-azul-rojo"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
