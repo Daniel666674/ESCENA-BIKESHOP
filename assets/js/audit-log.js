@@ -5524,5 +5524,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T22:06:49.178Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "silla-pivotal-odyssey-hilo-amarillo"
+  ],
+  "deleted": []
  }
 ];
