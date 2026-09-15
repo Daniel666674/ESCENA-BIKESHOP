@@ -15,7 +15,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-eighties-zebra-morado-mu39gvss7i3p.jpg?v=1789512384382"
   ],
   "slug": "silla-pivotal-eighties-zebra-morado",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/silla-pivotal-eighties-zebra-morado-mu39grycm40z.jpg?v=1789512380122"
  },
  {
@@ -52,8 +52,9 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fiend-mills-negra-mu394n2wkyzm.jpg?v=1789511813238",
    "assets/img/products/silla-pivotal-fiend-mills-negra-mu394o6u6ld4.jpg?v=1789511814791"
   ],
+  "imgZoom": 112,
   "slug": "silla-pivotal-fiend-mills-negra",
-  "order": 180,
+  "order": 30,
   "img": "assets/img/products/silla-pivotal-fiend-mills-negra-mu394lubkhq5.jpg?v=1789511811800"
  },
  {
@@ -93,7 +94,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 114,
   "slug": "silla-pivotal-odyssey-big-stitch-hilo-rojo",
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38lg18jh24.jpg?v=1789510918940"
  },
  {
@@ -111,7 +112,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 117,
   "slug": "silla-pivotal-primo-breaker-logo-blanco",
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o8e9sn56.jpg?v=1789509368261"
  },
  {
@@ -132,7 +133,7 @@ window.ESCENA_PRODUCTS = [
   "imgZoom": 107,
   "imgPos": "50% 50%",
   "slug": "silla-pivotal-odyssey-hilo-amarillo",
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jsytgrml.jpg?v=1789509162117"
  },
  {
@@ -152,7 +153,7 @@ window.ESCENA_PRODUCTS = [
   "imgZoom": 110,
   "imgPos": "50% 100%",
   "slug": "silla-pivotal-bsd-safari",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/silla-pivotal-bsd-safari-mu37jwo36iv6.jpg?v=1789509166423"
  },
  {
@@ -166,7 +167,7 @@ window.ESCENA_PRODUCTS = [
   "imgZoom": 124,
   "imgPos": "50% 100%",
   "slug": "silla-pivotal-cult-ajedrez-morada",
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/silla-pivotal-cult-ajedrez-morada-mu37k11fz9uf.jpg?v=1789509172208"
  },
  {
@@ -2853,7 +2854,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1788093948129"
   ],
   "slug": "silla-pivotal-cult-old-skool",
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1788093948129"
  },
  {
@@ -5318,7 +5319,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 90,
+  "order": 100,
   "imgColorMap": {
    "Blanco/Negro": [
     0,
@@ -5490,7 +5491,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fitbikeco-negra-3.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-fitbikeco-negra-4.jpg?v=1788093948129"
   ],
-  "order": 170,
+  "order": 180,
   "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1788093948129"
  },
  {
@@ -5525,7 +5526,7 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "SIL-FAT-001",
   "units": 3,
-  "order": 120,
+  "order": 130,
   "imgs": [
    "assets/img/products/silla-pivotal-fate-negra.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1788093948129",
@@ -6086,7 +6087,7 @@ window.ESCENA_PRODUCTS = [
   "price": 190000,
   "sku": "CULT-SILLIN-CUADROS",
   "units": 0,
-  "order": 30,
+  "order": 40,
   "imgs": [
    "assets/img/products/cult-sillin-cuadros.jpg?v=1788093948129",
    "assets/img/products/cult-sillin-cuadros.jpg?v=1788093948129",
@@ -6463,7 +6464,7 @@ window.ESCENA_PRODUCTS = [
   "price": 195000,
   "sku": "CULT-SILLIN-NEGRO",
   "units": 4,
-  "order": 60,
+  "order": 70,
   "imgs": [
    "assets/img/products/cult-sillin-negro-3.jpg?v=1788093948129",
    "assets/img/products/cult-sillin-negro.jpg?v=1788093948129",
@@ -6480,7 +6481,7 @@ window.ESCENA_PRODUCTS = [
   "price": 190000,
   "sku": "ODYSSEY-SILLIN-FLORAL",
   "units": 0,
-  "order": 70,
+  "order": 80,
   "imgs": [
    "assets/img/products/odyssey-sillin-floral.jpg?v=1788093948129",
    "assets/img/products/odyssey-sillin-floral-2.jpg?v=1788093948129",
@@ -6498,7 +6499,7 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "ANIMAL-SILLIN-CAMUFLADO",
   "units": 1,
-  "order": 150,
+  "order": 160,
   "imgs": [
    "assets/img/products/animal-sillin-camuflado.jpg?v=1788093948129",
    "assets/img/products/animal-sillin-camuflado.jpg?v=1788093948129",
@@ -6515,7 +6516,7 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "STOLEN-SILLIN-NEGRO",
   "units": 1,
-  "order": 160,
+  "order": 170,
   "imgs": [
    "assets/img/products/stolen-sillin-negro.jpg?v=1788093948129",
    "assets/img/products/stolen-sillin-negro-3.jpg?v=1788093948129",
