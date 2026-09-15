@@ -114,6 +114,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-cult-dehart-negra-2-40",
   "order": 30,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-cult-dehart-negra-2-40-mu33pflj29y4.jpg?v=1789502706257"
  },
  {
@@ -133,6 +134,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-cult-fast-loose-negra-2-40",
   "order": 20,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-cult-fast-loose-negra-2-40-mu1v3vhywtbh.jpg?v=1789427796889"
  },
  {
@@ -1461,6 +1463,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-odyssey-path-pro-negra-2-40",
   "order": 110,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-odyssey-path-pro-negra-2-40-mt9asml2vi72.jpg?v=1788093948129"
  },
  {
@@ -1717,6 +1720,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-sunday-current-v2-negro-2-40",
   "order": 80,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-sunday-current-v2-negro-2-40-mt97cxfc7q4j.jpg?v=1788093948129"
  },
  {
@@ -1758,6 +1762,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-s-m-speedball-negra-2-40",
   "order": 90,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-s-m-speedball-negra-2-40-mt96i6sypnnu.jpg?v=1788093948129"
  },
  {
@@ -1784,6 +1789,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-odyssey-broc-negra-2-25-2-40",
   "order": 100,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-odyssey-broc-negra-2-25-2-40-mt96bykiz6db.jpg?v=1788093948129"
  },
  {
@@ -2148,6 +2154,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-cult-wafflecup-goma",
   "order": 10,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-cult-wafflecup-goma-mt4pff3osfgm.jpg?v=1788093948129"
  },
  {
@@ -2180,6 +2187,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-sunday-street-sweeper-v2",
   "order": 60,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-sunday-street-sweeper-v2-mt4or4xuualn.jpg?v=1788093948129"
  },
  {
@@ -2208,6 +2216,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-federal-neptune",
   "order": 50,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-federal-neptune-mt4omcenjal8.jpg?v=1788093948129"
  },
  {
@@ -2246,6 +2255,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-alinetion-prowler",
   "order": 40,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-alinetion-prowler-mt4ohhe0o4md.jpg?v=1788093948129"
  },
  {
@@ -2530,6 +2540,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 70,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-animal-ghl-mt4o3k7xeysz.jpg?v=1788093948129"
  },
  {
@@ -7250,6 +7261,7 @@ window.ESCENA_PRODUCTS = [
     "cost": 144000
    }
   ],
+  "imgFit": "cover",
   "img": "assets/img/products/coraza_cult_wafflecup_2.40-2.jpg?v=1788093948129"
  },
  {
