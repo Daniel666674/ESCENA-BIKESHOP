@@ -1421,6 +1421,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-theory-proven-blanca-2-40",
   "order": 160,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-theory-proven-blanca-2-40-mt9asiojm1i9.jpg?v=1788093948129"
  },
  {
@@ -1630,6 +1631,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-innova-pro-negra-2-40",
   "order": 170,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-innova-pro-negra-2-40-mt97p2xd9627.jpg?v=1788093948129"
  },
  {
@@ -1639,17 +1641,16 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.40\" · Banda direccional profundo · Rojo",
   "price": 100000,
   "sku": "COR-MUT-002",
-  "units": 2,
+  "units": 0,
   "sizes": [
    {
     "label": "20x2.40\"",
-    "units": 2,
-    "price": 100000,
-    "cost": 80000
+    "units": 0
    }
   ],
   "slug": "llanta-mutanty-whipper-roja-2-40",
   "order": 140,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-mutanty-whipper-roja-2-40-mt97p432jyue.jpg?v=1788093948129"
  },
  {
@@ -1670,6 +1671,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-mutanty-whipper-azul-2-40",
   "order": 150,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-mutanty-whipper-azul-2-40-mt97p569adss.jpg?v=1788093948129"
  },
  {
@@ -1735,6 +1737,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-shadow-creeper-negra-2-40",
   "order": 120,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-shadow-creeper-negra-2-40-mt96yvlbx5hf.jpg?v=1788093948129"
  },
  {
@@ -1801,6 +1804,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-subrosa-matt-ray-roja-2-40",
   "order": 130,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-subrosa-matt-ray-roja-2-40-mt96bzwcbayu.jpg?v=1788093948129"
  },
  {
