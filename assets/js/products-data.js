@@ -167,7 +167,7 @@ window.ESCENA_PRODUCTS = [
   "imgPos": "50% 50%",
   "slug": "silla-pivotal-cult-ajedrez-morada",
   "order": 50,
-  "img": "assets/img/products/silla-pivotal-cult-ajedrez-morada-mu37k11fz9uf.jpg?v=1789509172208"
+  "img": "assets/img/products/silla-pivotal-cult-ajedrez-morada-mu39s1cpuzh7.jpg?v=1789512905191"
  },
  {
   "n": "Pedales Stolen Thermalite Negro",
