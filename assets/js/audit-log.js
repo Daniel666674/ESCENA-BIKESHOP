@@ -5431,5 +5431,26 @@ window.ESCENA_AUDIT = [
    "llanta-shadow-creeper-negra-2-40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T21:22:07.163Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "12 productos editados",
+  "created": [],
+  "edited": [
+   "llanta-odyssey-path-pro-negra-2-40",
+   "llanta-odyssey-broc-negra-2-25-2-40",
+   "llanta-s-m-speedball-negra-2-40",
+   "llanta-sunday-current-v2-negro-2-40",
+   "llanta-animal-ghl",
+   "llanta-sunday-street-sweeper-v2",
+   "llanta-federal-neptune",
+   "llanta-alinetion-prowler",
+   "llanta-cult-dehart-negra-2-40",
+   "llanta-cult-fast-loose-negra-2-40",
+   "llanta-cult-wafflecup-goma",
+   "coraza_cult_wafflecup_2.40"
+  ],
+  "deleted": []
  }
 ];
