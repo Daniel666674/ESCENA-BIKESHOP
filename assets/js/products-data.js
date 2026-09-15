@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Eclat IOS Negra",
+  "brand": "Eclat",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "SIL-ECL-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-eclat-ios-negra-mu3amogthb0r.jpg?v=1789514334757",
+   "assets/img/products/silla-pivotal-eclat-ios-negra-mu3ampt1dm9q.jpg?v=1789514336105"
+  ],
+  "slug": "silla-pivotal-eclat-ios-negra",
+  "order": 130,
+  "img": "assets/img/products/silla-pivotal-eclat-ios-negra-mu3amogthb0r.jpg?v=1789514334757"
+ },
+ {
   "n": "Silla Pivotal Eighties Zebra Morado",
   "brand": "Eighties",
   "cat": "sillines",
@@ -15,7 +32,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-eighties-zebra-morado-mu39gvss7i3p.jpg?v=1789512384382"
   ],
   "slug": "silla-pivotal-eighties-zebra-morado",
-  "order": 90,
+  "order": 150,
   "img": "assets/img/products/silla-pivotal-eighties-zebra-morado-mu39grycm40z.jpg?v=1789512380122"
  },
  {
@@ -35,7 +52,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 106,
   "slug": "silla-pivotal-subrosa-thrashed-verde-militar",
-  "order": 200,
+  "order": 190,
   "img": "assets/img/products/silla-pivotal-subrosa-thrashed-verde-militar-mu39a9w3cvg0.jpg?v=1789512076594"
  },
  {
@@ -74,7 +91,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 110,
   "slug": "silla-pivotal-volume-ftl-negra",
-  "order": 190,
+  "order": 160,
   "img": "assets/img/products/silla-pivotal-volume-ftl-negra-mu38yz67zcq2.jpg?v=1789511549368"
  },
  {
@@ -94,7 +111,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 114,
   "slug": "silla-pivotal-odyssey-big-stitch-hilo-rojo",
-  "order": 110,
+  "order": 90,
   "img": "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38lg18jh24.jpg?v=1789510918940"
  },
  {
@@ -112,7 +129,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 117,
   "slug": "silla-pivotal-primo-breaker-logo-blanco",
-  "order": 140,
+  "order": 120,
   "img": "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o8e9sn56.jpg?v=1789509368261"
  },
  {
@@ -133,7 +150,7 @@ window.ESCENA_PRODUCTS = [
   "imgZoom": 107,
   "imgPos": "50% 50%",
   "slug": "silla-pivotal-odyssey-hilo-amarillo",
-  "order": 120,
+  "order": 100,
   "img": "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jsytgrml.jpg?v=1789509162117"
  },
  {
@@ -153,7 +170,7 @@ window.ESCENA_PRODUCTS = [
   "imgZoom": 110,
   "imgPos": "50% 100%",
   "slug": "silla-pivotal-bsd-safari",
-  "order": 150,
+  "order": 110,
   "img": "assets/img/products/silla-pivotal-bsd-safari-mu37jwo36iv6.jpg?v=1789509166423"
  },
  {
@@ -5318,7 +5335,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 100,
+  "order": 140,
   "imgColorMap": {
    "Blanco/Negro": [
     0,
@@ -5490,7 +5507,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fitbikeco-negra-3.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-fitbikeco-negra-4.jpg?v=1788093948129"
   ],
-  "order": 180,
+  "order": 210,
   "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1788093948129"
  },
  {
@@ -5525,7 +5542,7 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "SIL-FAT-001",
   "units": 3,
-  "order": 130,
+  "order": 200,
   "imgs": [
    "assets/img/products/silla-pivotal-fate-negra.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1788093948129",
@@ -6498,7 +6515,7 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "ANIMAL-SILLIN-CAMUFLADO",
   "units": 1,
-  "order": 160,
+  "order": 170,
   "imgs": [
    "assets/img/products/animal-sillin-camuflado.jpg?v=1788093948129",
    "assets/img/products/animal-sillin-camuflado.jpg?v=1788093948129",
@@ -6515,7 +6532,7 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "STOLEN-SILLIN-NEGRO",
   "units": 1,
-  "order": 170,
+  "order": 180,
   "imgs": [
    "assets/img/products/stolen-sillin-negro.jpg?v=1788093948129",
    "assets/img/products/stolen-sillin-negro-3.jpg?v=1788093948129",
