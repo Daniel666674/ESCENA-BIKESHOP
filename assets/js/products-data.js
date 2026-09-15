@@ -30,6 +30,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37juklq7qj.jpg?v=1789509163414",
    "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jvkmio08.jpg?v=1789509164835"
   ],
+  "imgZoom": 107,
   "imgPos": "50% 50%",
   "slug": "silla-pivotal-odyssey-hilo-amarillo",
   "img": "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jsytgrml.jpg?v=1789509162117"
