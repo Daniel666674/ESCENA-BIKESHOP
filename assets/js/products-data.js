@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Poste Pivotal Trueno  Negro",
+  "brand": "Trueno",
+  "cat": "tijas",
+  "spec": "Material aluminio 2 - piezas Medida 25.4mm – Largo 200mm Peso: 107 Gramos",
+  "price": 45000,
+  "sku": "PST-TRU-001",
+  "units": 5,
+  "imgFit": "cover",
+  "slug": "poste-pivotal-trueno-negro",
+  "order": 20,
+  "img": "assets/img/products/poste-pivotal-trueno-negro-mu3bw6ekxt34.jpg?v=1789516457593"
+ },
+ {
   "n": "Silla Pivotal Eclat IOS Negra",
   "brand": "Eclat",
   "cat": "sillines",
@@ -7056,7 +7069,7 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "TIJA-NEGRA-01",
   "units": 12,
-  "order": 1860,
+  "order": 10,
   "imgs": [
    "assets/img/products/tija-negra-01.jpg?v=1788093948129",
    "assets/img/products/tija-negra-01-2.jpg?v=1788093948129",
@@ -7072,8 +7085,8 @@ window.ESCENA_PRODUCTS = [
   "spec": "Aluminio · 25.4mm · 330mm · Negro",
   "price": 160000,
   "sku": "TIJA-NEGRA-02",
-  "units": 3,
-  "order": 1210,
+  "units": 0,
+  "order": 30,
   "imgs": [
    "assets/img/products/tija-negra-02.jpg?v=1788093948129",
    "assets/img/products/tija-negra-02-2.jpg?v=1788093948129",
@@ -7090,7 +7103,7 @@ window.ESCENA_PRODUCTS = [
   "price": 150000,
   "sku": "TIJA-NEGRA-CURVA",
   "units": 12,
-  "order": 1230,
+  "order": 0,
   "imgs": [
    "assets/img/products/tija-negra-curva.jpg?v=1788093948129",
    "assets/img/products/tija-negra-curva-2.jpg?v=1788093948129",
