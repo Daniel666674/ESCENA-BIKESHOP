@@ -5713,5 +5713,19 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-alienation-illuminati-oos"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T23:54:26.812Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 productos editados, 1 foto subida",
+  "created": [
+   "poste-pivotal-trueno-negro"
+  ],
+  "edited": [
+   "tija-negra-02",
+   "tija-negra-curva",
+   "tija-negra-01"
+  ],
+  "deleted": []
  }
 ];
