@@ -5363,5 +5363,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T20:24:45.531Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "pedales-wellgo-negro"
+  ],
+  "deleted": []
  }
 ];
