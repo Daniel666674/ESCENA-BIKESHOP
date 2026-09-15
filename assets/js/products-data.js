@@ -503,6 +503,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-innova-pro-gris-2-40",
   "order": 190,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-innova-pro-gris-2-40-mtw344eh68fb.jpg?v=1789078448788"
  },
  {
@@ -1399,6 +1400,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-cinema-nathan-williams-negro-2-50",
   "order": 260,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-cinema-nathan-williams-negro-2-50-mt9bxnx3uium.jpg?v=1788093948129"
  },
  {
@@ -1439,6 +1441,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-odyssey-supercircuit-keblar-negra-2-40",
   "order": 280,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-odyssey-supercircuit-keblar-negra-2-40-mt9askrguiae.jpg?v=1788093948129"
  },
  {
@@ -1478,6 +1481,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-cst-orbit-knobby-negra-rin-16-2-125",
   "order": 220,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-cst-orbit-knobby-negra-rin-16-2-125-mt9a85n17q91.jpg?v=1788093948129"
  },
  {
@@ -1503,6 +1507,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
   "order": 230,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-chaoyang-freestyle-bmx-rin-16-2-125-mt9a872hdwt4.jpg?v=1788093948129"
  },
  {
@@ -1528,6 +1533,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-chaoyang-cutting-edge-negra-2-25",
   "order": 240,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-chaoyang-cutting-edge-negra-2-25-mt98dnsnam9b.jpg?v=1788093948129"
  },
  {
@@ -1571,6 +1577,19 @@ window.ESCENA_PRODUCTS = [
     "price": 38000
    }
   ],
+  "imgFit": "cover",
+  "imgColorMap": {
+   "Negra": [
+    0,
+    3
+   ],
+   "Negra/Rojo": [
+    1
+   ],
+   "Negra/Azul": [
+    2
+   ]
+  },
   "img": "assets/img/products/llanta-optimus-black-burn-negra-2-35-mt98dsaikgps.jpg?v=1788093948129"
  },
  {
@@ -1675,6 +1694,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llanta-tioga-factory-fs100-negra-2-10",
   "order": 210,
+  "imgFit": "cover",
   "img": "assets/img/products/llanta-tioga-factory-fs100-negra-2-10-mt97cv103qjz.jpg?v=1788093948129"
  },
  {
@@ -2371,7 +2391,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/manzana-federal-motion-mt8ym7zu9wwc.jpg?v=1788093948129"
  },
  {
-  "n": "Llanta Innova Camufladas - 2.40\"",
+  "n": "Llanta Innova Pro IA-2128  Camufladas",
   "brand": "Innova",
   "cat": "llantas",
   "spec": "Material resistente • Excelente agarre • Rin 20",
@@ -2379,6 +2399,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "COR-INN-001",
   "units": 12,
   "imgs": [
+   "assets/img/products/llanta-innova-camufladas-mu3657vo50ya.jpg?v=1789506801867",
    "assets/img/products/llanta-innova-camufladas.jpg?v=1788093948129",
    "assets/img/products/llanta-innova-camufladas-2.jpg?v=1788093948129",
    "assets/img/products/llanta-innova-camufladas-3.jpg?v=1788093948129",
@@ -2390,39 +2411,31 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negra/rojo",
-    "units": 2,
-    "price": 80000,
-    "cost": 64000
+    "units": 2
    },
    {
     "label": "Negra/azul",
-    "units": 2,
-    "price": 80000,
-    "cost": 64000
+    "units": 2
    },
    {
     "label": "Morado/Lila",
-    "units": 2,
-    "price": 80000,
-    "cost": 64000
+    "units": 2
    },
    {
     "label": "Verde militar",
-    "units": 2,
-    "price": 80000,
-    "cost": 64000
+    "units": 2
    },
    {
     "label": "Gris Claro",
-    "units": 2,
-    "price": 80000,
-    "cost": 64000
+    "units": 2
    },
    {
     "label": "Gris Oscuro",
-    "units": 2,
-    "price": 80000,
-    "cost": 64000
+    "units": 2
+   },
+   {
+    "label": "Negra/Gris",
+    "units": 2
    }
   ],
   "sizes": [
@@ -2434,27 +2447,31 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgColorMap": {
-   "Negra/rojo": [
+   "Negra/Gris": [
     0
    ],
-   "Gris Claro": [
+   "Negra/rojo": [
     1
    ],
-   "Verde militar": [
+   "Gris Claro": [
     2
    ],
-   "Morado/Lila": [
+   "Verde militar": [
     3
    ],
-   "Negra/azul": [
+   "Morado/Lila": [
     4
    ],
-   "Gris Oscuro": [
+   "Negra/azul": [
     5
+   ],
+   "Gris Oscuro": [
+    6
    ]
   },
   "order": 200,
-  "img": "assets/img/products/llanta-innova-camufladas.jpg?v=1788093948129"
+  "imgFit": "cover",
+  "img": "assets/img/products/llanta-innova-camufladas-mu3657vo50ya.jpg?v=1789506801867"
  },
  {
   "n": "Caña Federal Front Load Negra",
@@ -7256,6 +7273,7 @@ window.ESCENA_PRODUCTS = [
     "cost": 128000
    }
   ],
+  "imgFit": "cover",
   "img": "assets/img/products/coraza_primo_555_2.45-3.jpg?v=1788093948129"
  },
  {
