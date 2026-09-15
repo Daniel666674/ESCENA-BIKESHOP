@@ -5452,5 +5452,15 @@ window.ESCENA_AUDIT = [
    "coraza_cult_wafflecup_2.40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T21:24:06.476Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "pedales-cinema-tilt-plate-negro"
+  ],
+  "deleted": []
  }
 ];
