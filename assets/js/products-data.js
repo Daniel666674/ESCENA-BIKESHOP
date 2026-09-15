@@ -4851,7 +4851,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Plataforma aluminio · 9/16\" · Negro",
   "price": 60000,
   "sku": "PDL",
-  "units": 2,
+  "units": 0,
   "imgs": [
    "assets/img/products/pedales-wellgo-negro.jpg?v=1788093948129",
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1788093948129"
