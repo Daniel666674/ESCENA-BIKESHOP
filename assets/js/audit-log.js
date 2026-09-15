@@ -5462,5 +5462,15 @@ window.ESCENA_AUDIT = [
    "pedales-cinema-tilt-plate-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T21:31:21.062Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "llanta-innova-camufladas"
+  ],
+  "deleted": []
  }
 ];
