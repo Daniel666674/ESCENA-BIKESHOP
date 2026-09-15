@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Demolition Trooper Azul/Rojo",
+  "brand": "Demolition",
+  "cat": "pedales",
+  "spec": "",
+  "price": 95000,
+  "sku": "PED-DMO-005",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "pedales-demolition-trooper-azul-rojo",
+  "img": "assets/img/products/pedales-demolition-trooper-azul-rojo-mu34cbee811z.jpg?v=1789503773696"
+ },
+ {
   "n": "Llanta Cult Dehart Negra 2.40\"",
   "brand": "Cult",
   "cat": "llantas",
