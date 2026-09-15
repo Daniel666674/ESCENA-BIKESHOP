@@ -1,5 +1,55 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Odyssey Hilo Amarillo",
+  "brand": "Odyssey",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "SIL-ODY-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jsytgrml.jpg?v=1789509162117",
+   "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37juklq7qj.jpg?v=1789509163414",
+   "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jvkmio08.jpg?v=1789509164835"
+  ],
+  "imgPos": "50% 50%",
+  "slug": "silla-pivotal-odyssey-hilo-amarillo",
+  "img": "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jsytgrml.jpg?v=1789509162117"
+ },
+ {
+  "n": "Silla Pivotal BSD Safari",
+  "brand": "BSD",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "SIL-BSD-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-bsd-safari-mu37jwo36iv6.jpg?v=1789509166423",
+   "assets/img/products/silla-pivotal-bsd-safari-mu37jxw7u63a.jpg?v=1789509167918",
+   "assets/img/products/silla-pivotal-bsd-safari-mu37jz1qrmnz.jpg?v=1789509170499"
+  ],
+  "imgZoom": 110,
+  "imgPos": "50% 100%",
+  "slug": "silla-pivotal-bsd-safari",
+  "img": "assets/img/products/silla-pivotal-bsd-safari-mu37jwo36iv6.jpg?v=1789509166423"
+ },
+ {
+  "n": "Silla Pivotal Cult Ajedrez Morada",
+  "brand": "Cult",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "SIL-CLT-002",
+  "units": 1,
+  "imgZoom": 113,
+  "imgPos": "50% 100%",
+  "slug": "silla-pivotal-cult-ajedrez-morada",
+  "img": "assets/img/products/silla-pivotal-cult-ajedrez-morada-mu37k11fz9uf.jpg?v=1789509172208"
+ },
+ {
   "n": "Pedales Stolen Thermalite Negro",
   "brand": "Stolen",
   "cat": "pedales",
