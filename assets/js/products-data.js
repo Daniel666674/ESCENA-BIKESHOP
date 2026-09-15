@@ -86,7 +86,7 @@ window.ESCENA_PRODUCTS = [
   "price": 190000,
   "sku": "SIL-CLT-002",
   "units": 1,
-  "imgZoom": 113,
+  "imgZoom": 124,
   "imgPos": "50% 100%",
   "slug": "silla-pivotal-cult-ajedrez-morada",
   "order": 40,
