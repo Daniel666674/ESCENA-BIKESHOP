@@ -229,7 +229,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/pedales-bsd-safari-negro-mtxjyorwbvbi.jpg?v=1789167214706"
  },
  {
-  "n": "Pedales Cinema TILT+ Plate Negro",
+  "n": "Pedales Cinema TILT Plate Negro",
   "brand": "130000",
   "cat": "pedales",
   "spec": "",
