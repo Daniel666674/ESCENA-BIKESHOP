@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Volume FTL Negra",
+  "brand": "Volume",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "SIL-VOL-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-volume-ftl-negra-mu38yz67zcq2.jpg?v=1789511549368",
+   "assets/img/products/silla-pivotal-volume-ftl-negra-mu38z0l46y8w.jpg?v=1789511550744",
+   "assets/img/products/silla-pivotal-volume-ftl-negra-mu38z1ncg8sd.jpg?v=1789511551993",
+   "assets/img/products/silla-pivotal-volume-ftl-negra-mu38z2m1p5u4.jpg?v=1789511553577"
+  ],
+  "imgZoom": 110,
+  "slug": "silla-pivotal-volume-ftl-negra",
+  "img": "assets/img/products/silla-pivotal-volume-ftl-negra-mu38yz67zcq2.jpg?v=1789511549368"
+ },
+ {
   "n": "Silla Pivotal Odyssey Big Stitch Hilo rojo",
   "brand": "Odyssey",
   "cat": "sillines",
