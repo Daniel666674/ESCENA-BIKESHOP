@@ -5609,5 +5609,31 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T22:46:31.776Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 15 productos editados, 4 fotos subidas",
+  "created": [
+   "silla-pivotal-eighties-zebra-morado"
+  ],
+  "edited": [
+   "silla-pivotal-fiend-mills-negra",
+   "silla-pivotal-volume-ftl-negra",
+   "silla-pivotal-subrosa-thrashed-verde-militar",
+   "silla-pivotal-fitbikeco-negra",
+   "stolen-sillin-negro",
+   "animal-sillin-camuflado",
+   "silla-pivotal-bsd-safari",
+   "silla-pivotal-primo-breaker-logo-blanco",
+   "silla-pivotal-eighties-zebra",
+   "silla-pivotal-fate-negra",
+   "silla-pivotal-odyssey-hilo-amarillo",
+   "silla-pivotal-odyssey-big-stitch-hilo-rojo",
+   "odyssey-sillin-floral",
+   "cult-sillin-negro",
+   "silla-pivotal-cult-old-skool"
+  ],
+  "deleted": []
  }
 ];
