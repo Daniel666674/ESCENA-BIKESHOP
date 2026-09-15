@@ -5482,5 +5482,25 @@ window.ESCENA_AUDIT = [
    "llanta-optimus-black-burn-negra-2-35"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T21:40:28.399Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "11 productos editados",
+  "created": [],
+  "edited": [
+   "silla-pivotal-fiend-reynolds-v2-zebra",
+   "silla-pivotal-fiend-reynolds-negra",
+   "silla-pivotal-fiend-mills",
+   "odyssey-sillin-floral",
+   "silla-pivotal-fate-negra",
+   "animal-sillin-camuflado",
+   "cult-sillin-negro",
+   "stolen-sillin-negro",
+   "cult-sillin-cuadros",
+   "silla-pivotal-fitbikeco-negra",
+   "silla-pivotal-cult-old-skool"
+  ],
+  "deleted": []
  }
 ];
