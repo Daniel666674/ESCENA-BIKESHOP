@@ -5703,5 +5703,15 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-odyssey-hilo-amarillo"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T23:48:17.650Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cajas-de-frente-alienation-illuminati-oos"
+  ],
+  "deleted": []
  }
 ];
