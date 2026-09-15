@@ -5502,5 +5502,17 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-cult-old-skool"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T21:53:02.720Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 7 fotos subidas",
+  "created": [
+   "silla-pivotal-odyssey-hilo-amarillo",
+   "silla-pivotal-bsd-safari",
+   "silla-pivotal-cult-ajedrez-morada"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
