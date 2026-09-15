@@ -5373,5 +5373,29 @@ window.ESCENA_AUDIT = [
    "pedales-wellgo-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T20:56:38.144Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos nuevos, 9 productos editados, 4 fotos subidas",
+  "created": [
+   "pedales-stolen-thermalite-negro",
+   "pedales-stolen-thermalite-aqua",
+   "pedales-stolen-thermalite-amarillo",
+   "pedales-stolen-thermalite-verde",
+   "pedales-stolen-thermalite-rosa"
+  ],
+  "edited": [
+   "pedales-bsd-safari-negro",
+   "pedales-fate-negro",
+   "pedales-wellgo-negro",
+   "pedales-demolition-trooper-azul-rojo",
+   "pedales-demolition-trooper-blanco-negro",
+   "pedales-demolition-trooper-rojo-blanco",
+   "pedales-demolition-trooper-azul-blanco",
+   "pedales-demolition-trooper-morado-amarillo",
+   "pedales-tallorder-catch-negro"
+  ],
+  "deleted": []
  }
 ];
