@@ -5599,5 +5599,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T22:41:28.278Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 4 fotos subidas",
+  "created": [
+   "silla-pivotal-subrosa-thrashed-verde-militar"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
