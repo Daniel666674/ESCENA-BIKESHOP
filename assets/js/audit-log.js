@@ -5635,5 +5635,30 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-cult-old-skool"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T22:48:42.158Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "16 productos editados",
+  "created": [],
+  "edited": [
+   "silla-pivotal-fiend-mills-negra",
+   "silla-pivotal-fitbikeco-negra",
+   "stolen-sillin-negro",
+   "animal-sillin-camuflado",
+   "silla-pivotal-bsd-safari",
+   "silla-pivotal-primo-breaker-logo-blanco",
+   "silla-pivotal-fate-negra",
+   "silla-pivotal-odyssey-hilo-amarillo",
+   "silla-pivotal-odyssey-big-stitch-hilo-rojo",
+   "silla-pivotal-eighties-zebra",
+   "silla-pivotal-eighties-zebra-morado",
+   "odyssey-sillin-floral",
+   "cult-sillin-negro",
+   "silla-pivotal-cult-old-skool",
+   "silla-pivotal-cult-ajedrez-morada",
+   "cult-sillin-cuadros"
+  ],
+  "deleted": []
  }
 ];
