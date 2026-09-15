@@ -2671,10 +2671,10 @@ window.ESCENA_PRODUCTS = [
   "n": "Silla Pivotal Cult Old Skool",
   "brand": "Cult",
   "cat": "sillines",
-  "spec": "• Tipo: Pivotal",
+  "spec": "• Tipo: Pivotal - colaboracion con vans",
   "price": 200000,
   "sku": "SIL-CLT-001",
-  "units": 0,
+  "units": 1,
   "imgs": [
    "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-cult-old-skool.jpg?v=1788093948129",
@@ -5260,7 +5260,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Pivotal · Lona Zebra · Base reforzada · Relleno grueso",
   "price": 205000,
   "sku": "SIL-FND-001",
-  "units": 0,
+  "units": 3,
   "imgs": [
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-fiend-reynolds-v2-zebra-2.jpg?v=1788093948129",
@@ -5353,7 +5353,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Pivotal",
   "price": 130000,
   "sku": "SIL-FAT-001",
-  "units": 2,
+  "units": 3,
   "order": 50,
   "imgs": [
    "assets/img/products/silla-pivotal-fate-negra.jpg?v=1788093948129",
@@ -5370,7 +5370,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Pivotal · Cuero sintético · Base reforzada",
   "price": 205000,
   "sku": "SIL-FND-002",
-  "units": 1,
+  "units": 3,
   "imgs": [
    "assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-fiend-reynolds-negra-2.jpg?v=1788093948129"
@@ -5908,13 +5908,13 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "cult-sillin-cuadros",
-  "n": "Silla Cult Pivotal Cuadros",
+  "n": "Silla Pivotal Cult Ajedrez",
   "brand": "Cult",
   "cat": "sillines",
   "spec": "Pivotal slim · cuadros B/N · Denim",
-  "price": 175000,
+  "price": 190000,
   "sku": "CULT-SILLIN-CUADROS",
-  "units": 1,
+  "units": 0,
   "order": 100,
   "imgs": [
    "assets/img/products/cult-sillin-cuadros.jpg?v=1788093948129",
@@ -5922,12 +5922,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cult-sillin-cuadros-3.jpg?v=1788093948129",
    "assets/img/products/cult-sillin-cuadros-4.jpg?v=1788093948129",
    "assets/img/products/cult-sillin-cuadros-5.jpg?v=1788093948129"
-  ],
-  "colors": [
-   {
-    "label": "BlBlan1",
-    "units": 1
-   }
   ],
   "img": "assets/img/products/cult-sillin-cuadros.jpg?v=1788093948129"
  },
@@ -6291,13 +6285,13 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "cult-sillin-negro",
-  "n": "Silla Cult Rasta",
+  "n": "Silla Pivotal Cult Rasta",
   "brand": "Cult",
   "cat": "sillines",
   "spec": "Pivotal slim · Negro · Tela militar",
   "price": 195000,
   "sku": "CULT-SILLIN-NEGRO",
-  "units": 0,
+  "units": 4,
   "order": 80,
   "imgs": [
    "assets/img/products/cult-sillin-negro-3.jpg?v=1788093948129",
@@ -6308,13 +6302,13 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "odyssey-sillin-floral",
-  "n": "Silla Odyssey Floral",
+  "n": "Silla Pivotal Odyssey Tropical",
   "brand": "Odyssey",
   "cat": "sillines",
   "spec": "Pivotal slim · Bordado floral · Denim",
-  "price": 250000,
+  "price": 190000,
   "sku": "ODYSSEY-SILLIN-FLORAL",
-  "units": 1,
+  "units": 0,
   "order": 40,
   "imgs": [
    "assets/img/products/odyssey-sillin-floral.jpg?v=1788093948129",
@@ -6326,13 +6320,13 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "animal-sillin-camuflado",
-  "n": "Silla Animal Camuflada",
+  "n": "Silla Pivotal Animal Camuflada",
   "brand": "Animal",
   "cat": "sillines",
   "spec": "Pivotal · Camuflado · Kevlar · Bordado",
   "price": 180000,
   "sku": "ANIMAL-SILLIN-CAMUFLADO",
-  "units": 12,
+  "units": 1,
   "order": 70,
   "imgs": [
    "assets/img/products/animal-sillin-camuflado.jpg?v=1788093948129",
@@ -6343,13 +6337,13 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "stolen-sillin-negro",
-  "n": "Silla Stolen Negra",
+  "n": "Silla Pivotal Stolen Colmena Negra",
   "brand": "Stolen",
   "cat": "sillines",
   "spec": "Pivotal slim · Textura vinilo · Negro",
-  "price": 178000,
+  "price": 180000,
   "sku": "STOLEN-SILLIN-NEGRO",
-  "units": 12,
+  "units": 1,
   "order": 90,
   "imgs": [
    "assets/img/products/stolen-sillin-negro.jpg?v=1788093948129",
