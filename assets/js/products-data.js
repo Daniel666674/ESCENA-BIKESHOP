@@ -1,5 +1,86 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Stolen Thermalite Negro",
+  "brand": "Stolen",
+  "cat": "pedales",
+  "spec": "",
+  "price": 75000,
+  "sku": "PED-STL-005",
+  "units": 5,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/pedales-stolen-thermalite-negro-mu35hdzkley1.jpg?v=1789505689826",
+   "assets/img/products/pedales-stolen-thermalite-negro-mu35hfc20psc.jpg?v=1789505692582"
+  ],
+  "slug": "pedales-stolen-thermalite-negro",
+  "img": "assets/img/products/pedales-stolen-thermalite-negro-mu35hdzkley1.jpg?v=1789505689826"
+ },
+ {
+  "n": "Pedales Stolen Thermalite Aqua",
+  "brand": "Stolen",
+  "cat": "pedales",
+  "spec": "",
+  "price": 75000,
+  "sku": "PED-STL-004",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/pedales-stolen-thermalite-aqua-mu35hhgma375.jpg?v=1789505694493",
+   "assets/img/products/pedales-stolen-thermalite-aqua-mu35hixqpiix.jpg?v=1789505696127"
+  ],
+  "slug": "pedales-stolen-thermalite-aqua",
+  "img": "assets/img/products/pedales-stolen-thermalite-aqua-mu35hhgma375.jpg?v=1789505694493"
+ },
+ {
+  "n": "Pedales Stolen Thermalite Amarillo",
+  "brand": "Stolen",
+  "cat": "pedales",
+  "spec": "",
+  "price": 75000,
+  "sku": "PED-STL-003",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/pedales-stolen-thermalite-amarillo-mu35hk73ixov.jpg?v=1789505697726",
+   "assets/img/products/pedales-stolen-thermalite-amarillo-mu35hlfi8857.jpg?v=1789505699405"
+  ],
+  "slug": "pedales-stolen-thermalite-amarillo",
+  "img": "assets/img/products/pedales-stolen-thermalite-amarillo-mu35hk73ixov.jpg?v=1789505697726"
+ },
+ {
+  "n": "Pedales Stolen Thermalite Verde",
+  "brand": "Stolen",
+  "cat": "pedales",
+  "spec": "",
+  "price": 75000,
+  "sku": "PED-STL-002",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/pedales-stolen-thermalite-verde-mu35icldqxj6.jpg?v=1789505741994",
+   "assets/img/products/pedales-stolen-thermalite-verde-mu35ijl624sb.jpg?v=1789505746359"
+  ],
+  "slug": "pedales-stolen-thermalite-verde",
+  "img": "assets/img/products/pedales-stolen-thermalite-verde-mu35icldqxj6.jpg?v=1789505741994"
+ },
+ {
+  "n": "Pedales Stolen Thermalite Rosa",
+  "brand": "Stolen",
+  "cat": "pedales",
+  "spec": "",
+  "price": 75000,
+  "sku": "PED-STL-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/pedales-stolen-thermalite-rosa-mu35imyffezd.jpg?v=1789505752312",
+   "assets/img/products/pedales-stolen-thermalite-rosa-mu35irjshae8.jpg?v=1789505758975"
+  ],
+  "imgZoom": 115,
+  "slug": "pedales-stolen-thermalite-rosa",
+  "img": "assets/img/products/pedales-stolen-thermalite-rosa-mu35imyffezd.jpg?v=1789505752312"
+ },
+ {
   "n": "Pedales Demolition Trooper Azul/Rojo",
   "brand": "Demolition",
   "cat": "pedales",
@@ -9,6 +90,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-azul-rojo",
+  "order": 90,
   "img": "assets/img/products/pedales-demolition-trooper-azul-rojo-mu34cbee811z.jpg?v=1789503773696"
  },
  {
@@ -67,6 +149,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-demolition-trooper-blanco-negro-mtxl2f4sur81.jpg?v=1789169067963"
   ],
   "slug": "pedales-demolition-trooper-blanco-negro",
+  "order": 130,
   "img": "assets/img/products/pedales-demolition-trooper-blanco-negro-mtxl2dkp1b3l.jpg?v=1789169066524"
  },
  {
@@ -79,6 +162,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-rojo-blanco",
+  "order": 110,
   "img": "assets/img/products/pedales-demolition-trooper-rojo-blanco-mtxl2g8rpmnm.jpg?v=1789169069817"
  },
  {
@@ -91,6 +175,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-azul-blanco",
+  "order": 120,
   "img": "assets/img/products/pedales-demolition-trooper-azul-blanco-mtxl2ho9l07i.jpg?v=1789169071202"
  },
  {
@@ -103,6 +188,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-morado-amarillo",
+  "order": 100,
   "img": "assets/img/products/pedales-demolition-trooper-morado-amarillo-mtxknl9czpgm.jpg?v=1789168376322"
  },
  {
@@ -120,6 +206,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 101,
   "slug": "pedales-tallorder-catch-negro",
+  "order": 140,
   "img": "assets/img/products/pedales-tallorder-catch-negro-mtxk8mxo5w8e.jpg?v=1789167679392"
  },
  {
@@ -136,7 +223,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-bsd-safari-negro-mtxjyq9esuc5.jpg?v=1789167216749"
   ],
   "slug": "pedales-bsd-safari-negro",
-  "order": 70,
+  "order": 60,
   "img": "assets/img/products/pedales-bsd-safari-negro-mtxjyorwbvbi.jpg?v=1789167214706"
  },
  {
@@ -4856,7 +4943,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-wellgo-negro.jpg?v=1788093948129",
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1788093948129"
   ],
-  "order": 90,
+  "order": 80,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1788093948129"
  },
@@ -5129,7 +5216,7 @@ window.ESCENA_PRODUCTS = [
   "price": 65000,
   "sku": "PED-FAT-001",
   "units": 4,
-  "order": 80,
+  "order": 70,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-fate-negro-mtxk1vjpiakf.jpg?v=1789167365435"
  },
