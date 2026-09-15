@@ -5589,5 +5589,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T22:37:02.904Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "silla-pivotal-fiend-mills-negra"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
