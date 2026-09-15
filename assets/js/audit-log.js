@@ -5416,5 +5416,20 @@ window.ESCENA_AUDIT = [
    "llanta-innova-pro-gris-2-40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T21:18:18.581Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "6 productos editados",
+  "created": [],
+  "edited": [
+   "llanta-innova-pro-negra-2-40",
+   "llanta-theory-proven-blanca-2-40",
+   "llanta-mutanty-whipper-azul-2-40",
+   "llanta-mutanty-whipper-roja-2-40",
+   "llanta-subrosa-matt-ray-roja-2-40",
+   "llanta-shadow-creeper-negra-2-40"
+  ],
+  "deleted": []
  }
 ];
