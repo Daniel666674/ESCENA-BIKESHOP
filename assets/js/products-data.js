@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Primo Breaker Logo Blanco",
+  "brand": "Primo",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "SIL-PRM-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o8e9sn56.jpg?v=1789509368261",
+   "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o9mtt2pv.jpg?v=1789509369681"
+  ],
+  "imgZoom": 117,
+  "slug": "silla-pivotal-primo-breaker-logo-blanco",
+  "img": "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o8e9sn56.jpg?v=1789509368261"
+ },
+ {
   "n": "Silla Pivotal Odyssey Hilo Amarillo",
   "brand": "Odyssey",
   "cat": "sillines",
