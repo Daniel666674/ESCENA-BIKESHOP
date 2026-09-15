@@ -5569,5 +5569,15 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-cult-ajedrez-morada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T22:27:44.064Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "silla-pivotal-cult-ajedrez-morada"
+  ],
+  "deleted": []
  }
 ];
