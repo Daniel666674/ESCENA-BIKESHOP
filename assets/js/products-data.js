@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Subrosa Thrashed Verde Militar",
+  "brand": "Subrosa",
+  "cat": "sillines",
+  "spec": "",
+  "price": 180000,
+  "sku": "SIL-SUB-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-subrosa-thrashed-verde-militar-mu39a9w3cvg0.jpg?v=1789512076594",
+   "assets/img/products/silla-pivotal-subrosa-thrashed-verde-militar-mu39abeawglp.jpg?v=1789512078035",
+   "assets/img/products/silla-pivotal-subrosa-thrashed-verde-militar-mu39acibqcuq.jpg?v=1789512080021",
+   "assets/img/products/silla-pivotal-subrosa-thrashed-verde-militar-mu39ae1hg56n.jpg?v=1789512081737"
+  ],
+  "imgZoom": 106,
+  "slug": "silla-pivotal-subrosa-thrashed-verde-militar",
+  "img": "assets/img/products/silla-pivotal-subrosa-thrashed-verde-militar-mu39a9w3cvg0.jpg?v=1789512076594"
+ },
+ {
   "n": "Silla Pivotal Fiend Mills Negra",
   "brand": "Fiend",
   "cat": "sillines",
