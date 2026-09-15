@@ -5397,5 +5397,24 @@ window.ESCENA_AUDIT = [
    "pedales-tallorder-catch-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T21:14:20.911Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "10 productos editados",
+  "created": [],
+  "edited": [
+   "llanta-optimus-black-burn-negra-2-35",
+   "llanta-odyssey-supercircuit-keblar-negra-2-40",
+   "coraza_primo_555_2.45",
+   "llanta-cinema-nathan-williams-negro-2-50",
+   "llanta-chaoyang-cutting-edge-negra-2-25",
+   "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
+   "llanta-cst-orbit-knobby-negra-rin-16-2-125",
+   "llanta-tioga-factory-fs100-negra-2-10",
+   "llanta-innova-camufladas",
+   "llanta-innova-pro-gris-2-40"
+  ],
+  "deleted": []
  }
 ];
