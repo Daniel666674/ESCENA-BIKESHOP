@@ -5546,5 +5546,28 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-odyssey-hilo-amarillo"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-15T22:24:32.085Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "14 productos editados",
+  "created": [],
+  "edited": [
+   "odyssey-sillin-floral",
+   "silla-pivotal-fate-negra",
+   "silla-pivotal-eighties-zebra",
+   "animal-sillin-camuflado",
+   "cult-sillin-negro",
+   "stolen-sillin-negro",
+   "cult-sillin-cuadros",
+   "silla-pivotal-fitbikeco-negra",
+   "silla-pivotal-cult-old-skool",
+   "silla-pivotal-odyssey-big-stitch-hilo-rojo",
+   "silla-pivotal-primo-breaker-logo-blanco",
+   "silla-pivotal-odyssey-hilo-amarillo",
+   "silla-pivotal-bsd-safari",
+   "silla-pivotal-cult-ajedrez-morada"
+  ],
+  "deleted": []
  }
 ];
