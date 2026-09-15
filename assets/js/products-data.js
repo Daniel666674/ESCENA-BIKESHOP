@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Eighties Zebra Morado",
+  "brand": "Eighties",
+  "cat": "sillines",
+  "spec": "",
+  "price": 180000,
+  "sku": "SIL-EGT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-eighties-zebra-morado-mu39grycm40z.jpg?v=1789512380122",
+   "assets/img/products/silla-pivotal-eighties-zebra-morado-mu39gtln3tkg.jpg?v=1789512381479",
+   "assets/img/products/silla-pivotal-eighties-zebra-morado-mu39gunbzivm.jpg?v=1789512382972",
+   "assets/img/products/silla-pivotal-eighties-zebra-morado-mu39gvss7i3p.jpg?v=1789512384382"
+  ],
+  "slug": "silla-pivotal-eighties-zebra-morado",
+  "order": 80,
+  "img": "assets/img/products/silla-pivotal-eighties-zebra-morado-mu39grycm40z.jpg?v=1789512380122"
+ },
+ {
   "n": "Silla Pivotal Subrosa Thrashed Verde Militar",
   "brand": "Subrosa",
   "cat": "sillines",
@@ -16,6 +35,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 106,
   "slug": "silla-pivotal-subrosa-thrashed-verde-militar",
+  "order": 200,
   "img": "assets/img/products/silla-pivotal-subrosa-thrashed-verde-militar-mu39a9w3cvg0.jpg?v=1789512076594"
  },
  {
@@ -33,6 +53,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fiend-mills-negra-mu394o6u6ld4.jpg?v=1789511814791"
   ],
   "slug": "silla-pivotal-fiend-mills-negra",
+  "order": 180,
   "img": "assets/img/products/silla-pivotal-fiend-mills-negra-mu394lubkhq5.jpg?v=1789511811800"
  },
  {
@@ -52,6 +73,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 110,
   "slug": "silla-pivotal-volume-ftl-negra",
+  "order": 190,
   "img": "assets/img/products/silla-pivotal-volume-ftl-negra-mu38yz67zcq2.jpg?v=1789511549368"
  },
  {
@@ -71,7 +93,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 114,
   "slug": "silla-pivotal-odyssey-big-stitch-hilo-rojo",
-  "order": 80,
+  "order": 100,
   "img": "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38lg18jh24.jpg?v=1789510918940"
  },
  {
@@ -89,7 +111,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 117,
   "slug": "silla-pivotal-primo-breaker-logo-blanco",
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o8e9sn56.jpg?v=1789509368261"
  },
  {
@@ -110,7 +132,7 @@ window.ESCENA_PRODUCTS = [
   "imgZoom": 107,
   "imgPos": "50% 50%",
   "slug": "silla-pivotal-odyssey-hilo-amarillo",
-  "order": 90,
+  "order": 110,
   "img": "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jsytgrml.jpg?v=1789509162117"
  },
  {
@@ -130,7 +152,7 @@ window.ESCENA_PRODUCTS = [
   "imgZoom": 110,
   "imgPos": "50% 100%",
   "slug": "silla-pivotal-bsd-safari",
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/silla-pivotal-bsd-safari-mu37jwo36iv6.jpg?v=1789509166423"
  },
  {
@@ -5296,7 +5318,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 110,
+  "order": 90,
   "imgColorMap": {
    "Blanco/Negro": [
     0,
@@ -5468,7 +5490,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fitbikeco-negra-3.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-fitbikeco-negra-4.jpg?v=1788093948129"
   ],
-  "order": 160,
+  "order": 170,
   "img": "assets/img/products/silla-pivotal-fitbikeco-negra.jpg?v=1788093948129"
  },
  {
@@ -5503,7 +5525,7 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "SIL-FAT-001",
   "units": 3,
-  "order": 100,
+  "order": 120,
   "imgs": [
    "assets/img/products/silla-pivotal-fate-negra.jpg?v=1788093948129",
    "assets/img/products/silla-pivotal-fate-negra-3.jpg?v=1788093948129",
@@ -6476,7 +6498,7 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "ANIMAL-SILLIN-CAMUFLADO",
   "units": 1,
-  "order": 140,
+  "order": 150,
   "imgs": [
    "assets/img/products/animal-sillin-camuflado.jpg?v=1788093948129",
    "assets/img/products/animal-sillin-camuflado.jpg?v=1788093948129",
@@ -6493,7 +6515,7 @@ window.ESCENA_PRODUCTS = [
   "price": 180000,
   "sku": "STOLEN-SILLIN-NEGRO",
   "units": 1,
-  "order": 150,
+  "order": 160,
   "imgs": [
    "assets/img/products/stolen-sillin-negro.jpg?v=1788093948129",
    "assets/img/products/stolen-sillin-negro-3.jpg?v=1788093948129",
