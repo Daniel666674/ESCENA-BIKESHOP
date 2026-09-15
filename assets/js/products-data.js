@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Fiend Mills Negra",
+  "brand": "Fiend",
+  "cat": "sillines",
+  "spec": "",
+  "price": 200000,
+  "sku": "SIL-FND-004",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-fiend-mills-negra-mu394lubkhq5.jpg?v=1789511811800",
+   "assets/img/products/silla-pivotal-fiend-mills-negra-mu394n2wkyzm.jpg?v=1789511813238",
+   "assets/img/products/silla-pivotal-fiend-mills-negra-mu394o6u6ld4.jpg?v=1789511814791"
+  ],
+  "slug": "silla-pivotal-fiend-mills-negra",
+  "img": "assets/img/products/silla-pivotal-fiend-mills-negra-mu394lubkhq5.jpg?v=1789511811800"
+ },
+ {
   "n": "Silla Pivotal Volume FTL Negra",
   "brand": "Volume",
   "cat": "sillines",
