@@ -2172,8 +2172,8 @@ window.ESCENA_PRODUCTS = [
   "sku": "CJF-ALI-001",
   "units": 1,
   "imgs": [
-   "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9jzc1in0.jpg?v=1788093948129",
    "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9lf12fr2.jpg?v=1788093948129",
+   "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9jzc1in0.jpg?v=1788093948129",
    "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9mhwjv58.jpg?v=1788093948129"
   ],
   "colors": [
@@ -2191,10 +2191,10 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgColorMap": {
-   "Negro": [
+   "Rojo": [
     0
    ],
-   "Rojo": [
+   "Negro": [
     1
    ],
    "Cromado": [
@@ -2203,7 +2203,7 @@ window.ESCENA_PRODUCTS = [
   },
   "slug": "cajas-de-frente-alienation-illuminati-oos",
   "order": 10,
-  "img": "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9jzc1in0.jpg?v=1788093948129"
+  "img": "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9lf12fr2.jpg?v=1788093948129"
  },
  {
   "n": "Cajas de frente Fate Negra",
