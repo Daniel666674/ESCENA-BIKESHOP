@@ -1,5 +1,23 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Poste Siso Bmx 5150 Raw",
+  "brand": "Cult",
+  "cat": "tijas",
+  "spec": "Diámetro: 25,4 mm Longitud: 200 mm Peso: 5 oz",
+  "price": 150000,
+  "sku": "PST-CLT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/poste-siso-bmx-5150-raw-mu3c5z1rg569.jpg?v=1789516915136",
+   "assets/img/products/poste-siso-bmx-5150-raw-mu3c60u8rjww.jpg?v=1789516916382"
+  ],
+  "imgZoom": 112,
+  "slug": "poste-siso-bmx-5150-raw",
+  "order": 20,
+  "img": "assets/img/products/poste-siso-bmx-5150-raw-mu3c5z1rg569.jpg?v=1789516915136"
+ },
+ {
   "n": "Poste Pivotal Trueno  Negro",
   "brand": "Trueno",
   "cat": "tijas",
@@ -9,7 +27,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "poste-pivotal-trueno-negro",
-  "order": 20,
+  "order": 30,
   "img": "assets/img/products/poste-pivotal-trueno-negro-mu3bw6ekxt34.jpg?v=1789516457593"
  },
  {
@@ -7086,7 +7104,7 @@ window.ESCENA_PRODUCTS = [
   "price": 160000,
   "sku": "TIJA-NEGRA-02",
   "units": 0,
-  "order": 30,
+  "order": 40,
   "imgs": [
    "assets/img/products/tija-negra-02.jpg?v=1788093948129",
    "assets/img/products/tija-negra-02-2.jpg?v=1788093948129",
