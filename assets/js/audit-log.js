@@ -5727,5 +5727,18 @@ window.ESCENA_AUDIT = [
    "tija-negra-01"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-16T00:02:04.847Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 productos editados, 2 fotos subidas",
+  "created": [
+   "poste-siso-bmx-5150-raw"
+  ],
+  "edited": [
+   "tija-negra-02",
+   "poste-pivotal-trueno-negro"
+  ],
+  "deleted": []
  }
 ];
