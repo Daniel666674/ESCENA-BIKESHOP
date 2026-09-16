@@ -76,3 +76,10 @@ a.trust-item:hover { color: #fff; }
 .pay-row .pay-davi { color: #ff5c5c; border-color: rgba(255,92,92,.4); background: rgba(255,92,92,.08); }
 .pay-row .pay-transfer { color: #7db2ff; border-color: rgba(125,178,255,.4); background: rgba(125,178,255,.08); }
 .pay-row .pay-cash { color: #3ddc9a; border-color: rgba(61,220,154,.4); background: rgba(61,220,154,.08); }
+
+/* Producto del carrito que ya no se puede vender: se marca y se saca del
+   total, pero no se borra solo -- que el cliente vea qué pasó y decida. */
+.cart-item.is-unavailable { opacity: .55; }
+.cart-item.is-unavailable .ci-img img { filter: grayscale(1); }
+.cart-item .ci-unavailable { display: inline-block; font-size: .66rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: #c0392b; margin-bottom: .35rem; }
+.cart-note { font-size: .74rem; line-height: 1.5; color: #c0392b; margin: .9rem 0 0; }
