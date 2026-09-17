@@ -5850,5 +5850,19 @@ window.ESCENA_AUDIT = [
    "animal-kit-rodamientos-bb",
    "kit-rodamientos-bb-generico"
   ]
+ },
+ {
+  "ts": "2026-09-17T17:56:07.124Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos editados",
+  "created": [],
+  "edited": [
+   "cult-kit-rodamientos-bb",
+   "cajas-de-centro-federal-v2-negro",
+   "odyssey-kit-rodamientos-bb",
+   "cajas-de-centro-demolition-bearing-kits",
+   "cajas-de-centro-rantbmx-cromada"
+  ],
+  "deleted": []
  }
 ];
