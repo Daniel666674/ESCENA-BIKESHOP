@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodamiento MID -19mm",
+  "brand": "Generico",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Rodamiento Sellado -  19mm",
+  "price": 12000,
+  "sku": "CJC-GEN-002",
+  "units": 10,
+  "imgFit": "cover",
+  "imgPos": "50% 0%",
+  "slug": "rodamiento-mid-19mm",
+  "img": "assets/img/products/rodamiento-mid-19mm-mu5zkd1myw4p.jpg?v=1789677149420"
+ },
+ {
   "n": "Rodamiento Español 19mm",
   "brand": "Generico",
   "cat": "caja-centro",
