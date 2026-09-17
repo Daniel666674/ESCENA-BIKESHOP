@@ -5812,5 +5812,15 @@ window.ESCENA_AUDIT = [
    "llanta-federal-neptune"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:25:32.525Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "llantas-alienation-prowler-keblar-negro-gris"
+  ],
+  "deleted": []
  }
 ];
