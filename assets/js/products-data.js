@@ -1,5 +1,31 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Caja de Centro S&M Negro 24mm",
+  "brand": "S&M",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 24mm",
+  "price": 140000,
+  "sku": "CJC-SNM-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "caja-de-centro-s-m-negro-24mm",
+  "img": "assets/img/products/caja-de-centro-s-m-negro-24mm-mu5ugnaikv7d.jpg?v=1789668578139"
+ },
+ {
+  "n": "Cajas de centro Fiend Ransom Cromada 22mm",
+  "brand": "Fiend",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 22mm",
+  "price": 140000,
+  "sku": "CJC-FND-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgZoom": 132,
+  "slug": "cajas-de-centro-fiend-ransom-cromada-22mm",
+  "order": 0,
+  "img": "assets/img/products/cajas-de-centro-fiend-ransom-cromada-22mm-mu5ugorfgqj5.jpg?v=1789668579898"
+ },
+ {
   "n": "Cajas de Centro RantBmx Negra 22mm",
   "brand": "Rant",
   "cat": "caja-centro",
@@ -9,6 +35,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "cajas-de-centro-rantbmx-negra-22mm",
+  "order": 50,
   "img": "assets/img/products/cajas-de-centro-rantbmx-negra-22mm-mu5u1ymtyyx1.jpg?v=1789667893177"
  },
  {
@@ -21,6 +48,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "cajas-de-centro-rantbmx-cromada",
+  "order": 60,
   "img": "assets/img/products/cajas-de-centro-rantbmx-cromada-mu5tv8bsb0ge.jpg?v=1789667578863"
  },
  {
@@ -33,6 +61,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "cajas-de-centro-federal-v2-negro",
+  "order": 30,
   "img": "assets/img/products/cajas-de-centro-federal-v2-negro-mu5tv9pr1es4.jpg?v=1789667580616"
  },
  {
@@ -46,6 +75,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgZoom": 107,
   "slug": "cajas-de-centro-demolition-bearing-kits",
+  "order": 40,
   "img": "assets/img/products/cajas-de-centro-demolition-bearing-kits-mu5tfouq0m5k.jpg?v=1789666853927"
  },
  {
@@ -6828,7 +6858,7 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "CULT-KIT-RODAMIENTOS-BB",
   "units": 7,
-  "order": 1370,
+  "order": 10,
   "imgFit": "cover",
   "img": "assets/img/products/cult-kit-rodamientos-bb-mu5tfqcnvxco.jpg?v=1789666855506"
  },
@@ -6841,7 +6871,7 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "ODYSSEY-KIT-RODAMIENTOS-BB",
   "units": 3,
-  "order": 1380,
+  "order": 20,
   "imgFit": "cover",
   "img": "assets/img/products/odyssey-kit-rodamientos-bb-mu5tvb2g0pk2.jpg?v=1789667582216"
  },
