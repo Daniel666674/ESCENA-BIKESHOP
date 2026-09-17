@@ -5757,5 +5757,15 @@ window.ESCENA_AUDIT = [
    "tija-negra-01"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T16:43:08.998Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "llanta-odyssey-broc-negra-2-25-2-40"
+  ],
+  "deleted": []
  }
 ];
