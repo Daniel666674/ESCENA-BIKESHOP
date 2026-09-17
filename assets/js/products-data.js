@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de Centro RantBmx Negra 22mm",
+  "brand": "Rant",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 22mm",
+  "price": 95000,
+  "sku": "CJC-RNT-002",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "cajas-de-centro-rantbmx-negra-22mm",
+  "img": "assets/img/products/cajas-de-centro-rantbmx-negra-22mm-mu5u1ymtyyx1.jpg?v=1789667893177"
+ },
+ {
   "n": "Cajas de Centro RantBmx Cromada 22mm",
   "brand": "Rant",
   "cat": "caja-centro",
