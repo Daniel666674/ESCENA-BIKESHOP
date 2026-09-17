@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodamiento 6902 Para Cassette",
+  "brand": "Generico",
+  "cat": "manzana-trasera",
+  "spec": "Rodamiento Para Cassette",
+  "price": 8000,
+  "sku": "MZT-GEN-002",
+  "units": 10,
+  "imgFit": "cover",
+  "slug": "rodamiento-6902-para-cassette",
+  "img": "assets/img/products/rodamiento-6902-para-cassette-mu60chc8p45s.jpg?v=1789678461922"
+ },
+ {
   "n": "Rodamiento 6802 Para Manzana de Cassette",
   "brand": "Generico",
   "cat": "manzana-trasera",
