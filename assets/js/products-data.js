@@ -1,5 +1,29 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de Centro RantBmx - Cromada",
+  "brand": "Rant",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Rodamiento Sellado - Incluye Buje y Arandelas- 22mm",
+  "price": 95000,
+  "sku": "CJC-RNT-001",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "cajas-de-centro-rantbmx-cromada",
+  "img": "assets/img/products/cajas-de-centro-rantbmx-cromada-mu5tv8bsb0ge.jpg?v=1789667578863"
+ },
+ {
+  "n": "Cajas de Centro Federal V2 - Negro",
+  "brand": "Federal",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas",
+  "price": 140000,
+  "sku": "CJC-FED-001",
+  "units": 5,
+  "imgFit": "cover",
+  "slug": "cajas-de-centro-federal-v2-negro",
+  "img": "assets/img/products/cajas-de-centro-federal-v2-negro-mu5tv9pr1es4.jpg?v=1789667580616"
+ },
+ {
   "n": "Cajas de centro Demolition Bearing Kits",
   "brand": "Demolition",
   "cat": "caja-centro",
@@ -6806,31 +6830,8 @@ window.ESCENA_PRODUCTS = [
   "sku": "ODYSSEY-KIT-RODAMIENTOS-BB",
   "units": 3,
   "order": 1380,
-  "img": "assets/img/products/odyssey-kit-rodamientos-bb.jpg?v=1788093948129"
- },
- {
-  "slug": "animal-kit-rodamientos-bb",
-  "n": "Cajas De Centro Animal Negra 22mm",
-  "brand": "Animal",
-  "cat": "caja-centro",
-  "spec": "Rodamientos sellados MID · Tapas aluminio · 22mm",
-  "price": 130000,
-  "sku": "ANIMAL-KIT-RODAMIENTOS-BB",
-  "units": 4,
-  "order": 1310,
-  "img": "assets/img/products/animal-kit-rodamientos-bb.jpg?v=1788093948129"
- },
- {
-  "slug": "kit-rodamientos-bb-generico",
-  "n": "Cajas De Centro Rant Cromada 22mm",
-  "brand": "Rant",
-  "cat": "caja-centro",
-  "spec": "Rodamientos sellados R12 · MID · Tapas aluminio",
-  "price": 50000,
-  "sku": "KIT-RODAMIENTOS-BB-GENERICO",
-  "units": 2,
-  "order": 1850,
-  "img": "assets/img/products/kit-rodamientos-bb-generico.jpg?v=1788093948129"
+  "imgFit": "cover",
+  "img": "assets/img/products/odyssey-kit-rodamientos-bb-mu5tvb2g0pk2.jpg?v=1789667582216"
  },
  {
   "slug": "clavijas-negro-par",
