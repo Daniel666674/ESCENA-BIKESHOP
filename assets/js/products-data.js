@@ -1,5 +1,42 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Poste Pivotal Merritt Negro",
+  "brand": "Merritt",
+  "cat": "tijas",
+  "spec": "Pivotal forjada en aluminio 6061  - Medidas (25,4 mm x 330 mm) - Peso: 130 g.",
+  "price": 150000,
+  "sku": "PST-MER-002",
+  "units": 0,
+  "imgFit": "cover",
+  "slug": "poste-pivotal-merritt-negro",
+  "img": "assets/img/products/poste-pivotal-merritt-negro-mu5r9aq1u3s2.jpg?v=1789663201423"
+ },
+ {
+  "n": "Poste Pivotal Merrit Croamdo",
+  "brand": "Merritt",
+  "cat": "tijas",
+  "spec": "Pivotal forjada en aluminio 6061 - largas (25,4 mm x 330 mm) - para mayor versatilidad de altura. Peso: 130 g.",
+  "price": 150000,
+  "sku": "PST-MER-001",
+  "units": 0,
+  "imgFit": "cover",
+  "slug": "poste-pivotal-merrit-croamdo",
+  "img": "assets/img/products/poste-pivotal-merrit-croamdo-mu5r9g272rn1.jpg?v=1789663203149"
+ },
+ {
+  "n": "Poste Counter Layback Cromado",
+  "brand": "Cult",
+  "cat": "tijas",
+  "spec": "Aleación 6061 - pivote de gran inclinación - 300 mm",
+  "price": 150000,
+  "sku": "PST-CLT-002",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "poste-counter-layback-cromado",
+  "order": 10,
+  "img": "assets/img/products/poste-counter-layback-cromado-mu5r9he5e8uv.jpg?v=1789663204648"
+ },
+ {
   "n": "Poste Siso Bmx 5150 Raw",
   "brand": "Cult",
   "cat": "tijas",
@@ -27,7 +64,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "poste-pivotal-trueno-negro",
-  "order": 30,
+  "order": 40,
   "img": "assets/img/products/poste-pivotal-trueno-negro-mu3bw6ekxt34.jpg?v=1789516457593"
  },
  {
@@ -7087,7 +7124,7 @@ window.ESCENA_PRODUCTS = [
   "price": 50000,
   "sku": "TIJA-NEGRA-01",
   "units": 12,
-  "order": 10,
+  "order": 30,
   "imgs": [
    "assets/img/products/tija-negra-01.jpg?v=1788093948129",
    "assets/img/products/tija-negra-01-2.jpg?v=1788093948129",
@@ -7104,7 +7141,7 @@ window.ESCENA_PRODUCTS = [
   "price": 160000,
   "sku": "TIJA-NEGRA-02",
   "units": 0,
-  "order": 40,
+  "order": 50,
   "imgs": [
    "assets/img/products/tija-negra-02.jpg?v=1788093948129",
    "assets/img/products/tija-negra-02-2.jpg?v=1788093948129",
