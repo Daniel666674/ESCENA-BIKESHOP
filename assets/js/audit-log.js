@@ -5834,5 +5834,21 @@ window.ESCENA_AUDIT = [
    "cult-kit-rodamientos-bb"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:53:15.382Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 1 producto editado, 2 productos eliminados, 3 fotos subidas",
+  "created": [
+   "cajas-de-centro-rantbmx-cromada",
+   "cajas-de-centro-federal-v2-negro"
+  ],
+  "edited": [
+   "odyssey-kit-rodamientos-bb"
+  ],
+  "deleted": [
+   "animal-kit-rodamientos-bb",
+   "kit-rodamientos-bb-generico"
+  ]
  }
 ];
