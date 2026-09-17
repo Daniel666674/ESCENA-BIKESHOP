@@ -31,6 +31,12 @@ window.ESCENA_PRODUCTS = [
   "price": 12000,
   "sku": "CJC-GEN-002",
   "units": 10,
+  "sizes": [
+   {
+    "label": "19mm",
+    "units": 10
+   }
+  ],
   "imgFit": "cover",
   "imgPos": "50% 0%",
   "slug": "rodamiento-mid-19mm",
@@ -44,6 +50,12 @@ window.ESCENA_PRODUCTS = [
   "price": 20000,
   "sku": "CJC-GEN-001",
   "units": 2,
+  "sizes": [
+   {
+    "label": "19mm",
+    "units": 2
+   }
+  ],
   "imgFit": "cover",
   "slug": "rodamiento-espanol-19mm",
   "img": "assets/img/products/rodamiento-espanol-19mm-mu5zbpfddfls.jpg?v=1789676745470"
@@ -56,6 +68,12 @@ window.ESCENA_PRODUCTS = [
   "price": 80000,
   "sku": "CJC-FAT-002",
   "units": 3,
+  "sizes": [
+   {
+    "label": "19mm",
+    "units": 3
+   }
+  ],
   "imgFit": "cover",
   "slug": "cajas-de-centro-fate-negra-19mm",
   "img": "assets/img/products/cajas-de-centro-fate-negra-19mm-mu5zbqpqiazi.jpg?v=1789676747635"
@@ -68,6 +86,12 @@ window.ESCENA_PRODUCTS = [
   "price": 90000,
   "sku": "CJC-FAT-001",
   "units": 1,
+  "sizes": [
+   {
+    "label": "22mm",
+    "units": 1
+   }
+  ],
   "imgFit": "cover",
   "slug": "cajas-de-centro-fate-22mm",
   "img": "assets/img/products/cajas-de-centro-fate-22mm-mu5zbsdwvedt.jpg?v=1789676749372"
@@ -80,6 +104,12 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "CJC-TRU-003",
   "units": 3,
+  "sizes": [
+   {
+    "label": "22mm",
+    "units": 3
+   }
+  ],
   "imgFit": "cover",
   "slug": "caja-de-centro-trueno-tornasol-22mm",
   "img": "assets/img/products/caja-de-centro-trueno-tornasol-22mm-mu5zbtq4wkde.jpg?v=1789676750710"
@@ -92,6 +122,12 @@ window.ESCENA_PRODUCTS = [
   "price": 65000,
   "sku": "CJC-TRU-002",
   "units": 3,
+  "sizes": [
+   {
+    "label": "22mm",
+    "units": 3
+   }
+  ],
   "imgFit": "cover",
   "slug": "cajas-de-centro-trueno-cromada",
   "img": "assets/img/products/cajas-de-centro-trueno-cromada-mu5zburaa65m.jpg?v=1789676752496"
@@ -104,6 +140,12 @@ window.ESCENA_PRODUCTS = [
   "price": 65000,
   "sku": "CJC-TRU-001",
   "units": 3,
+  "sizes": [
+   {
+    "label": "22mm",
+    "units": 3
+   }
+  ],
   "slug": "cajas-de-centro-trueno-negro",
   "img": "assets/img/products/cajas-de-centro-trueno-negro-mu5zbw4wtqoe.jpg?v=1789676754103"
  },
@@ -115,6 +157,12 @@ window.ESCENA_PRODUCTS = [
   "price": 140000,
   "sku": "CJC-SNM-001",
   "units": 1,
+  "sizes": [
+   {
+    "label": "24mm",
+    "units": 1
+   }
+  ],
   "imgFit": "cover",
   "slug": "caja-de-centro-s-m-negro-24mm",
   "img": "assets/img/products/caja-de-centro-s-m-negro-24mm-mu5ugnaikv7d.jpg?v=1789668578139"
@@ -127,6 +175,12 @@ window.ESCENA_PRODUCTS = [
   "price": 140000,
   "sku": "CJC-FND-001",
   "units": 2,
+  "sizes": [
+   {
+    "label": "22mm",
+    "units": 2
+   }
+  ],
   "imgFit": "cover",
   "imgZoom": 132,
   "slug": "cajas-de-centro-fiend-ransom-cromada-22mm",
@@ -141,6 +195,12 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "CJC-RNT-002",
   "units": 3,
+  "sizes": [
+   {
+    "label": "22mm",
+    "units": 3
+   }
+  ],
   "imgFit": "cover",
   "slug": "cajas-de-centro-rantbmx-negra-22mm",
   "order": 50,
@@ -154,6 +214,12 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "CJC-RNT-001",
   "units": 2,
+  "sizes": [
+   {
+    "label": "22mm",
+    "units": 2
+   }
+  ],
   "imgFit": "cover",
   "slug": "cajas-de-centro-rantbmx-cromada",
   "order": 60,
@@ -167,6 +233,12 @@ window.ESCENA_PRODUCTS = [
   "price": 140000,
   "sku": "CJC-FED-001",
   "units": 5,
+  "sizes": [
+   {
+    "label": "19mm / 22mm / 24mm",
+    "units": 5
+   }
+  ],
   "imgFit": "cover",
   "slug": "cajas-de-centro-federal-v2-negro",
   "order": 30,
@@ -180,6 +252,12 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "CJC-DMO-001",
   "units": 1,
+  "sizes": [
+   {
+    "label": "22mm",
+    "units": 1
+   }
+  ],
   "imgFit": "cover",
   "imgZoom": 107,
   "slug": "cajas-de-centro-demolition-bearing-kits",
@@ -6966,6 +7044,12 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "CULT-KIT-RODAMIENTOS-BB",
   "units": 7,
+  "sizes": [
+   {
+    "label": "19mm / 22mm",
+    "units": 7
+   }
+  ],
   "order": 10,
   "imgFit": "cover",
   "img": "assets/img/products/cult-kit-rodamientos-bb-mu5tfqcnvxco.jpg?v=1789666855506"
@@ -6979,6 +7063,12 @@ window.ESCENA_PRODUCTS = [
   "price": 120000,
   "sku": "ODYSSEY-KIT-RODAMIENTOS-BB",
   "units": 3,
+  "sizes": [
+   {
+    "label": "22mm",
+    "units": 3
+   }
+  ],
   "order": 20,
   "imgFit": "cover",
   "img": "assets/img/products/odyssey-kit-rodamientos-bb-mu5tvb2g0pk2.jpg?v=1789667582216"
