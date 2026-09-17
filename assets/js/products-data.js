@@ -1,5 +1,76 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodamiento Español 19mm",
+  "brand": "Generico",
+  "cat": "caja-centro",
+  "spec": "Centro Español - rodamiento Sellado - 19mm",
+  "price": 18000,
+  "sku": "CJC-GEN-001",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "rodamiento-espanol-19mm",
+  "img": "assets/img/products/rodamiento-espanol-19mm-mu5zbpfddfls.jpg?v=1789676745470"
+ },
+ {
+  "n": "Cajas de centro Fate Negra - 19mm",
+  "brand": "Fate",
+  "cat": "caja-centro",
+  "spec": "",
+  "price": 80000,
+  "sku": "CJC-FAT-002",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "cajas-de-centro-fate-negra-19mm",
+  "img": "assets/img/products/cajas-de-centro-fate-negra-19mm-mu5zbqpqiazi.jpg?v=1789676747635"
+ },
+ {
+  "n": "Cajas de Centro Fate 22mm",
+  "brand": "Fate",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 22mm",
+  "price": 90000,
+  "sku": "CJC-FAT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "cajas-de-centro-fate-22mm",
+  "img": "assets/img/products/cajas-de-centro-fate-22mm-mu5zbsdwvedt.jpg?v=1789676749372"
+ },
+ {
+  "n": "Caja de centro Trueno Tornasol 22mm",
+  "brand": "Trueno",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 22mm",
+  "price": 70000,
+  "sku": "CJC-TRU-003",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "caja-de-centro-trueno-tornasol-22mm",
+  "img": "assets/img/products/caja-de-centro-trueno-tornasol-22mm-mu5zbtq4wkde.jpg?v=1789676750710"
+ },
+ {
+  "n": "Cajas de centro Trueno Cromada",
+  "brand": "Trueno",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 22mm",
+  "price": 65000,
+  "sku": "CJC-TRU-002",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "cajas-de-centro-trueno-cromada",
+  "img": "assets/img/products/cajas-de-centro-trueno-cromada-mu5zburaa65m.jpg?v=1789676752496"
+ },
+ {
+  "n": "Cajas de centro Trueno Negro",
+  "brand": "Trueno",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 22mm",
+  "price": 65000,
+  "sku": "CJC-TRU-001",
+  "units": 3,
+  "slug": "cajas-de-centro-trueno-negro",
+  "img": "assets/img/products/cajas-de-centro-trueno-negro-mu5zbw4wtqoe.jpg?v=1789676754103"
+ },
+ {
   "n": "Caja de Centro S&M Negro 24mm",
   "brand": "S&M",
   "cat": "caja-centro",
