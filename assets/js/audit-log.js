@@ -5874,5 +5874,23 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T18:09:47.968Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 6 productos editados, 2 fotos subidas",
+  "created": [
+   "caja-de-centro-s-m-negro-24mm",
+   "cajas-de-centro-fiend-ransom-cromada-22mm"
+  ],
+  "edited": [
+   "cult-kit-rodamientos-bb",
+   "odyssey-kit-rodamientos-bb",
+   "cajas-de-centro-federal-v2-negro",
+   "cajas-de-centro-demolition-bearing-kits",
+   "cajas-de-centro-rantbmx-negra-22mm",
+   "cajas-de-centro-rantbmx-cromada"
+  ],
+  "deleted": []
  }
 ];
