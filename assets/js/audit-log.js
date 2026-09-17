@@ -5864,5 +5864,15 @@ window.ESCENA_AUDIT = [
    "cajas-de-centro-rantbmx-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:58:21.299Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "cajas-de-centro-rantbmx-negra-22mm"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
