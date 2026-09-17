@@ -5917,5 +5917,15 @@ window.ESCENA_AUDIT = [
    "rodamiento-espanol-19mm"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T20:32:38.937Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "rodamiento-mid-19mm"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
