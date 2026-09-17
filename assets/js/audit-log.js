@@ -5937,5 +5937,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T20:54:28.435Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "rodamiento-6902-para-cassette"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
