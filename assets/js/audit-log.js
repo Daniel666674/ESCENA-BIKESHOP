@@ -5822,5 +5822,17 @@ window.ESCENA_AUDIT = [
    "llantas-alienation-prowler-keblar-negro-gris"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:41:05.130Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 2 fotos subidas",
+  "created": [
+   "cajas-de-centro-demolition-bearing-kits"
+  ],
+  "edited": [
+   "cult-kit-rodamientos-bb"
+  ],
+  "deleted": []
  }
 ];
