@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rodamiento 6802 Para Manzana de Cassette",
+  "brand": "Generico",
+  "cat": "manzana-trasera",
+  "spec": "",
+  "price": 8000,
+  "sku": "MZT-GEN-001",
+  "units": 100,
+  "imgFit": "cover",
+  "slug": "rodamiento-6802-para-manzana-de-cassette",
+  "img": "assets/img/products/rodamiento-6802-para-manzana-de-cassette-mu601p7kycgu.jpg?v=1789677958604"
+ },
+ {
   "n": "Rodamiento MID -19mm",
   "brand": "Generico",
   "cat": "caja-centro",
