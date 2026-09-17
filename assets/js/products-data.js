@@ -2027,19 +2027,17 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 160000,
   "sku": "COR-ODY-001",
-  "units": 1,
+  "units": 5,
   "sizes": [
    {
     "label": "20x2.25\"",
     "units": 1,
-    "price": 160000,
-    "cost": 128000
+    "price": 160000
    },
    {
     "label": "20x2.40\"",
-    "units": 0,
-    "price": 160000,
-    "cost": 128000
+    "units": 4,
+    "price": 160000
    }
   ],
   "slug": "llanta-odyssey-broc-negra-2-25-2-40",
