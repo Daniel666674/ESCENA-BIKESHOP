@@ -17,7 +17,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llantas-alienation-prowler-keblar-negro-gris",
   "order": 50,
-  "img": "assets/img/escena-logo.jpg"
+  "img": "assets/img/products/llantas-alienation-prowler-keblar-negro-gris-mu5svurprqi2.jpg?v=1789665928417"
  },
  {
   "n": "Poste Pivotal Merritt Negro",
