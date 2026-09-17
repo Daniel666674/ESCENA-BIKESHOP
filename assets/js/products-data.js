@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de centro Demolition Bearing Kits",
+  "brand": "Demolition",
+  "cat": "caja-centro",
+  "spec": "Centro MID - Eje inferior central - 22 mm - Rodamientos sellados - Espaciadores de brazo de manivela y espaciador de tubo incluidos Peso: 6 oz",
+  "price": 130000,
+  "sku": "CJC-DMO-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgZoom": 107,
+  "slug": "cajas-de-centro-demolition-bearing-kits",
+  "img": "assets/img/products/cajas-de-centro-demolition-bearing-kits-mu5tfouq0m5k.jpg?v=1789666853927"
+ },
+ {
   "n": "Llantas Alienation Prowler Keblar Negro/Gris",
   "brand": "Alienation",
   "cat": "llantas",
@@ -6778,9 +6791,10 @@ window.ESCENA_PRODUCTS = [
   "spec": "Rodamientos sellados MID · Tapas aluminio · 22mm",
   "price": 120000,
   "sku": "CULT-KIT-RODAMIENTOS-BB",
-  "units": 4,
+  "units": 7,
   "order": 1370,
-  "img": "assets/img/products/cult-kit-rodamientos-bb.jpg?v=1788093948129"
+  "imgFit": "cover",
+  "img": "assets/img/products/cult-kit-rodamientos-bb-mu5tfqcnvxco.jpg?v=1789666855506"
  },
  {
   "slug": "odyssey-kit-rodamientos-bb",
