@@ -32,6 +32,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PST-CLT-002",
   "units": 1,
   "imgFit": "cover",
+  "imgZoom": 106,
   "slug": "poste-counter-layback-cromado",
   "order": 10,
   "img": "assets/img/products/poste-counter-layback-cromado-mu5r9he5e8uv.jpg?v=1789663204648"
