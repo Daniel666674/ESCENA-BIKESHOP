@@ -5767,5 +5767,15 @@ window.ESCENA_AUDIT = [
    "llanta-odyssey-broc-negra-2-25-2-40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:04:53.284Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "poste-counter-layback-cromado"
+  ],
+  "deleted": []
  }
 ];
