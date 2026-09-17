@@ -5740,5 +5740,22 @@ window.ESCENA_AUDIT = [
    "poste-pivotal-trueno-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T16:40:12.772Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 4 productos editados, 3 fotos subidas",
+  "created": [
+   "poste-pivotal-merritt-negro",
+   "poste-pivotal-merrit-croamdo",
+   "poste-counter-layback-cromado"
+  ],
+  "edited": [
+   "tija-negra-02",
+   "poste-pivotal-trueno-negro",
+   "poste-siso-bmx-5150-raw",
+   "tija-negra-01"
+  ],
+  "deleted": []
  }
 ];
