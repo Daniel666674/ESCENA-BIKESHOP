@@ -4,7 +4,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Generico",
   "cat": "caja-centro",
   "spec": "Centro Español - rodamiento Sellado - 19mm",
-  "price": 18000,
+  "price": 20000,
   "sku": "CJC-GEN-001",
   "units": 2,
   "imgFit": "cover",
