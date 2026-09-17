@@ -5907,5 +5907,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T20:26:52.641Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "rodamiento-espanol-19mm"
+  ],
+  "deleted": []
  }
 ];
