@@ -5892,5 +5892,20 @@ window.ESCENA_AUDIT = [
    "cajas-de-centro-rantbmx-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T20:26:12.776Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "6 productos nuevos, 6 fotos subidas",
+  "created": [
+   "rodamiento-espanol-19mm",
+   "cajas-de-centro-fate-negra-19mm",
+   "cajas-de-centro-fate-22mm",
+   "caja-de-centro-trueno-tornasol-22mm",
+   "cajas-de-centro-trueno-cromada",
+   "cajas-de-centro-trueno-negro"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
