@@ -1396,10 +1396,77 @@
     }, opts.headers || {});
     return fetch("https://api.github.com/repos/" + GH.owner + "/" + GH.repo + path, opts);
   }
-  function validateToken(tok) {
+  /* Comprueba de verdad que el token sirve para lo que el panel necesita.
+   *
+   * Antes solo miraba que la respuesta fuera 200: un token de solo lectura
+   * entraba sin problema y reventaba al publicar, cuando el trabajo ya estaba
+   * hecho. Ahora exige permiso de escritura (permissions.push) y, además,
+   * detecta el caso que rompe al volver privado el repositorio: un token
+   * clasico con alcance "public_repo" y sin "repo" funciona mientras el repo
+   * sea publico y devuelve 404 en cuanto deja de serlo.
+   *
+   * GitHub expone X-OAuth-Scopes por CORS, asi que el alcance se puede leer
+   * desde el navegador. En los tokens de alcance fino esa cabecera no viene:
+   * ahi mandan los permissions que devuelve la API.
+   */
+  function checkToken(tok) {
     return fetch("https://api.github.com/repos/" + GH.owner + "/" + GH.repo, {
       headers: { "Authorization": "Bearer " + tok, "Accept": "application/vnd.github+json" }
-    }).then(function (r) { return r.ok; }).catch(function () { return false; });
+    }).then(function (r) {
+      var raw = r.headers.get("X-OAuth-Scopes");
+      var scopes = raw ? raw.split(",").map(function (x) { return x.trim(); }).filter(Boolean) : null;
+      if (!r.ok) return { ok: false, status: r.status, scopes: scopes };
+      return r.json().then(function (j) {
+        var puede = !!(j.permissions && j.permissions.push);
+        return {
+          ok: puede,
+          canPush: puede,
+          status: 200,
+          scopes: scopes,
+          repoPrivado: !!j.private,
+          // token clásico que hoy sirve pero morirá al pasar el repo a privado
+          soloPublico: !!(scopes && scopes.indexOf("repo") === -1 && scopes.indexOf("public_repo") !== -1)
+        };
+      });
+    }).catch(function () { return { ok: false, status: 0, scopes: null }; });
+  }
+
+  function mensajeToken(res) {
+    if (res.status === 0) return "No se pudo contactar a GitHub. Revisa la conexión e intenta de nuevo.";
+    if (res.status === 401) return "El token no es válido o fue revocado. Genera uno nuevo.";
+    if (res.status === 404) return "El token no ve este repositorio. Si el repositorio es privado, necesita alcance \"repo\" completo (un token con solo \"public_repo\" no sirve).";
+    if (res.status === 200 && !res.canPush) return "El token entra pero es de solo lectura: no podría publicar. Necesita permiso de escritura (alcance \"repo\", o Contents: Read and write).";
+    return "Token inválido o sin acceso a este repositorio.";
+  }
+
+  // Aviso persistente para el problema que no da error hoy pero sí mañana.
+  function avisarAlcanceToken(res) {
+    if (!res || !res.soloPublico || document.getElementById("tokenScopeWarn")) return;
+    var app = document.getElementById("adminApp");
+    if (!app) return;
+    var bar = document.createElement("div");
+    bar.id = "tokenScopeWarn";
+    bar.setAttribute("style",
+      "background:#fff4e5;border-bottom:2px solid #b26a00;color:#5c3a00;padding:.75rem 1rem;" +
+      "font-size:.83rem;line-height:1.45;display:flex;gap:.75rem;align-items:flex-start;");
+    bar.innerHTML =
+      '<span style="font-size:1.05rem;line-height:1;">&#9888;</span>' +
+      '<span style="flex:1;">Tu token de GitHub tiene alcance <b>public_repo</b>. Funciona porque el ' +
+      'repositorio es público: <b>el día que lo pongas en privado, el panel dejará de publicar.</b> ' +
+      'Genera un token con alcance <b>repo</b> completo antes de hacer el cambio.</span>' +
+      '<button type="button" style="background:none;border:0;color:#5c3a00;font-size:1.1rem;' +
+      'cursor:pointer;line-height:1;padding:0 .2rem;" aria-label="Cerrar">&times;</button>';
+    bar.querySelector("button").addEventListener("click", function () { bar.remove(); });
+    app.insertBefore(bar, app.firstChild);
+  }
+
+  // Envoltorio booleano: los dos puntos de entrada automáticos solo necesitan
+  // saber si sirve o no.
+  function validateToken(tok) {
+    return checkToken(tok).then(function (res) {
+      if (res.ok) avisarAlcanceToken(res);
+      return res.ok;
+    });
   }
   function ghGetFile(path) {
     return ghFetch("/contents/" + path + "?ref=" + GH.branch, { cache: "no-store" }).then(function (r) {
@@ -1595,9 +1662,10 @@
     err.style.display = "none";
     if (!tok) return;
     btn.disabled = true; btn.textContent = "Verificando…";
-    validateToken(tok).then(function (ok) {
+    checkToken(tok).then(function (res) {
       btn.disabled = false; btn.textContent = "Entrar";
-      if (!ok) { err.textContent = "Token inválido o sin acceso a este repositorio."; err.style.display = "block"; return; }
+      if (!res.ok) { err.textContent = mensajeToken(res); err.style.display = "block"; return; }
+      avisarAlcanceToken(res);
       sessionStorage.setItem(TOKEN_KEY, tok);
       if (remember) localStorage.setItem(TOKEN_KEY, tok);
       document.getElementById("tokenInput").value = "";
