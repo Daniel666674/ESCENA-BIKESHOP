@@ -168,7 +168,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/caja-de-centro-s-m-negro-24mm-mu5ugnaikv7d.jpg?v=1789668578139"
  },
  {
-  "n": "Cajas de centro Fiend Ransom Cromada 22mm",
+  "n": "Cajas de centro Fiend Ransom - Cromada",
   "brand": "Fiend",
   "cat": "caja-centro",
   "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 22mm",
@@ -188,7 +188,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cajas-de-centro-fiend-ransom-cromada-22mm-mu5ugorfgqj5.jpg?v=1789668579898"
  },
  {
-  "n": "Cajas de Centro RantBmx Negra 22mm",
+  "n": "Cajas de Centro RantBmx - Negro",
   "brand": "Rant",
   "cat": "caja-centro",
   "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 22mm",
@@ -226,17 +226,25 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cajas-de-centro-rantbmx-cromada-mu5tv8bsb0ge.jpg?v=1789667578863"
  },
  {
-  "n": "Cajas de Centro Federal V2 - Negro - 19mm - 22mm- 24mm",
+  "n": "Cajas de Centro Federal V2 - Negro",
   "brand": "Federal",
   "cat": "caja-centro",
   "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - Medida : 19mm - 22mm- 24mm",
   "price": 140000,
   "sku": "CJC-FED-001",
-  "units": 5,
+  "units": 9,
   "sizes": [
    {
-    "label": "19mm / 22mm / 24mm",
-    "units": 5
+    "label": "19mm",
+    "units": 3
+   },
+   {
+    "label": "22mm",
+    "units": 3
+   },
+   {
+    "label": "24mm",
+    "units": 3
    }
   ],
   "imgFit": "cover",
@@ -245,7 +253,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cajas-de-centro-federal-v2-negro-mu5tv9pr1es4.jpg?v=1789667580616"
  },
  {
-  "n": "Cajas de centro Demolition Bearing Kits Negro 22mm",
+  "n": "Cajas de centro Demolition Bearing Kits - Negro",
   "brand": "Demolition",
   "cat": "caja-centro",
   "spec": "Centro MID - Medida: 22 mm - Rodamientos sellados - Espaciadores de brazo de manivela y espaciador de tubo incluidos Peso: 6 oz",
@@ -7037,17 +7045,21 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "cult-kit-rodamientos-bb",
-  "n": "Cajas de Centro Cult Crew Negra - Medida: 19mm - 22mm",
+  "n": "Cajas de Centro Cult Crew - Negro",
   "brand": "Cult",
   "cat": "caja-centro",
-  "spec": "Rodamientos sellados MID · Tapas aluminio · 22mm - 19mm",
+  "spec": "Rodamientos sellados MID · Tapas aluminio · Medida: 22mm - 19mm",
   "price": 120000,
   "sku": "CULT-KIT-RODAMIENTOS-BB",
-  "units": 7,
+  "units": 10,
   "sizes": [
    {
-    "label": "19mm / 22mm",
-    "units": 7
+    "label": "19mm",
+    "units": 5
+   },
+   {
+    "label": "22mm",
+    "units": 5
    }
   ],
   "order": 10,
@@ -7056,17 +7068,17 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "odyssey-kit-rodamientos-bb",
-  "n": "Cajas de Centro Odyssey Negra 22mm",
+  "n": "Cajas de Centro Odyssey - Negro",
   "brand": "Odyssey",
   "cat": "caja-centro",
   "spec": "Rodamientos sellados MID · Tapas aluminio · Medida: 22mm",
   "price": 120000,
   "sku": "ODYSSEY-KIT-RODAMIENTOS-BB",
-  "units": 3,
+  "units": 2,
   "sizes": [
    {
     "label": "22mm",
-    "units": 3
+    "units": 2
    }
   ],
   "order": 20,
