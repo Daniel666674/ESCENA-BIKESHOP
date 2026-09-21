@@ -5972,5 +5972,21 @@ window.ESCENA_AUDIT = [
    "cajas-de-centro-rantbmx-negra-22mm"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-21T22:10:10.236Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "7 productos editados",
+  "created": [],
+  "edited": [
+   "cajas-de-centro-rantbmx-cromada",
+   "caja-de-centro-s-m-negro-24mm",
+   "cajas-de-centro-fate-22mm",
+   "cajas-de-centro-fate-negra-19mm",
+   "caja-de-centro-trueno-tornasol-22mm",
+   "cajas-de-centro-trueno-cromada",
+   "cajas-de-centro-trueno-negro"
+  ],
+  "deleted": []
  }
 ];
