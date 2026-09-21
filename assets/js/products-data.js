@@ -1,5 +1,32 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cassette Profile Mini Azul",
+  "brand": "Profile",
+  "cat": "manzana-trasera",
+  "spec": "",
+  "price": 1300000,
+  "sku": "MZT-PRO-002",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cassette-profile-mini-azul-mubumpxnmqrn.jpg?v=1790031658615",
+   "assets/img/products/cassette-profile-mini-azul-mubumrg8u3pw.jpg?v=1790031660235"
+  ],
+  "colors": [
+   {
+    "label": "Derecho",
+    "units": 0
+   },
+   {
+    "label": "Izquierdo",
+    "units": 1
+   }
+  ],
+  "slug": "cassette-profile-mini-azul",
+  "order": 70,
+  "img": "assets/img/products/cassette-profile-mini-azul-mubumpxnmqrn.jpg?v=1790031658615"
+ },
+ {
   "n": "Cassette Profile Mini Cromado",
   "brand": "Profile",
   "cat": "manzana-trasera",
@@ -9,8 +36,8 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/cassette-profile-mini-cromado-mubukdn7ufln.jpg?v=1790031549872",
-   "assets/img/products/cassette-profile-mini-cromado-mubukfjkrt2e.jpg?v=1790031551402"
+   "assets/img/products/cassette-profile-mini-cromado-mubukfjkrt2e.jpg?v=1790031551402",
+   "assets/img/products/cassette-profile-mini-cromado-mubukdn7ufln.jpg?v=1790031549872"
   ],
   "colors": [
    {
@@ -23,8 +50,8 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cassette-profile-mini-cromado",
-  "order": 70,
-  "img": "assets/img/products/cassette-profile-mini-cromado-mubukdn7ufln.jpg?v=1790031549872"
+  "order": 80,
+  "img": "assets/img/products/cassette-profile-mini-cromado-mubukfjkrt2e.jpg?v=1790031551402"
  },
  {
   "n": "Freecoaster Alienation Venus Cromado",
@@ -163,7 +190,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "rodamiento-6902-para-cassette",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/rodamiento-6902-para-cassette-mu60chc8p45s.jpg?v=1789678461922"
  },
  {
@@ -176,7 +203,7 @@ window.ESCENA_PRODUCTS = [
   "units": 100,
   "imgFit": "cover",
   "slug": "rodamiento-6802-para-manzana-de-cassette",
-  "order": 150,
+  "order": 160,
   "img": "assets/img/products/rodamiento-6802-para-manzana-de-cassette-mu601p7kycgu.jpg?v=1789677958604"
  },
  {
@@ -6729,7 +6756,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/odyssey-buje-cassette-negro.jpg?v=1788093948129",
    "assets/img/products/odyssey-buje-cassette-negro-2.jpg?v=1788093948129"
   ],
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/odyssey-buje-cassette-negro.jpg?v=1788093948129"
  },
  {
@@ -6741,7 +6768,7 @@ window.ESCENA_PRODUCTS = [
   "price": 550000,
   "sku": "MUTANY-MERCURY-ELITE-LHD-BUJE-NEGRO",
   "units": 5,
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg?v=1788093948129"
  },
  {
@@ -6753,7 +6780,7 @@ window.ESCENA_PRODUCTS = [
   "price": 550000,
   "sku": "MZT-MUT-001",
   "units": 5,
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/buje-cassette-negro-plata-02.jpg?v=1788093948129"
  },
  {
@@ -6765,7 +6792,7 @@ window.ESCENA_PRODUCTS = [
   "price": 380000,
   "sku": "BUJE-CASSETTE-NEGRO",
   "units": 5,
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/buje-cassette-negro.jpg?v=1788093948129"
  },
  {
@@ -7187,7 +7214,7 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "BSD-GUARDA-PINON-NEGRO",
   "units": 6,
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/bsd-guarda-pinon-negro.jpg?v=1788093948129"
  },
  {
@@ -7199,7 +7226,7 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "MUTANY-GUARDA-PINON-NEGRO",
   "units": 2,
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/mutany-guarda-pinon-negro.jpg?v=1788093948129"
  },
  {
