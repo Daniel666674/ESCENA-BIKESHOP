@@ -6553,7 +6553,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Freecoaster · 9T · Aluminio CNC 6061 · Izquierdo · Peso 25.8oz",
   "price": 650000,
   "sku": "BUJE-CASSETTE-NEGRO-PLATA",
-  "units": 1,
+  "units": 0,
   "order": 360,
   "img": "assets/img/products/buje-cassette-negro-plata.jpg?v=1788093948129"
  },
@@ -6565,7 +6565,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cassette · 9T · Cromoly 14mm · Bidireccional · Negro · Aluminio 6061 T6",
   "price": 650000,
   "sku": "ODYSSEY-BUJE-CASSETTE-NEGRO",
-  "units": 1,
+  "units": 0,
   "imgs": [
    "assets/img/products/odyssey-buje-cassette-negro.jpg?v=1788093948129",
    "assets/img/products/odyssey-buje-cassette-negro-2.jpg?v=1788093948129"
