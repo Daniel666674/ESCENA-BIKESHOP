@@ -5988,5 +5988,17 @@ window.ESCENA_AUDIT = [
    "cajas-de-centro-trueno-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-21T22:13:50.816Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "odyssey-buje-cassette-negro",
+   "buje-cassette-negro-plata",
+   "stolen-buje-trasero-cassette-negro"
+  ],
+  "deleted": []
  }
 ];
