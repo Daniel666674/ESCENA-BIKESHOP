@@ -61,7 +61,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/rodamiento-espanol-19mm-mu5zbpfddfls.jpg?v=1789676745470"
  },
  {
-  "n": "Cajas de centro Fate Negra - 19mm",
+  "n": "Cajas de centro Fate Negra",
   "brand": "Fate",
   "cat": "caja-centro",
   "spec": "",
@@ -79,7 +79,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cajas-de-centro-fate-negra-19mm-mu5zbqpqiazi.jpg?v=1789676747635"
  },
  {
-  "n": "Cajas de Centro Fate 22mm",
+  "n": "Cajas de Centro Fate",
   "brand": "Fate",
   "cat": "caja-centro",
   "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 22mm",
@@ -97,7 +97,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cajas-de-centro-fate-22mm-mu5zbsdwvedt.jpg?v=1789676749372"
  },
  {
-  "n": "Caja de centro Trueno Tornasol 22mm",
+  "n": "Caja de centro Trueno Tornasol",
   "brand": "Trueno",
   "cat": "caja-centro",
   "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 22mm",
@@ -150,7 +150,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cajas-de-centro-trueno-negro-mu5zbw4wtqoe.jpg?v=1789676754103"
  },
  {
-  "n": "Caja de Centro S&M Negro 24mm",
+  "n": "Caja de Centro S&M Negro",
   "brand": "S&M",
   "cat": "caja-centro",
   "spec": "Centro MID - Rodamiento Sellado - Incluye buje y arandelas - 24mm",
@@ -207,7 +207,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cajas-de-centro-rantbmx-negra-22mm-mu5u1ymtyyx1.jpg?v=1789667893177"
  },
  {
-  "n": "Cajas de Centro RantBmx Cromada 22mm",
+  "n": "Cajas de Centro RantBmx Cromada",
   "brand": "Rant",
   "cat": "caja-centro",
   "spec": "Centro MID - Rodamiento Sellado - Incluye Buje y Arandelas- Medida: 22mm",
