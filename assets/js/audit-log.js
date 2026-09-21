@@ -5957,5 +5957,20 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-02"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-21T21:23:03.640Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "6 productos editados",
+  "created": [],
+  "edited": [
+   "cult-kit-rodamientos-bb",
+   "cajas-de-centro-fiend-ransom-cromada-22mm",
+   "odyssey-kit-rodamientos-bb",
+   "cajas-de-centro-federal-v2-negro",
+   "cajas-de-centro-demolition-bearing-kits",
+   "cajas-de-centro-rantbmx-negra-22mm"
+  ],
+  "deleted": []
  }
 ];
