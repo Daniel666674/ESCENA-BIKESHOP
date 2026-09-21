@@ -6000,5 +6000,30 @@ window.ESCENA_AUDIT = [
    "stolen-buje-trasero-cassette-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-21T22:30:27.727Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 10 productos editados, 1 producto eliminado, 7 fotos subidas",
+  "created": [
+   "freecoaster-cult-crew",
+   "freecoaster-cult-hybrid-negro",
+   "freecoaster-cult-hybrid-cromado"
+  ],
+  "edited": [
+   "buje-cassette-negro-cromado",
+   "odyssey-buje-cassette-negro",
+   "stolen-buje-trasero-cassette-negro",
+   "mutany-mercury-elite-lhd-buje-negro",
+   "buje-cassette-negro-plata-02",
+   "buje-cassette-negro",
+   "mutany-guarda-pinon-negro",
+   "bsd-guarda-pinon-negro",
+   "rodamiento-6902-para-cassette",
+   "rodamiento-6802-para-manzana-de-cassette"
+  ],
+  "deleted": [
+   "buje-cassette-negro-plata"
+  ]
  }
 ];
