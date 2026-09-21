@@ -6025,5 +6025,26 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "buje-cassette-negro-plata"
   ]
+ },
+ {
+  "ts": "2026-09-21T22:43:19.524Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 9 productos editados, 4 fotos subidas",
+  "created": [
+   "freecoaster-alienation-venus-cromado",
+   "freecoaster-alienation-venus-negro"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro",
+   "buje-cassette-negro",
+   "buje-cassette-negro-plata-02",
+   "mutany-mercury-elite-lhd-buje-negro",
+   "stolen-buje-trasero-cassette-negro"
+  ],
+  "deleted": []
  }
 ];
