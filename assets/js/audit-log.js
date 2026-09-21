@@ -6066,5 +6066,25 @@ window.ESCENA_AUDIT = [
    "stolen-buje-trasero-cassette-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-21T23:01:08.338Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 9 productos editados, 2 fotos subidas",
+  "created": [
+   "cassette-profile-mini-azul"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro",
+   "buje-cassette-negro",
+   "buje-cassette-negro-plata-02",
+   "mutany-mercury-elite-lhd-buje-negro",
+   "cassette-profile-mini-cromado"
+  ],
+  "deleted": []
  }
 ];
