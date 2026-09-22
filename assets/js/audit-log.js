@@ -6086,5 +6086,15 @@ window.ESCENA_AUDIT = [
    "cassette-profile-mini-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-22T18:42:18.746Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "federal-horquilla-cromada"
+  ],
+  "deleted": []
  }
 ];
