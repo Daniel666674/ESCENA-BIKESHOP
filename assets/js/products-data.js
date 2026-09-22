@@ -480,9 +480,9 @@ window.ESCENA_PRODUCTS = [
   "brand": "Merritt",
   "cat": "tijas",
   "spec": "Pivotal forjada en aluminio 6061  - Medidas (25,4 mm x 330 mm) - Peso: 130 g.",
-  "price": 150000,
+  "price": 160000,
   "sku": "PST-MER-002",
-  "units": 0,
+  "units": 1,
   "imgFit": "cover",
   "slug": "poste-pivotal-merritt-negro",
   "img": "assets/img/products/poste-pivotal-merritt-negro-mu5r9aq1u3s2.jpg?v=1789663201423"
@@ -492,9 +492,9 @@ window.ESCENA_PRODUCTS = [
   "brand": "Merritt",
   "cat": "tijas",
   "spec": "Pivotal forjada en aluminio 6061 - largas (25,4 mm x 330 mm) - para mayor versatilidad de altura. Peso: 130 g.",
-  "price": 150000,
+  "price": 160000,
   "sku": "PST-MER-001",
-  "units": 0,
+  "units": 1,
   "imgFit": "cover",
   "slug": "poste-pivotal-merrit-croamdo",
   "img": "assets/img/products/poste-pivotal-merrit-croamdo-mu5r9g272rn1.jpg?v=1789663203149"
