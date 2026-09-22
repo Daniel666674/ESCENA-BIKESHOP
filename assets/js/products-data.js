@@ -1,5 +1,28 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tenedor Fiend Process V2 - Negro",
+  "brand": "Fiend",
+  "cat": "horquillas",
+  "spec": "tubo de dirección mecanizado - direcciones integradas 45×45  un perno de compresión de aleación serie 7000 - compatible con ejes de 3/8″ (10 mm). Peso: 34,9 oz.",
+  "price": 730000,
+  "sku": "TEN-FND-001",
+  "units": 0,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mud1v6z8mc2u.jpg?v=1790104277816",
+   "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mud1v8s8h21k.jpg?v=1790104279406",
+   "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mud1va0eouwx.jpg?v=1790104280963"
+  ],
+  "sizes": [
+   {
+    "label": "20mm",
+    "units": 0
+   }
+  ],
+  "slug": "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz",
+  "img": "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mud1v6z8mc2u.jpg?v=1790104277816"
+ },
+ {
   "n": "Cassette Profile Mini Azul",
   "brand": "Profile",
   "cat": "manzana-trasera",
