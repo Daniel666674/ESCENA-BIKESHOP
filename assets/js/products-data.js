@@ -6662,9 +6662,9 @@ window.ESCENA_PRODUCTS = [
   "brand": "Federal",
   "cat": "horquillas",
   "spec": "Cromoly · 22mm offset · Cromado · 4130 tratado al calor",
-  "price": 690000,
+  "price": 660000,
   "sku": "FEDERAL-HORQUILLA-CROMADA",
-  "units": 1,
+  "units": 7,
   "imgs": [
    "assets/img/products/federal-horquilla-cromada.jpg?v=1788093948129",
    "assets/img/products/federal-horquilla-cromada-2.jpg?v=1788093948129"
@@ -6672,11 +6672,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1
+    "units": 7
    },
    {
     "label": "Cromado",
-    "units": 1
+    "units": 0
    }
   ],
   "imgColorMap": {
@@ -6691,15 +6691,11 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "15mm",
-    "units": 0,
-    "price": 690000,
-    "cost": 552000
+    "units": 3
    },
    {
     "label": "22mm",
-    "units": 1,
-    "price": 690000,
-    "cost": 552000
+    "units": 4
    }
   ],
   "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1788093948129"
