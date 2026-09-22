@@ -6096,5 +6096,16 @@ window.ESCENA_AUDIT = [
    "federal-horquilla-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-22T18:55:33.641Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "poste-pivotal-merritt-negro",
+   "poste-pivotal-merrit-croamdo"
+  ],
+  "deleted": []
  }
 ];
