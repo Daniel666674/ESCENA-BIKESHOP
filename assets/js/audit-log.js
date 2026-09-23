@@ -6251,5 +6251,18 @@ window.ESCENA_AUDIT = [
    "timon-cult-crew-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:34:16.087Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "kit-hardware-bielas-negro",
+   "bielas-optimus-medusa-derecha-8t-cromada",
+   "bielas-stranger-level-8t-negra",
+   "bielas-optimus-medusa-derecha-8t"
+  ],
+  "deleted": []
  }
 ];
