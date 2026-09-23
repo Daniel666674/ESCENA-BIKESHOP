@@ -201,7 +201,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PLT-FND-002",
   "units": 2,
   "imgFit": "cover",
-  "imgZoom": 123,
+  "imgZoom": 144,
   "sizes": [
    {
     "label": "28T",
