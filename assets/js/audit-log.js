@@ -6411,5 +6411,28 @@ window.ESCENA_AUDIT = [
    "odyssey-pinon-28t-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T22:24:38.992Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 8 productos editados, 1 producto eliminado, 4 fotos subidas",
+  "created": [
+   "cassette-trueno-v2-negro",
+   "cassette-trueno-v2-cromado",
+   "cassette-trueno-v2-tornasol"
+  ],
+  "edited": [
+   "cassette-profile-mini-cromado",
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro",
+   "cassette-profile-mini-azul",
+   "stolen-buje-trasero-cassette-negro"
+  ],
+  "deleted": [
+   "buje-cassette-negro"
+  ]
  }
 ];
