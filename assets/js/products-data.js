@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tenedor Fiction Shank - Cromado",
+  "brand": "Fiction",
+  "cat": "horquillas",
+  "spec": "",
+  "price": 410000,
+  "sku": "TEN-FIC-002",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "22mm",
+    "units": 1
+   }
+  ],
+  "slug": "tenedor-fiction-shank-cromado",
+  "img": "assets/img/products/tenedor-fiction-shank-cromado-mudzi4jibigs.jpg?v=1790160774574"
+ },
+ {
   "n": "Tenedor Fiend Process V2 - Cromado",
   "brand": "Fiend",
   "cat": "horquillas",
