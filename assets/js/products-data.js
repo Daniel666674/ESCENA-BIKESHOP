@@ -4153,11 +4153,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Cromolio Eje 19mm Incluye Caja Mid",
   "price": 160000,
   "sku": "BIE-OPT-001",
-  "units": 5,
+  "units": 0,
   "sizes": [
    {
     "label": "175mm",
-    "units": 5
+    "units": 0
    }
   ],
   "slug": "bielas-optimus-medusa-derecha-8t-cromada",
@@ -4179,7 +4179,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 100,
+  "order": 90,
   "img": "assets/img/products/bielas-optimus-medusa-derecha-8t.jpg?v=1788093948129"
  },
  {
@@ -4197,7 +4197,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "bielas-stranger-level-8t-negra",
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/bielas-stranger-level-8t-negra.jpg?v=1788093948129"
  },
  {
