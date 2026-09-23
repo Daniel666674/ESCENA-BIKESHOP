@@ -1,5 +1,68 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cassette Trueno V2 Negro",
+  "brand": "Trueno",
+  "cat": "manzana-trasera",
+  "spec": "Material 6061-T6 Eje full cr-mo - Tratado al calor Drive 9T - 36 Radios",
+  "price": 380000,
+  "sku": "MZT-TRU-003",
+  "units": 4,
+  "imgFit": "cover",
+  "colors": [
+   {
+    "label": "Derecho",
+    "units": 2,
+    "price": 380000
+   },
+   {
+    "label": "Izquierdo",
+    "units": 2,
+    "price": 380000
+   }
+  ],
+  "slug": "cassette-trueno-v2-negro",
+  "order": 130,
+  "img": "assets/img/products/cassette-trueno-v2-negro-mueo77pzgdes.jpg?v=1790202256021"
+ },
+ {
+  "n": "Cassette Trueno V2 Cromado",
+  "brand": "Trueno",
+  "cat": "manzana-trasera",
+  "spec": "Material 6061-T6 Eje full cr-mo - Tratado al calor Drive 9T - 36 Radios",
+  "price": 380000,
+  "sku": "MZT-TRU-002",
+  "units": 2,
+  "imgFit": "cover",
+  "colors": [
+   {
+    "label": "Derecho",
+    "units": 0,
+    "price": 380000
+   },
+   {
+    "label": "Izquierdo",
+    "units": 2,
+    "price": 380000
+   }
+  ],
+  "slug": "cassette-trueno-v2-cromado",
+  "order": 120,
+  "img": "assets/img/products/cassette-trueno-v2-cromado-mueo7991049q.jpg?v=1790202258483"
+ },
+ {
+  "n": "Cassette Trueno V2 Tornasol",
+  "brand": "Trueno",
+  "cat": "manzana-trasera",
+  "spec": "Material 6061-T6 Eje full cr-mo - Tratado al calor Drive 9T - 36 Radios",
+  "price": 410000,
+  "sku": "MZT-TRU-001",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "cassette-trueno-v2-tornasol",
+  "order": 110,
+  "img": "assets/img/products/cassette-trueno-v2-tornasol-mueo7b5fepfv.jpg?v=1790202260029"
+ },
+ {
   "n": "Plato Fiend Omicron Guardia - 28T",
   "brand": "Fiend",
   "cat": "pinones",
@@ -246,7 +309,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/cassette-profile-mini-cromado-mubukfjkrt2e.jpg?v=1790031551402",
+   "assets/img/products/cassette-profile-mini-cromado-mueo7cce53jp.jpg?v=1790202261622",
    "assets/img/products/cassette-profile-mini-cromado-mubukdn7ufln.jpg?v=1790031549872"
   ],
   "colors": [
@@ -260,8 +323,8 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cassette-profile-mini-cromado",
-  "order": 80,
-  "img": "assets/img/products/cassette-profile-mini-cromado-mubukfjkrt2e.jpg?v=1790031551402"
+  "order": 60,
+  "img": "assets/img/products/cassette-profile-mini-cromado-mueo7cce53jp.jpg?v=1790202261622"
  },
  {
   "n": "Freecoaster Alienation Venus Cromado",
@@ -400,7 +463,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "rodamiento-6902-para-cassette",
-  "order": 150,
+  "order": 170,
   "img": "assets/img/products/rodamiento-6902-para-cassette-mu60chc8p45s.jpg?v=1789678461922"
  },
  {
@@ -413,7 +476,7 @@ window.ESCENA_PRODUCTS = [
   "units": 100,
   "imgFit": "cover",
   "slug": "rodamiento-6802-para-manzana-de-cassette",
-  "order": 160,
+  "order": 180,
   "img": "assets/img/products/rodamiento-6802-para-manzana-de-cassette-mu601p7kycgu.jpg?v=1789677958604"
  },
  {
@@ -6858,7 +6921,7 @@ window.ESCENA_PRODUCTS = [
   "price": 600000,
   "sku": "STOLEN-BUJE-TRASERO-CASSETTE-NEGRO",
   "units": 1,
-  "order": 60,
+  "order": 80,
   "img": "assets/img/products/stolen-buje-trasero-cassette-negro.jpg?v=1788093948129"
  },
  {
@@ -6901,7 +6964,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/odyssey-buje-cassette-negro.jpg?v=1788093948129",
    "assets/img/products/odyssey-buje-cassette-negro-2.jpg?v=1788093948129"
   ],
-  "order": 120,
+  "order": 140,
   "img": "assets/img/products/odyssey-buje-cassette-negro.jpg?v=1788093948129"
  },
  {
@@ -6927,18 +6990,6 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "order": 100,
   "img": "assets/img/products/buje-cassette-negro-plata-02.jpg?v=1788093948129"
- },
- {
-  "slug": "buje-cassette-negro",
-  "n": "Cassette Trueno V2 Negro",
-  "brand": "Trueno",
-  "cat": "manzana-trasera",
-  "spec": "Cassette · 9T · Negro",
-  "price": 380000,
-  "sku": "BUJE-CASSETTE-NEGRO",
-  "units": 5,
-  "order": 110,
-  "img": "assets/img/products/buje-cassette-negro.jpg?v=1788093948129"
  },
  {
   "slug": "buje-delantero-negro",
@@ -7359,7 +7410,7 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "BSD-GUARDA-PINON-NEGRO",
   "units": 6,
-  "order": 140,
+  "order": 160,
   "img": "assets/img/products/bsd-guarda-pinon-negro.jpg?v=1788093948129"
  },
  {
@@ -7371,7 +7422,7 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "MUTANY-GUARDA-PINON-NEGRO",
   "units": 2,
-  "order": 130,
+  "order": 150,
   "img": "assets/img/products/mutany-guarda-pinon-negro.jpg?v=1788093948129"
  },
  {
