@@ -6117,5 +6117,17 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T01:27:25.560Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 3 fotos subidas",
+  "created": [
+   "tenedor-fiend-process-v2-cromado"
+  ],
+  "edited": [
+   "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz"
+  ],
+  "deleted": []
  }
 ];
