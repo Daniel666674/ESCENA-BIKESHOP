@@ -1,5 +1,28 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Merritt Slaughter 4pc - Negro",
+  "brand": "Merritt",
+  "cat": "manubrios",
+  "spec": "Material  cromolio 4130 de sección variable y tratados térmicamente después de la soldadura - Con una inclinación hacia arriba de 2° y hacia atrás de 12°, tienen 74 cm de ancho y están disponibles en alturas de 23 cm y 23,5 cm. Peso: 962 g .",
+  "price": 390000,
+  "sku": "TMN-MER-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/timon-merritt-slaughter-4pc-negro-mue04z0fal11.jpg?v=1790161840348",
+   "assets/img/products/timon-merritt-slaughter-4pc-negro-mue050bgl5v4.jpg?v=1790161841976",
+   "assets/img/products/timon-merritt-slaughter-4pc-negro-mue051ko4gam.jpg?v=1790161843389"
+  ],
+  "sizes": [
+   {
+    "label": "9.25\"",
+    "units": 1
+   }
+  ],
+  "slug": "timon-merritt-slaughter-4pc-negro",
+  "img": "assets/img/products/timon-merritt-slaughter-4pc-negro-mue04z0fal11.jpg?v=1790161840348"
+ },
+ {
   "n": "Tenedor Fiction Shank - Cromado",
   "brand": "Fiction",
   "cat": "horquillas",
@@ -8150,15 +8173,14 @@ window.ESCENA_PRODUCTS = [
   "spec": "Medidas 30″ de ancho, 12° inclinación hacia atrás , 2° inclinación hacia arriba. Peso: 850gr",
   "price": 380000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-02",
-  "units": 4,
+  "units": 0,
   "sizes": [
    {
     "label": "9.35\"",
-    "units": 4
+    "units": 0
    }
   ],
   "imgs": [
-   "assets/img/products/manubrio-cromoly-negro-02-3.jpg?v=1788093948129",
    "assets/img/products/manubrio-cromoly-negro-02-mt8wj8u60l6q.jpg?v=1788093948129",
    "assets/img/products/manubrio-cromoly-negro-02-2.jpg?v=1788093948129",
    "assets/img/products/manubrio-cromoly-negro-02-4.jpg?v=1788093948129"
@@ -8166,24 +8188,12 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 2
-   },
-   {
-    "label": "Cromado",
-    "units": 2
+    "units": 0
    }
   ],
-  "imgColorMap": {
-   "Cromado": [
-    0,
-    3
-   ],
-   "Negro": [
-    2
-   ]
-  },
   "order": 20,
-  "img": "assets/img/products/manubrio-cromoly-negro-02-3.jpg?v=1788093948129"
+  "imgFit": "cover",
+  "img": "assets/img/products/manubrio-cromoly-negro-02-mt8wj8u60l6q.jpg?v=1788093948129"
  },
  {
   "slug": "manubrio-cromoly-negro-03",
