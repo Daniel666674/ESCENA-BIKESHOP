@@ -6338,5 +6338,15 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-02"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:53:35.096Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "tenedor-fiction-shank-cromado"
+  ],
+  "deleted": []
  }
 ];
