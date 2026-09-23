@@ -6368,5 +6368,15 @@ window.ESCENA_AUDIT = [
    "manzana-federal-motion"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T12:03:31.008Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "manzana-delantera-federal-motion-negra"
+  ],
+  "deleted": []
  }
 ];
