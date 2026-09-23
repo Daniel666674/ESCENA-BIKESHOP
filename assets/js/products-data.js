@@ -1,5 +1,60 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cassette Colony Wasp Cromado",
+  "brand": "Colony",
+  "cat": "manzana-trasera",
+  "spec": "Material aluminio 6061-T6 - eje hembra con un eje de 14 mm - El buje trasero Wasp también incorpora un eje CRMO endurecido de 10 mm con tornillos hexagonales de 17 mm y rodamientos sellados de alto rendimiento,",
+  "price": 760000,
+  "sku": "MZT-CLN-002",
+  "units": 0,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cassette-colony-wasp-cromado-mueovybr3fz1.jpg?v=1790203411093",
+   "assets/img/products/cassette-colony-wasp-cromado-mueow0idbtia.jpg?v=1790203412985"
+  ],
+  "colors": [
+   {
+    "label": "Derecho",
+    "units": 0
+   },
+   {
+    "label": "Izquierdo",
+    "units": 0
+   }
+  ],
+  "slug": "cassette-colony-wasp-cromado",
+  "order": 150,
+  "img": "assets/img/products/cassette-colony-wasp-cromado-mueovybr3fz1.jpg?v=1790203411093"
+ },
+ {
+  "n": "Cassette Colony Wasp Negro",
+  "brand": "Colony",
+  "cat": "manzana-trasera",
+  "spec": "Material aluminio 6061-T6 - eje hembra con un eje de 14 mm - El buje trasero Wasp también incorpora un eje CRMO endurecido de 10 mm con tornillos hexagonales de 17 mm y rodamientos sellados de alto rendimiento,",
+  "price": 760000,
+  "sku": "MZT-CLN-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cassette-colony-wasp-negro-mueow1yx56qa.jpg?v=1790203414984",
+   "assets/img/products/cassette-colony-wasp-negro-mueow3igmmn1.jpg?v=1790203416734",
+   "assets/img/products/cassette-colony-wasp-negro-mueow4v3c2on.jpg?v=1790203418358"
+  ],
+  "colors": [
+   {
+    "label": "Derecho",
+    "units": 1
+   },
+   {
+    "label": "Izquierdo",
+    "units": 0
+   }
+  ],
+  "slug": "cassette-colony-wasp-negro",
+  "order": 140,
+  "img": "assets/img/products/cassette-colony-wasp-negro-mueow1yx56qa.jpg?v=1790203414984"
+ },
+ {
   "n": "Cassette Trueno V2 Negro",
   "brand": "Trueno",
   "cat": "manzana-trasera",
@@ -350,7 +405,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "freecoaster-alienation-venus-cromado",
-  "order": 50,
+  "order": 40,
   "img": "assets/img/products/freecoaster-alienation-venus-cromado-mubtzqb9orr1.jpg?v=1790030585778"
  },
  {
@@ -377,7 +432,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "freecoaster-alienation-venus-negro",
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/freecoaster-alienation-venus-negro-mubtzsosuo79.jpg?v=1790030588792"
  },
  {
@@ -463,7 +518,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "rodamiento-6902-para-cassette",
-  "order": 170,
+  "order": 190,
   "img": "assets/img/products/rodamiento-6902-para-cassette-mu60chc8p45s.jpg?v=1789678461922"
  },
  {
@@ -476,7 +531,7 @@ window.ESCENA_PRODUCTS = [
   "units": 100,
   "imgFit": "cover",
   "slug": "rodamiento-6802-para-manzana-de-cassette",
-  "order": 180,
+  "order": 200,
   "img": "assets/img/products/rodamiento-6802-para-manzana-de-cassette-mu601p7kycgu.jpg?v=1789677958604"
  },
  {
@@ -6964,7 +7019,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/odyssey-buje-cassette-negro.jpg?v=1788093948129",
    "assets/img/products/odyssey-buje-cassette-negro-2.jpg?v=1788093948129"
   ],
-  "order": 140,
+  "order": 160,
   "img": "assets/img/products/odyssey-buje-cassette-negro.jpg?v=1788093948129"
  },
  {
@@ -7410,7 +7465,7 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "BSD-GUARDA-PINON-NEGRO",
   "units": 6,
-  "order": 160,
+  "order": 180,
   "img": "assets/img/products/bsd-guarda-pinon-negro.jpg?v=1788093948129"
  },
  {
@@ -7422,7 +7477,7 @@ window.ESCENA_PRODUCTS = [
   "price": 95000,
   "sku": "MUTANY-GUARDA-PINON-NEGRO",
   "units": 2,
-  "order": 150,
+  "order": 170,
   "img": "assets/img/products/mutany-guarda-pinon-negro.jpg?v=1788093948129"
  },
  {
