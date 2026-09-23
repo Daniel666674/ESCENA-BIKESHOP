@@ -11,6 +11,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/timon-cult-crew-cromado-mue0nmd4gtju.jpg?v=1790162710471",
    "assets/img/products/timon-cult-crew-cromado-mue0nnpjsy8t.jpg?v=1790162712063"
   ],
+  "imgZoom": 104,
   "sizes": [
    {
     "label": "9.35\"",
