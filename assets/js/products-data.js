@@ -3,7 +3,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Manzana Delantera Federal Motion - Negra",
   "brand": "Federal",
   "cat": "manzana-delantera",
-  "spec": "",
+  "spec": "Delantero • Cromado • Carcasa Aluminio 6061-T6 • Eje Chromoly Hembra • Rodamientos Sellados 6002-2RS • Pernos Hembra 10mm • 36H",
   "price": 300000,
   "sku": "MZD-FED-002",
   "units": 2,
