@@ -1,5 +1,45 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin Federal Aero XL",
+  "brand": "Federal",
+  "cat": "rines",
+  "spec": "",
+  "price": 350000,
+  "sku": "RIN-FED-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/rin-federal-aero-xl-mueq7co3vnu9.jpg?v=1790205621672",
+   "assets/img/products/rin-federal-aero-xl-mueq7e7c3juz.jpg?v=1790205623705"
+  ],
+  "slug": "rin-federal-aero-xl",
+  "img": "assets/img/products/rin-federal-aero-xl-mueq7co3vnu9.jpg?v=1790205621672"
+ },
+ {
+  "n": "Rin Alienation Vandal Negro",
+  "brand": "Alienation",
+  "cat": "rines",
+  "spec": "",
+  "price": 540000,
+  "sku": "RIN-ALI-002",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "rin-alienation-vandal-negro",
+  "img": "assets/img/products/rin-alienation-vandal-negro-mueq7frte78h.jpg?v=1790205625618"
+ },
+ {
+  "n": "Rin Alienation Skylark Negro",
+  "brand": "Alienation",
+  "cat": "rines",
+  "spec": "",
+  "price": 380000,
+  "sku": "RIN-ALI-001",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "rin-alienation-skylark-negro",
+  "img": "assets/img/products/rin-alienation-skylark-negro-mueq7h8y350n.jpg?v=1790205627444"
+ },
+ {
   "n": "Cassette Cut Crew Bidireccional Negro",
   "brand": "Cult",
   "cat": "manzana-trasera",
@@ -6968,18 +7008,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cult-bielas-negro.jpg?v=1788093948129"
  },
  {
-  "slug": "eclat-trippin-rin-negro",
-  "n": "Éclat Trippin Rin",
-  "brand": "Éclat",
-  "cat": "rines",
-  "spec": "20\" · Doble pared · 36H · Negro",
-  "price": 240000,
-  "sku": "ECLAT-TRIPPIN-RIN-NEGRO",
-  "units": 12,
-  "order": 900,
-  "img": "assets/img/products/eclat-trippin-rin-negro.jpg?v=1788093948129"
- },
- {
   "slug": "cult-sillin-cuadros",
   "n": "Silla Pivotal Cult Ajedrez",
   "brand": "Cult",
@@ -8278,34 +8306,6 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "order": 750,
   "img": "assets/img/products/aro_demolition_zero_plus_negro.jpg?v=1788093948129"
- },
- {
-  "slug": "aros_eclat_bondi_cromados",
-  "n": "Aro Éclat Bondi Cromado",
-  "brand": "Éclat",
-  "cat": "rines",
-  "spec": "Cromado",
-  "price": 390000,
-  "sku": "AROS_ECLAT_BONDI_CROMADOS",
-  "units": 12,
-  "order": 440,
-  "imgs": [
-   "assets/img/products/aros_eclat_bondi_cromados.jpg?v=1788093948129",
-   "assets/img/products/aros_eclat_bondi_cromados.jpg?v=1788093948129"
-  ],
-  "img": "assets/img/products/aros_eclat_bondi_cromados.jpg?v=1788093948129"
- },
- {
-  "slug": "aros_fate_negro",
-  "n": "Aro Fate Negro",
-  "brand": "Fate",
-  "cat": "rines",
-  "spec": "20\" · Doble pared · Negro",
-  "price": 210000,
-  "sku": "AROS_FATE_NEGRO",
-  "units": 12,
-  "order": 1000,
-  "img": "assets/img/products/aros_fate_negro.jpeg?v=1788093948129"
  },
  {
   "slug": "aros_stolen_chamber_cromados",
