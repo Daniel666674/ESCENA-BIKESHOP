@@ -6378,5 +6378,38 @@ window.ESCENA_AUDIT = [
    "manzana-delantera-federal-motion-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T12:18:36.466Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 22 productos editados, 1 foto subida",
+  "created": [
+   "plato-fiend-omicron-guardia-28t"
+  ],
+  "edited": [
+   "plato-fiend-reynols-purpura",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "federal-pinon-gris",
+   "cult-pinon-negro",
+   "plato-fate-guardia-negro-28t",
+   "pinon-snowflake-plata",
+   "plato-strangergram-guardia-negro-28t",
+   "plato-volume-guardia-28t",
+   "plato-s-m-goring-28t",
+   "plato-gw-corona-negro",
+   "plato-gw-corona-negro-2",
+   "plato-gw-kl215-negro",
+   "plato-odyssey-big-boyd-28t",
+   "plato-trueno-exotic-tornasol",
+   "plato-xposure-infinity-25t",
+   "plato-federal-logo-guard-28t",
+   "plato-trueno-exotic",
+   "plato-sunday-sabretooth-v2-negro-28t",
+   "fiend-pinon-25t-negro",
+   "plato-fitbikeco-key-guard-v2",
+   "odyssey-pinon-28t-negro"
+  ],
+  "deleted": []
  }
 ];
