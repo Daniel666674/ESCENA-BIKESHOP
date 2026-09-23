@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Delantera Federal Motion - Negra",
+  "brand": "Federal",
+  "cat": "manzana-delantera",
+  "spec": "",
+  "price": 300000,
+  "sku": "MZD-FED-002",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/manzana-delantera-federal-motion-negra-mue2057b8rc5.jpg?v=1790164974795",
+   "assets/img/products/manzana-delantera-federal-motion-negra-mue206vf5at6.jpg?v=1790164976211"
+  ],
+  "slug": "manzana-delantera-federal-motion-negra",
+  "order": 70,
+  "img": "assets/img/products/manzana-delantera-federal-motion-negra-mue2057b8rc5.jpg?v=1790164974795"
+ },
+ {
   "n": "Timon Fiend Reynolds - Cromado",
   "brand": "Fiend",
   "cat": "manubrios",
@@ -1183,7 +1200,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "manzana-alienation-iluminiati-cromada",
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/manzana-alienation-iluminiati-cromada-mtxhnr66oj40.jpg?v=1789163345261"
  },
  {
@@ -2750,7 +2767,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "manzana-delantera-ontrail-nemesis-2",
-  "order": 130,
+  "order": 140,
   "imgColorMap": {
    "Verde": [
     0
@@ -2771,7 +2788,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/manzana-delantera-ontrail-nemesis-mt93v0616r69.jpg?v=1788093948129"
   ],
   "slug": "manzana-delantera-ontrail-nemesis",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/manzana-delantera-ontrail-nemesis-mt93uz21jwkf.jpg?v=1788093948129"
  },
  {
@@ -2787,7 +2804,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/manzana-delantera-alienation-venus-mt93j518pdte.jpg?v=1788093948129"
   ],
   "slug": "manzana-delantera-alienation-venus",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/manzana-delantera-alienation-venus-mt93j3fo43r2.jpg?v=1788093948129"
  },
  {
@@ -2799,7 +2816,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-PRM-002",
   "units": 1,
   "slug": "manzana-delantera-primo-balance",
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/manzana-delantera-primo-balance-mt93b5l7in31.jpg?v=1788093948129"
  },
  {
@@ -2837,7 +2854,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/manzana-delantera-stranger-ballast-mt938rrdl4mp.jpg?v=1788093948129"
  },
  {
@@ -2875,7 +2892,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "manzana-delantera-alienation-illunimati",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/manzana-delantera-alienation-illunimati-mt91423bar53.jpg?v=1788093948129"
  },
  {
@@ -3241,7 +3258,7 @@ window.ESCENA_PRODUCTS = [
     3
    ]
   },
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/manzana-optimus-gold-mt4mqe06ty10.jpg?v=1788093948129"
  },
  {
@@ -3257,13 +3274,13 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/manzana-primo-n4fl-mt91bhy75izw.jpg?v=1788093948129"
  },
  {
-  "n": "Manzana Delantera Federal Motion",
+  "n": "Manzana Delantera Federal Motion - Cromada",
   "brand": "Federal",
   "cat": "manzana-delantera",
   "spec": "Delantero • Cromado • Carcasa Aluminio 6061-T6 • Eje Chromoly Hembra • Rodamientos Sellados 6002-2RS • Pernos Hembra 10mm • 36H",
   "price": 300000,
   "sku": "MZD-FED-001",
-  "units": 2,
+  "units": 1,
   "imgPos": "50% 50%",
   "slug": "manzana-federal-motion",
   "imgs": [
@@ -3273,25 +3290,9 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Cromada",
-    "units": 2,
-    "price": 300000,
-    "cost": 240000
-   },
-   {
-    "label": "Negra",
-    "units": 0,
-    "price": 300000,
-    "cost": 240000
+    "units": 1
    }
   ],
-  "imgColorMap": {
-   "Cromada": [
-    0
-   ],
-   "Negra": [
-    1
-   ]
-  },
   "order": 60,
   "img": "assets/img/products/manzana-federal-motion-mt8ym7zu9wwc.jpg?v=1788093948129"
  },
