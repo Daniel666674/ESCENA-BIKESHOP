@@ -68,6 +68,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/tenedor-fiction-shank-cromado-mudzsobyzhqs.jpg?v=1790161266299"
   ],
   "imgPos": "50% 100%",
+  "order": 70,
   "img": "assets/img/products/tenedor-fiction-shank-cromado-mudzi4jibigs.jpg?v=1790160774574"
  },
  {
@@ -92,6 +93,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "tenedor-fiend-process-v2-cromado",
   "imgZoom": 121,
+  "order": 10,
   "img": "assets/img/products/tenedor-fiend-process-v2-cromado-mudz5hyongki.jpg?v=1790160185256"
  },
  {
@@ -115,6 +117,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz",
+  "order": 20,
   "img": "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mud1v6z8mc2u.jpg?v=1790104277816"
  },
  {
@@ -4256,6 +4259,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 50,
   "img": "assets/img/products/tenedor-colony-sweet-thoot.jpg?v=1788093948129"
  },
  {
@@ -4279,6 +4283,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
+  "order": 40,
   "img": "assets/img/products/tall-order-ramp.jpg?v=1788093948129"
  },
  {
@@ -4296,7 +4301,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tenedor-fiction-shank",
-  "order": 420,
+  "order": 60,
   "sizes": [
    {
     "label": "26mm",
@@ -5841,7 +5846,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 1520,
+  "order": 80,
   "sizes": [
    {
     "label": "Única",
@@ -6589,7 +6594,7 @@ window.ESCENA_PRODUCTS = [
   "price": 830000,
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 1,
-  "order": 300,
+  "order": 0,
   "imgs": [
    "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1788093948129",
    "assets/img/products/tenedor-cult-sect-v4-cromado-18mm-2.jpg?v=1788093948129"
@@ -6779,7 +6784,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 330,
+  "order": 30,
   "sizes": [
    {
     "label": "15mm",
