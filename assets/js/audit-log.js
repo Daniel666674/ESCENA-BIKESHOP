@@ -6508,5 +6508,17 @@ window.ESCENA_AUDIT = [
    "aros_fate_negro",
    "aros_eclat_bondi_cromados"
   ]
+ },
+ {
+  "ts": "2026-09-23T23:42:36.323Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 1 foto subida",
+  "created": [
+   "rin-demolition-zero-plus-negro"
+  ],
+  "edited": [],
+  "deleted": [
+   "aro_demolition_zero_plus_negro"
+  ]
  }
 ];
