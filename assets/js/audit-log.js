@@ -6434,5 +6434,24 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "buje-cassette-negro"
   ]
+ },
+ {
+  "ts": "2026-09-23T22:43:57.247Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 7 productos editados, 5 fotos subidas",
+  "created": [
+   "cassette-colony-wasp-cromado",
+   "cassette-colony-wasp-negro"
+  ],
+  "edited": [
+   "freecoaster-alienation-venus-negro",
+   "freecoaster-alienation-venus-cromado",
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro"
+  ],
+  "deleted": []
  }
 ];
