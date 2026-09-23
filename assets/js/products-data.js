@@ -14,6 +14,14 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tenedor-fiction-shank-cromado",
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/tenedor-fiction-shank-cromado-mudzi4jibigs.jpg?v=1790160774574",
+   "assets/img/products/tenedor-fiction-shank-cromado-mudzsle018uh.jpg?v=1790161262926",
+   "assets/img/products/tenedor-fiction-shank-cromado-mudzsmryexnn.jpg?v=1790161264942",
+   "assets/img/products/tenedor-fiction-shank-cromado-mudzsobyzhqs.jpg?v=1790161266299"
+  ],
+  "imgPos": "50% 100%",
   "img": "assets/img/products/tenedor-fiction-shank-cromado-mudzi4jibigs.jpg?v=1790160774574"
  },
  {
@@ -4242,10 +4250,10 @@ window.ESCENA_PRODUCTS = [
   "n": "Tenedor Fiction Shank",
   "brand": "Fiction",
   "cat": "horquillas",
-  "spec": "Material Cromolio Garantía de 6 Meses 26mm",
+  "spec": "Material: 100% Cromolio 4130 - desplazamiento: 26 mm -  altura: 313 mm - Longitud del tubo de dirección: 170 mm - Punteras: 5 mm (3/8\" 10 mm) - Pista de rodamiento: Integrada (especificación Campy) Tornillo superior: M24x1.5 Patas cónicas de 31,8 a 25,4 mm con una muesca forjada en el extremo para mayor espacio libre para el estribo - Con muescas para dejar espacio libre para la clavija y el protector- peso: 1,105 kg (39 oz con perno superior)",
   "price": 400000,
   "sku": "TEN-FIC-001",
-  "units": 2,
+  "units": 1,
   "colors": [
    {
     "label": "Negro",
@@ -4256,9 +4264,14 @@ window.ESCENA_PRODUCTS = [
   "order": 420,
   "sizes": [
    {
-    "label": "Única",
-    "units": 2
+    "label": "26mm",
+    "units": 1
    }
+  ],
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/tenedor-fiction-shank.jpg?v=1788093948129",
+   "assets/img/products/tenedor-fiction-shank-mudzspdn8t59.jpg?v=1790161267586"
   ],
   "img": "assets/img/products/tenedor-fiction-shank.jpg?v=1788093948129"
  },
