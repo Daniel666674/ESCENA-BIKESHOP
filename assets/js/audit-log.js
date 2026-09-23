@@ -6453,5 +6453,34 @@ window.ESCENA_AUDIT = [
    "odyssey-buje-cassette-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T23:08:41.891Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 16 productos editados, 10 fotos subidas",
+  "created": [
+   "cassette-cut-crew-bidireccional-negro",
+   "cassette-federal-stance-negro",
+   "freecoaster-federal-stance-negro"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro",
+   "cassette-colony-wasp-cromado",
+   "cassette-colony-wasp-negro",
+   "cassette-trueno-v2-negro",
+   "cassette-trueno-v2-cromado",
+   "cassette-trueno-v2-tornasol",
+   "buje-cassette-negro-plata-02",
+   "mutany-mercury-elite-lhd-buje-negro",
+   "cassette-profile-mini-azul",
+   "cassette-profile-mini-cromado",
+   "stolen-buje-trasero-cassette-negro",
+   "freecoaster-alienation-venus-negro"
+  ],
+  "deleted": []
  }
 ];
