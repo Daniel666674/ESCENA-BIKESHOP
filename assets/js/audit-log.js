@@ -6274,5 +6274,15 @@ window.ESCENA_AUDIT = [
    "timon-cult-crew-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:36:09.663Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-cult-heavens-gate-4p-cromado"
+  ],
+  "deleted": []
  }
 ];
