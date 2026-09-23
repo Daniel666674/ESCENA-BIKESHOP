@@ -8132,24 +8132,6 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "colors": [
-   {
-    "label": "Cromado",
-    "units": 2
-   },
-   {
-    "label": "Negro",
-    "units": 2
-   }
-  ],
-  "imgColorMap": {
-   "Cromado": [
-    0
-   ],
-   "Negro": [
-    1
-   ]
-  },
   "order": 0,
   "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1788093948129"
  },
