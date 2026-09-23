@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin Demolition Zero Plus Negro",
+  "brand": "Demolition",
+  "cat": "rines",
+  "spec": "",
+  "price": 300000,
+  "sku": "RIN-DMO-001",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "rin-demolition-zero-plus-negro",
+  "img": "assets/img/products/rin-demolition-zero-plus-negro-mueqzqlobybg.jpg?v=1790206946604"
+ },
+ {
   "n": "Rin Federal Aero XL",
   "brand": "Federal",
   "cat": "rines",
@@ -8294,18 +8306,6 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 0,
   "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1788093948129"
- },
- {
-  "slug": "aro_demolition_zero_plus_negro",
-  "n": "Aro Demolition Zero Plus Negro",
-  "brand": "Demolition",
-  "cat": "rines",
-  "spec": "20\" · Doble pared · 36H · Negro",
-  "price": 300000,
-  "sku": "ARO_DEMOLITION_ZERO_PLUS_NEGRO",
-  "units": 12,
-  "order": 750,
-  "img": "assets/img/products/aro_demolition_zero_plus_negro.jpg?v=1788093948129"
  },
  {
   "slug": "aros_stolen_chamber_cromados",
