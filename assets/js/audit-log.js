@@ -6348,5 +6348,25 @@ window.ESCENA_AUDIT = [
    "tenedor-fiction-shank-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T12:03:03.373Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 9 productos editados, 2 fotos subidas",
+  "created": [
+   "manzana-delantera-federal-motion-negra"
+  ],
+  "edited": [
+   "manzana-delantera-ontrail-nemesis",
+   "manzana-delantera-ontrail-nemesis-2",
+   "manzana-optimus-gold",
+   "manzana-delantera-stranger-ballast",
+   "manzana-delantera-primo-balance",
+   "manzana-alienation-iluminiati-cromada",
+   "manzana-delantera-alienation-illunimati",
+   "manzana-delantera-alienation-venus",
+   "manzana-federal-motion"
+  ],
+  "deleted": []
  }
 ];
