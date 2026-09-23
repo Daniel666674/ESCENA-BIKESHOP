@@ -6180,5 +6180,17 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "grips-odi-xl"
   ]
+ },
+ {
+  "ts": "2026-09-23T11:10:51.000Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 3 fotos subidas",
+  "created": [
+   "timon-merritt-slaughter-4pc-negro"
+  ],
+  "edited": [
+   "manubrio-cromoly-negro-02"
+  ],
+  "deleted": []
  }
 ];
