@@ -6192,5 +6192,26 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-02"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:25:19.549Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 10 productos editados, 2 fotos subidas",
+  "created": [
+   "timon-cult-crew-cromado"
+  ],
+  "edited": [
+   "manubrio-cromoly-negro-02",
+   "manubrio-cromoly-negro-04",
+   "timon-gw-destructor-tornasol",
+   "timon-gw-gorila-4pc-negro",
+   "timon-merritt-slaughter-4pc-negro",
+   "timon-federal-assaut",
+   "manubrio-cromoly-negro-03",
+   "timon-colony-rick-4-piezas",
+   "manubrio-cromoly-negro-01",
+   "timon-fiend-reynolds"
+  ],
+  "deleted": []
  }
 ];
