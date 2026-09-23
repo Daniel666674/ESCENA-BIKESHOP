@@ -6316,5 +6316,27 @@ window.ESCENA_AUDIT = [
    "timon-cult-heavens-gate-4p-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:51:49.628Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 11 productos editados, 1 foto subida",
+  "created": [
+   "timon-fiend-reynolds-cromado"
+  ],
+  "edited": [
+   "timon-fiend-reynolds",
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "timon-federal-assaut",
+   "manubrio-cromoly-negro-03",
+   "timon-colony-rick-4-piezas",
+   "timon-merritt-slaughter-4pc-negro",
+   "manubrio-cromoly-negro-01",
+   "timon-cult-crew-cromado",
+   "manubrio-cromoly-negro-02"
+  ],
+  "deleted": []
  }
 ];
