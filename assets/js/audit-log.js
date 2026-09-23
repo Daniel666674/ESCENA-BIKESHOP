@@ -6170,5 +6170,15 @@ window.ESCENA_AUDIT = [
    "tenedor-fiction-shank"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:01:40.453Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto eliminado",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "grips-odi-xl"
+  ]
  }
 ];
