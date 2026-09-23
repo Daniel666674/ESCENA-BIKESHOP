@@ -9,7 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/tenedor-fiend-process-v2-cromado-mudfajnvubq1.jpg?v=1790126829487",
+   "assets/img/products/tenedor-fiend-process-v2-cromado-mudz5hyongki.jpg?v=1790160185256",
    "assets/img/products/tenedor-fiend-process-v2-cromado-mudfalrjqx33.jpg?v=1790126831149",
    "assets/img/products/tenedor-fiend-process-v2-cromado-mudfan1qizn2.jpg?v=1790126832716"
   ],
@@ -20,7 +20,8 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tenedor-fiend-process-v2-cromado",
-  "img": "assets/img/products/tenedor-fiend-process-v2-cromado-mudfajnvubq1.jpg?v=1790126829487"
+  "imgZoom": 121,
+  "img": "assets/img/products/tenedor-fiend-process-v2-cromado-mudz5hyongki.jpg?v=1790160185256"
  },
  {
   "n": "Tenedor Fiend Process V2 - Negro",
