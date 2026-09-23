@@ -6482,5 +6482,15 @@ window.ESCENA_AUDIT = [
    "freecoaster-alienation-venus-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T23:09:16.295Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "plato-fiend-omicron-guardia-28t"
+  ],
+  "deleted": []
  }
 ];
