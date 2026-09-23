@@ -6492,5 +6492,21 @@ window.ESCENA_AUDIT = [
    "plato-fiend-omicron-guardia-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T23:20:52.478Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 3 productos eliminados, 4 fotos subidas",
+  "created": [
+   "rin-federal-aero-xl",
+   "rin-alienation-vandal-negro",
+   "rin-alienation-skylark-negro"
+  ],
+  "edited": [],
+  "deleted": [
+   "eclat-trippin-rin-negro",
+   "aros_fate_negro",
+   "aros_eclat_bondi_cromados"
+  ]
  }
 ];
