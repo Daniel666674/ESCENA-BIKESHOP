@@ -117,7 +117,8 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/tenedor-fiction-shank-cromado-mudzsmryexnn.jpg?v=1790161264942",
    "assets/img/products/tenedor-fiction-shank-cromado-mudzsobyzhqs.jpg?v=1790161266299"
   ],
-  "imgPos": "50% 100%",
+  "imgZoom": 104,
+  "imgPos": "50% 50%",
   "order": 70,
   "img": "assets/img/products/tenedor-fiction-shank-cromado-mudzi4jibigs.jpg?v=1790160774574"
  },
