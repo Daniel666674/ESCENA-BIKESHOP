@@ -1,5 +1,27 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Cult Havens Gate 4PC - Cromado",
+  "brand": "Cult",
+  "cat": "manubrios",
+  "spec": "",
+  "price": 400000,
+  "sku": "TMN-CLT-003",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "9.42\"",
+    "units": 1
+   },
+   {
+    "label": "9.65\"",
+    "units": 1
+   }
+  ],
+  "slug": "timon-cult-havens-gate-4pc-cromado",
+  "img": "assets/img/products/timon-cult-havens-gate-4pc-cromado-mue14yksfrx6.jpg?v=1790163519210"
+ },
+ {
   "n": "Timon Cult Crew - Cromado",
   "brand": "Cult",
   "cat": "manubrios",
