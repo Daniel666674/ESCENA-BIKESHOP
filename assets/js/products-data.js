@@ -10,7 +10,6 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/timon-cult-crew-cromado-mue0vqucdf0h.jpg?v=1790163089438",
-   "assets/img/products/timon-cult-crew-cromado-mue0nmd4gtju.jpg?v=1790162710471",
    "assets/img/products/timon-cult-crew-cromado-mue0nnpjsy8t.jpg?v=1790162712063"
   ],
   "imgZoom": 104,
