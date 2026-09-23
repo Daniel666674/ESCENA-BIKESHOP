@@ -6264,5 +6264,15 @@ window.ESCENA_AUDIT = [
    "bielas-optimus-medusa-derecha-8t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:35:41.748Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-cult-crew-cromado"
+  ],
+  "deleted": []
  }
 ];
