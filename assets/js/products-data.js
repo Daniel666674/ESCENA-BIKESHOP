@@ -7,7 +7,9 @@ window.ESCENA_PRODUCTS = [
   "price": 380000,
   "sku": "TMN-CLT-002",
   "units": 2,
+  "imgFit": "cover",
   "imgs": [
+   "assets/img/products/timon-cult-crew-cromado-mue0vqucdf0h.jpg?v=1790163089438",
    "assets/img/products/timon-cult-crew-cromado-mue0nmd4gtju.jpg?v=1790162710471",
    "assets/img/products/timon-cult-crew-cromado-mue0nnpjsy8t.jpg?v=1790162712063"
   ],
@@ -20,7 +22,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "timon-cult-crew-cromado",
   "order": 30,
-  "img": "assets/img/products/timon-cult-crew-cromado-mue0nmd4gtju.jpg?v=1790162710471"
+  "img": "assets/img/products/timon-cult-crew-cromado-mue0vqucdf0h.jpg?v=1790163089438"
  },
  {
   "n": "Timon Merritt Slaughter 4pc - Negro",
