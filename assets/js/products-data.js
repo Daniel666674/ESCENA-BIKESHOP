@@ -1,5 +1,27 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Cult Crew - Cromado",
+  "brand": "Cult",
+  "cat": "manubrios",
+  "spec": "Material con cromolio 100% tratado térmicamente y conificado - Medida:  30\" de ancho - Retroceso de 12°  - barrido ascendente de 2° - Elevación 9,35\" - Peso: 850gr",
+  "price": 380000,
+  "sku": "TMN-CLT-002",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/timon-cult-crew-cromado-mue0nmd4gtju.jpg?v=1790162710471",
+   "assets/img/products/timon-cult-crew-cromado-mue0nnpjsy8t.jpg?v=1790162712063"
+  ],
+  "sizes": [
+   {
+    "label": "9.35\"",
+    "units": 2
+   }
+  ],
+  "slug": "timon-cult-crew-cromado",
+  "order": 30,
+  "img": "assets/img/products/timon-cult-crew-cromado-mue0nmd4gtju.jpg?v=1790162710471"
+ },
+ {
   "n": "Timon Merritt Slaughter 4pc - Negro",
   "brand": "Merritt",
   "cat": "manubrios",
@@ -20,6 +42,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-merritt-slaughter-4pc-negro",
+  "order": 50,
   "img": "assets/img/products/timon-merritt-slaughter-4pc-negro-mue04z0fal11.jpg?v=1790161840348"
  },
  {
@@ -4388,7 +4411,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "timon-federal-assaut",
-  "order": 60,
+  "order": 80,
   "img": "assets/img/products/timon-federal-assaut.jpg?v=1788093948129"
  },
  {
@@ -4411,7 +4434,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-colony-rick-4-piezas",
-  "order": 40,
+  "order": 60,
   "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1788093948129"
  },
  {
@@ -4605,7 +4628,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1788093948129"
  },
  {
@@ -4653,7 +4676,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1788093948129"
  },
  {
@@ -8129,7 +8152,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "manubrios",
   "spec": "Medidas: 28″ Ancho, 10.5° inclinación hacia atrás, 3° inclinación hacia arriba. Peso: 820gr",
-  "price": 370000,
+  "price": 380000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-01",
   "units": 2,
   "sizes": [
@@ -8162,7 +8185,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 30,
+  "order": 40,
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1788093948129"
  },
  {
@@ -8170,7 +8193,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Timón Cult Crew",
   "brand": "Cult",
   "cat": "manubrios",
-  "spec": "Medidas 30″ de ancho, 12° inclinación hacia atrás , 2° inclinación hacia arriba. Peso: 850gr",
+  "spec": "Material con cromolio 100% tratado térmicamente y conificado - Medida:  30\" de ancho - Retroceso de 12°  - barrido ascendente de 2° - Elevación 9,35\" - Peso: 850gr",
   "price": 380000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-02",
   "units": 0,
@@ -8220,7 +8243,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 50,
+  "order": 70,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1788093948129"
  },
  {
@@ -8244,7 +8267,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1788093948129"
  }
 ];
