@@ -6149,5 +6149,15 @@ window.ESCENA_AUDIT = [
    "tenedor-fiend-process-v2-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-23T10:52:59.076Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "tenedor-fiction-shank-cromado"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
