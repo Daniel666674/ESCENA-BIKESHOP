@@ -2904,17 +2904,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/grips-gw-gorila-mt8x6eqen1z8.jpg?v=1788093948129"
  },
  {
-  "n": "Grips ODI XL",
-  "brand": "ODI",
-  "cat": "punos",
-  "spec": "Goma · Extralargo Xl 230mm · diseño mushroom",
-  "price": 70000,
-  "sku": "PZA-ODI-001",
-  "units": 3,
-  "slug": "grips-odi-xl",
-  "img": "assets/img/products/grips-odi-xl-mt8wrpbylgui.jpg?v=1788093948129"
- },
- {
   "n": "Lija diseño",
   "brand": "Skate terror",
   "cat": "skate-lijas",
