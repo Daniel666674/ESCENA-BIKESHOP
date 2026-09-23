@@ -3,7 +3,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Timon Cult Havens Gate 4PC - Cromado",
   "brand": "Cult",
   "cat": "manubrios",
-  "spec": "",
+  "spec": "Fabricado en cromoly 100% tratado térmicamente y conificado , 28\" de ancho, 11,5° de inclinación hacia atrás, 3° de inclinación hacia arriba",
   "price": 400000,
   "sku": "TMN-CLT-003",
   "units": 2,
@@ -19,6 +19,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-cult-havens-gate-4pc-cromado",
+  "order": 0,
   "img": "assets/img/products/timon-cult-havens-gate-4pc-cromado-mue14yksfrx6.jpg?v=1790163519210"
  },
  {
@@ -42,7 +43,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-cult-crew-cromado",
-  "order": 30,
+  "order": 40,
   "img": "assets/img/products/timon-cult-crew-cromado-mue0vqucdf0h.jpg?v=1790163089438"
  },
  {
@@ -66,7 +67,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-merritt-slaughter-4pc-negro",
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/timon-merritt-slaughter-4pc-negro-mue04z0fal11.jpg?v=1790161840348"
  },
  {
@@ -4440,7 +4441,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "timon-federal-assaut",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/timon-federal-assaut.jpg?v=1788093948129"
  },
  {
@@ -4463,7 +4464,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-colony-rick-4-piezas",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1788093948129"
  },
  {
@@ -4507,7 +4508,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 10,
+  "order": 20,
   "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1788093948129"
  },
  {
@@ -4657,7 +4658,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1788093948129"
  },
  {
@@ -4705,7 +4706,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1788093948129"
  },
  {
@@ -8137,7 +8138,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "manubrios",
   "spec": "Fabricado en cromoly 100% tratado térmicamente y conificado , 28\" de ancho, 11,5° de inclinación hacia atrás, 3° de inclinación hacia arriba",
-  "price": 400000,
+  "price": 380000,
   "sku": "TMN-CLT-001",
   "units": 4,
   "imgs": [
@@ -8154,7 +8155,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 0,
+  "order": 10,
   "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1788093948129"
  },
  {
@@ -8196,7 +8197,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1788093948129"
  },
  {
@@ -8225,7 +8226,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 20,
+  "order": 30,
   "imgFit": "cover",
   "img": "assets/img/products/manubrio-cromoly-negro-02-mt8wj8u60l6q.jpg?v=1788093948129"
  },
@@ -8254,7 +8255,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1788093948129"
  },
  {
@@ -8278,7 +8279,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1788093948129"
  }
 ];
