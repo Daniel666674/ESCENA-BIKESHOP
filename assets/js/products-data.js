@@ -4225,37 +4225,17 @@ window.ESCENA_PRODUCTS = [
   "brand": "Fiction",
   "cat": "horquillas",
   "spec": "Material Cromolio Garantía de 6 Meses 26mm",
-  "price": 410000,
+  "price": 400000,
   "sku": "TEN-FIC-001",
   "units": 2,
-  "imgs": [
-   "assets/img/products/tenedor-fiction-shank.jpg?v=1788093948129",
-   "assets/img/products/tenedor-fiction-shank-2.jpg?v=1788093948129"
-  ],
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
-    "price": 400000,
-    "cost": 320000
-   },
-   {
-    "label": "Cromado",
-    "units": 1,
-    "price": 410000,
-    "cost": 328000
+    "units": 1
    }
   ],
   "slug": "tenedor-fiction-shank",
   "order": 420,
-  "imgColorMap": {
-   "Negro": [
-    0
-   ],
-   "Cromado": [
-    1
-   ]
-  },
   "sizes": [
    {
     "label": "Única",
