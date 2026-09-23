@@ -1,5 +1,30 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Fiend Reynolds - Cromado",
+  "brand": "Fiend",
+  "cat": "manubrios",
+  "spec": "Material 100% Cromolio - Inclinación hacia arriba: 1 grado Inclinación hacia atrás: 12 grados Altura: 8,75”,  9,25” - Peso: 770 gramos - Ancho: 27,25”",
+  "price": 460000,
+  "sku": "TMN-FND-002",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "9\"",
+    "units": 0,
+    "price": 460000
+   },
+   {
+    "label": "9.25\"",
+    "units": 2,
+    "price": 460000
+   }
+  ],
+  "slug": "timon-fiend-reynolds-cromado",
+  "order": 20,
+  "img": "assets/img/products/timon-fiend-reynolds-cromado-mue1lq40spd3.jpg?v=1790164301554"
+ },
+ {
   "n": "Timon Cult Havens Gate 4PC - Cromado",
   "brand": "Cult",
   "cat": "manubrios",
@@ -43,7 +68,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-cult-crew-cromado",
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/timon-cult-crew-cromado-mue0vqucdf0h.jpg?v=1790163089438"
  },
  {
@@ -67,7 +92,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-merritt-slaughter-4pc-negro",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/timon-merritt-slaughter-4pc-negro-mue04z0fal11.jpg?v=1790161840348"
  },
  {
@@ -4441,7 +4466,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "timon-federal-assaut",
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/timon-federal-assaut.jpg?v=1788093948129"
  },
  {
@@ -4464,51 +4489,30 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-colony-rick-4-piezas",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1788093948129"
  },
  {
   "n": "Timon Fiend Reynolds",
   "brand": "Fiend",
   "cat": "manubrios",
-  "spec": "Material en cromolio tratado térmicamente y conificado - 27 pulgadas - Peso: 28.75 onzas",
-  "price": 460000,
+  "spec": "Inclinación hacia arriba: 1 grado Inclinación hacia atrás: 12 grados Altura: 8,75”, 9”, 9,25” Peso: 770 gramos Ancho: 27,25”",
+  "price": 430000,
   "sku": "TMN-FND-001",
-  "units": 2,
-  "imgs": [
-   "assets/img/products/timon-fiend-reynolds.jpg?v=1788093948129",
-   "assets/img/products/timon-fiend-reynolds-2.jpg?v=1788093948129"
-  ],
+  "units": 0,
   "sizes": [
    {
     "label": "9\"",
-    "units": 2
+    "units": 0
    },
    {
     "label": "9.25\"",
     "units": 0
    }
   ],
-  "colors": [
-   {
-    "label": "Cromado",
-    "units": 2
-   },
-   {
-    "label": "Negro",
-    "units": 0
-   }
-  ],
   "slug": "timon-fiend-reynolds",
-  "imgColorMap": {
-   "Negro": [
-    0
-   ],
-   "Cromado": [
-    1
-   ]
-  },
-  "order": 20,
+  "order": 30,
+  "imgFit": "cover",
   "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1788093948129"
  },
  {
@@ -4658,7 +4662,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1788093948129"
  },
  {
@@ -4706,7 +4710,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1788093948129"
  },
  {
@@ -8197,7 +8201,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1788093948129"
  },
  {
@@ -8226,7 +8230,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 30,
+  "order": 40,
   "imgFit": "cover",
   "img": "assets/img/products/manubrio-cromoly-negro-02-mt8wj8u60l6q.jpg?v=1788093948129"
  },
@@ -8255,7 +8259,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1788093948129"
  },
  {
@@ -8279,7 +8283,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1788093948129"
  }
 ];
