@@ -6520,5 +6520,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "aro_demolition_zero_plus_negro"
   ]
+ },
+ {
+  "ts": "2026-09-24T22:40:06.231Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "plato-fiend-omicron-guardia-28t"
+  ],
+  "deleted": []
  }
 ];
