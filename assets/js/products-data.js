@@ -7328,8 +7328,16 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "sizes": [
    {
+    "label": "160mm",
+    "units": 1
+   },
+   {
     "label": "165mm",
-    "units": 2
+    "units": 0
+   },
+   {
+    "label": "170mm",
+    "units": 1
    }
   ],
   "order": 20,
