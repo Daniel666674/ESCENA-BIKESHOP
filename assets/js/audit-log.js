@@ -6530,5 +6530,21 @@ window.ESCENA_AUDIT = [
    "plato-fiend-omicron-guardia-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-24T22:50:02.749Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 4 productos editados, 3 fotos subidas",
+  "created": [
+   "protector-mutanty-immortal-no-drive-trasero",
+   "protector-de-manzana-delantera-mutanty-inmortal"
+  ],
+  "edited": [
+   "mutany-guarda-pinon-negro",
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro"
+  ],
+  "deleted": []
  }
 ];
