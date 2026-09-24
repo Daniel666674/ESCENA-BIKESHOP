@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin Cult Match V2 Cromado",
+  "brand": "Cult",
+  "cat": "rines",
+  "spec": "Grado aeronáutico 6061-T6 Aluminio-  Rin 20 - 36 Huecos - Anchura 34mm - Costura: Soldado",
+  "price": 330000,
+  "sku": "RIN-CLT-002",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/rin-cult-match-v2-cromado-mug52ijxtexd.jpg?v=1790291056197",
+   "assets/img/products/rin-cult-match-v2-cromado-mug52jwlt643.jpg?v=1790291057518"
+  ],
+  "slug": "rin-cult-match-v2-cromado",
+  "img": "assets/img/products/rin-cult-match-v2-cromado-mug52ijxtexd.jpg?v=1790291056197"
+ },
+ {
   "n": "Rin Cult Match V2 Negro",
   "brand": "Cult",
   "cat": "rines",
