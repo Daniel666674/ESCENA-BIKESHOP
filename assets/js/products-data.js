@@ -253,7 +253,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PLT-FND-002",
   "units": 2,
   "imgFit": "cover",
-  "imgZoom": 144,
+  "imgZoom": 134,
   "sizes": [
    {
     "label": "28T",
@@ -263,6 +263,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "plato-fiend-omicron-guardia-28t",
   "order": 0,
+  "imgPos": "50% 0%",
   "img": "assets/img/products/plato-fiend-omicron-guardia-28t-mue2k51o5ds2.jpg?v=1790165911132"
  },
  {
