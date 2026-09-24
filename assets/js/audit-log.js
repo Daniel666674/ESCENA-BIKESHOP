@@ -6580,5 +6580,16 @@ window.ESCENA_AUDIT = [
    "kit-hardware-bielas-plata"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-24T23:56:10.434Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "kit-hardware-bielas-plata",
+   "bielas-fitbikeco-blunt-cromada"
+  ],
+  "deleted": []
  }
 ];
