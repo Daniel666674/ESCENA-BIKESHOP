@@ -6546,5 +6546,17 @@ window.ESCENA_AUDIT = [
    "bsd-guarda-pinon-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-24T23:00:18.327Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 3 fotos subidas",
+  "created": [
+   "rin-cult-match-v2-negro"
+  ],
+  "edited": [],
+  "deleted": [
+   "aros_stolen_chamber_cromados"
+  ]
  }
 ];
