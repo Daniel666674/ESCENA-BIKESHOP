@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin Cult Match V2 Negro",
+  "brand": "Cult",
+  "cat": "rines",
+  "spec": "Grado aeronáutico 6061-T6 Aluminio-  Rin 20 - 36 Huecos - Anchura 34mm - Costura: Soldado",
+  "price": 300000,
+  "sku": "RIN-CLT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/rin-cult-match-v2-negro-mug4x6yff8vo.jpg?v=1790290808228",
+   "assets/img/products/rin-cult-match-v2-negro-mug4x8kl8lir.jpg?v=1790290809894",
+   "assets/img/products/rin-cult-match-v2-negro-mug4x9uuihom.jpg?v=1790290811356"
+  ],
+  "slug": "rin-cult-match-v2-negro",
+  "img": "assets/img/products/rin-cult-match-v2-negro-mug4x6yff8vo.jpg?v=1790290808228"
+ },
+ {
   "n": "Protector Mutanty Immortal No Drive Trasero",
   "brand": "Mutanty",
   "cat": "manzana-trasera",
@@ -8334,18 +8351,6 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 0,
   "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1788093948129"
- },
- {
-  "slug": "aros_stolen_chamber_cromados",
-  "n": "Aro Stolen Chamber Cromado",
-  "brand": "Stolen",
-  "cat": "rines",
-  "spec": "20\" · Cámara séxtuple · 36H · Cromado",
-  "price": 245000,
-  "sku": "AROS_STOLEN_CHAMBER_CROMADOS",
-  "units": 12,
-  "order": 880,
-  "img": "assets/img/products/aros_stolen_chamber_cromados.jpg?v=1788093948129"
  },
  {
   "slug": "coraza_cult_wafflecup_2.40",
