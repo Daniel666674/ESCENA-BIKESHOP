@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin Stolen Rampage Cromado",
+  "brand": "Stolen",
+  "cat": "rines",
+  "spec": "Material Aluminio 6061 - Ancho: 34mm - Unión: Pineado - Alto Perfil: 15mm -  Peso: 450 gr - Color: CROMADO",
+  "price": 160000,
+  "sku": "RIN-STL-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "rin-stolen-rampage-cromado",
+  "img": "assets/img/products/rin-stolen-rampage-cromado-mug6g5idvp19.jpg?v=1790293375097"
+ },
+ {
   "n": "Rin Cult Match V2 Cromado",
   "brand": "Cult",
   "cat": "rines",
@@ -7356,15 +7368,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Tapas · Plata · Cromoly tratado al calor",
   "price": 930000,
   "sku": "KIT-HARDWARE-BIELAS-PLATA",
-  "units": 3,
+  "units": 1,
   "sizes": [
    {
     "label": "160mm",
-    "units": 2
+    "units": 1
    },
    {
     "label": "165mm",
-    "units": 1
+    "units": 0
    },
    {
     "label": "170mm",
