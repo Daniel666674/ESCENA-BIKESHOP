@@ -6568,5 +6568,17 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-24T23:43:05.390Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 1 foto subida",
+  "created": [
+   "rin-stolen-rampage-cromado"
+  ],
+  "edited": [
+   "kit-hardware-bielas-plata"
+  ],
+  "deleted": []
  }
 ];
