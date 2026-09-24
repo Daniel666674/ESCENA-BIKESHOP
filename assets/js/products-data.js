@@ -1,5 +1,31 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Protector Mutanty Immortal No Drive Trasero",
+  "brand": "Mutanty",
+  "cat": "manzana-trasera",
+  "spec": "Cromo 4140 · Nylon reforzado · Negro - Hubguard - Peso: 3.9 Onzas",
+  "price": 100000,
+  "sku": "MZT-MUT-003",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "protector-mutanty-immortal-no-drive-trasero",
+  "order": 220,
+  "img": "assets/img/products/protector-mutanty-immortal-no-drive-trasero-mug4jwvh1km2.jpg?v=1790290188621"
+ },
+ {
+  "n": "Protector Mutanty Inmortal Delantero",
+  "brand": "Mutanty",
+  "cat": "manzana-trasera",
+  "spec": "Cromo 4140 · Nylon reforzado · Negro - Frontguard - Peso: 1.9 Onzas",
+  "price": 95000,
+  "sku": "MZT-MUT-002",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "protector-de-manzana-delantera-mutanty-inmortal",
+  "order": 210,
+  "img": "assets/img/products/protector-de-manzana-delantera-mutanty-inmortal-mug4jyh9t4hl.jpg?v=1790290190310"
+ },
+ {
   "n": "Rin Demolition Zero Plus Negro",
   "brand": "Demolition",
   "cat": "rines",
@@ -646,7 +672,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "rodamiento-6902-para-cassette",
-  "order": 220,
+  "order": 240,
   "img": "assets/img/products/rodamiento-6902-para-cassette-mu60chc8p45s.jpg?v=1789678461922"
  },
  {
@@ -659,7 +685,7 @@ window.ESCENA_PRODUCTS = [
   "units": 100,
   "imgFit": "cover",
   "slug": "rodamiento-6802-para-manzana-de-cassette",
-  "order": 230,
+  "order": 250,
   "img": "assets/img/products/rodamiento-6802-para-manzana-de-cassette-mu601p7kycgu.jpg?v=1789677958604"
  },
  {
@@ -7615,20 +7641,21 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "BSD-GUARDA-PINON-NEGRO",
   "units": 6,
-  "order": 210,
+  "order": 230,
   "img": "assets/img/products/bsd-guarda-pinon-negro.jpg?v=1788093948129"
  },
  {
   "slug": "mutany-guarda-pinon-negro",
-  "n": "Protector Mutanty Immortal Negro en Cromo",
+  "n": "Protector Mutanty Immortal de Drive",
   "brand": "Mutanty",
   "cat": "manzana-trasera",
-  "spec": "Cromo 4140 · Nylon reforzado · Negro",
-  "price": 95000,
+  "spec": "Cromo 4140 · Nylon reforzado · Negro - Driveguard - Peso: 3 Onzas",
+  "price": 100000,
   "sku": "MUTANY-GUARDA-PINON-NEGRO",
-  "units": 2,
+  "units": 0,
   "order": 200,
-  "img": "assets/img/products/mutany-guarda-pinon-negro.jpg?v=1788093948129"
+  "imgFit": "cover",
+  "img": "assets/img/products/mutany-guarda-pinon-negro-mug4jzs6n44o.jpg?v=1790290192346"
  },
  {
   "slug": "cult-kit-rodamientos-bb",
