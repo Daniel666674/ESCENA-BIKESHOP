@@ -6833,5 +6833,18 @@ window.ESCENA_AUDIT = [
    "rin-stolen-rampage-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T22:20:56.340Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "rin-stolen-rampage-azul",
+   "rin-stolen-rampage-negro",
+   "rin-stolen-rampage-cromado",
+   "rin-stolen-chamber-negro"
+  ],
+  "deleted": []
  }
 ];
