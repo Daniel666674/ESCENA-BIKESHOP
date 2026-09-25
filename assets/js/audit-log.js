@@ -6676,5 +6676,20 @@ window.ESCENA_AUDIT = [
    "llanta-federal-neptune"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T17:05:20.832Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "6 productos nuevos, 9 fotos subidas",
+  "created": [
+   "llanta-merritt-ft1-negra",
+   "llanta-merrit-option-negra",
+   "llanta-merritt-phantom-blanca",
+   "llanta-merritt-phantom-negra",
+   "llanta-merritt-phantom-morada",
+   "llanta-merritt-phantom-aqua"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
