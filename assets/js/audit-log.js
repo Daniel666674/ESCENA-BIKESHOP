@@ -6775,5 +6775,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T21:21:54.333Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "silla-pivotal-federal-cuero-logo-negro"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
