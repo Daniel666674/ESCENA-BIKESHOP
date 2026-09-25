@@ -1264,6 +1264,12 @@
   // "Talla" with real per-size stock. See isSizeCat()/isColorReal() below.
   var SIZE_CATEGORIES = {
     bielas: 1, pinones: 1, marcos: 1, stems: 1, manubrios: 1, horquillas: 1, llantas: 1,
+    // Las cajas de centro se venden por medida de eje (19 / 22 / 24 mm) y por
+    // estándar de caja (MID, Español). Hasta ahora la medida solo vivía dentro
+    // del nombre y del spec, así que un producto con varias medidas era una
+    // sola línea de inventario: imposible saber cuántas quedaban de cada una,
+    // y el cliente no podía elegir.
+    "caja-centro": 1,
     cascos: 1, guantes: 1, rodilleras: 1, canilleras: 1, tobilleras: 1, "rodi-cani-tobilleras": 1,
     camisetas: 1, gorros: 1, gorras: 1, hoodies: 1, chaquetas: 1, pantalones: 1, medias: 1, tenis: 1,
     "mtb-bicicletas": 1, "mtb-marcos": 1, "mtb-timones": 1, "mtb-tenedores": 1,
@@ -1390,10 +1396,77 @@
     }, opts.headers || {});
     return fetch("https://api.github.com/repos/" + GH.owner + "/" + GH.repo + path, opts);
   }
-  function validateToken(tok) {
+  /* Comprueba de verdad que el token sirve para lo que el panel necesita.
+   *
+   * Antes solo miraba que la respuesta fuera 200: un token de solo lectura
+   * entraba sin problema y reventaba al publicar, cuando el trabajo ya estaba
+   * hecho. Ahora exige permiso de escritura (permissions.push) y, además,
+   * detecta el caso que rompe al volver privado el repositorio: un token
+   * clasico con alcance "public_repo" y sin "repo" funciona mientras el repo
+   * sea publico y devuelve 404 en cuanto deja de serlo.
+   *
+   * GitHub expone X-OAuth-Scopes por CORS, asi que el alcance se puede leer
+   * desde el navegador. En los tokens de alcance fino esa cabecera no viene:
+   * ahi mandan los permissions que devuelve la API.
+   */
+  function checkToken(tok) {
     return fetch("https://api.github.com/repos/" + GH.owner + "/" + GH.repo, {
       headers: { "Authorization": "Bearer " + tok, "Accept": "application/vnd.github+json" }
-    }).then(function (r) { return r.ok; }).catch(function () { return false; });
+    }).then(function (r) {
+      var raw = r.headers.get("X-OAuth-Scopes");
+      var scopes = raw ? raw.split(",").map(function (x) { return x.trim(); }).filter(Boolean) : null;
+      if (!r.ok) return { ok: false, status: r.status, scopes: scopes };
+      return r.json().then(function (j) {
+        var puede = !!(j.permissions && j.permissions.push);
+        return {
+          ok: puede,
+          canPush: puede,
+          status: 200,
+          scopes: scopes,
+          repoPrivado: !!j.private,
+          // token clásico que hoy sirve pero morirá al pasar el repo a privado
+          soloPublico: !!(scopes && scopes.indexOf("repo") === -1 && scopes.indexOf("public_repo") !== -1)
+        };
+      });
+    }).catch(function () { return { ok: false, status: 0, scopes: null }; });
+  }
+
+  function mensajeToken(res) {
+    if (res.status === 0) return "No se pudo contactar a GitHub. Revisa la conexión e intenta de nuevo.";
+    if (res.status === 401) return "El token no es válido o fue revocado. Genera uno nuevo.";
+    if (res.status === 404) return "El token no ve este repositorio. Si el repositorio es privado, necesita alcance \"repo\" completo (un token con solo \"public_repo\" no sirve).";
+    if (res.status === 200 && !res.canPush) return "El token entra pero es de solo lectura: no podría publicar. Necesita permiso de escritura (alcance \"repo\", o Contents: Read and write).";
+    return "Token inválido o sin acceso a este repositorio.";
+  }
+
+  // Aviso persistente para el problema que no da error hoy pero sí mañana.
+  function avisarAlcanceToken(res) {
+    if (!res || !res.soloPublico || document.getElementById("tokenScopeWarn")) return;
+    var app = document.getElementById("adminApp");
+    if (!app) return;
+    var bar = document.createElement("div");
+    bar.id = "tokenScopeWarn";
+    bar.setAttribute("style",
+      "background:#fff4e5;border-bottom:2px solid #b26a00;color:#5c3a00;padding:.75rem 1rem;" +
+      "font-size:.83rem;line-height:1.45;display:flex;gap:.75rem;align-items:flex-start;");
+    bar.innerHTML =
+      '<span style="font-size:1.05rem;line-height:1;">&#9888;</span>' +
+      '<span style="flex:1;">Tu token de GitHub tiene alcance <b>public_repo</b>. Funciona porque el ' +
+      'repositorio es público: <b>el día que lo pongas en privado, el panel dejará de publicar.</b> ' +
+      'Genera un token con alcance <b>repo</b> completo antes de hacer el cambio.</span>' +
+      '<button type="button" style="background:none;border:0;color:#5c3a00;font-size:1.1rem;' +
+      'cursor:pointer;line-height:1;padding:0 .2rem;" aria-label="Cerrar">&times;</button>';
+    bar.querySelector("button").addEventListener("click", function () { bar.remove(); });
+    app.insertBefore(bar, app.firstChild);
+  }
+
+  // Envoltorio booleano: los dos puntos de entrada automáticos solo necesitan
+  // saber si sirve o no.
+  function validateToken(tok) {
+    return checkToken(tok).then(function (res) {
+      if (res.ok) avisarAlcanceToken(res);
+      return res.ok;
+    });
   }
   function ghGetFile(path) {
     return ghFetch("/contents/" + path + "?ref=" + GH.branch, { cache: "no-store" }).then(function (r) {
@@ -1427,6 +1500,28 @@
       return r.json();
     });
   }
+  // El panel solo sabía agregar archivos, nunca quitarlos: cada foto que se
+  // reemplazaba quedaba en el repositorio para siempre. A septiembre de 2026
+  // eso dejó 173 fotos (42,7 MB) que no usa nada y empujó la carpeta por
+  // encima del límite de 1.000 archivos que lista la interfaz de GitHub.
+  function ghDeleteFile(path, message) {
+    return ghGetFile(path).then(function (cur) {
+      if (!cur || !cur.sha) return null; // ya no existe: nada que hacer
+      var actor = sessionStorage.getItem(GOOGLE_AUTH_KEY);
+      return ghFetch("/contents/" + path, {
+        method: "DELETE",
+        body: JSON.stringify({
+          message: (actor ? "[" + actor + "] " : "") + message,
+          sha: cur.sha,
+          branch: GH.branch
+        })
+      }).then(function (r) {
+        if (!r.ok) throw new Error("DELETE " + path + " -> " + r.status);
+        return true;
+      });
+    });
+  }
+
   // Two devices publishing close together can race: this device reads a file's
   // sha, another device commits to that same file, then this device's write is
   // rejected with 409 (sha no longer matches). buildContent gets the freshly
@@ -1567,9 +1662,10 @@
     err.style.display = "none";
     if (!tok) return;
     btn.disabled = true; btn.textContent = "Verificando…";
-    validateToken(tok).then(function (ok) {
+    checkToken(tok).then(function (res) {
       btn.disabled = false; btn.textContent = "Entrar";
-      if (!ok) { err.textContent = "Token inválido o sin acceso a este repositorio."; err.style.display = "block"; return; }
+      if (!res.ok) { err.textContent = mensajeToken(res); err.style.display = "block"; return; }
+      avisarAlcanceToken(res);
       sessionStorage.setItem(TOKEN_KEY, tok);
       if (remember) localStorage.setItem(TOKEN_KEY, tok);
       document.getElementById("tokenInput").value = "";
@@ -2276,7 +2372,36 @@
   var dirtySlugs = {};
   var deletedSlugs = {};
   function markDirty(slug) { if (slug) dirtySlugs[slug] = true; }
-  function markDeleted(slug) { if (slug) { deletedSlugs[slug] = true; delete dirtySlugs[slug]; } }
+
+  // Fotos ya publicadas que esta sesión sacó de un producto (quitadas,
+  // rotadas, con el fondo removido, o del producto entero al eliminarlo).
+  // No se borran en el momento: si la publicación falla o el usuario cierra
+  // sin publicar, el archivo tiene que seguir ahí. Se borran al final del
+  // publish, y solo después de comprobar contra el catálogo ya fusionado que
+  // de verdad no las usa nadie -- ver cleanupRetiredPhotos().
+  var retiredPhotos = {};
+  function retirePhoto(src) {
+    if (!src || typeof src !== "string") return;
+    if (src.indexOf("assets/img/products/") !== 0) return; // data: URI o ruta ajena
+    retiredPhotos[src.split("?")[0]] = true;
+  }
+  function photoPathsOf(p) {
+    var out = [];
+    [].concat(p && p.imgs || [], (p && p.img) ? [p.img] : []).forEach(function (src) {
+      if (typeof src === "string" && src.indexOf("assets/img/products/") === 0) out.push(src.split("?")[0]);
+    });
+    return out;
+  }
+
+  function markDeleted(slug) {
+    if (!slug) return;
+    // Al borrar el producto, sus fotos dejan de tener dueño.
+    inventoryCatalog.forEach(function (p) {
+      if (p.slug === slug) photoPathsOf(p).forEach(retirePhoto);
+    });
+    deletedSlugs[slug] = true;
+    delete dirtySlugs[slug];
+  }
 
   function slugOf(p) {
     return (p.img || p.slug || "").split("/").pop().replace(/\.[a-zA-Z0-9]+$/, "");
@@ -2974,6 +3099,7 @@
     // 1) find data-URI photos to commit
     var uploads = [];
     var newSalesCount = 0; // set when the sales-log step runs; read by the audit-log step after
+    var lastMerged = null; // catálogo tal como quedó fusionado y escrito (ver más abajo)
     inventoryCatalog.forEach(function (p) {
       (p.imgs || []).forEach(function (src, idx) {
         if (/^data:/.test(src)) uploads.push({ p: p, idx: idx, src: src });
@@ -3074,6 +3200,11 @@
         var remoteArr = parseRemoteArray(remoteText, "ESCENA_PRODUCTS");
         var merged = mergeCatalog(remoteArr, inventoryCatalog, dirtySlugs, deletedSlugs);
         dedupeSkus(merged);
+        // Se guarda el resultado de la fusión (no inventoryCatalog, que es la
+        // vista local de esta sesión): es lo que realmente quedó escrito, ya
+        // conciliado con lo que hicieran otras sesiones. Los dos pasos que
+        // BORRAN cosas -- sitemap y fotos -- se miden contra esto y nada más.
+        lastMerged = merged;
         return "window.ESCENA_PRODUCTS = " + JSON.stringify(merged, null, 1) + ";\n";
       }, false);
     }).then(function () {
@@ -3094,9 +3225,57 @@
         var adds = publishedSlugs.filter(function (s) { return remoteText.indexOf("/producto/" + s + "<") === -1; }).map(function (s) {
           return "  <url>\n    <loc>https://escenabmx.com/producto/" + s + "</loc>\n    <lastmod>" + today + "</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>";
         });
-        if (!adds.length) return null;
-        return remoteText.replace("</urlset>", adds.join("\n") + "\n</urlset>");
+        var out = adds.length ? remoteText.replace("</urlset>", adds.join("\n") + "\n</urlset>") : remoteText;
+
+        // Quitar los productos que ya no existen. Sin esto el sitemap solo
+        // crecía: en septiembre de 2026 pedía indexar 69 páginas de productos
+        // borrados hacía meses, que además mostraban precio viejo y botón de
+        // compra activo.
+        //
+        // El corte es "el producto NO está en el catálogo", no "no es
+        // publicable": un borrador o un producto sin foto siguen existiendo y
+        // su entrada se respeta. Y se mide contra lastMerged, nunca contra la
+        // vista local, para no borrar de la web lo que otra sesión acaba de
+        // agregar. Sin lastMerged (el catálogo no llegó a escribirse) no se
+        // quita nada.
+        if (lastMerged) {
+          var vivos = {};
+          lastMerged.forEach(function (p) { if (p && p.slug) vivos[p.slug] = true; });
+          out = out.replace(/[ \t]*<url>[\s\S]*?<\/url>\n?/g, function (bloque) {
+            var m = bloque.match(/<loc>\s*[^<]*?\/producto\/([^/<?\s]+)\s*<\/loc>/);
+            if (!m) return bloque;                 // no es página de producto: intacta
+            return vivos[m[1]] ? bloque : "";      // fantasma: fuera
+          });
+        }
+        return out === remoteText ? null : out;
       }, false);
+    }).then(function () {
+      // Borrar las fotos que esta sesión sacó de algún producto. Va DESPUÉS de
+      // escribir el catálogo a propósito: si algo falla antes, el archivo sigue
+      // en su sitio y las referencias no quedan colgando. El orden inverso deja
+      // productos apuntando a fotos que ya no existen.
+      var candidatas = Object.keys(retiredPhotos);
+      if (!candidatas.length || !lastMerged) return Promise.resolve();
+
+      // Última comprobación contra lo que realmente quedó escrito: una foto
+      // que se quitó y se volvió a poner, o que otro producto ya usa, NO se
+      // borra. Ante la duda, el archivo se queda: un archivo de más cuesta
+      // 250 KB, uno de menos es una foto rota en el sitio.
+      var enUso = {};
+      lastMerged.forEach(function (p) { photoPathsOf(p).forEach(function (x) { enUso[x] = true; }); });
+      var aBorrar = candidatas.filter(function (x) { return !enUso[x]; });
+      if (!aBorrar.length) { retiredPhotos = {}; return Promise.resolve(); }
+
+      btn.textContent = "Limpiando fotos…";
+      // En serie y sin cortar la cadena: esto es limpieza, no corrección. Un
+      // borrado que falle (permisos, carrera con otra sesión) no puede tumbar
+      // una publicación que ya salió bien.
+      return aBorrar.reduce(function (chain, path) {
+        return chain.then(function () {
+          return ghDeleteFile(path, "Remove unused product photo " + path.split("/").pop() + " (admin)")
+            .catch(function (e) { console.warn("No se pudo borrar " + path, e); });
+        });
+      }, Promise.resolve()).then(function () { retiredPhotos = {}; });
     }).then(function () {
       // Sales are pure-additive (never edited/deleted after creation), so the
       // safe merge is simple: append only what THIS session added since it last
@@ -5290,6 +5469,7 @@
       var rm = e.target.closest(".rm");
       if (rm) {
         var rmI = parseInt(rm.getAttribute("data-i"), 10);
+        retirePhoto(modalPhotos[rmI]);
         modalPhotos.splice(rmI, 1);
         modalPhotoColors.splice(rmI, 1);
         modalPhotoBgBackup.splice(rmI, 1);
@@ -5301,6 +5481,7 @@
         var ri = parseInt(rot.getAttribute("data-i"), 10);
         rot.disabled = true;
         rotateDataUri(modalPhotos[ri]).then(function (out) {
+          retirePhoto(modalPhotos[ri]); // la rotada se sube como archivo nuevo
           modalPhotos[ri] = out;
           renderModalPhotos();
         }).catch(function () {
@@ -5337,6 +5518,7 @@
           stopSpin();
           bgProcessing--;
           modalPhotoBgBackup[bgI] = bgSrc;
+          retirePhoto(modalPhotos[bgI]); // la versión sin fondo se sube aparte
           modalPhotos[bgI] = out;
           renderModalPhotos();
         }).catch(function (e2) {
@@ -5352,6 +5534,7 @@
       if (undo) {
         var undoI = parseInt(undo.getAttribute("data-i"), 10);
         if (modalPhotoBgBackup[undoI]) {
+          retirePhoto(modalPhotos[undoI]);
           modalPhotos[undoI] = modalPhotoBgBackup[undoI];
           modalPhotoBgBackup[undoI] = null;
           renderModalPhotos();

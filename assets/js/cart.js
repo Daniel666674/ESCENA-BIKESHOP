@@ -4,6 +4,17 @@
   var WA = "573107630504";
   var ROOT = window.ESCENA_ROOT || "";
 
+  // Nombres, marcas y etiquetas de variante entran en atributos HTML. 51
+  // productos del catálogo tienen una comilla en la talla (2.40", 20x2.50") y
+  // 32 la tienen en el nombre: sin escapar, data-variant="2.40"" se corta en
+  // la comilla, el atributo se lee como 2.40, sameLine() nunca encuentra la
+  // línea y los botones +, - y Quitar de esa fila quedan muertos.
+  function esc(v) {
+    return String(v == null ? "" : v)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
   function cop(n) {
     if (window.EscenaWholesale && window.EscenaWholesale.isActive()) n = window.EscenaWholesale.applyDiscount(n);
     return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
@@ -75,11 +86,68 @@
     cartSave(items);
     renderDrawer();
   }
+  /* ---- Reconciliación contra el catálogo vivo ----
+     El carrito vive en localStorage y puede quedarse ahí semanas. En ese
+     tiempo el producto puede agotarse, salir del catálogo o cambiar de
+     precio, y hasta ahora el pedido de WhatsApp salía igual: con el precio
+     viejo y con cosas que ya no existen. Nada se borra solo -- se marca, se
+     saca del total y del mensaje, y el cliente decide si lo quita. */
+
+  function liveProductOf(slug) {
+    var list = window.ESCENA_PRODUCTS;
+    if (!list) return undefined; // esta página no cargó el catálogo: no opinamos
+    for (var i = 0; i < list.length; i++) if (list[i] && list[i].slug === slug) return list[i];
+    return null;                 // el catálogo está cargado y el producto no está
+  }
+
+  // Unidades y precio de la combinación elegida. data-variant junta los grupos
+  // con " / " (p. ej. "20.5” / Negro"), y cada parte puede venir de sizes o de
+  // colors: las existencias reales son el mínimo entre las partes.
+  function liveLine(p, variant) {
+    var units = null, price = null;
+    if (variant) {
+      var partes = String(variant).split(" / ");
+      ["sizes", "colors"].forEach(function (k) {
+        (p[k] || []).forEach(function (v) {
+          if (!v || partes.indexOf(v.label) === -1) return;
+          if (typeof v.units === "number") units = (units === null) ? v.units : Math.min(units, v.units);
+          if (v.price > 0 && price === null) price = v.price;
+        });
+      });
+    }
+    if (units === null && window.ESCENA_STOCK) units = window.ESCENA_STOCK.available(p);
+    if (price === null && typeof p.price === "number" && p.price > 0) price = p.price;
+    return { units: units, price: price };
+  }
+
+  // Copia decorada, sin tocar localStorage (de eso se encarga renderDrawer).
+  function annotate(items) {
+    return items.map(function (i) {
+      var o = {};
+      for (var k in i) if (Object.prototype.hasOwnProperty.call(i, k)) o[k] = i[k];
+      var p = liveProductOf(i.slug);
+      if (p === undefined) return o;
+      if (p === null) { o.unavailable = "Ya no disponible"; return o; }
+      var live = liveLine(p, i.variant);
+      if (live.price !== null) o.price = live.price;
+      if (live.units !== null) {
+        if (live.units <= 0) { o.unavailable = "Agotado"; return o; }
+        o.max = live.units;
+        if (o.qty > live.units) o.qty = live.units;
+      }
+      return o;
+    });
+  }
+
+  function disponibles() {
+    return annotate(cartGet()).filter(function (i) { return !i.unavailable; });
+  }
+
   function cartCount() {
-    return cartGet().reduce(function (sum, i) { return sum + i.qty; }, 0);
+    return disponibles().reduce(function (sum, i) { return sum + i.qty; }, 0);
   }
   function cartTotal() {
-    return cartGet().reduce(function (sum, i) { return sum + i.qty * i.price; }, 0);
+    return disponibles().reduce(function (sum, i) { return sum + i.qty * i.price; }, 0);
   }
   function cartClear() {
     cartSave([]);
@@ -120,22 +188,25 @@
 
   function itemHTML(item) {
     var imgSrc = /^https?:\/\//.test(item.img) ? item.img : ROOT + item.img;
-    var href = ROOT + "producto/" + item.slug;
+    var href = ROOT + "producto/" + encodeURIComponent(item.slug);
+    var no = item.unavailable; // "" cuando está bien; si no, el motivo a mostrar
     return (
-      '<div class="cart-item" data-slug="' + item.slug + '" data-variant="' + (item.variant || "") + '">' +
-        '<a class="ci-img" href="' + href + '"><img src="' + imgSrc + '" alt="' + item.n + '" loading="lazy" width="62" height="62"></a>' +
+      '<div class="cart-item' + (no ? ' is-unavailable' : '') + '" data-slug="' + esc(item.slug) + '" data-variant="' + esc(item.variant || "") + '">' +
+        '<a class="ci-img" href="' + href + '"><img src="' + esc(imgSrc) + '" alt="' + esc(item.n) + '" loading="lazy" width="62" height="62"></a>' +
         '<div class="ci-info">' +
-          '<span class="ci-brand">' + item.brand + '</span>' +
-          '<h4 class="ci-name"><a href="' + href + '" style="color:inherit;text-decoration:none;">' + item.n + '</a></h4>' +
-          (item.variant ? '<span class="ci-variant">' + item.variant + '</span>' : '') +
-          '<span class="ci-qty">' +
-            '<button type="button" class="ci-dec" aria-label="Reducir cantidad">&minus;</button>' +
-            '<span>' + item.qty + '</span>' +
-            '<button type="button" class="ci-inc" aria-label="Aumentar cantidad">+</button>' +
-          '</span>' +
+          '<span class="ci-brand">' + esc(item.brand) + '</span>' +
+          '<h4 class="ci-name"><a href="' + href + '" style="color:inherit;text-decoration:none;">' + esc(item.n) + '</a></h4>' +
+          (item.variant ? '<span class="ci-variant">' + esc(item.variant) + '</span>' : '') +
+          (no ? '<span class="ci-unavailable">' + esc(no) + '</span>' : '') +
+          (no ? '' :
+            '<span class="ci-qty">' +
+              '<button type="button" class="ci-dec" aria-label="Reducir cantidad">&minus;</button>' +
+              '<span>' + item.qty + '</span>' +
+              '<button type="button" class="ci-inc" aria-label="Aumentar cantidad">+</button>' +
+            '</span>') +
           '<button type="button" class="ci-remove">Quitar</button>' +
         '</div>' +
-        '<div class="ci-price">' + cop(item.price * item.qty) + '</div>' +
+        '<div class="ci-price">' + (no ? '&mdash;' : cop(item.price * item.qty)) + '</div>' +
       '</div>'
     );
   }
@@ -149,16 +220,36 @@
     var body = document.getElementById("cartBody");
     var checkoutBtn = document.getElementById("cartCheckout");
     if (!body) return;
-    var items = cartGet();
     var orderRefEl = document.getElementById("cartOrderRef");
+    var crudos = cartGet();
+    var items = annotate(crudos);
+
+    // Persistir lo que la reconciliación corrigió (precio vigente, cantidad
+    // recortada al stock real) para que cartSetQty y el resto trabajen sobre
+    // datos ciertos. Solo se escribe si algo cambió de verdad.
+    var cambio = items.some(function (it, idx) {
+      var o = crudos[idx];
+      return o && (o.qty !== it.qty || o.price !== it.price || o.max !== it.max);
+    });
+    if (cambio) {
+      localStorage.setItem(CART_KEY, JSON.stringify(items.map(function (it) {
+        var o = {}; for (var k in it) if (k !== "unavailable") o[k] = it[k];
+        return o;
+      })));
+    }
+
+    var caidos = items.filter(function (i) { return i.unavailable; }).length;
     if (items.length === 0) {
       body.innerHTML = '<p class="cart-empty">Tu carrito está vacío.<br>Agregá partes desde la tienda.</p>';
       if (checkoutBtn) checkoutBtn.disabled = true;
       pendingOrderNumber = null;
       if (orderRefEl) orderRefEl.textContent = "";
     } else {
-      body.innerHTML = items.map(itemHTML).join("");
-      if (checkoutBtn) checkoutBtn.disabled = false;
+      body.innerHTML = items.map(itemHTML).join("") +
+        (caidos ? '<p class="cart-note">' + (caidos === 1
+            ? 'Un producto ya no está disponible y no se incluirá en el pedido.'
+            : caidos + ' productos ya no están disponibles y no se incluirán en el pedido.') + '</p>' : '');
+      if (checkoutBtn) checkoutBtn.disabled = (caidos === items.length);
       if (!pendingOrderNumber) pendingOrderNumber = makeOrderNumber();
       if (orderRefEl) orderRefEl.textContent = "Pedido #" + pendingOrderNumber + " · " + formatOrderDate();
     }
@@ -193,7 +284,7 @@
   }
 
   function buildCheckoutMessage(orderNumber) {
-    var items = cartGet();
+    var items = disponibles();
     var lines = [];
     lines.push("*ESCENA BMX*");
     lines.push("Pedido #" + orderNumber + " (" + formatOrderDate() + ")");

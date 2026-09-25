@@ -232,6 +232,34 @@
     return v ? (url + "?v=" + v) : url;
   }
 
+  // Cantidad que el cliente tiene puesta ahora mismo en el selector de la
+  // página de producto. Tolera que no exista (páginas sin selector) y que
+  // traiga basura escrita a mano.
+  function pdpQty() {
+    var input = document.querySelector(".pdp-actions .qty-input") || document.getElementById("qtyInput");
+    if (!input) return 1;
+    var v = parseInt(input.value, 10);
+    return (isNaN(v) || v < 1) ? 1 : v;
+  }
+
+  // El selector de cantidad de la plantilla solo cambia el valor del input:
+  // no avisa a nadie. Escuchamos aquí, en el archivo que ya es dueño del
+  // enlace, para no tener que editar las 394 páginas ya generadas. El
+  // setTimeout(0) es deliberado: nuestro listener y el de la plantilla son
+  // ambos "click", y sin diferirlo podríamos leer el valor de antes.
+  function watchQty() {
+    var refrescar = function () { setTimeout(rewriteStaticPDP, 0); };
+    document.addEventListener("click", function (e) {
+      if (e.target.closest("#qtyInc, #qtyDec, .pdp-qty button")) refrescar();
+    });
+    document.addEventListener("input", function (e) {
+      if (e.target.classList && e.target.classList.contains("qty-input")) refrescar();
+    });
+    document.addEventListener("change", function (e) {
+      if (e.target.classList && e.target.classList.contains("qty-input")) refrescar();
+    });
+  }
+
   function rewriteStaticPDP() {
     var btn = document.querySelector(".pdp-actions .add-cart-btn[data-price]");
     if (!btn) return;
@@ -248,7 +276,17 @@
       }
     }
 
-    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA, quiero pedir: " + n + " (" + brand + ") — " + cop(applyDiscount(raw)) + "." + pdpVariantSuffix() + " ¿Está disponible?\n" + pdpCanonicalUrl());
+    // Cantidad elegida en el selector. Antes el mensaje salía siempre en
+    // singular y con el precio unitario: alguien pedía 2 y a la tienda le
+    // llegaba lo mismo que si pidiera 1. Se lee aquí (y no se guarda) porque
+    // este enlace se reconstruye en cada cambio -- ver watchQty() abajo.
+    var qty = pdpQty();
+    var unit = applyDiscount(raw);
+    var detalle = (qty > 1)
+      ? qty + " x " + n + " (" + brand + ") — " + cop(unit) + " c/u (total " + cop(unit * qty) + ")."
+      : n + " (" + brand + ") — " + cop(unit) + ".";
+
+    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA, quiero pedir: " + detalle + pdpVariantSuffix() + " ¿Está disponible?\n" + pdpCanonicalUrl());
     var href = "https://wa.me/" + WA + "?text=" + msg;
     var buyLink = document.querySelector(".pdp-actions .btn-ink[href*=\"wa.me\"]");
     if (buyLink) buyLink.href = href;
@@ -271,6 +309,7 @@
     renderBanner();
     renderAccountBtn();
     rewriteStaticPDP();
+    watchQty();
 
     if (/[?&]login=1/.test(window.location.search)) openModal();
 

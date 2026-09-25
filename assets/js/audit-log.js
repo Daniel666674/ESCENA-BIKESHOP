@@ -5740,5 +5740,866 @@ window.ESCENA_AUDIT = [
    "poste-pivotal-trueno-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-17T16:40:12.772Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 4 productos editados, 3 fotos subidas",
+  "created": [
+   "poste-pivotal-merritt-negro",
+   "poste-pivotal-merrit-croamdo",
+   "poste-counter-layback-cromado"
+  ],
+  "edited": [
+   "tija-negra-02",
+   "poste-pivotal-trueno-negro",
+   "poste-siso-bmx-5150-raw",
+   "tija-negra-01"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T16:43:08.998Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "llanta-odyssey-broc-negra-2-25-2-40"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:04:53.284Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "poste-counter-layback-cromado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:20:34.373Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 24 productos editados",
+  "created": [
+   "llantas-alienation-prowler-keblar-negro-gris"
+  ],
+  "edited": [
+   "llanta-odyssey-supercircuit-keblar-negra-2-40",
+   "coraza_primo_555_2.45",
+   "llanta-cinema-nathan-williams-negro-2-50",
+   "llanta-optimus-black-burn-negra-2-35",
+   "llanta-chaoyang-cutting-edge-negra-2-25",
+   "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
+   "llanta-cst-orbit-knobby-negra-rin-16-2-125",
+   "llanta-tioga-factory-fs100-negra-2-10",
+   "llanta-innova-camufladas",
+   "llanta-innova-pro-gris-2-40",
+   "llanta-innova-pro-big-slick-cafe-2-40",
+   "llanta-innova-pro-negra-2-40",
+   "llanta-theory-proven-blanca-2-40",
+   "llanta-mutanty-whipper-azul-2-40",
+   "llanta-mutanty-whipper-roja-2-40",
+   "llanta-subrosa-matt-ray-roja-2-40",
+   "llanta-shadow-creeper-negra-2-40",
+   "llanta-odyssey-path-pro-negra-2-40",
+   "llanta-odyssey-broc-negra-2-25-2-40",
+   "llanta-s-m-speedball-negra-2-40",
+   "llanta-sunday-current-v2-negro-2-40",
+   "llanta-animal-ghl",
+   "llanta-sunday-street-sweeper-v2",
+   "llanta-federal-neptune"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:25:32.525Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "llantas-alienation-prowler-keblar-negro-gris"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:41:05.130Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 2 fotos subidas",
+  "created": [
+   "cajas-de-centro-demolition-bearing-kits"
+  ],
+  "edited": [
+   "cult-kit-rodamientos-bb"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:53:15.382Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 1 producto editado, 2 productos eliminados, 3 fotos subidas",
+  "created": [
+   "cajas-de-centro-rantbmx-cromada",
+   "cajas-de-centro-federal-v2-negro"
+  ],
+  "edited": [
+   "odyssey-kit-rodamientos-bb"
+  ],
+  "deleted": [
+   "animal-kit-rodamientos-bb",
+   "kit-rodamientos-bb-generico"
+  ]
+ },
+ {
+  "ts": "2026-09-17T17:56:07.124Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos editados",
+  "created": [],
+  "edited": [
+   "cult-kit-rodamientos-bb",
+   "cajas-de-centro-federal-v2-negro",
+   "odyssey-kit-rodamientos-bb",
+   "cajas-de-centro-demolition-bearing-kits",
+   "cajas-de-centro-rantbmx-cromada"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T17:58:21.299Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "cajas-de-centro-rantbmx-negra-22mm"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T18:09:47.968Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 6 productos editados, 2 fotos subidas",
+  "created": [
+   "caja-de-centro-s-m-negro-24mm",
+   "cajas-de-centro-fiend-ransom-cromada-22mm"
+  ],
+  "edited": [
+   "cult-kit-rodamientos-bb",
+   "odyssey-kit-rodamientos-bb",
+   "cajas-de-centro-federal-v2-negro",
+   "cajas-de-centro-demolition-bearing-kits",
+   "cajas-de-centro-rantbmx-negra-22mm",
+   "cajas-de-centro-rantbmx-cromada"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T20:26:12.776Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "6 productos nuevos, 6 fotos subidas",
+  "created": [
+   "rodamiento-espanol-19mm",
+   "cajas-de-centro-fate-negra-19mm",
+   "cajas-de-centro-fate-22mm",
+   "caja-de-centro-trueno-tornasol-22mm",
+   "cajas-de-centro-trueno-cromada",
+   "cajas-de-centro-trueno-negro"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T20:26:52.641Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "rodamiento-espanol-19mm"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T20:32:38.937Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "rodamiento-mid-19mm"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T20:46:05.745Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "rodamiento-6802-para-manzana-de-cassette"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T20:54:28.435Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "rodamiento-6902-para-cassette"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-17T23:42:02.099Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "manubrio-cromoly-negro-02"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-21T21:23:03.640Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "6 productos editados",
+  "created": [],
+  "edited": [
+   "cult-kit-rodamientos-bb",
+   "cajas-de-centro-fiend-ransom-cromada-22mm",
+   "odyssey-kit-rodamientos-bb",
+   "cajas-de-centro-federal-v2-negro",
+   "cajas-de-centro-demolition-bearing-kits",
+   "cajas-de-centro-rantbmx-negra-22mm"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-21T22:10:10.236Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "7 productos editados",
+  "created": [],
+  "edited": [
+   "cajas-de-centro-rantbmx-cromada",
+   "caja-de-centro-s-m-negro-24mm",
+   "cajas-de-centro-fate-22mm",
+   "cajas-de-centro-fate-negra-19mm",
+   "caja-de-centro-trueno-tornasol-22mm",
+   "cajas-de-centro-trueno-cromada",
+   "cajas-de-centro-trueno-negro"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-21T22:13:50.816Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "odyssey-buje-cassette-negro",
+   "buje-cassette-negro-plata",
+   "stolen-buje-trasero-cassette-negro"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-21T22:30:27.727Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 10 productos editados, 1 producto eliminado, 7 fotos subidas",
+  "created": [
+   "freecoaster-cult-crew",
+   "freecoaster-cult-hybrid-negro",
+   "freecoaster-cult-hybrid-cromado"
+  ],
+  "edited": [
+   "buje-cassette-negro-cromado",
+   "odyssey-buje-cassette-negro",
+   "stolen-buje-trasero-cassette-negro",
+   "mutany-mercury-elite-lhd-buje-negro",
+   "buje-cassette-negro-plata-02",
+   "buje-cassette-negro",
+   "mutany-guarda-pinon-negro",
+   "bsd-guarda-pinon-negro",
+   "rodamiento-6902-para-cassette",
+   "rodamiento-6802-para-manzana-de-cassette"
+  ],
+  "deleted": [
+   "buje-cassette-negro-plata"
+  ]
+ },
+ {
+  "ts": "2026-09-21T22:43:19.524Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 9 productos editados, 4 fotos subidas",
+  "created": [
+   "freecoaster-alienation-venus-cromado",
+   "freecoaster-alienation-venus-negro"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro",
+   "buje-cassette-negro",
+   "buje-cassette-negro-plata-02",
+   "mutany-mercury-elite-lhd-buje-negro",
+   "stolen-buje-trasero-cassette-negro"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-21T22:59:17.792Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 9 productos editados, 2 fotos subidas",
+  "created": [
+   "cassette-profile-mini-cromado"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro",
+   "buje-cassette-negro",
+   "buje-cassette-negro-plata-02",
+   "mutany-mercury-elite-lhd-buje-negro",
+   "stolen-buje-trasero-cassette-negro"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-21T23:01:08.338Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 9 productos editados, 2 fotos subidas",
+  "created": [
+   "cassette-profile-mini-azul"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro",
+   "buje-cassette-negro",
+   "buje-cassette-negro-plata-02",
+   "mutany-mercury-elite-lhd-buje-negro",
+   "cassette-profile-mini-cromado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-22T18:42:18.746Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "federal-horquilla-cromada"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-22T18:55:33.641Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "poste-pivotal-merritt-negro",
+   "poste-pivotal-merrit-croamdo"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-22T19:11:26.708Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 fotos subidas",
+  "created": [
+   "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T01:27:25.560Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 3 fotos subidas",
+  "created": [
+   "tenedor-fiend-process-v2-cromado"
+  ],
+  "edited": [
+   "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T01:40:13.034Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "tenedor-fiction-shank"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T10:43:09.757Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "tenedor-fiend-process-v2-cromado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T10:52:59.076Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "tenedor-fiction-shank-cromado"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:01:13.805Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 4 fotos subidas",
+  "created": [],
+  "edited": [
+   "tenedor-fiction-shank-cromado",
+   "tenedor-fiction-shank"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:01:40.453Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto eliminado",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "grips-odi-xl"
+  ]
+ },
+ {
+  "ts": "2026-09-23T11:10:51.000Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 3 fotos subidas",
+  "created": [
+   "timon-merritt-slaughter-4pc-negro"
+  ],
+  "edited": [
+   "manubrio-cromoly-negro-02"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:25:19.549Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 10 productos editados, 2 fotos subidas",
+  "created": [
+   "timon-cult-crew-cromado"
+  ],
+  "edited": [
+   "manubrio-cromoly-negro-02",
+   "manubrio-cromoly-negro-04",
+   "timon-gw-destructor-tornasol",
+   "timon-gw-gorila-4pc-negro",
+   "timon-merritt-slaughter-4pc-negro",
+   "timon-federal-assaut",
+   "manubrio-cromoly-negro-03",
+   "timon-colony-rick-4-piezas",
+   "manubrio-cromoly-negro-01",
+   "timon-fiend-reynolds"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:26:34.247Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "9 productos editados",
+  "created": [],
+  "edited": [
+   "tenedor-cult-sect-v4-cromado-18mm",
+   "federal-horquilla-cromada",
+   "tenedor-fiction-shank",
+   "tenedor-gw-destructor-tornasol",
+   "tenedor-fiend-process-v2-cromado",
+   "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz",
+   "tenedor-colony-sweet-thoot",
+   "tall-order-ramp",
+   "tenedor-fiction-shank-cromado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:27:28.419Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-cult-crew-cromado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:31:33.688Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "timon-cult-crew-cromado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:34:16.087Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "kit-hardware-bielas-negro",
+   "bielas-optimus-medusa-derecha-8t-cromada",
+   "bielas-stranger-level-8t-negra",
+   "bielas-optimus-medusa-derecha-8t"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:35:41.748Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-cult-crew-cromado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:36:09.663Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-cult-heavens-gate-4p-cromado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:38:44.056Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "timon-cult-havens-gate-4pc-cromado"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:43:01.363Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "13 productos editados",
+  "created": [],
+  "edited": [
+   "timon-cult-havens-gate-4pc-cromado",
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "timon-federal-assaut",
+   "manubrio-cromoly-negro-03",
+   "timon-colony-rick-4-piezas",
+   "timon-merritt-slaughter-4pc-negro",
+   "manubrio-cromoly-negro-01",
+   "timon-cult-crew-cromado",
+   "manubrio-cromoly-negro-02",
+   "timon-fiend-reynolds",
+   "timon-cult-heavens-gate-4p-cromado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:51:49.628Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 11 productos editados, 1 foto subida",
+  "created": [
+   "timon-fiend-reynolds-cromado"
+  ],
+  "edited": [
+   "timon-fiend-reynolds",
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "timon-federal-assaut",
+   "manubrio-cromoly-negro-03",
+   "timon-colony-rick-4-piezas",
+   "timon-merritt-slaughter-4pc-negro",
+   "manubrio-cromoly-negro-01",
+   "timon-cult-crew-cromado",
+   "manubrio-cromoly-negro-02"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T11:53:35.096Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "tenedor-fiction-shank-cromado"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T12:03:03.373Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 9 productos editados, 2 fotos subidas",
+  "created": [
+   "manzana-delantera-federal-motion-negra"
+  ],
+  "edited": [
+   "manzana-delantera-ontrail-nemesis",
+   "manzana-delantera-ontrail-nemesis-2",
+   "manzana-optimus-gold",
+   "manzana-delantera-stranger-ballast",
+   "manzana-delantera-primo-balance",
+   "manzana-alienation-iluminiati-cromada",
+   "manzana-delantera-alienation-illunimati",
+   "manzana-delantera-alienation-venus",
+   "manzana-federal-motion"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T12:03:31.008Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "manzana-delantera-federal-motion-negra"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T12:18:36.466Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 22 productos editados, 1 foto subida",
+  "created": [
+   "plato-fiend-omicron-guardia-28t"
+  ],
+  "edited": [
+   "plato-fiend-reynols-purpura",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "federal-pinon-gris",
+   "cult-pinon-negro",
+   "plato-fate-guardia-negro-28t",
+   "pinon-snowflake-plata",
+   "plato-strangergram-guardia-negro-28t",
+   "plato-volume-guardia-28t",
+   "plato-s-m-goring-28t",
+   "plato-gw-corona-negro",
+   "plato-gw-corona-negro-2",
+   "plato-gw-kl215-negro",
+   "plato-odyssey-big-boyd-28t",
+   "plato-trueno-exotic-tornasol",
+   "plato-xposure-infinity-25t",
+   "plato-federal-logo-guard-28t",
+   "plato-trueno-exotic",
+   "plato-sunday-sabretooth-v2-negro-28t",
+   "fiend-pinon-25t-negro",
+   "plato-fitbikeco-key-guard-v2",
+   "odyssey-pinon-28t-negro"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T22:24:38.992Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 8 productos editados, 1 producto eliminado, 4 fotos subidas",
+  "created": [
+   "cassette-trueno-v2-negro",
+   "cassette-trueno-v2-cromado",
+   "cassette-trueno-v2-tornasol"
+  ],
+  "edited": [
+   "cassette-profile-mini-cromado",
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro",
+   "cassette-profile-mini-azul",
+   "stolen-buje-trasero-cassette-negro"
+  ],
+  "deleted": [
+   "buje-cassette-negro"
+  ]
+ },
+ {
+  "ts": "2026-09-23T22:43:57.247Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 7 productos editados, 5 fotos subidas",
+  "created": [
+   "cassette-colony-wasp-cromado",
+   "cassette-colony-wasp-negro"
+  ],
+  "edited": [
+   "freecoaster-alienation-venus-negro",
+   "freecoaster-alienation-venus-cromado",
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T23:08:41.891Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 16 productos editados, 10 fotos subidas",
+  "created": [
+   "cassette-cut-crew-bidireccional-negro",
+   "cassette-federal-stance-negro",
+   "freecoaster-federal-stance-negro"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro",
+   "cassette-colony-wasp-cromado",
+   "cassette-colony-wasp-negro",
+   "cassette-trueno-v2-negro",
+   "cassette-trueno-v2-cromado",
+   "cassette-trueno-v2-tornasol",
+   "buje-cassette-negro-plata-02",
+   "mutany-mercury-elite-lhd-buje-negro",
+   "cassette-profile-mini-azul",
+   "cassette-profile-mini-cromado",
+   "stolen-buje-trasero-cassette-negro",
+   "freecoaster-alienation-venus-negro"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T23:09:16.295Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "plato-fiend-omicron-guardia-28t"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-23T23:20:52.478Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 3 productos eliminados, 4 fotos subidas",
+  "created": [
+   "rin-federal-aero-xl",
+   "rin-alienation-vandal-negro",
+   "rin-alienation-skylark-negro"
+  ],
+  "edited": [],
+  "deleted": [
+   "eclat-trippin-rin-negro",
+   "aros_fate_negro",
+   "aros_eclat_bondi_cromados"
+  ]
+ },
+ {
+  "ts": "2026-09-23T23:42:36.323Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 1 foto subida",
+  "created": [
+   "rin-demolition-zero-plus-negro"
+  ],
+  "edited": [],
+  "deleted": [
+   "aro_demolition_zero_plus_negro"
+  ]
+ },
+ {
+  "ts": "2026-09-24T22:40:06.231Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "plato-fiend-omicron-guardia-28t"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-24T22:50:02.749Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 4 productos editados, 3 fotos subidas",
+  "created": [
+   "protector-mutanty-immortal-no-drive-trasero",
+   "protector-de-manzana-delantera-mutanty-inmortal"
+  ],
+  "edited": [
+   "mutany-guarda-pinon-negro",
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "bsd-guarda-pinon-negro"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-24T23:00:18.327Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 3 fotos subidas",
+  "created": [
+   "rin-cult-match-v2-negro"
+  ],
+  "edited": [],
+  "deleted": [
+   "aros_stolen_chamber_cromados"
+  ]
+ },
+ {
+  "ts": "2026-09-24T23:04:23.082Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "rin-cult-match-v2-cromado"
+  ],
+  "edited": [],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-24T23:43:05.390Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 1 foto subida",
+  "created": [
+   "rin-stolen-rampage-cromado"
+  ],
+  "edited": [
+   "kit-hardware-bielas-plata"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-24T23:56:10.434Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "kit-hardware-bielas-plata",
+   "bielas-fitbikeco-blunt-cromada"
+  ],
+  "deleted": []
+ },
+ {
+  "ts": "2026-09-24T23:57:37.695Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "bielas-fitbikeco-blunt-negra"
+  ],
+  "deleted": []
  }
 ];
