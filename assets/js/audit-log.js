@@ -6785,5 +6785,23 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T21:31:43.800Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 4 productos editados, 1 producto eliminado, 5 fotos subidas",
+  "created": [
+   "silla-pivotal-federal-tie-die",
+   "silla-pivotal-federal-logo-negro"
+  ],
+  "edited": [
+   "silla-pivotal-federal-cuero-logo-negro",
+   "silla-pivotal-federal-logo-blanco",
+   "silla-pivotal-federal-roses-gris",
+   "silla-pivotal-federal-roses-roja"
+  ],
+  "deleted": [
+   "silla-pivotal-federal-cuerdo-logo-negro"
+  ]
  }
 ];
