@@ -1,5 +1,133 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Llanta Merritt FT1 Negra",
+  "brand": "Merritt",
+  "cat": "llantas",
+  "spec": "Material: compuesto de caucho dobleificaciones: -  - Tamaño: 20 x 2,35\" - Diámetro inflado: 62 mm - Firma de Brian Foster",
+  "price": 160000,
+  "sku": "LLA-MER-006",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/llanta-merritt-ft1-negra-muh7o3unm8tk.jpg?v=1790355889145",
+   "assets/img/products/llanta-merritt-ft1-negra-muh7o5bty2ud.jpg?v=1790355890692"
+  ],
+  "sizes": [
+   {
+    "label": "2.35\"",
+    "units": 2
+   }
+  ],
+  "slug": "llanta-merritt-ft1-negra",
+  "img": "assets/img/products/llanta-merritt-ft1-negra-muh7o3unm8tk.jpg?v=1790355889145"
+ },
+ {
+  "n": "Llanta Merrit Option Negra",
+  "brand": "Merritt",
+  "cat": "llantas",
+  "spec": "",
+  "price": 160000,
+  "sku": "LLA-MER-005",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/llanta-merrit-option-negra-muh7o6iso819.jpg?v=1790355893182",
+   "assets/img/products/llanta-merrit-option-negra-muh7o8fyl6v2.jpg?v=1790355895172"
+  ],
+  "sizes": [
+   {
+    "label": "2.35\"",
+    "units": 2,
+    "price": 160000
+   }
+  ],
+  "slug": "llanta-merrit-option-negra",
+  "img": "assets/img/products/llanta-merrit-option-negra-muh7o6iso819.jpg?v=1790355893182"
+ },
+ {
+  "n": "Llanta Merritt Phantom Blanca",
+  "brand": "Merritt",
+  "cat": "llantas",
+  "spec": "Material: compuesto de caucho doble - Medida: 20 x 2.50\" - Peso 649 gr",
+  "price": 160000,
+  "sku": "LLA-MER-004",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "2.50\"",
+    "units": 2
+   }
+  ],
+  "slug": "llanta-merritt-phantom-blanca",
+  "order": 320,
+  "img": "assets/img/products/llanta-merritt-phantom-blanca-muh7o9z89e4p.jpg?v=1790355896765"
+ },
+ {
+  "n": "Llanta Merritt Phantom Negra",
+  "brand": "Merritt",
+  "cat": "llantas",
+  "spec": "Material: compuesto de caucho doble - Medida: 20 x 2.50\" - Peso 649 gr",
+  "price": 160000,
+  "sku": "LLA-MER-003",
+  "units": 4,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "2.50\"",
+    "units": 4,
+    "price": 160000
+   }
+  ],
+  "slug": "llanta-merritt-phantom-negra",
+  "order": 300,
+  "img": "assets/img/products/llanta-merritt-phantom-negra-muh7ob7hlxks.jpg?v=1790355899334"
+ },
+ {
+  "n": "Llanta Merritt Phantom Morada",
+  "brand": "Merritt",
+  "cat": "llantas",
+  "spec": "Material: compuesto de caucho doble - Medida: 20 x 2.50\" - Peso 649 gr",
+  "price": 160000,
+  "sku": "LLA-MER-002",
+  "units": 3,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "2.50\"",
+    "units": 3,
+    "price": 160000
+   }
+  ],
+  "slug": "llanta-merritt-phantom-morada",
+  "order": 310,
+  "img": "assets/img/products/llanta-merritt-phantom-morada-muh7od6uyrap.jpg?v=1790355901255"
+ },
+ {
+  "n": "Llanta Merritt Phantom Aqua",
+  "brand": "Merritt",
+  "cat": "llantas",
+  "spec": "Material: compuesto de caucho doble - Medida: 20 x 2.50\" - Peso 649 gr",
+  "price": 160000,
+  "sku": "LLA-MER-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/llanta-merritt-phantom-aqua-muh7oeo8zdrv.jpg?v=1790355902907",
+   "assets/img/products/llanta-merritt-phantom-aqua-muh7ofy44os7.jpg?v=1790355904406"
+  ],
+  "sizes": [
+   {
+    "label": "2.50\"",
+    "units": 2,
+    "price": 160000
+   }
+  ],
+  "slug": "llanta-merritt-phantom-aqua",
+  "order": 330,
+  "img": "assets/img/products/llanta-merritt-phantom-aqua-muh7oeo8zdrv.jpg?v=1790355902907"
+ },
+ {
   "n": "Rin Stolen Rampage Cromado",
   "brand": "Stolen",
   "cat": "rines",
