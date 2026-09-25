@@ -6750,5 +6750,19 @@ window.ESCENA_AUDIT = [
    "pedales-merritt-p1-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T21:10:25.994Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 2 productos editados, 4 fotos subidas",
+  "created": [
+   "silla-pivotal-federal-roses-gris",
+   "silla-pivotal-federal-roses-roja"
+  ],
+  "edited": [
+   "silla-pivotal-bsd-safari",
+   "silla-pivotal-primo-breaker-logo-blanco"
+  ],
+  "deleted": []
  }
 ];
