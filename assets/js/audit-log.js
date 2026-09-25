@@ -6624,5 +6624,15 @@ window.ESCENA_AUDIT = [
    "odyssey-punos-negro-gris"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T16:15:53.806Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cajas-integrado-odyssey"
+  ],
+  "deleted": []
  }
 ];
