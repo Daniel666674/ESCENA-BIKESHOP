@@ -6867,5 +6867,19 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T22:59:10.688Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 productos editados, 1 foto subida",
+  "created": [
+   "rin-stl-j40c-azul"
+  ],
+  "edited": [
+   "rin-stl-j40c-morado",
+   "rin-stl-j40c-rojo",
+   "rin-stl-j40c-dorado"
+  ],
+  "deleted": []
  }
 ];
