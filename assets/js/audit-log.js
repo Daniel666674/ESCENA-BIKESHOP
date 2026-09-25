@@ -6691,5 +6691,34 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T17:58:29.059Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 18 productos editados, 1 foto subida",
+  "created": [
+   "pedales-merritt-p1-aqua"
+  ],
+  "edited": [
+   "llanta-merritt-ft1-negra",
+   "llanta-merrit-option-negra",
+   "llanta-merritt-phantom-negra",
+   "llanta-odyssey-supercircuit-keblar-negra-2-40",
+   "llanta-merritt-phantom-morada",
+   "llanta-merritt-phantom-blanca",
+   "llanta-merritt-phantom-aqua",
+   "coraza_primo_555_2.45",
+   "llanta-cinema-nathan-williams-negro-2-50",
+   "llanta-optimus-black-burn-negra-2-35",
+   "llanta-chaoyang-cutting-edge-negra-2-25",
+   "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
+   "llanta-cst-orbit-knobby-negra-rin-16-2-125",
+   "llanta-tioga-factory-fs100-negra-2-10",
+   "llanta-innova-camufladas",
+   "llanta-innova-pro-gris-2-40",
+   "llanta-innova-pro-big-slick-cafe-2-40",
+   "llanta-innova-pro-negra-2-40"
+  ],
+  "deleted": []
  }
 ];
