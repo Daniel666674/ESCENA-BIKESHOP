@@ -322,14 +322,13 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Aluminio CNC 6061 - Relacion: 28T  Peso: 0,6 libras Tipo de producto: Piñón",
   "price": 340000,
   "sku": "PLT-FND-002",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "imgZoom": 134,
   "sizes": [
    {
     "label": "28T",
-    "units": 2,
-    "price": 340000
+    "units": 1
    }
   ],
   "slug": "plato-fiend-omicron-guardia-28t",
@@ -1021,7 +1020,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Pivotal forjada en aluminio 6061 - largas (25,4 mm x 330 mm) - para mayor versatilidad de altura. Peso: 130 g.",
   "price": 160000,
   "sku": "PST-MER-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "slug": "poste-pivotal-merrit-croamdo",
   "img": "assets/img/products/poste-pivotal-merrit-croamdo-mu5r9g272rn1.jpg?v=1789663203149"
