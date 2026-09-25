@@ -6644,5 +6644,16 @@ window.ESCENA_AUDIT = [
    "marco-fitbikeco-str-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T16:24:42.286Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "cassette-colony-wasp-cromado",
+   "mutany-mercury-elite-lhd-buje-negro"
+  ],
+  "deleted": []
  }
 ];
