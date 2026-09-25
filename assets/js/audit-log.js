@@ -6846,5 +6846,16 @@ window.ESCENA_AUDIT = [
    "rin-stolen-chamber-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T22:35:50.659Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 2 fotos subidas",
+  "created": [
+   "rin-stl-j40c-rojo",
+   "rin-stl-j40c-dorado"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
