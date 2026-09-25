@@ -286,7 +286,7 @@
       ? qty + " x " + n + " (" + brand + ") — " + cop(unit) + " c/u (total " + cop(unit * qty) + ")."
       : n + " (" + brand + ") — " + cop(unit) + ".";
 
-    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA 🐕, quiero pedir: " + detalle + pdpVariantSuffix() + " ¿Está disponible?\n" + pdpCanonicalUrl());
+    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA, quiero pedir: " + detalle + pdpVariantSuffix() + " ¿Está disponible?\n" + pdpCanonicalUrl());
     var href = "https://wa.me/" + WA + "?text=" + msg;
     var buyLink = document.querySelector(".pdp-actions .btn-ink[href*=\"wa.me\"]");
     if (buyLink) buyLink.href = href;

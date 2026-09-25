@@ -28,6 +28,7 @@
 .cart-item .ci-remove { display: block; margin-top: .5rem; background: none; border: none; color: var(--muted); font-size: .7rem; letter-spacing: .05em; text-decoration: underline; cursor: pointer; padding: 0; }
 .cart-item .ci-remove:hover { color: var(--ink); }
 .cart-foot { padding: 1.1rem 1.4rem 1.4rem; border-top: 1px solid var(--line); }
+.cart-order-ref { font-size: .7rem; letter-spacing: .04em; color: var(--muted); font-weight: 700; text-transform: uppercase; margin-bottom: .6rem; }
 .cart-subtotal { display: flex; justify-content: space-between; align-items: center; margin-bottom: .9rem; font-size: .9rem; }
 .cart-subtotal .amt { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; }
 .cart-checkout { display: flex; align-items: center; justify-content: center; gap: .5rem; width: 100%; background: #25D366; color: #fff; border: none; border-radius: 8px; padding: .95rem 1rem; font-weight: 700; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; font-family: inherit; transition: opacity .2s; margin-bottom: .6rem; }

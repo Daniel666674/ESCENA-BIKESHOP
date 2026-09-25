@@ -20,6 +20,23 @@
     return "$" + Math.round(n).toLocaleString("es-CO") + " COP";
   }
 
+  // Order number is per-checkout, not a global sequential counter (this is a
+  // static site with no backend/database, so there's no shared source of
+  // truth across customers) — date + a short random suffix keeps it unique
+  // and readable without pretending to be a real sequential order system.
+  function makeOrderNumber() {
+    var d = new Date();
+    var pad = function (n) { return String(n).padStart(2, "0"); };
+    var datePart = String(d.getFullYear()).slice(2) + pad(d.getMonth() + 1) + pad(d.getDate());
+    var suffix = Math.floor(100 + Math.random() * 900);
+    return "ESC-" + datePart + "-" + suffix;
+  }
+  function formatOrderDate() {
+    var months = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+    var d = new Date();
+    return d.getDate() + " " + months[d.getMonth()] + ", " + d.getFullYear();
+  }
+
   function cartGet() {
     try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
     catch (e) { return []; }
@@ -144,6 +161,7 @@
         '<div class="cart-head"><h3>Tu carrito</h3><button class="cart-close" id="cartClose" aria-label="Cerrar">&times;</button></div>' +
         '<div class="cart-body" id="cartBody"></div>' +
         '<div class="cart-foot">' +
+          '<div class="cart-order-ref" id="cartOrderRef"></div>' +
           '<div class="cart-subtotal"><span>Subtotal</span><span class="amt" id="cartSubtotal">$0 COP</span></div>' +
           '<button class="cart-checkout" id="cartCheckout" type="button">' +
             '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>' +
@@ -193,10 +211,16 @@
     );
   }
 
+  // Kept stable across re-renders while the cart has items, so the number the
+  // customer sees in the drawer is the exact one that goes out on WhatsApp —
+  // it only resets once the cart is emptied (order sent, or cleared).
+  var pendingOrderNumber = null;
+
   function renderDrawer() {
     var body = document.getElementById("cartBody");
     var checkoutBtn = document.getElementById("cartCheckout");
     if (!body) return;
+    var orderRefEl = document.getElementById("cartOrderRef");
     var crudos = cartGet();
     var items = annotate(crudos);
 
@@ -218,12 +242,16 @@
     if (items.length === 0) {
       body.innerHTML = '<p class="cart-empty">Tu carrito está vacío.<br>Agregá partes desde la tienda.</p>';
       if (checkoutBtn) checkoutBtn.disabled = true;
+      pendingOrderNumber = null;
+      if (orderRefEl) orderRefEl.textContent = "";
     } else {
       body.innerHTML = items.map(itemHTML).join("") +
         (caidos ? '<p class="cart-note">' + (caidos === 1
             ? 'Un producto ya no está disponible y no se incluirá en el pedido.'
             : caidos + ' productos ya no están disponibles y no se incluirán en el pedido.') + '</p>' : '');
       if (checkoutBtn) checkoutBtn.disabled = (caidos === items.length);
+      if (!pendingOrderNumber) pendingOrderNumber = makeOrderNumber();
+      if (orderRefEl) orderRefEl.textContent = "Pedido #" + pendingOrderNumber + " · " + formatOrderDate();
     }
     var subtotalEl = document.getElementById("cartSubtotal");
     if (subtotalEl) subtotalEl.textContent = cop(cartTotal());
@@ -255,13 +283,16 @@
     drawerOpenedFrom = null;
   }
 
-  function buildCheckoutMessage() {
+  function buildCheckoutMessage(orderNumber) {
     var items = disponibles();
     var lines = [];
-    if (window.EscenaWholesale && window.EscenaWholesale.isActive()) lines.push("🏷️ PEDIDO MAYORISTA (15% aplicado)");
-    lines.push("Hola ESCENA 🐕, quiero pedir:");
-    items.forEach(function (i) {
-      lines.push("• " + i.qty + "x " + i.n + " (" + i.brand + ")" + (i.variant ? " [" + i.variant + "]" : "") + " — " + cop(i.price * i.qty));
+    lines.push("*ESCENA BMX*");
+    lines.push("Pedido #" + orderNumber + " (" + formatOrderDate() + ")");
+    if (window.EscenaWholesale && window.EscenaWholesale.isActive()) lines.push("🏷️ Mayorista (15% aplicado)");
+    lines.push("");
+    items.forEach(function (i, idx) {
+      lines.push((idx + 1) + ". " + i.n + " (" + i.brand + ")" + (i.variant ? " [" + i.variant + "]" : ""));
+      lines.push("   x" + i.qty + " — " + cop(i.price * i.qty));
       // Each product's own page has correct og:image/og:title/price, so its
       // link unfurls into a photo preview inside WhatsApp — the closest thing
       // to "show the actual product picture" that a wa.me message supports.
@@ -270,9 +301,10 @@
       // WhatsApp's crawler cached against the bare URL the first time.
       if (i.slug) {
         var vMatch = i.img && i.img.indexOf("?v=") > -1 ? i.img.split("?v=")[1] : null;
-        lines.push("  https://escenabmx.com/producto/" + i.slug + (vMatch ? "?v=" + vMatch : ""));
+        lines.push("   https://escenabmx.com/producto/" + i.slug + (vMatch ? "?v=" + vMatch : ""));
       }
     });
+    lines.push("");
     lines.push("Total: " + cop(cartTotal()));
     lines.push("¿Está todo disponible?");
     return lines.join("\n");
@@ -322,7 +354,7 @@
       }
       var checkoutBtn = e.target.closest("#cartCheckout");
       if (checkoutBtn && !checkoutBtn.disabled) {
-        var msg = encodeURIComponent(buildCheckoutMessage());
+        var msg = encodeURIComponent(buildCheckoutMessage(pendingOrderNumber || makeOrderNumber()));
         window.open("https://wa.me/" + WA + "?text=" + msg, "_blank", "noopener");
         cartClear();
         closeDrawer();

@@ -1061,7 +1061,7 @@ function onWaQuote(){
   var rows = pickedRows();
   var lines = [];
   if (window.EscenaWholesale && window.EscenaWholesale.isActive()) lines.push("🏷️ PEDIDO MAYORISTA (15% aplicado)");
-  lines.push("Hola ESCENA 🐕, quiero armar mi BMX" + (state.style ? (" estilo " + STYLE_SPECS[state.style].label) : "") + ":");
+  lines.push("Hola ESCENA, quiero armar mi BMX" + (state.style ? (" estilo " + STYLE_SPECS[state.style].label) : "") + ":");
   lines.push("Estatura: " + state.height + " cm (TT recomendado " + bracketFor(state.height).tt + ")");
   if (rows.length) {
     rows.forEach(function(r){ lines.push("• " + r.label + ": " + r.product.n + " (" + r.product.brand + ") — " + cop(r.product.price)); });

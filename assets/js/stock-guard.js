@@ -126,7 +126,7 @@
       titulo: "Agotado temporalmente",
       texto: "Se nos acabó por ahora. Escríbenos y te avisamos apenas vuelva a entrar.",
       cta: "Avísame cuando llegue",
-      wa: "Hola ESCENA 🐕, quiero que me avisen cuando vuelva a entrar: " + titulo + ".\n" + url
+      wa: "Hola ESCENA, quiero que me avisen cuando vuelva a entrar: " + titulo + ".\n" + url
     });
     setSchema("https://schema.org/OutOfStock");
   }
@@ -152,7 +152,7 @@
     if (waLink) {
       waLink.textContent = "Preguntar por algo similar";
       waLink.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(
-        "Hola ESCENA 🐕, vi este producto en la web pero ya no está disponible: " +
+        "Hola ESCENA, vi este producto en la web pero ya no está disponible: " +
         titulo + ".\n¿Tienen algo parecido?\n" + url);
     }
 
@@ -160,7 +160,7 @@
       titulo: "Ya no manejamos este producto",
       texto: "Salió de nuestro catálogo. Abajo te dejamos alternativas de la misma categoría, o escríbenos y te ayudamos a encontrar el reemplazo.",
       cta: "Buscar un reemplazo",
-      wa: "Hola ESCENA 🐕, busco un reemplazo para: " + titulo + ".\n" + url
+      wa: "Hola ESCENA, busco un reemplazo para: " + titulo + ".\n" + url
     });
     setSchema("https://schema.org/Discontinued");
   }
