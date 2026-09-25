@@ -1,5 +1,16 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Merritt P1 Aqua",
+  "brand": "Merritt",
+  "cat": "pedales",
+  "spec": "",
+  "price": 85000,
+  "sku": "PED-MER-001",
+  "units": 2,
+  "slug": "pedales-merritt-p1-aqua",
+  "img": "assets/img/products/pedales-merritt-p1-aqua-muh9kvgadi0f.jpg?v=1790359101496"
+ },
+ {
   "n": "Llanta Merritt FT1 Negra",
   "brand": "Merritt",
   "cat": "llantas",
@@ -19,6 +30,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-merritt-ft1-negra",
+  "order": 230,
   "img": "assets/img/products/llanta-merritt-ft1-negra-muh7o3unm8tk.jpg?v=1790355889145"
  },
  {
@@ -42,6 +54,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-merrit-option-negra",
+  "order": 220,
   "img": "assets/img/products/llanta-merrit-option-negra-muh7o6iso819.jpg?v=1790355893182"
  },
  {
@@ -60,7 +73,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-merritt-phantom-blanca",
-  "order": 320,
+  "order": 200,
   "img": "assets/img/products/llanta-merritt-phantom-blanca-muh7o9z89e4p.jpg?v=1790355896765"
  },
  {
@@ -80,7 +93,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-merritt-phantom-negra",
-  "order": 300,
+  "order": 180,
   "img": "assets/img/products/llanta-merritt-phantom-negra-muh7ob7hlxks.jpg?v=1790355899334"
  },
  {
@@ -100,7 +113,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-merritt-phantom-morada",
-  "order": 310,
+  "order": 190,
   "img": "assets/img/products/llanta-merritt-phantom-morada-muh7od6uyrap.jpg?v=1790355901255"
  },
  {
@@ -124,7 +137,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-merritt-phantom-aqua",
-  "order": 330,
+  "order": 210,
   "img": "assets/img/products/llanta-merritt-phantom-aqua-muh7oeo8zdrv.jpg?v=1790355902907"
  },
  {
@@ -1891,7 +1904,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-innova-pro-gris-2-40",
-  "order": 200,
+  "order": 260,
   "imgFit": "cover",
   "img": "assets/img/products/llanta-innova-pro-gris-2-40-mtw344eh68fb.jpg?v=1789078448788"
  },
@@ -2788,7 +2801,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-cinema-nathan-williams-negro-2-50",
-  "order": 270,
+  "order": 330,
   "imgFit": "cover",
   "img": "assets/img/products/llanta-cinema-nathan-williams-negro-2-50-mt9bxnx3uium.jpg?v=1788093948129"
  },
@@ -2830,7 +2843,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-odyssey-supercircuit-keblar-negra-2-40",
-  "order": 290,
+  "order": 350,
   "imgFit": "cover",
   "img": "assets/img/products/llanta-odyssey-supercircuit-keblar-negra-2-40-mt9askrguiae.jpg?v=1788093948129"
  },
@@ -2871,7 +2884,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-cst-orbit-knobby-negra-rin-16-2-125",
-  "order": 230,
+  "order": 290,
   "imgFit": "cover",
   "img": "assets/img/products/llanta-cst-orbit-knobby-negra-rin-16-2-125-mt9a85n17q91.jpg?v=1788093948129"
  },
@@ -2897,7 +2910,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
-  "order": 240,
+  "order": 310,
   "imgFit": "cover",
   "img": "assets/img/products/llanta-chaoyang-freestyle-bmx-rin-16-2-125-mt9a872hdwt4.jpg?v=1788093948129"
  },
@@ -2923,7 +2936,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-chaoyang-cutting-edge-negra-2-25",
-  "order": 250,
+  "order": 300,
   "imgFit": "cover",
   "img": "assets/img/products/llanta-chaoyang-cutting-edge-negra-2-25-mt98dnsnam9b.jpg?v=1788093948129"
  },
@@ -2944,7 +2957,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-optimus-black-burn-negra-2-35",
-  "order": 260,
+  "order": 320,
   "imgs": [
    "assets/img/products/llanta-optimus-black-burn-negra-2-35-mt98dsaikgps.jpg?v=1788093948129",
    "assets/img/products/llanta-optimus-black-burn-negra-2-35-mu33piezdyy0.jpg?v=1789502710148",
@@ -3000,7 +3013,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-innova-pro-big-slick-cafe-2-40",
-  "order": 190,
+  "order": 250,
   "img": "assets/img/products/llanta-innova-pro-big-slick-cafe-2-40-mt97p10kiseh.jpg?v=1788093948129"
  },
  {
@@ -3020,7 +3033,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-innova-pro-negra-2-40",
-  "order": 180,
+  "order": 240,
   "imgFit": "cover",
   "img": "assets/img/products/llanta-innova-pro-negra-2-40-mt97p2xd9627.jpg?v=1788093948129"
  },
@@ -3085,7 +3098,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "llanta-tioga-factory-fs100-negra-2-10",
-  "order": 220,
+  "order": 270,
   "imgFit": "cover",
   "img": "assets/img/products/llanta-tioga-factory-fs100-negra-2-10-mt97cv103qjz.jpg?v=1788093948129"
  },
@@ -3837,7 +3850,7 @@ window.ESCENA_PRODUCTS = [
     6
    ]
   },
-  "order": 210,
+  "order": 280,
   "imgFit": "cover",
   "img": "assets/img/products/llanta-innova-camufladas-mu3657vo50ya.jpg?v=1789506801867"
  },
@@ -8547,7 +8560,7 @@ window.ESCENA_PRODUCTS = [
   "price": 160000,
   "sku": "CORAZA_PRIMO_555_2.45",
   "units": 0,
-  "order": 280,
+  "order": 340,
   "imgs": [
    "assets/img/products/coraza_primo_555_2.45-3.jpg?v=1788093948129",
    "assets/img/products/coraza_primo_555_2.45.jpg?v=1788093948129",
