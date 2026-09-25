@@ -4098,7 +4098,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Tapa en aluminio 5mm de alto Incluye varios espaciadores Rodamientos de alto rodaje",
   "price": 140000,
   "sku": "CJF-ODY-001",
-  "units": 5,
+  "units": 4,
   "imgs": [
    "assets/img/products/cajas-integrado-odyssey.jpg?v=1788093948129",
    "assets/img/products/cajas-integrado-odyssey-2.jpg?v=1788093948129",
@@ -4116,7 +4116,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "Cromada",
-    "units": 1
+    "units": 0
    },
    {
     "label": "Roja",
