@@ -1,5 +1,37 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Federal Cuerdo Logo Negro",
+  "brand": "190000",
+  "cat": "piezas",
+  "spec": "",
+  "price": 190000,
+  "sku": "PZA-190-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-federal-cuerdo-logo-negro-muhgrb35j3fb.jpg?v=1790371155156",
+   "assets/img/products/silla-pivotal-federal-cuerdo-logo-negro-muhgrcno3e1c.jpg?v=1790371156620"
+  ],
+  "slug": "silla-pivotal-federal-cuerdo-logo-negro",
+  "img": "assets/img/products/silla-pivotal-federal-cuerdo-logo-negro-muhgrb35j3fb.jpg?v=1790371155156"
+ },
+ {
+  "n": "Silla Pivotal Federal logo Blanco",
+  "brand": "Federal",
+  "cat": "sillines",
+  "spec": "Material: Lona - 34,83 ​​libras",
+  "price": 190000,
+  "sku": "SIL-FED-003",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-federal-logo-blanco-muhgrdscsiec.jpg?v=1790371158337",
+   "assets/img/products/silla-pivotal-federal-logo-blanco-muhgrf41j68a.jpg?v=1790371159781"
+  ],
+  "slug": "silla-pivotal-federal-logo-blanco",
+  "img": "assets/img/products/silla-pivotal-federal-logo-blanco-muhgrdscsiec.jpg?v=1790371158337"
+ },
+ {
   "n": "Silla Pivotal Federal Roses Gris",
   "brand": "Federal",
   "cat": "sillines",
