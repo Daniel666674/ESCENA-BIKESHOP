@@ -1,5 +1,39 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Federal Tie Die",
+  "brand": "Federal",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "SIL-FED-004",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-federal-tie-die-muhh6ywrn4wl.jpg?v=1790371885621",
+   "assets/img/products/silla-pivotal-federal-tie-die-muhh70adugnm.jpg?v=1790371887732",
+   "assets/img/products/silla-pivotal-federal-tie-die-muhh71x090yj.jpg?v=1790371889341"
+  ],
+  "slug": "silla-pivotal-federal-tie-die",
+  "img": "assets/img/products/silla-pivotal-federal-tie-die-muhh6ywrn4wl.jpg?v=1790371885621"
+ },
+ {
+  "n": "Silla Pivotal Federal logo Negro",
+  "brand": "Federal",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "PZA-FED-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-federal-logo-negro-muhh735qctqh.jpg?v=1790371891180",
+   "assets/img/products/silla-pivotal-federal-logo-negro-muhh74ks9mxp.jpg?v=1790371892757"
+  ],
+  "slug": "silla-pivotal-federal-logo-negro",
+  "order": 260,
+  "img": "assets/img/products/silla-pivotal-federal-logo-negro-muhh735qctqh.jpg?v=1790371891180"
+ },
+ {
   "n": "Silla Pivotal Federal Cuero logo Negro",
   "brand": "190000",
   "cat": "sillines",
@@ -13,23 +47,8 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-federal-cuero-logo-negro-muhguh2zl265.jpg?v=1790371302483"
   ],
   "slug": "silla-pivotal-federal-cuero-logo-negro",
+  "order": 250,
   "img": "assets/img/products/silla-pivotal-federal-cuero-logo-negro-muhgufhuj6l0.jpg?v=1790371300859"
- },
- {
-  "n": "Silla Pivotal Federal Cuerdo Logo Negro",
-  "brand": "190000",
-  "cat": "piezas",
-  "spec": "",
-  "price": 190000,
-  "sku": "PZA-190-001",
-  "units": 1,
-  "imgFit": "cover",
-  "imgs": [
-   "assets/img/products/silla-pivotal-federal-cuerdo-logo-negro-muhgrb35j3fb.jpg?v=1790371155156",
-   "assets/img/products/silla-pivotal-federal-cuerdo-logo-negro-muhgrcno3e1c.jpg?v=1790371156620"
-  ],
-  "slug": "silla-pivotal-federal-cuerdo-logo-negro",
-  "img": "assets/img/products/silla-pivotal-federal-cuerdo-logo-negro-muhgrb35j3fb.jpg?v=1790371155156"
  },
  {
   "n": "Silla Pivotal Federal logo Blanco",
@@ -45,6 +64,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-federal-logo-blanco-muhgrf41j68a.jpg?v=1790371159781"
   ],
   "slug": "silla-pivotal-federal-logo-blanco",
+  "order": 240,
   "img": "assets/img/products/silla-pivotal-federal-logo-blanco-muhgrdscsiec.jpg?v=1790371158337"
  },
  {
@@ -61,6 +81,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-federal-roses-gris-muhgfi1ny65e.jpg?v=1790370607127"
   ],
   "slug": "silla-pivotal-federal-roses-gris",
+  "order": 220,
   "img": "assets/img/products/silla-pivotal-federal-roses-gris-muhgfggxdter.jpg?v=1790370602267"
  },
  {
@@ -76,6 +97,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-federal-roses-roja-muhgfn17x1qp.jpg?v=1790370610269"
   ],
   "slug": "silla-pivotal-federal-roses-roja",
+  "order": 230,
   "img": "assets/img/products/silla-pivotal-federal-roses-roja-muhgflsnitje.jpg?v=1790370608731"
  },
  {
