@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Federal Cuero logo Negro",
+  "brand": "190000",
+  "cat": "sillines",
+  "spec": "Material Cuero - 34,83 ​​libras",
+  "price": 190000,
+  "sku": "SIL-190-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-federal-cuero-logo-negro-muhgufhuj6l0.jpg?v=1790371300859",
+   "assets/img/products/silla-pivotal-federal-cuero-logo-negro-muhguh2zl265.jpg?v=1790371302483"
+  ],
+  "slug": "silla-pivotal-federal-cuero-logo-negro",
+  "img": "assets/img/products/silla-pivotal-federal-cuero-logo-negro-muhgufhuj6l0.jpg?v=1790371300859"
+ },
+ {
   "n": "Silla Pivotal Federal Cuerdo Logo Negro",
   "brand": "190000",
   "cat": "piezas",
