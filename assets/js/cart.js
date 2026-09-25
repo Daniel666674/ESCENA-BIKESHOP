@@ -195,7 +195,7 @@
   function buildCheckoutMessage(orderNumber) {
     var items = cartGet();
     var lines = [];
-    lines.push("🐕 *ESCENA BMX*");
+    lines.push("*ESCENA BMX*");
     lines.push("Pedido #" + orderNumber + " (" + formatOrderDate() + ")");
     if (window.EscenaWholesale && window.EscenaWholesale.isActive()) lines.push("🏷️ Mayorista (15% aplicado)");
     lines.push("");

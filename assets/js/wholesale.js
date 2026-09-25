@@ -248,7 +248,7 @@
       }
     }
 
-    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA 🐕, quiero pedir: " + n + " (" + brand + ") — " + cop(applyDiscount(raw)) + "." + pdpVariantSuffix() + " ¿Está disponible?\n" + pdpCanonicalUrl());
+    var msg = encodeURIComponent(mayoristaPrefix() + "Hola ESCENA, quiero pedir: " + n + " (" + brand + ") — " + cop(applyDiscount(raw)) + "." + pdpVariantSuffix() + " ¿Está disponible?\n" + pdpCanonicalUrl());
     var href = "https://wa.me/" + WA + "?text=" + msg;
     var buyLink = document.querySelector(".pdp-actions .btn-ink[href*=\"wa.me\"]");
     if (buyLink) buyLink.href = href;

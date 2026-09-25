@@ -48,7 +48,7 @@
 
     if (actions && !d.getElementById("pdpOutNotice")) {
       var name = p.n || d.title;
-      var msg = "Hola ESCENA 🐕, quiero que me avisen cuando vuelva a entrar: " +
+      var msg = "Hola ESCENA, quiero que me avisen cuando vuelva a entrar: " +
         name + ".\n" + w.location.origin + w.location.pathname;
       var box = d.createElement("div");
       box.id = "pdpOutNotice";
