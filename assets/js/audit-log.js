@@ -6740,5 +6740,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T21:04:55.888Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "pedales-merritt-p1-negro"
+  ],
+  "deleted": []
  }
 ];
