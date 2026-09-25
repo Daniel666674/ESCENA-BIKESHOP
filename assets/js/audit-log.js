@@ -6803,5 +6803,15 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "silla-pivotal-federal-cuerdo-logo-negro"
   ]
+ },
+ {
+  "ts": "2026-09-25T21:54:10.518Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "plato-fiend-omicron-guardia-28t"
+  ],
+  "deleted": []
  }
 ];
