@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin STL J40C Morado",
+  "brand": "STL",
+  "cat": "rines",
+  "spec": "",
+  "price": 75000,
+  "sku": "RIN-STL-006",
+  "units": 2,
+  "imgFit": "cover",
+  "imgPos": "50% 100%",
+  "slug": "rin-stl-j40c-morado",
+  "img": "assets/img/products/rin-stl-j40c-morado-muhk1nip3yen.jpg?v=1790376677624"
+ },
+ {
   "n": "Rin STL J40C Rojo",
   "brand": "STL",
   "cat": "rines",
