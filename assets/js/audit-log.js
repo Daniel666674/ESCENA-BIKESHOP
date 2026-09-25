@@ -6634,5 +6634,15 @@ window.ESCENA_AUDIT = [
    "cajas-integrado-odyssey"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T16:18:15.226Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "marco-fitbikeco-str-negro"
+  ],
+  "deleted": []
  }
 ];
