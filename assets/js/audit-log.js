@@ -6730,5 +6730,15 @@ window.ESCENA_AUDIT = [
    "pedales-merritt-p1-aqua"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T18:04:22.958Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "pedales-merritt-p1-negro"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
