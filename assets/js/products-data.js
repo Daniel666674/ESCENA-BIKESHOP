@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Merritt P1 Negro",
+  "brand": "Merritt",
+  "cat": "pedales",
+  "spec": "",
+  "price": 85000,
+  "sku": "PED-MER-002",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "pedales-merritt-p1-negro",
+  "img": "assets/img/products/pedales-merritt-p1-negro-muh9seyutue2.jpg?v=1790359449871"
+ },
+ {
   "n": "Pedales Merritt P1 Aqua",
   "brand": "Merritt",
   "cat": "pedales",
