@@ -1,5 +1,29 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin STL J40C Rojo",
+  "brand": "STL",
+  "cat": "rines",
+  "spec": "",
+  "price": 75000,
+  "sku": "RIN-STL-005",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "rin-stl-j40c-rojo",
+  "img": "assets/img/products/rin-stl-j40c-rojo-muhjhjwkfpds.jpg?v=1790375738831"
+ },
+ {
+  "n": "Rin STL J40C dorado",
+  "brand": "SLT",
+  "cat": "rines",
+  "spec": "Material: Aluminio - Peso: 442 gr -  Ancho: 40 mm -  Diámetro: Rin 20 - Huecos: 36H",
+  "price": 75000,
+  "sku": "RIN-SLT-001",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "rin-stl-j40c-dorado",
+  "img": "assets/img/products/rin-stl-j40c-dorado-muhjhlfzjwj8.jpg?v=1790375740565"
+ },
+ {
   "n": "Rin Stolen Chamber Negro",
   "brand": "Stolen",
   "cat": "rines",
