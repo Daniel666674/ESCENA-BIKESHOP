@@ -7,8 +7,12 @@ window.ESCENA_PRODUCTS = [
   "price": 85000,
   "sku": "PED-MER-001",
   "units": 2,
+  "imgs": [
+   "assets/img/products/pedales-merritt-p1-aqua-muh9o74fjjvj.jpg?v=1790359252945",
+   "assets/img/products/pedales-merritt-p1-aqua-muh9kvgadi0f.jpg?v=1790359101496"
+  ],
   "slug": "pedales-merritt-p1-aqua",
-  "img": "assets/img/products/pedales-merritt-p1-aqua-muh9kvgadi0f.jpg?v=1790359101496"
+  "img": "assets/img/products/pedales-merritt-p1-aqua-muh9o74fjjvj.jpg?v=1790359252945"
  },
  {
   "n": "Llanta Merritt FT1 Negra",
