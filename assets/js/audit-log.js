@@ -6612,5 +6612,17 @@ window.ESCENA_AUDIT = [
    "plato-fiend-omicron-guardia-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T16:03:04.014Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "grips-fiend-palmere",
+   "fiend-punos-rojo-blanco",
+   "odyssey-punos-negro-gris"
+  ],
+  "deleted": []
  }
 ];
