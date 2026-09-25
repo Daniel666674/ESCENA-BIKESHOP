@@ -204,7 +204,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material aluminio 6061-T6 - eje hembra con un eje de 14 mm - El buje trasero Wasp también incorpora un eje CRMO endurecido de 10 mm con tornillos hexagonales de 17 mm y rodamientos sellados de alto rendimiento,",
   "price": 760000,
   "sku": "MZT-CLN-002",
-  "units": 0,
+  "units": 4,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/cassette-colony-wasp-cromado-mueovybr3fz1.jpg?v=1790203411093",
@@ -213,11 +213,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Derecho",
-    "units": 0
+    "units": 2
    },
    {
     "label": "Izquierdo",
-    "units": 0
+    "units": 2
    }
   ],
   "slug": "cassette-colony-wasp-cromado",
