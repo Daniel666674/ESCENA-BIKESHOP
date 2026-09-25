@@ -430,9 +430,9 @@ window.ESCENA_PRODUCTS = [
   "brand": "Merritt",
   "cat": "manubrios",
   "spec": "Material  cromolio 4130 de sección variable y tratados térmicamente después de la soldadura - Con una inclinación hacia arriba de 2° y hacia atrás de 12°, tienen 74 cm de ancho y están disponibles en alturas de 23 cm y 23,5 cm. Peso: 962 g .",
-  "price": 390000,
+  "price": 380000,
   "sku": "TMN-MER-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/timon-merritt-slaughter-4pc-negro-mue04z0fal11.jpg?v=1790161840348",
@@ -442,7 +442,8 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "9.25\"",
-    "units": 1
+    "units": 0,
+    "price": 380000
    }
   ],
   "slug": "timon-merritt-slaughter-4pc-negro",
