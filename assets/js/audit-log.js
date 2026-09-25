@@ -6813,5 +6813,25 @@ window.ESCENA_AUDIT = [
    "plato-fiend-omicron-guardia-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T22:15:20.784Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 7 productos editados, 4 fotos subidas",
+  "created": [
+   "rin-stolen-chamber-negro",
+   "rin-stolen-rampage-azul",
+   "rin-stolen-rampage-negro"
+  ],
+  "edited": [
+   "rin-alienation-vandal-negro",
+   "rin-alienation-skylark-negro",
+   "rin-federal-aero-xl",
+   "rin-cult-match-v2-cromado",
+   "rin-cult-match-v2-negro",
+   "rin-demolition-zero-plus-negro",
+   "rin-stolen-rampage-cromado"
+  ],
+  "deleted": []
  }
 ];
