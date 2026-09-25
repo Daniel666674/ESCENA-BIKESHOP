@@ -6601,5 +6601,16 @@ window.ESCENA_AUDIT = [
    "bielas-fitbikeco-blunt-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T15:56:25.566Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "poste-pivotal-merrit-croamdo",
+   "plato-fiend-omicron-guardia-28t"
+  ],
+  "deleted": []
  }
 ];
