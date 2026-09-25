@@ -1,5 +1,36 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Silla Pivotal Federal Roses Gris",
+  "brand": "Federal",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "SIL-FED-002",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/silla-pivotal-federal-roses-gris-muhgfggxdter.jpg?v=1790370602267",
+   "assets/img/products/silla-pivotal-federal-roses-gris-muhgfi1ny65e.jpg?v=1790370607127"
+  ],
+  "slug": "silla-pivotal-federal-roses-gris",
+  "img": "assets/img/products/silla-pivotal-federal-roses-gris-muhgfggxdter.jpg?v=1790370602267"
+ },
+ {
+  "n": "Silla Pivotal Federal Roses Roja",
+  "brand": "Federal",
+  "cat": "sillines",
+  "spec": "",
+  "price": 190000,
+  "sku": "SIL-FED-001",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/silla-pivotal-federal-roses-roja-muhgflsnitje.jpg?v=1790370608731",
+   "assets/img/products/silla-pivotal-federal-roses-roja-muhgfn17x1qp.jpg?v=1790370610269"
+  ],
+  "slug": "silla-pivotal-federal-roses-roja",
+  "img": "assets/img/products/silla-pivotal-federal-roses-roja-muhgflsnitje.jpg?v=1790370608731"
+ },
+ {
   "n": "Pedales Merritt P1 Negro",
   "brand": "Merritt",
   "cat": "pedales",
@@ -1350,7 +1381,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 190000,
   "sku": "SIL-PRM-001",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o8e9sn56.jpg?v=1789509368261",
@@ -1389,7 +1420,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 190000,
   "sku": "SIL-BSD-001",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/silla-pivotal-bsd-safari-mu37jwo36iv6.jpg?v=1789509166423",
