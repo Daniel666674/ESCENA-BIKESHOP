@@ -6881,5 +6881,15 @@ window.ESCENA_AUDIT = [
    "rin-stl-j40c-dorado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T23:01:27.261Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "plato-fiend-omicron-guardia-28t"
+  ],
+  "deleted": []
  }
 ];
