@@ -9,7 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "pedales-merritt-p1-negro",
-  "img": "assets/img/products/pedales-merritt-p1-negro-muh9seyutue2.jpg?v=1790359449871"
+  "img": "assets/img/products/pedales-merritt-p1-negro-muhg8qtysk3t.jpg?v=1790370289445"
  },
  {
   "n": "Pedales Merritt P1 Aqua",
