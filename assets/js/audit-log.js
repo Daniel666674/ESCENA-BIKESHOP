@@ -6655,5 +6655,15 @@ window.ESCENA_AUDIT = [
    "mutany-mercury-elite-lhd-buje-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T16:35:19.583Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-merritt-slaughter-4pc-negro"
+  ],
+  "deleted": []
  }
 ];
