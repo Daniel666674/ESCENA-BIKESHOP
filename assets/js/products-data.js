@@ -685,6 +685,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PLT-FND-002",
   "units": 1,
   "imgFit": "cover",
+  "imgZoom": 107,
   "sizes": [
    {
     "label": "28T",
@@ -694,7 +695,7 @@ window.ESCENA_PRODUCTS = [
   "slug": "plato-fiend-omicron-guardia-28t",
   "order": 0,
   "imgPos": "50% 0%",
-  "img": "assets/img/products/plato-fiend-omicron-guardia-28t-muhi004u3wpr.jpg?v=1790373240548"
+  "img": "assets/img/products/plato-fiend-omicron-guardia-28t-muhked28r7ny.jpg?v=1790377269811"
  },
  {
   "n": "Manzana Delantera Federal Motion - Negra",
