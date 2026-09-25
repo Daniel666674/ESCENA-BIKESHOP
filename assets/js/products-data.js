@@ -1,32 +1,47 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin STL J40C Azul",
+  "brand": "STL",
+  "cat": "rines",
+  "spec": "Material: Aluminio - Peso: 442 gr -  Ancho: 40 mm -  Diámetro: Rin 20 - Huecos: 36H",
+  "price": 75000,
+  "sku": "RIN-STL-007",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "rin-stl-j40c-azul",
+  "order": 100,
+  "img": "assets/img/products/rin-stl-j40c-azul-muhkb9xz89jx.jpg?v=1790377125629"
+ },
+ {
   "n": "Rin STL J40C Morado",
   "brand": "STL",
   "cat": "rines",
-  "spec": "",
+  "spec": "Material: Aluminio - Peso: 442 gr -  Ancho: 40 mm -  Diámetro: Rin 20 - Huecos: 36H",
   "price": 75000,
   "sku": "RIN-STL-006",
   "units": 2,
   "imgFit": "cover",
   "imgPos": "50% 100%",
   "slug": "rin-stl-j40c-morado",
+  "order": 130,
   "img": "assets/img/products/rin-stl-j40c-morado-muhk1nip3yen.jpg?v=1790376677624"
  },
  {
   "n": "Rin STL J40C Rojo",
   "brand": "STL",
   "cat": "rines",
-  "spec": "",
+  "spec": "Material: Aluminio - Peso: 442 gr -  Ancho: 40 mm -  Diámetro: Rin 20 - Huecos: 36H",
   "price": 75000,
   "sku": "RIN-STL-005",
   "units": 1,
   "imgFit": "cover",
   "slug": "rin-stl-j40c-rojo",
+  "order": 120,
   "img": "assets/img/products/rin-stl-j40c-rojo-muhjhjwkfpds.jpg?v=1790375738831"
  },
  {
   "n": "Rin STL J40C dorado",
-  "brand": "SLT",
+  "brand": "STL",
   "cat": "rines",
   "spec": "Material: Aluminio - Peso: 442 gr -  Ancho: 40 mm -  Diámetro: Rin 20 - Huecos: 36H",
   "price": 75000,
@@ -34,6 +49,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "rin-stl-j40c-dorado",
+  "order": 110,
   "img": "assets/img/products/rin-stl-j40c-dorado-muhjhlfzjwj8.jpg?v=1790375740565"
  },
  {
