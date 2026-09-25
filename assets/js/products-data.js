@@ -3443,21 +3443,17 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 160000,
   "sku": "COR-FED-001",
-  "units": 2,
+  "units": 1,
   "sizes": [
    {
     "label": "20x2.35\"",
-    "units": 2,
-    "price": 160000,
-    "cost": 128000
+    "units": 1
    }
   ],
   "colors": [
    {
     "label": "Negra",
-    "units": 2,
-    "price": 160000,
-    "cost": 128000
+    "units": 1
    }
   ],
   "slug": "llanta-federal-neptune",
@@ -3644,18 +3640,18 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "imgs": [
    "assets/img/products/llanta-innova-camufladas-mu3657vo50ya.jpg?v=1789506801867",
-   "assets/img/products/llanta-innova-camufladas.jpg?v=1788093948129",
    "assets/img/products/llanta-innova-camufladas-2.jpg?v=1788093948129",
    "assets/img/products/llanta-innova-camufladas-3.jpg?v=1788093948129",
    "assets/img/products/llanta-innova-camufladas-mt4nle7140ji.jpg?v=1788093948129",
    "assets/img/products/llanta-innova-camufladas-mt4nli1fgguc.jpg?v=1788093948129",
-   "assets/img/products/llanta-innova-camufladas-mt4nll20mlcu.jpg?v=1788093948129"
+   "assets/img/products/llanta-innova-camufladas-mt4nll20mlcu.jpg?v=1788093948129",
+   "assets/img/products/llanta-innova-camufladas.jpg?v=1788093948129"
   ],
   "slug": "llanta-innova-camufladas",
   "colors": [
    {
     "label": "Negra/rojo",
-    "units": 2
+    "units": 0
    },
    {
     "label": "Negra/azul",
@@ -3694,22 +3690,22 @@ window.ESCENA_PRODUCTS = [
    "Negra/Gris": [
     0
    ],
-   "Negra/rojo": [
+   "Gris Claro": [
     1
    ],
-   "Gris Claro": [
+   "Verde militar": [
     2
    ],
-   "Verde militar": [
+   "Morado/Lila": [
     3
    ],
-   "Morado/Lila": [
+   "Negra/azul": [
     4
    ],
-   "Negra/azul": [
+   "Gris Oscuro": [
     5
    ],
-   "Gris Oscuro": [
+   "Negra/rojo": [
     6
    ]
   },
