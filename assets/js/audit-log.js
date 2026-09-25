@@ -6665,5 +6665,16 @@ window.ESCENA_AUDIT = [
    "timon-merritt-slaughter-4pc-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T16:37:36.804Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "llanta-innova-camufladas",
+   "llanta-federal-neptune"
+  ],
+  "deleted": []
  }
 ];
