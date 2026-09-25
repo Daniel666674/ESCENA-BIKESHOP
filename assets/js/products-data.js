@@ -6383,6 +6383,9 @@ window.ESCENA_PRODUCTS = [
   ],
   "order": 20,
   "imgColorMap": {
+   "Negro": [
+    0
+   ],
    "Morado": [
     1
    ]
@@ -7831,7 +7834,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Goma · Firma de Broc Raifor Logo Broc en los extremos Diseño acanalado cómodo Par Ends incluidos 160 mm de longitud",
   "price": 48000,
   "sku": "ODYSSEY-PUNOS-NEGRO-GRIS",
-  "units": 1,
+  "units": 6,
   "order": 50,
   "imgs": [
    "assets/img/products/odyssey-punos-negro-gris.jpg?v=1788093948129",
@@ -7841,7 +7844,7 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Morado/Negro",
-    "units": 1
+    "units": 3
    },
    {
     "label": "Negro/Translucido",
@@ -7849,7 +7852,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "Negro",
-    "units": 0
+    "units": 3
    }
   ],
   "imgColorMap": {
@@ -7885,12 +7888,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Goma · Rojo/Blanco splash",
   "price": 50000,
   "sku": "FIEND-PUNOS-ROJO-BLANCO",
-  "units": 9,
+  "units": 6,
   "order": 30,
   "imgs": [
    "assets/img/products/fiend-punos-rojo-blanco.jpg?v=1788093948129",
-   "assets/img/products/fiend-punos-rojo-blanco-2.jpg?v=1788093948129",
-   "assets/img/products/fiend-punos-rojo-blanco-3.jpg?v=1788093948129"
+   "assets/img/products/fiend-punos-rojo-blanco-3.jpg?v=1788093948129",
+   "assets/img/products/fiend-punos-rojo-blanco-2.jpg?v=1788093948129"
   ],
   "colors": [
    {
@@ -7899,7 +7902,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "Negro/Translucido",
-    "units": 3
+    "units": 0
    },
    {
     "label": "Rojo/Translucido",
@@ -7910,10 +7913,10 @@ window.ESCENA_PRODUCTS = [
    "Negro": [
     0
    ],
-   "Negro/Translucido": [
+   "Rojo/Translucido": [
     1
    ],
-   "Rojo/Translucido": [
+   "Negro/Translucido": [
     2
    ]
   },
