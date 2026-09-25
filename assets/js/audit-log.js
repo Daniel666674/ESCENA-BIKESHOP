@@ -6764,5 +6764,16 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-primo-breaker-logo-blanco"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-25T21:19:27.660Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 4 fotos subidas",
+  "created": [
+   "silla-pivotal-federal-cuerdo-logo-negro",
+   "silla-pivotal-federal-logo-blanco"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
