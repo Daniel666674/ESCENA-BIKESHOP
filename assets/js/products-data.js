@@ -1,5 +1,48 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin Stolen Chamber Negro",
+  "brand": "Stolen",
+  "cat": "rines",
+  "spec": "",
+  "price": 300000,
+  "sku": "RIN-STL-004",
+  "units": 6,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/rin-stolen-chamber-negro-muhir4iju4cu.jpg?v=1790374505768",
+   "assets/img/products/rin-stolen-chamber-negro-muhir608079g.jpg?v=1790374507448"
+  ],
+  "slug": "rin-stolen-chamber-negro",
+  "order": 50,
+  "img": "assets/img/products/rin-stolen-chamber-negro-muhir4iju4cu.jpg?v=1790374505768"
+ },
+ {
+  "n": "Rin Stolen Rampage Azul",
+  "brand": "Stolen",
+  "cat": "rines",
+  "spec": "",
+  "price": 160000,
+  "sku": "RIN-STL-003",
+  "units": 10,
+  "imgFit": "cover",
+  "slug": "rin-stolen-rampage-azul",
+  "order": 70,
+  "img": "assets/img/products/rin-stolen-rampage-azul-muhir7awerjf.jpg?v=1790374509727"
+ },
+ {
+  "n": "Rin Stolen Rampage Negro",
+  "brand": "Stolen",
+  "cat": "rines",
+  "spec": "",
+  "price": 160000,
+  "sku": "RIN-STL-002",
+  "units": 0,
+  "imgFit": "cover",
+  "slug": "rin-stolen-rampage-negro",
+  "order": 80,
+  "img": "assets/img/products/rin-stolen-rampage-negro-muhir927tm8w.jpg?v=1790374511526"
+ },
+ {
   "n": "Silla Pivotal Federal Tie Die",
   "brand": "Federal",
   "cat": "sillines",
@@ -267,6 +310,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "rin-stolen-rampage-cromado",
+  "order": 90,
   "img": "assets/img/products/rin-stolen-rampage-cromado-mug6g5idvp19.jpg?v=1790293375097"
  },
  {
@@ -283,6 +327,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/rin-cult-match-v2-cromado-mug52jwlt643.jpg?v=1790291057518"
   ],
   "slug": "rin-cult-match-v2-cromado",
+  "order": 40,
   "img": "assets/img/products/rin-cult-match-v2-cromado-mug52ijxtexd.jpg?v=1790291056197"
  },
  {
@@ -300,6 +345,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/rin-cult-match-v2-negro-mug4x9uuihom.jpg?v=1790290811356"
   ],
   "slug": "rin-cult-match-v2-negro",
+  "order": 30,
   "img": "assets/img/products/rin-cult-match-v2-negro-mug4x6yff8vo.jpg?v=1790290808228"
  },
  {
@@ -338,6 +384,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "rin-demolition-zero-plus-negro",
+  "order": 60,
   "img": "assets/img/products/rin-demolition-zero-plus-negro-mueqzqlobybg.jpg?v=1790206946604"
  },
  {
@@ -354,6 +401,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/rin-federal-aero-xl-mueq7e7c3juz.jpg?v=1790205623705"
   ],
   "slug": "rin-federal-aero-xl",
+  "order": 20,
   "img": "assets/img/products/rin-federal-aero-xl-mueq7co3vnu9.jpg?v=1790205621672"
  },
  {
@@ -366,6 +414,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "rin-alienation-vandal-negro",
+  "order": 0,
   "img": "assets/img/products/rin-alienation-vandal-negro-mueq7frte78h.jpg?v=1790205625618"
  },
  {
@@ -378,6 +427,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "rin-alienation-skylark-negro",
+  "order": 10,
   "img": "assets/img/products/rin-alienation-skylark-negro-mueq7h8y350n.jpg?v=1790205627444"
  },
  {
