@@ -3037,8 +3037,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 2,
-    "price": 90000,
-    "cost": 72000
+    "price": 90000
    }
   ],
   "slug": "llanta-theory-proven-blanca-2-40",
@@ -3058,8 +3057,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 0,
-    "price": 220000,
-    "cost": 176000
+    "price": 220000
    }
   ],
   "slug": "llanta-odyssey-supercircuit-keblar-negra-2-40",
@@ -3099,8 +3097,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "16x2.125\"",
     "units": 1,
-    "price": 45000,
-    "cost": 36000
+    "price": 45000
    }
   ],
   "slug": "llanta-cst-orbit-knobby-negra-rin-16-2-125",
@@ -3125,8 +3122,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "16x2.125\"",
     "units": 2,
-    "price": 45000,
-    "cost": 36000
+    "price": 45000
    }
   ],
   "slug": "llanta-chaoyang-freestyle-bmx-rin-16-2-125",
@@ -3151,8 +3147,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.25\"",
     "units": 2,
-    "price": 45000,
-    "cost": 36000
+    "price": 45000
    }
   ],
   "slug": "llanta-chaoyang-cutting-edge-negra-2-25",
@@ -3172,8 +3167,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.35\"",
     "units": 1,
-    "price": 38000,
-    "cost": 30400
+    "price": 38000
    }
   ],
   "slug": "llanta-optimus-black-burn-negra-2-35",
@@ -3228,8 +3222,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 2,
-    "price": 80000,
-    "cost": 64000
+    "price": 80000
    }
   ],
   "slug": "llanta-innova-pro-big-slick-cafe-2-40",
@@ -3248,8 +3241,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 10,
-    "price": 80000,
-    "cost": 64000
+    "price": 80000
    }
   ],
   "slug": "llanta-innova-pro-negra-2-40",
@@ -3288,8 +3280,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 2,
-    "price": 100000,
-    "cost": 80000
+    "price": 100000
    }
   ],
   "slug": "llanta-mutanty-whipper-azul-2-40",
@@ -3313,8 +3304,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.10\"",
     "units": 5,
-    "price": 80000,
-    "cost": 64000
+    "price": 80000
    }
   ],
   "slug": "llanta-tioga-factory-fs100-negra-2-10",
@@ -3334,8 +3324,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 1,
-    "price": 160000,
-    "cost": 128000
+    "price": 160000
    }
   ],
   "slug": "llanta-sunday-current-v2-negro-2-40",
@@ -3355,8 +3344,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2,40\"",
     "units": 1,
-    "price": 150000,
-    "cost": 120000
+    "price": 150000
    }
   ],
   "slug": "llanta-shadow-creeper-negra-2-40",
@@ -3376,8 +3364,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 1,
-    "price": 160000,
-    "cost": 128000
+    "price": 160000
    }
   ],
   "slug": "llanta-s-m-speedball-negra-2-40",
@@ -3422,8 +3409,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 2,
-    "price": 150000,
-    "cost": 120000
+    "price": 150000
    }
   ],
   "slug": "llanta-subrosa-matt-ray-roja-2-40",
@@ -3455,14 +3441,12 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "Verde",
     "units": 1,
-    "price": 30000,
-    "cost": 24000
+    "price": 30000
    },
    {
     "label": "Azul",
     "units": 1,
-    "price": 30000,
-    "cost": 24000
+    "price": 30000
    }
   ],
   "slug": "manzana-delantera-ontrail-nemesis-2",
@@ -3534,14 +3518,12 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "Cromada",
     "units": 1,
-    "price": 260000,
-    "cost": 208000
+    "price": 260000
    },
    {
     "label": "Negra",
     "units": 0,
-    "price": 260000,
-    "cost": 208000
+    "price": 260000
    }
   ],
   "slug": "manzana-delantera-stranger-ballast",
@@ -3572,14 +3554,12 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "Negra",
     "units": 1,
-    "price": 280000,
-    "cost": 224000
+    "price": 280000
    },
    {
     "label": "Cromada",
     "units": 1,
-    "price": 280000,
-    "cost": 224000
+    "price": 280000
    }
   ],
   "imgColorMap": {
@@ -3689,20 +3669,17 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "Negro",
     "units": 8,
-    "price": 10000,
-    "cost": 8000
+    "price": 10000
    },
    {
     "label": "Morado",
     "units": 1,
-    "price": 10000,
-    "cost": 8000
+    "price": 10000
    },
    {
     "label": "Rosa",
     "units": 1,
-    "price": 10000,
-    "cost": 8000
+    "price": 10000
    }
   ],
   "slug": "grips-gw-gorila",
@@ -3747,16 +3724,14 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 4,
-    "price": 180000,
-    "cost": 144000
+    "price": 180000
    }
   ],
   "colors": [
    {
     "label": "Goma",
     "units": 6,
-    "price": 180000,
-    "cost": 144000
+    "price": 180000
    }
   ],
   "slug": "llanta-cult-wafflecup-goma",
@@ -3780,16 +3755,14 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 2,
-    "price": 150000,
-    "cost": 120000
+    "price": 150000
    }
   ],
   "colors": [
    {
     "label": "Negro",
     "units": 2,
-    "price": 150000,
-    "cost": 120000
+    "price": 150000
    }
   ],
   "slug": "llanta-sunday-street-sweeper-v2",
@@ -3838,22 +3811,19 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 3,
-    "price": 160000,
-    "cost": 128000
+    "price": 160000
    },
    {
     "label": "20x2.25\"",
     "units": 0,
-    "price": 180000,
-    "cost": 144000
+    "price": 180000
    }
   ],
   "colors": [
    {
     "label": "Negra",
     "units": 3,
-    "price": 160000,
-    "cost": 128000
+    "price": 160000
    }
   ],
   "slug": "llanta-alinetion-prowler",
@@ -3916,26 +3886,22 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "Negro",
     "units": 1,
-    "price": 95000,
-    "cost": 76000
+    "price": 95000
    },
    {
     "label": "Cromado",
     "units": 1,
-    "price": 95000,
-    "cost": 76000
+    "price": 95000
    },
    {
     "label": "Azul",
     "units": 1,
-    "price": 95000,
-    "cost": 76000
+    "price": 95000
    },
    {
     "label": "Dorada",
     "units": 1,
-    "price": 95000,
-    "cost": 76000
+    "price": 95000
    }
   ],
   "slug": "manzana-optimus-gold",
@@ -4043,8 +4009,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 12,
-    "price": 80000,
-    "cost": 64000
+    "price": 80000
    }
   ],
   "imgColorMap": {
@@ -4114,16 +4079,14 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.35\"",
     "units": 2,
-    "price": 160000,
-    "cost": 128000
+    "price": 160000
    }
   ],
   "colors": [
    {
     "label": "Negro",
     "units": 2,
-    "price": 160000,
-    "cost": 128000
+    "price": 160000
    }
   ],
   "order": 80,
@@ -4233,14 +4196,12 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "Negra",
     "units": 1,
-    "price": 330000,
-    "cost": 264000
+    "price": 330000
    },
    {
     "label": "Cromada",
     "units": 0,
-    "price": 330000,
-    "cost": 264000
+    "price": 330000
    }
   ],
   "imgColorMap": {
@@ -5248,16 +5209,14 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20”",
     "units": 0,
-    "price": 370000,
-    "cost": 296000
+    "price": 370000
    }
   ],
   "colors": [
    {
     "label": "Gris",
     "units": 1,
-    "price": 370000,
-    "cost": 296000
+    "price": 370000
    }
   ],
   "slug": "marco-profit-culver-gris-cromolio",
@@ -5282,8 +5241,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "Verde",
     "units": 1,
-    "price": 1800000,
-    "cost": 1440000
+    "price": 1800000
    }
   ],
   "slug": "marco-wethepeople-message-verde",
@@ -5314,8 +5272,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "Negro",
     "units": 1,
-    "price": 1700000,
-    "cost": 1360000
+    "price": 1700000
    }
   ],
   "slug": "marco-colony-prisma-negro",
@@ -6424,8 +6381,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.5\"",
     "units": 0,
-    "price": 180000,
-    "cost": 144000
+    "price": 180000
    }
   ],
   "order": 150,
@@ -6449,14 +6405,12 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.5 x 12.5",
     "units": 1,
-    "price": 1660000,
-    "cost": 1332800
+    "price": 1660000
    },
    {
     "label": "20.75\"",
     "units": 1,
-    "price": 1660000,
-    "cost": 1332800
+    "price": 1660000
    }
   ],
   "order": 70,
@@ -6485,8 +6439,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.75 x 12.7\"",
     "units": 1,
-    "price": 1660000,
-    "cost": 1328000
+    "price": 1660000
    }
   ],
   "order": 80,
@@ -6667,8 +6620,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.5\"",
     "units": 4,
-    "price": 250000,
-    "cost": 200000
+    "price": 250000
    }
   ],
   "order": 140,
@@ -7279,14 +7231,12 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.75\"",
     "units": 1,
-    "price": 1790000,
-    "cost": 1432000
+    "price": 1790000
    },
    {
     "label": "20.5\"",
     "units": 1,
-    "price": 1790000,
-    "cost": 1432000
+    "price": 1790000
    }
   ],
   "order": 30,
@@ -7641,14 +7591,12 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "Negra",
     "units": 1,
-    "price": 300000,
-    "cost": 240000
+    "price": 300000
    },
    {
     "label": "Cromada",
     "units": 0,
-    "price": 300000,
-    "cost": 240000
+    "price": 300000
    }
   ],
   "imgColorMap": {
@@ -8551,14 +8499,12 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.4\"",
     "units": 2,
-    "price": 1300000,
-    "cost": 1040000
+    "price": 1300000
    },
    {
     "label": "20.75\"",
     "units": 0,
-    "price": 1300000,
-    "cost": 1040000
+    "price": 1300000
    }
   ],
   "imgs": [
@@ -8582,8 +8528,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.75\"",
     "units": 1,
-    "price": 2100000,
-    "cost": 1680000
+    "price": 2100000
    }
   ],
   "order": 90,
@@ -8616,34 +8561,29 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.4\"",
     "units": 0,
-    "price": 360000,
-    "cost": 288000
+    "price": 360000
    },
    {
     "label": "20.75\"",
     "units": 1,
-    "price": 360000,
-    "cost": 288000
+    "price": 360000
    },
    {
     "label": "21\"",
     "units": 1,
-    "price": 360000,
-    "cost": 288000
+    "price": 360000
    }
   ],
   "colors": [
    {
     "label": "Azul / Industrial",
     "units": 2,
-    "price": 360000,
-    "cost": 288000
+    "price": 360000
    },
    {
     "label": "Morado / Industrial",
     "units": 2,
-    "price": 360000,
-    "cost": 288000
+    "price": 360000
    }
   ],
   "imgColorMap": {
@@ -8673,8 +8613,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.75\"",
     "units": 0,
-    "price": 1800000,
-    "cost": 1440000
+    "price": 1800000
    }
   ],
   "order": 10,
@@ -8706,8 +8645,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.75\"",
     "units": 1,
-    "price": 1790000,
-    "cost": 1432000
+    "price": 1790000
    }
   ],
   "order": 50,
@@ -8737,8 +8675,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20.75\"",
     "units": 2,
-    "price": 2100000,
-    "cost": 1680000
+    "price": 2100000
    }
   ],
   "order": 0,
@@ -8764,8 +8701,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 1,
-    "price": 160000,
-    "cost": 144000
+    "price": 160000
    }
   ],
   "imgFit": "cover",
@@ -8792,8 +8728,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.45\"",
     "units": 0,
-    "price": 160000,
-    "cost": 128000
+    "price": 160000
    }
   ],
   "imgFit": "cover",
