@@ -8467,7 +8467,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.5\" · Hammertone Negro",
   "price": 1790000,
   "sku": "CULT-SHORT",
-  "units": 1,
+  "units": 0,
   "imgs": [
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1788093948129",
    "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro-2.jpg?v=1788093948129",
@@ -8480,7 +8480,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.5\"",
-    "units": 1
+    "units": 0
    }
   ],
   "order": 40,
