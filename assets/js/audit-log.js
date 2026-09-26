@@ -7295,5 +7295,15 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-04"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-26T23:32:02.383Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cult-biggie-jaime-sintes-hammertone-negro"
+  ],
+  "deleted": []
  }
 ];
