@@ -2524,6 +2524,11 @@
     if (!o.tag) delete o.tag;
     if (!o.promo) delete o.promo; // default false; keep only when on sale
     delete o.cost; delete o.notes; // internal-only, never published
+    // Same rule applies per-variant: a size/color can carry its own cost
+    // override (see the inventory modal), and that leaked into the public
+    // catalog too until now — anyone could read it via view-source.
+    if (o.sizes) o.sizes = o.sizes.map(function (s) { var s2 = Object.assign({}, s); delete s2.cost; return s2; });
+    if (o.colors) o.colors = o.colors.map(function (c) { var c2 = Object.assign({}, c); delete c2.cost; return c2; });
     if (o.imgFit === "auto" || !o.imgFit) delete o.imgFit; // default; keep only an explicit override
     if (!o.imgZoom || o.imgZoom <= 100) delete o.imgZoom; // default; keep only an explicit zoom > 100%
     if (!o.imgPos) delete o.imgPos; // default (centered); keep only an explicit crop position
