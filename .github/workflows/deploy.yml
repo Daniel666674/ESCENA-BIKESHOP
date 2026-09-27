@@ -46,12 +46,13 @@ jobs:
           local-dir: ./
           # only changed files upload after the first run (delta sync)
           #
-          # assets/js/sales-log.js and assets/js/audit-log.js are excluded on
-          # purpose: they hold real revenue/order data and per-user edit
-          # history respectively. This is a public repo, so anything deployed
+          # assets/js/sales-log.js, assets/js/audit-log.js and
+          # assets/js/costs-data.js are excluded on purpose: they hold real
+          # revenue/order data, per-user edit history, and internal product
+          # costs respectively. This is a public repo, so anything deployed
           # here is publicly fetchable with no auth — admin.html reads/writes
-          # both via the GitHub API instead (same trust boundary as
-          # publishing), so neither should ever touch the public site.
+          # all three via the GitHub API instead (same trust boundary as
+          # publishing), so none of them should ever touch the public site.
           exclude: |
             **/.git*
             **/.git*/**
@@ -60,6 +61,7 @@ jobs:
             **/*.md
             assets/js/sales-log.js
             assets/js/audit-log.js
+            assets/js/costs-data.js
             assets/js/bookings-data.js
             worker/**
             tools/**
@@ -134,3 +136,16 @@ jobs:
             exit 1
           fi
           echo "OK: bookings-data.js is not publicly reachable (HTTP $code)."
+
+      - name: Verify costs-data.js is NOT publicly reachable
+        # Same regression guard as sales-log.js/audit-log.js, above:
+        # costs-data.js holds internal per-product costs (used to compute
+        # margin in admin.html) and must never be servable from the public
+        # site, since anyone could then see exact markup on every product.
+        run: |
+          code="$(curl -sL -o /dev/null -w '%{http_code}' "https://escenabmx.com/assets/js/costs-data.js?cb=$(date +%s)" || echo 000)"
+          if [ "$code" = "200" ]; then
+            echo "::error::assets/js/costs-data.js is publicly reachable (HTTP 200) — internal product costs are exposed. This must stay excluded from the public deploy."
+            exit 1
+          fi
+          echo "OK: costs-data.js is not publicly reachable (HTTP $code)."
