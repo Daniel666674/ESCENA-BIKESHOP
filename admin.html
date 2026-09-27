@@ -2339,6 +2339,14 @@
   var salesDirty = false; // unpublished sale records exist
   var salesBaselineCount = 0; // salesLog.length at last successful publish/load — everything past this is "mine, not yet committed"
   var auditLog = []; // per-user change history, shown in the Actividad tab
+  // Cost lives in its own private file, never in products-data.js (see
+  // toSiteProduct) — initInventory() always reloads the catalog fresh from
+  // the live site (see the comment there), which has no cost field, so
+  // without this separate load every p.cost silently resets to 0 on the very
+  // next page load, even right after "Publicar". costsLoaded gates the bulk
+  // /modal cost tools so they don't run before this finishes and stomp on
+  // whatever the fetch is about to fill in.
+  var costsLoaded = false;
   var bookingsLog = []; // taller: mantenimiento agendado + solicitudes de pintura, shown in the Agenda tab
   var modalPhotos = [];
   // Parallel to modalPhotos: modalPhotoColors[i] is the color label that photo
@@ -2539,6 +2547,14 @@
   function parseRemoteArray(text, varName) {
     if (!text) return [];
     var m = text.match(new RegExp("window\\." + varName + "\\s*=\\s*(\\[[\\s\\S]*\\])\\s*;?\\s*$"));
+    if (!m) throw new Error("No se pudo leer " + varName + " remoto");
+    return JSON.parse(m[1]);
+  }
+  // Same idea as parseRemoteArray but for a {slug: valor} map — costs-data.js
+  // is a lookup by slug, not a list of records.
+  function parseRemoteObject(text, varName) {
+    if (!text) return {};
+    var m = text.match(new RegExp("window\\." + varName + "\\s*=\\s*(\\{[\\s\\S]*\\})\\s*;?\\s*$"));
     if (!m) throw new Error("No se pudo leer " + varName + " remoto");
     return JSON.parse(m[1]);
   }
@@ -3211,6 +3227,24 @@
         // BORRAN cosas -- sitemap y fotos -- se miden contra esto y nada más.
         lastMerged = merged;
         return "window.ESCENA_PRODUCTS = " + JSON.stringify(merged, null, 1) + ";\n";
+      }, false);
+    }).then(function () {
+      // Cost never goes into products-data.js (toSiteProduct strips it — it's
+      // internal-only), so without this it has nowhere to persist: it would
+      // just vanish the moment this session ends. Only this session's touched
+      // products (dirtySlugs, same set the catalog merge above used) get
+      // written — never a blind overwrite of the whole map — so a concurrent
+      // session's costs for products this session never opened survive.
+      var costSlugs = Object.keys(dirtySlugs);
+      if (!costSlugs.length) return Promise.resolve();
+      return ghPutWithRetry("assets/js/costs-data.js", "Update product costs via admin panel", function (remoteText) {
+        var remoteCosts = parseRemoteObject(remoteText, "ESCENA_COSTS");
+        costSlugs.forEach(function (slug) {
+          var p = inventoryCatalog.filter(function (x) { return x.slug === slug; })[0];
+          if (!p || deletedSlugs[slug] || !(typeof p.cost === "number" && p.cost > 0)) delete remoteCosts[slug];
+          else remoteCosts[slug] = p.cost;
+        });
+        return "window.ESCENA_COSTS = " + JSON.stringify(remoteCosts, null, 1) + ";\n";
       }, false);
     }).then(function () {
       // Reconcile sitemap.xml against every currently-published product, not just
@@ -5158,6 +5192,23 @@
     }).catch(function (e) {
       console.error("No se pudo cargar el registro de actividad:", e);
       showToast("No se pudo cargar el registro de actividad");
+    });
+    // Same trust boundary as sales-log.js/audit-log.js: costs-data.js holds
+    // {slug: costo} and is never deployed publicly (see deploy.yml) — it's
+    // the only place cost actually persists, since products-data.js strips
+    // it on every publish (toSiteProduct) and loadCatalog() above just
+    // reloaded a fresh copy of that cost-less live catalog.
+    costsLoaded = false;
+    ghGetFile("assets/js/costs-data.js").then(function (cur) {
+      var costs = parseRemoteObject(cur.text, "ESCENA_COSTS");
+      inventoryCatalog.forEach(function (p) {
+        if (typeof costs[p.slug] === "number" && costs[p.slug] > 0) p.cost = costs[p.slug];
+      });
+      costsLoaded = true;
+      renderInventory(document.getElementById("invSearch") ? document.getElementById("invSearch").value.trim() : "");
+    }).catch(function (e) {
+      console.error("No se pudo cargar los costos:", e);
+      showToast("No se pudo cargar los costos guardados");
     });
     loadBookings();
     initCategoryVideos();
