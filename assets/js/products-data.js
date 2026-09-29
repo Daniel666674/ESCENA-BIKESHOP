@@ -8518,15 +8518,16 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "llave-y-roja",
-  "n": "Llave Y Roja",
-  "brand": "",
+  "n": "Llave Bristol 4-5-6",
+  "brand": "GW",
   "cat": "herramientas",
-  "spec": "Llave allen tipo Y · 3 puntas",
-  "price": 70000,
+  "spec": "Llave allen - 3 puntos - Bristol 4 5 6",
+  "price": 9000,
   "sku": "LLAVE-Y-ROJA",
-  "units": 12,
+  "units": 5,
   "order": 30,
-  "img": "assets/img/products/llave-y-roja.jpg?v=1788093948129"
+  "imgFit": "cover",
+  "img": "assets/img/products/llave-y-roja-mun4razlokrm.jpg?v=1790713797091"
  },
  {
   "slug": "cult-biggie-jaime-sintes-hammertone-negro",
