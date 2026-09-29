@@ -8021,5 +8021,15 @@ window.ESCENA_AUDIT = [
    "bicicleta-cult-juvenile-rin-18"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T22:37:27.867Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "canitobilleras-r2"
+  ],
+  "deleted": []
  }
 ];
