@@ -369,7 +369,7 @@ window.ESCENA_COSTS = {
  "tija-negra-curva": 120000,
  "cult-multiherramienta-01": 72000,
  "cult-multiherramienta-02": 68000,
- "llave-y-roja": 56000,
+ "llave-y-roja": 7200,
  "cult-biggie-jaime-sintes-hammertone-negro": 1432000,
  "fate-namaste-negro": 1040000,
  "total-marco-2075-blanco-azul": 1680000,
