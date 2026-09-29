@@ -1,5 +1,39 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco GW SKI Negro",
+  "brand": "GW",
+  "cat": "cascos",
+  "spec": "",
+  "price": 70000,
+  "sku": "CAS-GWB-003",
+  "units": 3,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1,
+    "price": 70000
+   },
+   {
+    "label": "M",
+    "units": 2,
+    "price": 70000
+   },
+   {
+    "label": "L",
+    "units": 0,
+    "price": 70000
+   },
+   {
+    "label": "XL",
+    "units": 0,
+    "price": 70000
+   }
+  ],
+  "slug": "casco-gw-ski-negro",
+  "img": "assets/img/products/casco-gw-ski-negro-mun7dbofg1tr.jpg?v=1790718183743"
+ },
+ {
   "n": "Casco GW SKI Morado",
   "brand": "GW",
   "cat": "cascos",
