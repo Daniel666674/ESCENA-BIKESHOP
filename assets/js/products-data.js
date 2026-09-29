@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Moneda Templaradios Cromolio IceToolz 12F8",
+  "brand": "GW",
+  "cat": "herramientas",
+  "spec": "Templaradios IceToolz 12F8 es una llave de radios múltiple profesional con 8 ranuras, diseñada para niples de radios entre 10G y 15G - Su cuerpo forjado en acero Cr-Mo y soporte de radios integrado la convierten en una herramienta para ruedas de diversas medidas.",
+  "price": 37000,
+  "sku": "HER-GWB-003",
+  "units": 5,
+  "imgFit": "cover",
+  "slug": "moneda-templaradios-cromolio-icetoolz-12f8",
+  "img": "assets/img/products/moneda-templaradios-cromolio-icetoolz-12f8-mun5wx2ro9vr.jpg?v=1790715738463"
+ },
+ {
   "n": "Extractor de Cadena GW",
   "brand": "GW",
   "cat": "herramientas",
