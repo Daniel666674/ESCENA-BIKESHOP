@@ -1,5 +1,40 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Peg Doomsday Cromolio",
+  "brand": "Cult",
+  "cat": "clavijas",
+  "spec": "Acero al cromo-molibdeno tratado térmicamente y con refuerzo interno para mayor resistencia y ligereza - Orificio de 14 mm con adaptador de 3/8\" incluido - Longitud: 105 mm o 115 mm - Diámetro: 35 mm - Peso: 5,9 onzas",
+  "price": 85000,
+  "sku": "PEG-CLT-002",
+  "units": 4,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/peg-doomsday-cromolio-mun2halqekjb.jpg?v=1790709972299",
+   "assets/img/products/peg-doomsday-cromolio-mun2hdmz5092.jpg?v=1790709974004",
+   "assets/img/products/peg-doomsday-cromolio-mun2heyc2bii.jpg?v=1790709975950"
+  ],
+  "slug": "peg-doomsday-cromolio",
+  "img": "assets/img/products/peg-doomsday-cromolio-mun2halqekjb.jpg?v=1790709972299"
+ },
+ {
+  "n": "Plasticpegs Cult Butter 4.5\" - 4.75\"",
+  "brand": "Cult",
+  "cat": "clavijas",
+  "spec": "Funda de Plastico Nylon de alta tension - Recambiable - interior fabricado de cromolio - Disponible en 115mm ( 4.5\") -  120mm ( 4.75\") - Incluye adaptador de 10mm a 14mm Precio unidad.",
+  "price": 85000,
+  "sku": "PEG-CLT-001",
+  "units": 12,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hggeo2kg.jpg?v=1790709977612",
+   "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hhqk800z.jpg?v=1790709980308",
+   "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hjtg9hgb.jpg?v=1790709981979"
+  ],
+  "imgZoom": 117,
+  "slug": "plasticpegs-cult-butter-4-5-4-75",
+  "img": "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hggeo2kg.jpg?v=1790709977612"
+ },
+ {
   "n": "Cajas de centro Trueno Cromado",
   "brand": "Trueno",
   "cat": "caja-frente",
@@ -8058,66 +8093,6 @@ window.ESCENA_PRODUCTS = [
   "order": 20,
   "imgFit": "cover",
   "img": "assets/img/products/odyssey-kit-rodamientos-bb-mu5tvb2g0pk2.jpg?v=1789667582216"
- },
- {
-  "slug": "clavijas-negro-par",
-  "n": "Pegs Negro (Par)",
-  "brand": "",
-  "cat": "clavijas",
-  "spec": "Aluminio CNC · Par · Negro",
-  "price": 150000,
-  "sku": "CLAVIJAS-NEGRO-PAR",
-  "units": 12,
-  "order": 1220,
-  "img": "assets/img/products/clavijas-negro-par.jpg?v=1788093948129"
- },
- {
-  "slug": "cult-clavija-negro",
-  "n": "Peg Cult Negro",
-  "brand": "Cult",
-  "cat": "clavijas",
-  "spec": "Aluminio CNC · Unidad · Negro",
-  "price": 80000,
-  "sku": "CULT-CLAVIJA-NEGRO",
-  "units": 12,
-  "order": 1540,
-  "img": "assets/img/products/cult-clavija-negro.jpg?v=1788093948129"
- },
- {
-  "slug": "clavija-negro",
-  "n": "Peg Negro",
-  "brand": "",
-  "cat": "clavijas",
-  "spec": "Aluminio CNC · Unidad · Negro",
-  "price": 78000,
-  "sku": "CLAVIJA-NEGRO",
-  "units": 12,
-  "order": 1560,
-  "img": "assets/img/products/clavija-negro.jpg?v=1788093948129"
- },
- {
-  "slug": "federal-clavija-negro",
-  "n": "Peg Federal Negro",
-  "brand": "Federal",
-  "cat": "clavijas",
-  "spec": "Aluminio · Funda de nylon · 4.5 pulgadas · Negro",
-  "price": 80000,
-  "sku": "FEDERAL-CLAVIJA-NEGRO",
-  "units": 12,
-  "order": 1550,
-  "img": "assets/img/products/federal-clavija-negro.jpg?v=1788093948129"
- },
- {
-  "slug": "cult-punos-negro",
-  "n": "Funda De Plastipeg Fate",
-  "brand": "Cult",
-  "cat": "clavijas",
-  "spec": "Espuma/goma · Negro",
-  "price": 22000,
-  "sku": "FUNDA-PEGS-FATE",
-  "units": 10,
-  "order": 1910,
-  "img": "assets/img/products/cult-punos-negro.jpg?v=1788093948129"
  },
  {
   "slug": "cult-punos-rasta",
