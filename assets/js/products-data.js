@@ -101,7 +101,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hhqk800z.jpg?v=1790709980308",
    "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hjtg9hgb.jpg?v=1790709981979"
   ],
-  "imgZoom": 117,
+  "imgZoom": 107,
   "slug": "plasticpegs-cult-butter-4-5-4-75",
   "order": 0,
   "img": "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hggeo2kg.jpg?v=1790709977612"
