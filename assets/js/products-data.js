@@ -1,5 +1,35 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Canilleras R2 Classic",
+  "brand": "R2",
+  "cat": "canilleras",
+  "spec": "Diseño cómodo para proteger la espinilla - Protección de 4 láminas",
+  "price": 70000,
+  "sku": "CNL-R2-001",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "S",
+    "units": 0
+   },
+   {
+    "label": "M",
+    "units": 1
+   },
+   {
+    "label": "L",
+    "units": 0
+   },
+   {
+    "label": "XL",
+    "units": 0
+   }
+  ],
+  "slug": "canilleras-r2-classic",
+  "img": "assets/img/products/canilleras-r2-classic-mun81kqvxveo.jpg?v=1790719314761"
+ },
+ {
   "n": "Casco GW SKI Negro",
   "brand": "GW",
   "cat": "cascos",
