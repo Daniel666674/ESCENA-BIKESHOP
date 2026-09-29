@@ -8041,5 +8041,15 @@ window.ESCENA_AUDIT = [
    "bicicleta-cult-control-raw"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T22:44:16.827Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "bicicleta-cult-control-raw"
+  ],
+  "deleted": []
  }
 ];
