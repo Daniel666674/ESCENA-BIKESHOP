@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bicicleta Cult Control Raw",
+  "brand": "Cult",
+  "cat": "bicicletas",
+  "spec": "",
+  "price": 2420000,
+  "sku": "BIC-CLT-002",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/bicicleta-cult-control-raw-mun8wf283lq2.jpg?v=1790720753841",
+   "assets/img/products/bicicleta-cult-control-raw-mun8wgq9tb38.jpg?v=1790720755462"
+  ],
+  "slug": "bicicleta-cult-control-raw",
+  "img": "assets/img/products/bicicleta-cult-control-raw-mun8wf283lq2.jpg?v=1790720753841"
+ },
+ {
   "n": "Bicicleta Cult Juvenile RIN 18",
   "brand": "Cult",
   "cat": "bicicletas",
