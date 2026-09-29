@@ -395,5 +395,6 @@ window.ESCENA_COSTS = {
  "kit-de-herramienta-cult": 96000,
  "extractor-de-cadena-superb": 10400,
  "extractor-de-cadena-gw": 28000,
- "moneda-templaradios-cromolio-icetoolz-12f8": 29600
+ "moneda-templaradios-cromolio-icetoolz-12f8": 29600,
+ "extractor-de-centro-19mm": 12000
 };
