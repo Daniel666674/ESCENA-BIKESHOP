@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bicicleta Fitbikeco Misfit RIN 16 -",
+  "brand": "Fitbikeco",
+  "cat": "bicicletas",
+  "spec": "TAMAÑO TT: 16,25” - CUADRO: Tubos superior e inferior de acero al cromo-molibdeno - AURICULARES: Integrados con orificios para giroscopio integrados - EJE DE PEDALIER: Sellado central  - BARRAS: 2 piezas de 7” x 24” - HORQUILLA: Nueva horquilla de dirección de cromo-molibdeno con desplazamiento de 31 mm - STEM: Mini carga superior - ASIENTO: Combinación integrada más plana y acolchada de 25,4 mm - BIELAS: Tubulares de cromo-molibdeno de 127 mm - PIÑÓN: Fit Bite 24T - PEDALES: Plataforma de nailon de 9/16” - RUEDA DELANTERA: 20H más ancha, de pared simple con buje sin sellar. -  RUEDA TRASERA: 20 radios más anchos, de pared simple, con cassette sellado de 9 dientes. - NEUMÁTICOS: COMPATIBLES CON NEUMÁTICOS OEM DE 2,25” - FRENOS: Freno en U con muelles de baja tensión, palanca de corto alcance, cable lineal -  MISC: Tuercas de eje trasero de 17 mm",
+  "price": 2200000,
+  "sku": "BIC-FIT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "bicicleta-fitbikeco-misfit-rin-16",
+  "img": "assets/img/products/bicicleta-fitbikeco-misfit-rin-16-munay1edaud6.jpg?v=1790724189335"
+ },
+ {
   "n": "Bicicleta Cult Control Raw",
   "brand": "Cult",
   "cat": "bicicletas",
