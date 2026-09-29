@@ -387,5 +387,7 @@ window.ESCENA_COSTS = {
  "cajas-de-frente-trueno-tornasol": 48000,
  "cajas-de-centro-trueno-cromado": 48000,
  "plasticpegs-cult-butter-4-5-4-75": 68000,
- "peg-doomsday-cromolio": 68000
+ "peg-doomsday-cromolio": 68000,
+ "plasticpeg-federal-aluminio-4-5": 68000,
+ "plasticpeg-eigthies-cromolio-4-5": 68000
 };
