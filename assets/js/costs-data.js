@@ -399,5 +399,6 @@ window.ESCENA_COSTS = {
  "extractor-de-centro-19mm": 12000,
  "casco-protec-x-s-m": 296000,
  "casco-protec-x-fitbikeco-full-cut": 296000,
- "casco-gw-ski-morado": 56000
+ "casco-gw-ski-morado": 56000,
+ "casco-gw-ski-negro": 56000
 };
