@@ -403,5 +403,6 @@ window.ESCENA_COSTS = {
  "casco-gw-ski-negro": 56000,
  "canilleras-r2-classic": 56000,
  "bicicleta-cult-juvenile-rin-18": 1600000,
- "bicicleta-fitbikeco-misfit-rin-16": 1760000
+ "bicicleta-fitbikeco-misfit-rin-16": 1760000,
+ "bicicleta-fitbikeco-misfit-bmx-rin-16": 1760000
 };
