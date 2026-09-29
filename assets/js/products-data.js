@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Kit de Herramienta Cult",
+  "brand": "Cult",
+  "cat": "herramientas",
+  "spec": "Viene en una pequeña bolsa con cremallera que cabe fácilmente en el bolsillo o en la mochila...  1x 6 mm 1x 8 mm 1x casquillo profundo de 17 mm 1x extensión de enchufe 1x mango de torsión 1x mosquetón para llave de radios",
+  "price": 120000,
+  "sku": "HER-CLT-001",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "kit-de-herramienta-cult",
+  "order": 0,
+  "img": "assets/img/products/kit-de-herramienta-cult-mun4o12oao9g.jpg?v=1790713644042"
+ },
+ {
   "n": "Plasticpeg FictionBikes Acero 4.5\"",
   "brand": "Fiction",
   "cat": "clavijas",
@@ -8479,23 +8492,29 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "herramientas",
   "spec": "Multiherramienta plegable · 6mm · 8mm · dado 17mm",
-  "price": 110000,
+  "price": 90000,
   "sku": "CULT-MULTIHERRAMIENTA-01",
-  "units": 12,
-  "order": 1400,
-  "img": "assets/img/products/cult-multiherramienta-01.jpg?v=1788093948129"
+  "units": 4,
+  "order": 10,
+  "imgFit": "cover",
+  "img": "assets/img/products/cult-multiherramienta-01-mun4o2run0pg.jpg?v=1790713646014"
  },
  {
   "slug": "cult-multiherramienta-02",
-  "n": "Multiherramienta Cult (Empaque)",
+  "n": "Extractor de Cadena Cultcrew",
   "brand": "Cult",
   "cat": "herramientas",
-  "spec": "Multiherramienta plegable · 6mm · 8mm · dado 17mm",
-  "price": 110000,
+  "spec": "Compatible para cadenas cadenas 410, 510 o de medio eslabón - Cuerpo mecanizado por CNC y compartimento para el mango roscado que permite guardar pasadores de accionamiento adicionales -",
+  "price": 85000,
   "sku": "CULT-MULTIHERRAMIENTA-02",
   "units": 12,
-  "order": 1410,
-  "img": "assets/img/products/cult-multiherramienta-02.jpg?v=1788093948129"
+  "order": 20,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/cult-multiherramienta-02-mun4o4ami453.jpg?v=1790713647707",
+   "assets/img/products/cult-multiherramienta-02-mun4o5lnd5zy.jpg?v=1790713649490"
+  ],
+  "img": "assets/img/products/cult-multiherramienta-02-mun4o4ami453.jpg?v=1790713647707"
  },
  {
   "slug": "llave-y-roja",
@@ -8506,7 +8525,7 @@ window.ESCENA_PRODUCTS = [
   "price": 70000,
   "sku": "LLAVE-Y-ROJA",
   "units": 12,
-  "order": 1660,
+  "order": 30,
   "img": "assets/img/products/llave-y-roja.jpg?v=1788093948129"
  },
  {
