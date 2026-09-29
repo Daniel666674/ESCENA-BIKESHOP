@@ -8031,5 +8031,15 @@ window.ESCENA_AUDIT = [
    "canitobilleras-r2"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T22:38:08.886Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "bicicleta-cult-control-raw"
+  ],
+  "deleted": []
  }
 ];
