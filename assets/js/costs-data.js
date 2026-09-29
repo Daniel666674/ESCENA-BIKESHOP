@@ -398,5 +398,6 @@ window.ESCENA_COSTS = {
  "moneda-templaradios-cromolio-icetoolz-12f8": 29600,
  "extractor-de-centro-19mm": 12000,
  "casco-protec-x-s-m": 296000,
- "casco-protec-x-fitbikeco-full-cut": 296000
+ "casco-protec-x-fitbikeco-full-cut": 296000,
+ "casco-gw-ski-morado": 56000
 };
