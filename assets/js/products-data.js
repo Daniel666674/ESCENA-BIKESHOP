@@ -1,6 +1,40 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Peg Doomsday Cromolio",
+  "n": "Plasticpeg Eigthies Cromolio 4.5\"",
+  "brand": "Eighties",
+  "cat": "clavijas",
+  "spec": "Núcleo de Cromolio para mayor resistencia con carcasa exterior reemplazable de PC. Mecanizado CNC. Ligero. 11,4 cm de longitud - Orificio de 14 mm con adaptador de 9,5 mm -Peso: 150 g cada uno.",
+  "price": 85000,
+  "sku": "PEG-EGT-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/plasticpeg-eigthies-cromolio-4-5-mun36q2cthg5.jpg?v=1790711157537",
+   "assets/img/products/plasticpeg-eigthies-cromolio-4-5-mun36s69w65d.jpg?v=1790711160303"
+  ],
+  "imgZoom": 107,
+  "slug": "plasticpeg-eigthies-cromolio-4-5",
+  "img": "assets/img/products/plasticpeg-eigthies-cromolio-4-5-mun36q2cthg5.jpg?v=1790711157537"
+ },
+ {
+  "n": "Plasticpeg Federal Aluminio 4.5\"",
+  "brand": "Federal",
+  "cat": "clavijas",
+  "spec": "Material: Aluminio 7075 T6 - longitud: 4,15\" (100 mm) eje: 3/8\" (10 mm) o 14 mm - diámetro: 34 mm - funda: 40,5 mm con funda de plástico - peso: 0,060 kg/unidad (2,20 oz)",
+  "price": 85000,
+  "sku": "PEG-FED-001",
+  "units": 16,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/plasticpeg-federal-aluminio-4-5-mun36ub369yi.jpg?v=1790711162359",
+   "assets/img/products/plasticpeg-federal-aluminio-4-5-mun36vw8o5ss.jpg?v=1790711164324",
+   "assets/img/products/plasticpeg-federal-aluminio-4-5-mun36xet6hhe.jpg?v=1790711166508"
+  ],
+  "slug": "plasticpeg-federal-aluminio-4-5",
+  "img": "assets/img/products/plasticpeg-federal-aluminio-4-5-mun36ub369yi.jpg?v=1790711162359"
+ },
+ {
+  "n": "Peg Doomsday Cromolio 4.5\"",
   "brand": "Cult",
   "cat": "clavijas",
   "spec": "Acero al cromo-molibdeno tratado térmicamente y con refuerzo interno para mayor resistencia y ligereza - Orificio de 14 mm con adaptador de 3/8\" incluido - Longitud: 105 mm o 115 mm - Diámetro: 35 mm - Peso: 5,9 onzas",
@@ -10,8 +44,8 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/peg-doomsday-cromolio-mun2halqekjb.jpg?v=1790709972299",
-   "assets/img/products/peg-doomsday-cromolio-mun2hdmz5092.jpg?v=1790709974004",
-   "assets/img/products/peg-doomsday-cromolio-mun2heyc2bii.jpg?v=1790709975950"
+   "assets/img/products/peg-doomsday-cromolio-mun2heyc2bii.jpg?v=1790709975950",
+   "assets/img/products/peg-doomsday-cromolio-mun2hdmz5092.jpg?v=1790709974004"
   ],
   "slug": "peg-doomsday-cromolio",
   "img": "assets/img/products/peg-doomsday-cromolio-mun2halqekjb.jpg?v=1790709972299"
