@@ -7920,5 +7920,15 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-s-m"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T21:30:57.936Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
