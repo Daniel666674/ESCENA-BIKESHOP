@@ -364,6 +364,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "slug": "cajas-de-centro-trueno-cromado",
   "order": 130,
+  "imgZoom": 117,
   "img": "assets/img/products/cajas-de-centro-trueno-cromado-mun1e4rrrg50.jpg?v=1790708143781"
  },
  {
@@ -377,6 +378,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "slug": "cajas-de-frente-trueno-tornasol",
   "order": 110,
+  "imgZoom": 111,
   "img": "assets/img/products/cajas-de-frente-trueno-tornasol-mun1e6qtr989.jpg?v=1790708145581"
  },
  {
