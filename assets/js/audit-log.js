@@ -7735,5 +7735,18 @@ window.ESCENA_AUDIT = [
    "federal-clavija-negro",
    "clavijas-negro-par"
   ]
+ },
+ {
+  "ts": "2026-09-29T19:46:17.601Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 1 producto editado, 5 fotos subidas",
+  "created": [
+   "plasticpeg-eigthies-cromolio-4-5",
+   "plasticpeg-federal-aluminio-4-5"
+  ],
+  "edited": [
+   "peg-doomsday-cromolio"
+  ],
+  "deleted": []
  }
 ];
