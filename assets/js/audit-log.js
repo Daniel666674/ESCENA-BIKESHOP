@@ -7718,5 +7718,22 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-totalbmx-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T19:26:46.381Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 5 productos eliminados, 6 fotos subidas",
+  "created": [
+   "peg-doomsday-cromolio",
+   "plasticpegs-cult-butter-4-5-4-75"
+  ],
+  "edited": [],
+  "deleted": [
+   "cult-clavija-negro",
+   "cult-punos-negro",
+   "clavija-negro",
+   "federal-clavija-negro",
+   "clavijas-negro-par"
+  ]
  }
 ];
