@@ -400,5 +400,6 @@ window.ESCENA_COSTS = {
  "casco-protec-x-s-m": 296000,
  "casco-protec-x-fitbikeco-full-cut": 296000,
  "casco-gw-ski-morado": 56000,
- "casco-gw-ski-negro": 56000
+ "casco-gw-ski-negro": 56000,
+ "canilleras-r2-classic": 56000
 };
