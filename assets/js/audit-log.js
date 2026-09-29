@@ -7786,5 +7786,19 @@ window.ESCENA_AUDIT = [
    "plasticpegs-cult-butter-4-5-4-75"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T20:28:00.809Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 3 productos editados, 4 fotos subidas",
+  "created": [
+   "kit-de-herramienta-cult"
+  ],
+  "edited": [
+   "cult-multiherramienta-01",
+   "cult-multiherramienta-02",
+   "llave-y-roja"
+  ],
+  "deleted": []
  }
 ];
