@@ -1,5 +1,31 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Cajas de centro Trueno Cromado",
+  "brand": "Trueno",
+  "cat": "caja-frente",
+  "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
+  "price": 60000,
+  "sku": "CJF-TRU-003",
+  "units": 4,
+  "imgFit": "cover",
+  "slug": "cajas-de-centro-trueno-cromado",
+  "order": 130,
+  "img": "assets/img/products/cajas-de-centro-trueno-cromado-mun1e4rrrg50.jpg?v=1790708143781"
+ },
+ {
+  "n": "Cajas de frente Trueno - Tornasol",
+  "brand": "Trueno",
+  "cat": "caja-frente",
+  "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
+  "price": 70000,
+  "sku": "CJF-TRU-002",
+  "units": 4,
+  "imgFit": "cover",
+  "slug": "cajas-de-frente-trueno-tornasol",
+  "order": 110,
+  "img": "assets/img/products/cajas-de-frente-trueno-tornasol-mun1e6qtr989.jpg?v=1790708145581"
+ },
+ {
   "n": "Rin STL J40C Azul",
   "brand": "STL",
   "cat": "rines",
@@ -3625,7 +3651,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CJF-FAT-001",
   "units": 2,
   "slug": "cajas-de-frente-fate-negra",
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/cajas-de-frente-fate-negra-mt8xma1jbsqb.jpg?v=1788093948129"
  },
  {
@@ -3637,7 +3663,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CJF-TOT-001",
   "units": 1,
   "slug": "cajas-de-frente-totalbmx-negra",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/cajas-de-frente-totalbmx-negra-mt8xji9htrq1.jpg?v=1788093948129"
  },
  {
@@ -4108,7 +4134,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cajas-de-frente-gw",
-  "order": 110,
+  "order": 140,
   "img": "assets/img/products/cajas-de-frente-gw.jpg?v=1788093948129"
  },
  {
@@ -4176,7 +4202,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/cajas-de-frente-rant-ur.jpg?v=1788093948129"
  },
  {
@@ -4273,41 +4299,17 @@ window.ESCENA_PRODUCTS = [
   "brand": "Trueno",
   "cat": "caja-frente",
   "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
-  "price": 70000,
+  "price": 60000,
   "sku": "CJF-TRU-001",
-  "units": 15,
-  "imgs": [
-   "assets/img/products/cajas-de-frente-trueno-v2.jpg?v=1788093948129",
-   "assets/img/products/cajas-de-frente-trueno-v2-2.jpg?v=1788093948129",
-   "assets/img/products/cajas-de-frente-trueno-v2-3.jpg?v=1788093948129"
-  ],
+  "units": 5,
   "colors": [
    {
     "label": "Negro",
     "units": 5
-   },
-   {
-    "label": "Cromada",
-    "units": 5
-   },
-   {
-    "label": "Tornasol",
-    "units": 5
    }
   ],
   "slug": "cajas-de-frente-trueno-v2",
-  "imgColorMap": {
-   "Negro": [
-    0
-   ],
-   "Cromada": [
-    1
-   ],
-   "Tornasol": [
-    2
-   ]
-  },
-  "order": 100,
+  "order": 120,
   "img": "assets/img/products/cajas-de-frente-trueno-v2.jpg?v=1788093948129"
  },
  {
@@ -4343,6 +4345,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "frente-integrado-demolition-v2",
+  "order": 60,
   "img": "assets/img/products/frente-integrado-demolition-v2.jpg?v=1788093948129"
  },
  {
@@ -4407,7 +4410,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "cajas-integradas-tall-seat-colony",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/cajas-integradas-tall-seat-colony.jpg?v=1788093948129"
  },
  {
