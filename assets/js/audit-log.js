@@ -8088,5 +8088,15 @@ window.ESCENA_AUDIT = [
    "bicicleta-cult-juvenile-rin-18"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T23:48:34.375Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "bicicleta-fitbikeco-misfit-bmx-rin-16"
+  ],
+  "deleted": []
  }
 ];
