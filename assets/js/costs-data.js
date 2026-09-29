@@ -392,5 +392,6 @@ window.ESCENA_COSTS = {
  "plasticpeg-eigthies-cromolio-4-5": 68000,
  "plasticpegs-eighties-aluminio-4-5": 68000,
  "plasticpeg-fictionbikes-acero-4-5": 56000,
- "kit-de-herramienta-cult": 96000
+ "kit-de-herramienta-cult": 96000,
+ "extractor-de-cadena-superb": 10400
 };
