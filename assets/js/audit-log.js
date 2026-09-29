@@ -7776,5 +7776,15 @@ window.ESCENA_AUDIT = [
    "plasticpeg-fictionbikes-acero-4-5"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T20:09:02.919Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "plasticpegs-cult-butter-4-5-4-75"
+  ],
+  "deleted": []
  }
 ];
