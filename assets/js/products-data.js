@@ -1,5 +1,39 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco GW SKI Morado",
+  "brand": "GW",
+  "cat": "cascos",
+  "spec": "Certificado: CE EN1078 + A1:2012 Modalidad : Ciclismo Urbano, Patinetas, Extremo Construcción: Out-Mold Sistema de Ajuste: Roller de Trinquetes Material Externo: ABS Material Interno: PE",
+  "price": 70000,
+  "sku": "CAS-GWB-002",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1,
+    "price": 70000
+   },
+   {
+    "label": "M",
+    "units": 0,
+    "price": 70000
+   },
+   {
+    "label": "L",
+    "units": 0,
+    "price": 70000
+   },
+   {
+    "label": "XL",
+    "units": 0,
+    "price": 70000
+   }
+  ],
+  "slug": "casco-gw-ski-morado",
+  "img": "assets/img/products/casco-gw-ski-morado-mun77n9rrz72.jpg?v=1790717918401"
+ },
+ {
   "n": "Casco Protec x Fitbikeco Full Cut",
   "brand": "370000",
   "cat": "cascos",
