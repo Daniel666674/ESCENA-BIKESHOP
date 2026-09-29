@@ -385,5 +385,7 @@ window.ESCENA_COSTS = {
  "manubrio-cromoly-negro-03": 304000,
  "manubrio-cromoly-negro-04": 132000,
  "cajas-de-frente-trueno-tornasol": 48000,
- "cajas-de-centro-trueno-cromado": 48000
+ "cajas-de-centro-trueno-cromado": 48000,
+ "plasticpegs-cult-butter-4-5-4-75": 68000,
+ "peg-doomsday-cromolio": 68000
 };
