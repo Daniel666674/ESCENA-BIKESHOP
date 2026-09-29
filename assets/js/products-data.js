@@ -1,5 +1,45 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Casco Protec x S&M",
+  "brand": "Protec",
+  "cat": "cascos",
+  "spec": "Triple certificación que cumple con la norma de seguridad US CPSC - cuenta con 11 orificios de ventilaci Triple certificación que cumple con la norma de seguridad US CPSCón -",
+  "price": 370000,
+  "sku": "CAS-PRO-009",
+  "units": 4,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/casco-protec-x-s-m-mun6guaymhlv.jpg?v=1790716668125",
+   "assets/img/products/casco-protec-x-s-m-mun6gw65did4.jpg?v=1790716670542",
+   "assets/img/products/casco-protec-x-s-m-mun6gy1bid29.jpg?v=1790716672333"
+  ],
+  "sizes": [
+   {
+    "label": "S",
+    "units": 1,
+    "price": 370000
+   },
+   {
+    "label": "M",
+    "units": 1,
+    "price": 370000
+   },
+   {
+    "label": "L",
+    "units": 1,
+    "price": 370000
+   },
+   {
+    "label": "XL",
+    "units": 1,
+    "price": 370000
+   }
+  ],
+  "slug": "casco-protec-x-s-m",
+  "order": 10,
+  "img": "assets/img/products/casco-protec-x-s-m-mun6guaymhlv.jpg?v=1790716668125"
+ },
+ {
   "n": "Extractor de Centro 19mm",
   "brand": "GW",
   "cat": "herramientas",
@@ -5788,7 +5828,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-gw-wasp-full-face",
-  "order": 680,
+  "order": 120,
   "img": "assets/img/products/casco-gw-wasp-full-face.jpg?v=1788093948129"
  },
  {
@@ -5826,7 +5866,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-classic-negro-mate",
-  "order": 810,
+  "order": 130,
   "img": "assets/img/products/casco-protec-classic-negro-mate.jpg?v=1788093948129"
  },
  {
@@ -5864,7 +5904,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-classic-gris",
-  "order": 820,
+  "order": 140,
   "img": "assets/img/products/casco-protec-classic-gris.jpg?v=1788093948129"
  },
  {
@@ -5902,7 +5942,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-classic-blanco",
-  "order": 830,
+  "order": 150,
   "img": "assets/img/products/casco-protec-classic-blanco.jpg?v=1788093948129"
  },
  {
@@ -5940,7 +5980,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-classic-negro-brillante",
-  "order": 840,
+  "order": 160,
   "img": "assets/img/products/casco-protec-classic-negro-brillante.jpg?v=1788093948129"
  },
  {
@@ -5970,7 +6010,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-old-school-negro",
-  "order": 610,
+  "order": 90,
   "img": "assets/img/products/casco-protec-old-school-negro.jpg?v=1788093948129"
  },
  {
@@ -6000,7 +6040,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-old-school-blanco",
-  "order": 620,
+  "order": 100,
   "img": "assets/img/products/casco-protec-old-school-blanco.jpg?v=1788093948129"
  },
  {
@@ -6030,7 +6070,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-old-school-gris",
-  "order": 630,
+  "order": 110,
   "img": "assets/img/products/casco-protec-old-school-gris.jpg?v=1788093948129"
  },
  {
@@ -6067,7 +6107,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-full-cut-blanco",
-  "order": 490,
+  "order": 20,
   "img": "assets/img/products/casco-protec-full-cut-blanco.jpg?v=1788093948129"
  },
  {
@@ -6104,7 +6144,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-protec-full-cut-negro",
-  "order": 500,
+  "order": 30,
   "img": "assets/img/products/casco-protec-full-cut-negro.jpg?v=1788093948129"
  },
  {
@@ -6132,7 +6172,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-dawn-negro",
-  "order": 470,
+  "order": 0,
   "img": "assets/img/products/casco-tsg-dawn-negro.jpg?v=1788093948129"
  },
  {
@@ -6160,7 +6200,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-negro-mate",
-  "order": 510,
+  "order": 40,
   "img": "assets/img/products/casco-tsg-evolution-negro-mate.jpg?v=1788093948129"
  },
  {
@@ -6188,7 +6228,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-negro",
-  "order": 520,
+  "order": 50,
   "img": "assets/img/products/casco-tsg-evolution-negro.jpg?v=1788093948129"
  },
  {
@@ -6214,7 +6254,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-rojo",
-  "order": 530,
+  "order": 60,
   "img": "assets/img/products/casco-tsg-evolution-rojo.jpg?v=1788093948129"
  },
  {
@@ -6242,7 +6282,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-verde",
-  "order": 540,
+  "order": 70,
   "img": "assets/img/products/casco-tsg-evolution-verde.jpg?v=1788093948129"
  },
  {
@@ -6270,7 +6310,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "casco-tsg-evolution-morado",
-  "order": 550,
+  "order": 80,
   "img": "assets/img/products/casco-tsg-evolution-morado.jpg?v=1788093948129"
  },
  {
