@@ -401,5 +401,6 @@ window.ESCENA_COSTS = {
  "casco-protec-x-fitbikeco-full-cut": 296000,
  "casco-gw-ski-morado": 56000,
  "casco-gw-ski-negro": 56000,
- "canilleras-r2-classic": 56000
+ "canilleras-r2-classic": 56000,
+ "bicicleta-cult-juvenile-rin-18": 1600000
 };
