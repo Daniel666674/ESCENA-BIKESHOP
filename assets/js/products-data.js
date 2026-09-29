@@ -3,7 +3,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Plasticpeg FictionBikes Acero 4.5\"",
   "brand": "Fiction",
   "cat": "clavijas",
-  "spec": "",
+  "spec": "Material: Acero de Alta Tension -Material de la cubierta: nailon Longitud: 4,4\" (112 mm) - Eje: 14 mm (adaptador de eje de 10 mm incluido) - diámetro: 34 mm - Diámetro con tapa: 40 mm Logotipo -  impreso de Fiction Bikes - Libra: 0,219 kg (pieza)",
   "price": 70000,
   "sku": "PEG-FIC-001",
   "units": 4,
@@ -13,6 +13,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/plasticpeg-fictionbikes-acero-4-5-mun3o95k4ifo.jpg?v=1790711974661"
   ],
   "slug": "plasticpeg-fictionbikes-acero-4-5",
+  "order": 50,
   "img": "assets/img/products/plasticpeg-fictionbikes-acero-4-5-mun3o77jiark.jpg?v=1790711972696"
  },
  {
@@ -29,6 +30,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/plasticpegs-eighties-aluminio-4-5-mun3oc2u8a11.jpg?v=1790711977981"
   ],
   "slug": "plasticpegs-eighties-aluminio-4-5",
+  "order": 30,
   "img": "assets/img/products/plasticpegs-eighties-aluminio-4-5-mun3oao59sle.jpg?v=1790711976486"
  },
  {
@@ -46,6 +48,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 107,
   "slug": "plasticpeg-eigthies-cromolio-4-5",
+  "order": 40,
   "img": "assets/img/products/plasticpeg-eigthies-cromolio-4-5-mun36q2cthg5.jpg?v=1790711157537"
  },
  {
@@ -63,6 +66,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/plasticpeg-federal-aluminio-4-5-mun36xet6hhe.jpg?v=1790711166508"
   ],
   "slug": "plasticpeg-federal-aluminio-4-5",
+  "order": 20,
   "img": "assets/img/products/plasticpeg-federal-aluminio-4-5-mun36ub369yi.jpg?v=1790711162359"
  },
  {
@@ -80,6 +84,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/peg-doomsday-cromolio-mun2hdmz5092.jpg?v=1790709974004"
   ],
   "slug": "peg-doomsday-cromolio",
+  "order": 10,
   "img": "assets/img/products/peg-doomsday-cromolio-mun2halqekjb.jpg?v=1790709972299"
  },
  {
@@ -98,6 +103,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 117,
   "slug": "plasticpegs-cult-butter-4-5-4-75",
+  "order": 0,
   "img": "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hggeo2kg.jpg?v=1790709977612"
  },
  {
