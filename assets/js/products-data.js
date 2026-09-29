@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Extractor de Cadena SuperB",
+  "brand": "GW",
+  "cat": "herramientas",
+  "spec": "",
+  "price": 13000,
+  "sku": "HER-GWB-001",
+  "units": 5,
+  "imgFit": "cover",
+  "slug": "extractor-de-cadena-superb",
+  "img": "assets/img/products/extractor-de-cadena-superb-mun4w3avg76i.jpg?v=1790714020937"
+ },
+ {
   "n": "Kit de Herramienta Cult",
   "brand": "Cult",
   "cat": "herramientas",
