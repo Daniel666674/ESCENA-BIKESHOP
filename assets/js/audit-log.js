@@ -8071,5 +8071,22 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T23:42:52.103Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 6 productos editados, 1 foto subida",
+  "created": [
+   "bicicleta-fitbikeco-misfit-bmx-rin-16"
+  ],
+  "edited": [
+   "bicicleta-fitbikeco-misfit-rin-16",
+   "bicicleta-cult-control-raw",
+   "bicicleta-profit-oxnard-negro-rojo",
+   "bicicleta-profit-culver-bmx-gris-oscuro",
+   "bicicleta-profir-culver-bmx-gris-oscuro",
+   "bicicleta-cult-juvenile-rin-18"
+  ],
+  "deleted": []
  }
 ];
