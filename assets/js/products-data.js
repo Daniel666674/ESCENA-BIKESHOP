@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Extractor de Centro 19mm",
+  "brand": "GW",
+  "cat": "herramientas",
+  "spec": "Ectractor de centro para todo terrreno ò para bielas milimetricas de 19mm",
+  "price": 15000,
+  "sku": "HER-GWB-004",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "extractor-de-centro-19mm",
+  "order": 60,
+  "img": "assets/img/products/extractor-de-centro-19mm-mun64nwftson.jpg?v=1790716099417"
+ },
+ {
   "n": "Moneda Templaradios Cromolio IceToolz 12F8",
   "brand": "GW",
   "cat": "herramientas",
@@ -9,6 +22,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "moneda-templaradios-cromolio-icetoolz-12f8",
+  "order": 50,
   "img": "assets/img/products/moneda-templaradios-cromolio-icetoolz-12f8-mun5wx2ro9vr.jpg?v=1790715738463"
  },
  {
@@ -8562,7 +8576,7 @@ window.ESCENA_PRODUCTS = [
   "price": 9000,
   "sku": "LLAVE-Y-ROJA",
   "units": 5,
-  "order": 50,
+  "order": 70,
   "imgFit": "cover",
   "img": "assets/img/products/llave-y-roja-mun4razlokrm.jpg?v=1790713797091"
  },
