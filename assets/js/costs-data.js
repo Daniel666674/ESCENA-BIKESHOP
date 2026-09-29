@@ -383,5 +383,7 @@ window.ESCENA_COSTS = {
  "manubrio-cromoly-negro-01": 304000,
  "manubrio-cromoly-negro-02": 304000,
  "manubrio-cromoly-negro-03": 304000,
- "manubrio-cromoly-negro-04": 132000
+ "manubrio-cromoly-negro-04": 132000,
+ "cajas-de-frente-trueno-tornasol": 48000,
+ "cajas-de-centro-trueno-cromado": 48000
 };
