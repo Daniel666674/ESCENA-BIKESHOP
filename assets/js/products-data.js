@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Extractor de Cadena GW",
+  "brand": "GW",
+  "cat": "herramientas",
+  "spec": "",
+  "price": 35000,
+  "sku": "HER-GWB-002",
+  "units": 10,
+  "slug": "extractor-de-cadena-gw",
+  "order": 30,
+  "img": "assets/img/products/extractor-de-cadena-gw-mun5q922eein.jpg?v=1790715427047"
+ },
+ {
   "n": "Extractor de Cadena SuperB",
   "brand": "GW",
   "cat": "herramientas",
@@ -9,6 +21,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "extractor-de-cadena-superb",
+  "order": 40,
   "img": "assets/img/products/extractor-de-cadena-superb-mun4w3avg76i.jpg?v=1790714020937"
  },
  {
@@ -8537,7 +8550,7 @@ window.ESCENA_PRODUCTS = [
   "price": 9000,
   "sku": "LLAVE-Y-ROJA",
   "units": 5,
-  "order": 30,
+  "order": 50,
   "imgFit": "cover",
   "img": "assets/img/products/llave-y-roja-mun4razlokrm.jpg?v=1790713797091"
  },
