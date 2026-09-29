@@ -5762,7 +5762,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 320000,
   "sku": "CAS-GWB-001",
-  "units": 1,
+  "units": 0,
   "imgs": [
    "assets/img/products/casco-gw-wasp-full-face.jpg?v=1788093948129",
    "assets/img/products/casco-gw-wasp-full-face-2.jpg?v=1788093948129",
@@ -5776,7 +5776,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "M",
-    "units": 1
+    "units": 0
    },
    {
     "label": "L",
