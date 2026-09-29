@@ -7960,5 +7960,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T22:04:03.596Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "cajas-de-centro-trueno-cromado",
+   "cajas-de-frente-trueno-tornasol"
+  ],
+  "deleted": []
  }
 ];
