@@ -1,6 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Bicicleta Fitbikeco Misfit RIN 16 -",
+  "n": "Bicicleta Fitbikeco Misfit BMX - RIN 16",
+  "brand": "Fitbikeco",
+  "cat": "bicicletas",
+  "spec": "TAMAÑO TT: 16,25” - CUADRO: Tubos superior e inferior de acero al cromo-molibdeno - AURICULARES: Integrados con orificios para giroscopio integrados - EJE DE PEDALIER: Sellado central  - BARRAS: 2 piezas de 7” x 24” - HORQUILLA: Nueva horquilla de dirección de cromo-molibdeno con desplazamiento de 31 mm - STEM: Mini carga superior - ASIENTO: Combinación integrada más plana y acolchada de 25,4 mm - BIELAS: Tubulares de cromo-molibdeno de 127 mm - PIÑÓN: Fit Bite 24T - PEDALES: Plataforma de nailon de 9/16” - RUEDA DELANTERA: 20H más ancha, de pared simple con buje sin sellar. -  RUEDA TRASERA: 20 radios más anchos, de pared simple, con cassette sellado de 9 dientes. - NEUMÁTICOS: COMPATIBLES CON NEUMÁTICOS OEM DE 2,25” - FRENOS: Freno en U con muelles de baja tensión, palanca de corto alcance, cable lineal -  MISC: Tuercas de eje trasero de 17 mm",
+  "price": 2200000,
+  "sku": "BIC-FIT-002",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "bicicleta-fitbikeco-misfit-bmx-rin-16",
+  "img": "assets/img/products/bicicleta-fitbikeco-misfit-bmx-rin-16-munbn1m63i4w.jpg?v=1790725355616"
+ },
+ {
+  "n": "Bicicleta Fitbikeco Misfit BMX - RIN 16",
   "brand": "Fitbikeco",
   "cat": "bicicletas",
   "spec": "TAMAÑO TT: 16,25” - CUADRO: Tubos superior e inferior de acero al cromo-molibdeno - AURICULARES: Integrados con orificios para giroscopio integrados - EJE DE PEDALIER: Sellado central  - BARRAS: 2 piezas de 7” x 24” - HORQUILLA: Nueva horquilla de dirección de cromo-molibdeno con desplazamiento de 31 mm - STEM: Mini carga superior - ASIENTO: Combinación integrada más plana y acolchada de 25,4 mm - BIELAS: Tubulares de cromo-molibdeno de 127 mm - PIÑÓN: Fit Bite 24T - PEDALES: Plataforma de nailon de 9/16” - RUEDA DELANTERA: 20H más ancha, de pared simple con buje sin sellar. -  RUEDA TRASERA: 20 radios más anchos, de pared simple, con cassette sellado de 9 dientes. - NEUMÁTICOS: COMPATIBLES CON NEUMÁTICOS OEM DE 2,25” - FRENOS: Freno en U con muelles de baja tensión, palanca de corto alcance, cable lineal -  MISC: Tuercas de eje trasero de 17 mm",
@@ -12,7 +24,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/bicicleta-fitbikeco-misfit-rin-16-munay1edaud6.jpg?v=1790724189335"
  },
  {
-  "n": "Bicicleta Cult Control Raw",
+  "n": "Bicicleta Cult Control Industrial BMX - RIN 20",
   "brand": "Cult",
   "cat": "bicicletas",
   "spec": "",
@@ -31,7 +43,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/bicicleta-cult-control-raw-mun948ihccl8.jpg?v=1790721118676"
  },
  {
-  "n": "Bicicleta Cult Juvenile RIN 18",
+  "n": "Bicicleta Cult Juvenile Negro BMX - RIN 18",
   "brand": "Cult",
   "cat": "bicicletas",
   "spec": "Cuadro ligero de aluminio 6061 - Nuevo tubo inferior reforzado - Geometría mejorada (tubo superior de 18”) - Parte trasera corta  Auriculares integrados - Mini puños CULT Dehart - Vástago de carga superior - Bielas en cromolio de 3 piezas y 140 mm - Pedales de nylon CULT - Eje de pedalier central sellado - Cadena CULT 410 - Cubo de cassette 9T - Llantas CULT Match - Piñón estilo Member de 25 dientes - 1 asiento acolchado con logo CULT - Neumático Innova de 2,40\" - 990 Freno en U - Peso: 21 LB",
@@ -39,7 +51,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIC-CLT-001",
   "units": 2,
   "imgFit": "cover",
-  "imgZoom": 121,
+  "imgZoom": 111,
   "slug": "bicicleta-cult-juvenile-rin-18",
   "img": "assets/img/products/bicicleta-cult-juvenile-rin-18-mun8jr0lp4y2.jpg?v=1790720162552"
  },
@@ -5427,7 +5439,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/tenedor-fiction-shank.jpg?v=1788093948129"
  },
  {
-  "n": "Bicicleta Profit Oxnard - Negro/Rojo",
+  "n": "Bicicleta Profit Oxnard Negro/Rojo - RIN 20",
   "brand": "Profit",
   "cat": "bicicletas",
   "spec": "",
@@ -5445,7 +5457,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1788093948129"
  },
  {
-  "n": "Bicicleta Profit Culver BMX - Gris Oscuro",
+  "n": "Bicicleta Profit Culver BMX Gris Oscuro - RIN 20",
   "brand": "Profit",
   "cat": "bicicletas",
   "spec": "Bicicleta de BMX Bicicleta Profit – Linea Optimus Marco medida 20.5″ – Cola 13.5″ Manubrio 8.9″ Acero Alta tensión Tenedor Full Cr-mo Frente y Caja Integrado Rodamientos Bielas Forjadas Acero Cassette Derecho 9T Balineras Selladas Manzana Delantera Balin Suelto Silla Pivotal Fat Llantas 2.35″ Incluye Freno Peso 12.8 Kgrs",
@@ -5464,7 +5476,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-4.jpg?v=1788093948129"
  },
  {
-  "n": "Bicicleta Profit Culver BMX - Gris Claro",
+  "n": "Bicicleta Profit Culver BMX Gris Claro - RIN 20",
   "brand": "Profit",
   "cat": "bicicletas",
   "spec": "Bicicleta de BMX Bicicleta Profit – Linea Optimus Marco medida 20.5″ – Cola 13.5″ Manubrio 8.9″ Acero Alta tensión Tenedor Full Cr-mo Frente y Caja Integrado Rodamientos Bielas Forjadas Acero Cassette Derecho 9T Balineras Selladas Manzana Delantera Balin Suelto Silla Pivotal Fat Llantas 2.35″ Incluye Freno Peso 12.8 Kgrs",
