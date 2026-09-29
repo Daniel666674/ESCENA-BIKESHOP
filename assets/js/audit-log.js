@@ -7748,5 +7748,18 @@ window.ESCENA_AUDIT = [
    "peg-doomsday-cromolio"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T19:59:53.909Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 1 producto editado, 4 fotos subidas",
+  "created": [
+   "plasticpeg-fictionbikes-acero-4-5",
+   "plasticpegs-eighties-aluminio-4-5"
+  ],
+  "edited": [
+   "plasticpegs-cult-butter-4-5-4-75"
+  ],
+  "deleted": []
  }
 ];
