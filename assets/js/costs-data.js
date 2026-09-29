@@ -367,8 +367,8 @@ window.ESCENA_COSTS = {
  "tija-negra-01": 40000,
  "tija-negra-02": 128000,
  "tija-negra-curva": 120000,
- "cult-multiherramienta-01": 88000,
- "cult-multiherramienta-02": 88000,
+ "cult-multiherramienta-01": 72000,
+ "cult-multiherramienta-02": 68000,
  "llave-y-roja": 56000,
  "cult-biggie-jaime-sintes-hammertone-negro": 1432000,
  "fate-namaste-negro": 1040000,
@@ -391,5 +391,6 @@ window.ESCENA_COSTS = {
  "plasticpeg-federal-aluminio-4-5": 68000,
  "plasticpeg-eigthies-cromolio-4-5": 68000,
  "plasticpegs-eighties-aluminio-4-5": 68000,
- "plasticpeg-fictionbikes-acero-4-5": 56000
+ "plasticpeg-fictionbikes-acero-4-5": 56000,
+ "kit-de-herramienta-cult": 96000
 };
