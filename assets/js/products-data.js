@@ -26,6 +26,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIC-CLT-001",
   "units": 2,
   "imgFit": "cover",
+  "imgZoom": 121,
   "slug": "bicicleta-cult-juvenile-rin-18",
   "img": "assets/img/products/bicicleta-cult-juvenile-rin-18-mun8jr0lp4y2.jpg?v=1790720162552"
  },
