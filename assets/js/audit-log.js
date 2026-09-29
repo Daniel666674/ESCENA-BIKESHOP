@@ -7866,5 +7866,32 @@ window.ESCENA_AUDIT = [
    "casco-gw-wasp-full-face"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T21:18:00.554Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 16 productos editados, 3 fotos subidas",
+  "created": [
+   "casco-protec-x-s-m"
+  ],
+  "edited": [
+   "casco-tsg-dawn-negro",
+   "casco-protec-full-cut-blanco",
+   "casco-protec-full-cut-negro",
+   "casco-tsg-evolution-negro-mate",
+   "casco-tsg-evolution-negro",
+   "casco-tsg-evolution-rojo",
+   "casco-tsg-evolution-verde",
+   "casco-tsg-evolution-morado",
+   "casco-protec-old-school-negro",
+   "casco-protec-old-school-blanco",
+   "casco-protec-old-school-gris",
+   "casco-gw-wasp-full-face",
+   "casco-protec-classic-negro-mate",
+   "casco-protec-classic-gris",
+   "casco-protec-classic-blanco",
+   "casco-protec-classic-negro-brillante"
+  ],
+  "deleted": []
  }
 ];
