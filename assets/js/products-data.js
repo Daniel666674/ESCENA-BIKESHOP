@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bicicleta Cult Juvenile RIN 18",
+  "brand": "Cult",
+  "cat": "bicicletas",
+  "spec": "Cuadro ligero de aluminio 6061 - Nuevo tubo inferior reforzado - Geometría mejorada (tubo superior de 18”) - Parte trasera corta  Auriculares integrados - Mini puños CULT Dehart - Vástago de carga superior - Bielas en cromolio de 3 piezas y 140 mm - Pedales de nylon CULT - Eje de pedalier central sellado - Cadena CULT 410 - Cubo de cassette 9T - Llantas CULT Match - Piñón estilo Member de 25 dientes - 1 asiento acolchado con logo CULT - Neumático Innova de 2,40\" - 990 Freno en U - Peso: 21 LB",
+  "price": 2000000,
+  "sku": "BIC-CLT-001",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "bicicleta-cult-juvenile-rin-18",
+  "img": "assets/img/products/bicicleta-cult-juvenile-rin-18-mun8jr0lp4y2.jpg?v=1790720162552"
+ },
+ {
   "n": "Canilleras R2 Classic",
   "brand": "R2",
   "cat": "canilleras",
