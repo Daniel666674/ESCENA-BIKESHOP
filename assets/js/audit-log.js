@@ -7971,5 +7971,15 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-trueno-tornasol"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T22:16:12.200Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "bicicleta-cult-juvenile-rin-18"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
