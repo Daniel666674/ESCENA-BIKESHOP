@@ -6716,6 +6716,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 1510,
+  "imgFit": "cover",
   "img": "assets/img/products/canitobilleras-r2.jpg?v=1788093948129"
  },
  {
