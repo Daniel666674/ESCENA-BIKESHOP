@@ -7950,5 +7950,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T22:02:04.308Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "canilleras-r2-classic"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
