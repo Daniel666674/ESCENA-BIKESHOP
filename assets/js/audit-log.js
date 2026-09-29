@@ -7843,5 +7843,18 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T21:08:31.290Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 productos editados, 1 foto subida",
+  "created": [
+   "extractor-de-centro-19mm"
+  ],
+  "edited": [
+   "moneda-templaradios-cromolio-icetoolz-12f8",
+   "llave-y-roja"
+  ],
+  "deleted": []
  }
 ];
