@@ -7856,5 +7856,15 @@ window.ESCENA_AUDIT = [
    "llave-y-roja"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T21:09:47.371Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "casco-gw-wasp-full-face"
+  ],
+  "deleted": []
  }
 ];
