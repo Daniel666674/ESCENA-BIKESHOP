@@ -7893,5 +7893,32 @@ window.ESCENA_AUDIT = [
    "casco-protec-classic-negro-brillante"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T21:30:32.270Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 16 productos editados, 11 fotos subidas",
+  "created": [
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "edited": [
+   "casco-protec-classic-negro-brillante",
+   "casco-protec-classic-blanco",
+   "casco-protec-classic-gris",
+   "casco-protec-classic-negro-mate",
+   "casco-gw-wasp-full-face",
+   "casco-protec-old-school-gris",
+   "casco-protec-old-school-blanco",
+   "casco-protec-old-school-negro",
+   "casco-tsg-evolution-morado",
+   "casco-tsg-evolution-verde",
+   "casco-tsg-evolution-rojo",
+   "casco-tsg-evolution-negro",
+   "casco-tsg-evolution-negro-mate",
+   "casco-protec-full-cut-negro",
+   "casco-protec-full-cut-blanco",
+   "casco-protec-x-s-m"
+  ],
+  "deleted": []
  }
 ];
