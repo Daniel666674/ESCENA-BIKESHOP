@@ -7699,5 +7699,24 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-04"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-29T18:56:10.714Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 7 productos editados, 2 fotos subidas",
+  "created": [
+   "cajas-de-centro-trueno-cromado",
+   "cajas-de-frente-trueno-tornasol"
+  ],
+  "edited": [
+   "frente-integrado-demolition-v2",
+   "cajas-de-frente-gw",
+   "cajas-de-frente-trueno-v2",
+   "cajas-de-frente-fate-negra",
+   "cajas-de-frente-rant-ur",
+   "cajas-integradas-tall-seat-colony",
+   "cajas-de-frente-totalbmx-negra"
+  ],
+  "deleted": []
  }
 ];
