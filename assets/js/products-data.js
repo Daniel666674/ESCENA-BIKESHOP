@@ -13,7 +13,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-cult-control-raw-mun8wf283lq2.jpg?v=1790720753841",
    "assets/img/products/bicicleta-cult-control-raw-mun8wgq9tb38.jpg?v=1790720755462"
   ],
-  "imgZoom": 112,
+  "imgZoom": 108,
   "imgPos": "50% 0%",
   "slug": "bicicleta-cult-control-raw",
   "img": "assets/img/products/bicicleta-cult-control-raw-mun948ihccl8.jpg?v=1790721118676"
