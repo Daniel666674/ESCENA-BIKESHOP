@@ -389,5 +389,7 @@ window.ESCENA_COSTS = {
  "plasticpegs-cult-butter-4-5-4-75": 68000,
  "peg-doomsday-cromolio": 68000,
  "plasticpeg-federal-aluminio-4-5": 68000,
- "plasticpeg-eigthies-cromolio-4-5": 68000
+ "plasticpeg-eigthies-cromolio-4-5": 68000,
+ "plasticpegs-eighties-aluminio-4-5": 68000,
+ "plasticpeg-fictionbikes-acero-4-5": 56000
 };
