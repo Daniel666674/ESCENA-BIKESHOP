@@ -8,6 +8,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIC-FIT-002",
   "units": 1,
   "imgFit": "cover",
+  "imgZoom": 104,
   "slug": "bicicleta-fitbikeco-misfit-bmx-rin-16",
   "img": "assets/img/products/bicicleta-fitbikeco-misfit-bmx-rin-16-munbn1m63i4w.jpg?v=1790725355616"
  },
