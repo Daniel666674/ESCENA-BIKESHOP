@@ -1,5 +1,37 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plasticpeg FictionBikes Acero 4.5\"",
+  "brand": "Fiction",
+  "cat": "clavijas",
+  "spec": "",
+  "price": 70000,
+  "sku": "PEG-FIC-001",
+  "units": 4,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/plasticpeg-fictionbikes-acero-4-5-mun3o77jiark.jpg?v=1790711972696",
+   "assets/img/products/plasticpeg-fictionbikes-acero-4-5-mun3o95k4ifo.jpg?v=1790711974661"
+  ],
+  "slug": "plasticpeg-fictionbikes-acero-4-5",
+  "img": "assets/img/products/plasticpeg-fictionbikes-acero-4-5-mun3o77jiark.jpg?v=1790711972696"
+ },
+ {
+  "n": "Plasticpegs Eighties Aluminio 4.5\"",
+  "brand": "Eighties",
+  "cat": "clavijas",
+  "spec": "Núcleo de aluminio con carcasa exterior reemplazable de PC. Mecanizado CNC - Ligero. 11,4 cm de longitud - Orificio de 14 mm con adaptador de 9,5 mm - Se vende por unidad - Peso: 150 g cada uno",
+  "price": 85000,
+  "sku": "PEG-EGT-002",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/plasticpegs-eighties-aluminio-4-5-mun3oao59sle.jpg?v=1790711976486",
+   "assets/img/products/plasticpegs-eighties-aluminio-4-5-mun3oc2u8a11.jpg?v=1790711977981"
+  ],
+  "slug": "plasticpegs-eighties-aluminio-4-5",
+  "img": "assets/img/products/plasticpegs-eighties-aluminio-4-5-mun3oao59sle.jpg?v=1790711976486"
+ },
+ {
   "n": "Plasticpeg Eigthies Cromolio 4.5\"",
   "brand": "Eighties",
   "cat": "clavijas",
