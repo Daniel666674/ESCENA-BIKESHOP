@@ -8098,5 +8098,16 @@ window.ESCENA_AUDIT = [
    "bicicleta-fitbikeco-misfit-bmx-rin-16"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-30T19:11:27.467Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "2 productos editados, 5 fotos subidas",
+  "created": [],
+  "edited": [
+   "bicicleta-profir-culver-bmx-gris-oscuro",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
