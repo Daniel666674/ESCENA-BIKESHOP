@@ -220,6 +220,13 @@
     .card .swatches { display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem; margin-top: .55rem; }
     .card .swatch-size { border: 1px solid var(--line); border-radius: 4px; padding: .18rem .4rem; font-size: .64rem; font-weight: 700; color: var(--ink); background: #fff; }
     .card .swatch-color { width: 18px; height: 18px; border-radius: 4px; border: 1px solid rgba(0,0,0,.15); }
+    /* Same "tachado" language the product page already uses for a disabled
+       variant button (see producto/_template.html's .pdp-variant-options
+       button:disabled) — a talla/color with units:0 reads as unavailable
+       right here on the grid card, not just after clicking in. */
+    .card .swatch-size.is-out { opacity: .4; text-decoration: line-through; }
+    .card .swatch-color.is-out { opacity: .35; position: relative; }
+    .card .swatch-color.is-out::after { content: ""; position: absolute; inset: -1px; background: linear-gradient(to top right, transparent calc(50% - 1px), rgba(0,0,0,.65), transparent calc(50% + 1px)); }
     .empty-state { text-align: center; padding: 3rem 1rem; color: var(--muted); font-size: .9rem; }
 
     /* ============ PAGINATION (real navigation, no infinite scroll) ============ */
@@ -645,16 +652,17 @@ header.top-bar .brand .name { color: #fff; }
     var key = normText(label).replace(/[^a-z]/g, "");
     return COLOR_SWATCH_MAP[key] || "#e5e5e5";
   }
+  function variantIsOut(v){ return typeof v.units === "number" && v.units <= 0; }
   function swatchesHTML(p){
     var out = "";
     if (p.colors && p.colors.length > 1) {
       out += '<div class="swatches">' + p.colors.map(function(c){
-        return '<span class="swatch-color" style="background:'+colorSwatchBg(c.label)+'" title="'+esc(c.label)+'"></span>';
+        return '<span class="swatch-color'+(variantIsOut(c) ? ' is-out' : '')+'" style="background:'+colorSwatchBg(c.label)+'" title="'+esc(c.label)+(variantIsOut(c) ? ' (agotado)' : '')+'"></span>';
       }).join("") + '</div>';
     }
     if (p.sizes && p.sizes.length) {
       out += '<div class="swatches">' + p.sizes.map(function(s){
-        return '<span class="swatch-size">'+esc(s.label)+'</span>';
+        return '<span class="swatch-size'+(variantIsOut(s) ? ' is-out' : '')+'" title="'+esc(s.label)+(variantIsOut(s) ? ' (agotado)' : '')+'">'+esc(s.label)+'</span>';
       }).join("") + '</div>';
     }
     return out;
