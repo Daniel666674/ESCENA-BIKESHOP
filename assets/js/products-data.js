@@ -5486,10 +5486,10 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgs": [
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1788093948129",
-   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro.jpg?v=1788093948129",
-   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-3.jpg?v=1788093948129",
-   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-4.jpg?v=1788093948129",
-   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-5.jpg?v=1788093948129"
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-muohdtf1rwhn.jpg?v=1790795468449",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-muohduw1txro.jpg?v=1790795470832",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-muohdwq8aic9.jpg?v=1790795474410",
+   "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-muohdzhmwn5t.jpg?v=1790795476210"
   ],
   "slug": "bicicleta-profir-culver-bmx-gris-oscuro",
   "order": 250,
