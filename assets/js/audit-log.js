@@ -8109,5 +8109,15 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-09-30T19:37:29.411Z",
+  "actor": "camilor9507@gmail.com",
+  "summary": "1 producto editado, 4 fotos subidas",
+  "created": [],
+  "edited": [
+   "bicicleta-profit-culver-bmx-gris-oscuro"
+  ],
+  "deleted": []
  }
 ];
