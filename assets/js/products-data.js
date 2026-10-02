@@ -297,7 +297,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Viene en una pequeña bolsa con cremallera que cabe fácilmente en el bolsillo o en la mochila...  1x 6 mm 1x 8 mm 1x casquillo profundo de 17 mm 1x extensión de enchufe 1x mango de torsión 1x mosquetón para llave de radios",
   "price": 120000,
   "sku": "HER-CLT-001",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "slug": "kit-de-herramienta-cult",
   "order": 0,
@@ -903,7 +903,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 540000,
   "sku": "RIN-ALI-002",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "slug": "rin-alienation-vandal-negro",
   "order": 0,
@@ -3476,7 +3476,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 2,
-    "price": 90000
+    "price": 100000
    }
   ],
   "slug": "llanta-theory-proven-blanca-2-40",
@@ -4153,7 +4153,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 180000,
   "sku": "COR-CLT-001",
-  "units": 4,
+  "units": 0,
   "imgs": [
    "assets/img/products/llanta-cult-wafflecup-goma-mt4pff3osfgm.jpg?v=1788093948129",
    "assets/img/products/llanta-cult-wafflecup-goma-mt4pfgbpvf3a.jpg?v=1788093948129",
@@ -4162,15 +4162,13 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20x2.40\"",
-    "units": 4,
-    "price": 180000
+    "units": 0
    }
   ],
   "colors": [
    {
     "label": "Goma",
-    "units": 6,
-    "price": 180000
+    "units": 0
    }
   ],
   "slug": "llanta-cult-wafflecup-goma",
