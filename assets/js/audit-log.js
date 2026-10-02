@@ -8119,5 +8119,19 @@ window.ESCENA_AUDIT = [
    "bicicleta-profit-culver-bmx-gris-oscuro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-02T15:23:56.707Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "kit-de-herramienta-cult",
+   "rin-alienation-vandal-negro",
+   "llanta-cult-wafflecup-goma",
+   "llanta-theory-proven-blanca-2-40",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
