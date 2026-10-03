@@ -358,6 +358,56 @@
     .story .stats .n { font-family: 'Bebas Neue', sans-serif; font-size: 2.3rem; color: #fff; line-height: 1; }
     .story .stats .l { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); }
 
+    /* ============ TEAM (crew videos + riders) ============ */
+    .team { background: #fff; padding: clamp(4rem, 8vw, 7rem) 1.5rem; }
+    .team-head { text-align: center; margin-bottom: clamp(2.4rem, 5vw, 3.6rem); }
+    .team-head .eyebrow { display: inline-flex; align-items: center; gap: .7rem; color: var(--gold); font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; font-weight: 800; margin-bottom: .9rem; }
+    .team-head .eyebrow::before, .team-head .eyebrow::after { content: ""; width: 26px; height: 2px; background: var(--gold); }
+    .team-head h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(3.6rem, 10vw, 7.5rem); line-height: .85; letter-spacing: .01em; }
+    .team-head h2 .accent-outline { color: transparent; -webkit-text-stroke: 2px var(--ink); }
+    .team-head p { max-width: 540px; margin: 1.1rem auto 0; color: var(--muted); font-size: .95rem; }
+    /* The whole team riding together: two clips, each clearly a video
+       (poster + big play + duration) until it is tapped. */
+    .crew { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 2.5vw, 2rem); }
+    @media (max-width: 720px) { .crew { grid-template-columns: 1fr; gap: 1.8rem; } }
+    .crew-item figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: .9rem; }
+    .crew-item figcaption b { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 1.6rem; letter-spacing: .04em; line-height: 1; }
+    .crew-item figcaption span { font-size: .64rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 700; white-space: nowrap; }
+    .vplayer { position: relative; overflow: hidden; background: #000; border-radius: 14px; cursor: pointer; box-shadow: 0 24px 60px rgba(0,0,0,.18); }
+    .vplayer video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .vplayer::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.35) 0%, rgba(10,10,10,.1) 40%, rgba(10,10,10,.7) 100%); pointer-events: none; transition: opacity .3s; }
+    .vp-play { position: absolute; z-index: 2; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 84px; height: 84px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 10px rgba(255,255,255,.2), 0 18px 40px rgba(0,0,0,.45); transition: transform .2s, background .2s; }
+    .vp-play::after { content: ""; border-left: 24px solid var(--ink); border-top: 14px solid transparent; border-bottom: 14px solid transparent; margin-left: 7px; }
+    .vplayer:hover .vp-play { transform: translate(-50%, -50%) scale(1.07); background: var(--promo); }
+    .vp-tag { position: absolute; z-index: 2; top: 1rem; left: 1rem; background: var(--promo); color: var(--ink); font-size: .64rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 800; padding: .42rem .7rem; border-radius: 3px; }
+    .vp-dur { position: absolute; z-index: 2; top: 1rem; right: 1rem; background: rgba(10,10,10,.75); color: #fff; font-size: .72rem; font-weight: 700; padding: .3rem .55rem; border-radius: 4px; }
+    .vp-foot { position: absolute; z-index: 2; left: 1.1rem; right: 1.1rem; bottom: 1rem; color: #fff; font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; }
+    /* Once playing, the overlay steps aside for the native controls. */
+    .vplayer.is-playing { cursor: default; }
+    .vplayer.is-playing::after, .vplayer.is-playing .vp-play, .vplayer.is-playing .vp-tag, .vplayer.is-playing .vp-dur, .vplayer.is-playing .vp-foot { opacity: 0; pointer-events: none; }
+    @media (max-width: 560px) {
+      .vp-play { width: 64px; height: 64px; box-shadow: 0 0 0 7px rgba(255,255,255,.2), 0 12px 28px rgba(0,0,0,.45); }
+      .vp-play::after { border-left-width: 19px; border-top-width: 11px; border-bottom-width: 11px; margin-left: 5px; }
+    }
+    /* Riders: black and white, colour on hover. Flex (not grid) so a short
+       roster stays centred instead of hugging the left edge. */
+    .riders-head { margin: clamp(4rem, 8vw, 6rem) 0 1.8rem; padding-bottom: 1.1rem; border-bottom: 1px solid #dcdcd8; }
+    .riders-head h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.4rem); line-height: .9; }
+    .riders-head h3 span { color: var(--gold); }
+    .team-grid { --gap: clamp(1rem, 2.4vw, 1.8rem); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--gap); }
+    .tm { flex: 0 1 calc((100% - 3 * var(--gap)) / 4); text-decoration: none; display: block; color: var(--ink); }
+    @media (max-width: 860px) { .tm { flex-basis: calc((100% - var(--gap)) / 2); } }
+    .tm-photo { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--panel); }
+    .tm-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; filter: grayscale(1) contrast(1.08); transition: filter .4s, transform .6s; }
+    .tm:hover .tm-photo img { filter: none; transform: scale(1.04); }
+    .tm-photo .chip { position: absolute; top: .8rem; left: .8rem; background: var(--promo); color: var(--ink); font-size: .58rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 800; padding: .32rem .55rem; border-radius: 3px; }
+    .tm-name { font-family: 'Bebas Neue', sans-serif; font-weight: 400; text-align: center; font-size: clamp(1.9rem, 3vw, 2.5rem); line-height: .92; margin-top: 1.1rem; }
+    .tm-name::after { content: ""; display: block; width: 30px; height: 3px; background: var(--promo); margin: .75rem auto 0; transition: width .3s; }
+    .tm:hover .tm-name::after { width: 70px; }
+    .tm-meta { text-align: center; margin-top: .5rem; font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+    .tm-meta b { color: var(--gold); }
+    @media (prefers-reduced-motion: reduce) { .tm-photo img, .tm-name::after, .vp-play { transition: none; } }
+
     /* ============ REVIEWS ============ */
     .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
     @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; } }
@@ -633,6 +683,75 @@
     </div>
   </div>
 </section>
+
+<!-- ============ TEAM ============ -->
+<section id="team" class="team" aria-labelledby="teamHeading">
+  <div class="wrap">
+    <div class="team-head">
+      <span class="eyebrow">Riders oficiales</span>
+      <h2 id="teamHeading">TEAM <span class="accent-outline">ESCENA</span></h2>
+      <p>Los riders que prueban cada parte antes de que llegue a la tienda. Así ruedan juntos.</p>
+    </div>
+
+    <div class="crew">
+      <figure class="crew-item">
+        <div class="vplayer" role="button" tabindex="0" aria-label="Reproducir video del Team Escena 01 (1:20)" style="aspect-ratio: 16 / 9">
+          <video preload="none" playsinline poster="assets/img/team/team-video-1.jpg"><source src="assets/video/team/team-video-1.mp4" type="video/mp4" /></video>
+          <span class="vp-tag">&#9654; Video 01</span>
+          <span class="vp-dur">1:20</span>
+          <span class="vp-play" aria-hidden="true"></span>
+          <span class="vp-foot">Toca para ver con sonido</span>
+        </div>
+        <figcaption><b>Sesión 01</b><span>Team completo</span></figcaption>
+      </figure>
+      <figure class="crew-item">
+        <div class="vplayer" role="button" tabindex="0" aria-label="Reproducir video del Team Escena 02 (0:29)" style="aspect-ratio: 16 / 9">
+          <video preload="none" playsinline poster="assets/img/team/team-video-2.jpg"><source src="assets/video/team/team-video-2.mp4" type="video/mp4" /></video>
+          <span class="vp-tag">&#9654; Video 02</span>
+          <span class="vp-dur">0:29</span>
+          <span class="vp-play" aria-hidden="true"></span>
+          <span class="vp-foot">Toca para ver con sonido</span>
+        </div>
+        <figcaption><b>Sesión 02</b><span>Team completo</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="riders-head"><h3>LOS <span>RIDERS</span></h3></div>
+    <!-- One card per rider; each links to its own page (team-<nombre>.html). -->
+    <div class="team-grid">
+      <a class="tm" href="team-jammer-ardila">
+        <div class="tm-photo"><img src="assets/img/team/jammer-ardila.jpg" alt="Jammer Ardila" loading="lazy" width="900" height="1200" /><span class="chip">Team Pro</span></div>
+        <h4 class="tm-name">Jammer<br />Ardila</h4>
+        <div class="tm-meta"><b>&ldquo;Mellow&rdquo;</b> &middot; BMX Freestyle</div>
+      </a>
+    </div>
+  </div>
+</section>
+<script>
+  // Team clips: tap the poster to play with sound and native controls;
+  // starting one pauses any other.
+  (function () {
+    var players = document.querySelectorAll('#team .vplayer');
+    function play(box) {
+      if (box.classList.contains('is-playing')) return;
+      var v = box.querySelector('video');
+      box.classList.add('is-playing');
+      v.controls = true;
+      v.play().catch(function () {});
+    }
+    players.forEach(function (box) {
+      box.addEventListener('click', function () { play(box); });
+      box.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(box); }
+      });
+      box.querySelector('video').addEventListener('play', function () {
+        players.forEach(function (other) {
+          if (other !== box) { var ov = other.querySelector('video'); if (ov) ov.pause(); }
+        });
+      });
+    });
+  })();
+</script>
 
 <!-- ============ REVIEWS ============ -->
 <!-- Hidden pre-launch: placeholder testimonials only, re-enable once real customer reviews are collected.

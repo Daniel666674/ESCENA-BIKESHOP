@@ -46,6 +46,8 @@ Animal, BSD, Brainstorm, Colony, Cult, Demolition, Éclat, ESCENA, Fate, Federal
 - Fichas de producto individuales (una por SKU, con precio, especificaciones y pedido directo): https://escenabmx.com/producto/
 - Arma tu BMX (configurador guiado para armar una bici completa a tu medida desde cero): https://escenabmx.com/armar-bmx
 - Blog (guías de compra, mantenimiento y cultura BMX): https://escenabmx.com/blog
+- Team Escena (riders oficiales de la tienda, en la página de inicio): https://escenabmx.com/inicio#team
+- Jammer Ardila "Mellow", rider Team Pro: https://escenabmx.com/team-jammer-ardila
 - Mayoristas (programa de precios al por mayor para tiendas y revendedores): https://escenabmx.com/mayoristas
 - Envíos: https://escenabmx.com/envios
 - Devoluciones y cambios: https://escenabmx.com/devoluciones
