@@ -1298,8 +1298,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tenedor-fiend-process-v2-cromado",
-  "imgZoom": 121,
-  "order": 10,
+  "order": 0,
   "img": "assets/img/products/tenedor-fiend-process-v2-cromado-mudz5hyongki.jpg?v=1790160185256"
  },
  {
@@ -7675,38 +7674,18 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "horquillas",
   "spec": "Cromoly · 18mm offset · Tubo recto",
-  "price": 830000,
+  "price": 800000,
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 1,
-  "order": 0,
-  "imgs": [
-   "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1788093948129",
-   "assets/img/products/tenedor-cult-sect-v4-cromado-18mm-2.jpg?v=1788093948129"
-  ],
-  "colors": [
-   {
-    "label": "Cromado",
-    "units": 1
-   },
-   {
-    "label": "Negro",
-    "units": 0
-   }
-  ],
-  "imgColorMap": {
-   "Cromado": [
-    0
-   ],
-   "Negro": [
-    1
-   ]
-  },
+  "order": 10,
   "sizes": [
    {
-    "label": "Única",
-    "units": 1
+    "label": "18mm",
+    "units": 1,
+    "price": 800000
    }
   ],
+  "imgFit": "cover",
   "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1788093948129"
  },
  {
