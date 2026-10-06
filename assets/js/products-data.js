@@ -1343,6 +1343,8 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz",
   "order": 30,
+  "imgZoom": 110,
+  "imgPos": "50% 50%",
   "img": "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mux7ajynmg5d.jpg?v=1791322715734"
  },
  {
