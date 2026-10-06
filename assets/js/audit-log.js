@@ -8172,5 +8172,25 @@ window.ESCENA_AUDIT = [
    "tenedor-fiend-process-v2-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-06T21:39:39.600Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 9 productos editados, 4 fotos subidas",
+  "created": [
+   "tenedor-odyssey-r25"
+  ],
+  "edited": [
+   "tenedor-gw-destructor-tornasol",
+   "tenedor-fiction-shank-cromado",
+   "tenedor-fiction-shank",
+   "tenedor-colony-sweet-thoot",
+   "tall-order-ramp",
+   "federal-horquilla-cromada",
+   "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz",
+   "tenedor-cult-sect-v4-cromado-18mm",
+   "tenedor-fiend-process-v2-cromado"
+  ],
+  "deleted": []
  }
 ];
