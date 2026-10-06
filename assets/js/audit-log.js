@@ -8151,5 +8151,15 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-06T20:26:22.390Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "poste-siso-bmx-5150-raw"
+  ],
+  "deleted": []
  }
 ];
