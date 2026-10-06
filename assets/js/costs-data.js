@@ -312,7 +312,7 @@ window.ESCENA_COSTS = {
  "cana-shadow-chula-48mm": 200000,
  "marco-cult-biggie-hammertone": 1432000,
  "cana-s-m-enduro-40mm-negra": 280000,
- "tenedor-cult-sect-v4-cromado-18mm": 664000,
+ "tenedor-cult-sect-v4-cromado-18mm": 640000,
  "mutanty-savage-v2-stem-plata": 176000,
  "mutany-savage-bielas-negro": 472000,
  "fiend-bielas-negro": 696000,
