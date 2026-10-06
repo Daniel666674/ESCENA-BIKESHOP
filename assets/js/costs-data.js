@@ -404,5 +404,6 @@ window.ESCENA_COSTS = {
  "canilleras-r2-classic": 56000,
  "bicicleta-cult-juvenile-rin-18": 1600000,
  "bicicleta-fitbikeco-misfit-rin-16": 1760000,
- "bicicleta-fitbikeco-misfit-bmx-rin-16": 1760000
+ "bicicleta-fitbikeco-misfit-bmx-rin-16": 1760000,
+ "tenedor-odyssey-r25": 640000
 };
