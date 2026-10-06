@@ -711,7 +711,10 @@ header.top-bar .brand .name { color: #fff; }
 
   /* ---- Variant selector(s) ----
      A page can have up to two independent groups: #pdpVariant (talla, or the
-     legacy cosmetic LHD/RHD selector) and #pdpVariantColor (color). Each is
+     legacy cosmetic Derecho/Izquierdo fallback for a manzana-trasera with no
+     real per-side stock yet) and #pdpVariantColor (color, or "Lado" for a
+     manzana-trasera that does have real per-side stock — see
+     colorVariantHtmlFor in admin.html). Each is
      either cosmetic (tags the WhatsApp message only) or real inventory-backed
      (buttons carry data-units — picking one re-caps the qty stepper via
      applyStock() using that option's own stock, preferring the live catalog's
