@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tenedor Odyssey R25",
+  "brand": "Odyssey",
+  "cat": "horquillas",
+  "spec": "",
+  "price": 800000,
+  "sku": "TEN-ODY-001",
+  "units": 2,
+  "sizes": [
+   {
+    "label": "25mm",
+    "units": 2,
+    "price": 800000
+   }
+  ],
+  "slug": "tenedor-odyssey-r25",
+  "order": 10,
+  "img": "assets/img/products/tenedor-odyssey-r25-mux7ahx3o5vv.jpg?v=1791322713743"
+ },
+ {
   "n": "Bicicleta Fitbikeco Misfit BMX - RIN 16",
   "brand": "Fitbikeco",
   "cat": "bicicletas",
@@ -1274,7 +1293,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgZoom": 104,
   "imgPos": "50% 50%",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/tenedor-fiction-shank-cromado-mudzi4jibigs.jpg?v=1790160774574"
  },
  {
@@ -1287,9 +1306,9 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "imgs": [
-   "assets/img/products/tenedor-fiend-process-v2-cromado-mudz5hyongki.jpg?v=1790160185256",
    "assets/img/products/tenedor-fiend-process-v2-cromado-mudfalrjqx33.jpg?v=1790126831149",
-   "assets/img/products/tenedor-fiend-process-v2-cromado-mudfan1qizn2.jpg?v=1790126832716"
+   "assets/img/products/tenedor-fiend-process-v2-cromado-mudfan1qizn2.jpg?v=1790126832716",
+   "assets/img/products/tenedor-fiend-process-v2-cromado-mudz5hyongki.jpg?v=1790160185256"
   ],
   "sizes": [
    {
@@ -1299,7 +1318,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "tenedor-fiend-process-v2-cromado",
   "order": 0,
-  "img": "assets/img/products/tenedor-fiend-process-v2-cromado-mudz5hyongki.jpg?v=1790160185256"
+  "img": "assets/img/products/tenedor-fiend-process-v2-cromado-mudfalrjqx33.jpg?v=1790126831149"
  },
  {
   "n": "Tenedor Fiend Process V2 - Negro",
@@ -1311,6 +1330,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "imgs": [
+   "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mux7ajynmg5d.jpg?v=1791322715734",
    "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mud1v6z8mc2u.jpg?v=1790104277816",
    "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mud1v8s8h21k.jpg?v=1790104279406",
    "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mud1va0eouwx.jpg?v=1790104280963"
@@ -1322,8 +1342,8 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz",
-  "order": 20,
-  "img": "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mud1v6z8mc2u.jpg?v=1790104277816"
+  "order": 30,
+  "img": "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mux7ajynmg5d.jpg?v=1791322715734"
  },
  {
   "n": "Cassette Profile Mini Azul",
@@ -5374,7 +5394,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/tenedor-colony-sweet-thoot.jpg?v=1788093948129"
  },
  {
@@ -5398,7 +5418,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/tall-order-ramp.jpg?v=1788093948129"
  },
  {
@@ -5416,7 +5436,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tenedor-fiction-shank",
-  "order": 60,
+  "order": 70,
   "sizes": [
    {
     "label": "26mm",
@@ -6933,7 +6953,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 80,
+  "order": 90,
   "sizes": [
    {
     "label": "Única",
@@ -7677,7 +7697,11 @@ window.ESCENA_PRODUCTS = [
   "price": 800000,
   "sku": "TENEDOR-CULT-SECT-V4-CROMADO-18MM",
   "units": 1,
-  "order": 10,
+  "order": 20,
+  "imgs": [
+   "assets/img/products/tenedor-cult-sect-v4-cromado-18mm-mux7alhy3idy.jpg?v=1791322717334",
+   "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1788093948129"
+  ],
   "sizes": [
    {
     "label": "18mm",
@@ -7686,7 +7710,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgFit": "cover",
-  "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm.jpg?v=1788093948129"
+  "img": "assets/img/products/tenedor-cult-sect-v4-cromado-18mm-mux7alhy3idy.jpg?v=1791322717334"
  },
  {
   "slug": "mutanty-savage-v2-stem-plata",
@@ -7806,36 +7830,18 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "federal-horquilla-cromada",
-  "n": "Tenedor Federal Assault",
+  "n": "Tenedor Federal Assault Negro",
   "brand": "Federal",
   "cat": "horquillas",
-  "spec": "Cromoly · 22mm offset · Cromado · 4130 tratado al calor",
+  "spec": "Cromoly · 22mm - 15mm offset · Cromado · 4130 tratado al calor",
   "price": 660000,
   "sku": "FEDERAL-HORQUILLA-CROMADA",
   "units": 7,
   "imgs": [
-   "assets/img/products/federal-horquilla-cromada.jpg?v=1788093948129",
-   "assets/img/products/federal-horquilla-cromada-2.jpg?v=1788093948129"
+   "assets/img/products/federal-horquilla-cromada-mux7amqee9nb.jpg?v=1791322718976",
+   "assets/img/products/federal-horquilla-cromada.jpg?v=1788093948129"
   ],
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 7
-   },
-   {
-    "label": "Cromado",
-    "units": 0
-   }
-  ],
-  "imgColorMap": {
-   "Negro": [
-    0
-   ],
-   "Cromado": [
-    1
-   ]
-  },
-  "order": 30,
+  "order": 40,
   "sizes": [
    {
     "label": "15mm",
@@ -7846,7 +7852,8 @@ window.ESCENA_PRODUCTS = [
     "units": 4
    }
   ],
-  "img": "assets/img/products/federal-horquilla-cromada.jpg?v=1788093948129"
+  "imgFit": "cover",
+  "img": "assets/img/products/federal-horquilla-cromada-mux7amqee9nb.jpg?v=1791322718976"
  },
  {
   "slug": "stolen-buje-trasero-cassette-negro",
