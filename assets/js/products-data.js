@@ -1847,7 +1847,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Diámetro: 25,4 mm Longitud: 200 mm Peso: 5 oz",
   "price": 150000,
   "sku": "PST-CLT-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/poste-siso-bmx-5150-raw-mu3c5z1rg569.jpg?v=1789516915136",
