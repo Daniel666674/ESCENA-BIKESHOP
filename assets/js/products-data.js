@@ -716,12 +716,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: compuesto de caucho doble - Medida: 20 x 2.50\" - Peso 649 gr",
   "price": 160000,
   "sku": "LLA-MER-004",
-  "units": 2,
+  "units": 0,
   "imgFit": "cover",
   "sizes": [
    {
     "label": "2.50\"",
-    "units": 2
+    "units": 0
    }
   ],
   "slug": "llanta-merritt-phantom-blanca",
@@ -3511,11 +3511,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
   "price": 160000,
   "sku": "COR-ODY-002",
-  "units": 6,
+  "units": 2,
   "sizes": [
    {
     "label": "20x2.40\"",
-    "units": 6
+    "units": 2
    }
   ],
   "slug": "llanta-odyssey-path-pro-negra-2-40",
@@ -3758,12 +3758,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
   "price": 160000,
   "sku": "COR-SUN-002",
-  "units": 1,
+  "units": 4,
   "sizes": [
    {
     "label": "20x2.40\"",
-    "units": 1,
-    "price": 160000
+    "units": 4
    }
   ],
   "slug": "llanta-sunday-current-v2-negro-2-40",
@@ -3818,17 +3817,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 160000,
   "sku": "COR-ODY-001",
-  "units": 5,
+  "units": 3,
   "sizes": [
    {
     "label": "20x2.25\"",
-    "units": 1,
-    "price": 160000
+    "units": 1
    },
    {
     "label": "20x2.40\"",
-    "units": 4,
-    "price": 160000
+    "units": 2
    }
   ],
   "slug": "llanta-odyssey-broc-negra-2-25-2-40",
@@ -4183,7 +4180,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 150000,
   "sku": "COR-SUN-001",
-  "units": 2,
+  "units": 1,
   "imgs": [
    "assets/img/products/llanta-sunday-street-sweeper-v2-mt4or4xuualn.jpg?v=1788093948129",
    "assets/img/products/llanta-sunday-street-sweeper-v2-mt4or6aw3l97.jpg?v=1788093948129"
@@ -4191,15 +4188,13 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20x2.40\"",
-    "units": 2,
-    "price": 150000
+    "units": 1
    }
   ],
   "colors": [
    {
     "label": "Negro",
-    "units": 2,
-    "price": 150000
+    "units": 1
    }
   ],
   "slug": "llanta-sunday-street-sweeper-v2",
@@ -4505,7 +4500,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.35\" · Doble compuesto · Negro",
   "price": 160000,
   "sku": "COR-ANM-001",
-  "units": 2,
+  "units": 1,
   "imgs": [
    "assets/img/products/llanta-animal-ghl-mt4o3k7xeysz.jpg?v=1788093948129",
    "assets/img/products/llanta-animal-ghl-2.jpg?v=1788093948129"
@@ -4515,8 +4510,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20x2.35\"",
-    "units": 2,
-    "price": 160000
+    "units": 1
    }
   ],
   "colors": [
@@ -7889,10 +7883,10 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "buje-cassette-negro-cromado",
-  "n": "Freecoaster Odyssey Clutch V2 Derecho",
+  "n": "Freecoaster Odyssey Clutch V2",
   "brand": "Odyssey",
   "cat": "manzana-trasera",
-  "spec": "Freecoaster · 9T · Cromoly 14mm · Derecho · Peso 623g · Negro",
+  "spec": "Freecoaster · 9T · Cromoly 14mm  · Peso 623g · Negro",
   "price": 750000,
   "sku": "FREECOASTER ODYSSEY-NEGRO-CROMADO",
   "units": 1,
