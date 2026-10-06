@@ -1006,7 +1006,7 @@
               <p class="pmodal-sizes-total" id="pmSizesTotal"></p>
             </div>
             <div class="pm-variant-table">
-              <div class="pm-variant-head"><span>Color</span><span>Stock</span><span>Precio (opcional)</span><span>Costo (opcional)</span><span></span></div>
+              <div class="pm-variant-head"><span id="pmColorsHeadLabel">Color</span><span>Stock</span><span>Precio (opcional)</span><span>Costo (opcional)</span><span></span></div>
               <div id="pmColorsRows"></div>
               <button type="button" class="pmodal-sizes-add" id="pmColorsAddBtn">+ Añadir color</button>
               <p class="pmodal-sizes-total" id="pmColorsTotal"></p>
@@ -1092,7 +1092,7 @@
           <select id="smSize"></select>
         </div>
         <div class="pmodal-field span2" id="smColorField" style="display:none;">
-          <label>Color vendido</label>
+          <label id="smColorLabel">Color vendido</label>
           <select id="smColor"></select>
         </div>
         <div class="pmodal-field">
@@ -1388,6 +1388,10 @@
   // matched a product with exactly one size and 2+ colors.
   function isColorReal(p) { return !isSizeCat(p.cat) && p.colors && p.colors.length > 1; }
   function hasColorStock(p) { return !!(p && p.colors && p.colors.length > 1); }
+  // Manzanas traseras (freecoasters/cassettes) use the generic p.colors field
+  // to track Derecho/Izquierdo as real per-side stock, but the admin UI and
+  // storefront should call it "Lado", not "Color" — see colorVariantHtmlFor().
+  function isSideCat(cat) { return cat === "manzana-trasera"; }
 
   /* ============ GitHub API ============ */
   function getToken() { return sessionStorage.getItem(TOKEN_KEY) || localStorage.getItem(TOKEN_KEY) || ""; }
@@ -2980,12 +2984,17 @@
     var url = "https://escenabmx.com/producto/" + p.slug + (imgV ? "?v=" + imgV : "");
     return "https://wa.me/573107630504?text=" + encodeURIComponent(waMsgFor(p) + " ¿Está disponible?\n" + url);
   }
-  // Cosmetic-only selector: no per-option stock, just tags the WhatsApp/cart
-  // message. Real inventory-backed sizes (crank length, sprocket teeth, frame
+  // Cosmetic-only FALLBACK selector: no per-option stock, just tags the
+  // WhatsApp/cart message. Only used for a manzana-trasera product that has
+  // no real p.colors set yet (see the hasColorStock(p) guard below) — once a
+  // product has real Derecho/Izquierdo stock in p.colors, colorVariantHtmlFor()
+  // renders the real, stock-backed "Lado" selector instead and this cosmetic
+  // one is skipped, so a shopper never sees two overlapping side pickers.
+  // Real inventory-backed sizes (crank length, sprocket teeth, frame
   // top-tube, stem length, bar width — see SIZE_CATEGORIES/p.sizes) go through
   // variantHtmlFor()'s other branch below instead.
   var VARIANT_CONFIG = {
-    "manzana-trasera": { label: "Lado (rueda trasera)", prefix: "Lado", options: ["LHD", "RHD"] }
+    "manzana-trasera": { label: "Lado", prefix: "Lado", options: ["Derecho", "Izquierdo"] }
   };
   function sizeVariantHtmlFor(p) {
     if (p.sizes && p.sizes.length) {
@@ -3003,7 +3012,12 @@
         '    </div>';
     }
     var cfg = VARIANT_CONFIG[p.cat];
-    if (!cfg) return "";
+    // Only an actual freecoaster or cassette hub body has a Derecho/Izquierdo
+    // side to pick — other manzana-trasera products (hub guards, bearings)
+    // share the category but never need this prompt. A bidireccional hub
+    // also works on either side by design, flagged by this catalog's own
+    // naming convention (e.g. "Cassette Cut Crew Bidireccional Negro").
+    if (!cfg || hasColorStock(p) || !/^(freecoaster|cassette)\b/i.test(p.n || "") || /bidireccional/i.test(p.n || "")) return "";
     var opts2 = cfg.options.map(function (v, i) {
       return '<button type="button" data-value="' + esc(v) + '"' + (i === 0 ? ' class="is-active"' : '') + '>' + esc(v) + '</button>';
     }).join("");
@@ -3030,8 +3044,14 @@
     }).join("");
     var imgMapAttr = (p.imgColorMap && Object.keys(p.imgColorMap).length)
       ? ' data-img-map="' + esc(JSON.stringify(p.imgColorMap)) + '"' : '';
-    return '<div class="pdp-variant" id="pdpVariantColor" data-prefix="Color"' + imgMapAttr + '>\n' +
-      '      <span class="pdp-variant-label">Color</span>\n' +
+    // Manzanas traseras (freecoasters/cassettes) store their side as a color
+    // ("Derecho"/"Izquierdo") so it gets real per-side stock for free, but a
+    // shopper shouldn't see a bike-hub side pick labeled "Color" — swap the
+    // label for this one category, the data/markup stay the same.
+    var isSide = p.cat === "manzana-trasera";
+    var label = isSide ? "Lado" : "Color";
+    return '<div class="pdp-variant" id="pdpVariantColor" data-prefix="' + esc(label) + '"' + imgMapAttr + '>\n' +
+      '      <span class="pdp-variant-label">' + esc(label) + '</span>\n' +
       '      <div class="pdp-variant-options">' + opts + '</div>\n' +
       '    </div>';
   }
@@ -3738,6 +3758,10 @@
     document.getElementById("pmUnitsField").style.display = isSizes ? "none" : "";
     document.getElementById("pmSizesField").style.display = isSizes ? "" : "none";
     if (isSizes && !modalSizes.length) { modalSizes = [{ label: "", units: 0 }]; renderModalSizes(); }
+    var isSide = isSideCat(cat);
+    document.getElementById("pmColorsHeadLabel").textContent = isSide ? "Lado" : "Color";
+    document.getElementById("pmColorsAddBtn").textContent = isSide ? "+ Añadir lado" : "+ Añadir color";
+    renderModalColors();
     renderModalColorsHint(cat);
   }
 
@@ -3745,27 +3769,39 @@
     var wrap = document.getElementById("pmColorsRows");
     var basePrice = parseFloat(document.getElementById("pmPrice").value) || 0;
     var baseCost = parseFloat(document.getElementById("pmCost").value) || 0;
+    var cat = document.getElementById("pmCat").value;
+    var isSide = isSideCat(cat);
+    var labelPlaceholder = isSide ? "Ej: Derecho, Izquierdo" : "Ej: Negro, Cromado, Azul";
+    var rmAria = isSide ? "Quitar lado" : "Quitar color";
     wrap.innerHTML = modalColors.map(function (c, i) {
       return '<div class="pmodal-sizes-row">' +
-        '<input type="text" placeholder="Ej: Negro, Cromado, Azul" data-i="' + i + '" data-f="label" value="' + esc(c.label || "") + '" />' +
+        '<input type="text" placeholder="' + labelPlaceholder + '" data-i="' + i + '" data-f="label" value="' + esc(c.label || "") + '" />' +
         '<input type="number" min="0" step="1" placeholder="Stock" data-i="' + i + '" data-f="units" value="' + (typeof c.units === "number" ? c.units : "") + '" />' +
         '<input type="number" min="0" step="1" placeholder="Precio base: ' + Math.round(basePrice).toLocaleString("es-CO") + '" data-i="' + i + '" data-f="price" value="' + (typeof c.price === "number" && c.price > 0 ? c.price : "") + '" title="Vacío = usa el precio base del producto" />' +
         '<input type="number" min="0" step="1" placeholder="Costo base: ' + Math.round(baseCost).toLocaleString("es-CO") + '" data-i="' + i + '" data-f="cost" value="' + (typeof c.cost === "number" && c.cost > 0 ? c.cost : "") + '" title="Vacío = usa el costo base del producto" />' +
-        '<button type="button" class="pmodal-size-rm" data-i="' + i + '" aria-label="Quitar color">&times;</button>' +
+        '<button type="button" class="pmodal-size-rm" data-i="' + i + '" aria-label="' + rmAria + '">&times;</button>' +
         '</div>';
     }).join("");
     var total = sizesTotal(modalColors);
-    document.getElementById("pmColorsTotal").textContent = modalColors.length ? "Total: " + total + " unidades en " + modalColors.length + " color(es)." : "";
-    renderModalColorsHint(document.getElementById("pmCat").value);
+    var unitWord = isSide ? "lado(s)" : "color(es)";
+    document.getElementById("pmColorsTotal").textContent = modalColors.length ? "Total: " + total + " unidades en " + modalColors.length + " " + unitWord + "." : "";
+    renderModalColorsHint(cat);
     renderModalPhotos();
   }
   function renderModalColorsHint(cat) {
     var hint = document.getElementById("pmColorsHint");
     if (!hint) return;
+    var isSide = isSideCat(cat);
     if (modalColors.length > 1 && isSizeCat(cat)) {
-      hint.textContent = "Este producto ya tiene tallas con stock propio — el color queda solo informativo, sin stock propio.";
+      hint.textContent = isSide
+        ? "Este producto ya tiene tallas con stock propio — el lado queda solo informativo, sin stock propio."
+        : "Este producto ya tiene tallas con stock propio — el color queda solo informativo, sin stock propio.";
     } else if (modalColors.length > 1) {
-      hint.textContent = "El stock total se calcula sumando cada color (reemplaza el campo de Unidades).";
+      hint.textContent = isSide
+        ? "El stock total se calcula sumando cada lado (reemplaza el campo de Unidades)."
+        : "El stock total se calcula sumando cada color (reemplaza el campo de Unidades).";
+    } else if (isSide) {
+      hint.textContent = "Agrega Derecho e Izquierdo con el stock real de cada lado.";
     } else {
       hint.textContent = "Dejalo vacío si el producto no tiene variantes de color.";
     }
@@ -3966,6 +4002,8 @@
       var withStockS = p.sizes.filter(function (s) { return (s.units || 0) > 0; });
       document.getElementById("smSize").value = (withStockS[0] || p.sizes[0]).label;
     }
+    var isSide = isSideCat(p.cat);
+    document.getElementById("smColorLabel").textContent = isSide ? "Lado vendido" : "Color vendido";
     if (hasColors) {
       document.getElementById("smColor").innerHTML = p.colors.map(function (c) {
         var out = (c.units || 0) <= 0;
@@ -3975,7 +4013,8 @@
       document.getElementById("smColor").value = (withStockC[0] || p.colors[0]).label;
     }
     var units = p.units || 0;
-    var suffix = hasSizes && hasColors ? " (todas las tallas y colores)" : hasSizes ? " (todas las tallas)" : hasColors ? " (todos los colores)" : "";
+    var suffix = hasSizes && hasColors ? " (todas las tallas y colores)" : hasSizes ? " (todas las tallas)" :
+      hasColors ? (isSide ? " (todos los lados)" : " (todos los colores)") : "";
     document.getElementById("smodalProductName").textContent = p.n + " — " + units + " en stock" + suffix;
     // smPrice/smCost are set below by applySellUnitsLimit(), which follows
     // the selected size/color's price or cost override when it has one.
