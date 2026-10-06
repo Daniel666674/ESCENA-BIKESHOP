@@ -8161,5 +8161,16 @@ window.ESCENA_AUDIT = [
    "poste-siso-bmx-5150-raw"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-06T20:30:27.612Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "tenedor-cult-sect-v4-cromado-18mm",
+   "tenedor-fiend-process-v2-cromado"
+  ],
+  "deleted": []
  }
 ];
