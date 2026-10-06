@@ -8133,5 +8133,23 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-06T19:50:40.291Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "9 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "buje-cassette-negro-cromado",
+   "llanta-sunday-street-sweeper-v2",
+   "llanta-animal-ghl",
+   "llanta-sunday-current-v2-negro-2-40",
+   "llanta-odyssey-broc-negra-2-25-2-40",
+   "llanta-odyssey-path-pro-negra-2-40",
+   "llanta-merritt-phantom-blanca",
+   "llanta-innova-camufladas",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
