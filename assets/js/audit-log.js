@@ -8212,5 +8212,15 @@ window.ESCENA_AUDIT = [
    "llanta-theory-proven-blanca-2-40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T20:13:01.883Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "tenedor-colony-sweet-thoot"
+  ],
+  "deleted": []
  }
 ];
