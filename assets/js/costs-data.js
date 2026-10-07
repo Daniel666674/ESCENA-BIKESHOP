@@ -408,5 +408,6 @@ window.ESCENA_COSTS = {
  "tenedor-odyssey-r25": 640000,
  "plato-odyssey-big-boyd-negro": 192000,
  "plato-odyssey-la-guardia-28t": 216000,
- "marco-federal-team-ics2-negro": 1208000
+ "marco-federal-team-ics2-negro": 1208000,
+ "marco-federal-team-ics2-rojo": 1208000
 };
