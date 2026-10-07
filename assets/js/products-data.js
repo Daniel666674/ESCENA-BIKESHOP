@@ -9,7 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgPos": "50% 0%",
   "slug": "manzana-salt-pus-morada-eje-macho",
-  "img": "assets/img/products/manzana-salt-pus-morada-eje-macho-muypsagnojwg.jpg?v=1791414242569"
+  "img": "assets/img/products/manzana-salt-pus-morada-eje-macho-muyr33l9dpc7.jpg?v=1791416428318"
  },
  {
   "n": "Manzana Delantera Gw Negra",
@@ -20,8 +20,9 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-GWB-001",
   "units": 4,
   "imgFit": "cover",
+  "imgZoom": 102,
   "slug": "manzana-delantera-gw-negra",
-  "img": "assets/img/products/manzana-delantera-gw-negra-muypsc21uu85.jpg?v=1791414244417"
+  "img": "assets/img/products/manzana-delantera-gw-negra-muyr36lag11d.jpg?v=1791416430187"
  },
  {
   "n": "Marco Federal Team ICS2 Rojo",
