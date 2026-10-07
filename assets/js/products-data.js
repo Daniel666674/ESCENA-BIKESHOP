@@ -8915,12 +8915,12 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.4\"",
-    "units": 2,
+    "units": 0,
     "price": 1300000
    },
    {
     "label": "20.75\"",
-    "units": 0,
+    "units": 2,
     "price": 1300000
    }
   ],
