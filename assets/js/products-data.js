@@ -1,5 +1,29 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Manzana Salt Pus Morada Eje Macho",
+  "brand": "Salt",
+  "cat": "manzana-delantera",
+  "spec": "Color: Púrpura  - Marca: Otras Marcas  - Material: Aluminio  - Número de huecos manzana: 36  - Terminado: Púrpura  - Balinera: Sellada",
+  "price": 120000,
+  "sku": "MZD-SAL-001",
+  "units": 1,
+  "imgPos": "50% 0%",
+  "slug": "manzana-salt-pus-morada-eje-macho",
+  "img": "assets/img/products/manzana-salt-pus-morada-eje-macho-muypsagnojwg.jpg?v=1791414242569"
+ },
+ {
+  "n": "Manzana Delantera Gw Negra",
+  "brand": "GW",
+  "cat": "manzana-delantera",
+  "spec": "Cantidad de agujeros: 36 - Fabricada en aluminio - Ideal para usar con frenos u-brake.",
+  "price": 30000,
+  "sku": "MZD-GWB-001",
+  "units": 4,
+  "imgFit": "cover",
+  "slug": "manzana-delantera-gw-negra",
+  "img": "assets/img/products/manzana-delantera-gw-negra-muypsc21uu85.jpg?v=1791414244417"
+ },
+ {
   "n": "Marco Federal Team ICS2 Rojo",
   "brand": "Federal",
   "cat": "marcos",
