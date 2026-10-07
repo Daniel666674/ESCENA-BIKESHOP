@@ -5396,7 +5396,12 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 60,
-  "img": "assets/img/products/tenedor-colony-sweet-thoot.jpg?v=1788093948129"
+  "imgs": [
+   "assets/img/products/tenedor-colony-sweet-thoot-muyjnckt8h3d.jpg?v=1791403936275",
+   "assets/img/products/tenedor-colony-sweet-thoot.jpg?v=1788093948129",
+   "assets/img/products/tenedor-colony-sweet-thoot-muyjnfo3ts08.jpg?v=1791403938355"
+  ],
+  "img": "assets/img/products/tenedor-colony-sweet-thoot-muyjnckt8h3d.jpg?v=1791403936275"
  },
  {
   "n": "Tall Order Ramp",
