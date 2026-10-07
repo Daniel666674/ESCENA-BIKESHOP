@@ -372,7 +372,7 @@ header.top-bar .brand .name { color: #fff; }
     <p class="pdp-stock-hint" id="pdpStockHint" data-units="1"></p>
     <div class="pdp-variant" id="pdpVariant" data-prefix="Talla">
       <span class="pdp-variant-label">Talla</span>
-      <div class="pdp-variant-options"><button type="button" data-value="20.5 x 12.5" data-units="1" data-price="1660000" class="is-active">20.5 x 12.5</button><button type="button" data-value="20.75&quot;" data-units="1" data-price="1660000">20.75&quot;</button></div>
+      <div class="pdp-variant-options"><button type="button" data-value="20.5&quot;" data-units="1" class="is-active">20.5&quot;</button><button type="button" data-value="20.75&quot;" data-units="0" disabled>20.75&quot;</button></div>
     </div>
     <p class="pdp-pick-hint" id="pdpPickHint" style="display:none;"></p>
     <div class="pdp-actions" id="pdpActions">
@@ -404,7 +404,23 @@ header.top-bar .brand .name { color: #fff; }
 <div class="related">
   <h2>También te puede gustar</h2>
   <div class="related-grid">
-    <a class="r-card" href="marco-gw-destructor-morado">
+    <a class="r-card" href="marco-federal-team-ics2-rojo">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-federal-team-ics2-rojo-muylv9rm9vwa.jpg?v=1791407664159" alt="Marco Federal Team ICS2 Rojo - Federal BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Federal</span>
+          <h3>Marco Federal Team ICS2 Rojo</h3>
+          <div class="price">$1.510.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="marco-federal-team-ics2-negro">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-federal-team-ics2-negro-muylg65b62nj.jpg?v=1791406960192" alt="Marco Federal Team ICS2 Negro - Federal BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Federal</span>
+          <h3>Marco Federal Team ICS2 Negro</h3>
+          <div class="price">$1.510.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="marco-gw-destructor-morado">
         <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-gw-destructor-morado.jpg?v=1788093948129" alt="Marco GW Destructor Morado - GW BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">GW</span>
@@ -418,22 +434,6 @@ header.top-bar .brand .name { color: #fff; }
           <span class="brand-lbl">Profit</span>
           <h3>Marco Profit Culver Gris Cromolio</h3>
           <div class="price">$370.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="marco-wethepeople-message-verde">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-wethepeople-message-verde.jpg?v=1788093948129" alt="Marco Wethepeople Message Verde - Wethepeople BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Wethepeople</span>
-          <h3>Marco Wethepeople Message Verde</h3>
-          <div class="price">$1.800.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="marco-colony-prisma-negro">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/marco-colony-prisma-negro.jpg?v=1788093948129" alt="Marco Colony Prisma Negro - Colony BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Colony</span>
-          <h3>Marco Colony Prisma Negro</h3>
-          <div class="price">$1.700.000 COP</div>
         </div>
       </a>
   </div>
@@ -753,7 +753,10 @@ header.top-bar .brand .name { color: #fff; }
 
   /* ---- Variant selector(s) ----
      A page can have up to two independent groups: #pdpVariant (talla, or the
-     legacy cosmetic LHD/RHD selector) and #pdpVariantColor (color). Each is
+     legacy cosmetic Derecho/Izquierdo fallback for a manzana-trasera with no
+     real per-side stock yet) and #pdpVariantColor (color, or "Lado" for a
+     manzana-trasera that does have real per-side stock — see
+     colorVariantHtmlFor in admin.html). Each is
      either cosmetic (tags the WhatsApp message only) or real inventory-backed
      (buttons carry data-units — picking one re-caps the qty stepper via
      applyStock() using that option's own stock, preferring the live catalog's
