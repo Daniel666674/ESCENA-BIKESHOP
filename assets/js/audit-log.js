@@ -8355,5 +8355,15 @@ window.ESCENA_AUDIT = [
    "marco-colony-prisma-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T22:16:05.933Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "marco-federal-command-negro-20-5-x-cola-12-5"
+  ],
+  "deleted": []
  }
 ];
