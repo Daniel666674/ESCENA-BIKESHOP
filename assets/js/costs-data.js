@@ -407,5 +407,6 @@ window.ESCENA_COSTS = {
  "bicicleta-fitbikeco-misfit-bmx-rin-16": 1760000,
  "tenedor-odyssey-r25": 640000,
  "plato-odyssey-big-boyd-negro": 192000,
- "plato-odyssey-la-guardia-28t": 216000
+ "plato-odyssey-la-guardia-28t": 216000,
+ "marco-federal-team-ics2-negro": 1208000
 };
