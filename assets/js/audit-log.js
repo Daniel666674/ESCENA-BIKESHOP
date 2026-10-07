@@ -8289,5 +8289,15 @@ window.ESCENA_AUDIT = [
    "fate-namaste-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T21:15:16.986Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "marco-federal-team-ics2-rojo"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
