@@ -340,7 +340,7 @@ window.ESCENA_COSTS = {
  "pedales-metal-negro-01": 68000,
  "pinon-snowflake-plata": 232000,
  "cult-pinon-negro": 184000,
- "odyssey-pinon-28t-negro": 272000,
+ "odyssey-pinon-28t-negro": 176000,
  "fiend-pinon-25t-negro": 232000,
  "federal-pinon-gris": 160000,
  "bsd-guarda-pinon-negro": 56000,
@@ -405,5 +405,7 @@ window.ESCENA_COSTS = {
  "bicicleta-cult-juvenile-rin-18": 1600000,
  "bicicleta-fitbikeco-misfit-rin-16": 1760000,
  "bicicleta-fitbikeco-misfit-bmx-rin-16": 1760000,
- "tenedor-odyssey-r25": 640000
+ "tenedor-odyssey-r25": 640000,
+ "plato-odyssey-big-boyd-negro": 192000,
+ "plato-odyssey-la-guardia-28t": 216000
 };
