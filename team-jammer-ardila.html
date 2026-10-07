@@ -130,7 +130,8 @@
     .rider-info .eyebrow { display: flex; align-items: center; gap: .8rem; color: var(--gold); font-size: .72rem; letter-spacing: .26em; text-transform: uppercase; font-weight: 800; }
     .rider-info .eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
     .rider-name { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(3.8rem, 7.5vw, 6.6rem); line-height: .86; margin-top: 1rem; }
-    .rider-name .last { display: block; color: transparent; -webkit-text-stroke: 2px var(--ink); }
+    /* A little room above the surname so accented capitals (RODRÍGUEZ) don't touch the first name. */
+    .rider-name .last { display: block; margin-top: .1em; color: transparent; -webkit-text-stroke: 2px var(--ink); }
     .rider-alias { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.6rem, 2.8vw, 2.1rem); letter-spacing: .14em; color: var(--gold); margin-top: .8rem; }
     .bio { margin-top: 1.5rem; max-width: 560px; }
     .bio p { color: #444; font-weight: 300; font-size: .97rem; line-height: 1.7; }
