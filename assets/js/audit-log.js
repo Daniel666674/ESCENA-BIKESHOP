@@ -8267,5 +8267,17 @@ window.ESCENA_AUDIT = [
    "marco-fitbikeco-str-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T21:03:13.061Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 1 foto subida",
+  "created": [
+   "marco-federal-team-ics2-negro"
+  ],
+  "edited": [
+   "marco-federal-chiller-20-75-cola-12-7"
+  ],
+  "deleted": []
  }
 ];
