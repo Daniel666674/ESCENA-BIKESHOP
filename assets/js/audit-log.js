@@ -8257,5 +8257,15 @@ window.ESCENA_AUDIT = [
    "plato-fitbikeco-key-guard-v2"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T20:48:49.977Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "marco-fitbikeco-str-negro"
+  ],
+  "deleted": []
  }
 ];
