@@ -9,6 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgPos": "50% 0%",
   "slug": "manzana-salt-pus-morada-eje-macho",
+  "imgZoom": 128,
   "img": "assets/img/products/manzana-salt-pus-morada-eje-macho-muyr33l9dpc7.jpg?v=1791416428318"
  },
  {
@@ -20,7 +21,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-GWB-001",
   "units": 4,
   "imgFit": "cover",
-  "imgZoom": 102,
+  "imgZoom": 128,
   "slug": "manzana-delantera-gw-negra",
   "img": "assets/img/products/manzana-delantera-gw-negra-muyr36lag11d.jpg?v=1791416430187"
  },
