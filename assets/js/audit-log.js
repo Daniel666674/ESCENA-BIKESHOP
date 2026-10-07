@@ -8222,5 +8222,40 @@ window.ESCENA_AUDIT = [
    "tenedor-colony-sweet-thoot"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T20:45:30.903Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 24 productos editados, 1 foto subida",
+  "created": [
+   "plato-odyssey-la-guardia-28t"
+  ],
+  "edited": [
+   "buje-cassette-negro-cromado",
+   "odyssey-pinon-28t-negro",
+   "plato-odyssey-big-boyd-negro",
+   "plato-gw-corona-negro",
+   "plato-gw-corona-negro-2",
+   "plato-gw-kl215-negro",
+   "plato-odyssey-big-boyd-28t",
+   "plato-trueno-exotic-tornasol",
+   "plato-xposure-infinity-25t",
+   "plato-federal-logo-guard-28t",
+   "plato-trueno-exotic",
+   "plato-sunday-sabretooth-v2-negro-28t",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "federal-pinon-gris",
+   "plato-fate-guardia-negro-28t",
+   "plato-strangergram-guardia-negro-28t",
+   "plato-volume-guardia-28t",
+   "pinon-snowflake-plata",
+   "plato-s-m-goring-28t",
+   "cult-pinon-negro",
+   "plato-fiend-reynols-purpura",
+   "fiend-pinon-25t-negro",
+   "plato-fitbikeco-key-guard-v2"
+  ],
+  "deleted": []
  }
 ];
