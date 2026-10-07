@@ -1388,10 +1388,12 @@
   // matched a product with exactly one size and 2+ colors.
   function isColorReal(p) { return !isSizeCat(p.cat) && p.colors && p.colors.length > 1; }
   function hasColorStock(p) { return !!(p && p.colors && p.colors.length > 1); }
-  // Manzanas traseras (freecoasters/cassettes) use the generic p.colors field
-  // to track Derecho/Izquierdo as real per-side stock, but the admin UI and
-  // storefront should call it "Lado", not "Color" — see colorVariantHtmlFor().
-  function isSideCat(cat) { return cat === "manzana-trasera"; }
+  // Manzanas traseras (freecoasters/cassettes) and combos de manzanas (that
+  // bundle a manzana trasera with a delantera) use the generic p.colors
+  // field to track Derecho/Izquierdo as real per-side stock, but the admin
+  // UI and storefront should call it "Lado", not "Color" — see
+  // colorVariantHtmlFor().
+  function isSideCat(cat) { return cat === "manzana-trasera" || cat === "combos-manzanas"; }
 
   /* ============ GitHub API ============ */
   function getToken() { return sessionStorage.getItem(TOKEN_KEY) || localStorage.getItem(TOKEN_KEY) || ""; }
@@ -2985,16 +2987,18 @@
     return "https://wa.me/573107630504?text=" + encodeURIComponent(waMsgFor(p) + " ¿Está disponible?\n" + url);
   }
   // Cosmetic-only FALLBACK selector: no per-option stock, just tags the
-  // WhatsApp/cart message. Only used for a manzana-trasera product that has
-  // no real p.colors set yet (see the hasColorStock(p) guard below) — once a
-  // product has real Derecho/Izquierdo stock in p.colors, colorVariantHtmlFor()
-  // renders the real, stock-backed "Lado" selector instead and this cosmetic
-  // one is skipped, so a shopper never sees two overlapping side pickers.
+  // WhatsApp/cart message. Only used for a manzana-trasera/combos-manzanas
+  // product that has no real p.colors set yet (see the hasColorStock(p)
+  // guard below) — once a product has real Derecho/Izquierdo stock in
+  // p.colors, colorVariantHtmlFor() renders the real, stock-backed "Lado"
+  // selector instead and this cosmetic one is skipped, so a shopper never
+  // sees two overlapping side pickers.
   // Real inventory-backed sizes (crank length, sprocket teeth, frame
   // top-tube, stem length, bar width — see SIZE_CATEGORIES/p.sizes) go through
   // variantHtmlFor()'s other branch below instead.
   var VARIANT_CONFIG = {
-    "manzana-trasera": { label: "Lado", prefix: "Lado", options: ["Derecho", "Izquierdo"] }
+    "manzana-trasera": { label: "Lado", prefix: "Lado", options: ["Derecho", "Izquierdo"] },
+    "combos-manzanas": { label: "Lado", prefix: "Lado", options: ["Derecho", "Izquierdo"] }
   };
   function sizeVariantHtmlFor(p) {
     if (p.sizes && p.sizes.length) {
@@ -3014,10 +3018,14 @@
     var cfg = VARIANT_CONFIG[p.cat];
     // Only an actual freecoaster or cassette hub body has a Derecho/Izquierdo
     // side to pick — other manzana-trasera products (hub guards, bearings)
-    // share the category but never need this prompt. A bidireccional hub
-    // also works on either side by design, flagged by this catalog's own
-    // naming convention (e.g. "Cassette Cut Crew Bidireccional Negro").
-    if (!cfg || hasColorStock(p) || !/^(freecoaster|cassette)\b/i.test(p.n || "") || /bidireccional/i.test(p.n || "")) return "";
+    // share the category but never need this prompt. Every combo in
+    // combos-manzanas bundles a one-sided rear hub by definition, so it's
+    // always eligible regardless of how its name is written. A bidireccional
+    // hub works on either side by design either way, flagged by this
+    // catalog's own naming convention (e.g. "Cassette Cut Crew Bidireccional
+    // Negro").
+    var eligible = p.cat === "combos-manzanas" || /^(freecoaster|cassette)\b/i.test(p.n || "");
+    if (!cfg || hasColorStock(p) || !eligible || /bidireccional/i.test(p.n || "")) return "";
     var opts2 = cfg.options.map(function (v, i) {
       return '<button type="button" data-value="' + esc(v) + '"' + (i === 0 ? ' class="is-active"' : '') + '>' + esc(v) + '</button>';
     }).join("");
@@ -3044,11 +3052,12 @@
     }).join("");
     var imgMapAttr = (p.imgColorMap && Object.keys(p.imgColorMap).length)
       ? ' data-img-map="' + esc(JSON.stringify(p.imgColorMap)) + '"' : '';
-    // Manzanas traseras (freecoasters/cassettes) store their side as a color
-    // ("Derecho"/"Izquierdo") so it gets real per-side stock for free, but a
-    // shopper shouldn't see a bike-hub side pick labeled "Color" — swap the
-    // label for this one category, the data/markup stay the same.
-    var isSide = p.cat === "manzana-trasera";
+    // Manzanas traseras (freecoasters/cassettes) and combos de manzanas
+    // store their side as a color ("Derecho"/"Izquierdo") so it gets real
+    // per-side stock for free, but a shopper shouldn't see a bike-hub side
+    // pick labeled "Color" — swap the label for these categories, the
+    // data/markup stay the same.
+    var isSide = isSideCat(p.cat);
     var label = isSide ? "Lado" : "Color";
     return '<div class="pdp-variant" id="pdpVariantColor" data-prefix="' + esc(label) + '"' + imgMapAttr + '>\n' +
       '      <span class="pdp-variant-label">' + esc(label) + '</span>\n' +
