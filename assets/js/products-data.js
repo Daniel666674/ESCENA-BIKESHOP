@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Marco Federal Team ICS2 Rojo",
+  "brand": "Federal",
+  "cat": "marcos",
+  "spec": "Tubo superior: 20,75\" o 21\" Tubo de dirección: 75,5° Tubo del asiento: 71° Vaina de cadena: 12,9\" (apretada) BB: 11,6\" Altura del soporte: 8,9\" Peso: 5,55 libras",
+  "price": 1510000,
+  "sku": "MRC-FED-004",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "20,75\"",
+    "units": 1,
+    "price": 1510000
+   }
+  ],
+  "slug": "marco-federal-team-ics2-rojo",
+  "img": "assets/img/products/marco-federal-team-ics2-rojo-muylv9rm9vwa.jpg?v=1791407664159"
+ },
+ {
   "n": "Marco Federal Team ICS2 Negro",
   "brand": "Federal",
   "cat": "marcos",
