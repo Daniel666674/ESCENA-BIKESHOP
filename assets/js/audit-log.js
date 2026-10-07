@@ -8396,5 +8396,16 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-alienation-illuminati-oos"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T23:40:48.974Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "manzana-delantera-gw-negra",
+   "manzana-salt-pus-morada-eje-macho"
+  ],
+  "deleted": []
  }
 ];
