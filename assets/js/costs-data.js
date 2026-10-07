@@ -409,5 +409,7 @@ window.ESCENA_COSTS = {
  "plato-odyssey-big-boyd-negro": 192000,
  "plato-odyssey-la-guardia-28t": 216000,
  "marco-federal-team-ics2-negro": 1208000,
- "marco-federal-team-ics2-rojo": 1208000
+ "marco-federal-team-ics2-rojo": 1208000,
+ "manzana-delantera-gw-negra": 24000,
+ "manzana-salt-pus-morada-eje-macho": 96000
 };
