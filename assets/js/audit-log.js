@@ -8419,5 +8419,15 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T23:50:20.990Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "manzana-salt-pus-morada-eje-macho"
+  ],
+  "deleted": []
  }
 ];
