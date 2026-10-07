@@ -8279,5 +8279,15 @@ window.ESCENA_AUDIT = [
    "marco-federal-chiller-20-75-cola-12-7"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T21:11:30.755Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "fate-namaste-negro"
+  ],
+  "deleted": []
  }
 ];
