@@ -8375,5 +8375,16 @@ window.ESCENA_AUDIT = [
    "odyssey-punos-negro-gris"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T23:04:24.450Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 2 fotos subidas",
+  "created": [
+   "manzana-salt-pus-morada-eje-macho",
+   "manzana-delantera-gw-negra"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
