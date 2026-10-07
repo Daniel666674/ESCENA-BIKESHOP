@@ -23,7 +23,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgZoom": 128,
   "slug": "manzana-delantera-gw-negra",
-  "img": "assets/img/products/manzana-delantera-gw-negra-muyr36lag11d.jpg?v=1791416430187"
+  "img": "assets/img/products/manzana-delantera-gw-negra-muyrinvomnrm.jpg?v=1791417154641"
  },
  {
   "n": "Marco Federal Team ICS2 Rojo",
