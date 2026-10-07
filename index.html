@@ -387,7 +387,10 @@
     .tm-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; filter: grayscale(1) contrast(1.08); transition: filter .4s, transform .6s; }
     .tm:hover .tm-photo img { filter: none; transform: scale(1.04); }
     .tm-photo .chip { position: absolute; top: .8rem; left: .8rem; background: var(--promo); color: var(--ink); font-size: .58rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 800; padding: .32rem .55rem; border-radius: 3px; }
-    .tm-name { font-family: 'Bebas Neue', sans-serif; font-weight: 400; text-align: center; font-size: clamp(1.9rem, 3vw, 2.5rem); line-height: .92; margin-top: 1.1rem; }
+    /* Team Family riders get the inverse chip, so the two tiers read apart at a glance. */
+    .tm-photo .chip.is-family { background: var(--ink); color: var(--promo); }
+    /* 1.02, not tighter: accented capitals (RODRÍGUEZ, NÚÑEZ) on the second line need room. */
+    .tm-name { font-family: 'Bebas Neue', sans-serif; font-weight: 400; text-align: center; font-size: clamp(1.9rem, 3vw, 2.5rem); line-height: 1.02; margin-top: 1.1rem; }
     .tm-name::after { content: ""; display: block; width: 30px; height: 3px; background: var(--promo); margin: .75rem auto 0; transition: width .3s; }
     .tm:hover .tm-name::after { width: 70px; }
     .tm-meta { text-align: center; margin-top: .5rem; font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
@@ -698,6 +701,11 @@
         <div class="tm-photo"><img src="assets/img/team/camilo-rodriguez.jpg" alt="Camilo Rodríguez" loading="lazy" width="900" height="1200" /><span class="chip">Team Pro</span></div>
         <h4 class="tm-name">Camilo<br />Rodríguez</h4>
         <div class="tm-meta"><b>Street</b> &middot; BMX Freestyle</div>
+      </a>
+      <a class="tm" href="team-michael-nunez">
+        <div class="tm-photo"><img src="assets/img/team/michael-nunez.jpg" alt="Michael Núñez" loading="lazy" width="900" height="900" /><span class="chip is-family">Team Family</span></div>
+        <h4 class="tm-name">Michael<br />Núñez</h4>
+        <div class="tm-meta"><b>Street</b> &middot; Old school</div>
       </a>
     </div>
   </div>
