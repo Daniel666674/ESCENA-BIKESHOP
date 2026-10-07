@@ -3492,12 +3492,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.40\" · Banda direccional profundo · Blanca",
   "price": 100000,
   "sku": "COR-THE-001",
-  "units": 2,
+  "units": 0,
   "sizes": [
    {
     "label": "20x2.40\"",
-    "units": 2,
-    "price": 100000
+    "units": 0
    }
   ],
   "slug": "llanta-theory-proven-blanca-2-40",
