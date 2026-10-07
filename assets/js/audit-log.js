@@ -8407,5 +8407,17 @@ window.ESCENA_AUDIT = [
    "manzana-salt-pus-morada-eje-macho"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T23:46:56.052Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "manzana-salt-pus-morada-eje-macho",
+   "manzana-delantera-gw-negra",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
