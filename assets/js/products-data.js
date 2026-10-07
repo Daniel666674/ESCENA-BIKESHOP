@@ -7610,7 +7610,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.6\" · Negro",
   "price": 650000,
   "sku": "MRC-FIT-001",
-  "units": 2,
+  "units": 0,
   "imgs": [
    "assets/img/products/marco-fitbikeco-str-negro.jpg?v=1788093948129",
    "assets/img/products/marco-fitbikeco-str-negro-2.jpg?v=1788093948129",
@@ -7622,7 +7622,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.5\"",
-    "units": 2
+    "units": 0
    },
    {
     "label": "20.75\"",
