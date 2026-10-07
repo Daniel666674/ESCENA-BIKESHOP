@@ -64,14 +64,9 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: mecanizado por CNC en aluminio ligero 7075-T6 - Firma de Boyd Hilder Diseño direccional de cinco radios - Perfil en forma de cúpula inspirado en Fang",
   "price": 240000,
   "sku": "PLT-ODY-002",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "sizes": [
-   {
-    "label": "28T",
-    "units": 1,
-    "price": 240000
-   },
    {
     "label": "30T",
     "units": 1,
@@ -3140,7 +3135,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-fiend-reynols-purpura",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/plato-fiend-reynols-purpura-mtbzwaexp3tk.jpg?v=1788093948129"
  },
  {
@@ -3164,7 +3159,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-strangergram-guardia-negro-28t",
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/plato-strangergram-guardia-negro-28t-mtbzwc0q5dmp.jpg?v=1788093948129"
  },
  {
@@ -3184,7 +3179,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-sunday-sabretooth-v2-negro-28t",
-  "order": 160,
+  "order": 170,
   "img": "assets/img/products/plato-sunday-sabretooth-v2-negro-28t-mtbzlyqatati.jpg?v=1788093948129"
  },
  {
@@ -3209,7 +3204,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-s-m-goring-28t",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/plato-s-m-goring-28t-mtbyv869obzl.jpg?v=1788093948129"
  },
  {
@@ -3229,7 +3224,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-fitbikeco-key-guard-v2",
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/plato-fitbikeco-key-guard-v2-mtbyk4dpnz48.jpg?v=1788093948129"
  },
  {
@@ -3281,7 +3276,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 190,
+  "order": 200,
   "img": "assets/img/products/plato-xposure-infinity-25t-mtby9bitqkmu.jpg?v=1788093948129"
  },
  {
@@ -3300,7 +3295,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-trueno-exotic-tornasol",
-  "order": 200,
+  "order": 210,
   "img": "assets/img/products/plato-trueno-exotic-tornasol-mtby9fo7maek.jpg?v=1788093948129"
  },
  {
@@ -3324,7 +3319,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-trueno-exotic",
-  "order": 170,
+  "order": 180,
   "img": "assets/img/products/plato-trueno-exotic-mtby9gou9qqd.jpg?v=1788093948129"
  },
  {
@@ -5229,7 +5224,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-mutanty-diamond-cromado-28t",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/plato-mutanty-diamond-cromado-28t.jpg?v=1788093948129"
  },
  {
@@ -5251,7 +5246,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-mutanty-diamond-negro-28t",
-  "order": 150,
+  "order": 160,
   "img": "assets/img/products/plato-mutanty-diamond-negro-28t.jpg?v=1788093948129"
  },
  {
@@ -5269,7 +5264,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-federal-logo-guard-28t",
-  "order": 180,
+  "order": 190,
   "img": "assets/img/products/plato-federal-logo-guard-28t.jpg?v=1788093948129"
  },
  {
@@ -7125,7 +7120,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 100,
+  "order": 110,
   "imgPos": "100% 50%",
   "img": "assets/img/products/plato-volume-guardia-28t.jpg?v=1788093948129"
  },
@@ -7251,7 +7246,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 120,
+  "order": 130,
   "imgs": [
    "assets/img/products/plato-fate-guardia-negro-28t-mtbxajpaxai3.jpg?v=1788093948129",
    "assets/img/products/plato-fate-guardia-negro-28t-mtc1kpwr1mhm.jpg?v=1788093948129"
@@ -7464,20 +7459,11 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "28T",
-    "units": 0
-   },
-   {
-    "label": "30T",
-    "units": 0
+    "units": 1,
+    "price": 240000
    }
   ],
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 1
-   }
-  ],
-  "order": 210,
+  "order": 30,
   "img": "assets/img/products/plato-odyssey-big-boyd-28t-mtc2bvlpcms9.jpg?v=1788093948129"
  },
  {
@@ -8388,7 +8374,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 90,
+  "order": 100,
   "imgPos": "100% 50%",
   "img": "assets/img/products/pinon-snowflake-plata-mtbxeill8dz3.jpg?v=1788093948129"
  },
@@ -8407,7 +8393,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/cult-pinon-negro-mtbxalh5e2ql.jpg?v=1788093948129"
  },
  {
@@ -8425,7 +8411,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 30,
+  "order": 40,
   "imgs": [
    "assets/img/products/odyssey-pinon-28t-negro-mtbyv9ghr3ke.jpg?v=1788093948129",
    "assets/img/products/odyssey-pinon-28t-negro-2.jpg?v=1788093948129"
@@ -8447,7 +8433,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 50,
+  "order": 60,
   "imgs": [
    "assets/img/products/fiend-pinon-25t-negro.jpg?v=1788093948129",
    "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1788093948129"
@@ -8471,7 +8457,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 130,
+  "order": 140,
   "imgs": [
    "assets/img/products/federal-pinon-gris.jpg?v=1788093948129",
    "assets/img/products/federal-pinon-gris-2.jpg?v=1788093948129"
