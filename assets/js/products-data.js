@@ -16,6 +16,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-federal-team-ics2-rojo",
+  "order": 70,
   "img": "assets/img/products/marco-federal-team-ics2-rojo-muylv9rm9vwa.jpg?v=1791407664159"
  },
  {
@@ -35,6 +36,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-federal-team-ics2-negro",
+  "order": 80,
   "img": "assets/img/products/marco-federal-team-ics2-negro-muylg65b62nj.jpg?v=1791406960192"
  },
  {
@@ -5756,7 +5758,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-wethepeople-message-verde",
-  "order": 20,
+  "order": 110,
   "img": "assets/img/products/marco-wethepeople-message-verde.jpg?v=1788093948129"
  },
  {
@@ -5787,7 +5789,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "marco-colony-prisma-negro",
-  "order": 60,
+  "order": 40,
   "img": "assets/img/products/marco-colony-prisma-negro.jpg?v=1788093948129"
  },
  {
@@ -6925,7 +6927,7 @@ window.ESCENA_PRODUCTS = [
     "price": 1660000
    }
   ],
-  "order": 70,
+  "order": 60,
   "img": "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-mt4i40vfbkvz.jpg?v=1788093948129"
  },
  {
@@ -6959,7 +6961,7 @@ window.ESCENA_PRODUCTS = [
     "price": 1660000
    }
   ],
-  "order": 80,
+  "order": 50,
   "img": "assets/img/products/marco-federal-chiller-20-75-cola-12-7-mt4ikekjxxbn.jpg?v=1788093948129"
  },
  {
@@ -7747,7 +7749,7 @@ window.ESCENA_PRODUCTS = [
     "price": 1790000
    }
   ],
-  "order": 30,
+  "order": 10,
   "img": "assets/img/products/marco-cult-biggie-hammertone.jpg?v=1788093948129"
  },
  {
@@ -8905,7 +8907,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 40,
+  "order": 20,
   "img": "assets/img/products/cult-biggie-jaime-sintes-hammertone-negro.jpg?v=1788093948129"
  },
  {
@@ -8934,7 +8936,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/fate-namaste-negro-2.jpg?v=1788093948129",
    "assets/img/products/fate-namaste-negro-3.jpg?v=1788093948129"
   ],
-  "order": 100,
+  "order": 90,
   "img": "assets/img/products/fate-namaste-negro.jpg?v=1788093948129"
  },
  {
@@ -8953,7 +8955,7 @@ window.ESCENA_PRODUCTS = [
     "price": 2100000
    }
   ],
-  "order": 90,
+  "order": 120,
   "imgs": [
    "assets/img/products/total-marco-2075-blanco-azul.jpg?v=1788093948129",
    "assets/img/products/total-marco-2075-blanco-azul-mt4k2swd5xrr.jpg?v=1788093948129",
@@ -9038,7 +9040,7 @@ window.ESCENA_PRODUCTS = [
     "price": 1800000
    }
   ],
-  "order": 10,
+  "order": 100,
   "imgs": [
    "assets/img/products/wethepeople-doomsayer-negro.jpg?v=1788093948129",
    "assets/img/products/wethepeople-doomsayer-negro-2.jpg?v=1788093948129",
@@ -9070,7 +9072,7 @@ window.ESCENA_PRODUCTS = [
     "price": 1790000
    }
   ],
-  "order": 50,
+  "order": 30,
   "img": "assets/img/products/cult-havens-gate-alex-duleba-negro.jpg?v=1788093948129"
  },
  {
