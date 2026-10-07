@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Marco Federal Team ICS2 Negro",
+  "brand": "Federal",
+  "cat": "marcos",
+  "spec": "Tubo superior: 20,75\" o 21\" Tubo de dirección: 75,5° Tubo del asiento: 71° Vaina de cadena: 12,9\" (apretada) BB: 11,6\" Altura del soporte: 8,9\" Peso: 5,55 libras",
+  "price": 1510000,
+  "sku": "MRC-FED-003",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "20.75\"",
+    "units": 1,
+    "price": 1510000
+   }
+  ],
+  "slug": "marco-federal-team-ics2-negro",
+  "img": "assets/img/products/marco-federal-team-ics2-negro-muylg65b62nj.jpg?v=1791406960192"
+ },
+ {
   "n": "Plato Odyssey La Guardia 28T",
   "brand": "Odyssey",
   "cat": "pinones",
@@ -6900,10 +6919,10 @@ window.ESCENA_PRODUCTS = [
   "n": "Marco Federal Chiller",
   "brand": "Federal",
   "cat": "marcos",
-  "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.7\" · Negro",
+  "spec": "Cromoly · Tubo superior 20.42\" · Cola 12.7\" · Negro",
   "price": 1660000,
   "sku": "MRC-FED-002",
-  "units": 1,
+  "units": 2,
   "imgs": [
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-mt4ikekjxxbn.jpg?v=1788093948129",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1788093948129",
@@ -6916,8 +6935,13 @@ window.ESCENA_PRODUCTS = [
   ],
   "sizes": [
    {
-    "label": "20.75 x 12.7\"",
-    "units": 1,
+    "label": "20.75\"",
+    "units": 0,
+    "price": 1660000
+   },
+   {
+    "label": "20.42\"",
+    "units": 2,
     "price": 1660000
    }
   ],
