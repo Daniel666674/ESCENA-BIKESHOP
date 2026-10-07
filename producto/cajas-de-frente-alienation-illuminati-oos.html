@@ -372,7 +372,7 @@ header.top-bar .brand .name { color: #fff; }
     <p class="pdp-stock-hint" id="pdpStockHint" data-units="1"></p>
     <div class="pdp-variant" id="pdpVariantColor" data-prefix="Color" data-img-map="{&quot;Rojo&quot;:[0],&quot;Negro&quot;:[1],&quot;Cromado&quot;:[2]}">
       <span class="pdp-variant-label">Color</span>
-      <div class="pdp-variant-options"><button type="button" data-value="Negro" data-units="0" disabled>Negro</button><button type="button" data-value="Rojo" data-units="1" class="is-active">Rojo</button><button type="button" data-value="Cromado" data-units="0" disabled>Cromado</button></div>
+      <div class="pdp-variant-options"><button type="button" data-value="Negro" data-units="1" class="is-active">Negro</button><button type="button" data-value="Rojo" data-units="1">Rojo</button><button type="button" data-value="Cromado" data-units="0" disabled>Cromado</button></div>
     </div>
     <p class="pdp-pick-hint" id="pdpPickHint" style="display:none;"></p>
     <div class="pdp-actions" id="pdpActions">
@@ -404,7 +404,23 @@ header.top-bar .brand .name { color: #fff; }
 <div class="related">
   <h2>También te puede gustar</h2>
   <div class="related-grid">
-    <a class="r-card" href="cajas-de-frente-fate-negra">
+    <a class="r-card" href="cajas-de-centro-trueno-cromado">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/cajas-de-centro-trueno-cromado-mun1e4rrrg50.jpg?v=1790708143781" alt="Cajas de centro Trueno Cromado - Trueno BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Trueno</span>
+          <h3>Cajas de centro Trueno Cromado</h3>
+          <div class="price">$60.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="cajas-de-frente-trueno-tornasol">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/cajas-de-frente-trueno-tornasol-mun1e6qtr989.jpg?v=1790708145581" alt="Cajas de frente Trueno - Tornasol - Trueno BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Trueno</span>
+          <h3>Cajas de frente Trueno - Tornasol</h3>
+          <div class="price">$70.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="cajas-de-frente-fate-negra">
         <div class="ph" style="position:relative;"><img src="../assets/img/products/cajas-de-frente-fate-negra-mt8xma1jbsqb.jpg?v=1788093948129" alt="Cajas de frente Fate Negra - Fate BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Fate</span>
@@ -418,22 +434,6 @@ header.top-bar .brand .name { color: #fff; }
           <span class="brand-lbl">Totalbmx</span>
           <h3>Cajas de Frente Totalbmx Negra</h3>
           <div class="price">$120.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="cajas-de-frente-gw">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/cajas-de-frente-gw.jpg?v=1788093948129" alt="Cajas de frente Gw - Gw BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Gw</span>
-          <h3>Cajas de frente Gw</h3>
-          <div class="price">$50.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="cajas-de-frente-fiend-stack">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/cajas-de-frente-fiend-stack.jpg?v=1788093948129" alt="Cajas de Frente Fiend Stack - Fiend BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Fiend</span>
-          <h3>Cajas de Frente Fiend Stack</h3>
-          <div class="price">$140.000 COP</div>
         </div>
       </a>
   </div>
@@ -753,7 +753,10 @@ header.top-bar .brand .name { color: #fff; }
 
   /* ---- Variant selector(s) ----
      A page can have up to two independent groups: #pdpVariant (talla, or the
-     legacy cosmetic LHD/RHD selector) and #pdpVariantColor (color). Each is
+     legacy cosmetic Derecho/Izquierdo fallback for a manzana-trasera with no
+     real per-side stock yet) and #pdpVariantColor (color, or "Lado" for a
+     manzana-trasera that does have real per-side stock — see
+     colorVariantHtmlFor in admin.html). Each is
      either cosmetic (tags the WhatsApp message only) or real inventory-backed
      (buttons carry data-units — picking one re-caps the qty stepper via
      applyStock() using that option's own stock, preferring the live catalog's
