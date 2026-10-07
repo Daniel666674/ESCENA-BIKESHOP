@@ -8365,5 +8365,15 @@ window.ESCENA_AUDIT = [
    "marco-federal-command-negro-20-5-x-cola-12-5"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T22:17:54.802Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "odyssey-punos-negro-gris"
+  ],
+  "deleted": []
  }
 ];
