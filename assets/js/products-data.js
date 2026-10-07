@@ -8551,17 +8551,17 @@ window.ESCENA_PRODUCTS = [
   "spec": "Goma · Firma de Broc Raifor Logo Broc en los extremos Diseño acanalado cómodo Par Ends incluidos 160 mm de longitud",
   "price": 48000,
   "sku": "ODYSSEY-PUNOS-NEGRO-GRIS",
-  "units": 6,
+  "units": 3,
   "order": 50,
   "imgs": [
+   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1788093948129",
    "assets/img/products/odyssey-punos-negro-gris.jpg?v=1788093948129",
-   "assets/img/products/odyssey-punos-negro-gris-2.jpg?v=1788093948129",
-   "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1788093948129"
+   "assets/img/products/odyssey-punos-negro-gris-2.jpg?v=1788093948129"
   ],
   "colors": [
    {
     "label": "Morado/Negro",
-    "units": 3
+    "units": 0
    },
    {
     "label": "Negro/Translucido",
@@ -8573,17 +8573,17 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgColorMap": {
-   "Morado/Negro": [
+   "Negro": [
     0
    ],
-   "Negro/Translucido": [
+   "Morado/Negro": [
     1
    ],
-   "Negro": [
+   "Negro/Translucido": [
     2
    ]
   },
-  "img": "assets/img/products/odyssey-punos-negro-gris.jpg?v=1788093948129"
+  "img": "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1788093948129"
  },
  {
   "slug": "federal-punos-gris",
