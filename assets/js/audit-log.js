@@ -8386,5 +8386,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-07T23:06:10.418Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cajas-de-frente-alienation-illuminati-oos"
+  ],
+  "deleted": []
  }
 ];
