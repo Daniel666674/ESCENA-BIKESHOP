@@ -8449,5 +8449,21 @@ window.ESCENA_AUDIT = [
    "manzana-salt-pus-morada-eje-macho"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-08T00:08:19.570Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "7 productos editados",
+  "created": [],
+  "edited": [
+   "manzana-salt-pus-morada-eje-macho",
+   "manzana-delantera-gw-negra",
+   "manzana-delantera-ontrail-nemesis",
+   "manzana-delantera-ontrail-nemesis-2",
+   "manzana-optimus-gold",
+   "manzana-delantera-stranger-ballast",
+   "manzana-delantera-primo-balance"
+  ],
+  "deleted": []
  }
 ];
