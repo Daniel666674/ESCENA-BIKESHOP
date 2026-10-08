@@ -8502,5 +8502,17 @@ window.ESCENA_AUDIT = [
    "rodamiento-6902-para-cassette"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-08T21:50:59.326Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto editado, 1 foto subida",
+  "created": [
+   "protector-delantero-brainstorm-nylon"
+  ],
+  "edited": [
+   "protector-de-manzana-delantera-mutanty-inmortal"
+  ],
+  "deleted": []
  }
 ];
