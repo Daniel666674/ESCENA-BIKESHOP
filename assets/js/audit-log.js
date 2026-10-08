@@ -8465,5 +8465,16 @@ window.ESCENA_AUDIT = [
    "manzana-delantera-primo-balance"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-08T21:22:17.914Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 2 fotos subidas",
+  "created": [],
+  "edited": [
+   "bsd-guarda-pinon-negro",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
