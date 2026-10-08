@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Protector Merritt Sentry drive",
+  "brand": "Merritt",
+  "cat": "manzana-trasera",
+  "spec": "Material en nylon y diseñado para funcionar en ambos lados de la manzana trasera - se instala por fuera del marco para evitar estirarlo - incluye bujes de adaptación 14mm y 3/8.",
+  "price": 45000,
+  "sku": "MZT-MER-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/protector-merritt-sentry-drive-mv01ql32jihd.jpg?v=1791494784416",
+   "assets/img/products/protector-merritt-sentry-drive-mv01qmjky1it.jpg?v=1791494785931"
+  ],
+  "slug": "protector-merritt-sentry-drive",
+  "order": 250,
+  "img": "assets/img/products/protector-merritt-sentry-drive-mv01ql32jihd.jpg?v=1791494784416"
+ },
+ {
   "n": "Protector G-sport Drive",
   "brand": "G-sport",
   "cat": "manzana-trasera",
@@ -1666,7 +1683,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "rodamiento-6902-para-cassette",
-  "order": 250,
+  "order": 260,
   "img": "assets/img/products/rodamiento-6902-para-cassette-mu60chc8p45s.jpg?v=1789678461922"
  },
  {
@@ -1679,7 +1696,7 @@ window.ESCENA_PRODUCTS = [
   "units": 100,
   "imgFit": "cover",
   "slug": "rodamiento-6802-para-manzana-de-cassette",
-  "order": 260,
+  "order": 270,
   "img": "assets/img/products/rodamiento-6802-para-manzana-de-cassette-mu601p7kycgu.jpg?v=1789677958604"
  },
  {
