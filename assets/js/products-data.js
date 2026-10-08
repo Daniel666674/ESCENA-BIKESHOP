@@ -1,5 +1,37 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Protector Brainstorm Trasero No drive Cromolio",
+  "brand": "Brainstorm",
+  "cat": "manzana-trasera",
+  "spec": "Material: Cromolio - Protector Trasero",
+  "price": 80000,
+  "sku": "MZT-BRN-003",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/protector-brainstorm-trasero-no-drive-cromolio-mv03ekr66lp8.jpg?v=1791497583584",
+   "assets/img/products/protector-brainstorm-trasero-no-drive-cromolio-mv03eme8xvut.jpg?v=1791497585351"
+  ],
+  "slug": "protector-brainstorm-trasero-no-drive-cromolio",
+  "order": 270,
+  "img": "assets/img/products/protector-brainstorm-trasero-no-drive-cromolio-mv03ekr66lp8.jpg?v=1791497583584"
+ },
+ {
+  "n": "Protector Brainstorm Delantero Cromolio",
+  "brand": "Brainstorm",
+  "cat": "manzana-delantera",
+  "spec": "Protector Delantero - Material: Cromolio",
+  "price": 75000,
+  "sku": "MZD-BRN-002",
+  "units": 0,
+  "imgs": [
+   "assets/img/products/protector-brainstorm-delantero-cromolio-mv03enrb5uff.jpg?v=1791497587373",
+   "assets/img/products/protector-brainstorm-delantero-cromolio-mv03epbhrc37.jpg?v=1791497589190"
+  ],
+  "slug": "protector-brainstorm-delantero-cromolio",
+  "img": "assets/img/products/protector-brainstorm-delantero-cromolio-mv03enrb5uff.jpg?v=1791497587373"
+ },
+ {
   "n": "Protector Brainstorm Trasero No Drive Nylon",
   "brand": "Brainstorm",
   "cat": "manzana-trasera",
@@ -1757,7 +1789,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "rodamiento-6902-para-cassette",
-  "order": 270,
+  "order": 280,
   "img": "assets/img/products/rodamiento-6902-para-cassette-mu60chc8p45s.jpg?v=1789678461922"
  },
  {
@@ -1770,7 +1802,7 @@ window.ESCENA_PRODUCTS = [
   "units": 100,
   "imgFit": "cover",
   "slug": "rodamiento-6802-para-manzana-de-cassette",
-  "order": 280,
+  "order": 290,
   "img": "assets/img/products/rodamiento-6802-para-manzana-de-cassette-mu601p7kycgu.jpg?v=1789677958604"
  },
  {
