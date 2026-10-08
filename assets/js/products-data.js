@@ -9,8 +9,11 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgPos": "50% 0%",
   "slug": "manzana-salt-pus-morada-eje-macho",
-  "imgZoom": 128,
-  "img": "assets/img/products/manzana-salt-pus-morada-eje-macho-muyrfbgqhn9c.jpg?v=1791416996326"
+  "imgs": [
+   "assets/img/products/manzana-salt-pus-morada-eje-macho-muyry3pjcff4.jpg?v=1791417872856",
+   "assets/img/products/manzana-salt-pus-morada-eje-macho-muyrfbgqhn9c.jpg?v=1791416996326"
+  ],
+  "img": "assets/img/products/manzana-salt-pus-morada-eje-macho-muyry3pjcff4.jpg?v=1791417872856"
  },
  {
   "n": "Manzana Delantera Gw Negra",
