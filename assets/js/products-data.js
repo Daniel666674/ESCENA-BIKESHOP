@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Protector Delantero Brainstorm Nylon",
+  "brand": "Brainstorm",
+  "cat": "manzana-delantera",
+  "spec": "Material : Nylon/Plastico - Protector de manzana delantero",
+  "price": 30000,
+  "sku": "MZD-BRN-001",
+  "units": 4,
+  "imgFit": "cover",
+  "slug": "protector-delantero-brainstorm-nylon",
+  "img": "assets/img/products/protector-delantero-brainstorm-nylon-mv02lss05g05.jpg?v=1791496241293"
+ },
+ {
   "n": "Protector Merritt Sentry drive",
   "brand": "Merritt",
   "cat": "manzana-trasera",
@@ -1020,7 +1032,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Protector Mutanty Inmortal Delantero",
   "brand": "Mutanty",
-  "cat": "manzana-trasera",
+  "cat": "manzana-delantera",
   "spec": "Cromo 4140 · Nylon reforzado · Negro - Frontguard - Peso: 1.9 Onzas",
   "price": 95000,
   "sku": "MZT-MUT-002",
