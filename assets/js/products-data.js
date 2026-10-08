@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Protector G-sport Drive",
+  "brand": "G-sport",
+  "cat": "manzana-trasera",
+  "spec": "El Uniguard de G-Sport es un protector de buje diseñado para adaptarse a cualquier BMX freestyle del mercado - Hecho de cromoly tratado térmicamente para una larga vida útil Compatible con ambos LHD y RHD Compatible con el lado del conductor y no conductor Ajuste universal",
+  "price": 75000,
+  "sku": "MZT-GSP-001",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/protector-g-sport-drive-mv01olh803ia.jpg?v=1791494691863",
+   "assets/img/products/protector-g-sport-drive-mv01on4nmdoz.jpg?v=1791494693724"
+  ],
+  "slug": "protector-g-sport-drive",
+  "order": 240,
+  "img": "assets/img/products/protector-g-sport-drive-mv01olh803ia.jpg?v=1791494691863"
+ },
+ {
   "n": "Manzana Salt Pus Morada Eje Macho",
   "brand": "Salt",
   "cat": "manzana-delantera",
@@ -1649,7 +1666,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "rodamiento-6902-para-cassette",
-  "order": 240,
+  "order": 250,
   "img": "assets/img/products/rodamiento-6902-para-cassette-mu60chc8p45s.jpg?v=1789678461922"
  },
  {
@@ -1662,7 +1679,7 @@ window.ESCENA_PRODUCTS = [
   "units": 100,
   "imgFit": "cover",
   "slug": "rodamiento-6802-para-manzana-de-cassette",
-  "order": 250,
+  "order": 260,
   "img": "assets/img/products/rodamiento-6802-para-manzana-de-cassette-mu601p7kycgu.jpg?v=1789677958604"
  },
  {
