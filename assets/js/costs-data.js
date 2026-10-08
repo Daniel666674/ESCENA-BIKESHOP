@@ -417,5 +417,7 @@ window.ESCENA_COSTS = {
  "protector-delantero-brainstorm-nylon": 24000,
  "protector-de-marco-brainstorm": 42400,
  "protector-braisntorm-drive-nylon": 24800,
- "protector-brainstorm-trasero-no-drive-nylon": 23200
+ "protector-brainstorm-trasero-no-drive-nylon": 23200,
+ "protector-brainstorm-delantero-cromolio": 60000,
+ "protector-brainstorm-trasero-no-drive-cromolio": 64000
 };
