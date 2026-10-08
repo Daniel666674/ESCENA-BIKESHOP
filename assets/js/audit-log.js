@@ -8476,5 +8476,18 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-08T21:25:07.309Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 productos editados, 2 fotos subidas",
+  "created": [
+   "protector-g-sport-drive"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette"
+  ],
+  "deleted": []
  }
 ];
