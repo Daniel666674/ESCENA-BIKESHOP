@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Protector Brainstorm Trasero No Drive Nylon",
+  "brand": "Brainstorm",
+  "cat": "manzana-trasera",
+  "spec": "Protector Trasero - Material Nylon/Plastico - No Drive",
+  "price": 29000,
+  "sku": "MZT-BRN-002",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/protector-brainstorm-trasero-no-drive-nylon-mv02z63npnsr.jpg?v=1791496865197",
+   "assets/img/products/protector-brainstorm-trasero-no-drive-nylon-mv02z832pc53.jpg?v=1791496867768"
+  ],
+  "slug": "protector-brainstorm-trasero-no-drive-nylon",
+  "order": 260,
+  "img": "assets/img/products/protector-brainstorm-trasero-no-drive-nylon-mv02z63npnsr.jpg?v=1791496865197"
+ },
+ {
   "n": "Protector Braisntorm Drive Nylon",
   "brand": "Brainstorm",
   "cat": "manzana-trasera",
@@ -1740,7 +1757,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "rodamiento-6902-para-cassette",
-  "order": 260,
+  "order": 270,
   "img": "assets/img/products/rodamiento-6902-para-cassette-mu60chc8p45s.jpg?v=1789678461922"
  },
  {
@@ -1753,7 +1770,7 @@ window.ESCENA_PRODUCTS = [
   "units": 100,
   "imgFit": "cover",
   "slug": "rodamiento-6802-para-manzana-de-cassette",
-  "order": 270,
+  "order": 280,
   "img": "assets/img/products/rodamiento-6802-para-manzana-de-cassette-mu601p7kycgu.jpg?v=1789677958604"
  },
  {
