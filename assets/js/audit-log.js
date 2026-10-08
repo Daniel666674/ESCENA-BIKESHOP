@@ -8514,5 +8514,15 @@ window.ESCENA_AUDIT = [
    "protector-de-manzana-delantera-mutanty-inmortal"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-08T21:54:24.361Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "protector-de-marco-brainstorm"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
