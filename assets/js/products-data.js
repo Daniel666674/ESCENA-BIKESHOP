@@ -1,5 +1,37 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Protector de Marco Brainstorm",
+  "brand": "Brainstorm",
+  "cat": "marcos",
+  "spec": "Protector de centro de marco - Material Nylon - Medida 19mm - 22mm - 24mm",
+  "price": 53000,
+  "sku": "MRC-BRN-001",
+  "units": 2,
+  "imgs": [
+   "assets/img/products/protector-de-marco-brainstorm-mv02qdggt52z.jpg?v=1791496455192",
+   "assets/img/products/protector-de-marco-brainstorm-mv02qfq07nwj.jpg?v=1791496456761"
+  ],
+  "sizes": [
+   {
+    "label": "19mm",
+    "units": 1,
+    "price": 53000
+   },
+   {
+    "label": "22mm",
+    "units": 1,
+    "price": 53000
+   },
+   {
+    "label": "24mm",
+    "units": 0,
+    "price": 53000
+   }
+  ],
+  "slug": "protector-de-marco-brainstorm",
+  "img": "assets/img/products/protector-de-marco-brainstorm-mv02qdggt52z.jpg?v=1791496455192"
+ },
+ {
   "n": "Protector Delantero Brainstorm Nylon",
   "brand": "Brainstorm",
   "cat": "manzana-delantera",
