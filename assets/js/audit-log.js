@@ -8554,5 +8554,19 @@ window.ESCENA_AUDIT = [
    "rodamiento-6902-para-cassette"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-08T22:13:29.340Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 2 productos editados, 4 fotos subidas",
+  "created": [
+   "protector-brainstorm-trasero-no-drive-cromolio",
+   "protector-brainstorm-delantero-cromolio"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette"
+  ],
+  "deleted": []
  }
 ];
