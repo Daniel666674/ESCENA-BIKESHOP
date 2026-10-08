@@ -8439,5 +8439,15 @@ window.ESCENA_AUDIT = [
    "manzana-delantera-gw-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-08T00:05:07.377Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "manzana-salt-pus-morada-eje-macho"
+  ],
+  "deleted": []
  }
 ];
