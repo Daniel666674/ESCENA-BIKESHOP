@@ -415,5 +415,6 @@ window.ESCENA_COSTS = {
  "protector-g-sport-drive": 60000,
  "protector-merritt-sentry-drive": 36000,
  "protector-delantero-brainstorm-nylon": 24000,
- "protector-de-marco-brainstorm": 42400
+ "protector-de-marco-brainstorm": 42400,
+ "protector-braisntorm-drive-nylon": 24800
 };
