@@ -412,5 +412,6 @@ window.ESCENA_COSTS = {
  "marco-federal-team-ics2-rojo": 1208000,
  "manzana-delantera-gw-negra": 24000,
  "manzana-salt-pus-morada-eje-macho": 96000,
- "protector-g-sport-drive": 60000
+ "protector-g-sport-drive": 60000,
+ "protector-merritt-sentry-drive": 36000
 };
