@@ -8489,5 +8489,18 @@ window.ESCENA_AUDIT = [
    "rodamiento-6902-para-cassette"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-08T21:26:35.793Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 productos editados, 2 fotos subidas",
+  "created": [
+   "protector-merritt-sentry-drive"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette"
+  ],
+  "deleted": []
  }
 ];
