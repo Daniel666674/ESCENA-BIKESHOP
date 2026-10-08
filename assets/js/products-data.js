@@ -6,13 +6,14 @@ window.ESCENA_PRODUCTS = [
   "spec": "Color: Púrpura  - Marca: Otras Marcas  - Material: Aluminio  - Número de huecos manzana: 36  - Terminado: Púrpura  - Balinera: Sellada",
   "price": 120000,
   "sku": "MZD-SAL-001",
-  "units": 1,
+  "units": 2,
   "imgPos": "50% 0%",
   "slug": "manzana-salt-pus-morada-eje-macho",
   "imgs": [
    "assets/img/products/manzana-salt-pus-morada-eje-macho-muyry3pjcff4.jpg?v=1791417872856",
    "assets/img/products/manzana-salt-pus-morada-eje-macho-muyrfbgqhn9c.jpg?v=1791416996326"
   ],
+  "order": 130,
   "img": "assets/img/products/manzana-salt-pus-morada-eje-macho-muyry3pjcff4.jpg?v=1791417872856"
  },
  {
@@ -26,6 +27,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgZoom": 128,
   "slug": "manzana-delantera-gw-negra",
+  "order": 170,
   "img": "assets/img/products/manzana-delantera-gw-negra-muyrinvomnrm.jpg?v=1791417154641"
  },
  {
@@ -4015,7 +4017,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "manzana-delantera-ontrail-nemesis-2",
-  "order": 140,
+  "order": 150,
   "imgColorMap": {
    "Verde": [
     0
@@ -4036,7 +4038,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/manzana-delantera-ontrail-nemesis-mt93v0616r69.jpg?v=1788093948129"
   ],
   "slug": "manzana-delantera-ontrail-nemesis",
-  "order": 150,
+  "order": 160,
   "img": "assets/img/products/manzana-delantera-ontrail-nemesis-mt93uz21jwkf.jpg?v=1788093948129"
  },
  {
@@ -4480,7 +4482,7 @@ window.ESCENA_PRODUCTS = [
     3
    ]
   },
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/manzana-optimus-gold-mt4mqe06ty10.jpg?v=1788093948129"
  },
  {
