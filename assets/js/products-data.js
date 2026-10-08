@@ -8505,7 +8505,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "BSD-GUARDA-PINON-NEGRO",
   "units": 6,
   "order": 230,
-  "img": "assets/img/products/bsd-guarda-pinon-negro.jpg?v=1788093948129"
+  "img": "assets/img/products/bsd-guarda-pinon-negro-mv01kzvt93cb.jpg?v=1791494523469"
  },
  {
   "slug": "mutany-guarda-pinon-negro",
