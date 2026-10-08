@@ -8524,5 +8524,22 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-08T21:57:17.156Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 6 productos editados, 1 foto subida",
+  "created": [
+   "protector-braisntorm-drive-nylon"
+  ],
+  "edited": [
+   "protector-mutanty-immortal-no-drive-trasero",
+   "bsd-guarda-pinon-negro",
+   "protector-g-sport-drive",
+   "protector-merritt-sentry-drive",
+   "rodamiento-6902-para-cassette",
+   "rodamiento-6802-para-manzana-de-cassette"
+  ],
+  "deleted": []
  }
 ];
