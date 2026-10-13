@@ -1069,7 +1069,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: aluminio 6061 extruido - ANCHO : 34 mm -AGUJEROS: 36 huecos - Union: Pineado - Incluye protector de aro - Peso: 16,4 oz",
   "price": 160000,
   "sku": "RIN-STL-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "slug": "rin-stolen-rampage-cromado",
   "order": 90,
