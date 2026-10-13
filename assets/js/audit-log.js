@@ -8568,5 +8568,17 @@ window.ESCENA_AUDIT = [
    "rodamiento-6902-para-cassette"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-13T22:50:36.982Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "rin-stolen-rampage-cromado",
+   "rin-stl-j40c-azul",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
