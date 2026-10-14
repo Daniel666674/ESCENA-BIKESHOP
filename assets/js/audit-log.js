@@ -8614,5 +8614,15 @@ window.ESCENA_AUDIT = [
    "tukanbikes-industrial-raw"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-14T14:23:02.782Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "tukanbikes-industrial-raw"
+  ],
+  "deleted": []
  }
 ];
