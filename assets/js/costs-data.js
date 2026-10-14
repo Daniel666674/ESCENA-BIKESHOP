@@ -419,5 +419,7 @@ window.ESCENA_COSTS = {
  "protector-braisntorm-drive-nylon": 24800,
  "protector-brainstorm-trasero-no-drive-nylon": 23200,
  "protector-brainstorm-delantero-cromolio": 60000,
- "protector-brainstorm-trasero-no-drive-cromolio": 64000
+ "protector-brainstorm-trasero-no-drive-cromolio": 64000,
+ "cassette-alienation-iluminati-cromado": 544000,
+ "cassette-alienation-iluminati-negro": 544000
 };
