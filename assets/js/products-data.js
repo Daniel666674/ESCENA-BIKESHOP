@@ -9247,7 +9247,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Fiend",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.75\" · Cola 12.75\" · Negro",
-  "price": 2100000,
+  "price": 1950000,
   "sku": "FIEND-REYNOLDS-V3-NEGRO",
   "units": 2,
   "imgs": [
@@ -9269,6 +9269,8 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 0,
+  "tag": "Promocion",
+  "promo": true,
   "img": "assets/img/products/fiend-reynolds-v3-negro.jpg?v=1788093948129"
  },
  {
