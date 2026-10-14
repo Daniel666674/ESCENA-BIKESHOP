@@ -1460,11 +1460,11 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "9.42\"",
-    "units": 1
+    "units": 0
    },
    {
     "label": "9.65\"",
-    "units": 1
+    "units": 2
    }
   ],
   "slug": "timon-cult-havens-gate-4pc-cromado",
