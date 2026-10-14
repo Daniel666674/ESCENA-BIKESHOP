@@ -8580,5 +8580,18 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-14T14:19:29.334Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "manubrio-cromoly-negro-01",
+   "manubrio-cromoly-negro-04",
+   "manubrio-cromoly-negro-03",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
