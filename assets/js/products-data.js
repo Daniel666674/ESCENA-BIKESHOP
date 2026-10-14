@@ -9361,11 +9361,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Medidas: 28″ Ancho, 10.5° inclinación hacia atrás, 3° inclinación hacia arriba. Peso: 820gr",
   "price": 380000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-01",
-  "units": 2,
+  "units": 4,
   "sizes": [
    {
     "label": "9.5\"",
-    "units": 2
+    "units": 4
    }
   ],
   "imgs": [
@@ -9433,11 +9433,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Full Cr-mo Tratado al calor Medidas: 9.4″ Ancho 29″ Inclinación hacia atrás 15° Inclinación hacia arriba 1.5° Garantía de 1 año Peso: 942 Gramos",
   "price": 380000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-03",
-  "units": 1,
+  "units": 0,
   "sizes": [
    {
     "label": "9.4\"",
-    "units": 1
+    "units": 0
    }
   ],
   "imgs": [
@@ -9447,7 +9447,7 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1
+    "units": 0
    }
   ],
   "order": 90,
@@ -9461,11 +9461,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Full Cr-mo Medidas ancho 29″ 1.5° Inclinación hacia arriba 11° Inclinación hacia atrás",
   "price": 165000,
   "sku": "MANUBRIO-CROMOLY-NEGRO-04",
-  "units": 5,
+  "units": 0,
   "sizes": [
    {
     "label": "9.25\"",
-    "units": 5
+    "units": 0
    }
   ],
   "colors": [
