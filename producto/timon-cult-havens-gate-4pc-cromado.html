@@ -369,20 +369,20 @@ header.top-bar .brand .name { color: #fff; }
     <span class="brand-lbl">Cult</span>
     <h1>Timon Cult Havens Gate 4PC - Cromado</h1>
     <div class="pdp-price">$400.000 COP</div>
-    <p class="pdp-stock-hint" id="pdpStockHint" data-units="1"></p>
+    <p class="pdp-stock-hint" id="pdpStockHint" data-units="2"></p>
     <div class="pdp-variant" id="pdpVariant" data-prefix="Talla">
       <span class="pdp-variant-label">Talla</span>
-      <div class="pdp-variant-options"><button type="button" data-value="9.42&quot;" data-units="1" class="is-active">9.42&quot;</button><button type="button" data-value="9.65&quot;" data-units="1">9.65&quot;</button></div>
+      <div class="pdp-variant-options"><button type="button" data-value="9.42&quot;" data-units="0" disabled>9.42&quot;</button><button type="button" data-value="9.65&quot;" data-units="2" class="is-active">9.65&quot;</button></div>
     </div>
     <p class="pdp-pick-hint" id="pdpPickHint" style="display:none;"></p>
     <div class="pdp-actions" id="pdpActions">
       <a class="btn btn-ink" id="pdpWaLink" href="https://wa.me/573107630504?text=Hola%20ESCENA%2C%20quiero%20pedir%3A%20Timon%20Cult%20Havens%20Gate%204PC%20-%20Cromado%20(Cult)%20%E2%80%94%20%24400.000%20COP.%20%C2%BFEst%C3%A1%20disponible%3F%0Ahttps%3A%2F%2Fescenabmx.com%2Fproducto%2Ftimon-cult-havens-gate-4pc-cromado%3Fv%3D1790163519210" target="_blank" rel="noopener">Pedir por WhatsApp</a>
       <div class="pdp-qty">
         <button type="button" id="qtyDec" aria-label="Reducir cantidad">&minus;</button>
-        <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="1" />
+        <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="2" />
         <button type="button" id="qtyInc" aria-label="Aumentar cantidad">+</button>
       </div>
-      <button type="button" class="add-cart-btn" data-slug="timon-cult-havens-gate-4pc-cromado" data-n="Timon Cult Havens Gate 4PC - Cromado" data-brand="Cult" data-price="400000" data-img="assets/img/products/timon-cult-havens-gate-4pc-cromado-mue14yksfrx6.jpg?v=1790163519210" data-units="1" data-variant="">Agregar al carrito</button>
+      <button type="button" class="add-cart-btn" data-slug="timon-cult-havens-gate-4pc-cromado" data-n="Timon Cult Havens Gate 4PC - Cromado" data-brand="Cult" data-price="400000" data-img="assets/img/products/timon-cult-havens-gate-4pc-cromado-mue14yksfrx6.jpg?v=1790163519210" data-units="2" data-variant="">Agregar al carrito</button>
     </div>
     <div class="pdp-share">
       <span>Compartir</span>
@@ -401,20 +401,20 @@ header.top-bar .brand .name { color: #fff; }
 <div class="related">
   <h2>También te puede gustar</h2>
   <div class="related-grid">
-    <a class="r-card" href="timon-cult-crew-cromado">
+    <a class="r-card" href="timon-fiend-reynolds-cromado">
+        <div class="ph" style="position:relative;"><img src="../assets/img/products/timon-fiend-reynolds-cromado-mue1lq40spd3.jpg?v=1790164301554" alt="Timon Fiend Reynolds - Cromado - Fiend BMX" loading="lazy" width="300" height="300" /></div>
+        <div class="body">
+          <span class="brand-lbl">Fiend</span>
+          <h3>Timon Fiend Reynolds - Cromado</h3>
+          <div class="price">$460.000 COP</div>
+        </div>
+      </a>
+<a class="r-card" href="timon-cult-crew-cromado">
         <div class="ph" style="position:relative;"><img src="../assets/img/products/timon-cult-crew-cromado-mue0vqucdf0h.jpg?v=1790163089438" alt="Timon Cult Crew - Cromado - Cult BMX" loading="lazy" width="300" height="300" /></div>
         <div class="body">
           <span class="brand-lbl">Cult</span>
           <h3>Timon Cult Crew - Cromado</h3>
           <div class="price">$380.000 COP</div>
-        </div>
-      </a>
-<a class="r-card" href="timon-merritt-slaughter-4pc-negro">
-        <div class="ph" style="position:relative;"><img src="../assets/img/products/timon-merritt-slaughter-4pc-negro-mue04z0fal11.jpg?v=1790161840348" alt="Timon Merritt Slaughter 4pc - Negro - Merritt BMX" loading="lazy" width="300" height="300" /></div>
-        <div class="body">
-          <span class="brand-lbl">Merritt</span>
-          <h3>Timon Merritt Slaughter 4pc - Negro</h3>
-          <div class="price">$390.000 COP</div>
         </div>
       </a>
 <a class="r-card" href="timon-federal-assaut">
@@ -750,7 +750,10 @@ header.top-bar .brand .name { color: #fff; }
 
   /* ---- Variant selector(s) ----
      A page can have up to two independent groups: #pdpVariant (talla, or the
-     legacy cosmetic LHD/RHD selector) and #pdpVariantColor (color). Each is
+     legacy cosmetic Derecho/Izquierdo fallback for a manzana-trasera with no
+     real per-side stock yet) and #pdpVariantColor (color, or "Lado" for a
+     manzana-trasera that does have real per-side stock — see
+     colorVariantHtmlFor in admin.html). Each is
      either cosmetic (tags the WhatsApp message only) or real inventory-backed
      (buttons carry data-units — picking one re-caps the qty stepper via
      applyStock() using that option's own stock, preferring the live catalog's
