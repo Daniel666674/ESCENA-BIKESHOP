@@ -280,6 +280,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgZoom": 104,
   "slug": "bicicleta-fitbikeco-misfit-bmx-rin-16",
+  "order": 10,
   "img": "assets/img/products/bicicleta-fitbikeco-misfit-bmx-rin-16-munbn1m63i4w.jpg?v=1790725355616"
  },
  {
@@ -292,6 +293,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "bicicleta-fitbikeco-misfit-rin-16",
+  "order": 20,
   "img": "assets/img/products/bicicleta-fitbikeco-misfit-rin-16-munay1edaud6.jpg?v=1790724189335"
  },
  {
@@ -301,7 +303,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 2420000,
   "sku": "BIC-CLT-002",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/bicicleta-cult-control-raw-mun948ihccl8.jpg?v=1790721118676",
@@ -311,6 +313,7 @@ window.ESCENA_PRODUCTS = [
   "imgZoom": 108,
   "imgPos": "50% 0%",
   "slug": "bicicleta-cult-control-raw",
+  "order": 60,
   "img": "assets/img/products/bicicleta-cult-control-raw-mun948ihccl8.jpg?v=1790721118676"
  },
  {
@@ -324,6 +327,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgZoom": 111,
   "slug": "bicicleta-cult-juvenile-rin-18",
+  "order": 0,
   "img": "assets/img/products/bicicleta-cult-juvenile-rin-18-mun8jr0lp4y2.jpg?v=1790720162552"
  },
  {
@@ -5722,7 +5726,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profit-oxnard-negro-rojo-4.jpg?v=1788093948129"
   ],
   "slug": "bicicleta-profit-oxnard-negro-rojo",
-  "order": 340,
+  "order": 50,
   "img": "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1788093948129"
  },
  {
@@ -5741,7 +5745,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-muoibjryp0dz.jpg?v=1790797042695"
   ],
   "slug": "bicicleta-profit-culver-bmx-gris-oscuro",
-  "order": 260,
+  "order": 40,
   "img": "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-4.jpg?v=1788093948129"
  },
  {
@@ -5751,7 +5755,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Bicicleta de BMX Bicicleta Profit – Linea Optimus Marco medida 20.5″ – Cola 13.5″ Manubrio 8.9″ Acero Alta tensión Tenedor Full Cr-mo Frente y Caja Integrado Rodamientos Bielas Forjadas Acero Cassette Derecho 9T Balineras Selladas Manzana Delantera Balin Suelto Silla Pivotal Fat Llantas 2.35″ Incluye Freno Peso 12.8 Kgrs",
   "price": 890000,
   "sku": "BIC-PRO-001",
-  "units": 2,
+  "units": 0,
   "imgs": [
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1788093948129",
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-muohdtf1rwhn.jpg?v=1790795468449",
@@ -5760,7 +5764,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-muohdzhmwn5t.jpg?v=1790795476210"
   ],
   "slug": "bicicleta-profir-culver-bmx-gris-oscuro",
-  "order": 250,
+  "order": 30,
   "img": "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1788093948129"
  },
  {
