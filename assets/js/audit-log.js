@@ -8661,5 +8661,15 @@ window.ESCENA_AUDIT = [
    "bicicleta-fitbikeco-misfit-bmx-rin-16"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-14T14:45:56.590Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "fiend-reynolds-v3-negro"
+  ],
+  "deleted": []
  }
 ];
