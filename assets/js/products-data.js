@@ -2626,6 +2626,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAD-CAR-001",
   "units": 10,
   "slug": "cadena-cargochain-c410-negra",
+  "order": 170,
   "img": "assets/img/products/cadena-cargochain-c410-negra-mtxggvd6h8hd.jpg?v=1789161345210"
  },
  {
@@ -2638,6 +2639,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "cadena-cargochain-c410-cromada",
+  "order": 180,
   "img": "assets/img/products/cadena-cargochain-c410-cromada-mtxg7nb76gie.jpg?v=1789160914050"
  },
  {
@@ -2654,6 +2656,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-tec-410-negra-mtxg4z824ulm.jpg?v=1789160789583"
   ],
   "slug": "cadena-tec-410-negra",
+  "order": 160,
   "img": "assets/img/products/cadena-tec-410-negra-mtxg4xt1j4x7.jpg?v=1789160787794"
  },
  {
@@ -2671,6 +2674,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgPos": "0% 50%",
   "slug": "cadena-bsd-forever-negra",
+  "order": 60,
   "img": "assets/img/products/cadena-bsd-forever-negra-mtxg2khjk9yt.jpg?v=1789160677369"
  },
  {
@@ -2680,13 +2684,13 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 95000,
   "sku": "CAD-BSD-001",
-  "units": 1,
+  "units": 0,
   "slug": "cadena-bsd-forever-cromada",
   "imgs": [
    "assets/img/products/cadena-bsd-forever-cromada-mtxfccb9a826.jpg?v=1789159454416",
    "assets/img/products/cadena-bsd-forever-cromada-mtxg50lruy50.jpg?v=1789160791102"
   ],
-  "order": 60,
+  "order": 70,
   "imgPos": "50% 50%",
   "img": "assets/img/products/cadena-bsd-forever-cromada-mtxfccb9a826.jpg?v=1789159454416"
  },
@@ -2697,7 +2701,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 145000,
   "sku": "CAD-CIN-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "imgZoom": 106,
   "slug": "cadena-cinema-escamada-negra",
@@ -2736,7 +2740,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-410-roja-mtxe8f5w0scc.jpg?v=1789157590913"
   ],
   "slug": "cadena-kmc-410-roja",
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/cadena-kmc-410-roja-mtxe8cc8hrtb.jpg?v=1789157587601"
  },
  {
@@ -2754,7 +2758,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-410-azul-mtxe8jsre2o9.jpg?v=1789157597455"
   ],
   "slug": "cadena-kmc-410-azul",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/cadena-kmc-410-azul-mtxe8ghtx6lc.jpg?v=1789157593039"
  },
  {
@@ -2767,7 +2771,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "cadena-tallorder-negra-510",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/cadena-tallorder-negra-510-mtw4ga0rulcf.jpg?v=1789080695989"
  },
  {
@@ -2857,7 +2861,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-410-negra-mtxe8ljjteec.jpg?v=1789157599073"
   ],
   "slug": "cadena-kmc-410-negra",
-  "order": 120,
+  "order": 130,
   "imgZoom": 137,
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1788139946697"
  },
@@ -2875,7 +2879,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-narrow-cromada-mtxh99r68xo6.jpg?v=1789162669730"
   ],
   "slug": "cadena-kmc-narrow-cromada",
-  "order": 100,
+  "order": 110,
   "imgFit": "cover",
   "imgPos": "50% 100%",
   "img": "assets/img/products/cadena-kmc-narrow-cromada-mtxh984u3elm.jpg?v=1789162667682"
@@ -2894,7 +2898,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtxh39cece5c.jpg?v=1789162388646"
   ],
   "slug": "cadena-kmc-k1-wide-perforada-cromada",
-  "order": 90,
+  "order": 100,
   "imgFit": "cover",
   "img": "assets/img/products/cadena-kmc-k1-wide-perforada-cromada-mtxh36fdrpnk.jpg?v=1789162385279"
  },
@@ -2948,7 +2952,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/cadena-tall-order-cromada-510-mtg1gfxmz0pn.jpg?v=1788108205196"
   ],
   "slug": "cadena-tall-order-cromada-510",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/cadena-tall-order-cromada-510-mtw4gbzpnqu0.jpg?v=1789080697661"
  },
  {
