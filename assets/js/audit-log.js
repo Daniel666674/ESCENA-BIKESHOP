@@ -8593,5 +8593,15 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-14T14:20:12.799Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-cult-havens-gate-4pc-cromado"
+  ],
+  "deleted": []
  }
 ];
