@@ -9137,7 +9137,7 @@ window.ESCENA_PRODUCTS = [
   "n": "TukanBikes Industrial Raw",
   "brand": "TukanBikes",
   "cat": "marcos",
-  "spec": "Cromoly · Soldadura TIC - MIG · Tubo superior 20.4\" - 20.75\" - 21\"",
+  "spec": "Material Acero de alta Tension · Soldadura MIG · Tubo superior  21\"",
   "price": 270000,
   "sku": "TUKANBIKES-INDUSTRIAL-RAW",
   "units": 1,
