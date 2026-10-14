@@ -8635,5 +8635,21 @@ window.ESCENA_AUDIT = [
    "cassette-cut-crew-bidireccional-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-14T14:42:17.081Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "7 productos editados",
+  "created": [],
+  "edited": [
+   "bicicleta-cult-control-raw",
+   "bicicleta-profir-culver-bmx-gris-oscuro",
+   "bicicleta-profit-culver-bmx-gris-oscuro",
+   "bicicleta-profit-oxnard-negro-rojo",
+   "bicicleta-fitbikeco-misfit-bmx-rin-16",
+   "bicicleta-fitbikeco-misfit-rin-16",
+   "bicicleta-cult-juvenile-rin-18"
+  ],
+  "deleted": []
  }
 ];
