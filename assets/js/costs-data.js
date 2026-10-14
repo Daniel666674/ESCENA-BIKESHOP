@@ -164,7 +164,7 @@ window.ESCENA_COSTS = {
  "lija-diseno-3": 28000,
  "llanta-cinema-nathan-williams-negro-2-50": 120000,
  "llanta-theory-proven-blanca-2-40": 80000,
- "llanta-odyssey-supercircuit-keblar-negra-2-40": 176000,
+ "llanta-odyssey-supercircuit-keblar-negra-2-40": 160000,
  "llanta-odyssey-path-pro-negra-2-40": 128000,
  "llanta-cst-orbit-knobby-negra-rin-16-2-125": 36000,
  "llanta-chaoyang-freestyle-bmx-rin-16-2-125": 36000,
