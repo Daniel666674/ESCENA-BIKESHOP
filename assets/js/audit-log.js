@@ -8671,5 +8671,29 @@ window.ESCENA_AUDIT = [
    "fiend-reynolds-v3-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-14T19:48:04.020Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "15 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "cadena-cinema-escamada-negra",
+   "cadena-bsd-forever-cromada",
+   "cadena-kmc-410-negra-2",
+   "cadena-bsd-forever-negra",
+   "cadena-tec-410-negra",
+   "cadena-cargochain-c410-negra",
+   "cadena-cargochain-c410-cromada",
+   "cadena-kmc-410-azul",
+   "cadena-kmc-410-roja",
+   "cadena-kmc-410-negra",
+   "cadena-kmc-narrow-cromada",
+   "cadena-kmc-k1-wide-perforada-cromada",
+   "cadena-tallorder-negra-510",
+   "cadena-tall-order-cromada-510",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
