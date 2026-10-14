@@ -8695,5 +8695,33 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-14T20:00:51.117Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 16 productos editados, 2 fotos subidas",
+  "created": [
+   "cassette-alienation-iluminati-negro",
+   "cassette-alienation-iluminati-cromado"
+  ],
+  "edited": [
+   "rodamiento-6802-para-manzana-de-cassette",
+   "rodamiento-6902-para-cassette",
+   "protector-brainstorm-trasero-no-drive-cromolio",
+   "protector-brainstorm-trasero-no-drive-nylon",
+   "protector-braisntorm-drive-nylon",
+   "protector-merritt-sentry-drive",
+   "protector-g-sport-drive",
+   "bsd-guarda-pinon-negro",
+   "protector-mutanty-immortal-no-drive-trasero",
+   "mutany-guarda-pinon-negro",
+   "odyssey-buje-cassette-negro",
+   "cassette-trueno-v2-negro",
+   "cassette-trueno-v2-cromado",
+   "cassette-trueno-v2-tornasol",
+   "buje-cassette-negro-plata-02",
+   "mutany-mercury-elite-lhd-buje-negro"
+  ],
+  "deleted": []
  }
 ];
