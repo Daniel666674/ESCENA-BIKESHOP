@@ -8624,5 +8624,16 @@ window.ESCENA_AUDIT = [
    "tukanbikes-industrial-raw"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-14T14:25:45.312Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "manzana-delantera-cult-crew-cromada",
+   "cassette-cut-crew-bidireccional-negro"
+  ],
+  "deleted": []
  }
 ];
