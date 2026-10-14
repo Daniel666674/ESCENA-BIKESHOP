@@ -7107,7 +7107,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · Tubo superior 20.42\" · Cola 12.7\" · Negro",
   "price": 1660000,
   "sku": "MRC-FED-002",
-  "units": 2,
+  "units": 1,
   "imgs": [
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-mt4ikekjxxbn.jpg?v=1788093948129",
    "assets/img/products/marco-federal-chiller-20-75-cola-12-7-2.jpg?v=1788093948129",
@@ -7121,13 +7121,11 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.75\"",
-    "units": 0,
-    "price": 1660000
+    "units": 0
    },
    {
     "label": "20.42\"",
-    "units": 2,
-    "price": 1660000
+    "units": 1
    }
   ],
   "order": 50,
@@ -9140,9 +9138,9 @@ window.ESCENA_PRODUCTS = [
   "brand": "TukanBikes",
   "cat": "marcos",
   "spec": "Cromoly · Soldadura TIC - MIG · Tubo superior 20.4\" - 20.75\" - 21\"",
-  "price": 360000,
+  "price": 270000,
   "sku": "TUKANBIKES-INDUSTRIAL-RAW",
-  "units": 2,
+  "units": 1,
   "imgs": [
    "assets/img/products/tukanbikes-industrial-raw.jpg?v=1788093948129",
    "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1788093948129",
@@ -9153,30 +9151,25 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.4\"",
-    "units": 0,
-    "price": 360000
+    "units": 0
    },
    {
     "label": "20.75\"",
-    "units": 1,
-    "price": 360000
+    "units": 0
    },
    {
     "label": "21\"",
-    "units": 1,
-    "price": 360000
+    "units": 1
    }
   ],
   "colors": [
    {
     "label": "Azul / Industrial",
-    "units": 2,
-    "price": 360000
+    "units": 1
    },
    {
     "label": "Morado / Industrial",
-    "units": 2,
-    "price": 360000
+    "units": 0
    }
   ],
   "imgColorMap": {
