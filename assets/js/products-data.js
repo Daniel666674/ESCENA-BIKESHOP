@@ -270,11 +270,11 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/tenedor-odyssey-r25-mux7ahx3o5vv.jpg?v=1791322713743"
  },
  {
-  "n": "Bicicleta Fitbikeco Misfit BMX - RIN 16",
+  "n": "Bicicleta Fitbikeco Misfit BMX - RIN 18",
   "brand": "Fitbikeco",
   "cat": "bicicletas",
   "spec": "TAMAÑO TT: 16,25” - CUADRO: Tubos superior e inferior de acero al cromo-molibdeno - AURICULARES: Integrados con orificios para giroscopio integrados - EJE DE PEDALIER: Sellado central  - BARRAS: 2 piezas de 7” x 24” - HORQUILLA: Nueva horquilla de dirección de cromo-molibdeno con desplazamiento de 31 mm - STEM: Mini carga superior - ASIENTO: Combinación integrada más plana y acolchada de 25,4 mm - BIELAS: Tubulares de cromo-molibdeno de 127 mm - PIÑÓN: Fit Bite 24T - PEDALES: Plataforma de nailon de 9/16” - RUEDA DELANTERA: 20H más ancha, de pared simple con buje sin sellar. -  RUEDA TRASERA: 20 radios más anchos, de pared simple, con cassette sellado de 9 dientes. - NEUMÁTICOS: COMPATIBLES CON NEUMÁTICOS OEM DE 2,25” - FRENOS: Freno en U con muelles de baja tensión, palanca de corto alcance, cable lineal -  MISC: Tuercas de eje trasero de 17 mm",
-  "price": 2200000,
+  "price": 2300000,
   "sku": "BIC-FIT-002",
   "units": 1,
   "imgFit": "cover",
