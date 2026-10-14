@@ -8603,5 +8603,16 @@ window.ESCENA_AUDIT = [
    "timon-cult-havens-gate-4pc-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-14T14:22:23.899Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "marco-federal-chiller-20-75-cola-12-7",
+   "tukanbikes-industrial-raw"
+  ],
+  "deleted": []
  }
 ];
