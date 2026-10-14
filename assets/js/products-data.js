@@ -1199,7 +1199,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 720000,
   "sku": "MZT-CLT-004",
-  "units": 2,
+  "units": 0,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/cassette-cut-crew-bidireccional-negro-muepre6i1oqa.jpg?v=1790204877711",
@@ -2592,7 +2592,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "manzana-delantera",
   "spec": "",
-  "price": 340000,
+  "price": 330000,
   "sku": "MZD-CLT-002",
   "units": 1,
   "imgZoom": 119,
