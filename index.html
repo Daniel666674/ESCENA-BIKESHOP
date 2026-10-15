@@ -213,8 +213,9 @@
        heights come out identical. Don't give these a flex-basis. */
     .hero-promos { display: flex; gap: 6px; align-items: flex-start; }
     .hero-promo { flex: var(--r, 1) 1 0; min-width: 0; display: block; text-decoration: none;
-      background: #111; overflow: hidden; position: relative; transition: transform .25s ease; }
-    .hero-promo:hover { transform: translateY(-4px); }
+      background: #111; overflow: hidden; position: relative; border-radius: 10px;
+      transition: transform .25s ease, box-shadow .25s ease; }
+    .hero-promo:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0,0,0,.35); }
     .hero-promo img, .hero-promo video { display: block; width: 100%; height: auto; aspect-ratio: var(--r, 1); object-fit: cover; background: #111; }
     .hero-promo video { opacity: 0; transition: opacity .5s; }
     .hero-promo video.is-visible { opacity: 1; }
@@ -268,9 +269,10 @@
     section { padding: 4.5rem 1.5rem; }
     .wrap { max-width: 1180px; margin: 0 auto; }
     .sec-head { margin-bottom: 2.5rem; }
-    .sec-head .eyebrow { color: var(--muted); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; display: block; margin-bottom: .5rem; }
+    .sec-head .eyebrow { display: inline-flex; align-items: center; gap: .6rem; color: var(--muted); font-size: .72rem; letter-spacing: .26em; text-transform: uppercase; font-weight: 700; margin-bottom: .6rem; }
+    .sec-head .eyebrow::before { content: ""; width: 20px; height: 2px; background: var(--gold); flex: none; }
     .sec-head h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1; letter-spacing: .03em; }
-    .sec-head h2 .bar { color: var(--muted); }
+    .sec-head h2 .bar { color: var(--gold); }
 
     /* ============ CATEGORIES (photo cards) ============ */
     .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
@@ -427,10 +429,13 @@
     .ig-cell .overlay svg { width: 22px; height: 22px; fill: #fff; }
 
     /* ============ FAQ ============ */
-    .faq details { border-bottom: 1px solid var(--line); padding: 1.1rem 0; }
-    .faq summary { font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: .98rem; }
+    #faq { background: var(--panel); }
+    .faq { display: flex; flex-direction: column; gap: .7rem; }
+    .faq details { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem 1.3rem; transition: border-color .2s, box-shadow .2s; }
+    .faq details[open] { border-color: var(--gold); box-shadow: 0 10px 28px rgba(0,0,0,.06); }
+    .faq summary { font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: .98rem; }
     .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: "+"; font-family: 'Bebas Neue', sans-serif; color: var(--ink); font-size: 1.6rem; line-height: 1; }
+    .faq summary::after { content: "+"; font-family: 'Bebas Neue', sans-serif; color: var(--gold); font-size: 1.6rem; line-height: 1; flex: none; }
     .faq details[open] summary::after { content: "–"; }
     .faq p { font-size: .88rem; color: var(--muted); margin-top: .7rem; max-width: 720px; }
 
@@ -696,6 +701,16 @@
         <div class="tm-photo"><img src="assets/img/team/michael-nunez.jpg" alt="Michael Núñez" loading="lazy" width="900" height="900" /><span class="chip is-family">Team Family</span></div>
         <h4 class="tm-name">Michael<br />Núñez</h4>
         <div class="tm-meta"><b>Street</b> &middot; Old school</div>
+      </a>
+      <a class="tm" href="team-juan-david-calderon">
+        <div class="tm-photo"><img src="assets/img/team/juan-david-calderon.jpg" alt="Juan David Calderón" loading="lazy" width="900" height="1200" /><span class="chip">Team Pro</span></div>
+        <h4 class="tm-name">Juan David<br />Calderón</h4>
+        <div class="tm-meta"><b>&ldquo;Monky&rdquo;</b> &middot; BMX Freestyle</div>
+      </a>
+      <a class="tm" href="team-steven-torres">
+        <div class="tm-photo"><img src="assets/img/team/steven-torres.jpg" alt="Steven Torres" loading="lazy" width="900" height="1200" /><span class="chip">Team Pro</span></div>
+        <h4 class="tm-name">Steven<br />Torres</h4>
+        <div class="tm-meta"><b>Freestyle</b> &middot; BMX creativo</div>
       </a>
     </div>
   </div>
