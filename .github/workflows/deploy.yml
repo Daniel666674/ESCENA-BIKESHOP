@@ -109,6 +109,7 @@ jobs:
               curl -sSL -D /tmp/h.txt -o /tmp/live.jpg "https://escenabmx.com/$f?$q" || true
               got="$(sha256sum /tmp/live.jpg | cut -d' ' -f1)"
               cf="$(grep -i '^cf-cache-status' /tmp/h.txt | tr -d '\r')"
+              echo "--- $f?$q  bytes=$(stat -c%s /tmp/live.jpg) repo=$(stat -c%s "$f")"; grep -iE '^(server|x-|cf-|age|cache|last-modified|etag|platform|content-length)' /tmp/h.txt | tr -d '\r'
               if [ "$got" = "$want" ]; then echo "OK   $f?$q $cf"; else echo "::error::STALE $f?$q $cf"; fail=1; fi
             done
           done
