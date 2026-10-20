@@ -102,6 +102,11 @@ jobs:
         # byte-for-byte: the exact repo URL (with ?v=) and a fresh-bust URL.
         run: |
           fail=0
+          # Is the HTML itself current? (proves where uploads land)
+          page="$(curl -sL "https://escenabmx.com/producto/timon-cult-havens-gate-4pc-cromado?cb=$(date +%s%N)")"
+          echo "live html has repo v=: $(echo "$page" | grep -c 'v=1792523555864')"
+          curl -sSL -D - -o /dev/null "https://escenabmx.com/producto/timon-cult-havens-gate-4pc-cromado?cb=$(date +%s)" | grep -iE '^(server|x-hcdn|last-modified|age)' | tr -d '\r'
+          curl -sSL -D - -o /dev/null "https://escenabmx.com/.ftp-deploy-sync-state.json" | head -1
           for f in assets/img/products/timon-cult-havens-gate-4pc-cromado-mue14yksfrx6.jpg assets/img/products/tenedor-fiend-process-v2-cromado-mudfan1qizn2.jpg assets/img/products/buje-cassette-negro-cromado-mubtj46ujm0q.jpg; do
             want="$(sha256sum "$f" | cut -d' ' -f1)"
             v="$(grep -ohE "${f#assets/img/products/}\?v=[0-9]+" assets/js/products-data.js | head -1 | sed 's/.*?v=//')"
