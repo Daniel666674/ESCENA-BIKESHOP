@@ -215,7 +215,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "MZD-GWB-001",
   "units": 4,
   "imgFit": "cover",
-  "imgZoom": 128,
   "slug": "manzana-delantera-gw-negra",
   "order": 170,
   "img": "assets/img/products/manzana-delantera-gw-negra-muyrinvomnrm.jpg?v=1792523555864"
@@ -328,7 +327,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIC-FIT-002",
   "units": 1,
   "imgFit": "cover",
-  "imgZoom": 104,
   "slug": "bicicleta-fitbikeco-misfit-bmx-rin-16",
   "order": 10,
   "img": "assets/img/products/bicicleta-fitbikeco-misfit-bmx-rin-16-munbn1m63i4w.jpg?v=1792523555864"
@@ -360,7 +358,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-cult-control-raw-mun8wf283lq2.jpg?v=1792523555864",
    "assets/img/products/bicicleta-cult-control-raw-mun8wgq9tb38.jpg?v=1792523555864"
   ],
-  "imgZoom": 108,
   "imgPos": "50% 0%",
   "slug": "bicicleta-cult-control-raw",
   "order": 60,
@@ -375,7 +372,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "BIC-CLT-001",
   "units": 2,
   "imgFit": "cover",
-  "imgZoom": 111,
   "slug": "bicicleta-cult-juvenile-rin-18",
   "order": 0,
   "img": "assets/img/products/bicicleta-cult-juvenile-rin-18-mun8jr0lp4y2.jpg?v=1792523555864"
@@ -674,7 +670,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/plasticpeg-eigthies-cromolio-4-5-mun36q2cthg5.jpg?v=1792523555864",
    "assets/img/products/plasticpeg-eigthies-cromolio-4-5-mun36s69w65d.jpg?v=1792523555864"
   ],
-  "imgZoom": 107,
   "slug": "plasticpeg-eigthies-cromolio-4-5",
   "order": 40,
   "img": "assets/img/products/plasticpeg-eigthies-cromolio-4-5-mun36q2cthg5.jpg?v=1792523555864"
@@ -729,7 +724,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hhqk800z.jpg?v=1792523555864",
    "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hjtg9hgb.jpg?v=1792523555864"
   ],
-  "imgZoom": 107,
   "slug": "plasticpegs-cult-butter-4-5-4-75",
   "order": 0,
   "img": "assets/img/products/plasticpegs-cult-butter-4-5-4-75-mun2hggeo2kg.jpg?v=1792523555864"
@@ -745,7 +739,6 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "slug": "cajas-de-centro-trueno-cromado",
   "order": 130,
-  "imgZoom": 117,
   "img": "assets/img/products/cajas-de-centro-trueno-cromado-mun1e4rrrg50.jpg?v=1792523555864"
  },
  {
@@ -759,7 +752,6 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "slug": "cajas-de-frente-trueno-tornasol",
   "order": 110,
-  "imgZoom": 111,
   "img": "assets/img/products/cajas-de-frente-trueno-tornasol-mun1e6qtr989.jpg?v=1792523555864"
  },
  {
@@ -1447,7 +1439,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "PLT-FND-002",
   "units": 1,
   "imgFit": "cover",
-  "imgZoom": 107,
   "sizes": [
    {
     "label": "28T",
@@ -1537,7 +1528,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/timon-cult-crew-cromado-mue0vqucdf0h.jpg?v=1792523555864",
    "assets/img/products/timon-cult-crew-cromado-mue0nnpjsy8t.jpg?v=1792523555864"
   ],
-  "imgZoom": 104,
   "sizes": [
    {
     "label": "9.35\"",
@@ -1595,7 +1585,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/tenedor-fiction-shank-cromado-mudzsmryexnn.jpg?v=1792523555864",
    "assets/img/products/tenedor-fiction-shank-cromado-mudzsobyzhqs.jpg?v=1792523555864"
   ],
-  "imgZoom": 104,
   "imgPos": "50% 50%",
   "order": 80,
   "img": "assets/img/products/tenedor-fiction-shank-cromado-mudzi4jibigs.jpg?v=1792523555864"
@@ -1647,7 +1636,6 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz",
   "order": 30,
-  "imgZoom": 110,
   "imgPos": "50% 50%",
   "img": "assets/img/products/tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz-mux7ajynmg5d.jpg?v=1792523555864"
  },
@@ -2017,7 +2005,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgFit": "cover",
-  "imgZoom": 132,
   "slug": "cajas-de-centro-fiend-ransom-cromada-22mm",
   "order": 0,
   "img": "assets/img/products/cajas-de-centro-fiend-ransom-cromada-22mm-mu5ugorfgqj5.jpg?v=1792523555864"
@@ -2102,7 +2089,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgFit": "cover",
-  "imgZoom": 107,
   "slug": "cajas-de-centro-demolition-bearing-kits",
   "order": 40,
   "img": "assets/img/products/cajas-de-centro-demolition-bearing-kits-mu5tfouq0m5k.jpg?v=1792523555864"
@@ -2160,7 +2146,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "PST-CLT-002",
   "units": 1,
   "imgFit": "cover",
-  "imgZoom": 106,
   "slug": "poste-counter-layback-cromado",
   "order": 10,
   "img": "assets/img/products/poste-counter-layback-cromado-mu5r9he5e8uv.jpg?v=1792523555864"
@@ -2178,7 +2163,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/poste-siso-bmx-5150-raw-mu3c5z1rg569.jpg?v=1792523555864",
    "assets/img/products/poste-siso-bmx-5150-raw-mu3c60u8rjww.jpg?v=1792523555864"
   ],
-  "imgZoom": 112,
   "slug": "poste-siso-bmx-5150-raw",
   "order": 20,
   "img": "assets/img/products/poste-siso-bmx-5150-raw-mu3c5z1rg569.jpg?v=1792523555864"
@@ -2247,7 +2231,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-subrosa-thrashed-verde-militar-mu39acibqcuq.jpg?v=1792523555864",
    "assets/img/products/silla-pivotal-subrosa-thrashed-verde-militar-mu39ae1hg56n.jpg?v=1792523555864"
   ],
-  "imgZoom": 106,
   "slug": "silla-pivotal-subrosa-thrashed-verde-militar",
   "order": 190,
   "img": "assets/img/products/silla-pivotal-subrosa-thrashed-verde-militar-mu39a9w3cvg0.jpg?v=1792523555864"
@@ -2266,7 +2249,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-fiend-mills-negra-mu394n2wkyzm.jpg?v=1792523555864",
    "assets/img/products/silla-pivotal-fiend-mills-negra-mu394o6u6ld4.jpg?v=1792523555864"
   ],
-  "imgZoom": 112,
   "slug": "silla-pivotal-fiend-mills-negra",
   "order": 30,
   "img": "assets/img/products/silla-pivotal-fiend-mills-negra-mu394lubkhq5.jpg?v=1792523555864"
@@ -2286,7 +2268,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-volume-ftl-negra-mu38z1ncg8sd.jpg?v=1792523555864",
    "assets/img/products/silla-pivotal-volume-ftl-negra-mu38z2m1p5u4.jpg?v=1792523555864"
   ],
-  "imgZoom": 110,
   "slug": "silla-pivotal-volume-ftl-negra",
   "order": 160,
   "img": "assets/img/products/silla-pivotal-volume-ftl-negra-mu38yz67zcq2.jpg?v=1792523555864"
@@ -2306,7 +2287,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38lkqirugx.jpg?v=1792523555864",
    "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38lmm2hh4f.jpg?v=1792523555864"
   ],
-  "imgZoom": 114,
   "slug": "silla-pivotal-odyssey-big-stitch-hilo-rojo",
   "order": 90,
   "img": "assets/img/products/silla-pivotal-odyssey-big-stitch-hilo-rojo-mu38lg18jh24.jpg?v=1792523555864"
@@ -2324,7 +2304,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o8e9sn56.jpg?v=1792523555864",
    "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o9mtt2pv.jpg?v=1792523555864"
   ],
-  "imgZoom": 117,
   "slug": "silla-pivotal-primo-breaker-logo-blanco",
   "order": 120,
   "img": "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o8e9sn56.jpg?v=1792523555864"
@@ -2344,7 +2323,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu37jvkmio08.jpg?v=1792523555864",
    "assets/img/products/silla-pivotal-odyssey-hilo-amarillo-mu38lo4ewsx9.jpg?v=1792523555864"
   ],
-  "imgZoom": 107,
   "imgPos": "50% 50%",
   "slug": "silla-pivotal-odyssey-hilo-amarillo",
   "order": 100,
@@ -2364,7 +2342,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/silla-pivotal-bsd-safari-mu37jxw7u63a.jpg?v=1792523555864",
    "assets/img/products/silla-pivotal-bsd-safari-mu37jz1qrmnz.jpg?v=1792523555864"
   ],
-  "imgZoom": 110,
   "imgPos": "50% 100%",
   "slug": "silla-pivotal-bsd-safari",
   "order": 110,
@@ -2460,7 +2437,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-stolen-thermalite-rosa-mu35imyffezd.jpg?v=1792523555864",
    "assets/img/products/pedales-stolen-thermalite-rosa-mu35irjshae8.jpg?v=1792523555864"
   ],
-  "imgZoom": 115,
   "slug": "pedales-stolen-thermalite-rosa",
   "img": "assets/img/products/pedales-stolen-thermalite-rosa-mu35imyffezd.jpg?v=1792523555864"
  },
@@ -2590,7 +2566,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-tallorder-catch-negro-mtxk8mxo5w8e.jpg?v=1792523555864",
    "assets/img/products/pedales-tallorder-catch-negro-mtxk8otc9u3b.jpg?v=1792523555864"
   ],
-  "imgZoom": 101,
   "slug": "pedales-tallorder-catch-negro",
   "order": 140,
   "img": "assets/img/products/pedales-tallorder-catch-negro-mtxk8mxo5w8e.jpg?v=1792523555864"
@@ -2621,7 +2596,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "PED-130-001",
   "units": 1,
   "imgFit": "cover",
-  "imgZoom": 136,
   "imgPos": "50% 50%",
   "slug": "pedales-cinema-tilt-plate-negro",
   "order": 10,
@@ -2648,7 +2622,6 @@ window.ESCENA_PRODUCTS = [
   "price": 330000,
   "sku": "MZD-CLT-002",
   "units": 1,
-  "imgZoom": 119,
   "slug": "manzana-delantera-cult-crew-cromada",
   "order": 40,
   "img": "assets/img/products/manzana-delantera-cult-crew-cromada-mtxhnpgd3tlc.jpg?v=1792523555864"
@@ -2752,7 +2725,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "CAD-CIN-001",
   "units": 0,
   "imgFit": "cover",
-  "imgZoom": 106,
   "slug": "cadena-cinema-escamada-negra",
   "order": 0,
   "img": "assets/img/products/cadena-cinema-escamada-negra-mtxeq4rov2yj.jpg?v=1792523555864"
@@ -2911,7 +2883,6 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "cadena-kmc-410-negra",
   "order": 130,
-  "imgZoom": 137,
   "img": "assets/img/products/cadena-kmc-410-negra-mtgkcqjsrkls.jpg?v=1792523555864"
  },
  {
@@ -3292,7 +3263,6 @@ window.ESCENA_PRODUCTS = [
   "price": 9000,
   "sku": "PLT-GWB-003",
   "units": 10,
-  "imgZoom": 103,
   "imgPos": "50% 50%",
   "sizes": [
    {
@@ -3400,7 +3370,6 @@ window.ESCENA_PRODUCTS = [
   "price": 130000,
   "sku": "PLT-SUN-001",
   "units": 20,
-  "imgZoom": 120,
   "sizes": [
    {
     "label": "28T",
@@ -3420,7 +3389,6 @@ window.ESCENA_PRODUCTS = [
   "price": 340000,
   "sku": "PLT-SNM-001",
   "units": 1,
-  "imgZoom": 111,
   "sizes": [
    {
     "label": "28T",
@@ -3445,7 +3413,6 @@ window.ESCENA_PRODUCTS = [
   "price": 340000,
   "sku": "PLT-FIT-001",
   "units": 1,
-  "imgZoom": 108,
   "sizes": [
    {
     "label": "28T",
@@ -4427,7 +4394,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/grips-gw-gorila-mt8x6gclllpt.jpg?v=1792523555864",
    "assets/img/products/grips-gw-gorila-mt8x6hlhsymb.jpg?v=1792523555864"
   ],
-  "imgZoom": 120,
   "colors": [
    {
     "label": "Negro",
@@ -8339,7 +8305,6 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "order": 20,
-  "imgZoom": 106,
   "img": "assets/img/products/bielas-fitbikeco-blunt-cromada-mu1u8rjwm2sb.jpg?v=1792523555864"
  },
  {
@@ -8657,7 +8622,6 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/fiend-pinon-25t-negro.jpg?v=1792523555864",
    "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1792523555864"
   ],
-  "imgZoom": 108,
   "imgPos": "0% 50%",
   "img": "assets/img/products/fiend-pinon-25t-negro.jpg?v=1792523555864"
  },
