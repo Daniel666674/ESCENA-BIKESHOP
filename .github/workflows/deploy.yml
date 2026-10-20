@@ -96,6 +96,24 @@ jobs:
             exit 1
           fi
 
+      - name: Verify live product photos match the repo
+        # The page check above only proves HTML is served. Product photos are
+        # cached for a year (see .htaccess), so also compare a few real photos
+        # byte-for-byte: the exact repo URL (with ?v=) and a fresh-bust URL.
+        run: |
+          fail=0
+          for f in assets/img/products/timon-cult-havens-gate-4pc-cromado-mue14yksfrx6.jpg assets/img/products/tenedor-fiend-process-v2-cromado-mudfan1qizn2.jpg assets/img/products/buje-cassette-negro-cromado-mubtj46ujm0q.jpg; do
+            want="$(sha256sum "$f" | cut -d' ' -f1)"
+            v="$(grep -ohE "${f#assets/img/products/}\?v=[0-9]+" assets/js/products-data.js | head -1 | sed 's/.*?v=//')"
+            for q in "v=$v" "cb=$(date +%s%N)"; do
+              curl -sSL -D /tmp/h.txt -o /tmp/live.jpg "https://escenabmx.com/$f?$q" || true
+              got="$(sha256sum /tmp/live.jpg | cut -d' ' -f1)"
+              cf="$(grep -i '^cf-cache-status' /tmp/h.txt | tr -d '\r')"
+              if [ "$got" = "$want" ]; then echo "OK   $f?$q $cf"; else echo "::error::STALE $f?$q $cf"; fail=1; fi
+            done
+          done
+          exit $fail
+
       - name: Verify sales-log.js is NOT publicly reachable
         # Regression guard: sales-log.js holds real revenue data and must
         # never be servable from the public site (see the exclude comment
