@@ -2922,7 +2922,7 @@
   }
   function removeBgClientSide(dataUri, onProgress) {
     // Existing (already-published) photos are stored as a relative site path
-    // (e.g. "assets/img/products/foo.jpg"), not a data: URI. Fetch the source
+    // (e.g. "assets/img/products/foo.jpg?v=1792523555864"), not a data: URI. Fetch the source
     // into a real Blob ourselves and hand the pipeline a blob: URL, so photo
     // loading always resolves against our own origin (works for both data:
     // URIs and site paths) and never leaves the browser.
@@ -3122,7 +3122,7 @@
       SPEC_ITEMS: specItems(p.spec, catLabel, p.brand), WA_HREF: waHrefFor(p), RELATED_SECTION: relatedFor(p),
       PRIMARY_IMG: esc("../" + ((p.imgs && p.imgs[0]) || "assets/img/escena-logo.jpg")),
       // Real cover photo when one was actually uploaded, else the generic
-      // logo/OG image — NEVER a guessed "assets/img/products/{slug}.jpg" path,
+      // logo/OG image — NEVER a guessed "assets/img/products/{slug}.jpg?v=1792523555864" path,
       // which silently 404s for any product whose photo file has the
       // hash-suffixed name the upload flow actually gives it (confirmed live:
       // WhatsApp/Facebook link-preview crawlers get a 404 on that guess and
@@ -4689,7 +4689,7 @@
      already uploaded to products rather than a new upload flow — every
      photo in the catalog is already hosted and compressed, so there's
      nothing to gain from uploading a duplicate. */
-  var categoryPhotoMap = {}; // {catKey: "assets/img/products/xxx.jpg"}, loaded from window.ESCENA_CATEGORY_PHOTO
+  var categoryPhotoMap = {}; // {catKey: "assets/img/products/xxx.jpg?v=1792523555864"}, loaded from window.ESCENA_CATEGORY_PHOTO
   var catPhotoPickKey = null;
   function commitCategoryPhotoManifest(catKey, pathOrNull) {
     return ghPutWithRetry("assets/js/category-photo.js", "Update category cover photo (" + catKey + ") via admin panel", function (remoteText) {
