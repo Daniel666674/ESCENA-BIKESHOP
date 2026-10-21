@@ -1796,7 +1796,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 790000,
   "sku": "MZT-CLT-001",
-  "units": 2,
+  "units": 0,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/freecoaster-cult-hybrid-cromado-mubtj221iw6j.jpg?v=1792523555864",
@@ -1805,13 +1805,11 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Derecho",
-    "units": 1,
-    "price": 790000
+    "units": 0
    },
    {
     "label": "Izquierdo",
-    "units": 1,
-    "price": 790000
+    "units": 0
    }
   ],
   "slug": "freecoaster-cult-hybrid-cromado",
