@@ -7200,19 +7200,22 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material en Acero - Uña eje 14mm – Offset 25mm",
   "price": 86000,
   "sku": "TND",
-  "units": 5,
+  "units": 12,
   "colors": [
    {
     "label": "Tornasol",
-    "units": 4
+    "units": 4,
+    "price": 86000
    },
    {
     "label": "Negro",
-    "units": 0
+    "units": 4,
+    "price": 55000
    },
    {
     "label": "Cromado",
-    "units": 1
+    "units": 4,
+    "price": 55000
    }
   ],
   "imgs": [
@@ -7235,7 +7238,8 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "Única",
-    "units": 5
+    "units": 12,
+    "price": 86000
    }
   ],
   "img": "assets/img/products/tenedor-gw-destructor-tornasol.jpg?v=1792523555864"
