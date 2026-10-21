@@ -8782,5 +8782,17 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-21T17:29:47.474Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "timon-fiend-reynolds-cromado",
+   "timon-federal-assaut",
+   "timon-gw-destructor-tornasol"
+  ],
+  "deleted": []
  }
 ];
