@@ -8804,5 +8804,17 @@ window.ESCENA_AUDIT = [
    "tenedor-gw-destructor-tornasol"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-21T17:38:26.467Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "federal-horquilla-cromada",
+   "kit-hardware-bielas-negro",
+   "kit-hardware-bielas-plata"
+  ],
+  "deleted": []
  }
 ];
