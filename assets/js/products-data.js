@@ -1328,11 +1328,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Derecho",
-    "units": 2
+    "units": 2,
+    "price": 760000
    },
    {
     "label": "Izquierdo",
-    "units": 2
+    "units": 2,
+    "price": 760000
    }
   ],
   "slug": "cassette-colony-wasp-cromado",
@@ -1671,7 +1673,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 1300000,
   "sku": "MZT-PRO-001",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/cassette-profile-mini-cromado-mueo7cce53jp.jpg?v=1792523555864",
@@ -1680,11 +1682,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Derecho",
-    "units": 1
+    "units": 1,
+    "price": 1300000
    },
    {
     "label": "Izquierdo",
-    "units": 1
+    "units": 0,
+    "price": 1300000
    }
   ],
   "slug": "cassette-profile-mini-cromado",
@@ -2604,7 +2608,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 95000,
   "sku": "PED-CIN-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "slug": "pedales-cinema-tilt-negro",
   "order": 50,
@@ -8148,7 +8152,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Freecoaster · 9T · Cromoly 14mm  · Peso 623g · Negro",
   "price": 750000,
   "sku": "FREECOASTER ODYSSEY-NEGRO-CROMADO",
-  "units": 1,
+  "units": 2,
   "order": 0,
   "imgFit": "cover",
   "imgs": [
@@ -8158,7 +8162,7 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Derecho",
-    "units": 1
+    "units": 2
    },
    {
     "label": "Izquierdo",
