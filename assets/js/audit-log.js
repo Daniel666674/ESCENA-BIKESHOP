@@ -8816,5 +8816,15 @@ window.ESCENA_AUDIT = [
    "kit-hardware-bielas-plata"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-21T17:40:20.682Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "freecoaster-cult-hybrid-cromado"
+  ],
+  "deleted": []
  }
 ];
