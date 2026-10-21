@@ -5884,17 +5884,19 @@ window.ESCENA_PRODUCTS = [
   "spec": "Morado • 20.5”",
   "price": 180000,
   "sku": "MRC-GWB-002",
-  "units": 1,
+  "units": 3,
   "sizes": [
    {
     "label": "20.5",
-    "units": 1
+    "units": 3,
+    "price": 180000
    }
   ],
   "colors": [
    {
     "label": "Morado",
-    "units": 1
+    "units": 3,
+    "price": 180000
    }
   ],
   "slug": "marco-gw-destructor-morado",
@@ -7858,7 +7860,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Carga frontal · Alcance 50mm · Aluminio CNC",
   "price": 340000,
   "sku": "Odysseycfl3",
-  "units": 1,
+  "units": 0,
   "imgs": [
    "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864",
    "assets/img/products/cana-odyssey-cfl3-6.jpg?v=1792523555864",
@@ -7871,7 +7873,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "50mm",
-    "units": 1
+    "units": 0
    }
   ],
   "order": 590,
@@ -7989,11 +7991,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Carga frontal · Aluminio CNC",
   "price": 220000,
   "sku": "MUTANTY-SAVAGE-V2-STEM-PLATA",
-  "units": 1,
+  "units": 0,
   "sizes": [
    {
     "label": "Única",
-    "units": 1
+    "units": 0
    }
   ],
   "imgs": [
