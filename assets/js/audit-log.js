@@ -8836,5 +8836,20 @@ window.ESCENA_AUDIT = [
    "freecoaster-cult-hybrid-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-21T17:50:37.977Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "6 productos editados",
+  "created": [],
+  "edited": [
+   "buje-cassette-negro-cromado",
+   "cassette-profile-mini-cromado",
+   "cassette-profile-mini-azul",
+   "cassette-colony-wasp-cromado",
+   "cassette-federal-stance-negro",
+   "pedales-cinema-tilt-negro"
+  ],
+  "deleted": []
  }
 ];
