@@ -1474,18 +1474,16 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material 100% Cromolio - Inclinación hacia arriba: 1 grado Inclinación hacia atrás: 12 grados Altura: 8,75”,  9,25” - Peso: 770 gramos - Ancho: 27,25”",
   "price": 460000,
   "sku": "TMN-FND-002",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "sizes": [
    {
     "label": "9\"",
-    "units": 0,
-    "price": 460000
+    "units": 0
    },
    {
     "label": "9.25\"",
-    "units": 2,
-    "price": 460000
+    "units": 1
    }
   ],
   "slug": "timon-fiend-reynolds-cromado",
@@ -5790,7 +5788,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: Cromo 4130, tratado térmicamente Ancho: 29,5\" Barrido ascendente: 3º Inclinación hacia atrás: 11,5º",
   "price": 390000,
   "sku": "TMN-FED-001",
-  "units": 4,
+  "units": 1,
   "imgs": [
    "assets/img/products/timon-federal-assaut.jpg?v=1792523555864",
    "assets/img/products/timon-federal-assaut-2.jpg?v=1792523555864"
@@ -5798,7 +5796,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "9.25\"",
-    "units": 1
+    "units": 0
    },
    {
     "label": "9.5\"",
@@ -5806,7 +5804,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "10\"",
-    "units": 2
+    "units": 0
    }
   ],
   "colors": [
@@ -6052,7 +6050,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "Cromado",
-    "units": 2
+    "units": 0
    },
    {
     "label": "Negro",
