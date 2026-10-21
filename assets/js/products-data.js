@@ -1769,7 +1769,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 790000,
   "sku": "MZT-CLT-002",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/freecoaster-cult-hybrid-negro-mubtizlhql7p.jpg?v=1792523555864",
@@ -1783,7 +1783,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "Izquierdo",
-    "units": 1
+    "units": 0
    }
   ],
   "order": 20,
