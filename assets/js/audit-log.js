@@ -8768,5 +8768,19 @@ window.ESCENA_AUDIT = [
    "coraza_cult_wafflecup_2.40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-21T17:27:39.094Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "wethepeople-doomsayer-negro",
+   "marco-gw-destructor-morado",
+   "cana-odyssey-cfl3",
+   "mutanty-savage-v2-stem-plata",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
