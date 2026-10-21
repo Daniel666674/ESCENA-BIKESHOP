@@ -8107,7 +8107,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Federal",
   "cat": "horquillas",
   "spec": "Cromoly · 22mm - 15mm offset · Cromado · 4130 tratado al calor",
-  "price": 660000,
+  "price": 650000,
   "sku": "FEDERAL-HORQUILLA-CROMADA",
   "units": 7,
   "imgs": [
@@ -8118,11 +8118,13 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "15mm",
-    "units": 3
+    "units": 3,
+    "price": 650000
    },
    {
     "label": "22mm",
-    "units": 4
+    "units": 4,
+    "price": 650000
    }
   ],
   "imgFit": "cover",
@@ -8341,21 +8343,24 @@ window.ESCENA_PRODUCTS = [
   "brand": "Federal",
   "cat": "bielas",
   "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Tapas · Plata · Cromoly tratado al calor",
-  "price": 930000,
+  "price": 920000,
   "sku": "KIT-HARDWARE-BIELAS-PLATA",
   "units": 1,
   "sizes": [
    {
     "label": "160mm",
-    "units": 1
+    "units": 1,
+    "price": 920000
    },
    {
     "label": "165mm",
-    "units": 0
+    "units": 0,
+    "price": 920000
    },
    {
     "label": "170mm",
-    "units": 0
+    "units": 0,
+    "price": 920000
    }
   ],
   "order": 50,
@@ -8371,21 +8376,24 @@ window.ESCENA_PRODUCTS = [
   "brand": "Federal",
   "cat": "bielas",
   "spec": "Eje 24mm hueco · 48 estrías · Espaciadores · Tapas · Negro · Cromoly tratado al calor",
-  "price": 890000,
+  "price": 880000,
   "sku": "KIT-HARDWARE-BIELAS-NEGRO",
   "units": 4,
   "sizes": [
    {
     "label": "160mm",
-    "units": 2
+    "units": 2,
+    "price": 880000
    },
    {
     "label": "165mm",
-    "units": 1
+    "units": 1,
+    "price": 880000
    },
    {
     "label": "170mm",
-    "units": 1
+    "units": 1,
+    "price": 880000
    }
   ],
   "order": 60,
