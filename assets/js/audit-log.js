@@ -8826,5 +8826,15 @@ window.ESCENA_AUDIT = [
    "freecoaster-cult-hybrid-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-21T17:41:06.702Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "freecoaster-cult-hybrid-negro"
+  ],
+  "deleted": []
  }
 ];
