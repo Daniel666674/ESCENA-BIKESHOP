@@ -99,40 +99,6 @@
     }
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿ESCENABMX hace envíos a todo Colombia?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Enviamos partes y componentes BMX a todas las ciudades de Colombia a través de transportadoras como Interrapidísimo, Servientrega y Coordinadora. El envío se cotiza según destino y peso." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo compro en ESCENABMX?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Eliges los productos, tocas 'Pedir por WhatsApp' y confirmas tu pedido por chat. Coordinamos pago (Nequi, Daviplata, transferencia o efectivo) y envío en el mismo chat." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué marcas de BMX manejan?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Trabajamos con marcas líderes de BMX: Cult, Fiend, Éclat, Volume, Mutanty, Federal, Odyssey, Stolen, Demolition, Animal, Shadow, Colony, entre otras. Manejamos más de 100 partes originales: cañas, timones, tenedores, bielas, manzanas, platos, pedales, sillines y más." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué talla de marco necesito?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Depende de tu estatura y del estilo que practiques (street, park o dirt). Usa nuestro configurador Arma tu BMX: te recomienda la talla ideal según tu altura, o escríbenos por WhatsApp y te asesoramos." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Puedo cambiar o devolver una parte?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí, dentro de los términos de nuestra política. Aplica para defectos de fabricación y errores nuestros." }
-      }
-    ]
-  }
-  </script>
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -190,93 +156,60 @@
       .site-header .world-tab { font-size: 1.02rem; }
     }
 
-    /* ============ HERO (promo row + brand block) ============ */
-    /* The promos are social-format artwork whose shape changes every time the
-       shop posts a new one — a 2.26:1 banner today, a 4:5 clip beside it. They
-       are laid out as a JUSTIFIED ROW: every card shares one height and keeps
-       its own natural width, so nothing is ever cropped and no letterbox is
-       ever needed, whatever mix of shapes gets uploaded next. */
-    .hero { position: relative; background: var(--ink); overflow: hidden;
-      padding: calc(var(--hero-header-offset, 0px) + 1rem) 0 2.4rem; }
-    /* Full bleed on purpose: no max-width and no side padding, so the promo
-       row reaches both edges of the viewport with no dark margin beside it.
-       Only the little heading line is inset, so its text doesn't touch the
-       edge of the screen. */
-    .hero-wrap { width: 100%; }
-    .hero-promos-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
-      margin-bottom: .7rem; padding: 0 1.5rem; }
-    .hero-promos-head .eyebrow { color: var(--promo); font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; font-weight: 800; }
-    .hero-promos-head a { color: rgba(255,255,255,.58); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
-    .hero-promos-head a:hover { color: #fff; }
-    /* flex-grow set to each card's own aspect ratio against a zero basis makes
-       every width proportional to its ratio — which is exactly what makes the
-       heights come out identical. Don't give these a flex-basis. */
-    .hero-promos { display: flex; gap: 6px; align-items: flex-start; }
-    .hero-promo { flex: var(--r, 1) 1 0; min-width: 0; display: block; text-decoration: none;
-      background: #111; overflow: hidden; position: relative; border-radius: 10px;
-      transition: transform .25s ease, box-shadow .25s ease; }
-    .hero-promo:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0,0,0,.35); }
-    .hero-promo img, .hero-promo video { display: block; width: 100%; height: auto; aspect-ratio: var(--r, 1); object-fit: cover; background: #111; }
-    .hero-promo video { opacity: 0; transition: opacity .5s; }
-    .hero-promo video.is-visible { opacity: 1; }
-    /* The clip fades in over its own poster, so the card never sits empty. */
-    .hero-promo .promo-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .hero-promo .promo-media { position: relative; }
-    /* A promo is an offer, so each card states what it is and links somewhere.
-       The bar sits under the art, never over it: these pieces are busy edge to
-       edge and overlaid type fights them. */
-    .promo-cap { display: flex; align-items: center; justify-content: space-between; gap: .6rem;
-      padding: .6rem .85rem; background: var(--promo); color: var(--ink);
-      font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 800; }
-    .promo-cap .go { opacity: .65; white-space: nowrap; }
-    .promo-badge { position: absolute; top: .6rem; left: .6rem; display: inline-flex; align-items: center; gap: .35rem;
-      background: rgba(10,10,10,.72); color: #fff; font-size: .58rem; letter-spacing: .16em; text-transform: uppercase;
-      font-weight: 800; padding: .3rem .55rem; }
-    .promo-badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--promo); }
-
-    .hero-copy { text-align: center; max-width: 760px; margin: 0 auto; padding: clamp(1.8rem, 4vw, 2.8rem) 1.5rem 0; }
-    .hero-copy .kicker { color: rgba(255,255,255,.6); font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: .6rem; display: block; }
-    .hero-copy h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(2.6rem, 5.4vw, 4.2rem); line-height: .92; letter-spacing: .02em; }
-    .hero-copy h1 .accent-outline { color: transparent; -webkit-text-stroke: 2px #fff; }
-    .hero-copy .tagline { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(1rem, 2.2vw, 1.35rem); letter-spacing: .07em; margin-top: .3rem; opacity: .9; }
-    .hero-copy p.lead { color: rgba(255,255,255,.8); font-size: .95rem; max-width: 540px; margin: .9rem auto 0; font-weight: 300; }
-    .hero-copy p.lead:empty { display: none; } /* admin can blank this out */
-    .hero-copy .btns { display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; margin-top: 1.2rem; }
-    /* What a first-time visitor actually needs to see before scrolling. */
-    .hero-rail { display: flex; justify-content: center; flex-wrap: wrap; gap: 0 2.2rem;
-      margin-top: 1.6rem; padding-top: 1.3rem; border-top: 1px solid rgba(255,255,255,.12); }
-    .hero-rail div { color: rgba(255,255,255,.8); font-size: .72rem; letter-spacing: .13em; text-transform: uppercase; padding: .3rem 0; }
-    .hero-rail b { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.02rem; letter-spacing: .06em; margin-right: .4rem; }
-
-    @media (max-width: 760px) {
-      /* Swipe strip on a phone. Stacking also works, but a 4:5 poster is ~430px
-         tall on its own and shoves the brand block and the CTAs off the screen.
-         A fixed height with natural widths keeps every promo uncropped AND the
-         hero compact, for any number of them. */
-      .hero-promos { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; padding-bottom: .2rem; }
-      .hero-promos-head { padding: 0 1.1rem; }
-      .hero-promos::-webkit-scrollbar { display: none; }
-      .hero-promo { flex: none; scroll-snap-align: start; }
-      .hero-promo img, .hero-promo video { height: 228px; width: auto; }
-      .promo-cap { font-size: .6rem; letter-spacing: .1em; padding: .5rem .6rem; }
-      .hero-rail { gap: 0 1.1rem; }
-      .hero-rail div { font-size: .64rem; }
-    }
-    @media (prefers-reduced-motion: reduce) { .hero-promo, .hero-promo video { transition: none; } }
+    /* ============ HERO (team video, full bleed) ============ */
+    /* The header floats over the top of this video (see stickyOverlayHeader
+       below); the dark gradient already on .vplayer keeps the nav legible. */
+    .hero { position: relative; background: var(--ink); padding: 0; }
+    .hero .hero-player { border-radius: 0; box-shadow: none; height: clamp(460px, 56.25vw, calc(100vh - 62px)); }
+    .hero-player .vp-foot { text-align: center; }
+    /* While the clip plays the usual overlay steps aside, but keep a soft shade
+       under the floating nav so it stays readable over bright footage. */
+    .hero .vplayer.is-playing::after { opacity: 1; background: linear-gradient(180deg, rgba(10,10,10,.6) 0%, rgba(10,10,10,0) 28%); }
 
     /* ============ SECTIONS ============ */
     section { padding: 4.5rem 1.5rem; }
     .wrap { max-width: 1180px; margin: 0 auto; }
+    .panel-sec { background: var(--panel); }
     .sec-head { margin-bottom: 2.5rem; }
+    .sec-head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
     .sec-head .eyebrow { display: inline-flex; align-items: center; gap: .6rem; color: var(--muted); font-size: .72rem; letter-spacing: .26em; text-transform: uppercase; font-weight: 700; margin-bottom: .6rem; }
     .sec-head .eyebrow::before { content: ""; width: 20px; height: 2px; background: var(--gold); flex: none; }
     .sec-head h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1; letter-spacing: .03em; }
     .sec-head h2 .bar { color: var(--gold); }
 
-    /* ============ CATEGORIES (photo cards) ============ */
+    /* ============ MOVING RAILS (bicicletas / maderos) ============ */
+    /* Plain products on the page background — no card frame. Native scroll +
+       snap, so touch swipe works for free; the arrows and the slow auto-advance
+       are layered on top by the rails script below. */
+    .rail-nav { display: flex; gap: .5rem; flex: none; }
+    .rail-btn { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--gold); background: transparent; color: var(--gold); font-size: 1.5rem; line-height: 1; cursor: pointer; transition: background .2s, color .2s; display: inline-flex; align-items: center; justify-content: center; padding-bottom: 3px; }
+    .rail-btn:hover { background: var(--gold); color: var(--ink); }
+    .rail-nav[hidden] { display: none; }
+    .rail { --per: 4; --gap: 1.4rem; display: flex; gap: var(--gap); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: .4rem; }
+    .rail::-webkit-scrollbar { display: none; }
+    .rcard { flex: 0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per)); scroll-snap-align: start; text-decoration: none; color: var(--ink); display: flex; flex-direction: column; min-width: 0; }
+    .rimg { display: block; aspect-ratio: 1 / 1; background: #fff; overflow: hidden; }
+    .rail-tall .rimg { aspect-ratio: 3 / 4; }
+    .rail-tall { --per: 5; }
+    .rimg img { width: 100%; height: 100%; object-fit: contain; transition: transform .4s; }
+    .rcard:hover .rimg img { transform: scale(1.05); }
+    .rbrand { margin-top: .9rem; font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .rname { font-size: .95rem; font-weight: 600; line-height: 1.3; margin: .2rem 0 .35rem; }
+    .rprice { font-family: 'Bebas Neue', sans-serif; font-size: 1.45rem; letter-spacing: .03em; color: var(--ink); }
+    @media (max-width: 980px) { .rail { --per: 3; } .rail-tall { --per: 3; } }
+    @media (max-width: 640px) { .rail, .rail-tall { --per: 1.6; --gap: 1rem; } }
+
+    /* ============ STORE ROWS (BMX / Skate category cards) ============ */
     .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-    @media (max-width: 720px) { .cats { grid-template-columns: repeat(2, 1fr); } }
+    .cats.cats-5 { grid-template-columns: repeat(5, 1fr); }
+    /* One single row everywhere: on a phone it becomes a swipe strip. */
+    @media (max-width: 720px) {
+      .cats, .cats.cats-5 { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+      .cats::-webkit-scrollbar { display: none; }
+      .cats .cat { flex: 0 0 62%; scroll-snap-align: start; }
+    }
+
+    /* ============ CATEGORIES (photo cards) ============ */
     .cat {
       position: relative; border-radius: 12px; overflow: hidden; text-decoration: none; display: block;
       min-height: 220px; background-position: center;
@@ -354,15 +287,7 @@
     .team-head h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(3.6rem, 10vw, 7.5rem); line-height: .85; letter-spacing: .01em; }
     .team-head h2 .accent-outline { color: transparent; -webkit-text-stroke: 2px var(--ink); }
     .team-head p { max-width: 540px; margin: 1.1rem auto 0; color: var(--muted); font-size: .95rem; }
-    /* The whole team riding together: two big clips stacked, each clearly a
-       video (poster + big play + duration) until it is tapped. They break out
-       of the 1180px .wrap to up to 1320px so they read near full-width. */
-    .crew { display: grid; grid-template-columns: 1fr; gap: clamp(2.2rem, 5vw, 3.6rem);
-      width: min(1320px, calc(100vw - 3rem)); margin-left: calc(50% - min(660px, 50vw - 1.5rem)); }
-    .crew-item figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: 1rem; }
-    .crew-item figcaption b { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(1.6rem, 2.6vw, 2.2rem); letter-spacing: .04em; line-height: 1; }
-    .crew-item figcaption span { font-size: .64rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 700; white-space: nowrap; }
-    .vplayer { position: relative; overflow: hidden; background: #000; border-radius: 14px; cursor: pointer; box-shadow: 0 24px 60px rgba(0,0,0,.18); }
+        .vplayer { position: relative; overflow: hidden; background: #000; border-radius: 14px; cursor: pointer; box-shadow: 0 24px 60px rgba(0,0,0,.18); }
     .vplayer video { width: 100%; height: 100%; object-fit: cover; display: block; }
     .vplayer::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.35) 0%, rgba(10,10,10,.1) 40%, rgba(10,10,10,.7) 100%); pointer-events: none; transition: opacity .3s; }
     .vp-play { position: absolute; z-index: 2; left: 50%; top: 50%; transform: translate(-50%, -50%); width: clamp(64px, 8vw, 108px); height: clamp(64px, 8vw, 108px); border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 10px rgba(255,255,255,.2), 0 18px 40px rgba(0,0,0,.45); transition: transform .2s, background .2s; }
@@ -379,7 +304,7 @@
     }
     /* Riders: black and white, colour on hover. Flex (not grid) so a short
        roster stays centred instead of hugging the left edge. */
-    .riders-head { margin: clamp(4rem, 8vw, 6rem) 0 1.8rem; padding-bottom: 1.1rem; border-bottom: 1px solid #dcdcd8; }
+    .riders-head { margin: clamp(.5rem, 2vw, 1.5rem) 0 1.8rem; padding-bottom: 1.1rem; border-bottom: 1px solid #dcdcd8; }
     .riders-head h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.4rem); line-height: .9; }
     .riders-head h3 span { color: var(--gold); }
     .team-grid { --gap: clamp(1rem, 2.4vw, 1.8rem); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--gap); }
@@ -428,26 +353,25 @@
     .ig-cell:hover .overlay { opacity: 1; }
     .ig-cell .overlay svg { width: 22px; height: 22px; fill: #fff; }
 
-    /* ============ FAQ ============ */
-    #faq { background: var(--panel); }
-    .faq { display: flex; flex-direction: column; gap: .7rem; }
-    .faq details { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem 1.3rem; transition: border-color .2s, box-shadow .2s; }
-    .faq details[open] { border-color: var(--gold); box-shadow: 0 10px 28px rgba(0,0,0,.06); }
-    .faq summary { font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: .98rem; }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: "+"; font-family: 'Bebas Neue', sans-serif; color: var(--gold); font-size: 1.6rem; line-height: 1; flex: none; }
-    .faq details[open] summary::after { content: "–"; }
-    .faq p { font-size: .88rem; color: var(--muted); margin-top: .7rem; max-width: 720px; }
-
-    /* ============ CTA BAND ============ */
-    .cta-band { background: var(--ink); text-align: center; }
-    .cta-band h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: .03em; color: #fff; }
-    .cta-band p { color: rgba(255,255,255,.65); max-width: 520px; margin: .8rem auto 1.6rem; }
+    /* ============ MOTTO ============ */
+    .motto { background: var(--ink); color: #fff; text-align: center; padding: clamp(3rem, 6vw, 4.5rem) 1.5rem 0; }
+    .motto p { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.6rem, 3.7vw, 2.7rem); letter-spacing: .06em; line-height: 1.15; max-width: 1100px; margin: 0 auto; }
+    .motto em { color: var(--gold); font-style: normal; }
 
     /* ============ FOOTER ============ */
     footer { background: var(--ink); color: rgba(255,255,255,.4); padding: 3.5rem 1.5rem 2rem; }
-    footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; }
-    @media (max-width: 720px) { footer .wrap { grid-template-columns: 1fr; gap: 2rem; } }
+    footer .foot-grid { display: grid; grid-template-columns: .8fr 1.4fr 1fr; gap: 2.5rem; }
+    @media (max-width: 860px) { footer .foot-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    footer .foot-contact p { max-width: none; font-size: .86rem; margin-top: .35rem; }
+    footer .foot-map { margin-top: 1rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,.12); }
+    footer .foot-map iframe { display: block; width: 100%; height: 190px; border: 0; filter: grayscale(.4); }
+    footer .hours { list-style: none; }
+    footer .hours li { font-size: .88rem; padding: .3rem 0; color: rgba(255,255,255,.7); }
+    footer .hours li::before { content: "✓"; color: var(--gold); margin-right: .55rem; font-weight: 700; }
+    footer .foot-pay { margin-top: 2.2rem; padding-top: 1.6rem; border-top: 1px solid rgba(255,255,255,.1); }
+    footer .foot-pay .pay-row { justify-content: center; margin-top: 0; }
+    footer .foot-bottom a { display: inline; padding: 0; font-size: .76rem; }
+    footer .foot-bottom .links { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; justify-content: center; width: 100%; }
     footer .brand-col img { width: 168px; height: auto; margin-bottom: .9rem; }
     footer .brand-col .name { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 1.6rem; letter-spacing: .1em; }
     footer .brand-col p { font-size: .82rem; margin-top: .5rem; max-width: 320px; }
@@ -581,81 +505,110 @@
   </nav>
 </header>
 
-<!-- ============ HERO (split) ============ -->
-<section class="hero">
-  <div class="hero-wrap" id="heroPromoBlock">
-    <div class="hero-promos-head">
-      <span class="eyebrow" id="txtPromoEyebrow">Promos de la semana</span>
-      <a href="tienda">Ver todo &rarr;</a>
-    </div>
-    <!-- Cards are built from window.ESCENA_HERO_SLIDES by heroPromos() below —
-         admin-managed via admin.html's "Página principal" tab. -->
-    <div class="hero-promos" id="heroPromos"></div>
+<!-- ============ HERO (team video) ============ -->
+<section class="hero" aria-label="Video del Team ESCENABMX">
+  <h1 class="sr-only">ESCENABMX — Tienda BMX en Bogotá, Colombia</h1>
+  <div class="vplayer hero-player" role="button" tabindex="0" aria-label="Reproducir video del Team ESCENA (1:20)">
+    <video preload="none" playsinline poster="assets/img/team/team-video-1.jpg"><source src="assets/video/team/team-video-1.mp4" type="video/mp4" /></video>
+    <span class="vp-play" aria-hidden="true"></span>
+    <span class="vp-foot">Toca para ver con sonido</span>
   </div>
-  <div class="hero-copy">
-    <span class="kicker" id="txtHeroKicker">BMX Shop &middot; Bogot&aacute;, Colombia</span>
-    <h1>ESCENA<span class="accent-outline">BMX</span></h1>
-    <p class="tagline" id="txtHeroTagline">Partes que aguantan calle</p>
-    <p class="lead" id="txtHeroLead"></p>
-    <div class="btns">
-      <a href="tienda" class="btn btn-primary" id="txtHeroBtnPrimary">Ver la tienda</a>
-      <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20info%20de%20partes%20BMX" target="_blank" rel="noopener" class="btn btn-ghost" id="txtHeroBtnGhost">Pedir por WhatsApp</a>
+</section>
+<script>
+  // Hero clip: tap the poster to play with sound and native controls.
+  (function () {
+    document.querySelectorAll('.vplayer').forEach(function (box) {
+      var v = box.querySelector('video');
+      function play() {
+        if (box.classList.contains('is-playing')) return;
+        box.classList.add('is-playing');
+        v.controls = true;
+        v.play().catch(function () {});
+      }
+      box.addEventListener('click', play);
+      box.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+      });
+    });
+  })();
+</script>
+
+<!-- ============ BICICLETAS (moving rail) ============ -->
+<section id="mas-vendidas">
+  <div class="wrap">
+    <div class="sec-head sec-head-row">
+      <div>
+        <span class="eyebrow">Las más vendidas</span>
+        <h2>BICICLETAS EN MOVIMIENTO</h2>
+      </div>
+      <div class="rail-nav"><button class="rail-btn" type="button" data-dir="-1" aria-label="Anteriores">&#8249;</button><button class="rail-btn" type="button" data-dir="1" aria-label="Siguientes">&#8250;</button></div>
     </div>
-    <div class="hero-rail">
-      <div><b id="txtHeroStat1N">100+</b> <span id="txtHeroStat1L">Partes originales</span></div>
-      <div><b id="txtHeroStat2N">32</b> <span id="txtHeroStat2L">Departamentos</span></div>
-      <div><b>Taller</b> Agenda tu cita</div>
-      <div><b>Env&iacute;os</b> A toda Colombia</div>
-    </div>
+    <!-- Cards are built from ESCENA_PRODUCTS by the rails script: the listed slugs lead, then any other in-stock product of the same category. -->
+    <div class="rail" data-rail data-cat="bicicletas" data-slugs="bicicleta-profit-oxnard-negro-rojo,bicicleta-fitbikeco-misfit-bmx-rin-16,bicicleta-profit-culver-bmx-gris-oscuro,bicicleta-cult-juvenile-rin-18"></div>
   </div>
 </section>
 
-<!-- Brand marquee now lives in the global top strip (see .brand-strip in the header). -->
-
-<!-- ============ CATEGORIES (photo cards) ============ -->
-<section id="categorias">
+<!-- ============ TIENDA VIRTUAL BMX (photo cards, one row) ============ -->
+<section id="categorias" class="panel-sec">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow" id="txtCatEyebrow">Encontrá tu parte</span>
-      <h2><a href="tienda" class="sec-head-link" id="txtCatHeading">TIENDA</a></h2>
+      <span class="eyebrow">Encontrá tu parte</span>
+      <h2><a href="tienda" class="sec-head-link">TIENDA VIRTUAL DE BMX</a></h2>
     </div>
-    <div class="cats" id="catsGrid">
-      <a href="tienda?cat=stems" class="cat" data-cat="stems" style="background-image:url('assets/img/products/stem-plata-pulido-2.jpg?v=1792523555864')">
+    <div class="cats cats-5" id="catsGrid">
+      <a href="tienda?cat=stems" class="cat" data-cat="stems" style="background-image:url('assets/img/products/federal-stem-plata.jpg')">
         <video muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="content"><h3>Cañas</h3></div>
       </a>
-      <a href="tienda?cat=manubrios" class="cat" data-cat="manubrios" style="background-image:url('assets/img/products/manubrio-cromoly-negro-01.jpg?v=1792523555864')">
+      <a href="tienda?cat=manubrios" class="cat" data-cat="manubrios" style="background-image:url('assets/img/products/timon-cult-havens-gate-4pc-cromado-mue14yksfrx6.jpg')">
         <video muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="content"><h3>Timones</h3></div>
       </a>
-      <a href="tienda?cat=horquillas" class="cat" data-cat="horquillas" style="background-image:url('assets/img/products/federal-horquilla-cromada.jpg?v=1792523555864')">
+      <a href="tienda?cat=horquillas" class="cat" data-cat="horquillas" style="background-image:url('assets/img/products/federal-horquilla-cromada-mux7amqee9nb.jpg')">
         <video muted loop playsinline preload="none" aria-hidden="true"></video>
         <div class="content"><h3>Tenedores</h3></div>
       </a>
-      <a href="tienda?cat=bielas" class="cat" data-cat="bielas" style="background-image:url('assets/img/products/mutany-savage-bielas-negro.jpg?v=1792523555864')">
+      <a href="tienda?cat=manzana-trasera" class="cat" data-cat="manzana-trasera" style="background-image:url('assets/img/products/cassette-colony-wasp-cromado-mueovybr3fz1.jpg')">
         <video muted loop playsinline preload="none" aria-hidden="true"></video>
-        <div class="content"><h3>Bielas</h3></div>
-      </a>
-      <a href="tienda?cat=manzana-trasera" class="cat" data-cat="manzana-trasera" style="background-image:url('assets/img/products/mutany-mercury-elite-lhd-buje-negro.jpg?v=1792523555864')">
-        <video muted loop playsinline preload="none" aria-hidden="true"></video>
-        <div class="content"><h3>Manzanas</h3></div>
-      </a>
-      <a href="tienda?cat=pinones" class="cat" data-cat="pinones" style="background-image:url('assets/img/products/odyssey-pinon-28t-negro.jpg?v=1792523555864')">
-        <video muted loop playsinline preload="none" aria-hidden="true"></video>
-        <div class="content"><h3>Platos</h3></div>
-      </a>
-      <a href="tienda?cat=sillines" class="cat" data-cat="sillines" style="background-image:url('assets/img/products/silla-pivotal-fiend-reynolds-negra.jpg?v=1792523555864')">
-        <video muted loop playsinline preload="none" aria-hidden="true"></video>
-        <div class="content"><h3>Sillas</h3></div>
+        <div class="content"><h3>Cassettes</h3></div>
       </a>
       <a href="tienda" class="cat cat-all">
-        <div class="content"><h3>Ver todos</h3></div>
+        <div class="content"><h3>Ver todo</h3></div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ============ TEAM ============ -->
+<!-- ============ MADEROS (moving rail) ============ -->
+<section id="maderos">
+  <div class="wrap">
+    <div class="sec-head sec-head-row">
+      <div>
+        <span class="eyebrow">Skate</span>
+        <h2>MADEROS EN MOVIMIENTO</h2>
+      </div>
+      <div class="rail-nav"><button class="rail-btn" type="button" data-dir="-1" aria-label="Anteriores">&#8249;</button><button class="rail-btn" type="button" data-dir="1" aria-label="Siguientes">&#8250;</button></div>
+    </div>
+    <div class="rail rail-tall" data-rail data-cat="skate-tablas" data-slugs="madero-koston,madero-citysnake-koston,madero-skate-terror,madero-trur-skate-co,madero-black-market,madero-koston-2,madero-citysnake"></div>
+  </div>
+</section>
+
+<!-- ============ TIENDA VIRTUAL SKATE (photo cards, one row) ============ -->
+<section id="skate-tienda" class="panel-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Skate shop</span>
+      <h2><a href="skate" class="sec-head-link">TIENDA VIRTUAL SKATE</a></h2>
+    </div>
+    <div class="cats" id="skateGrid">
+      <a href="tienda?cat=skate-lijas" class="cat" style="background-image:url('assets/img/products/lija-diseno-2-mt4ul19x90il.jpg')"><div class="content"><h3>Lijas</h3></div></a>
+      <a href="tienda?cat=skate-ruedas" class="cat" style="background-image:url('assets/img/products/kit-ruedas-x4-mtan2q4rgcvz.jpg')"><div class="content"><h3>Ruedas</h3></div></a>
+      <a href="tienda?cat=skate-trucks" class="cat" style="background-image:url('assets/img/products/trucks-maiste-mtetkd8wl7kn.jpg')"><div class="content"><h3>Trucks</h3></div></a>
+      <a href="skate" class="cat cat-all"><div class="content"><h3>Ver todo</h3></div></a>
+    </div>
+  </div>
+</section>
+
 <!-- id="escena" keeps the "La Escena" footer links on every page (inicio#escena) landing here now that the brand story section is gone. -->
 <div id="escena" aria-hidden="true"></div>
 <section id="team" class="team" aria-labelledby="teamHeading">
@@ -664,19 +617,6 @@
       <span class="eyebrow">Riders oficiales</span>
       <h2 id="teamHeading">TEAM <span class="accent-outline">ESCENA</span></h2>
       <p>Los riders que prueban cada parte antes de que llegue a la tienda. Así ruedan juntos.</p>
-    </div>
-
-    <div class="crew">
-      <figure class="crew-item">
-        <div class="vplayer" role="button" tabindex="0" aria-label="Reproducir video del Team Escena 01 (1:20)" style="aspect-ratio: 16 / 9">
-          <video preload="none" playsinline poster="assets/img/team/team-video-1.jpg"><source src="assets/video/team/team-video-1.mp4" type="video/mp4" /></video>
-          <span class="vp-tag">&#9654; Video 01</span>
-          <span class="vp-dur">1:20</span>
-          <span class="vp-play" aria-hidden="true"></span>
-          <span class="vp-foot">Toca para ver con sonido</span>
-        </div>
-        <figcaption><b>Sesión 01</b><span>Team completo</span></figcaption>
-      </figure>
     </div>
 
     <div class="riders-head"><h3>LOS <span>RIDERS</span></h3></div>
@@ -715,32 +655,6 @@
     </div>
   </div>
 </section>
-<script>
-  // Team clips: tap the poster to play with sound and native controls;
-  // starting one pauses any other.
-  (function () {
-    var players = document.querySelectorAll('#team .vplayer');
-    function play(box) {
-      if (box.classList.contains('is-playing')) return;
-      var v = box.querySelector('video');
-      box.classList.add('is-playing');
-      v.controls = true;
-      v.play().catch(function () {});
-    }
-    players.forEach(function (box) {
-      box.addEventListener('click', function () { play(box); });
-      box.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(box); }
-      });
-      box.querySelector('video').addEventListener('play', function () {
-        players.forEach(function (other) {
-          if (other !== box) { var ov = other.querySelector('video'); if (ov) ov.pause(); }
-        });
-      });
-    });
-  })();
-</script>
-
 <!-- ============ REVIEWS ============ -->
 <!-- Hidden pre-launch: placeholder testimonials only, re-enable once real customer reviews are collected.
 <section>
@@ -789,24 +703,26 @@
 </section>
 -->
 
-<!-- ============ INSTAGRAM ============ -->
-<section>
+<!-- ============ APRENDE CON NOSOTROS ============ -->
+<section id="aprende" class="panel-sec">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow" id="txtVideoEyebrow">La escena en vivo</span>
-      <h2 id="txtVideoHeading">VIDEOS <span class="bar">/</span> ESCENABMX</h2>
+      <span class="eyebrow">La escena en vivo</span>
+      <h2>APRENDE CON NOSOTROS</h2>
     </div>
     <div id="videoGrid" class="video-grid"></div>
     <style>
       .video-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.4rem;
         margin: 2.5rem 0 0;
       }
-      @media (max-width: 980px) { .video-grid { grid-template-columns: repeat(3, 1fr); } }
-      @media (max-width: 720px) { .video-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; } }
-      @media (max-width: 440px) { .video-grid { grid-template-columns: 1fr; } }
+      @media (max-width: 720px) {
+        .video-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1rem; scrollbar-width: none; }
+        .video-grid::-webkit-scrollbar { display: none; }
+        .video-card { flex: 0 0 72%; scroll-snap-align: start; }
+      }
       .video-card {
         display: block;
         position: relative;
@@ -898,14 +814,6 @@
         z-index: 1;
         pointer-events: none;
       }
-      .video-grid:not(.show-all) .video-card:nth-child(n+7) {
-        display: none;
-      }
-      #videoShowMoreBtn {
-        border: none;
-        cursor: pointer;
-        font-family: inherit;
-      }
       .video-card .external-hint {
         position: absolute;
         top: 10px;
@@ -931,34 +839,18 @@
           return;
         }
         var grid = document.getElementById('videoGrid');
-        var allEmbeds = [].concat(
-          window.VIDEO_EMBEDS.tiktok || [],
-          window.VIDEO_EMBEDS.instagram_escenabikeshop || [],
-          window.VIDEO_EMBEDS.instagram_escenabmx || []
-        );
-        // Defensive: the same video has ended up listed twice under
-        // different keys in the data file before (a copy-paste mistake, not
-        // a rendering bug) — drop repeats by their real video URL so a
-        // future data edit can't silently reintroduce duplicate cards.
-        var seenUrls = {};
-        allEmbeds = allEmbeds.filter(function(video) {
-          var url = extractUrl(video);
-          if (seenUrls[url]) return false;
-          seenUrls[url] = true;
-          return true;
-        });
-        var VISIBLE_COUNT = 6;
+        // Three videos, one per source: TikTok, Escena Bike Shop, escenabmx.
+        var E = window.VIDEO_EMBEDS;
+        var allEmbeds = [E.tiktok, E.instagram_escenabikeshop, E.instagram_escenabmx]
+          .map(function(list) { return (list || [])[0]; })
+          .filter(Boolean);
 
         // Both platforms' official embeds bring their own unremovable chrome
         // — Instagram's header + "Ver perfil" button, TikTok's iframe player
         // padding itself with an unrelated "Videos relacionados" rail — and
-        // neither can be restyled from outside a cross-origin iframe. Two
-        // rounds of trying to make either look native on this grid confirmed
-        // that's structural, not a bug to fix with more JS. So the grid
-        // stays 100% our own styling always, and a click opens the real post
-        // on its real platform in a new tab — the only place a TikTok/IG
-        // video actually plays with its real, native UI (likes, comments,
-        // follow), with zero embed chrome or third-party script risk here.
+        // neither can be restyled from outside a cross-origin iframe. So the
+        // grid stays 100% our own styling, and a click opens the real post on
+        // its real platform in a new tab.
         function extractUrl(video) {
           var m = /cite="([^"]+)"/.exec(video.code) || /data-instgrm-permalink="([^"]+)"/.exec(video.code);
           return m ? m[1].replace(/&amp;/g, '&') : '#';
@@ -1009,23 +901,6 @@
 
           grid.appendChild(card);
         });
-
-        if (allEmbeds.length > VISIBLE_COUNT) {
-          var wrap = document.createElement('div');
-          wrap.style.textAlign = 'center';
-          wrap.style.marginTop = '2rem';
-          var btn = document.createElement('button');
-          btn.type = 'button';
-          btn.id = 'videoShowMoreBtn';
-          btn.className = 'btn btn-ink';
-          btn.textContent = 'Ver más videos';
-          btn.addEventListener('click', function() {
-            var expanded = grid.classList.toggle('show-all');
-            btn.textContent = expanded ? 'Ver menos' : 'Ver más videos';
-          });
-          wrap.appendChild(btn);
-          grid.insertAdjacentElement('afterend', wrap);
-        }
       }
 
       document.addEventListener('DOMContentLoaded', initVideoGrid);
@@ -1033,95 +908,74 @@
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section id="faq">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow" id="txtFaqEyebrow">Preguntas frecuentes</span>
-      <h2 id="txtFaqHeading">FAQ <span class="bar">/</span> LO BÁSICO</h2>
-    </div>
-    <div class="faq">
-      <details open><summary>¿Hacen envíos a todo Colombia?</summary><p>Sí. Enviamos partes y componentes BMX a todas las ciudades de Colombia a través de transportadoras como Interrapidísimo, Servientrega y Coordinadora. El valor del envío se cotiza según destino y peso, y te lo confirmamos por WhatsApp antes de despachar.</p></details>
-      <details><summary>¿Cómo compro?</summary><p>Eliges los productos que quieras, tocas "Pedir por WhatsApp" y se arma un mensaje con tu pedido. Confirmas por chat, coordinamos el pago (Nequi, Daviplata, transferencia o efectivo) y el envío. Así de simple.</p></details>
-      <details><summary>¿Qué marcas manejan?</summary><p>Trabajamos con marcas líderes de la escena BMX mundial: Cult, Fiend, Éclat, Volume, Mutanty, Federal, Odyssey, Stolen, Demolition, Animal, Shadow, Colony, entre otras. Manejamos más de 100 partes originales: cañas, timones, tenedores, bielas, manzanas, platos, pedales, sillines y más.</p></details>
-      <details><summary>¿Qué talla de marco necesito?</summary><p>Depende de tu estatura y del estilo que practiques (street, park o dirt). Usa nuestro configurador <a href="armar-bmx" style="color:var(--ink);text-decoration:underline;">Arma tu BMX</a> — te recomienda la talla ideal según tu altura, o escríbenos por WhatsApp y te asesoramos.</p></details>
-      <details><summary>¿Puedo cambiar o devolver una parte?</summary><p>Sí, dentro de los términos de nuestra política. Aplica para defectos de fabricación y errores nuestros. Revisa los detalles en <a href="devoluciones" style="color:var(--ink);text-decoration:underline;">Devoluciones y Cambios</a>.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA BAND ============ -->
-<section class="cta-band">
-  <div class="wrap">
-    <h2 id="txtCtaHeading">¿LISTO PARA RODAR?</h2>
-    <p id="txtCtaSubtext">Escríbenos por WhatsApp y armamos tu pedido. Respondemos en horario hábil, de lunes a sábado.</p>
-    <a href="https://wa.me/573107630504?text=Hola%20ESCENA,%20quiero%20armar%20un%20pedido" target="_blank" rel="noopener" class="btn btn-primary" id="txtCtaBtn">Hablar con ESCENA</a>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
+<!-- ============ TRUST + MOTTO + FOOTER ============ -->
 <div class="trust-strip">
   <div class="wrap">
-    <a class="trust-item" href="https://wa.me/573107630504?text=Hola%20ESCENA%2C%20quiero%20saber%20sobre%20facilidades%20de%20pago" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
-      <span>Facilidad de pago</span>
-    </a>
     <div class="trust-item">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h13v13H3z"></path><path d="M16 8h4l3 3v5h-7V8z"></path><circle cx="6.5" cy="18.5" r="1.5"></circle><circle cx="18.5" cy="18.5" r="1.5"></circle></svg>
       <span>Envíos seguros</span>
     </div>
-    <a class="trust-item" href="https://wa.me/573107630504?text=Hola%20ESCENA%2C%20quiero%20rastrear%20mi%20env%C3%ADo" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-      <span>Rastrea tu envío</span>
-    </a>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></svg>
+      <span>Garantía 100% calidad</span>
+    </div>
     <a class="trust-item" href="https://wa.me/573107630504?text=Hola%20ESCENA%2C%20tengo%20una%20pregunta" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-      <span>¿Alguna pregunta?</span>
+      <span>Contáctanos</span>
     </a>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+      <span>Compra segura</span>
+    </div>
   </div>
 </div>
+<section class="motto"><p>&ldquo;La escena es nuestra, la hermandad es de <em>todos</em>&rdquo;</p></section>
 <footer>
-  <div class="wrap">
+  <div class="wrap foot-grid">
     <div class="brand-col">
       <img src="assets/img/escena-wordmark.png?v=4" alt="ESCENABMX" width="168" height="31" />
-      <div class="name">ESCENABMX</div>
-      <p>Tienda de partes y componentes BMX en Colombia. Riders montando una tienda para riders.</p>
       <div class="foot-social">
         <a class="ico-whatsapp" href="https://wa.me/573107630504" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg></a>
         <a class="ico-instagram" href="https://www.instagram.com/escenabikeshop?igsh=MTg2MGhvazJsNmtlaQ==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C8.74 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.336 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.014 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.898 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.898-.421-.419-.69-.824-.897-1.38-.165-.42-.36-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.06-1.17.255-1.814.42-2.234.207-.57.477-.96.897-1.381.419-.419.81-.689 1.379-.896.42-.166 1.051-.36 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
         <a class="ico-tiktok" href="https://www.tiktok.com/@escenabmx" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.79 1.53V6.77a4.85 4.85 0 0 1-1.02-.08z"/></svg></a>
         <a class="ico-facebook" href="https://www.facebook.com/escenabmxlatino/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
       </div>
-      <div class="foot-contact">
-        <p><strong>Dirección:</strong> Calle 51a Sur #81i-53, Villa Andrea/Kennedy, Bogotá, Colombia</p>
-        <p class="foot-hours"><strong>Horario</strong><span>Lunes a sábado, 10 am – 7 pm</span><span>Domingos, 10 am – 3 pm</span><span>Festivos, sujeto a cambios</span></p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/573107630504" target="_blank" rel="noopener">+57 310 763 0504</a></p>
-        <p><strong>Correo:</strong> <a href="mailto:Escenabmx.co@gmail.com">Escenabmx.co@gmail.com</a></p>
-        <p class="foot-shipping">Envíos contraentrega en Bogotá y envío a toda Colombia.</p>
+    </div>
+    <div class="foot-contact">
+      <h4>Contáctanos</h4>
+      <p><strong>Dirección:</strong> Calle 51a Sur #81i-53, Villa Andrea/Kennedy, Bogotá, Colombia</p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/573107630504" target="_blank" rel="noopener">+57 310 763 0504</a></p>
+      <p><strong>Correo:</strong> <a href="mailto:Escenabmx.co@gmail.com">Escenabmx.co@gmail.com</a></p>
+      <p class="foot-shipping">Despachos en Bogotá y a nivel nacional.</p>
+      <div class="foot-map">
+        <iframe title="Mapa de ubicación de la tienda ESCENABMX" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle+51a+Sur+%2381i-53,+Villa+Andrea,+Bogot%C3%A1,+Colombia&amp;output=embed"></iframe>
       </div>
     </div>
     <div>
-      <h4>Tienda</h4>
-      <a href="#categorias">Categorías</a>
-      <a href="tienda">Componentes</a>
-      <a href="armar-bmx">Arma tu BMX</a>
-      <a href="blog">Blog</a>
-      <a href="#team">Team Escena</a>
-      <a href="#faq">Preguntas frecuentes</a>
+      <h4>Horario de atención</h4>
+      <ul class="hours">
+        <li>Lunes a sábado, 10 am – 7 pm</li>
+        <li>Domingos, 10 am – 3 pm</li>
+        <li>Festivos, sin servicio</li>
+      </ul>
     </div>
-    <div>
-      <h4>Info</h4>
-      <a href="envios">Envíos</a>
-      <a href="devoluciones">Devoluciones</a>
-      <a href="terminos">Términos</a>
-      <a href="politica-privacidad">Privacidad</a>
-      <a href="politica-cookies">Cookies</a>
+  </div>
+  <div class="wrap foot-pay">
       <div class="pay-row" aria-label="Métodos de pago aceptados">
         <svg class="pay-logo" aria-label="Nequi" role="img" viewBox="0 0 84 32" xmlns="http://www.w3.org/2000/svg"><rect width="84" height="32" rx="6" fill="#fff"/><g transform="translate(9,7)"><rect x="0" y="0" width="14" height="14" rx="4" fill="#1AD5B4" transform="rotate(-14 7 7)"/><rect x="6" y="4" width="14" height="14" rx="4" fill="#FF3D69" transform="rotate(14 13 11)"/></g><text x="46" y="21" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="12" fill="#230046" letter-spacing=".2">NEQUI</text></svg>
         <svg class="pay-logo" aria-label="Daviplata" role="img" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg"><rect width="96" height="32" rx="6" fill="#fff"/><rect x="8" y="7" width="10" height="18" rx="2.5" fill="#E8001D"/><circle cx="13" cy="21.5" r="1.2" fill="#fff"/><text x="60" y="20" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="11.5" letter-spacing=".2"><tspan fill="#E8001D">DAVI</tspan><tspan fill="#6B6B6B">PLATA</tspan></text></svg>
         <svg class="pay-logo" aria-label="Bold" role="img" viewBox="0 0 66 32" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="boldG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#E5252A"/><stop offset="55%" stop-color="#7A2E9A"/><stop offset="100%" stop-color="#1B2B99"/></linearGradient></defs><rect width="66" height="32" rx="6" fill="url(#boldG)"/><text x="33" y="22" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="800" font-style="italic" font-size="15" fill="#fff" letter-spacing=".5">bold</text><line x1="24.5" y1="16" x2="31.5" y2="16" stroke="url(#boldG)" stroke-width="1.6"/></svg>
         <svg class="pay-logo" aria-label="PSE" role="img" viewBox="0 0 60 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="14" fill="#003DA5"/><circle cx="10" cy="10" r="1.4" fill="#F5A623"/><circle cx="16" cy="8" r="1.4" fill="#F5A623"/><circle cx="22" cy="10" r="1.4" fill="#F5A623"/><circle cx="10" cy="22" r="1.4" fill="#F5A623"/><circle cx="22" cy="22" r="1.4" fill="#F5A623"/><path d="M10 10h6v6M16 8v8h6M10 22v-6h6" stroke="#fff" stroke-width="1" fill="none" opacity=".55"/><text x="16" y="20.5" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="8.5" fill="#fff">pse</text><text x="46" y="14" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="600" font-size="8" fill="#003DA5">ach</text><text x="46" y="24" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="800" font-style="italic" font-size="10.5" fill="#003DA5">pse</text></svg>
       </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="links">
+      <a href="envios">Envíos</a>
+      <a href="devoluciones">Devoluciones</a>
+      <a href="terminos">Términos</a>
+      <a href="politica-privacidad">Privacidad</a>
+      <a href="politica-cookies">Cookies</a>
+      <a href="blog">Blog</a>
     </div>
   </div>
 </footer>
@@ -1251,131 +1105,69 @@
     });
   })();
 
-  /* ---- Admin-managed page text (hero copy + section headings) ----
-     assets/js/site-text.js is a flat {field: string} config, edited from
-     admin.html's "Página principal" tab. Every target element already has
-     its current real copy sitting in the HTML above as a fallback default —
-     but once a field has actually been saved through that form, it's shown
-     EXACTLY as saved, including blank on purpose (the admin needs to be
-     able to clear a field and have it actually go blank, not silently keep
-     old copy). So the rule is by KEY PRESENCE, not truthiness: a key that's
-     flat-out missing from the manifest (the whole file failed to load, or
-     this field predates the manifest) keeps its HTML default; a key that's
-     present, even as "", is used as-is. */
-  (function siteText(){
-    var t = window.ESCENA_SITE_TEXT || {};
-    var map = {
-      txtHeroKicker: "heroKicker", txtHeroTagline: "heroTagline", txtHeroLead: "heroLead",
-      txtHeroBtnPrimary: "heroBtnPrimary", txtHeroBtnGhost: "heroBtnGhost",
-      txtHeroStat1N: "heroStat1N", txtHeroStat1L: "heroStat1L",
-      txtHeroStat2N: "heroStat2N", txtHeroStat2L: "heroStat2L",
-      txtCatEyebrow: "catEyebrow", txtCatHeading: "catHeading",
-      txtIgEyebrow: "igEyebrow", txtIgHeading: "igHeading",
-      txtFaqEyebrow: "faqEyebrow", txtFaqHeading: "faqHeading",
-      txtCtaHeading: "ctaHeading", txtCtaSubtext: "ctaSubtext", txtCtaBtn: "ctaBtn"
-    };
-    Object.keys(map).forEach(function (elId) {
-      var field = map[elId];
-      if (!(field in t)) return;
-      var el = document.getElementById(elId);
-      if (el) el.textContent = t[field];
-    });
-    // The hero's trust rail carries two admin-editable stats alongside two
-    // fixed facts. Those stats are currently blanked in the manifest, and an
-    // item with no number and no label is just a gap in the row — so drop the
-    // empty ones here, after the text has been applied. Fill them back in from
-    // the admin panel and they reappear on their own.
-    Array.prototype.forEach.call(document.querySelectorAll(".hero-rail div"), function (item) {
-      if (!item.textContent.trim()) item.hidden = true;
-    });
-  })();
-
-  /* ---- Hero promo row ----
-     Every promo is on screen at once (see .hero-promos), so unlike the carousel
-     this replaced there is no rotation, no dots, no swipe state and no "only
-     load the active slide" bookkeeping — just cards. Admin-managed via
-     admin.html's "Página principal" tab. */
-  (function heroPromos(){
-    var row = document.getElementById("heroPromos");
-    var block = document.getElementById("heroPromoBlock");
-    if (!row) return;
-    var slides = (window.ESCENA_HERO_SLIDES || []).filter(function (s) {
-      return s && (s.img || (s.video && s.video.ext && s.video.v));
-    });
-    // With no promos configured the whole block goes away and the brand copy
-    // below stands on its own, rather than leaving an empty labelled shelf.
-    if (!slides.length) { if (block) block.hidden = true; return; }
-
+  /* ---- Moving rails (bicicletas / maderos) ----
+     Built from window.ESCENA_PRODUCTS (assets/js/products-data.js) so prices and
+     new uploads stay in sync with the admin catalog. The slugs listed on the rail
+     lead (in that order), then every other in-stock product of the same
+     category follows. Arrows scroll one card; it also drifts forward on its own
+     every few seconds, pausing while the visitor hovers, focuses or touches it,
+     and not at all with reduced motion. */
+  (function rails(){
+    var products = window.ESCENA_PRODUCTS || [];
+    var money = new Intl.NumberFormat("es-CO");
     function esc(v) { return String(v).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+    var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    row.innerHTML = slides.map(function (s) {
-      var vid = s.video;
-      var media;
-      if (vid) {
-        // preload="none" plus a poster: the card shows its still immediately and
-        // the clip only costs bandwidth once it's actually near the viewport.
-        var poster = s.poster ? ' poster="' + esc(s.poster) + '"' : "";
-        media = '<span class="promo-media">' +
-                (s.poster ? '<img class="promo-poster" src="' + esc(s.poster) + '" alt="" />' : "") +
-                '<video muted loop playsinline preload="none"' + poster +
-                ' data-src="assets/video/hero-' + esc(s.id) + '.' + esc(vid.ext) + '?v=' + esc(vid.v) + '"></video>' +
-                '</span>' +
-                '<span class="promo-badge">Video</span>';
-      } else {
-        media = '<img src="' + esc(s.img) + '" alt="' + esc(s.label || "Promo") + '" loading="lazy" />';
-      }
-      var cap = s.label
-        ? '<span class="promo-cap"><span>' + esc(s.label) + '</span><span class="go">Ver &rarr;</span></span>'
-        : "";
-      // --r drives the justified row: width proportional to ratio => equal
-      // heights. Measured below for any slide the manifest doesn't declare.
-      return '<a class="hero-promo" href="' + esc(s.href || "tienda") + '"' +
-             (s.ar > 0 ? ' style="--r:' + Number(s.ar).toFixed(4) + '"' : "") +
-             '>' + media + cap + '</a>';
-    }).join("");
-
-    var cards = Array.prototype.slice.call(row.querySelectorAll(".hero-promo"));
-
-    // Ratio fallback: a promo uploaded from the admin panel won't carry "ar",
-    // so measure the asset itself rather than making the manifest the only
-    // source of truth. Until it resolves the card sits at the CSS default.
-    slides.forEach(function (s, i) {
-      if (s.ar > 0 || !cards[i]) return;
-      var apply = function (w, h) { if (w && h) cards[i].style.setProperty("--r", (w / h).toFixed(4)); };
-      if (s.img) {
-        var probe = new Image();
-        probe.onload = function () { apply(probe.naturalWidth, probe.naturalHeight); };
-        probe.src = s.img;
-      } else {
-        var v = cards[i].querySelector("video");
-        if (v) v.addEventListener("loadedmetadata", function () { apply(v.videoWidth, v.videoHeight); }, { once: true });
-      }
-    });
-
-    // Clips start only once their card is near the viewport, and pause when it
-    // leaves — several autoplaying videos decoding off-screen is the kind of
-    // thing that makes a phone hot for no reason.
-    var vids = Array.prototype.slice.call(row.querySelectorAll("video[data-src]"));
-    if (!vids.length) return;
-    function play(v) {
-      if (!v.getAttribute("src")) {
-        v.addEventListener("loadeddata", function () { v.classList.add("is-visible"); }, { once: true });
-        v.src = v.getAttribute("data-src");
-      }
-      var p = v.play();
-      if (p && p.catch) p.catch(function () {}); // autoplay blocked -> poster stays
-    }
-    if (!("IntersectionObserver" in window)) { vids.forEach(play); return; }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) play(e.target);
-        else if (!e.target.paused) e.target.pause();
+    document.querySelectorAll("[data-rail]").forEach(function (rail) {
+      var cat = rail.getAttribute("data-cat");
+      var lead = (rail.getAttribute("data-slugs") || "").split(",").filter(Boolean);
+      var items = [];
+      lead.forEach(function (slug) {
+        var p = products.filter(function (x) { return x.slug === slug; })[0];
+        if (p) items.push(p);
       });
-    }, { rootMargin: "200px" });
-    vids.forEach(function (v) { io.observe(v); });
+      products.forEach(function (p) {
+        if (p.cat === cat && lead.indexOf(p.slug) < 0 && p.units > 0) items.push(p);
+      });
+      var head = rail.parentNode.querySelector(".rail-nav");
+      if (!items.length) { rail.parentNode.parentNode.hidden = true; return; }
+
+      rail.innerHTML = items.map(function (p) {
+        return '<a class="rcard" href="producto/' + encodeURIComponent(p.slug) + '">' +
+          '<span class="rimg"><img src="' + esc(p.img) + '" alt="' + esc(p.n) + '" loading="lazy" /></span>' +
+          '<span class="rbrand">' + esc(p.brand || "") + '</span>' +
+          '<span class="rname">' + esc(p.n) + '</span>' +
+          '<span class="rprice">$' + money.format(p.price) + '</span></a>';
+      }).join("");
+
+      function step() { var c = rail.querySelector(".rcard"); return c ? c.getBoundingClientRect().width + parseFloat(getComputedStyle(rail).columnGap || 0) : 0; }
+      function overflows() { return rail.scrollWidth > rail.clientWidth + 4; }
+      function atEnd() { return rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4; }
+      function move(dir) {
+        if (dir > 0 && atEnd()) rail.scrollTo({ left: 0, behavior: "smooth" });
+        else rail.scrollBy({ left: dir * step(), behavior: "smooth" });
+      }
+      function sync() { if (head) head.hidden = !overflows(); }
+      sync(); window.addEventListener("resize", sync);
+      if (head) head.addEventListener("click", function (e) {
+        var b = e.target.closest(".rail-btn"); if (b) move(Number(b.getAttribute("data-dir")));
+      });
+
+      if (reduce) return;
+      var timer = null, hover = false, visible = false;
+      function tick() { if (!hover && visible && overflows()) move(1); }
+      function start() { if (!timer) timer = setInterval(tick, 3800); }
+      ["mouseenter", "focusin", "touchstart"].forEach(function (ev) { rail.addEventListener(ev, function () { hover = true; }, { passive: true }); });
+      ["mouseleave", "focusout"].forEach(function (ev) { rail.addEventListener(ev, function () { hover = false; }); });
+      rail.addEventListener("touchend", function () { setTimeout(function () { hover = false; }, 4000); }, { passive: true });
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: .3 }).observe(rail);
+      } else { visible = true; }
+      start();
+    });
   })();
 
-  /* The brand strip stays in normal document flow (solid white, never over
+    /* The brand strip stays in normal document flow (solid white, never over
      the video) — only .site-header is position:fixed (see the CSS above),
      floating transparent directly over the hero from wherever the strip
      ends. Its "top" offset (right below the in-flow strip) is measured and

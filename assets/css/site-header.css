@@ -75,16 +75,18 @@
 
 /* social icons pinned left (desktop only — burger owns that corner on mobile) */
 .site-header .header-social { position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .55rem; }
-.site-header .header-social a { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; color: rgba(255, 255, 255, .75); transition: color .2s; }
-.site-header .header-social a:hover { color: #fff; }
-.site-header .header-social svg { width: 17px; height: 17px; fill: currentColor; }
+/* each icon sits in a thin gold ring */
+.site-header .header-social a { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1.5px solid var(--gold, #C79A3A); border-radius: 50%; color: var(--gold, #C79A3A); transition: color .2s, background-color .2s; }
+.site-header .header-social a:hover { background: var(--gold, #C79A3A); color: #0A0A0A; }
+.site-header .header-social svg { width: 16px; height: 16px; fill: currentColor; }
 
 /* actions pinned right */
 .site-header .header-actions { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .6rem; }
 .site-header .search-btn { width: 38px; height: 38px; background: none; border: 0; color: #fff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
 .site-header .search-btn svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
-.site-header .cart-btn { position: relative; width: 38px; height: 38px; background: none; border: 0; color: #fff; cursor: pointer; }
-.site-header .cart-btn svg { width: 23px; height: 23px; }
+/* gold so the cart reads clearly against the dark / video background */
+.site-header .cart-btn { position: relative; width: 38px; height: 38px; background: none; border: 0; color: var(--gold, #C79A3A); cursor: pointer; }
+.site-header .cart-btn svg { width: 23px; height: 23px; stroke: var(--gold, #C79A3A); }
 .site-header .cart-badge { position: absolute; top: 1px; right: 1px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 9px; background: var(--gold, #C79A3A); color: #fff; font-size: .6rem; font-weight: 800; line-height: 16px; text-align: center; }
 .site-header .burger { display: none; position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: #fff; font-size: 1.6rem; cursor: pointer; line-height: 1; }
 
