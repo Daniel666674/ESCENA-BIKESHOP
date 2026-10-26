@@ -160,7 +160,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Merritt",
   "cat": "manzana-trasera",
   "spec": "Material en nylon y diseñado para funcionar en ambos lados de la manzana trasera - se instala por fuera del marco para evitar estirarlo - incluye bujes de adaptación 14mm y 3/8.",
-  "price": 45000,
+  "price": 50000,
   "sku": "MZT-MER-001",
   "units": 1,
   "imgFit": "cover",
@@ -179,7 +179,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "El Uniguard de G-Sport es un protector de buje diseñado para adaptarse a cualquier BMX freestyle del mercado - Hecho de cromoly tratado térmicamente para una larga vida útil Compatible con ambos LHD y RHD Compatible con el lado del conductor y no conductor Ajuste universal",
   "price": 75000,
   "sku": "MZT-GSP-001",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/protector-g-sport-drive-mv01olh803ia.jpg?v=1792523555864",
@@ -8660,7 +8660,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Protector Drive · Aluminio Forjado · Negro",
   "price": 70000,
   "sku": "BSD-GUARDA-PINON-NEGRO",
-  "units": 6,
+  "units": 0,
   "order": 240,
   "img": "assets/img/products/bsd-guarda-pinon-negro-mv01kzvt93cb.jpg?v=1792523555864"
  },
