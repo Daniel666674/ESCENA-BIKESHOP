@@ -3282,18 +3282,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Acero - Relacion 28T",
   "price": 9000,
   "sku": "PLT-GWB-002",
-  "units": 0,
+  "units": 4,
   "sizes": [
    {
     "label": "28T",
-    "units": 0,
+    "units": 4,
     "price": 9000
-   }
-  ],
-  "colors": [
-   {
-    "label": "28T",
-    "units": 0
    }
   ],
   "slug": "plato-gw-corona-negro",
