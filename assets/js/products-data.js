@@ -1499,7 +1499,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Fabricado en cromoly 100% tratado térmicamente y conificado , 28\" de ancho, 11,5° de inclinación hacia atrás, 3° de inclinación hacia arriba",
   "price": 400000,
   "sku": "TMN-CLT-003",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "sizes": [
    {
@@ -1508,7 +1508,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "9.65\"",
-    "units": 2
+    "units": 1
    }
   ],
   "slug": "timon-cult-havens-gate-4pc-cromado",
@@ -9349,7 +9349,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Fabricado en cromoly 100% tratado térmicamente y conificado , 28\" de ancho, 11,5° de inclinación hacia atrás, 3° de inclinación hacia arriba",
   "price": 380000,
   "sku": "TMN-CLT-001",
-  "units": 4,
+  "units": 1,
   "imgs": [
    "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1792523555864",
    "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1792523555864"
@@ -9357,11 +9357,13 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "9.42\"",
-    "units": 2
+    "units": 1,
+    "price": 380000
    },
    {
     "label": "9.65\"",
-    "units": 2
+    "units": 0,
+    "price": 380000
    }
   ],
   "order": 10,
