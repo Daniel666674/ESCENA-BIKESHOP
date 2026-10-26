@@ -1481,11 +1481,11 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "9\"",
-    "units": 0
+    "units": 1
    },
    {
     "label": "9.25\"",
-    "units": 1
+    "units": 0
    }
   ],
   "slug": "timon-fiend-reynolds-cromado",
