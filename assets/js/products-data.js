@@ -1872,11 +1872,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Centro Español - rodamiento Sellado - 19mm",
   "price": 20000,
   "sku": "CJC-GEN-001",
-  "units": 2,
+  "units": 0,
   "sizes": [
    {
     "label": "19mm",
-    "units": 2
+    "units": 0,
+    "price": 20000
    }
   ],
   "imgFit": "cover",
