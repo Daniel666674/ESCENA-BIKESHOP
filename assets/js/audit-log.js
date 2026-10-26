@@ -8851,5 +8851,16 @@ window.ESCENA_AUDIT = [
    "pedales-cinema-tilt-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T18:31:25.304Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "timon-fiend-reynolds-cromado",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
