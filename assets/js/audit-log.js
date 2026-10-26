@@ -8918,5 +8918,15 @@ window.ESCENA_AUDIT = [
    "llanta-alinetion-prowler"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T18:47:46.982Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "marco-federal-command-negro-20-5-x-cola-12-5"
+  ],
+  "deleted": []
  }
 ];
