@@ -16,7 +16,7 @@
        "Place ID Finder" de Google). Ver tools/README-SEO.md.
    mapsUrl: enlace de "compartir" de Google Maps, para "Ver todas en Google". */
 window.ESCENA_REVIEWS_CONFIG = {
-  placeId: "",
+  placeId: "ChIJUT1BtDGfP44RevIpCxtCVDs",
   reviewUrl: "",
   mapsUrl: "https://maps.app.goo.gl/o21U366WQ3pZURPY6"
 };
