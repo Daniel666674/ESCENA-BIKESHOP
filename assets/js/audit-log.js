@@ -8894,5 +8894,18 @@ window.ESCENA_AUDIT = [
    "rodamiento-espanol-19mm"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T18:43:01.037Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "rin-cult-match-v2-cromado",
+   "rin-federal-aero-xl",
+   "rin-alienation-vandal-negro",
+   "rin-demolition-zero-plus-negro"
+  ],
+  "deleted": []
  }
 ];
