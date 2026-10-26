@@ -8884,5 +8884,15 @@ window.ESCENA_AUDIT = [
    "plato-gw-corona-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T18:40:50.001Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "rodamiento-espanol-19mm"
+  ],
+  "deleted": []
  }
 ];
