@@ -8874,5 +8874,15 @@ window.ESCENA_AUDIT = [
    "plato-mutanty-diamond-negro-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T18:38:20.835Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "plato-gw-corona-negro"
+  ],
+  "deleted": []
  }
 ];
