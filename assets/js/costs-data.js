@@ -282,7 +282,7 @@ window.ESCENA_COSTS = {
  "cana-cult-mind-control-negra-top-load": 256000,
  "cana-cult-mind-control-rasta-front-load": 272000,
  "marco-gw-destructor-azul-20-5": 144000,
- "marco-federal-command-negro-20-5-x-cola-12-5": 1328000,
+ "marco-federal-command-negro-20-5-x-cola-12-5": 1320000,
  "marco-federal-chiller-20-75-cola-12-7": 1328000,
  "cana-volume-bison-negra-frontload": 264000,
  "pedales-wellgo-negro": 48000,
