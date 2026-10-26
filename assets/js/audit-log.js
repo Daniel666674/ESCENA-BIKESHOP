@@ -8953,5 +8953,15 @@ window.ESCENA_AUDIT = [
    "protector-g-sport-drive"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T23:19:04.638Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "manubrio-cromoly-negro-04"
+  ],
+  "deleted": []
  }
 ];
