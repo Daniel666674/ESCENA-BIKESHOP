@@ -9484,12 +9484,6 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 5
-   }
-  ],
   "order": 110,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1792523555864"
  }
