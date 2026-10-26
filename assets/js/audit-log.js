@@ -8928,5 +8928,18 @@ window.ESCENA_AUDIT = [
    "marco-federal-command-negro-20-5-x-cola-12-5"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T23:04:07.265Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "timon-cult-heavens-gate-4p-cromado",
+   "timon-cult-havens-gate-4pc-cromado",
+   "timon-cult-crew-cromado",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
