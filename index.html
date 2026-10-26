@@ -85,7 +85,7 @@
       "https://www.facebook.com/escenabmxlatino/",
       "https://www.tiktok.com/@escenabmx"
     ],
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=Calle+51a+Sur+%2381i-53%2C+Villa+Andrea%2C+Bogot%C3%A1%2C+Colombia"
+    "hasMap": "https://maps.app.goo.gl/o21U366WQ3pZURPY6"
   }
   </script>
   <script type="application/ld+json">
@@ -965,7 +965,7 @@
 </section>
 
 <!-- ============ RESEÑAS DE GOOGLE (hidden until assets/js/reviews-data.js has reviews) ============ -->
-<script src="assets/js/reviews-data.js?v=1"></script>
+<script src="assets/js/reviews-data.js?v=2"></script>
 <section id="resenas" hidden>
   <div class="wrap">
     <div class="sec-head sec-head-row">
@@ -1271,7 +1271,8 @@
           (r.when ? '<small>' + esc(r.when) + '</small>' : "") + '</span></figcaption></figure>';
       }).join("");
       var write = document.getElementById("reviewWriteBtn"), seeAll = document.getElementById("reviewAllLink");
-      if (cfg.placeId) { write.href = "https://search.google.com/local/writereview?placeid=" + encodeURIComponent(cfg.placeId); write.hidden = false; }
+      var writeUrl = cfg.reviewUrl || (cfg.placeId ? "https://search.google.com/local/writereview?placeid=" + encodeURIComponent(cfg.placeId) : "");
+      if (writeUrl) { write.href = writeUrl; write.hidden = false; }
       if (cfg.mapsUrl) { seeAll.href = cfg.mapsUrl; seeAll.hidden = false; }
       sec.hidden = false;
       enhance(rrail, sec.querySelector(".rail-nav"));

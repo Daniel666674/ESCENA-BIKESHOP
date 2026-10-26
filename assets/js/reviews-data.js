@@ -10,12 +10,15 @@
    - Después de editar este archivo, sube el número de ?v= en index.html
      (<script src="assets/js/reviews-data.js?v=N">), porque los .js se guardan en caché un año.
 
-   Botón "Deja tu reseña": pega el Place ID del negocio en placeId (se obtiene del enlace de
-   Google Maps; ver tools/README-SEO.md). Si placeId está vacío, el botón no aparece.
+   Botón "Deja tu reseña" (basta UNA de las dos opciones; si ambas están vacías el botón no aparece):
+     - reviewUrl: el enlace corto de "Pedir reseñas" del Perfil de Negocio (Compartir perfil → Pedir reseñas).
+     - placeId: el Place ID del negocio (empieza con "ChIJ"; se obtiene con la herramienta pública
+       "Place ID Finder" de Google). Ver tools/README-SEO.md.
    mapsUrl: enlace de "compartir" de Google Maps, para "Ver todas en Google". */
 window.ESCENA_REVIEWS_CONFIG = {
   placeId: "",
-  mapsUrl: ""
+  reviewUrl: "",
+  mapsUrl: "https://maps.app.goo.gl/o21U366WQ3pZURPY6"
 };
 
 window.ESCENA_REVIEWS = [
