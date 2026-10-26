@@ -4954,7 +4954,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
   "price": 130000,
   "sku": "CJF-BSD-001",
-  "units": 1,
+  "units": 0,
   "imgs": [
    "assets/img/products/cajas-de-frente-bsd-highriser.jpg?v=1792523555864",
    "assets/img/products/cajas-de-frente-bsd-highriser-2.jpg?v=1792523555864"
@@ -4962,7 +4962,7 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negra",
-    "units": 1
+    "units": 0
    },
    {
     "label": "Cromada",
@@ -4992,7 +4992,8 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 5
+    "units": 0,
+    "price": 60000
    }
   ],
   "slug": "cajas-de-frente-trueno-v2",
