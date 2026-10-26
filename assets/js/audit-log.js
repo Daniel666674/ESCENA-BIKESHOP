@@ -8862,5 +8862,17 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T18:37:31.911Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "cana-shadow-finest-negra-topload",
+   "grips-odi-xl-2",
+   "plato-mutanty-diamond-negro-28t"
+  ],
+  "deleted": []
  }
 ];
