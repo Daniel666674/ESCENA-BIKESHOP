@@ -8941,5 +8941,17 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T23:07:17.486Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "protector-merritt-sentry-drive",
+   "bsd-guarda-pinon-negro",
+   "protector-g-sport-drive"
+  ],
+  "deleted": []
  }
 ];
