@@ -35,6 +35,12 @@ jobs:
         continue-on-error: true
         run: python3 tools/generate-seo-pages.py
 
+      # Product feed for Google Merchant Center (free Shopping listings), fetched
+      # from https://escenabmx.com/merchant-feed.xml. Same catalog, same stock rules.
+      - name: Generate Google Merchant feed
+        continue-on-error: true
+        run: python3 tools/generate-merchant-feed.py
+
       - name: Deploy to Hostinger (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
