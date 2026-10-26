@@ -8963,5 +8963,16 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-04"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T23:21:14.299Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "cajas-de-frente-bsd-highriser",
+   "cajas-de-frente-trueno-v2"
+  ],
+  "deleted": []
  }
 ];
