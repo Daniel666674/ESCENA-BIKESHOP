@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taller BMX en Bogotá: mantenimiento, enradiado y pintura | ESCENABMX</title>
+  <meta name="description" content="Taller de bicicletas BMX en Bogotá: mantenimiento general, enradiado de ruedas, rectificación de ejes y pintura de marcos. Agenda tu cita en línea." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="canonical" href="https://escenabmx.com/taller" />
+  <link rel="alternate" hreflang="es-co" href="https://escenabmx.com/taller" />
+  <link rel="alternate" hreflang="x-default" href="https://escenabmx.com/taller" />
+  <link rel="icon" href="assets/img/favicon.ico?v=2" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png?v=2" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png?v=2" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: #fff; color: #0A0A0A; font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; }
+    .top-bar { background: #fff; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 50; border-bottom: 1px solid #ececeb; }
+    .top-bar .logo { display: flex; align-items: center; gap: .55rem; text-decoration: none; }
+    .top-bar .logo img { width: 32px; height: 32px; border-radius: 50%; background: #fff; border: 1px solid #ececeb; }
+    .top-bar .logo span { color: #0A0A0A; font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.1em; }
+    .top-bar .back { color: #666; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+    .top-bar .back:hover { color: #0A0A0A; }
+    .hero { background: #0A0A0A; padding: 4rem 1.5rem 3rem; text-align: center; }
+    .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 6vw, 3.5rem); color: #fff; letter-spacing: 0.06em; margin-bottom: .5rem; }
+    .hero .sub { color: rgba(255,255,255,0.4); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .container { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .section { margin-bottom: 2.5rem; }
+    .section h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.06em; margin-bottom: .75rem; color: #0A0A0A; border-left: 3px solid #0A0A0A; padding-left: .75rem; }
+    .section h3 { font-size: .92rem; font-weight: 700; margin: 1.2rem 0 .4rem; }
+    .section p { font-size: .9rem; color: #333; margin-bottom: .7rem; }
+    .section ul, .section ol { font-size: .9rem; color: #333; padding-left: 1.4rem; margin-bottom: .7rem; }
+    .section ul li, .section ol li { margin-bottom: .35rem; }
+    .section a { color: #0A0A0A; font-weight: 600; }
+    .callout { background: #f9f9f7; border: 1px solid #e8e8e6; border-radius: 8px; padding: 1.2rem 1.4rem; font-size: .85rem; color: #444; margin: 1rem 0; }
+    .callout.gold { border: 1.5px solid #0A0A0A; background: #f6f6f4; }
+    .callout.dark { background: #0A0A0A; color: rgba(255,255,255,0.7); border-color: #0A0A0A; }
+    .callout.dark strong { color: #fff; }
+    .callout strong { color: #0A0A0A; }
+    .yn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media(max-width:480px) { .yn-grid { grid-template-columns: 1fr; } }
+    .yn-card { border-radius: 8px; padding: 1.2rem; }
+    .yn-yes { border: 1px solid #22c55e; background: #f0fdf4; }
+    .yn-no { border: 1px solid #ef4444; background: #fef2f2; }
+    .yn-label { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .6rem; }
+    .yn-yes .yn-label { color: #16a34a; }
+    .yn-no .yn-label { color: #dc2626; }
+    .yn-card ul { padding-left: 1.2rem; font-size: .85rem; color: #444; }
+    .yn-card ul li { margin-bottom: .3rem; }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li { counter-increment: step; display: flex; gap: 1rem; align-items: flex-start; padding: .8rem 0; border-bottom: 1px solid #f0f0f0; font-size: .9rem; color: #333; }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before { content: counter(step); width: 28px; height: 28px; border-radius: 50%; background: #0A0A0A; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .85rem; flex-shrink: 0; }
+    .zone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: 1rem 0; }
+    @media(max-width:520px) { .zone-grid { grid-template-columns: 1fr; } }
+    .zone { border: 1px solid #ececeb; border-radius: 8px; padding: 1rem 1.2rem; }
+    .zone .city { font-weight: 700; font-size: .9rem; }
+    .zone .time { font-size: .82rem; color: #16a34a; margin-top: .2rem; }
+    .zone .cost { font-size: .78rem; color: #999; }
+    .updated { font-size: .78rem; color: #999; text-align: center; margin-top: 2rem; }
+    footer { background: #0A0A0A; color: rgba(255,255,255,0.35); font-size: .8rem; padding: 2rem 1.5rem; text-align: center; }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 .5rem; }
+    footer a:hover { color: #fff; }
+  </style>
+  <link rel="stylesheet" href="assets/css/cookie-consent.css?v=1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ESCENABMX" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:title" content="Taller BMX en Bogotá: mantenimiento, enradiado y pintura | ESCENABMX" />
+  <meta property="og:description" content="Taller de bicicletas BMX en Bogotá: mantenimiento general, enradiado de ruedas, rectificación de ejes y pintura de marcos. Agenda tu cita en línea." />
+  <meta property="og:url" content="https://escenabmx.com/taller" />
+  <meta property="og:image" content="https://escenabmx.com/assets/img/og-escena.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://escenabmx.com/inicio"}, {"@type": "ListItem", "position": 2, "name": "Taller", "item": "https://escenabmx.com/taller"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Mantenimiento general de bicicletas BMX", "description": "Revisión y puesta a punto de tu BMX: transmisión, dirección, ruedas y ajustes generales.", "serviceType": "Mantenimiento general de bicicletas BMX", "provider": {"@type": "BikeStore", "name": "ESCENABMX", "url": "https://escenabmx.com/inicio"}, "areaServed": {"@type": "City", "name": "Bogotá"}, "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://escenabmx.com/agendar"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Enradiado de ruedas BMX", "description": "Armado y enradiado de ruedas con tu rin y tu manzana.", "serviceType": "Enradiado de ruedas BMX", "provider": {"@type": "BikeStore", "name": "ESCENABMX", "url": "https://escenabmx.com/inicio"}, "areaServed": {"@type": "City", "name": "Bogotá"}, "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://escenabmx.com/agendar"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Rectificación de ejes", "description": "Rectificación de ejes para bicicletas BMX.", "serviceType": "Rectificación de ejes", "provider": {"@type": "BikeStore", "name": "ESCENABMX", "url": "https://escenabmx.com/inicio"}, "areaServed": {"@type": "City", "name": "Bogotá"}, "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://escenabmx.com/agendar"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Pintura de marcos BMX", "description": "Pintura de marcos BMX, cotizada según los datos de tu marco.", "serviceType": "Pintura de marcos BMX", "provider": {"@type": "BikeStore", "name": "ESCENABMX", "url": "https://escenabmx.com/inicio"}, "areaServed": {"@type": "City", "name": "Bogotá"}, "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://escenabmx.com/agendar"}}</script>
+</head>
+<body>
+
+<nav class="top-bar">
+  <a href="inicio" class="logo"><img src="assets/img/escena-logo.jpg" alt="ESCENABMX" width="32" height="32" /><span>ESCENABMX</span></a>
+  <a href="inicio" class="back">&larr; Volver a la tienda</a>
+</nav>
+
+<div class="hero">
+  <h1>Taller BMX en Bogotá</h1>
+  <p class="sub">Mantenimiento, enradiado, rectificación de ejes y pintura</p>
+</div>
+
+<div class="container">
+
+  <div class="callout dark">
+    <strong>Un solo mecánico, cupos reales.</strong> Elige tu servicio, mira el horario disponible y agenda en línea.
+  </div>
+
+  <div class="section">
+    <h2>Servicios del taller</h2>
+    <ul>
+      <li><strong>Mantenimiento general.</strong> Revisión y puesta a punto de tu BMX: transmisión, dirección, ruedas y ajustes generales.</li>
+      <li><strong>Enradiado de ruedas.</strong> Armado y enradiado de ruedas con tu rin y tu manzana.</li>
+      <li><strong>Rectificación de ejes.</strong> Cuéntanos tu caso por WhatsApp y te decimos qué se puede hacer.</li>
+      <li><strong>Pintura de marcos BMX.</strong> Déjanos los datos de tu marco y te cotizamos.</li>
+    </ul>
+    <p>¿Necesitas una pieza para el arreglo? La encuentras en la <a href="tienda">tienda de partes BMX</a>: <a href="categoria/bielas">bielas</a>, <a href="categoria/manzana-trasera">manzanas y cassettes</a>, <a href="categoria/llantas">llantas</a> y más.</p>
+  </div>
+
+  <div class="section">
+    <h2>Cómo agendar</h2>
+    <ol class="steps">
+      <li><strong>Agenda en línea.</strong> Para mantenimiento, elige el servicio y el horario disponible. Para pintura, deja los datos de tu marco.</li>
+      <li><strong>Lleva tu bici.</strong> Preséntate en el taller a la hora acordada: Calle 51a Sur #81i-53, Villa Andrea/Kennedy, Bogotá.</li>
+    </ol>
+    <p style="margin-top:1rem;"><a href="agendar" style="display:inline-block;background:#0A0A0A;color:#fff;padding:.85rem 1.6rem;border-radius:4px;text-decoration:none;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;">Agendar mi cita</a>
+    &nbsp; <a href="https://wa.me/573107630504?text=Hola%20ESCENA%2C%20quiero%20consultar%20un%20servicio%20del%20taller" target="_blank" rel="noopener">Consultar por WhatsApp</a></p>
+  </div>
+
+  <div class="section">
+    <h2>Dónde estamos</h2>
+    <ul>
+      <li>Calle 51a Sur #81i-53, Villa Andrea/Kennedy, Bogotá, Colombia</li>
+      <li>Lunes a sábado, 10 am – 7 pm · Domingos, 10 am – 3 pm</li>
+      <li>WhatsApp: <a href="https://wa.me/573107630504">+57 310 763 0504</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p style="margin-bottom:.5rem;">Calle 51a Sur #81i-53, Bogotá, Colombia · Lun-Sáb 10 am-7 pm · Dom 10 am-3 pm · <a href="https://wa.me/573107630504" target="_blank" rel="noopener">WhatsApp +57 310 763 0504</a></p>
+  <p style="margin-bottom:.75rem;">
+    <a href="politica-privacidad">Privacidad</a>
+    <a href="politica-cookies">Cookies</a>
+    <a href="envios">Envíos</a>
+    <a href="devoluciones">Devoluciones</a>
+    <a href="terminos">Términos</a>
+  </p>
+</footer>
+
+<script src="assets/js/cookie-consent.js?v=1"></script>
+<script src="assets/js/analytics.js?v=2"></script>
+</body>
+</html>
