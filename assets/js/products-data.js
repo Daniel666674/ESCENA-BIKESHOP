@@ -4100,17 +4100,17 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/llanta-s-m-speedball-negra-2-40-mt96i6sypnnu.jpg?v=1792523555864"
  },
  {
-  "n": "Llanta Odyssey Broc Negra - 2.25\" - 2.40\"",
+  "n": "Llanta Odyssey Broc Negra 2.40\"",
   "brand": "Odyssey",
   "cat": "llantas",
   "spec": "",
   "price": 160000,
   "sku": "COR-ODY-001",
-  "units": 3,
+  "units": 2,
   "sizes": [
    {
     "label": "20x2.25\"",
-    "units": 1
+    "units": 0
    },
    {
     "label": "20x2.40\"",
@@ -4531,10 +4531,6 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "20x2.40\"",
     "units": 1
-   },
-   {
-    "label": "20x2.25\"",
-    "units": 0
    }
   ],
   "colors": [
