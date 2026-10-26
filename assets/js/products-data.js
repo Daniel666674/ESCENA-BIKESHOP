@@ -4377,7 +4377,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Goma · Extralargos XL 230mm · diseño mushroom",
   "price": 70000,
   "sku": "GRP-ODI-001",
-  "units": 3,
+  "units": 0,
   "slug": "grips-odi-xl-2",
   "img": "assets/img/products/grips-odi-xl-2-mt8xd8h9jcau.jpg?v=1792523555864"
  },
@@ -5431,11 +5431,11 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "25T",
-    "units": 0
+    "units": 1
    },
    {
     "label": "28T",
-    "units": 1
+    "units": 0
    }
   ],
   "slug": "plato-mutanty-diamond-negro-28t",
@@ -7551,7 +7551,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Carga superior · Alcance 48mm · Aluminio CNC",
   "price": 310000,
   "sku": "CAN-SHW-001",
-  "units": 1,
+  "units": 0,
   "imgs": [
    "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864",
    "assets/img/products/cana-shadow-finest-negra-topload-2.jpg?v=1792523555864",
@@ -7560,7 +7560,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "48mm",
-    "units": 1
+    "units": 0
    }
   ],
   "order": 720,
