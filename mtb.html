@@ -768,8 +768,11 @@ header.top-bar .brand .name { color: #fff; }
 
   /* ---- Init from ?cat= / ?brand= / ?promo= query params ---- */
   var urlParams = new URLSearchParams(window.location.search);
-  var initialCat = urlParams.get("cat") || "all";
-  var initialBrand = urlParams.get("brand");
+  // Landing pages (categoria/*, marca/*, built by tools/generate-seo-pages.py) open
+  // already filtered through window.ESCENA_LANDING; ?cat= / ?brand= still win.
+  var LANDING = window.ESCENA_LANDING || {};
+  var initialCat = urlParams.get("cat") || LANDING.cat || "all";
+  var initialBrand = urlParams.get("brand") || LANDING.brand || null;
   promoOnly = urlParams.get("promo") === "1";
   if (initialBrand) showBrandBanner(initialBrand);
   var initBtn = document.querySelector('#filters button[data-filter="' + initialCat + '"]') || document.querySelector('#filters button[data-filter="all"]');
@@ -796,6 +799,6 @@ header.top-bar .brand .name { color: #fff; }
 <script>var ESCENA_ROOT = "";</script>
 <script src="assets/js/cart.js?v=13"></script>
 <script src="assets/js/cookie-consent.js?v=1"></script>
-<script src="assets/js/analytics.js?v=1"></script>
+<script src="assets/js/analytics.js?v=2"></script>
 </body>
 </html>

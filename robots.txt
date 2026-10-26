@@ -50,3 +50,4 @@ Disallow: /producto/_template.html
 Disallow: /producto/_template
 
 Sitemap: https://escenabmx.com/sitemap.xml
+Sitemap: https://escenabmx.com/sitemap-landing.xml

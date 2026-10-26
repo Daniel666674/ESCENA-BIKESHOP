@@ -36,4 +36,19 @@
   document.addEventListener("escena-consent-changed", function (e) {
     if (e && e.detail && e.detail.choice === "all") loadGA();
   });
+
+  /* Sales close on WhatsApp, so these two clicks are this site's conversions.
+     Mark them as key events in GA4 (Admin > Events > "Mark as key event").
+       whatsapp_click — any link to wa.me (product pages, footer, floating button)
+       generate_lead  — the cart's "Pedir por WhatsApp" button (an actual order)
+     Both only report once gtag exists, i.e. after analytics consent. */
+  document.addEventListener("click", function (e) {
+    if (typeof window.gtag !== "function" || !e.target || !e.target.closest) return;
+    if (e.target.closest("#cartCheckout")) {
+      window.gtag("event", "generate_lead", { method: "whatsapp_cart", page_path: location.pathname });
+      return;
+    }
+    var a = e.target.closest('a[href*="wa.me"]');
+    if (a) window.gtag("event", "whatsapp_click", { page_path: location.pathname, link_text: (a.textContent || "").trim().slice(0, 40) });
+  }, true);
 })();
