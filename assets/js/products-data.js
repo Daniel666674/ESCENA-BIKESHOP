@@ -7091,7 +7091,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Federal",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.5\" · Negro",
-  "price": 1660000,
+  "price": 1650000,
   "sku": "MRC-FED-001",
   "units": 1,
   "imgs": [
