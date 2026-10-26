@@ -429,22 +429,24 @@
     { name: "Fate", img: "assets/img/logo_02_Fate.jpeg?v=2" },
     { name: "Cult", img: "assets/img/logo_03_Cult.png?v=2" },
     { name: "Fiend", img: "assets/img/logo_04_Fiend.jpeg?v=2" },
-    { name: "Shadow", img: "assets/img/logo_05_Shadow.png?v=2" },
     { name: "Wethepeople", img: "assets/img/logo_06_Wethepeople.png?v=3" },
     { name: "Odyssey", img: "assets/img/logo_07_Odyssey.png?v=2" },
     { name: "BSD", img: "assets/img/logo_08_BSD.png?v=2" },
     { name: "Éclat", img: "assets/img/logo_09_Eclat.png?v=2" },
-    { name: "Demolition", img: "assets/img/logo_10_Demolition.png?v=3" },
     { name: "Kink BMX", img: "assets/img/logo_11_KinkBMX.png?v=2" },
     { name: "Federal", img: "assets/img/logo_12_Federal.png?v=2" },
     { name: "Animal", img: "assets/img/logo_13_Animal.png?v=2" },
     { name: "Merritt", img: "assets/img/logo_14_Merritt.jpeg?v=2" },
-    { name: "Subrosa", img: "assets/img/logo_15_Subrosa.jpeg?v=2" },
     { name: "Stranger", img: "assets/img/logo_16_Stranger.png?v=2" },
     { name: "Volume", img: "assets/img/logo_17_Volume.jpeg?v=2" },
     { name: "Profile Racing", img: "assets/img/logo_18_ProfileRacing.jpeg?v=2" },
     { name: "Cinema", img: "assets/img/logo_19_Cinema.jpeg?v=2" },
-    { name: "Primo", img: "assets/img/logo_20_Primo.png?v=2" }
+    { name: "Primo", img: "assets/img/logo_20_Primo.png?v=2" },
+    { name: "Fitbikeco", img: "assets/img/logo_21_Fitbikeco.png?v=1" },
+    { name: "STLN Bikes", key: "Stolen", img: "assets/img/logo_22_STLN.png?v=1" },
+    { name: "S&M", img: "assets/img/logo_23_SM.png?v=1" },
+    { name: "Colony", img: "assets/img/logo_24_Colony.png?v=1" },
+    { name: "Alienation", img: "assets/img/logo_25_Alienation.png?v=1" }
   ];
 
   var track = document.getElementById("brandStripTrack");
