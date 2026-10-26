@@ -4,6 +4,10 @@
 
 ESCENABMX es un negocio colombiano especializado en componentes de BMX. Trabaja directamente con marcas reconocidas de la escena BMX mundial y despacha a los 32 departamentos de Colombia. La compra se realiza por WhatsApp y el pago se coordina por Nequi, Daviplata, transferencia bancaria o efectivo.
 
+## Taller
+- ESCENABMX tiene taller propio en Bogotá (Calle 51a Sur #81i-53, Villa Andrea/Kennedy): mantenimiento general, enradiado de ruedas, rectificación de ejes y pintura de marcos BMX. Se agenda en https://escenabmx.com/agendar y se describe en https://escenabmx.com/taller
+- Perfiles: Instagram @escenabikeshop, Facebook escenabmxlatino, TikTok @escenabmx
+
 ## Datos clave
 - Nombre: ESCENABMX
 - Ciudad: Bogotá, Cundinamarca, Colombia
