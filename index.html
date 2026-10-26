@@ -636,7 +636,7 @@
       <h2><a href="skate" class="sec-head-link">TIENDA VIRTUAL SKATE</a></h2>
     </div>
     <div class="cats" id="skateGrid">
-      <a href="categoria/skate-lijas" class="cat" data-top="skate-lijas" style="background-image:url('assets/img/products/lija-diseno-7-mtakyfd5o1ot.jpg?v=1792523555864')"><div class="content"><h3>Lijas</h3></div></a>
+      <a href="categoria/skate-lijas" class="cat" data-top="skate-lijas" data-top-pick="lija-diseno-6" style="background-image:url('assets/img/products/lija-diseno-6-mtakk9jbefjn.jpg?v=1792523555864')"><div class="content"><h3>Lijas</h3></div></a>
       <a href="skate?cat=skate-ruedas" class="cat" data-top="skate-ruedas" style="background-image:url('assets/img/products/kit-ruedas-minilogo-x4-mtev45zn5vcq.jpg?v=1792523555864')"><div class="content"><h3>Ruedas</h3></div></a>
       <a href="categoria/skate-trucks" class="cat" data-top="skate-trucks" style="background-image:url('assets/img/products/trucks-maiste-mtetkd8wl7kn.jpg?v=1792523555864')"><div class="content"><h3>Trucks</h3></div></a>
       <a href="skate" class="cat cat-all"><div class="content"><h3>Ver todo</h3></div></a>
@@ -1115,6 +1115,13 @@
     document.querySelectorAll("[data-top]").forEach(function (card) {
       var cat = card.getAttribute("data-top"), m = card.getAttribute("data-top-match");
       var re = m ? new RegExp(m, "i") : null, best = null;
+      // data-top-pick: a product chosen by hand for this card (by slug). It is used while it is
+      // still on sale; if it sells out or is unpublished the card goes back to the rule below.
+      var pick = card.getAttribute("data-top-pick");
+      if (pick) {
+        var chosen = list.filter(function (p) { return p.slug === pick && p.cat === cat && p.img && visible(p); })[0];
+        if (chosen) { card.style.backgroundImage = "url('" + chosen.img + "')"; return; }
+      }
       list.forEach(function (p) {
         if (p.cat !== cat || !p.img || p.img.indexOf("frame-placeholder") !== -1 || !visible(p)) return;
         if (re && !re.test(p.n)) return;
