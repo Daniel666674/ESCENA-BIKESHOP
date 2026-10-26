@@ -8907,5 +8907,16 @@ window.ESCENA_AUDIT = [
    "rin-demolition-zero-plus-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-26T18:44:50.144Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "llanta-odyssey-broc-negra-2-25-2-40",
+   "llanta-alinetion-prowler"
+  ],
+  "deleted": []
  }
 ];
