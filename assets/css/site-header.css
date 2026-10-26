@@ -34,6 +34,11 @@
 .brand-strip .bs-chip img { display: block; height: 44px; width: auto; max-width: 152px; object-fit: contain; background: #fff; border-radius: 6px; padding: 5px 14px; opacity: .9; transition: opacity .2s; }
 @media (hover: hover) and (pointer: fine) { .brand-strip .bs-chip:hover img { opacity: 1; } }
 @media (max-width: 640px) { .brand-strip { padding: 7px 0; } .brand-strip .bs-chip img { height: 32px; max-width: 112px; padding: 4px 10px; } }
+/* Squarish / tall logos (Fitbikeco, STLN Bikes, S&M) are limited by the strip's fixed height and
+   read much smaller than the wide wordmarks next to them. Give those three a little more room
+   (chip only 4px taller) so they carry the same visual weight. */
+.brand-strip .bs-chip img[src*="logo_21"], .brand-strip .bs-chip img[src*="logo_22"], .brand-strip .bs-chip img[src*="logo_23"] { height: 48px; margin: -2px 0; padding: 2px 8px; }
+@media (max-width: 640px) { .brand-strip .bs-chip img[src*="logo_21"], .brand-strip .bs-chip img[src*="logo_22"], .brand-strip .bs-chip img[src*="logo_23"] { height: 36px; margin: -2px 0; padding: 2px 6px; } }
 
 /* ---- Header shell ----
    Always a translucent black (frosted) bar, matching the dark brand strip
