@@ -511,6 +511,31 @@ header.top-bar .brand .name { color: #fff; }
   </div>
 </section>
 
+<!-- SEO-LINKS:START -->
+<style>
+  .seo-links { padding: 2.2rem 1.5rem 2.6rem; background: #f6f6f4; border-top: 1px solid #ececeb; }
+  .seo-links .wrap { max-width: 1180px; margin: 0 auto; }
+  .seo-links h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 1.5rem; letter-spacing: .04em; margin: 1.1rem 0 .6rem; }
+  .seo-links h2:first-child { margin-top: 0; }
+  .seo-links h3 { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: #666; margin: .9rem 0 .4rem; }
+  .seo-links .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .seo-links .chips a { display: inline-block; padding: .35rem .8rem; border: 1px solid #dcdcd8; border-radius: 999px; background: #fff; color: #0A0A0A; text-decoration: none; font-size: .78rem; }
+  .seo-links .chips a:hover { background: #0A0A0A; color: #fff; border-color: #0A0A0A; }
+  .seo-intro { padding: 1.3rem 1.5rem 0; }
+  .seo-intro .wrap { max-width: 1180px; margin: 0 auto; }
+  .seo-intro p { max-width: 820px; color: #555; font-size: .92rem; line-height: 1.7; }
+  .seo-intro a { color: #0A0A0A; text-decoration: underline; }
+</style>
+<nav class="seo-links" aria-label="Categorías y marcas"><div class="wrap">
+<h2>Explora por categoría</h2>
+<h3>BMX</h3><div class="chips"><a href="categoria/bicicletas">Bicicletas</a><a href="categoria/marcos">Marcos</a><a href="categoria/stems">Cañas (Stems)</a><a href="categoria/manubrios">Timones (Manubrios)</a><a href="categoria/horquillas">Tenedores (Horquillas)</a><a href="categoria/bielas">Bielas (Cranks)</a><a href="categoria/manzana-delantera">Manzanas delanteras</a><a href="categoria/manzana-trasera">Manzanas traseras y Cassettes</a><a href="categoria/rines">Rines (Aros)</a><a href="categoria/llantas">Llantas</a><a href="categoria/pinones">Platos (Piñones)</a><a href="categoria/cadenas">Cadenas</a><a href="categoria/pedales">Pedales</a><a href="categoria/sillines">Sillas (Sillines)</a><a href="categoria/tijas">Postes (Tijas)</a><a href="categoria/punos">Grips (Puños)</a><a href="categoria/caja-frente">Cajas de dirección</a><a href="categoria/caja-centro">Cajas de centro</a><a href="categoria/clavijas">Pegs (Clavijas)</a><a href="categoria/tornilleria">Tornillería</a><a href="categoria/herramientas">Herramientas</a></div>
+<h3>Skate</h3><div class="chips"><a href="categoria/skate-tablas">Tablas (Maderos)</a><a href="categoria/skate-lijas">Lijas (Grip tape)</a><a href="categoria/skate-trucks">Trucks</a><a href="categoria/skate-rodamientos">Rodamientos</a><a href="categoria/skate-accesorios">Accesorios de skate</a></div>
+<h3>Protecciones</h3><div class="chips"><a href="categoria/cascos">Cascos</a><a href="categoria/guantes">Guantes</a><a href="categoria/canilleras">Canilleras</a><a href="categoria/rodilleras">Rodilleras</a></div>
+<h2>Explora por marca</h2>
+<div class="chips"><a href="marca/alienation">Alienation</a><a href="marca/brainstorm">Brainstorm</a><a href="marca/bsd">BSD</a><a href="marca/colony">Colony</a><a href="marca/cult">Cult</a><a href="marca/demolition">Demolition</a><a href="marca/eighties">Eighties</a><a href="marca/fate">Fate</a><a href="marca/federal">Federal</a><a href="marca/fiend">Fiend</a><a href="marca/fitbikeco">Fitbikeco</a><a href="marca/gw">GW</a><a href="marca/innova">Innova</a><a href="marca/kmc">KMC</a><a href="marca/koston">Koston</a><a href="marca/merritt">Merritt</a><a href="marca/monk">Monk</a><a href="marca/mutanty">Mutanty</a><a href="marca/odyssey">Odyssey</a><a href="marca/primo">Primo</a><a href="marca/protec">Protec</a><a href="marca/s-m">S&amp;M</a><a href="marca/shadow">Shadow</a><a href="marca/skate-terror">Skate Terror</a><a href="marca/stolen">Stolen</a><a href="marca/tallorder">Tallorder</a><a href="marca/trueno">Trueno</a><a href="marca/tsg">Tsg</a><a href="marca/volume">Volume</a></div>
+</div></nav>
+<!-- SEO-LINKS:END -->
+
 <!-- ============ FOOTER ============ -->
 <div class="trust-strip">
   <div class="wrap">
@@ -588,8 +613,8 @@ header.top-bar .brand .name { color: #fff; }
   // default, a present (even blank) key overwrites it.
   (function pageHeadText(){
     var t = window.ESCENA_SITE_TEXT || {};
-    if ("tiendaTitle" in t) { var h = document.getElementById("pageTitle"); if (h) h.textContent = t.tiendaTitle; }
-    if ("tiendaSub" in t) { var s = document.getElementById("pageSubtitle"); if (s) s.textContent = t.tiendaSub; }
+    if ("tiendaTitle" in t && !window.ESCENA_LANDING) { var h = document.getElementById("pageTitle"); if (h) h.textContent = t.tiendaTitle; }
+    if ("tiendaSub" in t && !window.ESCENA_LANDING) { var s = document.getElementById("pageSubtitle"); if (s) s.textContent = t.tiendaSub; }
   })();
 </script>
 <script>
@@ -883,9 +908,12 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return VISIBLE
   // Categories that were renamed keep their old ?cat= value working, so links
   // already shared/bookmarked/indexed don't dead-end on an empty grid.
   var LEGACY_CAT = { corazas: "llantas", bujes: "manzana-trasera", dc: "caja-centro" };
-  var initialCat = urlParams.get("cat") || "all";
+  // Landing pages (categoria/*, marca/*, built by tools/generate-seo-pages.py) open
+  // already filtered through window.ESCENA_LANDING; ?cat= / ?brand= still win.
+  var LANDING = window.ESCENA_LANDING || {};
+  var initialCat = urlParams.get("cat") || LANDING.cat || "all";
   if (LEGACY_CAT[initialCat]) initialCat = LEGACY_CAT[initialCat];
-  var initialBrand = urlParams.get("brand");
+  var initialBrand = urlParams.get("brand") || LANDING.brand || null;
   if (initialBrand) showBrandBanner(initialBrand);
   var initialQuery = urlParams.get("q");
   if (initialQuery) {
@@ -924,6 +952,6 @@ var PRODUCTS = (window.ESCENA_PRODUCTS || []).filter(function(p){ return VISIBLE
 <script>var ESCENA_ROOT = "";</script>
 <script src="assets/js/cart.js?v=13"></script>
 <script src="assets/js/cookie-consent.js?v=1"></script>
-<script src="assets/js/analytics.js?v=1"></script>
+<script src="assets/js/analytics.js?v=2"></script>
 </body>
 </html>

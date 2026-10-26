@@ -27,6 +27,14 @@ jobs:
       - name: Generate data feeds (inventory + sales summary)
         run: python3 tools/generate-feeds.py
 
+      # Rebuilds categoria/*.html, marca/*.html and sitemap-landing.xml from the
+      # catalog admin.html just published, so the category/brand pages Google
+      # indexes always list what is actually for sale. Output is also committed,
+      # so if this step ever fails the last good pages are still deployed.
+      - name: Generate SEO landing pages (categories + brands)
+        continue-on-error: true
+        run: python3 tools/generate-seo-pages.py
+
       - name: Deploy to Hostinger (FTPS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
