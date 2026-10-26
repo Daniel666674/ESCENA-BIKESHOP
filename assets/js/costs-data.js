@@ -413,7 +413,7 @@ window.ESCENA_COSTS = {
  "manzana-delantera-gw-negra": 24000,
  "manzana-salt-pus-morada-eje-macho": 96000,
  "protector-g-sport-drive": 60000,
- "protector-merritt-sentry-drive": 36000,
+ "protector-merritt-sentry-drive": 40000,
  "protector-delantero-brainstorm-nylon": 24000,
  "protector-de-marco-brainstorm": 42400,
  "protector-braisntorm-drive-nylon": 24800,
