@@ -36,7 +36,7 @@ MIN_CAT_PRODUCTS = 3
 MIN_BRAND_PRODUCTS = 4
 # Pages the home page links to must never disappear (a sold-out week would otherwise
 # turn those links into 404s), so they are generated from a single product up.
-PINNED_CATS = {"stems", "manubrios", "horquillas", "manzana-trasera", "skate-lijas", "skate-trucks"}
+PINNED_CATS = {"marcos", "bielas", "horquillas", "manzana-trasera", "skate-lijas", "skate-trucks"}
 # Not real brands: placeholders / data-entry variants in the catalog. ("STL" is how some
 # Stolen products were typed — merge it into "Stolen" in the admin, then drop it here.)
 SKIP_BRANDS = {"generico", "genericos", "stl"}
