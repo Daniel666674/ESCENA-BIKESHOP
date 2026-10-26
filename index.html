@@ -212,6 +212,23 @@
     @media (max-width: 980px) { .rail { --per: 3; } .rail-tall { --per: 3; } }
     @media (max-width: 640px) { .rail, .rail-tall { --per: 1.6; --gap: 1rem; } }
 
+    /* ============ GOOGLE REVIEWS (rail of cards) ============ */
+    .rail-reviews { --per: 3; }
+    .revcard { flex: 0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per)); scroll-snap-align: start; min-width: 0; background: var(--panel); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: .9rem; }
+    .rev-stars { color: #d9d9d4; font-size: 1.05rem; letter-spacing: .12em; }
+    .rev-stars .on { color: var(--gold); }
+    .revcard blockquote { font-size: .92rem; line-height: 1.6; color: #333; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+    .rev-who { display: flex; align-items: center; gap: .7rem; margin-top: auto; }
+    .rev-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: none; }
+    .rev-initial { display: flex; align-items: center; justify-content: center; background: var(--ink); color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; }
+    .rev-who b { display: block; font-size: .88rem; }
+    .rev-who small { display: block; font-size: .72rem; color: var(--muted); }
+    .rev-actions { margin-top: 1.6rem; display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+    .rev-actions [hidden] { display: none; }
+    .rev-all { color: var(--ink); font-size: .85rem; font-weight: 600; }
+    @media (max-width: 980px) { .rail-reviews { --per: 2; } }
+    @media (max-width: 640px) { .rail-reviews { --per: 1.15; } }
+
     /* ============ STORE ROWS (BMX / Skate category cards) ============ */
     .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
     .cats.cats-5 { grid-template-columns: repeat(5, 1fr); }
@@ -460,6 +477,7 @@
           </div>
           <div class="nav-drop-col">
             <a href="tienda?cat=manzana-trasera">Manzanas Traseras</a>
+            <a href="tienda?cat=combos-manzanas" data-combo-link style="display:none">Combo Manzanas</a>
             <a href="tienda?cat=rines">Rines</a>
             <a href="tienda?cat=clavijas">Pegs</a>
             <a href="tienda?cat=piezas">Repuestos</a>
@@ -942,6 +960,25 @@
   </div>
 </section>
 
+<!-- ============ RESEÑAS DE GOOGLE (hidden until assets/js/reviews-data.js has reviews) ============ -->
+<script src="assets/js/reviews-data.js?v=1"></script>
+<section id="resenas" hidden>
+  <div class="wrap">
+    <div class="sec-head sec-head-row">
+      <div>
+        <span class="eyebrow">Lo que dicen los riders</span>
+        <h2>RESEÑAS DE GOOGLE</h2>
+      </div>
+      <div class="rail-nav"><button class="rail-btn" type="button" data-dir="-1" aria-label="Anteriores">&#8249;</button><button class="rail-btn" type="button" data-dir="1" aria-label="Siguientes">&#8250;</button></div>
+    </div>
+    <div class="rail rail-reviews" id="reviewsRail"></div>
+    <p class="rev-actions">
+      <a class="btn btn-ink" id="reviewWriteBtn" href="#" target="_blank" rel="noopener" hidden>Deja tu reseña en Google</a>
+      <a class="rev-all" id="reviewAllLink" href="#" target="_blank" rel="noopener" hidden>Ver todas en Google &rarr;</a>
+    </p>
+  </div>
+</section>
+
 <!-- ============ TRUST + MOTTO + FOOTER ============ -->
 <div class="trust-strip">
   <div class="wrap">
@@ -954,7 +991,7 @@
       <span>Garantía 100% calidad</span>
     </div>
     <a class="trust-item" href="https://wa.me/573107630504?text=Hola%20ESCENA%2C%20tengo%20una%20pregunta" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
       <span>Contáctanos</span>
     </a>
     <div class="trust-item">
@@ -1152,29 +1189,8 @@
     function esc(v) { return String(v).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
     var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    document.querySelectorAll("[data-rail]").forEach(function (rail) {
-      var cat = rail.getAttribute("data-cat");
-      var lead = (rail.getAttribute("data-slugs") || "").split(",").filter(Boolean);
-      var items = [];
-      lead.forEach(function (slug) {
-        var p = products.filter(function (x) { return x.slug === slug; })[0];
-        if (p) items.push(p);
-      });
-      products.forEach(function (p) {
-        if (p.cat === cat && lead.indexOf(p.slug) < 0 && p.units > 0) items.push(p);
-      });
-      var head = rail.parentNode.querySelector(".rail-nav");
-      if (!items.length) { rail.parentNode.parentNode.hidden = true; return; }
-
-      rail.innerHTML = items.map(function (p) {
-        return '<a class="rcard" href="producto/' + encodeURIComponent(p.slug) + '">' +
-          '<span class="rimg"><img src="' + esc(p.img) + '" alt="' + esc(p.n) + '" loading="lazy" /></span>' +
-          '<span class="rbrand">' + esc(p.brand || "") + '</span>' +
-          '<span class="rname">' + esc(p.n) + '</span>' +
-          '<span class="rprice">$' + money.format(p.price) + '</span></a>';
-      }).join("");
-
-      function step() { var c = rail.querySelector(".rcard"); return c ? c.getBoundingClientRect().width + parseFloat(getComputedStyle(rail).columnGap || 0) : 0; }
+    function enhance(rail, head) {
+      function step() { var c = rail.querySelector(".rcard, .revcard"); return c ? c.getBoundingClientRect().width + parseFloat(getComputedStyle(rail).columnGap || 0) : 0; }
       function overflows() { return rail.scrollWidth > rail.clientWidth + 4; }
       function atEnd() { return rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4; }
       function move(dir) {
@@ -1198,7 +1214,61 @@
         new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: .3 }).observe(rail);
       } else { visible = true; }
       start();
+    }
+
+    document.querySelectorAll("[data-rail]").forEach(function (rail) {
+      var cat = rail.getAttribute("data-cat");
+      var lead = (rail.getAttribute("data-slugs") || "").split(",").filter(Boolean);
+      var items = [];
+      lead.forEach(function (slug) {
+        var p = products.filter(function (x) { return x.slug === slug; })[0];
+        if (p) items.push(p);
+      });
+      products.forEach(function (p) {
+        if (p.cat === cat && lead.indexOf(p.slug) < 0 && p.units > 0) items.push(p);
+      });
+      var head = rail.parentNode.querySelector(".rail-nav");
+      if (!items.length) { rail.parentNode.parentNode.hidden = true; return; }
+
+      rail.innerHTML = items.map(function (p) {
+        return '<a class="rcard" href="producto/' + encodeURIComponent(p.slug) + '">' +
+          '<span class="rimg"><img src="' + esc(p.img) + '" alt="' + esc(p.n) + '" loading="lazy" /></span>' +
+          '<span class="rbrand">' + esc(p.brand || "") + '</span>' +
+          '<span class="rname">' + esc(p.n) + '</span>' +
+          '<span class="rprice">$' + money.format(p.price) + '</span></a>';
+      }).join("");
+
+      enhance(rail, head);
     });
+
+    /* ---- Reseñas de Google (assets/js/reviews-data.js) ----
+       Hand-picked by the client and loaded by hand. Hidden while the list is empty;
+       shows at most 6, reviews with a profile photo first. */
+    var sec = document.getElementById("resenas");
+    var all = window.ESCENA_REVIEWS || [];
+    var cfg = window.ESCENA_REVIEWS_CONFIG || {};
+    if (sec && all.length) {
+      var picked = all.map(function (r, i) { return { r: r, i: i }; })
+        .sort(function (a, b) { return (b.r.avatar ? 1 : 0) - (a.r.avatar ? 1 : 0) || a.i - b.i; })
+        .slice(0, 6).map(function (x) { return x.r; });
+      var rrail = document.getElementById("reviewsRail");
+      rrail.innerHTML = picked.map(function (r) {
+        var n = Math.max(1, Math.min(5, Math.round(r.rating || 5))), stars = "";
+        for (var i = 0; i < 5; i++) stars += '<span class="' + (i < n ? "on" : "") + '">&#9733;</span>';
+        var avatar = r.avatar
+          ? '<img class="rev-avatar" src="' + esc(r.avatar) + '" alt="" loading="lazy" width="44" height="44" />'
+          : '<span class="rev-avatar rev-initial">' + esc(String(r.name || "?").charAt(0).toUpperCase()) + '</span>';
+        return '<figure class="revcard"><div class="rev-stars" role="img" aria-label="' + n + ' de 5 estrellas">' + stars + '</div>' +
+          '<blockquote>' + esc(r.text || "") + '</blockquote>' +
+          '<figcaption class="rev-who">' + avatar + '<span><b>' + esc(r.name || "") + '</b>' +
+          (r.when ? '<small>' + esc(r.when) + '</small>' : "") + '</span></figcaption></figure>';
+      }).join("");
+      var write = document.getElementById("reviewWriteBtn"), seeAll = document.getElementById("reviewAllLink");
+      if (cfg.placeId) { write.href = "https://search.google.com/local/writereview?placeid=" + encodeURIComponent(cfg.placeId); write.hidden = false; }
+      if (cfg.mapsUrl) { seeAll.href = cfg.mapsUrl; seeAll.hidden = false; }
+      sec.hidden = false;
+      enhance(rrail, sec.querySelector(".rail-nav"));
+    }
   })();
 
     /* The brand strip stays in normal document flow (solid white, never over
@@ -1258,7 +1328,7 @@
 
 </script>
 <script>var ESCENA_ROOT = "";</script>
-<script src="assets/js/cart.js?v=13"></script>
+<script src="assets/js/cart.js?v=14"></script>
 <script src="assets/js/cookie-consent.js?v=1"></script>
 <script src="assets/js/analytics.js?v=2"></script>
 </body>

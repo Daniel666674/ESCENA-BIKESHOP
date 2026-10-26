@@ -57,7 +57,9 @@ Meta: llegar a **50+ reseñas** con 4,5★ o más en 3 meses.
 
 3. Responder **todas** las reseñas en menos de 48 h, también las malas, con nombre y sin copiar y pegar.
 4. Nunca pagar, regalar descuentos a cambio ni escribir reseñas falsas: Google las elimina y puede suspender el perfil.
-5. Cuando haya reseñas reales, se agregan a la home y al `aggregateRating` del schema (hoy no se muestra ninguna calificación para no inventar datos).
+5. **Mostrarlas en la home:** la sección "Reseñas de Google" ya está construida y **oculta** hasta que `assets/js/reviews-data.js` tenga reseñas. El cliente elige cuáles; se copian ahí a mano (nombre, estrellas, texto, fecha y, si quieren, la foto de perfil guardada en `assets/img/reviews/`). Se muestran máximo 6, con foto primero. Google no permite traer las fotos que los clientes suben dentro de sus reseñas. Después de editar el archivo hay que subir el número `?v=` de su `<script>` en `index.html`.
+6. **Botón "Deja tu reseña":** necesita el *Place ID* del negocio (pegarlo en `placeId` del mismo archivo). Se obtiene sin contraseñas: con el enlace de Google Maps del negocio (Compartir → Copiar enlace) o buscándolo en la herramienta pública "Place ID Finder" de Google. Con eso el botón abre la ventana de reseña de Google directamente.
+7. No se agrega `aggregateRating` al schema de la tienda: Google no muestra estrellas en los resultados cuando el propio negocio marca sus reseñas, así que solo agregaría riesgo.
 
 ## 5. Contenido (blog)
 

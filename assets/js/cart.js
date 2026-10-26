@@ -560,3 +560,17 @@
     }
   }
 })();
+
+/* "Combo Manzanas" menu link: shipped hidden on every page, shown only when the catalog
+   actually has a published, in-stock combo (so it never leads to an empty category).
+   Pages that don't load products-data.js simply keep it hidden. */
+(function () {
+  var links = document.querySelectorAll("a[data-combo-link]");
+  var list = window.ESCENA_PRODUCTS;
+  if (!links.length || !list) return;
+  var visible = window.ESCENA_STOCK && window.ESCENA_STOCK.isVisible
+    ? window.ESCENA_STOCK.isVisible
+    : function (p) { return p.published !== false; };
+  var has = list.some(function (p) { return p.cat === "combos-manzanas" && visible(p); });
+  if (has) Array.prototype.forEach.call(links, function (a) { a.style.display = ""; });
+})();
