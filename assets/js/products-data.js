@@ -1162,7 +1162,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromo 4140 · Nylon reforzado · Negro - Hubguard - Peso: 3.9 Onzas",
   "price": 100000,
   "sku": "MZT-MUT-003",
-  "units": 2,
+  "units": 0,
   "imgFit": "cover",
   "slug": "protector-mutanty-immortal-no-drive-trasero",
   "order": 230,
