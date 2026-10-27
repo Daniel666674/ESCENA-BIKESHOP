@@ -8974,5 +8974,16 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-trueno-v2"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-27T21:52:38.833Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "protector-mutanty-immortal-no-drive-trasero",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
