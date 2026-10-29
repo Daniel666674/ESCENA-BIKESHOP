@@ -8985,5 +8985,28 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-29T20:09:13.401Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "14 productos editados",
+  "created": [],
+  "edited": [
+   "fiend-reynolds-v3-negro",
+   "tenedor-fiend-process-v2-cromado",
+   "tenedor-odyssey-r25",
+   "tenedor-cult-sect-v4-cromado-18mm",
+   "tenedor-fiend-process-v2-negrotubo-de-direccion-mecanizado-direcciones-integradas-45-45-un-perno-de-compresion-de-aleacion-serie-7000-compatible-con-ejes-de-3-8-10-mm-peso-34-9-oz",
+   "federal-horquilla-cromada",
+   "tall-order-ramp",
+   "tenedor-colony-sweet-thoot",
+   "tenedor-fiction-shank",
+   "tenedor-fiction-shank-cromado",
+   "tenedor-gw-destructor-tornasol",
+   "timon-fiend-reynolds-cromado",
+   "timon-fiend-reynolds",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
