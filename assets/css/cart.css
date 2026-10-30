@@ -84,3 +84,71 @@ a.trust-item:hover { color: #fff; }
 .cart-item.is-unavailable .ci-img img { filter: grayscale(1); }
 .cart-item .ci-unavailable { display: inline-block; font-size: .66rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: #c0392b; margin-bottom: .35rem; }
 .cart-note { font-size: .74rem; line-height: 1.5; color: #c0392b; margin: .9rem 0 0; }
+
+/* ============================================================
+   SITE FOOTER (shared by every storefront page — see assets/img/pay/README.txt for the logos)
+   All rules are scoped under .site-footer and set their own values, so the old per-page
+   `footer { … }` rules that still sit inline in some pages can't leak into it.
+   ============================================================ */
+.site-footer { background: #0A0A0A; color: rgba(255,255,255,.62); padding: 0; margin: 0; text-align: left; font-size: 1rem; line-height: 1.6; border-top: 1px solid var(--gold, #C79A3A); }
+.site-footer *, .site-footer *::before, .site-footer *::after { box-sizing: border-box; }
+.site-footer a { display: inline; padding: 0; color: rgba(255,255,255,.7); text-decoration: none; font-size: inherit; transition: color .2s; }
+.site-footer a:hover { color: #fff; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer h4 { margin: 0 0 1.1rem; padding: 0; color: #fff; font-family: 'Bebas Neue', 'Inter', sans-serif; font-weight: 400; font-size: 1.25rem; letter-spacing: .1em; line-height: 1; text-transform: uppercase; }
+.site-footer h4::after { content: ""; display: block; width: 26px; height: 2px; margin-top: .65rem; background: var(--gold, #C79A3A); }
+.sf-inner { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
+
+.sf-top { display: flex; align-items: center; gap: 1.6rem 2.4rem; flex-wrap: wrap; padding: 3rem 0 2.4rem; border-bottom: 1px solid rgba(255,255,255,.09); }
+.sf-brand { display: block; line-height: 0; margin-right: auto; }
+.sf-brand img { display: block; width: clamp(190px, 24vw, 280px); height: auto; }
+.site-footer .sf-social { display: flex; gap: .65rem; }
+.site-footer .sf-social a { width: 40px; height: 40px; border: 1.5px solid rgba(255,255,255,.28); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #fff; transition: background .2s, border-color .2s, color .2s; }
+.site-footer .sf-social a:hover { background: var(--gold, #C79A3A); border-color: var(--gold, #C79A3A); color: #0A0A0A; }
+.site-footer .sf-social svg { width: 18px; height: 18px; fill: currentColor; }
+.site-footer .sf-cta { display: inline-flex; align-items: center; gap: .55rem; padding: .85rem 1.5rem; border: 1.5px solid var(--gold, #C79A3A); border-radius: 4px; color: var(--gold, #C79A3A); font-weight: 700; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; transition: background .2s, color .2s; }
+.site-footer .sf-cta:hover { background: var(--gold, #C79A3A); color: #0A0A0A; }
+.site-footer .sf-cta svg { width: 17px; height: 17px; fill: currentColor; }
+
+.sf-main { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 3rem; padding: 2.8rem 0; }
+.sf-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem 2.2rem; align-content: start; }
+.sf-list li { display: flex; gap: .75rem; align-items: flex-start; margin-bottom: .85rem; font-size: .9rem; }
+.sf-list svg { flex: none; width: 18px; height: 18px; margin-top: .2rem; fill: none; stroke: var(--gold, #C79A3A); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.sf-hours { margin: 0; }
+.sf-hours div { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid rgba(255,255,255,.08); font-size: .88rem; }
+.sf-hours div:first-child { padding-top: 0; }
+.sf-hours dt { color: rgba(255,255,255,.7); }
+.sf-hours dd { margin: 0; color: #fff; font-weight: 600; text-align: right; }
+.sf-links li { margin-bottom: .6rem; font-size: .9rem; }
+
+.sf-map { position: relative; align-self: stretch; min-height: 270px; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; overflow: hidden; background: #1a1a1a; }
+/* the map is shown in black and white to sit in the dark footer */
+.sf-map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(1) contrast(1.08); }
+.site-footer .sf-map-link { position: absolute; left: .8rem; bottom: .8rem; z-index: 2; display: inline-flex; align-items: center; gap: .45rem; padding: .55rem 1rem; border-radius: 999px; background: #0A0A0A; color: #fff; font-weight: 700; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; box-shadow: 0 4px 14px rgba(0,0,0,.5); }
+.site-footer .sf-map-link:hover { background: var(--gold, #C79A3A); color: #0A0A0A; }
+
+.sf-pay { display: flex; align-items: center; justify-content: space-between; gap: 1.2rem 2rem; flex-wrap: wrap; padding: 1.9rem 0; border-top: 1px solid rgba(255,255,255,.09); }
+.sf-pay-title { color: rgba(255,255,255,.5); font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.sf-pay ul { display: flex; flex-wrap: wrap; gap: .75rem; }
+.sf-pay li { line-height: 0; }
+.sf-pay img { display: block; height: 42px; width: auto; border-radius: 6px; }
+
+.sf-bottom { display: flex; justify-content: space-between; align-items: center; gap: .8rem 1.5rem; flex-wrap: wrap; padding: 1.4rem 0 1.8rem; border-top: 1px solid rgba(255,255,255,.09); font-size: .78rem; color: rgba(255,255,255,.42); }
+.sf-bottom p { margin: 0; }
+.sf-bottom nav { display: flex; gap: .4rem 1.4rem; flex-wrap: wrap; }
+.site-footer .sf-bottom a { color: rgba(255,255,255,.55); }
+.site-footer .sf-bottom a:hover { color: #fff; }
+
+@media (max-width: 900px) {
+  .sf-main { grid-template-columns: 1fr; gap: 2.2rem; }
+  .sf-map { min-height: 260px; }
+  .sf-pay { justify-content: center; }
+  .sf-pay ul { justify-content: center; }
+}
+@media (max-width: 560px) {
+  .sf-top { padding: 2.2rem 0 1.8rem; }
+  .sf-brand { margin-right: 0; width: 100%; }
+  .sf-cols { grid-template-columns: 1fr; }
+  .sf-pay img { height: 36px; }
+  .sf-bottom { justify-content: center; text-align: center; }
+}
