@@ -51,7 +51,7 @@ Animal, BSD, Brainstorm, Colony, Cult, Demolition, Éclat, ESCENA, Fate, Federal
 - Arma tu BMX (configurador guiado para armar una bici completa a tu medida desde cero): https://escenabmx.com/armar-bmx
 - Blog (guías de compra, mantenimiento y cultura BMX): https://escenabmx.com/blog
 - Team Escena (riders oficiales de la tienda, en la página de inicio): https://escenabmx.com/inicio#team
-- Jammer Ardila "Mellow", rider Team Pro: https://escenabmx.com/team-jammer-ardila
+- Jamer Ardila "Mellow", rider Team Pro: https://escenabmx.com/team-jammer-ardila
 - Brayan Fonseca, rider Team Pro (park y dirt jump): https://escenabmx.com/team-brayan-fonseca
 - Camilo Rodríguez, rider Team Pro (street): https://escenabmx.com/team-camilo-rodriguez
 - Michael Núñez, rider Team Family (street de vieja escuela, dirt y park): https://escenabmx.com/team-michael-nunez
