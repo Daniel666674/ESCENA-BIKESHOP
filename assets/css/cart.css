@@ -152,3 +152,14 @@ a.trust-item:hover { color: #fff; }
   .sf-pay img { height: 36px; }
   .sf-bottom { justify-content: center; text-align: center; }
 }
+
+/* ---- Product page: payment methods in the buy box, trust strip right under the product ---- */
+.pdp-pay { margin: 1.2rem 0 .3rem; padding: 1.05rem 1.2rem 1.1rem; max-width: 398px; border: 1px solid #ececeb; border-radius: 10px; background: #fafaf8; }
+.pdp-pay h5 { margin: 0 0 .75rem; font-family: 'Inter', system-ui, sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #666; }
+.pdp-pay ul { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 0; padding: 0; }
+.pdp-pay li { line-height: 0; margin: 0; }
+.pdp-pay img { display: block; height: 30px; width: auto; border-radius: 5px; box-shadow: 0 0 0 1px rgba(0,0,0,.07); }
+.pdp-pay p { margin: .8rem 0 0; font-size: .78rem; line-height: 1.5; color: #777; }
+.pdp + .trust-strip { margin-top: 3rem; }
+.trust-strip + .related { padding-top: 3rem; }
+@media (max-width: 480px) { .pdp-pay { max-width: none; } .pdp-pay img { height: 28px; } }
