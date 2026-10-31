@@ -773,7 +773,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
   "price": 60000,
   "sku": "CJF-TRU-003",
-  "units": 4,
+  "units": 2,
   "imgFit": "cover",
   "slug": "cajas-de-centro-trueno-cromado",
   "order": 130,
@@ -5033,7 +5033,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 15mm",
   "price": 60000,
   "sku": "CJF-TRU-001",
-  "units": 5,
+  "units": 3,
   "colors": [
    {
     "label": "Negro",
