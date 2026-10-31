@@ -9008,5 +9008,16 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-31T17:28:54.390Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "kit-de-herramienta-cult",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
