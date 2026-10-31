@@ -9019,5 +9019,35 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-31T17:49:54.144Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 18 productos editados, 2 fotos subidas",
+  "created": [
+   "pedales-odyssey-twist-pro-rosado",
+   "pedales-odyssey-twist-pro-morado-negra"
+  ],
+  "edited": [
+   "pedales-merritt-p1-negro",
+   "pedales-merritt-p1-aqua",
+   "pedales-stolen-thermalite-negro",
+   "pedales-stolen-thermalite-aqua",
+   "pedales-stolen-thermalite-amarillo",
+   "pedales-stolen-thermalite-verde",
+   "pedales-stolen-thermalite-rosa",
+   "pedales-tallorder-catch-negro",
+   "pedales-demolition-trooper-blanco-negro",
+   "pedales-demolition-trooper-azul-blanco",
+   "pedales-demolition-trooper-rojo-blanco",
+   "pedales-demolition-trooper-morado-amarillo",
+   "pedales-demolition-trooper-azul-rojo",
+   "pedales-wellgo-negro",
+   "pedales-fate-negro",
+   "pedales-bsd-safari-negro",
+   "pedales-cinema-tilt-negro",
+   "pedales-metal-negro-01"
+  ],
+  "deleted": []
  }
 ];
