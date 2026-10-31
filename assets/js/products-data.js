@@ -217,7 +217,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "El Uniguard de G-Sport es un protector de buje diseñado para adaptarse a cualquier BMX freestyle del mercado - Hecho de cromoly tratado térmicamente para una larga vida útil Compatible con ambos LHD y RHD Compatible con el lado del conductor y no conductor Ajuste universal",
   "price": 75000,
   "sku": "MZT-GSP-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/protector-g-sport-drive-mv01olh803ia.jpg?v=1792523555864",
