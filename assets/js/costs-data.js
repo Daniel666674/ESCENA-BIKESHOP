@@ -421,5 +421,7 @@ window.ESCENA_COSTS = {
  "protector-brainstorm-delantero-cromolio": 60000,
  "protector-brainstorm-trasero-no-drive-cromolio": 64000,
  "cassette-alienation-iluminati-cromado": 544000,
- "cassette-alienation-iluminati-negro": 544000
+ "cassette-alienation-iluminati-negro": 544000,
+ "pedales-odyssey-twist-pro-morado-negra": 76000,
+ "pedales-odyssey-twist-pro-rosado": 76000
 };
