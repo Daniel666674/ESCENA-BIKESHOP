@@ -9079,5 +9079,15 @@ window.ESCENA_AUDIT = [
    "pedales-odyssey-twist-pro-rosado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-31T19:15:07.515Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "protector-g-sport-drive"
+  ],
+  "deleted": []
  }
 ];
