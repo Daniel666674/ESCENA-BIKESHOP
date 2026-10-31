@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pedales Odxyssey Twist Pro Morado",
+  "brand": "Odyssey",
+  "cat": "pedales",
+  "spec": "",
+  "price": 95000,
+  "sku": "PED-ODY-005",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "pedales-odxyssey-twist-pro-morado",
+  "order": 60,
+  "img": "assets/img/products/pedales-odxyssey-twist-pro-morado-mvwpoqumncvi.jpg?v=1793469927595"
+ },
+ {
   "n": "Pedales Odyssey Twist Pro Rosado",
   "brand": "Odyssey",
   "cat": "pedales",
@@ -986,7 +999,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "pedales-merritt-p1-negro",
-  "order": 170,
+  "order": 180,
   "img": "assets/img/products/pedales-merritt-p1-negro-muhg8qtysk3t.jpg?v=1792523555864"
  },
  {
@@ -1002,7 +1015,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-merritt-p1-aqua-muh9kvgadi0f.jpg?v=1792523555864"
   ],
   "slug": "pedales-merritt-p1-aqua",
-  "order": 180,
+  "order": 190,
   "img": "assets/img/products/pedales-merritt-p1-aqua-muh9o74fjjvj.jpg?v=1792523555864"
  },
  {
@@ -2402,7 +2415,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-stolen-thermalite-negro-mu35hfc20psc.jpg?v=1792523555864"
   ],
   "slug": "pedales-stolen-thermalite-negro",
-  "order": 190,
+  "order": 200,
   "img": "assets/img/products/pedales-stolen-thermalite-negro-mu35hdzkley1.jpg?v=1792523555864"
  },
  {
@@ -2419,7 +2432,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-stolen-thermalite-aqua-mu35hixqpiix.jpg?v=1792523555864"
   ],
   "slug": "pedales-stolen-thermalite-aqua",
-  "order": 200,
+  "order": 210,
   "img": "assets/img/products/pedales-stolen-thermalite-aqua-mu35hhgma375.jpg?v=1792523555864"
  },
  {
@@ -2436,7 +2449,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-stolen-thermalite-amarillo-mu35hlfi8857.jpg?v=1792523555864"
   ],
   "slug": "pedales-stolen-thermalite-amarillo",
-  "order": 210,
+  "order": 220,
   "img": "assets/img/products/pedales-stolen-thermalite-amarillo-mu35hk73ixov.jpg?v=1792523555864"
  },
  {
@@ -2453,7 +2466,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-stolen-thermalite-verde-mu35ijl624sb.jpg?v=1792523555864"
   ],
   "slug": "pedales-stolen-thermalite-verde",
-  "order": 220,
+  "order": 230,
   "img": "assets/img/products/pedales-stolen-thermalite-verde-mu35icldqxj6.jpg?v=1792523555864"
  },
  {
@@ -2470,7 +2483,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-stolen-thermalite-rosa-mu35irjshae8.jpg?v=1792523555864"
   ],
   "slug": "pedales-stolen-thermalite-rosa",
-  "order": 230,
+  "order": 240,
   "img": "assets/img/products/pedales-stolen-thermalite-rosa-mu35imyffezd.jpg?v=1792523555864"
  },
  {
@@ -2483,7 +2496,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-azul-rojo",
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/pedales-demolition-trooper-azul-rojo-mu34cbee811z.jpg?v=1792523555864"
  },
  {
@@ -2544,7 +2557,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-demolition-trooper-blanco-negro-mtxl2f4sur81.jpg?v=1792523555864"
   ],
   "slug": "pedales-demolition-trooper-blanco-negro",
-  "order": 150,
+  "order": 160,
   "img": "assets/img/products/pedales-demolition-trooper-blanco-negro-mtxl2dkp1b3l.jpg?v=1792523555864"
  },
  {
@@ -2557,7 +2570,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-rojo-blanco",
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/pedales-demolition-trooper-rojo-blanco-mtxl2g8rpmnm.jpg?v=1792523555864"
  },
  {
@@ -2570,7 +2583,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-azul-blanco",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/pedales-demolition-trooper-azul-blanco-mtxl2ho9l07i.jpg?v=1792523555864"
  },
  {
@@ -2583,7 +2596,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-morado-amarillo",
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/pedales-demolition-trooper-morado-amarillo-mtxknl9czpgm.jpg?v=1792523555864"
  },
  {
@@ -2600,7 +2613,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-tallorder-catch-negro-mtxk8otc9u3b.jpg?v=1792523555864"
   ],
   "slug": "pedales-tallorder-catch-negro",
-  "order": 160,
+  "order": 170,
   "img": "assets/img/products/pedales-tallorder-catch-negro-mtxk8mxo5w8e.jpg?v=1792523555864"
  },
  {
@@ -2617,7 +2630,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-bsd-safari-negro-mtxjyq9esuc5.jpg?v=1792523555864"
   ],
   "slug": "pedales-bsd-safari-negro",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/pedales-bsd-safari-negro-mtxjyorwbvbi.jpg?v=1792523555864"
  },
  {
@@ -2644,7 +2657,7 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "imgFit": "cover",
   "slug": "pedales-cinema-tilt-negro",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/pedales-cinema-tilt-negro-mtxjjj3zb35i.jpg?v=1792523555864"
  },
  {
@@ -7214,7 +7227,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-wellgo-negro.jpg?v=1792523555864",
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1792523555864"
   ],
-  "order": 100,
+  "order": 110,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1792523555864"
  },
@@ -7493,7 +7506,7 @@ window.ESCENA_PRODUCTS = [
   "price": 65000,
   "sku": "PED-FAT-001",
   "units": 4,
-  "order": 90,
+  "order": 100,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-fate-negro-mtxk1vjpiakf.jpg?v=1792523555864"
  },
@@ -8577,7 +8590,7 @@ window.ESCENA_PRODUCTS = [
   "price": 85000,
   "sku": "PEDALES-METAL-NEGRO-01",
   "units": 5,
-  "order": 60,
+  "order": 70,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-metal-negro-01-mtxiv4hz9yb6.jpg?v=1792523555864"
  },
