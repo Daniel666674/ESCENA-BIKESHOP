@@ -617,7 +617,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Viene en una pequeña bolsa con cremallera que cabe fácilmente en el bolsillo o en la mochila...  1x 6 mm 1x 8 mm 1x casquillo profundo de 17 mm 1x extensión de enchufe 1x mango de torsión 1x mosquetón para llave de radios",
   "price": 120000,
   "sku": "HER-CLT-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "slug": "kit-de-herramienta-cult",
   "order": 0,
