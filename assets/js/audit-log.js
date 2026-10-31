@@ -9049,5 +9049,35 @@ window.ESCENA_AUDIT = [
    "pedales-metal-negro-01"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-31T18:05:41.057Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 19 productos editados, 1 foto subida",
+  "created": [
+   "pedales-odxyssey-twist-pro-morado"
+  ],
+  "edited": [
+   "pedales-stolen-thermalite-rosa",
+   "pedales-stolen-thermalite-verde",
+   "pedales-stolen-thermalite-amarillo",
+   "pedales-stolen-thermalite-aqua",
+   "pedales-stolen-thermalite-negro",
+   "pedales-merritt-p1-aqua",
+   "pedales-merritt-p1-negro",
+   "pedales-tallorder-catch-negro",
+   "pedales-demolition-trooper-blanco-negro",
+   "pedales-demolition-trooper-azul-blanco",
+   "pedales-demolition-trooper-rojo-blanco",
+   "pedales-demolition-trooper-morado-amarillo",
+   "pedales-demolition-trooper-azul-rojo",
+   "pedales-wellgo-negro",
+   "pedales-fate-negro",
+   "pedales-bsd-safari-negro",
+   "pedales-cinema-tilt-negro",
+   "pedales-metal-negro-01",
+   "pedales-odyssey-twist-pro-rosado"
+  ],
+  "deleted": []
  }
 ];
