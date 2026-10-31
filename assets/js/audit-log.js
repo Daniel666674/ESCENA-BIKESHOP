@@ -9089,5 +9089,17 @@ window.ESCENA_AUDIT = [
    "protector-g-sport-drive"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-10-31T19:17:23.238Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos editados",
+  "created": [],
+  "edited": [
+   "cajas-de-frente-fiend-stack",
+   "cajas-de-frente-trueno-v2",
+   "cajas-de-centro-trueno-cromado"
+  ],
+  "deleted": []
  }
 ];
