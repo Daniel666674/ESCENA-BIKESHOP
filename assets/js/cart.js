@@ -354,7 +354,10 @@
       }
       var checkoutBtn = e.target.closest("#cartCheckout");
       if (checkoutBtn && !checkoutBtn.disabled) {
-        var msg = encodeURIComponent(buildCheckoutMessage(pendingOrderNumber || makeOrderNumber()));
+        var orderNo = pendingOrderNumber || makeOrderNumber();
+        var msg = encodeURIComponent(buildCheckoutMessage(orderNo));
+        // Order number doubles as the attribution Ref (see analytics.js).
+        if (window.EscenaTrack) window.EscenaTrack.cartCheckout(orderNo, disponibles(), cartTotal());
         window.open("https://wa.me/" + WA + "?text=" + msg, "_blank", "noopener");
         cartClear();
         closeDrawer();
