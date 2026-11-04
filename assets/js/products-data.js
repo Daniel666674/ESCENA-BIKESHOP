@@ -1,6 +1,6 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Llanta Odyssey Mike Aitken Negra",
+  "n": "Llanta Odyssey Mike Aitken Negra -2.45\"",
   "brand": "Odyssey",
   "cat": "llantas",
   "spec": "Material de buen compuesto y agarre - neumático rápido y duradero que puede afrontar cómodamente cualquier terreno - PSI 100 - Color negro",
@@ -19,7 +19,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/llanta-odyssey-mike-aitken-negra-mw2gwl201gy4.jpg?v=1793817973772"
  },
  {
-  "n": "Llantas BSD Donnastreet Negra",
+  "n": "Llantas BSD Donnastreet Negra - 2.40\"",
   "brand": "BSD",
   "cat": "llantas",
   "spec": "Material de buen compuesto y agarre - PSI 100 - Color negro",
