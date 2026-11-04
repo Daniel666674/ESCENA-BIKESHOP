@@ -665,7 +665,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Ectractor de centro para todo terrreno ò para bielas milimetricas de 19mm",
   "price": 15000,
   "sku": "HER-GWB-004",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "slug": "extractor-de-centro-19mm",
   "order": 60,
