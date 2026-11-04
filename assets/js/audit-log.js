@@ -9156,5 +9156,15 @@ window.ESCENA_AUDIT = [
    "grips-odi-xl-2"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:23:08.999Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "pedales-fate-negro"
+  ],
+  "deleted": []
  }
 ];
