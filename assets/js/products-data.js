@@ -1958,11 +1958,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 80000,
   "sku": "CJC-FAT-002",
-  "units": 3,
+  "units": 0,
   "sizes": [
    {
     "label": "19mm",
-    "units": 3
+    "units": 0,
+    "price": 80000
    }
   ],
   "imgFit": "cover",
