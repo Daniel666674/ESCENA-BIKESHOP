@@ -9186,5 +9186,30 @@ window.ESCENA_AUDIT = [
    "cajas-de-centro-fate-negra-19mm"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:31:35.721Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 14 productos editados, 1 foto subida",
+  "created": [
+   "timon-odyssey-highway-negro"
+  ],
+  "edited": [
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "timon-federal-assaut",
+   "manubrio-cromoly-negro-03",
+   "timon-colony-rick-4-piezas",
+   "timon-merritt-slaughter-4pc-negro",
+   "manubrio-cromoly-negro-01",
+   "timon-cult-crew-cromado",
+   "manubrio-cromoly-negro-02",
+   "timon-fiend-reynolds-cromado",
+   "timon-fiend-reynolds",
+   "timon-cult-heavens-gate-4p-cromado",
+   "timon-cult-havens-gate-4pc-cromado"
+  ],
+  "deleted": []
  }
 ];
