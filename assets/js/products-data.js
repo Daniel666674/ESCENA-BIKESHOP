@@ -4444,7 +4444,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Goma · Extralargos XL 230mm · diseño mushroom",
   "price": 70000,
   "sku": "GRP-ODI-001",
-  "units": 0,
+  "units": 5,
   "slug": "grips-odi-xl-2",
   "img": "assets/img/products/grips-odi-xl-2-mt8xd8h9jcau.jpg?v=1792523555864"
  },
@@ -8831,35 +8831,38 @@ window.ESCENA_PRODUCTS = [
   "spec": "Goma · Firma de Broc Raifor Logo Broc en los extremos Diseño acanalado cómodo Par Ends incluidos 160 mm de longitud",
   "price": 48000,
   "sku": "ODYSSEY-PUNOS-NEGRO-GRIS",
-  "units": 3,
+  "units": 4,
   "order": 50,
   "imgs": [
    "assets/img/products/odyssey-punos-negro-gris-3.jpg?v=1792523555864",
-   "assets/img/products/odyssey-punos-negro-gris.jpg?v=1792523555864",
-   "assets/img/products/odyssey-punos-negro-gris-2.jpg?v=1792523555864"
+   "assets/img/products/odyssey-punos-negro-gris-2.jpg?v=1792523555864",
+   "assets/img/products/odyssey-punos-negro-gris.jpg?v=1792523555864"
   ],
   "colors": [
    {
     "label": "Morado/Negro",
-    "units": 0
+    "units": 0,
+    "price": 48000
    },
    {
     "label": "Negro/Translucido",
-    "units": 0
+    "units": 1,
+    "price": 48000
    },
    {
     "label": "Negro",
-    "units": 3
+    "units": 3,
+    "price": 48000
    }
   ],
   "imgColorMap": {
    "Negro": [
     0
    ],
-   "Morado/Negro": [
+   "Negro/Translucido": [
     1
    ],
-   "Negro/Translucido": [
+   "Morado/Negro": [
     2
    ]
   },
