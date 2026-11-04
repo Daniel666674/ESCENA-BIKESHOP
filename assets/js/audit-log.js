@@ -9307,5 +9307,16 @@ window.ESCENA_AUDIT = [
    "llanta-shadow-creeper-negra-2-40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:47:49.625Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "llanta-odyssey-mike-aitken-negra",
+   "llantas-bsd-donnastreet-negra"
+  ],
+  "deleted": []
  }
 ];
