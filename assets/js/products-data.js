@@ -1,6 +1,6 @@
 window.ESCENA_PRODUCTS = [
  {
-  "n": "Timon Odyssey Highway Negro",
+  "n": "Timon Odyssey Super Highway Negro",
   "brand": "Odyssey",
   "cat": "manubrios",
   "spec": "Material tratado Full cromo - color negro",
