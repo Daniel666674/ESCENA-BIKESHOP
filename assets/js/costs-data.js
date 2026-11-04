@@ -425,5 +425,6 @@ window.ESCENA_COSTS = {
  "pedales-odyssey-twist-pro-morado-negra": 76000,
  "pedales-odyssey-twist-pro-rosado": 76000,
  "pedales-odxyssey-twist-pro-morado": 76000,
- "timon-odyssey-highway-negro": 392000
+ "timon-odyssey-highway-negro": 392000,
+ "llantas-bsd-donnastreet-negra": 152000
 };
