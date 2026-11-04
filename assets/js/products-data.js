@@ -26,10 +26,6 @@ window.ESCENA_PRODUCTS = [
   "price": 190000,
   "sku": "LLA-BSD-001",
   "units": 2,
-  "imgs": [
-   "assets/img/products/llantas-bsd-donnastreet-negra-mw2gom9qz2hg.jpg?v=1793817602417",
-   "assets/img/products/llantas-bsd-donnastreet-negra-mw2gwmx9nqy1.jpg?v=1793817975804"
-  ],
   "sizes": [
    {
     "label": "2.40\"",
@@ -39,7 +35,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "llantas-bsd-donnastreet-negra",
   "order": 50,
-  "img": "assets/img/products/llantas-bsd-donnastreet-negra-mw2gom9qz2hg.jpg?v=1793817602417"
+  "img": "assets/img/products/llantas-bsd-donnastreet-negra-mw2gwmx9nqy1.jpg?v=1793817975804"
  },
  {
   "n": "Timon Odyssey Super Highway Negro",
