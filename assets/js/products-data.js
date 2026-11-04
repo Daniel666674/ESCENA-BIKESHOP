@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Odyssey Highway Negro",
+  "brand": "Odyssey",
+  "cat": "manubrios",
+  "spec": "Material tratado Full cromo - color negro",
+  "price": 490000,
+  "sku": "TMN-ODY-001",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "490000",
+    "units": 1,
+    "price": 490000
+   }
+  ],
+  "slug": "timon-odyssey-highway-negro",
+  "order": 0,
+  "img": "assets/img/products/timon-odyssey-highway-negro-mw2gdk28peoa.jpg?v=1793817085882"
+ },
+ {
   "n": "Pedales Odxyssey Twist Pro Morado",
   "brand": "Odyssey",
   "cat": "pedales",
@@ -1544,7 +1563,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-fiend-reynolds-cromado",
-  "order": 30,
+  "order": 40,
   "img": "assets/img/products/timon-fiend-reynolds-cromado-mue1lq40spd3.jpg?v=1792523555864"
  },
  {
@@ -1567,7 +1586,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-cult-havens-gate-4pc-cromado",
-  "order": 0,
+  "order": 10,
   "img": "assets/img/products/timon-cult-havens-gate-4pc-cromado-mue14yksfrx6.jpg?v=1792524152401"
  },
  {
@@ -1590,7 +1609,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-cult-crew-cromado",
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/timon-cult-crew-cromado-mue0vqucdf0h.jpg?v=1792523555864"
  },
  {
@@ -1615,7 +1634,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-merritt-slaughter-4pc-negro",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/timon-merritt-slaughter-4pc-negro-mue04z0fal11.jpg?v=1792523555864"
  },
  {
@@ -5900,7 +5919,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "timon-federal-assaut",
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/timon-federal-assaut.jpg?v=1792523555864"
  },
  {
@@ -5923,7 +5942,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-colony-rick-4-piezas",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1792523555864"
  },
  {
@@ -5945,7 +5964,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-fiend-reynolds",
-  "order": 20,
+  "order": 30,
   "imgFit": "cover",
   "img": "assets/img/products/timon-fiend-reynolds.jpg?v=1792523555864"
  },
@@ -6094,7 +6113,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1792523555864"
  },
  {
@@ -6142,7 +6161,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1792523555864"
  },
  {
@@ -9461,7 +9480,7 @@ window.ESCENA_PRODUCTS = [
     "price": 380000
    }
   ],
-  "order": 10,
+  "order": 20,
   "img": "assets/img/products/timon-cult-heavens-gate-4p-cromado-2.jpg?v=1792523555864"
  },
  {
@@ -9503,7 +9522,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1792523555864"
  },
  {
@@ -9532,7 +9551,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 40,
+  "order": 50,
   "imgFit": "cover",
   "img": "assets/img/products/manubrio-cromoly-negro-02-mt8wj8u60l6q.jpg?v=1792523555864"
  },
@@ -9561,7 +9580,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1792523555864"
  },
  {
@@ -9579,7 +9598,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1792523555864"
  }
 ];
