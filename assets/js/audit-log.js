@@ -9211,5 +9211,15 @@ window.ESCENA_AUDIT = [
    "timon-cult-havens-gate-4pc-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:31:55.191Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-odyssey-highway-negro"
+  ],
+  "deleted": []
  }
 ];
