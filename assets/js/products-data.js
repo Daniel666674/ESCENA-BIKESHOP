@@ -1388,7 +1388,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material aluminio 6061-T6 - eje hembra con un eje de 14 mm - El buje trasero Wasp también incorpora un eje CRMO endurecido de 10 mm con tornillos hexagonales de 17 mm y rodamientos sellados de alto rendimiento,",
   "price": 760000,
   "sku": "MZT-CLN-001",
-  "units": 1,
+  "units": 4,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/cassette-colony-wasp-negro-mueow1yx56qa.jpg?v=1792523555864",
@@ -1398,11 +1398,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Derecho",
-    "units": 1
+    "units": 2,
+    "price": 760000
    },
    {
     "label": "Izquierdo",
-    "units": 0
+    "units": 2,
+    "price": 760000
    }
   ],
   "slug": "cassette-colony-wasp-negro",
@@ -1466,10 +1468,22 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material 6061-T6 Eje full cr-mo - Tratado al calor Drive 9T - 36 Radios",
   "price": 410000,
   "sku": "MZT-TRU-001",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "slug": "cassette-trueno-v2-tornasol",
   "order": 180,
+  "colors": [
+   {
+    "label": "Derecho",
+    "units": 0,
+    "price": 410000
+   },
+   {
+    "label": "Izquierdo",
+    "units": 1,
+    "price": 410000
+   }
+  ],
   "img": "assets/img/products/cassette-trueno-v2-tornasol-mueo7b5fepfv.jpg?v=1792523555864"
  },
  {
@@ -1796,7 +1810,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 760000,
   "sku": "MZT-CLT-003",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/freecoaster-cult-crew-mubtix1lorjq.jpg?v=1792523555864",
@@ -1804,6 +1818,18 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "freecoaster-cult-crew",
   "order": 30,
+  "colors": [
+   {
+    "label": "Derecho",
+    "units": 1,
+    "price": 760000
+   },
+   {
+    "label": "Izquierdo",
+    "units": 0,
+    "price": 760000
+   }
+  ],
   "img": "assets/img/products/freecoaster-cult-crew-mubtix1lorjq.jpg?v=1792523555864"
  },
  {
@@ -8179,6 +8205,18 @@ window.ESCENA_PRODUCTS = [
   "sku": "STOLEN-BUJE-TRASERO-CASSETTE-NEGRO",
   "units": 1,
   "order": 70,
+  "colors": [
+   {
+    "label": "Derecho",
+    "units": 1,
+    "price": 600000
+   },
+   {
+    "label": "Izquierdo",
+    "units": 0,
+    "price": 600000
+   }
+  ],
   "img": "assets/img/products/stolen-buje-trasero-cassette-negro.jpg?v=1792523555864"
  },
  {
