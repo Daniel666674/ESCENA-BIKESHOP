@@ -9114,5 +9114,18 @@ window.ESCENA_AUDIT = [
    "casco-protec-x-fitbikeco-full-cut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:13:21.560Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "freecoaster-cult-crew",
+   "cassette-colony-wasp-negro",
+   "cassette-trueno-v2-tornasol",
+   "stolen-buje-trasero-cassette-negro"
+  ],
+  "deleted": []
  }
 ];
