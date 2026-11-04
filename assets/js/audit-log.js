@@ -9318,5 +9318,18 @@ window.ESCENA_AUDIT = [
    "llantas-bsd-donnastreet-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:52:37.856Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "plato-fate-guardia-negro-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-trueno-exotic"
+  ],
+  "deleted": []
  }
 ];
