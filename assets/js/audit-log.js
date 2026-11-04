@@ -9341,5 +9341,15 @@ window.ESCENA_AUDIT = [
    "extractor-de-centro-19mm"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:57:45.720Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "llantas-bsd-donnastreet-negra"
+  ],
+  "deleted": []
  }
 ];
