@@ -9,7 +9,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "sizes": [
    {
-    "label": "490000",
+    "label": "9.5\"",
     "units": 1,
     "price": 490000
    }
