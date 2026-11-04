@@ -3631,11 +3631,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Aluminio 6061- T6 . 25T - 28T 107 gramos",
   "price": 155000,
   "sku": "PLT-TRU-001",
-  "units": 3,
+  "units": 0,
   "sizes": [
    {
     "label": "25T",
-    "units": 3,
+    "units": 0,
     "price": 155000
    },
    {
@@ -5538,15 +5538,17 @@ window.ESCENA_PRODUCTS = [
   "spec": "Aluminio (7075-T6) • Cromado • 25T - 28T",
   "price": 240000,
   "sku": "PLT-MUT-002",
-  "units": 1,
+  "units": 0,
   "sizes": [
    {
     "label": "28T",
-    "units": 0
+    "units": 0,
+    "price": 240000
    },
    {
     "label": "25T",
-    "units": 1
+    "units": 0,
+    "price": 240000
    }
   ],
   "slug": "plato-mutanty-diamond-cromado-28t",
@@ -5560,15 +5562,17 @@ window.ESCENA_PRODUCTS = [
   "spec": "Aluminio (7075-T6) • Negro • 25T - 28T",
   "price": 240000,
   "sku": "PLT-MUT-001",
-  "units": 1,
+  "units": 0,
   "sizes": [
    {
     "label": "25T",
-    "units": 1
+    "units": 0,
+    "price": 240000
    },
    {
     "label": "28T",
-    "units": 0
+    "units": 0,
+    "price": 240000
    }
   ],
   "slug": "plato-mutanty-diamond-negro-28t",
@@ -7567,11 +7571,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Guardia • Negro • 28T Aluminio 7075",
   "price": 230000,
   "sku": "PLT-FAT-001",
-  "units": 2,
+  "units": 0,
   "sizes": [
    {
     "label": "28T",
-    "units": 2
+    "units": 0,
+    "price": 230000
    }
   ],
   "order": 130,
@@ -7582,15 +7587,23 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 1,
+    "units": 0,
     "price": 230000
    },
    {
     "label": "Cromado",
-    "units": 1,
+    "units": 0,
     "price": 230000
    }
   ],
+  "imgColorMap": {
+   "Negro": [
+    0
+   ],
+   "Cromado": [
+    1
+   ]
+  },
   "img": "assets/img/products/plato-fate-guardia-negro-28t-mtbxajpaxai3.jpg?v=1792523555864"
  },
  {
