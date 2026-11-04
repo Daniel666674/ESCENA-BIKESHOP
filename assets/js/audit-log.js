@@ -9166,5 +9166,15 @@ window.ESCENA_AUDIT = [
    "pedales-fate-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:23:53.997Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cajas-de-frente-fate-negra"
+  ],
+  "deleted": []
  }
 ];
