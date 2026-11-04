@@ -1023,7 +1023,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Merritt",
   "cat": "llantas",
   "spec": "Material: compuesto de caucho dobleificaciones: -  - Tamaño: 20 x 2,35\" - Diámetro inflado: 62 mm - Firma de Brian Foster",
-  "price": 160000,
+  "price": 150000,
   "sku": "LLA-MER-006",
   "units": 2,
   "imgFit": "cover",
@@ -1034,7 +1034,8 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "2.35\"",
-    "units": 2
+    "units": 2,
+    "price": 150000
    }
   ],
   "slug": "llanta-merritt-ft1-negra",
@@ -1046,7 +1047,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Merritt",
   "cat": "llantas",
   "spec": "",
-  "price": 160000,
+  "price": 150000,
   "sku": "LLA-MER-005",
   "units": 2,
   "imgFit": "cover",
@@ -1058,7 +1059,7 @@ window.ESCENA_PRODUCTS = [
    {
     "label": "2.35\"",
     "units": 2,
-    "price": 160000
+    "price": 150000
    }
   ],
   "slug": "llanta-merrit-option-negra",
@@ -2532,7 +2533,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 160000,
   "sku": "LLA-CLT-002",
-  "units": 6,
+  "units": 2,
   "imgs": [
    "assets/img/products/llanta-cult-dehart-negra-2-40-mu33pflj29y4.jpg?v=1792523555864",
    "assets/img/products/llanta-cult-dehart-negra-2-40-mu33ph75kbri.jpg?v=1792523555864"
@@ -2540,7 +2541,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "2.40\"",
-    "units": 6,
+    "units": 2,
     "price": 160000
    }
   ],
@@ -2554,13 +2555,13 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "llantas",
   "spec": "",
-  "price": 150000,
+  "price": 160000,
   "sku": "LLA-CLT-001",
-  "units": 6,
+  "units": 3,
   "sizes": [
    {
     "label": "2.40\"",
-    "units": 6,
+    "units": 3,
     "price": 160000
    }
   ],
@@ -4016,11 +4017,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.40\" · Banda direccional profundo · Cafe",
   "price": 80000,
   "sku": "COR-INN-003",
-  "units": 2,
+  "units": 0,
   "sizes": [
    {
     "label": "20x2.40\"",
-    "units": 2,
+    "units": 0,
     "price": 80000
    }
   ],
@@ -4157,11 +4158,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.40\" · Banda direccional profundo · Negro",
   "price": 160000,
   "sku": "COR-SNM-001",
-  "units": 1,
+  "units": 2,
   "sizes": [
    {
     "label": "20x2.40\"",
-    "units": 1,
+    "units": 2,
     "price": 160000
    }
   ],
@@ -4177,7 +4178,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 160000,
   "sku": "COR-ODY-001",
-  "units": 2,
+  "units": 4,
   "sizes": [
    {
     "label": "20x2.25\"",
@@ -4185,7 +4186,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "20x2.40\"",
-    "units": 2
+    "units": 4
    }
   ],
   "slug": "llanta-odyssey-broc-negra-2-25-2-40",
@@ -4763,31 +4764,38 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negra/rojo",
-    "units": 0
+    "units": 0,
+    "price": 80000
    },
    {
     "label": "Negra/azul",
-    "units": 2
+    "units": 2,
+    "price": 80000
    },
    {
     "label": "Morado/Lila",
-    "units": 2
+    "units": 2,
+    "price": 80000
    },
    {
     "label": "Verde militar",
-    "units": 2
+    "units": 2,
+    "price": 80000
    },
    {
     "label": "Gris Claro",
-    "units": 2
+    "units": 2,
+    "price": 80000
    },
    {
     "label": "Gris Oscuro",
-    "units": 2
+    "units": 2,
+    "price": 80000
    },
    {
     "label": "Negra/Gris",
-    "units": 2
+    "units": 2,
+    "price": 80000
    }
   ],
   "sizes": [
@@ -9379,7 +9387,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 180000,
   "sku": "CORAZA_CULT_WAFFLECUP_2.40",
-  "units": 1,
+  "units": 2,
   "order": 10,
   "imgs": [
    "assets/img/products/coraza_cult_wafflecup_2.40-2.jpg?v=1792523555864",
@@ -9390,8 +9398,8 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20x2.40\"",
-    "units": 1,
-    "price": 160000
+    "units": 2,
+    "price": 180000
    }
   ],
   "imgFit": "cover",
