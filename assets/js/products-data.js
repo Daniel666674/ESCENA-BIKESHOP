@@ -7539,7 +7539,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Negro",
   "price": 65000,
   "sku": "PED-FAT-001",
-  "units": 4,
+  "units": 0,
   "order": 100,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-fate-negro-mtxk1vjpiakf.jpg?v=1792523555864"
