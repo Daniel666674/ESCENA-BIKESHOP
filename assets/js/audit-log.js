@@ -9176,5 +9176,15 @@ window.ESCENA_AUDIT = [
    "cajas-de-frente-fate-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:26:02.894Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cajas-de-centro-fate-negra-19mm"
+  ],
+  "deleted": []
  }
 ];
