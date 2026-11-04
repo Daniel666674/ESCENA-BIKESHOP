@@ -9127,5 +9127,23 @@ window.ESCENA_AUDIT = [
    "stolen-buje-trasero-cassette-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:19:40.313Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "9 productos editados",
+  "created": [],
+  "edited": [
+   "coraza_cult_wafflecup_2.40",
+   "llanta-cult-fast-loose-negra-2-40",
+   "llanta-cult-dehart-negra-2-40",
+   "llanta-s-m-speedball-negra-2-40",
+   "llanta-odyssey-broc-negra-2-25-2-40",
+   "llanta-merrit-option-negra",
+   "llanta-merritt-ft1-negra",
+   "llanta-innova-pro-big-slick-cafe-2-40",
+   "llanta-innova-camufladas"
+  ],
+  "deleted": []
  }
 ];
