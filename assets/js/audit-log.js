@@ -9101,5 +9101,18 @@ window.ESCENA_AUDIT = [
    "cajas-de-centro-trueno-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:06:57.917Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "mutany-savage-bielas-negro",
+   "bielas-cult-hawk-cromada",
+   "cult-bielas-negro",
+   "casco-protec-x-fitbikeco-full-cut"
+  ],
+  "deleted": []
  }
 ];
