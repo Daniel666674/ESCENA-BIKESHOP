@@ -9331,5 +9331,15 @@ window.ESCENA_AUDIT = [
    "plato-trueno-exotic"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-04T18:54:04.601Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "extractor-de-centro-19mm"
+  ],
+  "deleted": []
  }
 ];
