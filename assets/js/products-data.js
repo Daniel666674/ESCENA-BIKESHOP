@@ -5648,7 +5648,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 890000,
   "sku": "BIE-CLT-001",
-  "units": 1,
+  "units": 3,
   "imgs": [
    "assets/img/products/bielas-cult-hawk-cromada.jpg?v=1792523555864",
    "assets/img/products/bielas-cult-hawk-cromada.jpg?v=1792523555864",
@@ -5657,7 +5657,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "165mm",
-    "units": 1
+    "units": 3
    }
   ],
   "slug": "bielas-cult-hawk-cromada",
@@ -8055,11 +8055,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly · 48 estrías · 170mm · Negro",
   "price": 590000,
   "sku": "MUTANY-SAVAGE-BIELAS-NEGRO",
-  "units": 1,
+  "units": 0,
   "sizes": [
    {
     "label": "170mm",
-    "units": 1
+    "units": 0
    },
    {
     "label": "165mm",
@@ -8107,11 +8107,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cromoly tratado al calor · 22mm eje · 48 estrías · 165mm · Negro",
   "price": 790000,
   "sku": "CULT-BIELAS-NEGRO",
-  "units": 2,
+  "units": 3,
   "sizes": [
    {
     "label": "165mm",
-    "units": 2
+    "units": 3
    }
   ],
   "order": 0,
