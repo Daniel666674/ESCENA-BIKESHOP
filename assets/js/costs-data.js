@@ -424,5 +424,6 @@ window.ESCENA_COSTS = {
  "cassette-alienation-iluminati-negro": 544000,
  "pedales-odyssey-twist-pro-morado-negra": 76000,
  "pedales-odyssey-twist-pro-rosado": 76000,
- "pedales-odxyssey-twist-pro-morado": 76000
+ "pedales-odxyssey-twist-pro-morado": 76000,
+ "timon-odyssey-highway-negro": 392000
 };
