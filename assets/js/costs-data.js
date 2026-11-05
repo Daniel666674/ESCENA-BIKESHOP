@@ -432,5 +432,7 @@ window.ESCENA_COSTS = {
  "llantas-fit-fat-negra-2-40": 128000,
  "timon-stolen-roll-negro": 264000,
  "timon-stolen-roll-cromado": 288000,
- "tenedor-fitbikeco-shiv-v3-negro": 584000
+ "tenedor-fitbikeco-shiv-v3-negro": 584000,
+ "timon-s-m-perfect-10-negro": 304000,
+ "timon-s-m-perfect-10-industrial": 312000
 };
