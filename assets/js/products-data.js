@@ -1,5 +1,44 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon S&M Perfect 10 Industrial",
+  "brand": "S&M",
+  "cat": "manubrios",
+  "spec": "Material Cromolio termicamente tratado - 10 \" de nivelacion - Peso 2 Lb 4 Onz",
+  "price": 390000,
+  "sku": "TMN-SNM-002",
+  "units": 1,
+  "sizes": [
+   {
+    "label": "10\"",
+    "units": 1,
+    "price": 390000
+   }
+  ],
+  "slug": "timon-s-m-perfect-10-industrial",
+  "order": 120,
+  "img": "assets/img/products/timon-s-m-perfect-10-industrial-mw42yq2ium8r.jpg?v=1793915491002"
+ },
+ {
+  "n": "Timon S&M Perfect 10 Negro",
+  "brand": "S&M",
+  "cat": "manubrios",
+  "spec": "Material Cromolio termicamente tratado - 10 \" de nivelacion - Peso 2 Lb 4 Onz",
+  "price": 380000,
+  "sku": "TMN-SNM-001",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "10\"",
+    "units": 1,
+    "price": 380000
+   }
+  ],
+  "slug": "timon-s-m-perfect-10-negro",
+  "order": 110,
+  "img": "assets/img/products/timon-s-m-perfect-10-negro-mw42yrp6tlec.jpg?v=1793915492918"
+ },
+ {
   "n": "Tenedor Fitbikeco Shiv V3 Negro",
   "brand": "Fitbikeco",
   "cat": "horquillas",
@@ -46,7 +85,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-stolen-roll-cromado",
-  "order": 110,
+  "order": 130,
   "img": "assets/img/products/timon-stolen-roll-cromado-mw3snobj6yys.jpg?v=1793898180949"
  },
  {
@@ -6083,7 +6122,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "timon-federal-assaut",
-  "order": 130,
+  "order": 150,
   "img": "assets/img/products/timon-federal-assaut.jpg?v=1792523555864"
  },
  {
@@ -6271,7 +6310,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 160,
+  "order": 180,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1792523555864"
  },
  {
@@ -6319,7 +6358,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 150,
+  "order": 170,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1792523555864"
  },
  {
@@ -9753,7 +9792,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 120,
+  "order": 140,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1792523555864"
  },
  {
@@ -9771,7 +9810,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 140,
+  "order": 160,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1792523555864"
  }
 ];
