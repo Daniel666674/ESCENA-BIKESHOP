@@ -9425,5 +9425,20 @@ window.ESCENA_AUDIT = [
    "llanta-odyssey-broc-negra-2-25-2-40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-05T16:47:13.389Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "6 productos editados",
+  "created": [],
+  "edited": [
+   "llantas-alienation-prowler-keblar-negro-gris",
+   "llantas-bsd-donnastreet-negra",
+   "llanta-cult-dehart-negra-2-40",
+   "llanta-cult-fast-loose-negra-2-40",
+   "llanta-cult-wafflecup-goma",
+   "coraza_cult_wafflecup_2.40"
+  ],
+  "deleted": []
  }
 ];
