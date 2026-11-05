@@ -7717,7 +7717,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Goma · 153mm · Flangeless · nervadura tetraédrica",
   "price": 50000,
   "sku": "GRP-FND-001",
-  "units": 8,
+  "units": 4,
   "imgs": [
    "assets/img/products/grips-fiend-palmere.jpg?v=1792523555864",
    "assets/img/products/grips-fiend-palmere-2.jpg?v=1792523555864"
@@ -7725,11 +7725,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 4
+    "units": 4,
+    "price": 50000
    },
    {
     "label": "Morado",
-    "units": 4
+    "units": 0,
+    "price": 50000
    }
   ],
   "order": 20,
