@@ -9421,7 +9421,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Acero de alta Tension · Soldadura MIG · Tubo superior  21\"",
   "price": 270000,
   "sku": "TUKANBIKES-INDUSTRIAL-RAW",
-  "units": 1,
+  "units": 0,
   "imgs": [
    "assets/img/products/tukanbikes-industrial-raw.jpg?v=1792523555864",
    "assets/img/products/tukanbikes-industrial-raw-2.jpg?v=1792523555864",
@@ -9432,25 +9432,30 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.4\"",
-    "units": 0
+    "units": 0,
+    "price": 270000
    },
    {
     "label": "20.75\"",
-    "units": 0
+    "units": 0,
+    "price": 270000
    },
    {
     "label": "21\"",
-    "units": 1
+    "units": 0,
+    "price": 270000
    }
   ],
   "colors": [
    {
     "label": "Azul / Industrial",
-    "units": 1
+    "units": 0,
+    "price": 270000
    },
    {
     "label": "Morado / Industrial",
-    "units": 0
+    "units": 0,
+    "price": 270000
    }
   ],
   "imgColorMap": {
@@ -9465,6 +9470,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "order": 130,
+  "imgFit": "cover",
   "img": "assets/img/products/tukanbikes-industrial-raw.jpg?v=1792523555864"
  },
  {
