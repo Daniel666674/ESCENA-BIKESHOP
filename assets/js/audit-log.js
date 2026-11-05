@@ -9511,5 +9511,23 @@ window.ESCENA_AUDIT = [
    "federal-horquilla-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-05T21:51:45.987Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 6 productos editados, 2 fotos subidas",
+  "created": [
+   "timon-s-m-perfect-10-industrial",
+   "timon-s-m-perfect-10-negro"
+  ],
+  "edited": [
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "timon-federal-assaut",
+   "manubrio-cromoly-negro-03",
+   "timon-stolen-roll-cromado"
+  ],
+  "deleted": []
  }
 ];
