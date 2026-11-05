@@ -47,6 +47,7 @@ window.ESCENA_PRODUCTS = [
   "price": 390000,
   "sku": "TMN-SNM-002",
   "units": 1,
+  "imgFit": "cover",
   "sizes": [
    {
     "label": "10\"",
