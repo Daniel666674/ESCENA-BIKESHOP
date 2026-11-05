@@ -9473,5 +9473,15 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-03"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-05T17:04:13.734Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "marco-colony-prisma-negro"
+  ],
+  "deleted": []
  }
 ];
