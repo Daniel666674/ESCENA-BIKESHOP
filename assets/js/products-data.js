@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tenedor Fitbikeco Shiv V3 Negro",
+  "brand": "Fitbikeco",
+  "cat": "horquillas",
+  "spec": "Material Full Cr-mo Tratado al calor - Incluye tapón en aluminio - Peso: 1020 gramos",
+  "price": 730000,
+  "sku": "TEN-FIT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "25mm",
+    "units": 1,
+    "price": 730000
+   }
+  ],
+  "slug": "tenedor-fitbikeco-shiv-v3-negro",
+  "order": 30,
+  "img": "assets/img/products/tenedor-fitbikeco-shiv-v3-negro-mw4278dxf82r.jpg?v=1793914208632"
+ },
+ {
   "n": "Timon Stolen Roll Cromado",
   "brand": "Stolen",
   "cat": "manubrios",
@@ -1800,7 +1820,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/tenedor-fiction-shank-cromado-mudzsobyzhqs.jpg?v=1792523555864"
   ],
   "imgPos": "50% 50%",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/tenedor-fiction-shank-cromado-mudzi4jibigs.jpg?v=1792523555864"
  },
  {
@@ -1824,7 +1844,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tenedor-fiend-process-v2-cromado",
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/tenedor-fiend-process-v2-cromado-mudfalrjqx33.jpg?v=1792523555864"
  },
  {
@@ -5901,7 +5921,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 50,
+  "order": 60,
   "imgs": [
    "assets/img/products/tenedor-colony-sweet-thoot-muyjnckt8h3d.jpg?v=1792523555864",
    "assets/img/products/tenedor-colony-sweet-thoot.jpg?v=1792523555864",
@@ -5930,7 +5950,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/tall-order-ramp.jpg?v=1792523555864"
  },
  {
@@ -5948,7 +5968,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "tenedor-fiction-shank",
-  "order": 60,
+  "order": 70,
   "sizes": [
    {
     "label": "26mm",
@@ -7465,7 +7485,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 80,
+  "order": 90,
   "sizes": [
    {
     "label": "Única",
@@ -8354,7 +8374,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/federal-horquilla-cromada-mux7amqee9nb.jpg?v=1792523555864",
    "assets/img/products/federal-horquilla-cromada.jpg?v=1792523555864"
   ],
-  "order": 30,
+  "order": 40,
   "sizes": [
    {
     "label": "15mm",
