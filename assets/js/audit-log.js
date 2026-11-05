@@ -9572,5 +9572,15 @@ window.ESCENA_AUDIT = [
    "timon-stolen-roll-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-05T23:11:17.361Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "grips-fiend-palmere"
+  ],
+  "deleted": []
  }
 ];
