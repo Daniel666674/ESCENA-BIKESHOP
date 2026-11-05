@@ -430,5 +430,6 @@ window.ESCENA_COSTS = {
  "llanta-odyssey-mike-aitken-negra": 128000,
  "llanta-s-m-mainline-negra-2-40": 128000,
  "llantas-fit-fat-negra-2-40": 128000,
- "timon-stolen-roll-negro": 264000
+ "timon-stolen-roll-negro": 264000,
+ "timon-stolen-roll-cromado": 288000
 };
