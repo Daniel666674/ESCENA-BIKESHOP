@@ -428,5 +428,6 @@ window.ESCENA_COSTS = {
  "timon-odyssey-highway-negro": 392000,
  "llantas-bsd-donnastreet-negra": 152000,
  "llanta-odyssey-mike-aitken-negra": 128000,
- "llanta-s-m-mainline-negra-2-40": 128000
+ "llanta-s-m-mainline-negra-2-40": 128000,
+ "llantas-fit-fat-negra-2-40": 128000
 };
