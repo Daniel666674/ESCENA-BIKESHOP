@@ -427,5 +427,6 @@ window.ESCENA_COSTS = {
  "pedales-odxyssey-twist-pro-morado": 76000,
  "timon-odyssey-highway-negro": 392000,
  "llantas-bsd-donnastreet-negra": 152000,
- "llanta-odyssey-mike-aitken-negra": 128000
+ "llanta-odyssey-mike-aitken-negra": 128000,
+ "llanta-s-m-mainline-negra-2-40": 128000
 };
