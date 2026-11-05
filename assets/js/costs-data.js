@@ -434,5 +434,7 @@ window.ESCENA_COSTS = {
  "timon-stolen-roll-cromado": 288000,
  "tenedor-fitbikeco-shiv-v3-negro": 584000,
  "timon-s-m-perfect-10-negro": 304000,
- "timon-s-m-perfect-10-industrial": 312000
+ "timon-s-m-perfect-10-industrial": 312000,
+ "timon-s-m-hoder-dorado": 312000,
+ "timon-s-m-hoder-negro": 312000
 };
