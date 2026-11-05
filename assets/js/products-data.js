@@ -6196,7 +6196,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Cr-Mo (4130) • Negro • 21 - 12.7”",
   "price": 1700000,
   "sku": "MRC-CLN-001",
-  "units": 1,
+  "units": 0,
   "imgs": [
    "assets/img/products/marco-colony-prisma-negro.jpg?v=1792523555864",
    "assets/img/products/marco-colony-prisma-negro-2.jpg?v=1792523555864",
@@ -6206,13 +6206,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "21",
-    "units": 1
-   }
-  ],
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 1,
+    "units": 0,
     "price": 1700000
    }
   ],
