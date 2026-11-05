@@ -9483,5 +9483,15 @@ window.ESCENA_AUDIT = [
    "marco-colony-prisma-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-05T17:07:36.223Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "tukanbikes-industrial-raw"
+  ],
+  "deleted": []
  }
 ];
