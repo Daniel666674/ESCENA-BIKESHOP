@@ -9440,5 +9440,22 @@ window.ESCENA_AUDIT = [
    "coraza_cult_wafflecup_2.40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-05T16:56:41.740Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 6 productos editados, 1 foto subida",
+  "created": [
+   "timon-stolen-roll-negro"
+  ],
+  "edited": [
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "timon-federal-assaut",
+   "manubrio-cromoly-negro-03",
+   "timon-colony-rick-4-piezas"
+  ],
+  "deleted": []
  }
 ];
