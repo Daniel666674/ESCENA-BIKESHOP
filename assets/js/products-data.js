@@ -1,5 +1,45 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon S&M Hoder Negro",
+  "brand": "S&M",
+  "cat": "manubrios",
+  "spec": "El manillar signature de Mike Hoder de S&M está fabricado según las especificaciones exactas de Hoder. Los tubos de cromoly 4130 ultrarresistentes",
+  "price": 390000,
+  "sku": "TMN-SNM-004",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "9.75\"",
+    "units": 1,
+    "price": 390000
+   }
+  ],
+  "slug": "timon-s-m-hoder-negro",
+  "order": 150,
+  "img": "assets/img/products/timon-s-m-hoder-negro-mw44l0dssxy6.jpg?v=1793918210531"
+ },
+ {
+  "n": "Timon S&M Hoder Dorado",
+  "brand": "S&M",
+  "cat": "manubrios",
+  "spec": "El manillar signature de Mike Hoder de S&M está fabricado según las especificaciones exactas de Hoder. Los tubos de cromoly 4130 ultrarresistentes",
+  "price": 390000,
+  "sku": "TMN-SNM-003",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "9.75\"",
+    "units": 1,
+    "price": 390000
+   }
+  ],
+  "slug": "timon-s-m-hoder-dorado",
+  "order": 140,
+  "img": "assets/img/products/timon-s-m-hoder-dorado-mw44l23n8ens.jpg?v=1793918212370"
+ },
+ {
   "n": "Timon S&M Perfect 10 Industrial",
   "brand": "S&M",
   "cat": "manubrios",
@@ -15,7 +55,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-s-m-perfect-10-industrial",
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/timon-s-m-perfect-10-industrial-mw42yq2ium8r.jpg?v=1793915491002"
  },
  {
@@ -35,7 +75,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-s-m-perfect-10-negro",
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/timon-s-m-perfect-10-negro-mw42yrp6tlec.jpg?v=1793915492918"
  },
  {
@@ -85,7 +125,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-stolen-roll-cromado",
-  "order": 130,
+  "order": 110,
   "img": "assets/img/products/timon-stolen-roll-cromado-mw3snobj6yys.jpg?v=1793898180949"
  },
  {
@@ -6122,7 +6162,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "timon-federal-assaut",
-  "order": 150,
+  "order": 170,
   "img": "assets/img/products/timon-federal-assaut.jpg?v=1792523555864"
  },
  {
@@ -6310,7 +6350,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 180,
+  "order": 200,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1792523555864"
  },
  {
@@ -6358,7 +6398,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 170,
+  "order": 190,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1792523555864"
  },
  {
@@ -9792,7 +9832,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 140,
+  "order": 160,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1792523555864"
  },
  {
@@ -9810,7 +9850,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 160,
+  "order": 180,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1792523555864"
  }
 ];
