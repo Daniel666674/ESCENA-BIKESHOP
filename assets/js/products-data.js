@@ -1,5 +1,35 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Stolen Roll Cromado",
+  "brand": "Stolen",
+  "cat": "manubrios",
+  "spec": "Manillar de acero cromoly 4130 de sección variable , barra transversal de 19 mm, tratamiento térmico P2 posterior a la producción para mayor resistencia.",
+  "price": 360000,
+  "sku": "TMN-STL-002",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "9.5\"",
+    "units": 0,
+    "price": 360000
+   },
+   {
+    "label": "9.75\"",
+    "units": 1,
+    "price": 360000
+   },
+   {
+    "label": "10\"",
+    "units": 0,
+    "price": 360000
+   }
+  ],
+  "slug": "timon-stolen-roll-cromado",
+  "order": 110,
+  "img": "assets/img/products/timon-stolen-roll-cromado-mw3snobj6yys.jpg?v=1793898180949"
+ },
+ {
   "n": "Timon Stolen Roll Negro",
   "brand": "Stolen",
   "cat": "manubrios",
@@ -6033,7 +6063,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "timon-federal-assaut",
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/timon-federal-assaut.jpg?v=1792523555864"
  },
  {
@@ -6227,7 +6257,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 150,
+  "order": 160,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1792523555864"
  },
  {
@@ -6275,7 +6305,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1792523555864"
  },
  {
@@ -9703,7 +9733,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1792523555864"
  },
  {
@@ -9721,7 +9751,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1792523555864"
  }
 ];
