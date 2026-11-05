@@ -9529,5 +9529,25 @@ window.ESCENA_AUDIT = [
    "timon-stolen-roll-cromado"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-05T22:37:05.602Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 8 productos editados, 2 fotos subidas",
+  "created": [
+   "timon-s-m-hoder-negro",
+   "timon-s-m-hoder-dorado"
+  ],
+  "edited": [
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "timon-federal-assaut",
+   "manubrio-cromoly-negro-03",
+   "timon-stolen-roll-cromado",
+   "timon-s-m-perfect-10-industrial",
+   "timon-s-m-perfect-10-negro"
+  ],
+  "deleted": []
  }
 ];
