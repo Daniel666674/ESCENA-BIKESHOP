@@ -3086,7 +3086,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 26000,
   "sku": "CAD-KMC-005",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/cadena-kmc-410-roja-mtxe8cc8hrtb.jpg?v=1792523555864",
@@ -4638,31 +4638,34 @@ window.ESCENA_PRODUCTS = [
   "spec": "Integrada · Rodamientos sellados · Aluminio ·  Tapa 20mm",
   "price": 130000,
   "sku": "CJF-ALI-001",
-  "units": 2,
+  "units": 1,
   "imgs": [
-   "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9lf12fr2.jpg?v=1792523555864",
    "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9jzc1in0.jpg?v=1792523555864",
+   "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9lf12fr2.jpg?v=1792523555864",
    "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9mhwjv58.jpg?v=1792523555864"
   ],
   "colors": [
    {
     "label": "Negro",
-    "units": 1
+    "units": 1,
+    "price": 130000
    },
    {
     "label": "Rojo",
-    "units": 1
+    "units": 0,
+    "price": 130000
    },
    {
     "label": "Cromado",
-    "units": 0
+    "units": 0,
+    "price": 130000
    }
   ],
   "imgColorMap": {
-   "Rojo": [
+   "Negro": [
     0
    ],
-   "Negro": [
+   "Rojo": [
     1
    ],
    "Cromado": [
@@ -4671,7 +4674,7 @@ window.ESCENA_PRODUCTS = [
   },
   "slug": "cajas-de-frente-alienation-illuminati-oos",
   "order": 10,
-  "img": "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9lf12fr2.jpg?v=1792523555864"
+  "img": "assets/img/products/cajas-de-frente-alienation-illuminati-oos-mt8y9jzc1in0.jpg?v=1792523555864"
  },
  {
   "n": "Cajas de frente Fate Negra",
