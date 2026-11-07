@@ -573,7 +573,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-odyssey-la-guardia-28t",
-  "order": 10,
+  "order": 0,
   "img": "assets/img/products/plato-odyssey-la-guardia-28t-muyksq2n4rjq.jpg?v=1792523555864"
  },
  {
@@ -593,7 +593,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-odyssey-big-boyd-negro",
-  "order": 20,
+  "order": 10,
   "img": "assets/img/products/plato-odyssey-big-boyd-negro-muykiycsql5q.jpg?v=1792523555864"
  },
  {
@@ -1753,16 +1753,17 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Aluminio CNC 6061 - Relacion: 28T  Peso: 0,6 libras Tipo de producto: Piñón",
   "price": 340000,
   "sku": "PLT-FND-002",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "sizes": [
    {
     "label": "28T",
-    "units": 1
+    "units": 0,
+    "price": 340000
    }
   ],
   "slug": "plato-fiend-omicron-guardia-28t",
-  "order": 0,
+  "order": 60,
   "imgPos": "50% 0%",
   "img": "assets/img/products/plato-fiend-omicron-guardia-28t-muhked28r7ny.jpg?v=1792523555864"
  },
@@ -3748,7 +3749,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-fitbikeco-key-guard-v2",
-  "order": 50,
+  "order": 40,
   "img": "assets/img/products/plato-fitbikeco-key-guard-v2-mtbyk4dpnz48.jpg?v=1792523555864"
  },
  {
@@ -8001,7 +8002,7 @@ window.ESCENA_PRODUCTS = [
     "price": 240000
    }
   ],
-  "order": 30,
+  "order": 20,
   "img": "assets/img/products/plato-odyssey-big-boyd-28t-mtc2bvlpcms9.jpg?v=1792523555864"
  },
  {
@@ -8964,7 +8965,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 40,
+  "order": 30,
   "imgs": [
    "assets/img/products/odyssey-pinon-28t-negro-mtbyv9ghr3ke.jpg?v=1792523555864",
    "assets/img/products/odyssey-pinon-28t-negro-2.jpg?v=1792523555864"
@@ -8986,7 +8987,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 60,
+  "order": 50,
   "imgs": [
    "assets/img/products/fiend-pinon-25t-negro.jpg?v=1792523555864",
    "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1792523555864"
