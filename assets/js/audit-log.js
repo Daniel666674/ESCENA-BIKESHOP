@@ -9623,5 +9623,23 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "casco-protec-x-fitbikeco-full-cut"
   ]
+ },
+ {
+  "ts": "2026-11-11T01:30:30.208Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 7 productos editados, 1 foto subida",
+  "created": [
+   "bicicleta-fitbikeco-series-one-gloss-negra-rin-20"
+  ],
+  "edited": [
+   "bicicleta-profit-culver-bmx-gris-oscuro",
+   "bicicleta-cult-juvenile-rin-18",
+   "bicicleta-fitbikeco-misfit-bmx-rin-16",
+   "bicicleta-fitbikeco-misfit-rin-16",
+   "bicicleta-cult-control-raw",
+   "bicicleta-profit-oxnard-negro-rojo",
+   "bicicleta-profir-culver-bmx-gris-oscuro"
+  ],
+  "deleted": []
  }
 ];
