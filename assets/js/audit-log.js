@@ -9678,5 +9678,18 @@ window.ESCENA_AUDIT = [
    "bicicleta-cult-juvenile-rin-18"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-11T02:03:36.458Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 productos editados, 2 fotos subidas",
+  "created": [
+   "bicicleta-profit-culver-roja-rin-20"
+  ],
+  "edited": [
+   "bicicleta-cult-control-raw",
+   "bicicleta-profit-oxnard-negro-rojo"
+  ],
+  "deleted": []
  }
 ];
