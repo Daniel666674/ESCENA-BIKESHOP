@@ -1,5 +1,19 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bicicleta Fitbikeco Series One Gloss Negra RIN 20",
+  "brand": "Fitbikeco",
+  "cat": "bicicletas",
+  "spec": "Bicicleta BMX Freestyle Series One (20,75”)  TAMAÑO TT: 20,75”  CUADRO: Cro-Mo Delantero Tri  GEOMETRÍA: Serie Uno  AURICULARES: Integrados con orificios para giroscopio  BB: Sellado central  BARRAS: 2 piezas de 9” x 29”  HORQUILLA: Tubo de dirección de cromo-molibdeno, desplazamiento de 33 mm, inserto soldado.  VÁSTAGO: FIT Carga superior  ASIENTO: Combinación integrada con mayor acolchado, tija de sillín de 200 mm  BIELAS: Tubulares de cromo-molibdeno de 170 mm  PIÑÓN: FIT Key 25T  PEDALES: FIT PC  RUEDA DELANTERA: Llanta FIT S1W con buje sellado  RUEDA TRASERA: Llanta FIT S1W con cassette sellado de 9 dientes  NEUMÁTICOS: COMPATIBLES CON NEUMÁTICOS OEM DE 2.4”  FRENOS: Freno en U con resortes de baja tensión, palanca de dos dedos, lineal.  MISC: Buje delantero sellado/dirección integrada. Novedad para 2026.",
+  "price": 2500000,
+  "sku": "BIC-FIT-003",
+  "units": 1,
+  "tag": "Nuevo 🔥",
+  "imgFit": "cover",
+  "slug": "bicicleta-fitbikeco-series-one-gloss-negra-rin-20",
+  "order": 30,
+  "img": "assets/img/products/bicicleta-fitbikeco-series-one-gloss-negra-rin-20-mwbfza0xbdhd.jpg?v=1794360615118"
+ },
+ {
   "n": "Timon S&M Hoder Negro",
   "brand": "S&M",
   "cat": "manubrios",
@@ -626,6 +640,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "slug": "bicicleta-fitbikeco-misfit-bmx-rin-16",
   "order": 10,
+  "tag": "Nuevo 🔥",
   "img": "assets/img/products/bicicleta-fitbikeco-misfit-bmx-rin-16-munbn1m63i4w.jpg?v=1792523555864"
  },
  {
@@ -639,6 +654,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "slug": "bicicleta-fitbikeco-misfit-rin-16",
   "order": 20,
+  "tag": "Nuevo 🔥",
   "img": "assets/img/products/bicicleta-fitbikeco-misfit-rin-16-munay1edaud6.jpg?v=1792523555864"
  },
  {
@@ -657,7 +673,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgPos": "50% 0%",
   "slug": "bicicleta-cult-control-raw",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/bicicleta-cult-control-raw-mun948ihccl8.jpg?v=1792523555864"
  },
  {
@@ -671,6 +687,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "slug": "bicicleta-cult-juvenile-rin-18",
   "order": 0,
+  "tag": "Nuevo 🔥",
   "img": "assets/img/products/bicicleta-cult-juvenile-rin-18-mun8jr0lp4y2.jpg?v=1792523555864"
  },
  {
@@ -6027,7 +6044,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profit-oxnard-negro-rojo-4.jpg?v=1792523555864"
   ],
   "slug": "bicicleta-profit-oxnard-negro-rojo",
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1792523555864"
  },
  {
@@ -6037,7 +6054,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Bicicleta de BMX Bicicleta Profit – Linea Optimus Marco medida 20.5″ – Cola 13.5″ Manubrio 8.9″ Acero Alta tensión Tenedor Full Cr-mo Frente y Caja Integrado Rodamientos Bielas Forjadas Acero Cassette Derecho 9T Balineras Selladas Manzana Delantera Balin Suelto Silla Pivotal Fat Llantas 2.35″ Incluye Freno Peso 12.8 Kgrs",
   "price": 890000,
   "sku": "BIC-PRO-002",
-  "units": 2,
+  "units": 0,
   "imgs": [
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-4.jpg?v=1792523555864",
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-muoibeyo02c6.jpg?v=1792523555864",
@@ -6046,7 +6063,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-muoibjryp0dz.jpg?v=1792523555864"
   ],
   "slug": "bicicleta-profit-culver-bmx-gris-oscuro",
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-4.jpg?v=1792523555864"
  },
  {
@@ -6065,7 +6082,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-muohdzhmwn5t.jpg?v=1792523555864"
   ],
   "slug": "bicicleta-profir-culver-bmx-gris-oscuro",
-  "order": 30,
+  "order": 40,
   "img": "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1792523555864"
  },
  {
