@@ -9641,5 +9641,22 @@ window.ESCENA_AUDIT = [
    "bicicleta-profir-culver-bmx-gris-oscuro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-11T01:41:53.741Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 6 productos editados, 2 fotos subidas",
+  "created": [
+   "bicicleta-fitbikeco-misfit-gloss-negro-rin-16"
+  ],
+  "edited": [
+   "bicicleta-cult-control-raw",
+   "bicicleta-profit-oxnard-negro-rojo",
+   "bicicleta-profit-culver-bmx-gris-oscuro",
+   "bicicleta-profir-culver-bmx-gris-oscuro",
+   "bicicleta-fitbikeco-series-one-gloss-negra-rin-20",
+   "bicicleta-fitbikeco-misfit-rin-16"
+  ],
+  "deleted": []
  }
 ];
