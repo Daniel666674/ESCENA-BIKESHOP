@@ -9610,5 +9610,18 @@ window.ESCENA_AUDIT = [
    "fiend-pinon-25t-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-11T00:56:07.165Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 1 producto eliminado",
+  "created": [],
+  "edited": [
+   "llanta-innova-camufladas",
+   "llanta-optimus-black-burn-negra-2-35"
+  ],
+  "deleted": [
+   "casco-protec-x-fitbikeco-full-cut"
+  ]
  }
 ];
