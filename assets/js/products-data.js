@@ -1,5 +1,22 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bicicleta Profit Culver Roja RIN 20",
+  "brand": "Profit",
+  "cat": "bicicletas",
+  "spec": "Bicicleta BMX Freestyle - Marco y Tenedor de Cromolio - Galapago Pivotal - Manzanas de Aluminio con Balineras Selladas - Centro MID con Balineras Selladas - Bielas Enterizas de Cromolio - Llantas Anchas de 20x2.35 - Diseño Atractivo y Funcional",
+  "price": 890000,
+  "sku": "BIC-PRO-004",
+  "units": 0,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/bicicleta-profit-culver-roja-rin-20-mwbh5x3kdxgo.jpg?v=1794362605416",
+   "assets/img/products/bicicleta-profit-culver-roja-rin-20-mwbh5ze0as7n.jpg?v=1794362607855"
+  ],
+  "slug": "bicicleta-profit-culver-roja-rin-20",
+  "order": 80,
+  "img": "assets/img/products/bicicleta-profit-culver-roja-rin-20-mwbh5x3kdxgo.jpg?v=1794362605416"
+ },
+ {
   "n": "Bicicleta Fitbikeco One Gloss Blood Rojo RIN 20",
   "brand": "Fitbikeco",
   "cat": "bicicletas",
@@ -705,7 +722,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgPos": "50% 0%",
   "slug": "bicicleta-cult-control-raw",
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/bicicleta-cult-control-raw-mun948ihccl8.jpg?v=1792523555864"
  },
  {
@@ -6076,7 +6093,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profit-oxnard-negro-rojo-4.jpg?v=1792523555864"
   ],
   "slug": "bicicleta-profit-oxnard-negro-rojo",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1792523555864"
  },
  {
