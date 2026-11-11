@@ -1,5 +1,23 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Bicicleta Fitbikeco Misfit Gloss Negro RIN 16",
+  "brand": "Fitbikeco",
+  "cat": "bicicletas",
+  "spec": "Biciceta de BMX Freestyle MISFIT 16″  TAMAÑO TT: 16,25”  CUADRO: Tubos superior e inferior de acero al cromo-molibdeno  GEOMETRÍA: 16  AURICULARES: Integrados con orificios para giroscopio integrados  BB: Sellado central  BARRAS: 2 piezas de 7” x 24”  HORQUILLA: Nueva horquilla de dirección de cromo-molibdeno con desplazamiento de 31 mm  STEM: Mini carga superior  ASIENTO: Combinación integrada más plana y acolchada de 25,4 mm  BIELAS: Tubulares de cromo-molibdeno de 127 mm  PIÑÓN: Fit Bite 24T  PEDALES: Plataforma de nailon de 9/16”  RUEDA DELANTERA: 20H más ancha, de pared simple con buje sin sellar.  RUEDA TRASERA: 20 radios más anchos, de pared simple, con cassette sellado de 9 dientes.  NEUMÁTICOS: COMPATIBLES CON NEUMÁTICOS OEM DE 2,25”  FRENOS: Freno en U con muelles de baja tensión, palanca de corto alcance, cable lineal.  MISC: Tuercas de eje trasero de 17 mm",
+  "price": 2200000,
+  "sku": "BIC-FIT-004",
+  "units": 1,
+  "tag": "Nuevo 🔥",
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/bicicleta-fitbikeco-misfit-gloss-negro-rin-16-mwbge0f4ro4d.jpg?v=1794361302687",
+   "assets/img/products/bicicleta-fitbikeco-misfit-gloss-negro-rin-16-mwbge2731kh7.jpg?v=1794361305144"
+  ],
+  "slug": "bicicleta-fitbikeco-misfit-gloss-negro-rin-16",
+  "order": 40,
+  "img": "assets/img/products/bicicleta-fitbikeco-misfit-gloss-negro-rin-16-mwbge0f4ro4d.jpg?v=1794361302687"
+ },
+ {
   "n": "Bicicleta Fitbikeco Series One Gloss Negra RIN 20",
   "brand": "Fitbikeco",
   "cat": "bicicletas",
@@ -10,7 +28,7 @@ window.ESCENA_PRODUCTS = [
   "tag": "Nuevo 🔥",
   "imgFit": "cover",
   "slug": "bicicleta-fitbikeco-series-one-gloss-negra-rin-20",
-  "order": 30,
+  "order": 20,
   "img": "assets/img/products/bicicleta-fitbikeco-series-one-gloss-negra-rin-20-mwbfza0xbdhd.jpg?v=1794360615118"
  },
  {
@@ -653,7 +671,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "bicicleta-fitbikeco-misfit-rin-16",
-  "order": 20,
+  "order": 30,
   "tag": "Nuevo 🔥",
   "img": "assets/img/products/bicicleta-fitbikeco-misfit-rin-16-munay1edaud6.jpg?v=1792523555864"
  },
@@ -673,7 +691,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "imgPos": "50% 0%",
   "slug": "bicicleta-cult-control-raw",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/bicicleta-cult-control-raw-mun948ihccl8.jpg?v=1792523555864"
  },
  {
@@ -6044,7 +6062,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profit-oxnard-negro-rojo-4.jpg?v=1792523555864"
   ],
   "slug": "bicicleta-profit-oxnard-negro-rojo",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/bicicleta-profit-oxnard-negro-rojo.jpg?v=1792523555864"
  },
  {
@@ -6063,7 +6081,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-muoibjryp0dz.jpg?v=1792523555864"
   ],
   "slug": "bicicleta-profit-culver-bmx-gris-oscuro",
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-4.jpg?v=1792523555864"
  },
  {
@@ -6082,7 +6100,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-muohdzhmwn5t.jpg?v=1792523555864"
   ],
   "slug": "bicicleta-profir-culver-bmx-gris-oscuro",
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/bicicleta-profir-culver-bmx-gris-oscuro-2.jpg?v=1792523555864"
  },
  {
