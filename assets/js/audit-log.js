@@ -9658,5 +9658,25 @@ window.ESCENA_AUDIT = [
    "bicicleta-fitbikeco-misfit-rin-16"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-11T01:50:14.678Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 9 productos editados, 1 foto subida",
+  "created": [
+   "bicicleta-fitbikeco-one-gloss-blood-rojo-rin-20"
+  ],
+  "edited": [
+   "bicicleta-cult-control-raw",
+   "bicicleta-profit-oxnard-negro-rojo",
+   "bicicleta-profit-culver-bmx-gris-oscuro",
+   "bicicleta-profir-culver-bmx-gris-oscuro",
+   "bicicleta-fitbikeco-misfit-gloss-negro-rin-16",
+   "bicicleta-fitbikeco-misfit-rin-16",
+   "bicicleta-fitbikeco-series-one-gloss-negra-rin-20",
+   "bicicleta-fitbikeco-misfit-bmx-rin-16",
+   "bicicleta-cult-juvenile-rin-18"
+  ],
+  "deleted": []
  }
 ];
