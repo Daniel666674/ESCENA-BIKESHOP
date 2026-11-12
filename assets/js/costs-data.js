@@ -440,5 +440,6 @@ window.ESCENA_COSTS = {
  "bicicleta-fitbikeco-series-one-gloss-negra-rin-20": 2000000,
  "bicicleta-fitbikeco-misfit-gloss-negro-rin-16": 1760000,
  "bicicleta-fitbikeco-one-gloss-blood-rojo-rin-20": 2000000,
- "bicicleta-profit-culver-roja-rin-20": 712000
+ "bicicleta-profit-culver-roja-rin-20": 712000,
+ "timon-tall-order-180-negro": 304000
 };
