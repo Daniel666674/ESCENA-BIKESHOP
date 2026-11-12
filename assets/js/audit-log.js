@@ -9726,5 +9726,28 @@ window.ESCENA_AUDIT = [
    "timon-federal-assaut"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-12T19:28:23.667Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 12 productos editados, 1 foto subida",
+  "created": [
+   "timon-federal-bruno-v3-negro"
+  ],
+  "edited": [
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "manubrio-cromoly-negro-03",
+   "timon-s-m-hoder-negro",
+   "timon-s-m-hoder-dorado",
+   "timon-s-m-perfect-10-industrial",
+   "timon-s-m-perfect-10-negro",
+   "timon-tall-order-180-negro",
+   "timon-stolen-roll-cromado",
+   "timon-stolen-roll-negro",
+   "timon-colony-rick-4-piezas"
+  ],
+  "deleted": []
  }
 ];
