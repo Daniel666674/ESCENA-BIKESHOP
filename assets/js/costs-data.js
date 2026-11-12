@@ -447,5 +447,8 @@ window.ESCENA_COSTS = {
  "plato-s-m-mid-school-negro": 272000,
  "plato-s-m-x-man-guardia-negro": 272000,
  "plato-s-m-x-man-guardia-rojo": 272000,
- "plato-s-m-x-man-guardia-cobre": 272000
+ "plato-s-m-x-man-guardia-cobre": 272000,
+ "plato-fitbikeco-key-guard-v2-azul": 272000,
+ "plato-fitbikeco-key-guard-v2-rojo": 272000,
+ "plato-fitbikeco-key-guard-v2-gris": 272000
 };
