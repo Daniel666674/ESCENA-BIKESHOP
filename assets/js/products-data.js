@@ -108,7 +108,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "PLT-SNM-005",
   "units": 1,
   "imgFit": "cover",
-  "imgZoom": 119,
   "sizes": [
    {
     "label": "28T",
@@ -118,7 +117,7 @@ window.ESCENA_PRODUCTS = [
   ],
   "slug": "plato-s-m-x-man-guardia-rojo",
   "order": 170,
-  "img": "assets/img/products/plato-s-m-x-man-guardia-rojo-mwe4jiyjocdh.jpg?v=1794522803428"
+  "img": "assets/img/products/plato-s-m-x-man-guardia-rojo-mwe5zwygs65a.jpg?v=1794525247366"
  },
  {
   "n": "Plato S&M X-Man Guardia Negro",
@@ -129,6 +128,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PLT-SNM-004",
   "units": 1,
   "imgFit": "cover",
+  "imgZoom": 111,
   "sizes": [
    {
     "label": "28T",
