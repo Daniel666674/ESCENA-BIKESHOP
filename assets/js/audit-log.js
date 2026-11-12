@@ -9898,5 +9898,16 @@ window.ESCENA_AUDIT = [
    "plato-s-m-x-man-guardia-rojo"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-12T23:14:16.191Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "plato-s-m-x-man-guardia-rojo",
+   "plato-s-m-x-man-guardia-negro"
+  ],
+  "deleted": []
  }
 ];
