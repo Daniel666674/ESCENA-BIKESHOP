@@ -9749,5 +9749,47 @@ window.ESCENA_AUDIT = [
    "timon-colony-rick-4-piezas"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-12T22:04:08.693Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 30 productos editados, 2 fotos subidas",
+  "created": [
+   "plato-s-m-mid-school-negro",
+   "plato-s-m-mid-school-guardia-gris"
+  ],
+  "edited": [
+   "marco-fitbikeco-str-negro",
+   "marco-profit-culver-gris-cromolio",
+   "total-marco-2075-blanco-azul",
+   "tukanbikes-industrial-raw",
+   "marco-gw-destructor-tornasol",
+   "marco-gw-destructor-azul-20-5",
+   "marco-gw-destructor-morado",
+   "protector-de-marco-brainstorm",
+   "cult-havens-gate-alex-duleba-negro",
+   "cult-biggie-jaime-sintes-hammertone-negro",
+   "plato-s-m-goring-28t",
+   "plato-fitbikeco-key-guard-v2",
+   "plato-fiend-reynols-purpura",
+   "plato-fiend-omicron-guardia-28t",
+   "cult-pinon-negro",
+   "plato-volume-guardia-28t",
+   "pinon-snowflake-plata",
+   "plato-gw-corona-negro",
+   "plato-gw-corona-negro-2",
+   "plato-gw-kl215-negro",
+   "plato-trueno-exotic-tornasol",
+   "plato-xposure-infinity-25t",
+   "plato-federal-logo-guard-28t",
+   "plato-trueno-exotic",
+   "plato-sunday-sabretooth-v2-negro-28t",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "federal-pinon-gris",
+   "plato-fate-guardia-negro-28t",
+   "plato-strangergram-guardia-negro-28t"
+  ],
+  "deleted": []
  }
 ];
