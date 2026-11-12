@@ -441,5 +441,6 @@ window.ESCENA_COSTS = {
  "bicicleta-fitbikeco-misfit-gloss-negro-rin-16": 1760000,
  "bicicleta-fitbikeco-one-gloss-blood-rojo-rin-20": 2000000,
  "bicicleta-profit-culver-roja-rin-20": 712000,
- "timon-tall-order-180-negro": 304000
+ "timon-tall-order-180-negro": 304000,
+ "timon-federal-bruno-v3-negro": 304000
 };
