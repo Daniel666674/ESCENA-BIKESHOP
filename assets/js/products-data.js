@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plato Federal Code Cromado Guardia 28T",
+  "brand": "Federal",
+  "cat": "pinones",
+  "spec": "El piñón Code es un piñón con protector metálico, robusto y sin florituras. Diseñado para resistir golpes, carece de adornos superfluos, con solo dos sencillos logotipos grabados con láser y un núcleo sólido para una resistencia excepcional.",
+  "price": 270000,
+  "sku": "PLT-FED-002",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "28´T",
+    "units": 1,
+    "price": 270000
+   }
+  ],
+  "slug": "plato-federal-code-cromado-guardia-28t",
+  "order": 190,
+  "img": "assets/img/products/plato-federal-code-cromado-guardia-28t-mwe5i5rsdkjn.jpg?v=1794524420592"
+ },
+ {
   "n": "Plato Fitbikeco Key Guard V2 Gris",
   "brand": "Fitbikeco",
   "cat": "pinones",
@@ -1987,7 +2007,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-fiend-omicron-guardia-28t",
-  "order": 210,
+  "order": 220,
   "imgPos": "50% 0%",
   "img": "assets/img/products/plato-fiend-omicron-guardia-28t-muhked28r7ny.jpg?v=1792523555864"
  },
@@ -3830,7 +3850,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-gw-corona-negro-2",
-  "order": 310,
+  "order": 320,
   "img": "assets/img/products/plato-gw-corona-negro-2-mtc2bs5knssc.jpg?v=1792523555864"
  },
  {
@@ -3849,7 +3869,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-gw-corona-negro",
-  "order": 320,
+  "order": 330,
   "img": "assets/img/products/plato-gw-corona-negro-mtc2btia8ta6.jpg?v=1792523555864"
  },
  {
@@ -3868,7 +3888,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-gw-kl215-negro",
-  "order": 300,
+  "order": 310,
   "img": "assets/img/products/plato-gw-kl215-negro-mtc2bum5xvex.jpg?v=1792523555864"
  },
  {
@@ -3930,7 +3950,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-sunday-sabretooth-v2-negro-28t",
-  "order": 200,
+  "order": 210,
   "img": "assets/img/products/plato-sunday-sabretooth-v2-negro-28t-mtbzlyqatati.jpg?v=1792523555864"
  },
  {
@@ -3954,7 +3974,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-s-m-goring-28t",
-  "order": 220,
+  "order": 230,
   "img": "assets/img/products/plato-s-m-goring-28t-mtbyv869obzl.jpg?v=1792523555864"
  },
  {
@@ -4025,7 +4045,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 280,
+  "order": 290,
   "img": "assets/img/products/plato-xposure-infinity-25t-mtby9bitqkmu.jpg?v=1792523555864"
  },
  {
@@ -4044,7 +4064,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-trueno-exotic-tornasol",
-  "order": 290,
+  "order": 300,
   "img": "assets/img/products/plato-trueno-exotic-tornasol-mtby9fo7maek.jpg?v=1792523555864"
  },
  {
@@ -4068,7 +4088,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-trueno-exotic",
-  "order": 260,
+  "order": 270,
   "img": "assets/img/products/plato-trueno-exotic-mtby9gou9qqd.jpg?v=1792523555864"
  },
  {
@@ -5967,7 +5987,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-mutanty-diamond-cromado-28t",
-  "order": 230,
+  "order": 240,
   "img": "assets/img/products/plato-mutanty-diamond-cromado-28t.jpg?v=1792523555864"
  },
  {
@@ -5991,7 +6011,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-mutanty-diamond-negro-28t",
-  "order": 250,
+  "order": 260,
   "img": "assets/img/products/plato-mutanty-diamond-negro-28t.jpg?v=1792523555864"
  },
  {
@@ -6009,7 +6029,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-federal-logo-guard-28t",
-  "order": 270,
+  "order": 280,
   "img": "assets/img/products/plato-federal-logo-guard-28t.jpg?v=1792523555864"
  },
  {
@@ -7992,7 +8012,7 @@ window.ESCENA_PRODUCTS = [
     "price": 230000
    }
   ],
-  "order": 240,
+  "order": 250,
   "imgs": [
    "assets/img/products/plato-fate-guardia-negro-28t-mtbxajpaxai3.jpg?v=1792523555864",
    "assets/img/products/plato-fate-guardia-negro-28t-mtc1kpwr1mhm.jpg?v=1792523555864"
@@ -9225,7 +9245,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 190,
+  "order": 200,
   "imgs": [
    "assets/img/products/federal-pinon-gris.jpg?v=1792523555864",
    "assets/img/products/federal-pinon-gris-2.jpg?v=1792523555864"
