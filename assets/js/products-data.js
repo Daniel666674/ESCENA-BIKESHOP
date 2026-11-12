@@ -108,6 +108,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PLT-SNM-005",
   "units": 1,
   "imgFit": "cover",
+  "imgZoom": 119,
   "sizes": [
    {
     "label": "28T",
