@@ -9791,5 +9791,38 @@ window.ESCENA_AUDIT = [
    "plato-strangergram-guardia-negro-28t"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-12T22:33:37.929Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 20 productos editados, 3 fotos subidas",
+  "created": [
+   "plato-s-m-x-man-guardia-cobre",
+   "plato-s-m-x-man-guardia-rojo",
+   "plato-s-m-x-man-guardia-negro"
+  ],
+  "edited": [
+   "plato-gw-corona-negro",
+   "plato-gw-corona-negro-2",
+   "plato-gw-kl215-negro",
+   "plato-trueno-exotic-tornasol",
+   "plato-xposure-infinity-25t",
+   "plato-federal-logo-guard-28t",
+   "plato-trueno-exotic",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "plato-fate-guardia-negro-28t",
+   "plato-s-m-mid-school-guardia-gris",
+   "plato-strangergram-guardia-negro-28t",
+   "pinon-snowflake-plata",
+   "plato-volume-guardia-28t",
+   "cult-pinon-negro",
+   "plato-fiend-reynols-purpura",
+   "plato-s-m-goring-28t",
+   "plato-fiend-omicron-guardia-28t",
+   "plato-sunday-sabretooth-v2-negro-28t",
+   "federal-pinon-gris"
+  ],
+  "deleted": []
  }
 ];
