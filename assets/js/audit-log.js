@@ -9691,5 +9691,30 @@ window.ESCENA_AUDIT = [
    "bicicleta-profit-oxnard-negro-rojo"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-12T19:12:00.085Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 14 productos editados, 1 foto subida",
+  "created": [
+   "timon-tall-order-180-negro"
+  ],
+  "edited": [
+   "timon-gw-gorila-4pc-negro",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-04",
+   "timon-federal-assaut",
+   "manubrio-cromoly-negro-03",
+   "timon-s-m-hoder-negro",
+   "timon-s-m-hoder-dorado",
+   "timon-s-m-perfect-10-industrial",
+   "timon-s-m-perfect-10-negro",
+   "timon-stolen-roll-cromado",
+   "timon-stolen-roll-negro",
+   "timon-colony-rick-4-piezas",
+   "timon-merritt-slaughter-4pc-negro",
+   "manubrio-cromoly-negro-01"
+  ],
+  "deleted": []
  }
 ];
