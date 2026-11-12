@@ -9716,5 +9716,15 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-01"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-12T19:12:32.011Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "timon-federal-assaut"
+  ],
+  "deleted": []
  }
 ];
