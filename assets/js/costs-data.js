@@ -444,5 +444,8 @@ window.ESCENA_COSTS = {
  "timon-tall-order-180-negro": 304000,
  "timon-federal-bruno-v3-negro": 304000,
  "plato-s-m-mid-school-guardia-gris": 272000,
- "plato-s-m-mid-school-negro": 272000
+ "plato-s-m-mid-school-negro": 272000,
+ "plato-s-m-x-man-guardia-negro": 272000,
+ "plato-s-m-x-man-guardia-rojo": 272000,
+ "plato-s-m-x-man-guardia-cobre": 272000
 };
