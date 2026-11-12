@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Federal Bruno V3 Negro",
+  "brand": "Federal",
+  "cat": "manubrios",
+  "spec": "Material: Cromo 4130, tratado térmicamente Elevación: 9,25\" Ancho: 29,5\" Barrido ascendente: 1º Retroceso: 12º",
+  "price": 380000,
+  "sku": "TMN-FED-002",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "9.25\"",
+    "units": 1,
+    "price": 380000
+   }
+  ],
+  "slug": "timon-federal-bruno-v3-negro",
+  "order": 100,
+  "img": "assets/img/products/timon-federal-bruno-v3-negro-mwdxxfc7afnd.jpg?v=1794511694149"
+ },
+ {
   "n": "Timon Tall Order 180 Negro",
   "brand": "Tallorder",
   "cat": "manubrios",
@@ -99,7 +119,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-s-m-hoder-negro",
-  "order": 170,
+  "order": 180,
   "img": "assets/img/products/timon-s-m-hoder-negro-mw44l0dssxy6.jpg?v=1793918210531"
  },
  {
@@ -119,7 +139,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-s-m-hoder-dorado",
-  "order": 160,
+  "order": 170,
   "img": "assets/img/products/timon-s-m-hoder-dorado-mw44l23n8ens.jpg?v=1793918212370"
  },
  {
@@ -139,7 +159,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-s-m-perfect-10-industrial",
-  "order": 150,
+  "order": 160,
   "img": "assets/img/products/timon-s-m-perfect-10-industrial-mw42yq2ium8r.jpg?v=1793915491002"
  },
  {
@@ -159,7 +179,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-s-m-perfect-10-negro",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/timon-s-m-perfect-10-negro-mw42yrp6tlec.jpg?v=1793915492918"
  },
  {
@@ -209,7 +229,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-stolen-roll-cromado",
-  "order": 120,
+  "order": 140,
   "img": "assets/img/products/timon-stolen-roll-cromado-mw3snobj6yys.jpg?v=1793898180949"
  },
  {
@@ -239,7 +259,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-stolen-roll-negro",
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/timon-stolen-roll-negro-mw3sf0htna0q.jpg?v=1793897775719"
  },
  {
@@ -6224,7 +6244,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-colony-rick-4-piezas",
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1792523555864"
  },
  {
@@ -6389,7 +6409,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 210,
+  "order": 220,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1792523555864"
  },
  {
@@ -6437,7 +6457,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 200,
+  "order": 210,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1792523555864"
  },
  {
@@ -9873,7 +9893,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 180,
+  "order": 190,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1792523555864"
  },
  {
@@ -9891,7 +9911,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 190,
+  "order": 200,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1792523555864"
  }
 ];
