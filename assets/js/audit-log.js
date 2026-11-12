@@ -9888,5 +9888,15 @@ window.ESCENA_AUDIT = [
    "federal-pinon-gris"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-12T23:09:05.119Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "plato-s-m-x-man-guardia-rojo"
+  ],
+  "deleted": []
  }
 ];
