@@ -1,5 +1,65 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Plato Fitbikeco Key Guard V2 Gris",
+  "brand": "Fitbikeco",
+  "cat": "pinones",
+  "spec": "Dos posiciones de montaje dientes de 1/8″ Mecanizado CNC Diámetro central de 15/16” (24 mm) (arandelas de acero de 19/22 mm incluidas) Compatible con husillos de 19 mm, 22 mm y 24 mm. peso 5.92 onzas",
+  "price": 340000,
+  "sku": "PLT-FIT-004",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1,
+    "price": 340000
+   }
+  ],
+  "slug": "plato-fitbikeco-key-guard-v2-gris",
+  "order": 110,
+  "img": "assets/img/products/plato-fitbikeco-key-guard-v2-gris-mwe571dkwyxf.jpg?v=1794523903916"
+ },
+ {
+  "n": "Plato Fitbikeco Key Guard V2 Rojo",
+  "brand": "Fitbikeco",
+  "cat": "pinones",
+  "spec": "Dos posiciones de montaje dientes de 1/8″ Mecanizado CNC Diámetro central de 15/16” (24 mm) (arandelas de acero de 19/22 mm incluidas) Compatible con husillos de 19 mm, 22 mm y 24 mm. peso 5,92 onzas",
+  "price": 340000,
+  "sku": "PLT-FIT-003",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1,
+    "price": 340000
+   }
+  ],
+  "slug": "plato-fitbikeco-key-guard-v2-rojo",
+  "order": 120,
+  "img": "assets/img/products/plato-fitbikeco-key-guard-v2-rojo-mwe5763wdpyk.jpg?v=1794523906186"
+ },
+ {
+  "n": "Plato Fitbikeco Key Guard V2 Azul",
+  "brand": "Fitbikeco",
+  "cat": "pinones",
+  "spec": "Dos posiciones de montaje dientes de 1/8″ Mecanizado CNC Diámetro central de 15/16” (24 mm) (arandelas de acero de 19/22 mm incluidas) Compatible con husillos de 19 mm, 22 mm y 24 mm. peos 5.92 onzas",
+  "price": 340000,
+  "sku": "PLT-FIT-002",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "28T",
+    "units": 1,
+    "price": 340000
+   }
+  ],
+  "slug": "plato-fitbikeco-key-guard-v2-azul",
+  "order": 130,
+  "img": "assets/img/products/plato-fitbikeco-key-guard-v2-azul-mwe577uz0c26.jpg?v=1794523909679"
+ },
+ {
   "n": "Plato S&M X-Man Guardia Cobre",
   "brand": "S&M",
   "cat": "pinones",
@@ -16,7 +76,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-s-m-x-man-guardia-cobre",
-  "order": 130,
+  "order": 160,
   "img": "assets/img/products/plato-s-m-x-man-guardia-cobre-mwe4jfzpuihr.jpg?v=1794522800827"
  },
  {
@@ -36,7 +96,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-s-m-x-man-guardia-rojo",
-  "order": 140,
+  "order": 170,
   "img": "assets/img/products/plato-s-m-x-man-guardia-rojo-mwe4jiyjocdh.jpg?v=1794522803428"
  },
  {
@@ -56,7 +116,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-s-m-x-man-guardia-negro",
-  "order": 150,
+  "order": 180,
   "img": "assets/img/products/plato-s-m-x-man-guardia-negro-mwe4jkysijqx.jpg?v=1794522805597"
  },
  {
@@ -76,7 +136,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-s-m-mid-school-negro",
-  "order": 120,
+  "order": 150,
   "img": "assets/img/products/plato-s-m-mid-school-negro-mwe3hmk55ub6.jpg?v=1794521034545"
  },
  {
@@ -96,7 +156,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-s-m-mid-school-guardia-gris",
-  "order": 110,
+  "order": 140,
   "img": "assets/img/products/plato-s-m-mid-school-guardia-gris-mwe3ho35o4xx.jpg?v=1794521036602"
  },
  {
@@ -1927,7 +1987,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-fiend-omicron-guardia-28t",
-  "order": 180,
+  "order": 210,
   "imgPos": "50% 0%",
   "img": "assets/img/products/plato-fiend-omicron-guardia-28t-muhked28r7ny.jpg?v=1792523555864"
  },
@@ -3770,7 +3830,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-gw-corona-negro-2",
-  "order": 280,
+  "order": 310,
   "img": "assets/img/products/plato-gw-corona-negro-2-mtc2bs5knssc.jpg?v=1792523555864"
  },
  {
@@ -3789,7 +3849,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-gw-corona-negro",
-  "order": 290,
+  "order": 320,
   "img": "assets/img/products/plato-gw-corona-negro-mtc2btia8ta6.jpg?v=1792523555864"
  },
  {
@@ -3808,7 +3868,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-gw-kl215-negro",
-  "order": 270,
+  "order": 300,
   "img": "assets/img/products/plato-gw-kl215-negro-mtc2bum5xvex.jpg?v=1792523555864"
  },
  {
@@ -3827,7 +3887,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-fiend-reynols-purpura",
-  "order": 60,
+  "order": 50,
   "img": "assets/img/products/plato-fiend-reynols-purpura-mtbzwaexp3tk.jpg?v=1792523555864"
  },
  {
@@ -3851,7 +3911,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-strangergram-guardia-negro-28t",
-  "order": 100,
+  "order": 90,
   "img": "assets/img/products/plato-strangergram-guardia-negro-28t-mtbzwc0q5dmp.jpg?v=1792523555864"
  },
  {
@@ -3870,7 +3930,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-sunday-sabretooth-v2-negro-28t",
-  "order": 170,
+  "order": 200,
   "img": "assets/img/products/plato-sunday-sabretooth-v2-negro-28t-mtbzlyqatati.jpg?v=1792523555864"
  },
  {
@@ -3894,7 +3954,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-s-m-goring-28t",
-  "order": 190,
+  "order": 220,
   "img": "assets/img/products/plato-s-m-goring-28t-mtbyv869obzl.jpg?v=1792523555864"
  },
  {
@@ -3904,16 +3964,16 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Aluminio 7075-T6  . 28T - Guardia",
   "price": 340000,
   "sku": "PLT-FIT-001",
-  "units": 1,
+  "units": 2,
   "sizes": [
    {
     "label": "28T",
-    "units": 1,
+    "units": 2,
     "price": 340000
    }
   ],
   "slug": "plato-fitbikeco-key-guard-v2",
-  "order": 40,
+  "order": 100,
   "img": "assets/img/products/plato-fitbikeco-key-guard-v2-mtbyk4dpnz48.jpg?v=1792523555864"
  },
  {
@@ -3965,7 +4025,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 250,
+  "order": 280,
   "img": "assets/img/products/plato-xposure-infinity-25t-mtby9bitqkmu.jpg?v=1792523555864"
  },
  {
@@ -3984,7 +4044,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-trueno-exotic-tornasol",
-  "order": 260,
+  "order": 290,
   "img": "assets/img/products/plato-trueno-exotic-tornasol-mtby9fo7maek.jpg?v=1792523555864"
  },
  {
@@ -4008,7 +4068,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-trueno-exotic",
-  "order": 230,
+  "order": 260,
   "img": "assets/img/products/plato-trueno-exotic-mtby9gou9qqd.jpg?v=1792523555864"
  },
  {
@@ -5907,7 +5967,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-mutanty-diamond-cromado-28t",
-  "order": 210,
+  "order": 230,
   "img": "assets/img/products/plato-mutanty-diamond-cromado-28t.jpg?v=1792523555864"
  },
  {
@@ -5931,7 +5991,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-mutanty-diamond-negro-28t",
-  "order": 220,
+  "order": 250,
   "img": "assets/img/products/plato-mutanty-diamond-negro-28t.jpg?v=1792523555864"
  },
  {
@@ -5949,7 +6009,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "plato-federal-logo-guard-28t",
-  "order": 240,
+  "order": 270,
   "img": "assets/img/products/plato-federal-logo-guard-28t.jpg?v=1792523555864"
  },
  {
@@ -7932,7 +7992,7 @@ window.ESCENA_PRODUCTS = [
     "price": 230000
    }
   ],
-  "order": 200,
+  "order": 240,
   "imgs": [
    "assets/img/products/plato-fate-guardia-negro-28t-mtbxajpaxai3.jpg?v=1792523555864",
    "assets/img/products/plato-fate-guardia-negro-28t-mtc1kpwr1mhm.jpg?v=1792523555864"
@@ -9083,7 +9143,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 90,
+  "order": 60,
   "imgPos": "100% 50%",
   "img": "assets/img/products/pinon-snowflake-plata-mtbxeill8dz3.jpg?v=1792523555864"
  },
@@ -9142,7 +9202,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 50,
+  "order": 40,
   "imgs": [
    "assets/img/products/fiend-pinon-25t-negro.jpg?v=1792523555864",
    "assets/img/products/fiend-pinon-25t-negro-2.jpg?v=1792523555864"
@@ -9165,7 +9225,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 160,
+  "order": 190,
   "imgs": [
    "assets/img/products/federal-pinon-gris.jpg?v=1792523555864",
    "assets/img/products/federal-pinon-gris-2.jpg?v=1792523555864"
