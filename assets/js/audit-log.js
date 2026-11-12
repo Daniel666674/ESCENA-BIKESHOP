@@ -9824,5 +9824,44 @@ window.ESCENA_AUDIT = [
    "federal-pinon-gris"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-12T22:52:04.046Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 26 productos editados, 3 fotos subidas",
+  "created": [
+   "plato-fitbikeco-key-guard-v2-gris",
+   "plato-fitbikeco-key-guard-v2-rojo",
+   "plato-fitbikeco-key-guard-v2-azul"
+  ],
+  "edited": [
+   "plato-fitbikeco-key-guard-v2",
+   "plato-gw-corona-negro",
+   "plato-gw-corona-negro-2",
+   "plato-gw-kl215-negro",
+   "plato-trueno-exotic-tornasol",
+   "plato-xposure-infinity-25t",
+   "plato-federal-logo-guard-28t",
+   "plato-trueno-exotic",
+   "plato-mutanty-diamond-negro-28t",
+   "plato-mutanty-diamond-cromado-28t",
+   "plato-fate-guardia-negro-28t",
+   "plato-s-m-goring-28t",
+   "plato-fiend-omicron-guardia-28t",
+   "plato-sunday-sabretooth-v2-negro-28t",
+   "federal-pinon-gris",
+   "plato-s-m-x-man-guardia-negro",
+   "plato-s-m-x-man-guardia-rojo",
+   "plato-s-m-x-man-guardia-cobre",
+   "plato-s-m-mid-school-negro",
+   "plato-s-m-mid-school-guardia-gris",
+   "fiend-pinon-25t-negro",
+   "plato-fiend-reynols-purpura",
+   "cult-pinon-negro",
+   "plato-volume-guardia-28t",
+   "pinon-snowflake-plata",
+   "plato-strangergram-guardia-negro-28t"
+  ],
+  "deleted": []
  }
 ];
