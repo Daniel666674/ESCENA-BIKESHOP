@@ -453,5 +453,6 @@ window.ESCENA_COSTS = {
  "plato-fitbikeco-key-guard-v2-gris": 272000,
  "plato-federal-code-cromado-guardia-28t": 216000,
  "rin-fitbikeco-arc-negro": 264000,
- "rin-federal-stance-xl-negro": 280000
+ "rin-federal-stance-xl-negro": 280000,
+ "par-de-rin-tall-order-air-negro": 576000
 };
