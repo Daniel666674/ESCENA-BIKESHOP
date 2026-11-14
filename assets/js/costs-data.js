@@ -27,7 +27,7 @@ window.ESCENA_COSTS = {
  "protector-de-manzana-delantera-mutanty-inmortal": 76000,
  "rin-demolition-zero-plus-negro": 240000,
  "rin-federal-aero-xl": 280000,
- "rin-alienation-vandal-negro": 432000,
+ "rin-alienation-vandal-negro": 304000,
  "rin-alienation-skylark-negro": 304000,
  "cassette-cut-crew-bidireccional-negro": 576000,
  "cassette-federal-stance-negro": 568000,
