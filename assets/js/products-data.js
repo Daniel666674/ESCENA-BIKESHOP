@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin Fitbikeco ARC negro",
+  "brand": "Fitbikeco",
+  "cat": "rines",
+  "spec": "TAMAÑO DE LA RUEDA: 20\" COSTURA: Soldado ERD: 390 mm ALTURA: 17 mm Anchura: 34 mm AGUJEROS DE LOS RADIOS: 36h PESO: 489 g/15,75 oz",
+  "price": 330000,
+  "sku": "RIN-FIT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "rin-fitbikeco-arc-negro",
+  "order": 60,
+  "img": "assets/img/products/rin-fitbikeco-arc-negro-mwgy7iskz7mf.jpg?v=1794693563693"
+ },
+ {
   "n": "Plato Federal Code Cromado Guardia 28T",
   "brand": "Federal",
   "cat": "pinones",
@@ -1306,7 +1319,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "rin-stl-j40c-azul",
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/rin-stl-j40c-azul-muhkb9xz89jx.jpg?v=1792523555864"
  },
  {
@@ -1320,7 +1333,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgPos": "50% 100%",
   "slug": "rin-stl-j40c-morado",
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/rin-stl-j40c-morado-muhk1nip3yen.jpg?v=1792523555864"
  },
  {
@@ -1333,7 +1346,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "rin-stl-j40c-rojo",
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/rin-stl-j40c-rojo-muhjhjwkfpds.jpg?v=1792523555864"
  },
  {
@@ -1346,7 +1359,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "rin-stl-j40c-dorado",
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/rin-stl-j40c-dorado-muhjhlfzjwj8.jpg?v=1792523555864"
  },
  {
@@ -1389,7 +1402,7 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "imgFit": "cover",
   "slug": "rin-stolen-rampage-negro",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/rin-stolen-rampage-negro-muhir927tm8w.jpg?v=1792523555864"
  },
  {
@@ -1662,7 +1675,7 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "imgFit": "cover",
   "slug": "rin-stolen-rampage-cromado",
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/rin-stolen-rampage-cromado-mug6g5idvp19.jpg?v=1792523555864"
  },
  {
@@ -1736,7 +1749,7 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "imgFit": "cover",
   "slug": "rin-demolition-zero-plus-negro",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/rin-demolition-zero-plus-negro-mueqzqlobybg.jpg?v=1792523555864"
  },
  {
@@ -1753,7 +1766,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/rin-federal-aero-xl-mueq7e7c3juz.jpg?v=1792523555864"
   ],
   "slug": "rin-federal-aero-xl",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/rin-federal-aero-xl-mueq7co3vnu9.jpg?v=1792523555864"
  },
  {
