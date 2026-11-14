@@ -5596,24 +5596,6 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/cajas-de-frente-demolition-v2.jpg?v=1792523555864"
  },
  {
-  "n": "Frente Integrado Demolition V2",
-  "brand": "Demolition",
-  "cat": "caja-frente",
-  "spec": "Integrada · Rodamientos sellados · Aluminio ·  Peso 2.6 onzas",
-  "price": 125000,
-  "sku": "PZA-DMO-001",
-  "units": 1,
-  "colors": [
-   {
-    "label": "Negro",
-    "units": 1
-   }
-  ],
-  "slug": "frente-integrado-demolition-v2",
-  "order": 60,
-  "img": "assets/img/products/frente-integrado-demolition-v2.jpg?v=1792523555864"
- },
- {
   "n": "Cajas de frente Cult Match V2",
   "brand": "Cult",
   "cat": "caja-frente",
