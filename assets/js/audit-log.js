@@ -9926,5 +9926,15 @@ window.ESCENA_AUDIT = [
    "rin-alienation-vandal-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-14T20:57:29.964Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto eliminado",
+  "created": [],
+  "edited": [],
+  "deleted": [
+   "frente-integrado-demolition-v2"
+  ]
  }
 ];
