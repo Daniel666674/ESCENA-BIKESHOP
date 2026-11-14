@@ -9997,5 +9997,27 @@ window.ESCENA_AUDIT = [
    "rin-cult-match-v2-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-14T22:19:18.390Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 11 productos editados, 1 foto subida",
+  "created": [
+   "par-de-rin-tall-order-air-negro"
+  ],
+  "edited": [
+   "rin-stl-j40c-morado",
+   "rin-stl-j40c-rojo",
+   "rin-stl-j40c-dorado",
+   "rin-stl-j40c-azul",
+   "rin-stolen-rampage-cromado",
+   "rin-stolen-rampage-negro",
+   "rin-demolition-zero-plus-negro",
+   "rin-federal-aero-xl",
+   "rin-fitbikeco-arc-negro",
+   "rin-cult-match-v2-cromado",
+   "rin-stolen-rampage-azul"
+  ],
+  "deleted": []
  }
 ];
