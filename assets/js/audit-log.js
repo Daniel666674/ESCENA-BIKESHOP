@@ -9954,5 +9954,24 @@ window.ESCENA_AUDIT = [
    "pedales-cinema-tilt-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-14T21:59:39.739Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 8 productos editados, 1 foto subida",
+  "created": [
+   "rin-fitbikeco-arc-negro"
+  ],
+  "edited": [
+   "rin-stl-j40c-morado",
+   "rin-stl-j40c-rojo",
+   "rin-stl-j40c-dorado",
+   "rin-stl-j40c-azul",
+   "rin-stolen-rampage-cromado",
+   "rin-stolen-rampage-negro",
+   "rin-demolition-zero-plus-negro",
+   "rin-federal-aero-xl"
+  ],
+  "deleted": []
  }
 ];
