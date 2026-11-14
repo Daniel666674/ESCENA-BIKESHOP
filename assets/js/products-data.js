@@ -552,7 +552,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "pedales-odxyssey-twist-pro-morado",
-  "order": 60,
+  "order": 50,
   "img": "assets/img/products/pedales-odxyssey-twist-pro-morado-mvwpoqumncvi.jpg?v=1793469927595"
  },
  {
@@ -565,7 +565,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "pedales-odyssey-twist-pro-rosado",
-  "order": 50,
+  "order": 40,
   "img": "assets/img/products/pedales-odyssey-twist-pro-rosado-mvwp4amwcqxc.jpg?v=1793468974161"
  },
  {
@@ -577,7 +577,7 @@ window.ESCENA_PRODUCTS = [
   "sku": "PED-ODY-001",
   "units": 1,
   "slug": "pedales-odyssey-twist-pro-morado-negra",
-  "order": 40,
+  "order": 30,
   "img": "assets/img/products/pedales-odyssey-twist-pro-morado-negra-mvwp4d3lqsz7.jpg?v=1793468977245"
  },
  {
@@ -3163,7 +3163,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-bsd-safari-negro-mtxjyq9esuc5.jpg?v=1792523555864"
   ],
   "slug": "pedales-bsd-safari-negro",
-  "order": 90,
+  "order": 70,
   "img": "assets/img/products/pedales-bsd-safari-negro-mtxjyorwbvbi.jpg?v=1792523555864"
  },
  {
@@ -3173,11 +3173,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 130000,
   "sku": "PED-130-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "imgPos": "50% 50%",
   "slug": "pedales-cinema-tilt-plate-negro",
-  "order": 10,
+  "order": 80,
   "img": "assets/img/products/pedales-cinema-tilt-plate-negro-mtxjjgnt9jrd.jpg?v=1792523555864"
  },
  {
@@ -3190,7 +3190,7 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "imgFit": "cover",
   "slug": "pedales-cinema-tilt-negro",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/pedales-cinema-tilt-negro-mtxjjj3zb35i.jpg?v=1792523555864"
  },
  {
@@ -3789,7 +3789,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "pedales-odyssey-twist-pro",
-  "order": 30,
+  "order": 20,
   "imgFit": "cover",
   "imgColorMap": {
    "Negro": [
@@ -3817,7 +3817,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgPos": "50% 50%",
   "slug": "pedales-cult-dak-negro",
-  "order": 20,
+  "order": 10,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-cult-dak-negro-mtc46ewguvsa.jpg?v=1792523555864"
  },
@@ -9127,7 +9127,7 @@ window.ESCENA_PRODUCTS = [
   "price": 85000,
   "sku": "PEDALES-METAL-NEGRO-01",
   "units": 5,
-  "order": 70,
+  "order": 60,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-metal-negro-01-mtxiv4hz9yb6.jpg?v=1792523555864"
  },
