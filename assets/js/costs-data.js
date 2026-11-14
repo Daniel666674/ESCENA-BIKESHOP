@@ -451,5 +451,6 @@ window.ESCENA_COSTS = {
  "plato-fitbikeco-key-guard-v2-azul": 272000,
  "plato-fitbikeco-key-guard-v2-rojo": 272000,
  "plato-fitbikeco-key-guard-v2-gris": 272000,
- "plato-federal-code-cromado-guardia-28t": 216000
+ "plato-federal-code-cromado-guardia-28t": 216000,
+ "rin-fitbikeco-arc-negro": 264000
 };
