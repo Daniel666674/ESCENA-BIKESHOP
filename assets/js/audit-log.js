@@ -9973,5 +9973,29 @@ window.ESCENA_AUDIT = [
    "rin-federal-aero-xl"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-14T22:13:01.167Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 13 productos editados, 1 foto subida",
+  "created": [
+   "rin-federal-stance-xl-negro"
+  ],
+  "edited": [
+   "rin-stl-j40c-morado",
+   "rin-stl-j40c-rojo",
+   "rin-stl-j40c-dorado",
+   "rin-stl-j40c-azul",
+   "rin-stolen-rampage-cromado",
+   "rin-stolen-rampage-negro",
+   "rin-demolition-zero-plus-negro",
+   "rin-federal-aero-xl",
+   "rin-fitbikeco-arc-negro",
+   "rin-cult-match-v2-cromado",
+   "rin-stolen-rampage-azul",
+   "rin-stolen-chamber-negro",
+   "rin-cult-match-v2-negro"
+  ],
+  "deleted": []
  }
 ];
