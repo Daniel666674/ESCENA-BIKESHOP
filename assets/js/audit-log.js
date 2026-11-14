@@ -9909,5 +9909,22 @@ window.ESCENA_AUDIT = [
    "plato-s-m-x-man-guardia-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-14T20:52:06.888Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "8 productos editados",
+  "created": [],
+  "edited": [
+   "llanta-merrit-option-negra",
+   "rin-federal-aero-xl",
+   "rin-cult-match-v2-negro",
+   "rin-cult-match-v2-cromado",
+   "rin-stolen-chamber-negro",
+   "rin-stolen-rampage-azul",
+   "rin-demolition-zero-plus-negro",
+   "rin-alienation-vandal-negro"
+  ],
+  "deleted": []
  }
 ];
