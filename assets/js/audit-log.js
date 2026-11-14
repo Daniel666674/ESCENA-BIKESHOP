@@ -9936,5 +9936,23 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "frente-integrado-demolition-v2"
   ]
+ },
+ {
+  "ts": "2026-11-14T20:59:22.607Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "9 productos editados",
+  "created": [],
+  "edited": [
+   "pedales-cinema-tilt-plate-negro",
+   "pedales-cult-dak-negro",
+   "pedales-odyssey-twist-pro",
+   "pedales-odyssey-twist-pro-morado-negra",
+   "pedales-odyssey-twist-pro-rosado",
+   "pedales-odxyssey-twist-pro-morado",
+   "pedales-metal-negro-01",
+   "pedales-bsd-safari-negro",
+   "pedales-cinema-tilt-negro"
+  ],
+  "deleted": []
  }
 ];
