@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Rin Federal Stance XL negro",
+  "brand": "Federal",
+  "cat": "rines",
+  "spec": "Aluminio 6066 Doble pared Costura soldada 36 hoyos 15 mm de alto 40 mm de ancho Distancia entre ejes: 394 mm  peso 0,524 kg/18,5 onzas",
+  "price": 350000,
+  "sku": "RIN-FED-002",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "rin-federal-stance-xl-negro",
+  "order": 20,
+  "img": "assets/img/products/rin-federal-stance-xl-negro-mwgyos03qdlz.jpg?v=1794694369316"
+ },
+ {
   "n": "Rin Fitbikeco ARC negro",
   "brand": "Fitbikeco",
   "cat": "rines",
@@ -9,7 +22,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "rin-fitbikeco-arc-negro",
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/rin-fitbikeco-arc-negro-mwgy7iskz7mf.jpg?v=1794693563693"
  },
  {
@@ -1319,7 +1332,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "rin-stl-j40c-azul",
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/rin-stl-j40c-azul-muhkb9xz89jx.jpg?v=1792523555864"
  },
  {
@@ -1333,7 +1346,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "imgPos": "50% 100%",
   "slug": "rin-stl-j40c-morado",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/rin-stl-j40c-morado-muhk1nip3yen.jpg?v=1792523555864"
  },
  {
@@ -1346,7 +1359,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "rin-stl-j40c-rojo",
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/rin-stl-j40c-rojo-muhjhjwkfpds.jpg?v=1792523555864"
  },
  {
@@ -1359,7 +1372,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "rin-stl-j40c-dorado",
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/rin-stl-j40c-dorado-muhjhlfzjwj8.jpg?v=1792523555864"
  },
  {
@@ -1376,7 +1389,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/rin-stolen-chamber-negro-muhir608079g.jpg?v=1792523555864"
   ],
   "slug": "rin-stolen-chamber-negro",
-  "order": 30,
+  "order": 40,
   "img": "assets/img/products/rin-stolen-chamber-negro-muhir4iju4cu.jpg?v=1792523555864"
  },
  {
@@ -1389,7 +1402,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "rin-stolen-rampage-azul",
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/rin-stolen-rampage-azul-muhir7awerjf.jpg?v=1792523555864"
  },
  {
@@ -1402,7 +1415,7 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "imgFit": "cover",
   "slug": "rin-stolen-rampage-negro",
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/rin-stolen-rampage-negro-muhir927tm8w.jpg?v=1792523555864"
  },
  {
@@ -1675,7 +1688,7 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "imgFit": "cover",
   "slug": "rin-stolen-rampage-cromado",
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/rin-stolen-rampage-cromado-mug6g5idvp19.jpg?v=1792523555864"
  },
  {
@@ -1692,7 +1705,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/rin-cult-match-v2-cromado-mug52jwlt643.jpg?v=1792523555864"
   ],
   "slug": "rin-cult-match-v2-cromado",
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/rin-cult-match-v2-cromado-mug52ijxtexd.jpg?v=1792523555864"
  },
  {
@@ -1710,7 +1723,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/rin-cult-match-v2-negro-mug4x9uuihom.jpg?v=1792523555864"
   ],
   "slug": "rin-cult-match-v2-negro",
-  "order": 20,
+  "order": 30,
   "img": "assets/img/products/rin-cult-match-v2-negro-mug4x6yff8vo.jpg?v=1792523555864"
  },
  {
@@ -1749,7 +1762,7 @@ window.ESCENA_PRODUCTS = [
   "units": 0,
   "imgFit": "cover",
   "slug": "rin-demolition-zero-plus-negro",
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/rin-demolition-zero-plus-negro-mueqzqlobybg.jpg?v=1792523555864"
  },
  {
@@ -1766,7 +1779,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/rin-federal-aero-xl-mueq7e7c3juz.jpg?v=1792523555864"
   ],
   "slug": "rin-federal-aero-xl",
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/rin-federal-aero-xl-mueq7co3vnu9.jpg?v=1792523555864"
  },
  {
