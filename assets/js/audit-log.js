@@ -10019,5 +10019,24 @@ window.ESCENA_AUDIT = [
    "rin-stolen-rampage-azul"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-16T19:47:39.928Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "10 productos editados",
+  "created": [],
+  "edited": [
+   "pedales-merritt-p1-aqua",
+   "pedales-merritt-p1-negro",
+   "pedales-tallorder-catch-negro",
+   "pedales-demolition-trooper-blanco-negro",
+   "pedales-demolition-trooper-azul-blanco",
+   "pedales-demolition-trooper-rojo-blanco",
+   "pedales-demolition-trooper-morado-amarillo",
+   "pedales-demolition-trooper-azul-rojo",
+   "pedales-wellgo-negro",
+   "llanta-odyssey-broc-negra-2-25-2-40"
+  ],
+  "deleted": []
  }
 ];
