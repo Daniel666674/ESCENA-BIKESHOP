@@ -1542,7 +1542,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "pedales-merritt-p1-negro",
-  "order": 180,
+  "order": 110,
   "img": "assets/img/products/pedales-merritt-p1-negro-muhg8qtysk3t.jpg?v=1792523555864"
  },
  {
@@ -1552,7 +1552,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 85000,
   "sku": "PED-MER-001",
-  "units": 2,
+  "units": 0,
   "imgs": [
    "assets/img/products/pedales-merritt-p1-aqua-muh9o74fjjvj.jpg?v=1792523555864",
    "assets/img/products/pedales-merritt-p1-aqua-muh9kvgadi0f.jpg?v=1792523555864"
@@ -3068,7 +3068,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-azul-rojo",
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/pedales-demolition-trooper-azul-rojo-mu34cbee811z.jpg?v=1792523555864"
  },
  {
@@ -3129,7 +3129,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-demolition-trooper-blanco-negro-mtxl2f4sur81.jpg?v=1792523555864"
   ],
   "slug": "pedales-demolition-trooper-blanco-negro",
-  "order": 160,
+  "order": 170,
   "img": "assets/img/products/pedales-demolition-trooper-blanco-negro-mtxl2dkp1b3l.jpg?v=1792523555864"
  },
  {
@@ -3142,7 +3142,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-rojo-blanco",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/pedales-demolition-trooper-rojo-blanco-mtxl2g8rpmnm.jpg?v=1792523555864"
  },
  {
@@ -3155,7 +3155,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-azul-blanco",
-  "order": 150,
+  "order": 160,
   "img": "assets/img/products/pedales-demolition-trooper-azul-blanco-mtxl2ho9l07i.jpg?v=1792523555864"
  },
  {
@@ -3168,7 +3168,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "pedales-demolition-trooper-morado-amarillo",
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/pedales-demolition-trooper-morado-amarillo-mtxknl9czpgm.jpg?v=1792523555864"
  },
  {
@@ -3185,7 +3185,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-tallorder-catch-negro-mtxk8otc9u3b.jpg?v=1792523555864"
   ],
   "slug": "pedales-tallorder-catch-negro",
-  "order": 170,
+  "order": 180,
   "img": "assets/img/products/pedales-tallorder-catch-negro-mtxk8mxo5w8e.jpg?v=1792523555864"
  },
  {
@@ -4719,15 +4719,17 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 160000,
   "sku": "COR-ODY-001",
-  "units": 4,
+  "units": 2,
   "sizes": [
    {
     "label": "20x2.25\"",
-    "units": 0
+    "units": 0,
+    "price": 160000
    },
    {
     "label": "20x2.40\"",
-    "units": 4
+    "units": 2,
+    "price": 160000
    }
   ],
   "slug": "llanta-odyssey-broc-negra-2-25-2-40",
@@ -7780,7 +7782,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/pedales-wellgo-negro.jpg?v=1792523555864",
    "assets/img/products/pedales-wellgo-negro-2.jpg?v=1792523555864"
   ],
-  "order": 110,
+  "order": 120,
   "imgFit": "cover",
   "img": "assets/img/products/pedales-wellgo-negro.jpg?v=1792523555864"
  },
