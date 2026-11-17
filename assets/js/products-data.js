@@ -2911,7 +2911,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 190000,
   "sku": "SIL-PRM-001",
-  "units": 1,
+  "units": 0,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/silla-pivotal-primo-breaker-logo-blanco-mu37o8e9sn56.jpg?v=1792523555864",
