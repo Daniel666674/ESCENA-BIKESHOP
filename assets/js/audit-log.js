@@ -10038,5 +10038,15 @@ window.ESCENA_AUDIT = [
    "llanta-odyssey-broc-negra-2-25-2-40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-17T20:08:50.446Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "silla-pivotal-primo-breaker-logo-blanco"
+  ],
+  "deleted": []
  }
 ];
