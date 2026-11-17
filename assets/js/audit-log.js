@@ -10048,5 +10048,18 @@ window.ESCENA_AUDIT = [
    "silla-pivotal-primo-breaker-logo-blanco"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-17T20:31:59.225Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "timon-gw-gorila-4pc-negro",
+   "manubrio-cromoly-negro-04",
+   "timon-gw-destructor-tornasol",
+   "manubrio-cromoly-negro-03"
+  ],
+  "deleted": []
  }
 ];
