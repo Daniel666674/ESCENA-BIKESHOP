@@ -6584,11 +6584,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: Acero Largo: 740MM",
   "price": 50000,
   "sku": "TMN-GWB-004",
-  "units": 2,
+  "units": 0,
   "sizes": [
    {
     "label": "740mm",
-    "units": 2
+    "units": 0,
+    "price": 50000
    }
   ],
   "slug": "timon-gw-gorila-4pc-negro",
@@ -6599,11 +6600,13 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Morado",
-    "units": 2
+    "units": 0,
+    "price": 50000
    },
    {
     "label": "Negro",
-    "units": 0
+    "units": 0,
+    "price": 50000
    }
   ],
   "imgColorMap": {
@@ -6662,7 +6665,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 210,
+  "order": 190,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1792523555864"
  },
  {
@@ -10098,7 +10101,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 190,
+  "order": 200,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1792523555864"
  },
  {
@@ -10116,7 +10119,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 200,
+  "order": 210,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1792523555864"
  }
 ];
