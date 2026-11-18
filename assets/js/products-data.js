@@ -626,7 +626,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Eje de níquel-cromoly de 14 mm con broca de 6 mm - Buje 6016 actual con 2 rodamientos sellados - Driver de cromoly de 1 pieza con 3 rodamientos sellados - Accionamiento de 4 trinquetes con ballestas individuales para un acoplamiento preciso - Protector de cubo de plástico patentado para el lado opuesto a la transmisión - Anillo de trinquete de 24 dientes, 15 grados de acoplamiento -  Hoyos: 36 - Peso: 550 g con protector",
   "price": 680000,
   "sku": "MZT-ALI-004",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "colors": [
    {
@@ -636,7 +636,7 @@ window.ESCENA_PRODUCTS = [
    },
    {
     "label": "Izquierdo",
-    "units": 1,
+    "units": 0,
     "price": 680000
    }
   ],
@@ -927,11 +927,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 800000,
   "sku": "TEN-ODY-001",
-  "units": 2,
+  "units": 1,
   "sizes": [
    {
     "label": "25mm",
-    "units": 2,
+    "units": 1,
     "price": 800000
    }
   ],
@@ -1412,7 +1412,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: aluminio 6061 extruido - ANCHO : 34 mm - AGUJEROS: 36 huecos - Union: Pineado - Incluye protector de aro - Peso: 16,4 oz",
   "price": 160000,
   "sku": "RIN-STL-003",
-  "units": 10,
+  "units": 2,
   "imgFit": "cover",
   "slug": "rin-stolen-rampage-azul",
   "order": 70,
@@ -7695,9 +7695,9 @@ window.ESCENA_PRODUCTS = [
   "brand": "Federal",
   "cat": "marcos",
   "spec": "Cromoly · Tubo superior 20.5\" · Cola 12.5\" · Negro",
-  "price": 1650000,
+  "price": 1660000,
   "sku": "MRC-FED-001",
-  "units": 1,
+  "units": 0,
   "imgs": [
    "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-mt4i40vfbkvz.jpg?v=1792523555864",
    "assets/img/products/marco-federal-command-negro-20-5-x-cola-12-5-2.jpg?v=1792523555864",
@@ -7706,11 +7706,13 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20.5\"",
-    "units": 1
+    "units": 0,
+    "price": 1660000
    },
    {
     "label": "20.75\"",
-    "units": 0
+    "units": 0,
+    "price": 1660000
    }
   ],
   "order": 60,
