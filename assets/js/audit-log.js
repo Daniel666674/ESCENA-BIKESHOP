@@ -10061,5 +10061,18 @@ window.ESCENA_AUDIT = [
    "manubrio-cromoly-negro-03"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-18T21:10:29.144Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "marco-federal-command-negro-20-5-x-cola-12-5",
+   "tenedor-odyssey-r25",
+   "rin-stolen-rampage-azul",
+   "cassette-alienation-iluminati-negro"
+  ],
+  "deleted": []
  }
 ];
