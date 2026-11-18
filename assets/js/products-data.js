@@ -4095,11 +4095,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Aluminio 6061- T6 . 25T  48 gramos",
   "price": 65000,
   "sku": "PLT-TRU-002",
-  "units": 2,
+  "units": 0,
   "sizes": [
    {
     "label": "25T",
-    "units": 2,
+    "units": 0,
     "price": 65000
    }
   ],
