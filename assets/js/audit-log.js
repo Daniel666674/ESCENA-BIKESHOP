@@ -10074,5 +10074,15 @@ window.ESCENA_AUDIT = [
    "cassette-alienation-iluminati-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-18T21:20:58.806Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "plato-trueno-exotic-tornasol"
+  ],
+  "deleted": []
  }
 ];
