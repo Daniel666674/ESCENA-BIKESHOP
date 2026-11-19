@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Maleta Fadefootwear Negra 32LT",
+  "brand": "Fadefootwear",
+  "cat": "accesorios",
+  "spec": "Material resistente y versartil Capacidad de 32LT",
+  "price": 230000,
+  "sku": "ACC-FAD-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "maleta-fadefootwear-negra-32lt",
+  "img": "assets/img/products/maleta-fadefootwear-negra-32lt-mwo4ms649z5t.jpg?v=1795127622163"
+ },
+ {
   "n": "Maleta Cult Stage Bag Verde Camulada",
   "brand": "Cult",
   "cat": "accesorios",
