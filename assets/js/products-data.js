@@ -10,8 +10,12 @@ window.ESCENA_PRODUCTS = [
   "tag": "Promocion 🔥",
   "promo": true,
   "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/maleta-de-bicicleta-para-viaje-negra-mwo4wmal34ge.jpg?v=1795128075559",
+   "assets/img/products/maleta-de-bicicleta-para-viaje-negra-mwo4wnxj7mpl.jpg?v=1795128077708"
+  ],
   "slug": "maleta-de-bicicleta-para-viaje-negra",
-  "img": "assets/img/products/maleta-de-bicicleta-para-viaje-negra-mwo4tkekaro9.jpg?v=1795127933402"
+  "img": "assets/img/products/maleta-de-bicicleta-para-viaje-negra-mwo4wmal34ge.jpg?v=1795128075559"
  },
  {
   "n": "Maleta Fadefootwear Negra 32LT",
