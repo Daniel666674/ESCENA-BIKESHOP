@@ -10126,5 +10126,17 @@ window.ESCENA_AUDIT = [
    "maleta-de-bicicleta-para-viaje-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-19T22:53:26.944Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 3 fotos subidas",
+  "created": [
+   "neumatico-kenda-20-x-2-40",
+   "neumatico-optimus-20-x-2-50",
+   "neumatico-cult-rubber-20-x-2-40"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
