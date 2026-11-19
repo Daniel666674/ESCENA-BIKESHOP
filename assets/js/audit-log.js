@@ -10152,5 +10152,17 @@ window.ESCENA_AUDIT = [
    "maleta-cult-stage-bag-naranja-camulada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-19T23:36:20.198Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 3 fotos subidas",
+  "created": [
+   "kit-de-parches-thumps-up-x-24-unidades",
+   "kit-de-despinche-thumbs-up-48-unidades",
+   "kit-de-despinche-portatil"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
