@@ -1,5 +1,41 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Maleta Cult Stage Bag Verde Camulada",
+  "brand": "Cult",
+  "cat": "accesorios",
+  "spec": "Lona resistente y de alta densidad... correas acolchadas ajustables Medida:17” x 12” x 10”",
+  "price": 150000,
+  "sku": "ACC-CLT-003",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "maleta-cult-stage-bag-verde-camulada",
+  "img": "assets/img/products/maleta-cult-stage-bag-verde-camulada-mwo3zg3ixwcm.jpg?v=1795126528497"
+ },
+ {
+  "n": "Maleta Cult Stage Bag Naranja Camulada",
+  "brand": "Cult",
+  "cat": "accesorios",
+  "spec": "Lona resistente y de alta densidad... correas acolchadas ajustables  Medida:17” x 12” x 10”",
+  "price": 150000,
+  "sku": "ACC-CLT-002",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "maleta-cult-stage-bag-naranja-camulada-2",
+  "img": "assets/img/products/maleta-cult-stage-bag-naranja-camulada-2-mwo3zi7merio.jpg?v=1795126530205"
+ },
+ {
+  "n": "Maleta Cult Stage Bag Naranja Camulada",
+  "brand": "Cult",
+  "cat": "accesorios",
+  "spec": "Lona resistente y de alta densidad... correas acolchadas ajustables Medidas 17” x 12” x 10”",
+  "price": 150000,
+  "sku": "ACC-CLT-001",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "maleta-cult-stage-bag-naranja-camulada",
+  "img": "assets/img/products/maleta-cult-stage-bag-naranja-camulada-mwo3zjj1xkj7.jpg?v=1795126532141"
+ },
+ {
   "n": "Par de rin Tall Order Air Negro",
   "brand": "TALLORDER",
   "cat": "rines",
