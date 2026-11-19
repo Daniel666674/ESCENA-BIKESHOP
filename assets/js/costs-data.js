@@ -454,5 +454,8 @@ window.ESCENA_COSTS = {
  "plato-federal-code-cromado-guardia-28t": 216000,
  "rin-fitbikeco-arc-negro": 264000,
  "rin-federal-stance-xl-negro": 280000,
- "par-de-rin-tall-order-air-negro": 576000
+ "par-de-rin-tall-order-air-negro": 576000,
+ "maleta-cult-stage-bag-naranja-camulada": 120000,
+ "maleta-cult-stage-bag-naranja-camulada-2": 130000,
+ "maleta-cult-stage-bag-verde-camulada": 130000
 };
