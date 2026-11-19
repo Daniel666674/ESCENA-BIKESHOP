@@ -10138,5 +10138,19 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-19T22:56:54.697Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "5 productos editados",
+  "created": [],
+  "edited": [
+   "maleta-de-bicicleta-para-viaje-negra",
+   "maleta-fadefootwear-negra-32lt",
+   "maleta-cult-stage-bag-verde-camulada",
+   "maleta-cult-stage-bag-naranja-camulada-2",
+   "maleta-cult-stage-bag-naranja-camulada"
+  ],
+  "deleted": []
  }
 ];
