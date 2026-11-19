@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pegante Solucion Thumps Up",
+  "brand": "Thumps",
+  "cat": "piezas",
+  "spec": "Pega para parche Cantidad 20ml",
+  "price": 2500,
+  "sku": "PZA-THU-004",
+  "units": 10,
+  "imgFit": "cover",
+  "slug": "pegante-solucion-thumps-up",
+  "img": "assets/img/products/pegante-solucion-thumps-up-mwo75zg28va6.jpg?v=1795131871627"
+ },
+ {
   "n": "Kit de parches Thumps Up x 24 Unidades",
   "brand": "Thumps",
   "cat": "piezas",
