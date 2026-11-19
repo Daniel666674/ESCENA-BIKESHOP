@@ -10096,5 +10096,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-19T22:34:05.972Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "maleta-fadefootwear-negra-32lt"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
