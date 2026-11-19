@@ -38,7 +38,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Maleta de bicicleta para Viaje Negra",
   "brand": "Valkiria",
-  "cat": "accesorios",
+  "cat": "piezas",
   "spec": "Material Reistente, tiras resistentes, ruedas portatiles Capacidad 100LT",
   "price": 450000,
   "sku": "ACC-VAL-001",
@@ -56,7 +56,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Maleta Fadefootwear Negra 32LT",
   "brand": "Fadefootwear",
-  "cat": "accesorios",
+  "cat": "piezas",
   "spec": "Material resistente y versartil Capacidad de 32LT",
   "price": 230000,
   "sku": "ACC-FAD-001",
@@ -68,7 +68,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Maleta Cult Stage Bag Verde Camulada",
   "brand": "Cult",
-  "cat": "accesorios",
+  "cat": "piezas",
   "spec": "Lona resistente y de alta densidad... correas acolchadas ajustables Medida:17” x 12” x 10”",
   "price": 150000,
   "sku": "ACC-CLT-003",
@@ -80,7 +80,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Maleta Cult Stage Bag Naranja Camulada",
   "brand": "Cult",
-  "cat": "accesorios",
+  "cat": "piezas",
   "spec": "Lona resistente y de alta densidad... correas acolchadas ajustables  Medida:17” x 12” x 10”",
   "price": 150000,
   "sku": "ACC-CLT-002",
@@ -92,7 +92,7 @@ window.ESCENA_PRODUCTS = [
  {
   "n": "Maleta Cult Stage Bag Naranja Camulada",
   "brand": "Cult",
-  "cat": "accesorios",
+  "cat": "piezas",
   "spec": "Lona resistente y de alta densidad... correas acolchadas ajustables Medidas 17” x 12” x 10”",
   "price": 150000,
   "sku": "ACC-CLT-001",
