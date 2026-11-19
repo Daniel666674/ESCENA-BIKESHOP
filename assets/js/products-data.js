@@ -1,5 +1,19 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Maleta de bicicleta para Viaje Negra",
+  "brand": "Valkiria",
+  "cat": "accesorios",
+  "spec": "Material Reistente, tiras resistentes, ruedas portatiles Capacidad 100LT",
+  "price": 450000,
+  "sku": "ACC-VAL-001",
+  "units": 4,
+  "tag": "Promocion 🔥",
+  "promo": true,
+  "imgFit": "cover",
+  "slug": "maleta-de-bicicleta-para-viaje-negra",
+  "img": "assets/img/products/maleta-de-bicicleta-para-viaje-negra-mwo4tkekaro9.jpg?v=1795127933402"
+ },
+ {
   "n": "Maleta Fadefootwear Negra 32LT",
   "brand": "Fadefootwear",
   "cat": "accesorios",
