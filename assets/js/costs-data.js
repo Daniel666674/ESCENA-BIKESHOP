@@ -458,5 +458,6 @@ window.ESCENA_COSTS = {
  "maleta-cult-stage-bag-naranja-camulada": 120000,
  "maleta-cult-stage-bag-naranja-camulada-2": 130000,
  "maleta-cult-stage-bag-verde-camulada": 130000,
- "maleta-fadefootwear-negra-32lt": 184000
+ "maleta-fadefootwear-negra-32lt": 184000,
+ "maleta-de-bicicleta-para-viaje-negra": 405000
 };
