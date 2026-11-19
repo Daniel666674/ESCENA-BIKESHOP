@@ -10106,5 +10106,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-19T22:39:01.480Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "maleta-de-bicicleta-para-viaje-negra"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
