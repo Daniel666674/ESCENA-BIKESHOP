@@ -1,5 +1,41 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Neumatico Kenda 20 x 2.40\"",
+  "brand": "Kenda",
+  "cat": "piezas",
+  "spec": "Cámara de aire fabricada capacidad hasta 2.40\" valvula de carro",
+  "price": 14000,
+  "sku": "PZA-KEN-001",
+  "units": 50,
+  "imgFit": "cover",
+  "slug": "neumatico-kenda-20-x-2-40",
+  "img": "assets/img/products/neumatico-kenda-20-x-2-40-mwo5byepjjnj.jpg?v=1795128791713"
+ },
+ {
+  "n": "Neumatico Optimus 20 x 2.50\"",
+  "brand": "Optimus",
+  "cat": "piezas",
+  "spec": "Cámara de aire fabricada específicamente para neumáticos capacidad para llantas hasta 2.50\" valvula americana",
+  "price": 13000,
+  "sku": "PZA-OPT-002",
+  "units": 10,
+  "imgFit": "cover",
+  "slug": "neumatico-optimus-20-x-2-50",
+  "img": "assets/img/products/neumatico-optimus-20-x-2-50-mwo5c0ipq3v0.jpg?v=1795128793468"
+ },
+ {
+  "n": "Neumatico Cult Rubber 20 x 2.40\"",
+  "brand": "Cult",
+  "cat": "piezas",
+  "spec": "Cámara de aire fabricada específicamente para neumáticos más grandes...",
+  "price": 23000,
+  "sku": "PZA-CLT-001",
+  "units": 12,
+  "imgFit": "cover",
+  "slug": "neumatico-cult-rubber-20-x-2-40",
+  "img": "assets/img/products/neumatico-cult-rubber-20-x-2-40-mwo5c1vgaphz.jpg?v=1795128795083"
+ },
+ {
   "n": "Maleta de bicicleta para Viaje Negra",
   "brand": "Valkiria",
   "cat": "accesorios",
