@@ -462,5 +462,8 @@ window.ESCENA_COSTS = {
  "maleta-de-bicicleta-para-viaje-negra": 405000,
  "neumatico-cult-rubber-20-x-2-40": 18400,
  "neumatico-optimus-20-x-2-50": 10400,
- "neumatico-kenda-20-x-2-40": 11200
+ "neumatico-kenda-20-x-2-40": 11200,
+ "kit-de-despinche-portatil": 4400,
+ "kit-de-despinche-thumbs-up-48-unidades": 6800,
+ "kit-de-parches-thumps-up-x-24-unidades": 6800
 };
