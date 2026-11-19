@@ -10084,5 +10084,17 @@ window.ESCENA_AUDIT = [
    "plato-trueno-exotic-tornasol"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-19T22:15:44.347Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 3 fotos subidas",
+  "created": [
+   "maleta-cult-stage-bag-verde-camulada",
+   "maleta-cult-stage-bag-naranja-camulada-2",
+   "maleta-cult-stage-bag-naranja-camulada"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
