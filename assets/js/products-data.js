@@ -1,5 +1,41 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Kit de parches Thumps Up x 24 Unidades",
+  "brand": "Thumps",
+  "cat": "piezas",
+  "spec": "Prche grande 24 unidades + Soluciones",
+  "price": 8500,
+  "sku": "PZA-THU-003",
+  "units": 50,
+  "imgFit": "cover",
+  "slug": "kit-de-parches-thumps-up-x-24-unidades",
+  "img": "assets/img/products/kit-de-parches-thumps-up-x-24-unidades-mwo6v41jrfgw.jpg?v=1795131364805"
+ },
+ {
+  "n": "Kit de despinche Thumbs Up  48 Unidades",
+  "brand": "Thumps",
+  "cat": "piezas",
+  "spec": "kit de parches pequeo x 48T + Solucion",
+  "price": 8500,
+  "sku": "PZA-THU-002",
+  "units": 20,
+  "imgFit": "cover",
+  "slug": "kit-de-despinche-thumbs-up-48-unidades",
+  "img": "assets/img/products/kit-de-despinche-thumbs-up-48-unidades-mwo6v5xh1hcf.jpg?v=1795131366545"
+ },
+ {
+  "n": "Kit de despinche Portatil",
+  "brand": "Thumps",
+  "cat": "piezas",
+  "spec": "Kit de despinche portatil y versatil para que lo lleves en tu herramienta",
+  "price": 5500,
+  "sku": "PZA-THU-001",
+  "units": 20,
+  "imgFit": "cover",
+  "slug": "kit-de-despinche-portatil",
+  "img": "assets/img/products/kit-de-despinche-portatil-mwo6v79tnmnb.jpg?v=1795131368277"
+ },
+ {
   "n": "Neumatico Kenda 20 x 2.40\"",
   "brand": "Kenda",
   "cat": "piezas",
