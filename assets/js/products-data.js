@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Kit de Trinquetes y resortes V2",
+  "brand": "Optimus",
+  "cat": "piezas",
+  "spec": "Sistema de 6 trinquetes y 6 resortes para optimus v2",
+  "price": 35000,
+  "sku": "PZA-OPT-004",
+  "units": 5,
+  "imgFit": "cover",
+  "slug": "kit-de-trinquetes-y-resortes-v2",
+  "order": 220,
+  "img": "assets/img/products/kit-de-trinquetes-y-resortes-v2-mwpfibdu3nqs.jpg?v=1795206350520"
+ },
+ {
   "n": "Kit de radios Azul  x 36 rin 20",
   "brand": "",
   "cat": "piezas",
@@ -35,7 +48,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "kit-de-trinquetes-optimus-v1",
-  "order": 200,
+  "order": 210,
   "img": "assets/img/products/kit-de-trinquetes-optimus-v1-mwp6bj99ii75.jpg?v=1795190917235"
  },
  {
@@ -61,7 +74,7 @@ window.ESCENA_PRODUCTS = [
   "units": 4,
   "imgFit": "cover",
   "slug": "conix-mutanty-negro-m25",
-  "order": 210,
+  "order": 200,
   "img": "assets/img/products/conix-mutanty-negro-m25-mwp3qqjymeju.jpg?v=1795186587164"
  },
  {
