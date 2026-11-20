@@ -10262,5 +10262,25 @@ window.ESCENA_AUDIT = [
    "conix-mutanty-negro-m24"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T16:27:45.047Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 8 productos editados, 2 fotos subidas",
+  "created": [
+   "kit-de-radios-azul-x-36-rin-20",
+   "kit-de-radios-para-bicicleta-rojo-x-36"
+  ],
+  "edited": [
+   "conix-odyssey-negro",
+   "conix-mutanty-negro-m24",
+   "kit-de-trinquetes-optimus-v1",
+   "conix-mutanty-negro-m25",
+   "pegante-solucion-thumps-up",
+   "kit-de-despinche-portatil",
+   "kit-de-despinche-thumbs-up-48-unidades",
+   "kit-de-parches-thumps-up-x-24-unidades"
+  ],
+  "deleted": []
  }
 ];
