@@ -45,7 +45,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "conix-mutanty-negro-m24",
-  "img": "assets/img/products/conix-mutanty-negro-m24-mwp3qrrw0hvv.jpg?v=1795186588771"
+  "img": "assets/img/products/conix-mutanty-negro-m24-mwp6d8ajt774.jpg?v=1795190996302"
  },
  {
   "n": "Kit de Radios negro x 36",
