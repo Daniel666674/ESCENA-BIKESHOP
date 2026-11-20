@@ -10230,5 +10230,17 @@ window.ESCENA_AUDIT = [
    "pegante-solucion-thumps-up"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T14:56:41.125Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "3 productos nuevos, 3 fotos subidas",
+  "created": [
+   "conix-odyssey-negro",
+   "conix-mutanty-negro-m25",
+   "conix-mutanty-negro-m24"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
