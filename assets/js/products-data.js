@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Kit de Trinquetes Optimus V1",
+  "brand": "Optimus",
+  "cat": "piezas",
+  "spec": "sistema de 4 trinquetes y 1 resorte",
+  "price": 35000,
+  "sku": "PZA-OPT-003",
+  "units": 5,
+  "imgFit": "cover",
+  "slug": "kit-de-trinquetes-optimus-v1",
+  "img": "assets/img/products/kit-de-trinquetes-optimus-v1-mwp6bj99ii75.jpg?v=1795190917235"
+ },
+ {
   "n": "Conix odyssey Negro",
   "brand": "Odyssey",
   "cat": "piezas",
