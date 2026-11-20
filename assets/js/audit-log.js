@@ -10292,5 +10292,18 @@ window.ESCENA_AUDIT = [
    "conix-mutanty-negro-m24"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T20:25:58.787Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 productos editados, 1 foto subida",
+  "created": [
+   "kit-de-trinquetes-y-resortes-v2"
+  ],
+  "edited": [
+   "conix-mutanty-negro-m25",
+   "kit-de-trinquetes-optimus-v1"
+  ],
+  "deleted": []
  }
 ];
