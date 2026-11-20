@@ -10282,5 +10282,15 @@ window.ESCENA_AUDIT = [
    "kit-de-parches-thumps-up-x-24-unidades"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T16:29:34.328Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "conix-mutanty-negro-m24"
+  ],
+  "deleted": []
  }
 ];
