@@ -73,9 +73,13 @@ window.ESCENA_PRODUCTS = [
   "sku": "PZA-MUT-001",
   "units": 3,
   "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/conix-mutanty-negro-m24-mwp72bhmcb9x.jpg?v=1795192167840",
+   "assets/img/products/conix-mutanty-negro-m24-mwp6d8ajt774.jpg?v=1795190996302"
+  ],
   "slug": "conix-mutanty-negro-m24",
   "order": 190,
-  "img": "assets/img/products/conix-mutanty-negro-m24-mwp6d8ajt774.jpg?v=1795190996302"
+  "img": "assets/img/products/conix-mutanty-negro-m24-mwp72bhmcb9x.jpg?v=1795192167840"
  },
  {
   "n": "Kit de Radios negro x 36",
