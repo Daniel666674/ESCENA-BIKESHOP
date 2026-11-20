@@ -10184,5 +10184,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T14:30:33.950Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "kit-x-36-de-radios-tornasol-rin-20"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
