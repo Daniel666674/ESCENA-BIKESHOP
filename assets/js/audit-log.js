@@ -10242,5 +10242,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T16:08:46.913Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "kit-de-trinquetes-optimus-v1"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
