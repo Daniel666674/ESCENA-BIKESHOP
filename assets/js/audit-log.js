@@ -10326,5 +10326,18 @@ window.ESCENA_AUDIT = [
    "kit-de-radios-para-bicicleta-rojo-x-36"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T20:33:10.158Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "cult-multiherramienta-02",
+   "cult-multiherramienta-01",
+   "extractor-de-cadena-gw",
+   "llave-y-roja"
+  ],
+  "deleted": []
  }
 ];
