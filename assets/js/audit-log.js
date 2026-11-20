@@ -10316,5 +10316,15 @@ window.ESCENA_AUDIT = [
    "conix-odyssey-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T20:30:30.453Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "kit-de-radios-para-bicicleta-rojo-x-36"
+  ],
+  "deleted": []
  }
 ];
