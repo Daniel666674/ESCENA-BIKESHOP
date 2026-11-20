@@ -36,7 +36,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "slug": "kit-de-radios-para-bicicleta-rojo-x-36",
   "order": 120,
-  "img": "assets/img/products/kit-de-radios-para-bicicleta-rojo-x-36-mwp6zxawe1o3.jpg?v=1795192055233"
+  "img": "assets/img/products/kit-de-radios-para-bicicleta-rojo-x-36-mwpfo4imuxqg.jpg?v=1795206621338"
  },
  {
   "n": "Kit de Trinquetes Optimus V1",
