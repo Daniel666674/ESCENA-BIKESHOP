@@ -1,5 +1,21 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Neumatico Odyssey Lite Jacket 20 x 2.40",
+  "brand": "Odyssey",
+  "cat": "piezas",
+  "spec": "Estos tubos de TPU ultraligeros son aproximadamente un 59 % más ligeros que los tubos de caucho butílico de 20 pulgadas comparables, con un ahorro de alrededor de 94 g (o 3,3 oz) por rueda de 20 pulgadas.",
+  "price": 65000,
+  "sku": "PZA-ODY-001",
+  "units": 1,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/neumatico-odyssey-lite-jacket-20-x-2-40-mwp1qrnohhdv.jpg?v=1795183230591",
+   "assets/img/products/neumatico-odyssey-lite-jacket-20-x-2-40-mwp1qttrsomc.jpg?v=1795183232550"
+  ],
+  "slug": "neumatico-odyssey-lite-jacket-20-x-2-40",
+  "img": "assets/img/products/neumatico-odyssey-lite-jacket-20-x-2-40-mwp1qrnohhdv.jpg?v=1795183230591"
+ },
+ {
   "n": "Pegante Solucion Thumps Up",
   "brand": "Thumps",
   "cat": "piezas",
