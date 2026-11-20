@@ -1,5 +1,31 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Kit de radios Azul  x 36 rin 20",
+  "brand": "",
+  "cat": "piezas",
+  "spec": "Material acero inoxidable Medida 186mm – Para rin 20″ Paquete por 36 Radios",
+  "price": 15000,
+  "sku": "PZA-GEN-005",
+  "units": 4,
+  "imgFit": "cover",
+  "slug": "kit-de-radios-azul-x-36-rin-20",
+  "order": 130,
+  "img": "assets/img/products/kit-de-radios-azul-x-36-rin-20-mwp6zvr4r37d.jpg?v=1795192053080"
+ },
+ {
+  "n": "Kit de Radios para bicicleta Rojo x 36",
+  "brand": "",
+  "cat": "piezas",
+  "spec": "Material acero inoxidable Medida 186mm – Para rin 20″ Paquete por 36 Radios",
+  "price": 15000,
+  "sku": "PZA-GEN-004",
+  "units": 4,
+  "imgFit": "cover",
+  "slug": "kit-de-radios-para-bicicleta-rojo-x-36",
+  "order": 120,
+  "img": "assets/img/products/kit-de-radios-para-bicicleta-rojo-x-36-mwp6zxawe1o3.jpg?v=1795192055233"
+ },
+ {
   "n": "Kit de Trinquetes Optimus V1",
   "brand": "Optimus",
   "cat": "piezas",
@@ -9,6 +35,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "kit-de-trinquetes-optimus-v1",
+  "order": 200,
   "img": "assets/img/products/kit-de-trinquetes-optimus-v1-mwp6bj99ii75.jpg?v=1795190917235"
  },
  {
@@ -21,6 +48,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "conix-odyssey-negro",
+  "order": 180,
   "img": "assets/img/products/conix-odyssey-negro-mwp3qot3ybp0.jpg?v=1795186585581"
  },
  {
@@ -33,6 +61,7 @@ window.ESCENA_PRODUCTS = [
   "units": 4,
   "imgFit": "cover",
   "slug": "conix-mutanty-negro-m25",
+  "order": 210,
   "img": "assets/img/products/conix-mutanty-negro-m25-mwp3qqjymeju.jpg?v=1795186587164"
  },
  {
@@ -45,6 +74,7 @@ window.ESCENA_PRODUCTS = [
   "units": 3,
   "imgFit": "cover",
   "slug": "conix-mutanty-negro-m24",
+  "order": 190,
   "img": "assets/img/products/conix-mutanty-negro-m24-mwp6d8ajt774.jpg?v=1795190996302"
  },
  {
@@ -113,7 +143,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "pegante-solucion-thumps-up",
-  "order": 150,
+  "order": 170,
   "img": "assets/img/products/pegante-solucion-thumps-up-mwo75zg28va6.jpg?v=1795131871627"
  },
  {
@@ -126,7 +156,7 @@ window.ESCENA_PRODUCTS = [
   "units": 50,
   "imgFit": "cover",
   "slug": "kit-de-parches-thumps-up-x-24-unidades",
-  "order": 120,
+  "order": 140,
   "img": "assets/img/products/kit-de-parches-thumps-up-x-24-unidades-mwo6v41jrfgw.jpg?v=1795131364805"
  },
  {
@@ -139,7 +169,7 @@ window.ESCENA_PRODUCTS = [
   "units": 20,
   "imgFit": "cover",
   "slug": "kit-de-despinche-thumbs-up-48-unidades",
-  "order": 130,
+  "order": 150,
   "img": "assets/img/products/kit-de-despinche-thumbs-up-48-unidades-mwo6v5xh1hcf.jpg?v=1795131366545"
  },
  {
@@ -152,7 +182,7 @@ window.ESCENA_PRODUCTS = [
   "units": 20,
   "imgFit": "cover",
   "slug": "kit-de-despinche-portatil",
-  "order": 140,
+  "order": 160,
   "img": "assets/img/products/kit-de-despinche-portatil-mwo6v79tnmnb.jpg?v=1795131368277"
  },
  {
