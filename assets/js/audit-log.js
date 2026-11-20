@@ -10252,5 +10252,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T16:10:04.140Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "conix-mutanty-negro-m24"
+  ],
+  "deleted": []
  }
 ];
