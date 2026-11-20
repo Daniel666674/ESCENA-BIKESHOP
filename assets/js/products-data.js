@@ -1482,7 +1482,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 35000,
   "sku": "HER-GWB-002",
-  "units": 10,
+  "units": 15,
   "slug": "extractor-de-cadena-gw",
   "order": 30,
   "img": "assets/img/products/extractor-de-cadena-gw-mun5q922eein.jpg?v=1792523555864"
@@ -9975,7 +9975,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Multiherramienta plegable · 6mm · 8mm · dado 17mm",
   "price": 90000,
   "sku": "CULT-MULTIHERRAMIENTA-01",
-  "units": 4,
+  "units": 1,
   "order": 10,
   "imgFit": "cover",
   "img": "assets/img/products/cult-multiherramienta-01-mun4o2run0pg.jpg?v=1792523555864"
@@ -9988,7 +9988,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Compatible para cadenas cadenas 410, 510 o de medio eslabón - Cuerpo mecanizado por CNC y compartimento para el mango roscado que permite guardar pasadores de accionamiento adicionales -",
   "price": 85000,
   "sku": "CULT-MULTIHERRAMIENTA-02",
-  "units": 12,
+  "units": 2,
   "order": 20,
   "imgFit": "cover",
   "imgs": [
@@ -10005,7 +10005,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Llave allen - 3 puntos - Bristol 4 5 6",
   "price": 9000,
   "sku": "LLAVE-Y-ROJA",
-  "units": 5,
+  "units": 3,
   "order": 70,
   "imgFit": "cover",
   "img": "assets/img/products/llave-y-roja-mun4razlokrm.jpg?v=1792523555864"
