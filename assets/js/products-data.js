@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Kit x 36 de Radios Tornasol rin 20",
+  "brand": "",
+  "cat": "piezas",
+  "spec": "Material acero inoxidable Medida 186mm – Para rin 20″ Paquete por 36 Radios",
+  "price": 40000,
+  "sku": "PZA-GEN-001",
+  "units": 20,
+  "imgFit": "cover",
+  "slug": "kit-x-36-de-radios-tornasol-rin-20",
+  "img": "assets/img/products/kit-x-36-de-radios-tornasol-rin-20-mwp2t8aq75z8.jpg?v=1795185024726"
+ },
+ {
   "n": "Neumatico Odyssey Lite Jacket 20 x 2.40",
   "brand": "Odyssey",
   "cat": "piezas",
