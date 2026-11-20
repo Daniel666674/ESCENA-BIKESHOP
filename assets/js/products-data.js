@@ -62,7 +62,7 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "slug": "conix-odyssey-negro",
   "order": 180,
-  "img": "assets/img/products/conix-odyssey-negro-mwp3qot3ybp0.jpg?v=1795186585581"
+  "img": "assets/img/products/conix-odyssey-negro-mwpfksw26umf.jpg?v=1795206466464"
  },
  {
   "n": "Conix Mutanty Negro M25",
@@ -86,10 +86,6 @@ window.ESCENA_PRODUCTS = [
   "sku": "PZA-MUT-001",
   "units": 3,
   "imgFit": "cover",
-  "imgs": [
-   "assets/img/products/conix-mutanty-negro-m24-mwp72bhmcb9x.jpg?v=1795192167840",
-   "assets/img/products/conix-mutanty-negro-m24-mwp6d8ajt774.jpg?v=1795190996302"
-  ],
   "slug": "conix-mutanty-negro-m24",
   "order": 190,
   "img": "assets/img/products/conix-mutanty-negro-m24-mwp72bhmcb9x.jpg?v=1795192167840"
