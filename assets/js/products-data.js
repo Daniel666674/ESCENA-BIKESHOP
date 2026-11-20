@@ -1,5 +1,41 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Conix odyssey Negro",
+  "brand": "Odyssey",
+  "cat": "piezas",
+  "spec": "Tornillo de compresión de aleación para horquillas Odyssey y Sunday.   También funcionará con otras horquillas que utilicen una rosca M24 x 1,5 mm.",
+  "price": 110000,
+  "sku": "PZA-ODY-002",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "conix-odyssey-negro",
+  "img": "assets/img/products/conix-odyssey-negro-mwp3qot3ybp0.jpg?v=1795186585581"
+ },
+ {
+  "n": "Conix Mutanty Negro M25",
+  "brand": "Mutanty",
+  "cat": "piezas",
+  "spec": "Material Aluminio 6061-T6 Compatible con tenedores Mutanty, Salt, Optimus entre otros de rosca corta Medida de la rosca M25 x 1.5",
+  "price": 35000,
+  "sku": "PZA-MUT-002",
+  "units": 4,
+  "imgFit": "cover",
+  "slug": "conix-mutanty-negro-m25",
+  "img": "assets/img/products/conix-mutanty-negro-m25-mwp3qqjymeju.jpg?v=1795186587164"
+ },
+ {
+  "n": "Conix Mutanty Negro M24",
+  "brand": "Mutanty",
+  "cat": "piezas",
+  "spec": "Material Aluminio 6061-T6 Compatible con tenedores Odyssey, Animal, Primo, Federal entre otros de rosca larga Medida de la rosca M24 x 1.5",
+  "price": 45000,
+  "sku": "PZA-MUT-001",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "conix-mutanty-negro-m24",
+  "img": "assets/img/products/conix-mutanty-negro-m24-mwp3qrrw0hvv.jpg?v=1795186588771"
+ },
+ {
   "n": "Kit de Radios negro x 36",
   "brand": "",
   "cat": "piezas",
