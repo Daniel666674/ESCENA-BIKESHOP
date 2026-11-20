@@ -477,5 +477,6 @@ window.ESCENA_COSTS = {
  "kit-de-trinquetes-optimus-v1": 28000,
  "kit-de-radios-para-bicicleta-rojo-x-36": 12000,
  "kit-de-radios-azul-x-36-rin-20": 12000,
- "kit-de-trinquetes-y-resortes-v2": 28000
+ "kit-de-trinquetes-y-resortes-v2": 28000,
+ "palancas-para-despinchas-plasticas": 1600
 };
