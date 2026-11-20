@@ -470,5 +470,8 @@ window.ESCENA_COSTS = {
  "neumatico-odyssey-lite-jacket-20-x-2-40": 52000,
  "kit-x-36-de-radios-tornasol-rin-20": 32000,
  "kit-de-radios-negro-x-36": 9600,
- "kit-de-radios-negro-x-36-2": 9600
+ "kit-de-radios-negro-x-36-2": 9600,
+ "conix-mutanty-negro-m24": 36000,
+ "conix-mutanty-negro-m25": 28000,
+ "conix-odyssey-negro": 88000
 };
