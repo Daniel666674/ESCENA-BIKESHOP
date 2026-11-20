@@ -10305,5 +10305,16 @@ window.ESCENA_AUDIT = [
    "kit-de-trinquetes-optimus-v1"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T20:28:09.333Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados, 1 foto subida",
+  "created": [],
+  "edited": [
+   "conix-mutanty-negro-m24",
+   "conix-odyssey-negro"
+  ],
+  "deleted": []
  }
 ];
