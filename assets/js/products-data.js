@@ -1,5 +1,29 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Kit de Radios negro x 36",
+  "brand": "",
+  "cat": "piezas",
+  "spec": "Material acero inoxidable Medida 186mm – Para rin 20″ Paquete por 36 Radios",
+  "price": 12000,
+  "sku": "PZA-GEN-003",
+  "units": 20,
+  "imgFit": "cover",
+  "slug": "kit-de-radios-negro-x-36-2",
+  "img": "assets/img/products/kit-de-radios-negro-x-36-2-mwp3bwt00qm0.jpg?v=1795185896026"
+ },
+ {
+  "n": "Kit de radios negro x 36",
+  "brand": "",
+  "cat": "piezas",
+  "spec": "Material acero inoxidable – Para rin 20″ Paquete por 36 Radios",
+  "price": 12000,
+  "sku": "PZA-GEN-002",
+  "units": 30,
+  "imgFit": "cover",
+  "slug": "kit-de-radios-negro-x-36",
+  "img": "assets/img/products/kit-de-radios-negro-x-36-mwp3byhmgr2b.jpg?v=1795185898040"
+ },
+ {
   "n": "Kit x 36 de Radios Tornasol rin 20",
   "brand": "",
   "cat": "piezas",
