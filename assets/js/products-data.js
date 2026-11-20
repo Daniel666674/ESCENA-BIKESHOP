@@ -9,10 +9,11 @@ window.ESCENA_PRODUCTS = [
   "units": 20,
   "imgFit": "cover",
   "slug": "kit-de-radios-negro-x-36-2",
+  "order": 100,
   "img": "assets/img/products/kit-de-radios-negro-x-36-2-mwp3bwt00qm0.jpg?v=1795185896026"
  },
  {
-  "n": "Kit de radios negro x 36",
+  "n": "Kit de radios cromados x 36",
   "brand": "",
   "cat": "piezas",
   "spec": "Material acero inoxidable – Para rin 20″ Paquete por 36 Radios",
@@ -21,6 +22,7 @@ window.ESCENA_PRODUCTS = [
   "units": 30,
   "imgFit": "cover",
   "slug": "kit-de-radios-negro-x-36",
+  "order": 110,
   "img": "assets/img/products/kit-de-radios-negro-x-36-mwp3byhmgr2b.jpg?v=1795185898040"
  },
  {
@@ -33,6 +35,7 @@ window.ESCENA_PRODUCTS = [
   "units": 20,
   "imgFit": "cover",
   "slug": "kit-x-36-de-radios-tornasol-rin-20",
+  "order": 90,
   "img": "assets/img/products/kit-x-36-de-radios-tornasol-rin-20-mwp2t8aq75z8.jpg?v=1795185024726"
  },
  {
@@ -49,6 +52,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/neumatico-odyssey-lite-jacket-20-x-2-40-mwp1qttrsomc.jpg?v=1795183232550"
   ],
   "slug": "neumatico-odyssey-lite-jacket-20-x-2-40",
+  "order": 50,
   "img": "assets/img/products/neumatico-odyssey-lite-jacket-20-x-2-40-mwp1qrnohhdv.jpg?v=1795183230591"
  },
  {
@@ -61,6 +65,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "pegante-solucion-thumps-up",
+  "order": 150,
   "img": "assets/img/products/pegante-solucion-thumps-up-mwo75zg28va6.jpg?v=1795131871627"
  },
  {
@@ -73,6 +78,7 @@ window.ESCENA_PRODUCTS = [
   "units": 50,
   "imgFit": "cover",
   "slug": "kit-de-parches-thumps-up-x-24-unidades",
+  "order": 120,
   "img": "assets/img/products/kit-de-parches-thumps-up-x-24-unidades-mwo6v41jrfgw.jpg?v=1795131364805"
  },
  {
@@ -85,6 +91,7 @@ window.ESCENA_PRODUCTS = [
   "units": 20,
   "imgFit": "cover",
   "slug": "kit-de-despinche-thumbs-up-48-unidades",
+  "order": 130,
   "img": "assets/img/products/kit-de-despinche-thumbs-up-48-unidades-mwo6v5xh1hcf.jpg?v=1795131366545"
  },
  {
@@ -97,6 +104,7 @@ window.ESCENA_PRODUCTS = [
   "units": 20,
   "imgFit": "cover",
   "slug": "kit-de-despinche-portatil",
+  "order": 140,
   "img": "assets/img/products/kit-de-despinche-portatil-mwo6v79tnmnb.jpg?v=1795131368277"
  },
  {
@@ -109,6 +117,7 @@ window.ESCENA_PRODUCTS = [
   "units": 50,
   "imgFit": "cover",
   "slug": "neumatico-kenda-20-x-2-40",
+  "order": 70,
   "img": "assets/img/products/neumatico-kenda-20-x-2-40-mwo5byepjjnj.jpg?v=1795128791713"
  },
  {
@@ -121,6 +130,7 @@ window.ESCENA_PRODUCTS = [
   "units": 10,
   "imgFit": "cover",
   "slug": "neumatico-optimus-20-x-2-50",
+  "order": 80,
   "img": "assets/img/products/neumatico-optimus-20-x-2-50-mwo5c0ipq3v0.jpg?v=1795128793468"
  },
  {
@@ -133,6 +143,7 @@ window.ESCENA_PRODUCTS = [
   "units": 12,
   "imgFit": "cover",
   "slug": "neumatico-cult-rubber-20-x-2-40",
+  "order": 60,
   "img": "assets/img/products/neumatico-cult-rubber-20-x-2-40-mwo5c1vgaphz.jpg?v=1795128795083"
  },
  {
@@ -151,6 +162,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/maleta-de-bicicleta-para-viaje-negra-mwo4wnxj7mpl.jpg?v=1795128077708"
   ],
   "slug": "maleta-de-bicicleta-para-viaje-negra",
+  "order": 0,
   "img": "assets/img/products/maleta-de-bicicleta-para-viaje-negra-mwo4wmal34ge.jpg?v=1795128075559"
  },
  {
@@ -163,6 +175,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "maleta-fadefootwear-negra-32lt",
+  "order": 10,
   "img": "assets/img/products/maleta-fadefootwear-negra-32lt-mwo4ms649z5t.jpg?v=1795127622163"
  },
  {
@@ -175,6 +188,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "maleta-cult-stage-bag-verde-camulada",
+  "order": 20,
   "img": "assets/img/products/maleta-cult-stage-bag-verde-camulada-mwo3zg3ixwcm.jpg?v=1795126528497"
  },
  {
@@ -187,6 +201,7 @@ window.ESCENA_PRODUCTS = [
   "units": 2,
   "imgFit": "cover",
   "slug": "maleta-cult-stage-bag-naranja-camulada-2",
+  "order": 30,
   "img": "assets/img/products/maleta-cult-stage-bag-naranja-camulada-2-mwo3zi7merio.jpg?v=1795126530205"
  },
  {
@@ -199,6 +214,7 @@ window.ESCENA_PRODUCTS = [
   "units": 1,
   "imgFit": "cover",
   "slug": "maleta-cult-stage-bag-naranja-camulada",
+  "order": 40,
   "img": "assets/img/products/maleta-cult-stage-bag-naranja-camulada-mwo3zjj1xkj7.jpg?v=1795126532141"
  },
  {
