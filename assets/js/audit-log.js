@@ -10339,5 +10339,15 @@ window.ESCENA_AUDIT = [
    "llave-y-roja"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T21:52:55.391Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "palancas-para-despinchas-plasticas"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
