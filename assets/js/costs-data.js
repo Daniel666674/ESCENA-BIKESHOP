@@ -474,5 +474,7 @@ window.ESCENA_COSTS = {
  "conix-mutanty-negro-m24": 36000,
  "conix-mutanty-negro-m25": 28000,
  "conix-odyssey-negro": 88000,
- "kit-de-trinquetes-optimus-v1": 28000
+ "kit-de-trinquetes-optimus-v1": 28000,
+ "kit-de-radios-para-bicicleta-rojo-x-36": 12000,
+ "kit-de-radios-azul-x-36-rin-20": 12000
 };
