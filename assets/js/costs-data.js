@@ -467,5 +467,6 @@ window.ESCENA_COSTS = {
  "kit-de-despinche-thumbs-up-48-unidades": 6800,
  "kit-de-parches-thumps-up-x-24-unidades": 6800,
  "pegante-solucion-thumps-up": 2000,
- "neumatico-odyssey-lite-jacket-20-x-2-40": 52000
+ "neumatico-odyssey-lite-jacket-20-x-2-40": 52000,
+ "kit-x-36-de-radios-tornasol-rin-20": 32000
 };
