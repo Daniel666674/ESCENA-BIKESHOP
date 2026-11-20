@@ -10205,5 +10205,30 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T14:46:21.601Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "16 productos editados",
+  "created": [],
+  "edited": [
+   "kit-de-radios-negro-x-36",
+   "maleta-de-bicicleta-para-viaje-negra",
+   "maleta-fadefootwear-negra-32lt",
+   "maleta-cult-stage-bag-verde-camulada",
+   "maleta-cult-stage-bag-naranja-camulada-2",
+   "maleta-cult-stage-bag-naranja-camulada",
+   "neumatico-odyssey-lite-jacket-20-x-2-40",
+   "kit-x-36-de-radios-tornasol-rin-20",
+   "neumatico-cult-rubber-20-x-2-40",
+   "neumatico-kenda-20-x-2-40",
+   "neumatico-optimus-20-x-2-50",
+   "kit-de-radios-negro-x-36-2",
+   "kit-de-parches-thumps-up-x-24-unidades",
+   "kit-de-despinche-thumbs-up-48-unidades",
+   "kit-de-despinche-portatil",
+   "pegante-solucion-thumps-up"
+  ],
+  "deleted": []
  }
 ];
