@@ -10194,5 +10194,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T14:45:07.928Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 2 fotos subidas",
+  "created": [
+   "kit-de-radios-negro-x-36-2",
+   "kit-de-radios-negro-x-36"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
