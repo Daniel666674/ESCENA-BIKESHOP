@@ -10174,5 +10174,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-20T14:00:40.954Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 2 fotos subidas",
+  "created": [
+   "neumatico-odyssey-lite-jacket-20-x-2-40"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
