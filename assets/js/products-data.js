@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Palancas para despinchas plasticas",
+  "brand": "GW",
+  "cat": "herramientas",
+  "spec": "Palancas para cambiar el neumatico - Muy livianas.. - Plástico resistente a la flexión.Tamaño de paquete individual: 11X3X2cm",
+  "price": 2000,
+  "sku": "HER-GWB-005",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "palancas-para-despinchas-plasticas",
+  "img": "assets/img/products/palancas-para-despinchas-plasticas-mwpim441rh2u.jpg?v=1795211566200"
+ },
+ {
   "n": "Kit de Trinquetes y resortes V2",
   "brand": "Optimus",
   "cat": "piezas",
