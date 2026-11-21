@@ -484,5 +484,6 @@ window.ESCENA_COSTS = {
  "tornillos-para-stem-titanio-tornasol": 96000,
  "pernos-twin-para-manzana-titanio-tornasol": 96000,
  "tornillos-en-titanio-twin-para-stem-profile-tornasol": 96000,
- "tornillos-en-titanio-twin-para-stem-tornasol": 96000
+ "tornillos-en-titanio-twin-para-stem-tornasol": 96000,
+ "pernos-en-tittanio-twin-con-buje-para-cassette-profile": 96000
 };
