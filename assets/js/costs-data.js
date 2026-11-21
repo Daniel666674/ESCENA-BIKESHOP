@@ -483,5 +483,6 @@ window.ESCENA_COSTS = {
  "tornillo-de-marco-twin-en-titanio-dorado": 20000,
  "tornillos-para-stem-titanio-tornasol": 96000,
  "pernos-twin-para-manzana-titanio-tornasol": 96000,
- "tornillos-en-titanio-twin-para-stem-profile-tornasol": 96000
+ "tornillos-en-titanio-twin-para-stem-profile-tornasol": 96000,
+ "tornillos-en-titanio-twin-para-stem-tornasol": 96000
 };
