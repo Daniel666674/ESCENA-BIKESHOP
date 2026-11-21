@@ -24,7 +24,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/pernos-en-tittanio-twin-con-buje-para-cassette-profile-mwr1j7fjs9s1.jpg?v=1795303810477"
  },
  {
-  "n": "Tornillos en Titanio Twin para Stem Tornasol",
+  "n": "Kit de Tornillos en Titanio Twin para Stem Tornasol",
   "brand": "Twin",
   "cat": "tornilleria",
   "spec": "Material en titanio - diseados para stem top o front - color tornasol",
@@ -36,7 +36,7 @@ window.ESCENA_PRODUCTS = [
   "img": "assets/img/products/tornillos-en-titanio-twin-para-stem-tornasol-mwr1gl97mdmz.jpg?v=1795303687117"
  },
  {
-  "n": "Tornillos en Titanio Twin para Stem Profile Tornasol",
+  "n": "Kit de Tornillos en Titanio Twin para Stem Profile Tornasol",
   "brand": "Twin",
   "cat": "tornilleria",
   "spec": "Material en titanio - diseados para stem profile - color tornasol",
