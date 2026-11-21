@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Fiend Reynolds V3 Negra",
+  "brand": "Fiend",
+  "cat": "stems",
+  "spec": "Front load longitud media de 48 mm Aluminio 6061 mecanizado por CNC Tornillos de potencia de cromolio",
+  "price": 340000,
+  "sku": "CAN-FND-002",
+  "units": 4,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 4,
+    "price": 340000
+   }
+  ],
+  "slug": "stem-fiend-reynolds-v3-negra",
+  "img": "assets/img/products/stem-fiend-reynolds-v3-negra-mwr2755u9yhq.jpg?v=1795304926717"
+ },
+ {
   "n": "Kit de Tornillos en titanio Twin para Stem dorado",
   "brand": "Twin",
   "cat": "tornilleria",
@@ -46,18 +65,6 @@ window.ESCENA_PRODUCTS = [
   "imgFit": "cover",
   "slug": "tornillos-en-titanio-twin-para-stem-tornasol",
   "img": "assets/img/products/tornillos-en-titanio-twin-para-stem-tornasol-mwr1gl97mdmz.jpg?v=1795303687117"
- },
- {
-  "n": "Kit de Tornillos en Titanio Twin para Stem Profile Tornasol",
-  "brand": "Twin",
-  "cat": "tornilleria",
-  "spec": "Material en titanio - diseados para stem profile - color tornasol",
-  "price": 120000,
-  "sku": "TOR-TWI-003",
-  "units": 3,
-  "imgFit": "cover",
-  "slug": "tornillos-en-titanio-twin-para-stem-profile-tornasol",
-  "img": "assets/img/products/tornillos-en-titanio-twin-para-stem-profile-tornasol-mwr1f8sry9w5.jpg?v=1795303625260"
  },
  {
   "n": "Pernos Twin para Manzana Titanio Tornasol",
