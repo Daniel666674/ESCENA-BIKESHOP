@@ -16,6 +16,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-fiend-reynolds-v3-negra",
+  "order": 0,
   "img": "assets/img/products/stem-fiend-reynolds-v3-negra-mwr2755u9yhq.jpg?v=1795304926717"
  },
  {
@@ -5827,6 +5828,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
+  "order": 160,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8081,7 +8083,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-cult-mind-control-negra-top-load",
-  "order": 690,
+  "order": 30,
   "img": "assets/img/products/cana-cult-mind-control-negra-top-load.jpg?v=1792523555864"
  },
  {
@@ -8103,7 +8105,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-cult-mind-control-rasta-front-load",
-  "order": 570,
+  "order": 20,
   "img": "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1792523555864"
  },
  {
@@ -8207,7 +8209,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 640,
+  "order": 50,
   "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1792523555864"
  },
  {
@@ -8607,7 +8609,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 720,
+  "order": 100,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8762,7 +8764,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 700,
+  "order": 80,
   "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1792523555864"
  },
  {
@@ -8822,7 +8824,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 1050,
+  "order": 150,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
  },
  {
@@ -8845,7 +8847,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 710,
+  "order": 90,
   "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8867,7 +8869,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 650,
+  "order": 60,
   "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1792523555864"
  },
  {
@@ -8924,7 +8926,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 590,
+  "order": 40,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -8943,7 +8945,7 @@ window.ESCENA_PRODUCTS = [
     "price": 250000
    }
   ],
-  "order": 860,
+  "order": 120,
   "colors": [
    {
     "label": "Azul",
@@ -9004,7 +9006,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 560,
+  "order": 10,
   "img": "assets/img/products/cana-s-m-enduro-40mm-negra.jpg?v=1792523555864"
  },
  {
@@ -9051,7 +9053,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 940,
+  "order": 130,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9482,7 +9484,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bsd-stem-negro-2.jpg?v=1792523555864",
    "assets/img/products/bsd-stem-negro-3.jpg?v=1792523555864"
   ],
-  "order": 740,
+  "order": 110,
   "img": "assets/img/products/bsd-stem-negro.jpg?v=1792523555864"
  },
  {
@@ -9504,7 +9506,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/stem-plata-pulido.jpg?v=1792523555864",
    "assets/img/products/stem-plata-pulido-2.jpg?v=1792523555864"
   ],
-  "order": 670,
+  "order": 70,
   "imgPos": "50% 0%",
   "img": "assets/img/products/stem-plata-pulido.jpg?v=1792523555864"
  },
@@ -9523,7 +9525,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 980,
+  "order": 140,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
