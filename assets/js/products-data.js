@@ -1,5 +1,29 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pernos Twin para Manzana Titanio Tornasol",
+  "brand": "Twin",
+  "cat": "tornilleria",
+  "spec": "Material en titanio  Pernos con acabado oilslick",
+  "price": 120000,
+  "sku": "TOR-TWI-004",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "pernos-twin-para-manzana-titanio-tornasol",
+  "img": "assets/img/products/pernos-twin-para-manzana-titanio-tornasol-mwr15dvu1tgz.jpg?v=1795303165789"
+ },
+ {
+  "n": "Tornillos para Stem titanio tornasol",
+  "brand": "Twin",
+  "cat": "tornilleria",
+  "spec": "Material en titanio  Set de tornillos para stem tornasol",
+  "price": 120000,
+  "sku": "TOR-TWI-003",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "tornillos-para-stem-titanio-tornasol",
+  "img": "assets/img/products/tornillos-para-stem-titanio-tornasol-mwr15gf1muc8.jpg?v=1795303168148"
+ },
+ {
   "n": "Tornillo de Marco Twin en Titanio Dorado",
   "brand": "Twin",
   "cat": "tornilleria",
