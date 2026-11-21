@@ -480,5 +480,7 @@ window.ESCENA_COSTS = {
  "kit-de-trinquetes-y-resortes-v2": 28000,
  "palancas-para-despinchas-plasticas": 1600,
  "tornillo-de-marco-twin-en-titanio-negro": 20000,
- "tornillo-de-marco-twin-en-titanio-dorado": 20000
+ "tornillo-de-marco-twin-en-titanio-dorado": 20000,
+ "tornillos-para-stem-titanio-tornasol": 96000,
+ "pernos-twin-para-manzana-titanio-tornasol": 96000
 };
