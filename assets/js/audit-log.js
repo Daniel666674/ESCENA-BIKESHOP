@@ -10473,5 +10473,31 @@ window.ESCENA_AUDIT = [
   "deleted": [
    "tornillos-en-titanio-twin-para-stem-profile-tornasol"
   ]
+ },
+ {
+  "ts": "2026-11-21T23:50:03.453Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "17 productos editados",
+  "created": [],
+  "edited": [
+   "cana-s-m-enduro-40mm-negra",
+   "cana-cult-mind-control-rasta-front-load",
+   "cana-odyssey-cfl3",
+   "cana-volume-bison-negra-frontload",
+   "cana-volume-bison-frontload",
+   "stem-plata-pulido",
+   "cana-cult-mind-control-negra-top-load",
+   "cana-fiend-mills-topload",
+   "cana-cult-salvation-v4-negra-topload",
+   "cana-shadow-finest-negra-topload",
+   "bsd-stem-negro",
+   "cana-shadow-chula-48mm",
+   "mutanty-savage-v2-stem-plata",
+   "federal-stem-plata",
+   "cana-shadow-ravage-topload",
+   "stem-fiend-reynolds-v3-negra",
+   "cana-federal-front-load-negra"
+  ],
+  "deleted": []
  }
 ];
