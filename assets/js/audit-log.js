@@ -10389,5 +10389,16 @@ window.ESCENA_AUDIT = [
    "mutany-tornillos-negro",
    "federal-tornillos-negro"
   ]
+ },
+ {
+  "ts": "2026-11-21T23:19:46.779Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 2 fotos subidas",
+  "created": [
+   "pernos-twin-para-manzana-titanio-tornasol",
+   "tornillos-para-stem-titanio-tornasol"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
