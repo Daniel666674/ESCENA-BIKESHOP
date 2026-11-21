@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Kit de Tornillo Twin para Stem Titanio Cromado",
+  "brand": "Twin",
+  "cat": "tornilleria",
+  "spec": "Material Titanio  Compatible para stem top o front - color cromado",
+  "price": 120000,
+  "sku": "TOR-TWI-006",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "kit-de-tornillo-twin-para-stem-titanio-cromado",
+  "img": "assets/img/products/kit-de-tornillo-twin-para-stem-titanio-cromado-mwr1rdnghyw9.jpg?v=1795304191516"
+ },
+ {
   "n": "Pernos en Tittanio Twin con buje para cassette profile",
   "brand": "Twin",
   "cat": "tornilleria",
@@ -65,7 +77,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "tornilleria",
   "spec": "Material en Titanio tornillo para abrazadera que aporta estilo y durabilidad",
   "price": 25000,
-  "sku": "TOR-TWI-006",
+  "sku": "TOR-TWI-007",
   "units": 2,
   "imgFit": "cover",
   "slug": "tornillo-de-marco-twin-en-titanio-dorado",
@@ -77,7 +89,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "tornilleria",
   "spec": "Material en titanio tornillo para abrazadera que aporta estilo y durabilidad",
   "price": 25000,
-  "sku": "TOR-TWI-007",
+  "sku": "TOR-TWI-008",
   "units": 5,
   "imgFit": "cover",
   "slug": "tornillo-de-marco-twin-en-titanio-negro",
