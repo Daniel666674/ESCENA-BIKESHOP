@@ -10349,5 +10349,16 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-21T17:45:16.263Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "rin-stolen-rampage-azul",
+   "cadena-cult-escamada-cromada"
+  ],
+  "deleted": []
  }
 ];
