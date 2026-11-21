@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Pernos en Tittanio Twin con buje para cassette profile",
+  "brand": "Twin",
+  "cat": "tornilleria",
+  "spec": "Material titanio  diseñados para cassette profile - color tornasol",
+  "price": 120000,
+  "sku": "TOR-TWI-005",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "pernos-en-tittanio-twin-con-buje-para-cassette-profile",
+  "img": "assets/img/products/pernos-en-tittanio-twin-con-buje-para-cassette-profile-mwr1j7fjs9s1.jpg?v=1795303810477"
+ },
+ {
   "n": "Tornillos en Titanio Twin para Stem Tornasol",
   "brand": "Twin",
   "cat": "tornilleria",
@@ -53,7 +65,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "tornilleria",
   "spec": "Material en Titanio tornillo para abrazadera que aporta estilo y durabilidad",
   "price": 25000,
-  "sku": "TOR-TWI-005",
+  "sku": "TOR-TWI-006",
   "units": 2,
   "imgFit": "cover",
   "slug": "tornillo-de-marco-twin-en-titanio-dorado",
@@ -65,7 +77,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "tornilleria",
   "spec": "Material en titanio tornillo para abrazadera que aporta estilo y durabilidad",
   "price": 25000,
-  "sku": "TOR-TWI-006",
+  "sku": "TOR-TWI-007",
   "units": 5,
   "imgFit": "cover",
   "slug": "tornillo-de-marco-twin-en-titanio-negro",
