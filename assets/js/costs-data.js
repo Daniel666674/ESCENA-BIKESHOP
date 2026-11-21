@@ -478,5 +478,7 @@ window.ESCENA_COSTS = {
  "kit-de-radios-para-bicicleta-rojo-x-36": 12000,
  "kit-de-radios-azul-x-36-rin-20": 12000,
  "kit-de-trinquetes-y-resortes-v2": 28000,
- "palancas-para-despinchas-plasticas": 1600
+ "palancas-para-despinchas-plasticas": 1600,
+ "tornillo-de-marco-twin-en-titanio-negro": 20000,
+ "tornillo-de-marco-twin-en-titanio-dorado": 20000
 };
