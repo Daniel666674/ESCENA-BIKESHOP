@@ -9746,7 +9746,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Goma · Rojo/Blanco splash",
   "price": 50000,
   "sku": "FIEND-PUNOS-ROJO-BLANCO",
-  "units": 6,
+  "units": 3,
   "order": 30,
   "imgs": [
    "assets/img/products/fiend-punos-rojo-blanco.jpg?v=1792523555864",
@@ -9756,15 +9756,18 @@ window.ESCENA_PRODUCTS = [
   "colors": [
    {
     "label": "Negro",
-    "units": 3
+    "units": 3,
+    "price": 50000
    },
    {
     "label": "Negro/Translucido",
-    "units": 0
+    "units": 0,
+    "price": 50000
    },
    {
     "label": "Rojo/Translucido",
-    "units": 3
+    "units": 0,
+    "price": 50000
    }
   ],
   "imgColorMap": {
@@ -9825,8 +9828,8 @@ window.ESCENA_PRODUCTS = [
   "units": 30,
   "order": 0,
   "imgs": [
-   "assets/img/products/cult-vans-punos-morado.jpg?v=1792523555864",
    "assets/img/products/cult-vans-punos-morado-2.jpg?v=1792523555864",
+   "assets/img/products/cult-vans-punos-morado.jpg?v=1792523555864",
    "assets/img/products/cult-vans-punos-morado-3.jpg?v=1792523555864"
   ],
   "colors": [
@@ -9844,17 +9847,17 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "imgColorMap": {
-   "Morado": [
+   "Cafe": [
     0
    ],
-   "Cafe": [
+   "Morado": [
     1
    ],
    "Negro": [
     2
    ]
   },
-  "img": "assets/img/products/cult-vans-punos-morado.jpg?v=1792523555864"
+  "img": "assets/img/products/cult-vans-punos-morado-2.jpg?v=1792523555864"
  },
  {
   "slug": "tornillos-titanio-arcoiris-01",
