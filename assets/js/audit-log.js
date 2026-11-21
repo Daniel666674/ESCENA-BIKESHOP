@@ -10430,5 +10430,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-21T23:36:42.380Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "kit-de-tornillo-twin-para-stem-titanio-cromado"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
