@@ -1,5 +1,29 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tornillo de Marco Twin en Titanio Dorado",
+  "brand": "Twin",
+  "cat": "tornilleria",
+  "spec": "Material en Titanio tornillo para abrazadera que aporta estilo y durabilidad",
+  "price": 25000,
+  "sku": "TOR-TWI-002",
+  "units": 2,
+  "imgFit": "cover",
+  "slug": "tornillo-de-marco-twin-en-titanio-dorado",
+  "img": "assets/img/products/tornillo-de-marco-twin-en-titanio-dorado-mwqt2m1x9sxl.jpg?v=1795289598605"
+ },
+ {
+  "n": "Tornillo de Marco Twin en titanio negro",
+  "brand": "Twin",
+  "cat": "tornilleria",
+  "spec": "Material en titanio tornillo para abrazadera que aporta estilo y durabilidad",
+  "price": 25000,
+  "sku": "TOR-TWI-001",
+  "units": 5,
+  "imgFit": "cover",
+  "slug": "tornillo-de-marco-twin-en-titanio-negro",
+  "img": "assets/img/products/tornillo-de-marco-twin-en-titanio-negro-mwqt2nwteg5o.jpg?v=1795289600495"
+ },
+ {
   "n": "Palancas para despinchas plasticas",
   "brand": "GW",
   "cat": "herramientas",
@@ -9858,78 +9882,6 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "img": "assets/img/products/cult-vans-punos-morado-2.jpg?v=1792523555864"
- },
- {
-  "slug": "tornillos-titanio-arcoiris-01",
-  "n": "Tornillos Titanio Arcoíris",
-  "brand": "",
-  "cat": "tornilleria",
-  "spec": "Titanio Grado 5 · Set · Arcoíris · M8x1.25mm",
-  "price": 65000,
-  "sku": "TORNILLOS-TITANIO-ARCOIRIS-01",
-  "units": 12,
-  "order": 1680,
-  "img": "assets/img/products/tornillos-titanio-arcoiris-01.jpg?v=1792523555864"
- },
- {
-  "slug": "tornillos-titanio-plata",
-  "n": "Tornillos Titanio Plata",
-  "brand": "",
-  "cat": "tornilleria",
-  "spec": "Titanio Grado 5 · Set · Plata · M8x1.25mm",
-  "price": 60000,
-  "sku": "TORNILLOS-TITANIO-PLATA",
-  "units": 12,
-  "order": 1720,
-  "img": "assets/img/products/tornillos-titanio-plata.jpg?v=1792523555864"
- },
- {
-  "slug": "tornillos-titanio-sillin-arcoiris",
-  "n": "Tornillos Titanio Sillín Arcoíris",
-  "brand": "",
-  "cat": "tornilleria",
-  "spec": "Titanio Grado 5 · Sillín · Arcoíris · M6x1mm",
-  "price": 40000,
-  "sku": "TORNILLOS-TITANIO-SILLIN-ARCOIRIS",
-  "units": 12,
-  "order": 1870,
-  "img": "assets/img/products/tornillos-titanio-sillin-arcoiris.jpg?v=1792523555864"
- },
- {
-  "slug": "tornillos-titanio-morado",
-  "n": "Tornillos Titanio Morado",
-  "brand": "",
-  "cat": "tornilleria",
-  "spec": "Titanio · Set · Morado/Negro",
-  "price": 62000,
-  "sku": "TORNILLOS-TITANIO-MORADO",
-  "units": 12,
-  "order": 1700,
-  "img": "assets/img/products/tornillos-titanio-morado.jpg?v=1792523555864"
- },
- {
-  "slug": "mutany-tornillos-negro",
-  "n": "Tornillos Mutanty Negro",
-  "brand": "Mutanty",
-  "cat": "tornilleria",
-  "spec": "Acero · Set · Negro",
-  "price": 25000,
-  "sku": "MUTANY-TORNILLOS-NEGRO",
-  "units": 12,
-  "order": 1890,
-  "img": "assets/img/products/mutany-tornillos-negro.jpg?v=1792523555864"
- },
- {
-  "slug": "federal-tornillos-negro",
-  "n": "Tornillos Federal Negro",
-  "brand": "Federal",
-  "cat": "tornilleria",
-  "spec": "Acero · Set · Negro",
-  "price": 25000,
-  "sku": "FEDERAL-TORNILLOS-NEGRO",
-  "units": 12,
-  "order": 1900,
-  "img": "assets/img/products/federal-tornillos-negro.jpg?v=1792523555864"
  },
  {
   "slug": "tija-negra-01",
