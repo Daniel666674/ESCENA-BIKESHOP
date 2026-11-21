@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Kit de Tornillos en titanio Twin para Stem dorado",
+  "brand": "Twin",
+  "cat": "tornilleria",
+  "spec": "Material en Titanio - compatible para stem top y front - color dorado",
+  "price": 120000,
+  "sku": "TOR-TWI-007",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "kit-de-tornillos-en-titanio-twin-para-stem-dorado",
+  "img": "assets/img/products/kit-de-tornillos-en-titanio-twin-para-stem-dorado-mwr1xxjz193a.jpg?v=1795304496608"
+ },
+ {
   "n": "Kit de Tornillo Twin para Stem Titanio Cromado",
   "brand": "Twin",
   "cat": "tornilleria",
@@ -77,7 +89,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "tornilleria",
   "spec": "Material en Titanio tornillo para abrazadera que aporta estilo y durabilidad",
   "price": 25000,
-  "sku": "TOR-TWI-007",
+  "sku": "TOR-TWI-008",
   "units": 2,
   "imgFit": "cover",
   "slug": "tornillo-de-marco-twin-en-titanio-dorado",
@@ -89,7 +101,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "tornilleria",
   "spec": "Material en titanio tornillo para abrazadera que aporta estilo y durabilidad",
   "price": 25000,
-  "sku": "TOR-TWI-008",
+  "sku": "TOR-TWI-009",
   "units": 5,
   "imgFit": "cover",
   "slug": "tornillo-de-marco-twin-en-titanio-negro",
