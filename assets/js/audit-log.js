@@ -10451,5 +10451,15 @@ window.ESCENA_AUDIT = [
    "tornillos-en-titanio-twin-para-stem-profile-tornasol"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-21T23:41:45.160Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "kit-de-tornillos-en-titanio-twin-para-stem-dorado"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
