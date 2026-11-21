@@ -10360,5 +10360,16 @@ window.ESCENA_AUDIT = [
    "cadena-cult-escamada-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-21T17:56:37.006Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos editados",
+  "created": [],
+  "edited": [
+   "cult-vans-punos-morado",
+   "fiend-punos-rojo-blanco"
+  ],
+  "deleted": []
  }
 ];
