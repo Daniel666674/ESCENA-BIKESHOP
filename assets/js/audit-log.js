@@ -10420,5 +10420,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-21T23:30:19.623Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "pernos-en-tittanio-twin-con-buje-para-cassette-profile"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
