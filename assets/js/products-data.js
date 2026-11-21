@@ -1,5 +1,17 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Tornillos en Titanio Twin para Stem Profile Tornasol",
+  "brand": "Twin",
+  "cat": "tornilleria",
+  "spec": "Material en titanio - diseados para stem profile - color tornasol",
+  "price": 120000,
+  "sku": "TOR-TWI-003",
+  "units": 3,
+  "imgFit": "cover",
+  "slug": "tornillos-en-titanio-twin-para-stem-profile-tornasol",
+  "img": "assets/img/products/tornillos-en-titanio-twin-para-stem-profile-tornasol-mwr1f8sry9w5.jpg?v=1795303625260"
+ },
+ {
   "n": "Pernos Twin para Manzana Titanio Tornasol",
   "brand": "Twin",
   "cat": "tornilleria",
@@ -17,7 +29,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "tornilleria",
   "spec": "Material en titanio  Set de tornillos para stem tornasol",
   "price": 120000,
-  "sku": "TOR-TWI-003",
+  "sku": "TOR-TWI-001",
   "units": 3,
   "imgFit": "cover",
   "slug": "tornillos-para-stem-titanio-tornasol",
@@ -41,7 +53,7 @@ window.ESCENA_PRODUCTS = [
   "cat": "tornilleria",
   "spec": "Material en titanio tornillo para abrazadera que aporta estilo y durabilidad",
   "price": 25000,
-  "sku": "TOR-TWI-001",
+  "sku": "TOR-TWI-005",
   "units": 5,
   "imgFit": "cover",
   "slug": "tornillo-de-marco-twin-en-titanio-negro",
