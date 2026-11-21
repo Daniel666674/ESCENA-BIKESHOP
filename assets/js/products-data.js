@@ -1733,7 +1733,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: aluminio 6061 extruido - ANCHO : 34 mm - AGUJEROS: 36 huecos - Union: Pineado - Incluye protector de aro - Peso: 16,4 oz",
   "price": 160000,
   "sku": "RIN-STL-003",
-  "units": 2,
+  "units": 1,
   "imgFit": "cover",
   "slug": "rin-stolen-rampage-azul",
   "order": 70,
@@ -3887,7 +3887,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "",
   "price": 130000,
   "sku": "CAD-CLT-001",
-  "units": 3,
+  "units": 0,
   "imgs": [
    "assets/img/products/cadena-cult-escamada-cromada-mtgizjdrr5lb.jpg?v=1792523555864",
    "assets/img/products/cadena-cult-escamada-cromada-mtgizkn88ont.jpg?v=1792523555864",
