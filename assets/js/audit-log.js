@@ -10410,5 +10410,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-21T23:28:34.000Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "tornillos-en-titanio-twin-para-stem-tornasol"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
