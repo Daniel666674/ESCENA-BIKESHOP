@@ -10461,5 +10461,17 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-21T23:49:03.466Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 producto eliminado, 1 foto subida",
+  "created": [
+   "stem-fiend-reynolds-v3-negra"
+  ],
+  "edited": [],
+  "deleted": [
+   "tornillos-en-titanio-twin-para-stem-profile-tornasol"
+  ]
  }
 ];
