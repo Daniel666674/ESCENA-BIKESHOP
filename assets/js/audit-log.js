@@ -10371,5 +10371,23 @@ window.ESCENA_AUDIT = [
    "fiend-punos-rojo-blanco"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-21T19:33:43.718Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "2 productos nuevos, 6 productos eliminados, 2 fotos subidas",
+  "created": [
+   "tornillo-de-marco-twin-en-titanio-dorado",
+   "tornillo-de-marco-twin-en-titanio-negro"
+  ],
+  "edited": [],
+  "deleted": [
+   "tornillos-titanio-arcoiris-01",
+   "tornillos-titanio-morado",
+   "tornillos-titanio-plata",
+   "tornillos-titanio-sillin-arcoiris",
+   "mutany-tornillos-negro",
+   "federal-tornillos-negro"
+  ]
  }
 ];
