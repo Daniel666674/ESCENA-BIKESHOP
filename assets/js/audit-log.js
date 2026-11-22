@@ -10593,5 +10593,25 @@ window.ESCENA_AUDIT = [
    "stem-fiend-mills-fl-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T20:42:34.324Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 9 productos editados, 3 fotos subidas",
+  "created": [
+   "stem-cult-salvation-cromada"
+  ],
+  "edited": [
+   "stem-fiend-mills-fl-cromada",
+   "cana-shadow-finest-negra-topload",
+   "cana-odyssey-cfl3",
+   "cana-federal-front-load-negra",
+   "cana-shadow-ravage-topload",
+   "federal-stem-plata",
+   "mutanty-savage-v2-stem-plata",
+   "cana-shadow-chula-48mm",
+   "bsd-stem-negro"
+  ],
+  "deleted": []
  }
 ];
