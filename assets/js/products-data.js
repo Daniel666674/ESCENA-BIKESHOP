@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Shadow Chula Cromada",
+  "brand": "Shadow",
+  "cat": "stems",
+  "spec": "material: Aluminio 6061-T6 alloy - Elevacion: 33mm - Longitud: 53mm - 6x solid bolts - TSC classic logo",
+  "price": 250000,
+  "sku": "CAN-SHW-003",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "53mm",
+    "units": 1,
+    "price": 250000
+   }
+  ],
+  "slug": "stem-shadow-chula-cromada",
+  "order": 230,
+  "img": "assets/img/products/stem-shadow-chula-cromada-mwsesn1n7gut.jpg?v=1795386558968"
+ },
+ {
   "n": "Stem S&M Enduro Morado",
   "brand": "S&M",
   "cat": "stems",
@@ -96,7 +116,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-sunday-freeze-negra",
-  "order": 310,
+  "order": 320,
   "img": "assets/img/products/stem-sunday-freeze-negra-mwsdnyolyn8m.jpg?v=1795384653083"
  },
  {
@@ -241,7 +261,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-fiend-mills-fl-cromada",
-  "order": 300,
+  "order": 310,
   "img": "assets/img/products/stem-fiend-mills-fl-cromada-mws5khbepzcb.jpg?v=1795371056136"
  },
  {
@@ -6133,7 +6153,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 270,
+  "order": 280,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8916,7 +8936,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 290,
+  "order": 300,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -9092,7 +9112,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 250,
+  "order": 260,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
  },
  {
@@ -9195,7 +9215,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 280,
+  "order": 290,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -9214,7 +9234,7 @@ window.ESCENA_PRODUCTS = [
     "price": 250000
    }
   ],
-  "order": 230,
+  "order": 240,
   "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1792523555864"
  },
  {
@@ -9310,7 +9330,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 240,
+  "order": 250,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9784,7 +9804,7 @@ window.ESCENA_PRODUCTS = [
     "price": 210000
    }
   ],
-  "order": 260,
+  "order": 270,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
