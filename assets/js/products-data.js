@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Profile Racing Acoustic negra",
+  "brand": "Profile",
+  "cat": "stems",
+  "spec": "Material: aluminio 6061 - Cuerpo hueco - Mecanizado CNC en EE. UU. - Alcance: 48 mm - Elevación: 8,6 mm",
+  "price": 340000,
+  "sku": "CAN-PRO-001",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 1,
+    "price": 340000
+   }
+  ],
+  "slug": "stem-profile-racing-acoustic-negra",
+  "order": 50,
+  "img": "assets/img/products/stem-profile-racing-acoustic-negra-mws4zo3mraxh.jpg?v=1795370082633"
+ },
+ {
   "n": "Stem Cult Mind Control Cromada",
   "brand": "Cult",
   "cat": "stems",
@@ -5848,7 +5868,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 170,
+  "order": 180,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8229,7 +8249,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1792523555864"
  },
  {
@@ -8629,7 +8649,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8784,7 +8804,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1792523555864"
  },
  {
@@ -8844,7 +8864,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 160,
+  "order": 170,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
  },
  {
@@ -8867,7 +8887,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8889,7 +8909,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 70,
+  "order": 80,
   "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1792523555864"
  },
  {
@@ -8946,7 +8966,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -8965,7 +8985,7 @@ window.ESCENA_PRODUCTS = [
     "price": 250000
    }
   ],
-  "order": 130,
+  "order": 140,
   "colors": [
    {
     "label": "Azul",
@@ -9073,7 +9093,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9504,7 +9524,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bsd-stem-negro-2.jpg?v=1792523555864",
    "assets/img/products/bsd-stem-negro-3.jpg?v=1792523555864"
   ],
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/bsd-stem-negro.jpg?v=1792523555864"
  },
  {
@@ -9526,7 +9546,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/stem-plata-pulido.jpg?v=1792523555864",
    "assets/img/products/stem-plata-pulido-2.jpg?v=1792523555864"
   ],
-  "order": 80,
+  "order": 90,
   "imgPos": "50% 0%",
   "img": "assets/img/products/stem-plata-pulido.jpg?v=1792523555864"
  },
@@ -9545,7 +9565,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 150,
+  "order": 160,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
