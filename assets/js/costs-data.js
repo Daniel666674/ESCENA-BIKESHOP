@@ -494,5 +494,6 @@ window.ESCENA_COSTS = {
  "stem-fiend-mills-negra": 256000,
  "stem-fiend-mills-fl-cromada": 296000,
  "stem-cult-salvation-cromada": 248000,
- "stem-kink-track-cromada": 272000
+ "stem-kink-track-cromada": 272000,
+ "stem-kink-track-negro": 272000
 };
