@@ -9083,17 +9083,6 @@ window.ESCENA_PRODUCTS = [
   "price": 200000,
   "sku": "CAN-SHW-002",
   "units": 2,
-  "imgs": [
-   "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864",
-   "assets/img/products/cana-shadow-ravage-topload-2.jpg?v=1792523555864",
-   "assets/img/products/cana-shadow-ravage-topload-3.jpg?v=1792523555864",
-   "assets/img/products/cana-shadow-ravage-topload-4.jpg?v=1792523555864",
-   "assets/img/products/cana-shadow-ravage-topload-5.jpg?v=1792523555864",
-   "assets/img/products/cana-shadow-ravage-topload-6.jpg?v=1792523555864",
-   "assets/img/products/cana-shadow-ravage-topload-7.jpg?v=1792523555864",
-   "assets/img/products/cana-shadow-ravage-topload-8.jpg?v=1792523555864",
-   "assets/img/products/cana-shadow-ravage-topload-9.jpg?v=1792523555864"
-  ],
   "sizes": [
    {
     "label": "53mm",
@@ -9103,37 +9092,14 @@ window.ESCENA_PRODUCTS = [
   ],
   "colors": [
    {
-    "label": "Morada",
-    "units": 1
-   },
-   {
-    "label": "Cromada",
-    "units": 1
-   },
-   {
-    "label": "Azul",
-    "units": 1
+    "label": "Morada Tie",
+    "units": 1,
+    "price": 200000
    }
   ],
-  "imgColorMap": {
-   "Morada": [
-    0,
-    1,
-    2
-   ],
-   "Azul": [
-    3,
-    4,
-    5
-   ],
-   "Cromada": [
-    6,
-    7,
-    8
-   ]
-  },
   "order": 260,
-  "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
+  "imgFit": "cover",
+  "img": "assets/img/products/cana-shadow-ravage-topload-mwsf1n32qgwe.jpg?v=1795386970523"
  },
  {
   "slug": "cana-cult-salvation-v4-negra-topload",
