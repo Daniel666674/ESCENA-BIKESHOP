@@ -10535,5 +10535,29 @@ window.ESCENA_AUDIT = [
    "bicicleta-profit-culver-bmx-gris-oscuro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T17:54:59.065Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 13 productos editados, 1 foto subida",
+  "created": [
+   "stem-profile-racing-acoustic-negra"
+  ],
+  "edited": [
+   "cana-federal-front-load-negra",
+   "cana-shadow-ravage-topload",
+   "federal-stem-plata",
+   "mutanty-savage-v2-stem-plata",
+   "cana-shadow-chula-48mm",
+   "bsd-stem-negro",
+   "cana-shadow-finest-negra-topload",
+   "cana-cult-salvation-v4-negra-topload",
+   "cana-fiend-mills-topload",
+   "stem-plata-pulido",
+   "cana-volume-bison-frontload",
+   "cana-volume-bison-negra-frontload",
+   "cana-odyssey-cfl3"
+  ],
+  "deleted": []
  }
 ];
