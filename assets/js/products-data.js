@@ -9095,7 +9095,7 @@ window.ESCENA_PRODUCTS = [
  },
  {
   "slug": "cana-shadow-ravage-topload",
-  "n": "Caña Shadow Ravage - TopLoad",
+  "n": "Caña Shadow Ravager Tie Die",
   "brand": "Shadow",
   "cat": "stems",
   "spec": "Carga superior · Alcance 53mm · Aluminio CNC",
