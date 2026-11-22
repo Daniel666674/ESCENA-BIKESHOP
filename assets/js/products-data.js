@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Gw Elite Negra",
+  "brand": "GW",
+  "cat": "stems",
+  "spec": "Carga frontal  Mtaerial En Aluminio - Longitud 50mm",
+  "price": 55000,
+  "sku": "CAN-GWB-001",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "50mm",
+    "units": 2,
+    "price": 55000
+   }
+  ],
+  "slug": "stem-gw-elite-negra",
+  "img": "assets/img/products/stem-gw-elite-negra-mwsfg47hnpfh.jpg?v=1795387646102"
+ },
+ {
   "n": "Stem Shadow Ravager Cromada",
   "brand": "Shadow",
   "cat": "stems",
