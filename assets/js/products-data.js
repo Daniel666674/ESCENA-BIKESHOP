@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Kink Track Cromada",
+  "brand": "340000",
+  "cat": "stems",
+  "spec": "Alcance 50 mm - Rise 7 mm Altura de la pila 32 mm Material - Aluminio 6061-T6 Pernos Seis tornillos hexagonales sólidos de 6 mm de gran tamaño Peso 12.4 oz",
+  "price": 340000,
+  "sku": "CAN-340-001",
+  "units": 0,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "50mm",
+    "units": 0,
+    "price": 340000
+   }
+  ],
+  "slug": "stem-kink-track-cromada",
+  "order": 110,
+  "img": "assets/img/products/stem-kink-track-cromada-mwsbnrihjpof.jpg?v=1795381284552"
+ },
+ {
   "n": "Stem Cult Salvation Cromada",
   "brand": "Cult",
   "cat": "stems",
@@ -21,7 +41,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-cult-salvation-cromada",
-  "order": 120,
+  "order": 140,
   "img": "assets/img/products/stem-cult-salvation-cromada-mwsaz8ijrdp1.jpg?v=1795380139978"
  },
  {
@@ -41,7 +61,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-fiend-mills-fl-cromada",
-  "order": 210,
+  "order": 220,
   "img": "assets/img/products/stem-fiend-mills-fl-cromada-mws5khbepzcb.jpg?v=1795371056136"
  },
  {
@@ -5933,7 +5953,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 180,
+  "order": 190,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8714,7 +8734,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 200,
+  "order": 210,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8889,7 +8909,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 160,
+  "order": 170,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
  },
  {
@@ -8898,7 +8918,7 @@ window.ESCENA_PRODUCTS = [
   "brand": "Cult",
   "cat": "stems",
   "spec": "Carga superior · Alcance 46mm · Aluminio CNC",
-  "price": 320000,
+  "price": 310000,
   "sku": "STEAM",
   "units": 1,
   "imgs": [
@@ -8909,10 +8929,11 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "46mm",
-    "units": 1
+    "units": 1,
+    "price": 310000
    }
   ],
-  "order": 110,
+  "order": 130,
   "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8991,7 +9012,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 190,
+  "order": 200,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -9010,7 +9031,7 @@ window.ESCENA_PRODUCTS = [
     "price": 250000
    }
   ],
-  "order": 140,
+  "order": 160,
   "colors": [
    {
     "label": "Azul",
@@ -9118,7 +9139,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 150,
+  "order": 120,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9549,7 +9570,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bsd-stem-negro-2.jpg?v=1792523555864",
    "assets/img/products/bsd-stem-negro-3.jpg?v=1792523555864"
   ],
-  "order": 130,
+  "order": 150,
   "img": "assets/img/products/bsd-stem-negro.jpg?v=1792523555864"
  },
  {
@@ -9590,7 +9611,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 170,
+  "order": 180,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
