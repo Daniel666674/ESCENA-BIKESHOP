@@ -10881,5 +10881,25 @@ window.ESCENA_AUDIT = [
    "stem-profile-racing-acoustic-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T22:29:33.364Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 9 productos editados, 1 foto subida",
+  "created": [
+   "stem-shadow-chula-cromada"
+  ],
+  "edited": [
+   "stem-sunday-freeze-negra",
+   "stem-fiend-mills-fl-cromada",
+   "cana-shadow-finest-negra-topload",
+   "cana-odyssey-cfl3",
+   "cana-federal-front-load-negra",
+   "federal-stem-plata",
+   "cana-shadow-ravage-topload",
+   "mutanty-savage-v2-stem-plata",
+   "cana-shadow-chula-48mm"
+  ],
+  "deleted": []
  }
 ];
