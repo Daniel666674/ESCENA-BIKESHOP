@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Volume Staple morada",
+  "brand": "Volume",
+  "cat": "stems",
+  "spec": "Material: Aluminio 6061 – T6 tipo: carga superior alcance: 53 mm altura de la pila: 33 mm elevación: 34 mm Tamaño de la abrazadera: 22,2 mm (7/8\") ST - estándar Pernos de sujeción: 8x1,25 mm (4x) Pernos de sujeción: 8x1,25 mm (2x) peso: 0,331 kg (11,67 oz)",
+  "price": 130000,
+  "sku": "CAN-VOL-004",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "53mm",
+    "units": 1,
+    "price": 130000
+   }
+  ],
+  "slug": "stem-volume-staple-morada",
+  "order": 170,
+  "img": "assets/img/products/stem-volume-staple-morada-mwsczsaq60e0.jpg?v=1795383525015"
+ },
+ {
   "n": "Stem Volume Staple Negro",
   "brand": "Volume",
   "cat": "stems",
@@ -121,7 +141,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-fiend-mills-fl-cromada",
-  "order": 250,
+  "order": 260,
   "img": "assets/img/products/stem-fiend-mills-fl-cromada-mws5khbepzcb.jpg?v=1795371056136"
  },
  {
@@ -6013,7 +6033,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 220,
+  "order": 230,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8794,7 +8814,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 240,
+  "order": 250,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8969,7 +8989,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 200,
+  "order": 210,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
  },
  {
@@ -9072,7 +9092,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 230,
+  "order": 240,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -9091,7 +9111,7 @@ window.ESCENA_PRODUCTS = [
     "price": 250000
    }
   ],
-  "order": 180,
+  "order": 190,
   "colors": [
    {
     "label": "Azul",
@@ -9199,7 +9219,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 190,
+  "order": 200,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9630,7 +9650,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bsd-stem-negro-2.jpg?v=1792523555864",
    "assets/img/products/bsd-stem-negro-3.jpg?v=1792523555864"
   ],
-  "order": 170,
+  "order": 180,
   "img": "assets/img/products/bsd-stem-negro.jpg?v=1792523555864"
  },
  {
@@ -9671,7 +9691,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 210,
+  "order": 220,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
