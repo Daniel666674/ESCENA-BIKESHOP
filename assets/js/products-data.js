@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Fiend Mills Negra",
+  "brand": "Fiend",
+  "cat": "stems",
+  "spec": "Material: Aluminio 6061-T6 mecanizado por CNC - Alcance: 48 mm - Elevación: 23 mm - Top Load - Tornillos de potencia de cromolio macizo - Tapa superior de ajuste al ras",
+  "price": 320000,
+  "sku": "CAN-FND-003",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 2,
+    "price": 320000
+   }
+  ],
+  "slug": "stem-fiend-mills-negra",
+  "order": 100,
+  "img": "assets/img/products/stem-fiend-mills-negra-mws5arb8rryr.jpg?v=1795370603108"
+ },
+ {
   "n": "Stem Profile Racing Acoustic negra",
   "brand": "Profile",
   "cat": "stems",
@@ -5868,7 +5888,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 180,
+  "order": 170,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8249,7 +8269,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 70,
+  "order": 60,
   "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1792523555864"
  },
  {
@@ -8649,7 +8669,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 120,
+  "order": 190,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8752,60 +8772,20 @@ window.ESCENA_PRODUCTS = [
   "n": "Caña Fiend Mills - TopLoad",
   "brand": "Fiend",
   "cat": "stems",
-  "spec": "Carga superior · Alcance 48mm · Aluminio CNC",
+  "spec": "Material: Aluminio 6061-T6 mecanizado por CNC - Alcance: 48 mm - Elevación: 23 mm - Top Load - Tornillos de potencia de cromolio macizo - Tapa superior de ajuste al ras",
   "price": 320000,
   "sku": "CAN-FND-001",
   "units": 1,
-  "imgs": [
-   "assets/img/products/cana-fiend-mills-topload.jpg?v=1792523555864",
-   "assets/img/products/cana-fiend-mills-topload-2.jpg?v=1792523555864",
-   "assets/img/products/cana-fiend-mills-topload-3.jpg?v=1792523555864",
-   "assets/img/products/cana-fiend-mills-topload-4.jpg?v=1792523555864",
-   "assets/img/products/cana-fiend-mills-topload-5.jpg?v=1792523555864",
-   "assets/img/products/cana-fiend-mills-topload-6.jpg?v=1792523555864",
-   "assets/img/products/cana-fiend-mills-topload-7.jpg?v=1792523555864",
-   "assets/img/products/cana-fiend-mills-topload-8.jpg?v=1792523555864",
-   "assets/img/products/cana-fiend-mills-topload-9.jpg?v=1792523555864"
-  ],
   "sizes": [
    {
     "label": "48mm",
-    "units": 1
+    "units": 1,
+    "price": 320000
    }
   ],
-  "colors": [
-   {
-    "label": "Morada",
-    "units": 1
-   },
-   {
-    "label": "Dorada",
-    "units": 1
-   },
-   {
-    "label": "Negro",
-    "units": 1
-   }
-  ],
-  "imgColorMap": {
-   "Morada": [
-    0,
-    1,
-    2
-   ],
-   "Dorada": [
-    3,
-    4,
-    5
-   ],
-   "Negro": [
-    6,
-    7,
-    8
-   ]
-  },
-  "order": 100,
-  "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1792523555864"
+  "order": 90,
+  "imgFit": "cover",
+  "img": "assets/img/products/cana-fiend-mills-topload-mws5avdwdfns.jpg?v=1795370605279"
  },
  {
   "slug": "cana-shadow-ravage-topload",
@@ -8864,7 +8844,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 170,
+  "order": 160,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
  },
  {
@@ -8909,7 +8889,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 80,
+  "order": 70,
   "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1792523555864"
  },
  {
@@ -8966,7 +8946,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 60,
+  "order": 180,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -8985,7 +8965,7 @@ window.ESCENA_PRODUCTS = [
     "price": 250000
    }
   ],
-  "order": 140,
+  "order": 130,
   "colors": [
    {
     "label": "Azul",
@@ -9093,7 +9073,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 150,
+  "order": 140,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9524,7 +9504,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bsd-stem-negro-2.jpg?v=1792523555864",
    "assets/img/products/bsd-stem-negro-3.jpg?v=1792523555864"
   ],
-  "order": 130,
+  "order": 120,
   "img": "assets/img/products/bsd-stem-negro.jpg?v=1792523555864"
  },
  {
@@ -9546,7 +9526,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/stem-plata-pulido.jpg?v=1792523555864",
    "assets/img/products/stem-plata-pulido-2.jpg?v=1792523555864"
   ],
-  "order": 90,
+  "order": 80,
   "imgPos": "50% 0%",
   "img": "assets/img/products/stem-plata-pulido.jpg?v=1792523555864"
  },
@@ -9565,7 +9545,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 160,
+  "order": 150,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
