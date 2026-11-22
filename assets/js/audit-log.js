@@ -10758,5 +10758,25 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T22:00:43.303Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "11 productos editados",
+  "created": [],
+  "edited": [
+   "stem-sunday-freeze-negra",
+   "cana-fiend-mills-topload",
+   "stem-plata-pulido",
+   "cana-volume-bison-frontload",
+   "cana-volume-bison-negra-frontload",
+   "stem-profile-racing-acoustic-negra",
+   "stem-fiend-mills-negra",
+   "stem-cult-mind-control-cromada",
+   "cana-cult-mind-control-negra-top-load",
+   "cana-cult-mind-control-rasta-front-load",
+   "cana-s-m-enduro-40mm-negra"
+  ],
+  "deleted": []
  }
 ];
