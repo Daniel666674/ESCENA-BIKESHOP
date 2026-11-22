@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Cult Mind Control Cromada",
+  "brand": "Cult",
+  "cat": "stems",
+  "spec": "Material Aluminio 6061  pernos macizos tapa limpia para una apariencia limpia de pernos de compresión empotrados Alcance de 48 mm / Elevación de 8,5 mm",
+  "price": 320000,
+  "sku": "CAN-CLT-003",
+  "units": 3,
+  "imgZoom": 137,
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 3,
+    "price": 320000
+   }
+  ],
+  "slug": "stem-cult-mind-control-cromada",
+  "order": 40,
+  "img": "assets/img/products/stem-cult-mind-control-cromada-mws4cpabto3x.jpg?v=1795369033735"
+ },
+ {
   "n": "Stem Fiend Reynolds V3 Negra",
   "brand": "Fiend",
   "cat": "stems",
@@ -5828,7 +5848,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 160,
+  "order": 170,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8072,7 +8092,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Caña Cult Mind Control Negra - Top load",
   "brand": "Cult",
   "cat": "stems",
-  "spec": "Carga frontal · Alcance 48mm · Aluminio CNC",
+  "spec": "Material Aluminio 6061  pernos macizos tapa limpia para una apariencia limpia de pernos de compresión empotrados Alcance de 48 mm / Elevación de 8,5 mm",
   "price": 320000,
   "sku": "CAN-CLT-002",
   "units": 1,
@@ -8090,7 +8110,7 @@ window.ESCENA_PRODUCTS = [
   "n": "Caña Cult Mind Control Rasta - Front load",
   "brand": "Cult",
   "cat": "stems",
-  "spec": "Carga frontal · Alcance 48mm · Aluminio CNC",
+  "spec": "Material Aluminio 6061  pernos macizos tapa limpia para una apariencia limpia de pernos de compresión empotrados Alcance de 48 mm / Elevación de 8,5 mm",
   "price": 340000,
   "sku": "CAN-CLT-001",
   "units": 1,
@@ -8209,7 +8229,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 50,
+  "order": 60,
   "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1792523555864"
  },
  {
@@ -8609,7 +8629,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8764,7 +8784,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 80,
+  "order": 90,
   "img": "assets/img/products/cana-fiend-mills-topload.jpg?v=1792523555864"
  },
  {
@@ -8824,7 +8844,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 150,
+  "order": 160,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
  },
  {
@@ -8847,7 +8867,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8869,7 +8889,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 60,
+  "order": 70,
   "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1792523555864"
  },
  {
@@ -8926,7 +8946,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 40,
+  "order": 50,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -8945,7 +8965,7 @@ window.ESCENA_PRODUCTS = [
     "price": 250000
    }
   ],
-  "order": 120,
+  "order": 130,
   "colors": [
    {
     "label": "Azul",
@@ -9053,7 +9073,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9484,7 +9504,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bsd-stem-negro-2.jpg?v=1792523555864",
    "assets/img/products/bsd-stem-negro-3.jpg?v=1792523555864"
   ],
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/bsd-stem-negro.jpg?v=1792523555864"
  },
  {
@@ -9506,7 +9526,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/stem-plata-pulido.jpg?v=1792523555864",
    "assets/img/products/stem-plata-pulido-2.jpg?v=1792523555864"
   ],
-  "order": 70,
+  "order": 80,
   "imgPos": "50% 0%",
   "img": "assets/img/products/stem-plata-pulido.jpg?v=1792523555864"
  },
@@ -9525,7 +9545,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 140,
+  "order": 150,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
