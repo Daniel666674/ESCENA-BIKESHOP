@@ -10919,5 +10919,15 @@ window.ESCENA_AUDIT = [
    "cana-federal-front-load-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T22:36:36.238Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado, 1 foto subida",
+  "created": [],
+  "edited": [
+   "cana-shadow-ravage-topload"
+  ],
+  "deleted": []
  }
 ];
