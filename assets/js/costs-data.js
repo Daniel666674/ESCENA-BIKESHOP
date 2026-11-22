@@ -492,5 +492,6 @@ window.ESCENA_COSTS = {
  "stem-cult-mind-control-cromada": 256000,
  "stem-profile-racing-acoustic-negra": 272000,
  "stem-fiend-mills-negra": 256000,
- "stem-fiend-mills-fl-cromada": 296000
+ "stem-fiend-mills-fl-cromada": 296000,
+ "stem-cult-salvation-cromada": 248000
 };
