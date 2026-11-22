@@ -502,5 +502,6 @@ window.ESCENA_COSTS = {
  "stem-sunday-freeze-negra": 100000,
  "stem-s-m-enduro-gris": 280000,
  "stem-s-m-enduro-cobre": 280000,
- "stem-s-m-enduro-cromada": 280000
+ "stem-s-m-enduro-cromada": 280000,
+ "stem-s-m-enduro-morado": 280000
 };
