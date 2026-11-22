@@ -6806,7 +6806,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Bicicleta de BMX Bicicleta Profit – Linea Optimus Marco medida 20.5″ – Cola 13.5″ Manubrio 8.9″ Acero Alta tensión Tenedor Full Cr-mo Frente y Caja Integrado Rodamientos Bielas Forjadas Acero Cassette Derecho 9T Balineras Selladas Manzana Delantera Balin Suelto Silla Pivotal Fat Llantas 2.35″ Incluye Freno Peso 12.8 Kgrs",
   "price": 890000,
   "sku": "BIC-PRO-002",
-  "units": 0,
+  "units": 1,
   "imgs": [
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-4.jpg?v=1792523555864",
    "assets/img/products/bicicleta-profit-culver-bmx-gris-oscuro-muoibeyo02c6.jpg?v=1792523555864",
