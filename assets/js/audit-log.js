@@ -10939,5 +10939,15 @@ window.ESCENA_AUDIT = [
   ],
   "edited": [],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T22:52:55.066Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cana-shadow-ravage-topload"
+  ],
+  "deleted": []
  }
 ];
