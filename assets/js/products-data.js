@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Cult Max negra",
+  "brand": "Cult",
+  "cat": "stems",
+  "spec": "Diseño de carga superior Alcance de 43 mm - elevación de 30,6 mm Potencia característica de Max Vu Cuerpo de aluminio 6061",
+  "price": 320000,
+  "sku": "CAN-CLT-005",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "43mm",
+    "units": 1,
+    "price": 320000
+   }
+  ],
+  "slug": "stem-cult-max-negra",
+  "order": 130,
+  "img": "assets/img/products/stem-cult-max-negra-mwsc4lcanvkg.jpg?v=1795382070377"
+ },
+ {
   "n": "Stem Kink Track Negro",
   "brand": "Kink",
   "cat": "stems",
@@ -81,7 +101,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-fiend-mills-fl-cromada",
-  "order": 230,
+  "order": 240,
   "img": "assets/img/products/stem-fiend-mills-fl-cromada-mws5khbepzcb.jpg?v=1795371056136"
  },
  {
@@ -5973,7 +5993,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 200,
+  "order": 210,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8754,7 +8774,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 220,
+  "order": 230,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8929,7 +8949,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 180,
+  "order": 190,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
  },
  {
@@ -9032,7 +9052,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 210,
+  "order": 220,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -9159,7 +9179,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 130,
+  "order": 180,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9631,7 +9651,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 190,
+  "order": 200,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
