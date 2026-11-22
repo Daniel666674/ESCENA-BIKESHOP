@@ -10731,5 +10731,22 @@ window.ESCENA_AUDIT = [
    "bsd-stem-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T21:44:57.046Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "8 productos editados",
+  "created": [],
+  "edited": [
+   "stem-kink-track-cromada",
+   "stem-plata-pulido",
+   "cana-cult-mind-control-negra-top-load",
+   "cana-cult-mind-control-rasta-front-load",
+   "federal-stem-plata",
+   "cana-fiend-mills-topload",
+   "cana-shadow-chula-48mm",
+   "cana-shadow-ravage-topload"
+  ],
+  "deleted": []
  }
 ];
