@@ -498,5 +498,6 @@ window.ESCENA_COSTS = {
  "stem-kink-track-negro": 272000,
  "stem-cult-max-negra": 256000,
  "stem-volume-staple-negro": 104000,
- "stem-volume-staple-morada": 104000
+ "stem-volume-staple-morada": 104000,
+ "stem-sunday-freeze-negra": 100000
 };
