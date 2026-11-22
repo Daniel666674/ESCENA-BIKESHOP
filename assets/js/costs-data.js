@@ -305,7 +305,7 @@ window.ESCENA_COSTS = {
  "plato-odyssey-big-boyd-28t": 192000,
  "cana-fiend-mills-topload": 256000,
  "cana-shadow-ravage-topload": 160000,
- "cana-cult-salvation-v4-negra-topload": 256000,
+ "cana-cult-salvation-v4-negra-topload": 248000,
  "cana-volume-bison-frontload": 264000,
  "marco-fitbikeco-str-negro": 520000,
  "cana-odyssey-cfl3": 272000,
@@ -493,5 +493,6 @@ window.ESCENA_COSTS = {
  "stem-profile-racing-acoustic-negra": 272000,
  "stem-fiend-mills-negra": 256000,
  "stem-fiend-mills-fl-cromada": 296000,
- "stem-cult-salvation-cromada": 248000
+ "stem-cult-salvation-cromada": 248000,
+ "stem-kink-track-cromada": 272000
 };
