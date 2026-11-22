@@ -496,5 +496,6 @@ window.ESCENA_COSTS = {
  "stem-cult-salvation-cromada": 248000,
  "stem-kink-track-cromada": 272000,
  "stem-kink-track-negro": 272000,
- "stem-cult-max-negra": 256000
+ "stem-cult-max-negra": 256000,
+ "stem-volume-staple-negro": 104000
 };
