@@ -504,5 +504,6 @@ window.ESCENA_COSTS = {
  "stem-s-m-enduro-cobre": 280000,
  "stem-s-m-enduro-cromada": 280000,
  "stem-s-m-enduro-morado": 280000,
- "stem-shadow-chula-cromada": 200000
+ "stem-shadow-chula-cromada": 200000,
+ "stem-shadow-ravager-cromada": 160000
 };
