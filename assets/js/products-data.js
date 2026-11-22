@@ -16,6 +16,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-sunday-freeze-negra",
+  "order": 270,
   "img": "assets/img/products/stem-sunday-freeze-negra-mwsdnyolyn8m.jpg?v=1795384653083"
  },
  {
@@ -180,7 +181,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-fiend-mills-negra",
-  "order": 100,
+  "order": 10,
   "img": "assets/img/products/stem-fiend-mills-negra-mws5arb8rryr.jpg?v=1795370603108"
  },
  {
@@ -200,7 +201,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-profile-racing-acoustic-negra",
-  "order": 50,
+  "order": 70,
   "img": "assets/img/products/stem-profile-racing-acoustic-negra-mws4zo3mraxh.jpg?v=1795370082633"
  },
  {
@@ -220,7 +221,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-cult-mind-control-cromada",
-  "order": 40,
+  "order": 60,
   "img": "assets/img/products/stem-cult-mind-control-cromada-mws4cpabto3x.jpg?v=1795369033735"
  },
  {
@@ -8308,7 +8309,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-cult-mind-control-negra-top-load",
-  "order": 30,
+  "order": 50,
   "img": "assets/img/products/cana-cult-mind-control-negra-top-load.jpg?v=1792523555864"
  },
  {
@@ -8331,7 +8332,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-cult-mind-control-rasta-front-load",
-  "order": 20,
+  "order": 40,
   "img": "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1792523555864"
  },
  {
@@ -8435,7 +8436,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 60,
+  "order": 80,
   "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1792523555864"
  },
  {
@@ -8949,7 +8950,7 @@ window.ESCENA_PRODUCTS = [
     "price": 320000
    }
   ],
-  "order": 90,
+  "order": 20,
   "imgFit": "cover",
   "img": "assets/img/products/cana-fiend-mills-topload-mws5avdwdfns.jpg?v=1795370605279"
  },
@@ -9057,7 +9058,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 70,
+  "order": 90,
   "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1792523555864"
  },
  {
@@ -9182,7 +9183,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 10,
+  "order": 30,
   "img": "assets/img/products/cana-s-m-enduro-40mm-negra.jpg?v=1792523555864"
  },
  {
@@ -9683,7 +9684,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/stem-plata-pulido.jpg?v=1792523555864",
    "assets/img/products/stem-plata-pulido-2.jpg?v=1792523555864"
   ],
-  "order": 80,
+  "order": 100,
   "imgPos": "50% 0%",
   "img": "assets/img/products/stem-plata-pulido.jpg?v=1792523555864"
  },
