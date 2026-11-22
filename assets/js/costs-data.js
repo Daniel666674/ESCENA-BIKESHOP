@@ -489,5 +489,6 @@ window.ESCENA_COSTS = {
  "kit-de-tornillo-twin-para-stem-titanio-cromado": 96000,
  "kit-de-tornillos-en-titanio-twin-para-stem-dorado": 96000,
  "stem-fiend-reynolds-v3-negra": 272000,
- "stem-cult-mind-control-cromada": 256000
+ "stem-cult-mind-control-cromada": 256000,
+ "stem-profile-racing-acoustic-negra": 272000
 };
