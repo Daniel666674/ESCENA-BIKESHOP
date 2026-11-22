@@ -10748,5 +10748,15 @@ window.ESCENA_AUDIT = [
    "cana-shadow-ravage-topload"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T21:57:43.104Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "stem-sunday-freeze-negra"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
