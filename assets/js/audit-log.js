@@ -10901,5 +10901,23 @@ window.ESCENA_AUDIT = [
    "cana-shadow-chula-48mm"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T22:34:04.289Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 7 productos editados, 1 foto subida",
+  "created": [
+   "stem-shadow-ravager-cromada"
+  ],
+  "edited": [
+   "stem-sunday-freeze-negra",
+   "stem-fiend-mills-fl-cromada",
+   "cana-shadow-finest-negra-topload",
+   "cana-odyssey-cfl3",
+   "cana-shadow-ravage-topload",
+   "federal-stem-plata",
+   "cana-federal-front-load-negra"
+  ],
+  "deleted": []
  }
 ];
