@@ -10680,5 +10680,15 @@ window.ESCENA_AUDIT = [
    "stem-kink-track-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T21:32:00.417Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 1 foto subida",
+  "created": [
+   "stem-volume-staple-negro"
+  ],
+  "edited": [],
+  "deleted": []
  }
 ];
