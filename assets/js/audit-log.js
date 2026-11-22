@@ -10499,5 +10499,31 @@ window.ESCENA_AUDIT = [
    "cana-federal-front-load-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T17:37:41.821Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 15 productos editados, 1 foto subida",
+  "created": [
+   "stem-cult-mind-control-cromada"
+  ],
+  "edited": [
+   "cana-federal-front-load-negra",
+   "cana-shadow-ravage-topload",
+   "federal-stem-plata",
+   "mutanty-savage-v2-stem-plata",
+   "cana-shadow-chula-48mm",
+   "bsd-stem-negro",
+   "cana-shadow-finest-negra-topload",
+   "cana-cult-salvation-v4-negra-topload",
+   "cana-fiend-mills-topload",
+   "stem-plata-pulido",
+   "cana-volume-bison-frontload",
+   "cana-volume-bison-negra-frontload",
+   "cana-odyssey-cfl3",
+   "cana-cult-mind-control-negra-top-load",
+   "cana-cult-mind-control-rasta-front-load"
+  ],
+  "deleted": []
  }
 ];
