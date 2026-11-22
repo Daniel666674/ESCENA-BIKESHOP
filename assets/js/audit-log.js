@@ -10711,5 +10711,25 @@ window.ESCENA_AUDIT = [
    "cana-cult-salvation-v4-negra-topload"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T21:38:54.193Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 9 productos editados, 1 foto subida",
+  "created": [
+   "stem-volume-staple-morada"
+  ],
+  "edited": [
+   "stem-fiend-mills-fl-cromada",
+   "cana-shadow-finest-negra-topload",
+   "cana-odyssey-cfl3",
+   "cana-federal-front-load-negra",
+   "federal-stem-plata",
+   "cana-shadow-ravage-topload",
+   "mutanty-savage-v2-stem-plata",
+   "cana-shadow-chula-48mm",
+   "bsd-stem-negro"
+  ],
+  "deleted": []
  }
 ];
