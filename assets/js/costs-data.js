@@ -499,5 +499,7 @@ window.ESCENA_COSTS = {
  "stem-cult-max-negra": 256000,
  "stem-volume-staple-negro": 104000,
  "stem-volume-staple-morada": 104000,
- "stem-sunday-freeze-negra": 100000
+ "stem-sunday-freeze-negra": 100000,
+ "stem-s-m-enduro-gris": 280000,
+ "stem-s-m-enduro-cobre": 280000
 };
