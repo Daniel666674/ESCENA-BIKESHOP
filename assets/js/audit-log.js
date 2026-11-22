@@ -10525,5 +10525,15 @@ window.ESCENA_AUDIT = [
    "cana-cult-mind-control-rasta-front-load"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T17:41:49.017Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "bicicleta-profit-culver-bmx-gris-oscuro"
+  ],
+  "deleted": []
  }
 ];
