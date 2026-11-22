@@ -10657,5 +10657,28 @@ window.ESCENA_AUDIT = [
    "mutanty-savage-v2-stem-plata"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T21:14:42.204Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 12 productos editados, 1 foto subida",
+  "created": [
+   "stem-cult-max-negra"
+  ],
+  "edited": [
+   "stem-fiend-mills-fl-cromada",
+   "cana-shadow-finest-negra-topload",
+   "cana-odyssey-cfl3",
+   "cana-federal-front-load-negra",
+   "federal-stem-plata",
+   "cana-shadow-ravage-topload",
+   "cana-shadow-chula-48mm",
+   "bsd-stem-negro",
+   "stem-cult-salvation-cromada",
+   "cana-cult-salvation-v4-negra-topload",
+   "mutanty-savage-v2-stem-plata",
+   "stem-kink-track-negro"
+  ],
+  "deleted": []
  }
 ];
