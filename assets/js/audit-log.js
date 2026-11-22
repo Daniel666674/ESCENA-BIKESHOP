@@ -10583,5 +10583,15 @@ window.ESCENA_AUDIT = [
    "cana-federal-front-load-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T19:24:06.696Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "stem-fiend-mills-fl-cromada"
+  ],
+  "deleted": []
  }
 ];
