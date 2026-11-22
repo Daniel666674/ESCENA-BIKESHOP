@@ -10815,5 +10815,39 @@ window.ESCENA_AUDIT = [
    "cana-s-m-enduro-40mm-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T22:17:07.867Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 23 productos editados, 3 fotos subidas",
+  "created": [
+   "stem-s-m-enduro-cromada"
+  ],
+  "edited": [
+   "stem-sunday-freeze-negra",
+   "stem-fiend-mills-fl-cromada",
+   "cana-shadow-finest-negra-topload",
+   "cana-odyssey-cfl3",
+   "cana-federal-front-load-negra",
+   "federal-stem-plata",
+   "cana-shadow-ravage-topload",
+   "mutanty-savage-v2-stem-plata",
+   "cana-shadow-chula-48mm",
+   "bsd-stem-negro",
+   "stem-volume-staple-morada",
+   "stem-volume-staple-negro",
+   "stem-cult-salvation-cromada",
+   "cana-cult-salvation-v4-negra-topload",
+   "stem-cult-max-negra",
+   "stem-kink-track-negro",
+   "stem-kink-track-cromada",
+   "stem-plata-pulido",
+   "cana-volume-bison-frontload",
+   "cana-volume-bison-negra-frontload",
+   "stem-profile-racing-acoustic-negra",
+   "stem-s-m-enduro-gris",
+   "cana-s-m-enduro-40mm-negra"
+  ],
+  "deleted": []
  }
 ];
