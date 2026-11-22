@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Sunday Freeze Negra",
+  "brand": "Sunday",
+  "cat": "stems",
+  "spec": "Alcance: 48 mm Altura de la pila: 33 mm Elevación: 34 mm (caída de 1 mm al invertirla) Peso: 10,5 onzas",
+  "price": 125000,
+  "sku": "CAN-SUN-001",
+  "units": 10,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "48mm",
+    "units": 10,
+    "price": 125000
+   }
+  ],
+  "slug": "stem-sunday-freeze-negra",
+  "img": "assets/img/products/stem-sunday-freeze-negra-mwsdnyolyn8m.jpg?v=1795384653083"
+ },
+ {
   "n": "Stem Volume Staple morada",
   "brand": "Volume",
   "cat": "stems",
