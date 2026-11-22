@@ -10559,5 +10559,29 @@ window.ESCENA_AUDIT = [
    "cana-odyssey-cfl3"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-22T18:05:37.496Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto nuevo, 13 productos editados, 2 fotos subidas",
+  "created": [
+   "stem-fiend-mills-negra"
+  ],
+  "edited": [
+   "cana-odyssey-cfl3",
+   "cana-volume-bison-negra-frontload",
+   "cana-volume-bison-frontload",
+   "stem-plata-pulido",
+   "cana-fiend-mills-topload",
+   "cana-cult-salvation-v4-negra-topload",
+   "cana-shadow-finest-negra-topload",
+   "bsd-stem-negro",
+   "cana-shadow-chula-48mm",
+   "mutanty-savage-v2-stem-plata",
+   "federal-stem-plata",
+   "cana-shadow-ravage-topload",
+   "cana-federal-front-load-negra"
+  ],
+  "deleted": []
  }
 ];
