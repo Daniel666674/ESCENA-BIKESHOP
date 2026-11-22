@@ -16,6 +16,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-volume-staple-negro",
+  "order": 160,
   "img": "assets/img/products/stem-volume-staple-negro-mwscqwziddw2.jpg?v=1795383111029"
  },
  {
@@ -120,7 +121,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-fiend-mills-fl-cromada",
-  "order": 240,
+  "order": 250,
   "img": "assets/img/products/stem-fiend-mills-fl-cromada-mws5khbepzcb.jpg?v=1795371056136"
  },
  {
@@ -6012,7 +6013,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 210,
+  "order": 220,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8793,7 +8794,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 230,
+  "order": 240,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8968,7 +8969,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 190,
+  "order": 200,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
  },
  {
@@ -9071,7 +9072,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 220,
+  "order": 230,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -9090,7 +9091,7 @@ window.ESCENA_PRODUCTS = [
     "price": 250000
    }
   ],
-  "order": 170,
+  "order": 180,
   "colors": [
    {
     "label": "Azul",
@@ -9198,7 +9199,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 180,
+  "order": 190,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9629,7 +9630,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bsd-stem-negro-2.jpg?v=1792523555864",
    "assets/img/products/bsd-stem-negro-3.jpg?v=1792523555864"
   ],
-  "order": 160,
+  "order": 170,
   "img": "assets/img/products/bsd-stem-negro.jpg?v=1792523555864"
  },
  {
@@ -9670,7 +9671,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 200,
+  "order": 210,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
