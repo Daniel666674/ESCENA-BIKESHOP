@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Shadow Ravager Cromada",
+  "brand": "Shadow",
+  "cat": "stems",
+  "spec": "material: Aluminio 6061-T6 alloy - Mecanizado CNC  - Longitud: 53mm - Tornillos Allen de 6 mm, tratados térmicamente - Park / Dirt / Street Peso: 307 g",
+  "price": 200000,
+  "sku": "CAN-SHW-004",
+  "units": 2,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "53mm",
+    "units": 2,
+    "price": 200000
+   }
+  ],
+  "slug": "stem-shadow-ravager-cromada",
+  "order": 290,
+  "img": "assets/img/products/stem-shadow-ravager-cromada-mwseypq1din7.jpg?v=1795386834155"
+ },
+ {
   "n": "Stem Shadow Chula Cromada",
   "brand": "Shadow",
   "cat": "stems",
@@ -116,7 +136,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-sunday-freeze-negra",
-  "order": 320,
+  "order": 330,
   "img": "assets/img/products/stem-sunday-freeze-negra-mwsdnyolyn8m.jpg?v=1795384653083"
  },
  {
@@ -261,7 +281,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-fiend-mills-fl-cromada",
-  "order": 310,
+  "order": 320,
   "img": "assets/img/products/stem-fiend-mills-fl-cromada-mws5khbepzcb.jpg?v=1795371056136"
  },
  {
@@ -8936,7 +8956,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 300,
+  "order": 310,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -9215,7 +9235,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 290,
+  "order": 300,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
