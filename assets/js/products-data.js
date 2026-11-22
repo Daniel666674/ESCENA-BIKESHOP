@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Volume Staple Negro",
+  "brand": "Volume",
+  "cat": "stems",
+  "spec": "Material: Aluminio 6061 – T6 tipo: carga superior alcance: 53 mm altura de la pila: 33 mm elevación: 34 mm Tamaño de la abrazadera: 22,2 mm (7/8\") ST - estándar Pernos de sujeción: 8x1,25 mm (4x) Pernos de sujeción: 8x1,25 mm (2x) peso: 0,331 kg (11,67 oz)",
+  "price": 130000,
+  "sku": "CAN-VOL-003",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "53mm",
+    "units": 1,
+    "price": 130000
+   }
+  ],
+  "slug": "stem-volume-staple-negro",
+  "img": "assets/img/products/stem-volume-staple-negro-mwscqwziddw2.jpg?v=1795383111029"
+ },
+ {
   "n": "Stem Cult Max negra",
   "brand": "Cult",
   "cat": "stems",
