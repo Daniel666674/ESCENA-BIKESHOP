@@ -1,5 +1,24 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Fiend Mills FL cromada",
+  "brand": "Fiend",
+  "cat": "stems",
+  "spec": "Material: Aluminio 6061 mecanizado por CNC - Alcance: 50 mm - Diámetro de la abrazadera del manillar: 22,2 mm - Elevación: 10 mm - Tornillos de la placa frontal: 8 x 1,25 mm, 4 unidades - Tornillos de apriete: 8 x 1,25 mm",
+  "price": 340000,
+  "sku": "CAN-FND-004",
+  "units": 0,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "50mm",
+    "units": 0,
+    "price": 340000
+   }
+  ],
+  "slug": "stem-fiend-mills-fl-cromada",
+  "img": "assets/img/products/stem-fiend-mills-fl-cromada-mws5khbepzcb.jpg?v=1795371056136"
+ },
+ {
   "n": "Stem Fiend Mills Negra",
   "brand": "Fiend",
   "cat": "stems",
