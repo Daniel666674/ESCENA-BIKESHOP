@@ -1,5 +1,45 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem S&M Enduro Cobre",
+  "brand": "S&M",
+  "cat": "stems",
+  "spec": "TIPO: Carga Superior ALCANCE: 40mm Altura: 34 mm DIÁMETRO DE SUJECIÓN: 22,2 mm PESO: 331,7 g (11,7 oz)",
+  "price": 350000,
+  "sku": "CAN-SNM-002",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "40mm",
+    "units": 1,
+    "price": 350000
+   }
+  ],
+  "slug": "stem-s-m-enduro-cobre",
+  "order": 80,
+  "img": "assets/img/products/stem-s-m-enduro-cobre-mwse43xy96jc.jpg?v=1795385406248"
+ },
+ {
+  "n": "Stem S&M Enduro Gris",
+  "brand": "S&M",
+  "cat": "stems",
+  "spec": "Carga Superior Alcance: 40mm Altura: 34 mm DIÁMETRO DE SUJECIÓN: 22,2 mm PESO: 331,7 g (11,7 oz)",
+  "price": 350000,
+  "sku": "CAN-SNM-001",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "40mm",
+    "units": 1,
+    "price": 350000
+   }
+  ],
+  "slug": "stem-s-m-enduro-gris",
+  "order": 70,
+  "img": "assets/img/products/stem-s-m-enduro-gris-mwse45k9mlue.jpg?v=1795385407826"
+ },
+ {
   "n": "Stem Sunday Freeze Negra",
   "brand": "Sunday",
   "cat": "stems",
@@ -16,7 +56,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-sunday-freeze-negra",
-  "order": 270,
+  "order": 290,
   "img": "assets/img/products/stem-sunday-freeze-negra-mwsdnyolyn8m.jpg?v=1795384653083"
  },
  {
@@ -36,7 +76,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-volume-staple-morada",
-  "order": 170,
+  "order": 190,
   "img": "assets/img/products/stem-volume-staple-morada-mwsczsaq60e0.jpg?v=1795383525015"
  },
  {
@@ -56,7 +96,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-volume-staple-negro",
-  "order": 160,
+  "order": 180,
   "img": "assets/img/products/stem-volume-staple-negro-mwscqwziddw2.jpg?v=1795383111029"
  },
  {
@@ -76,7 +116,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-cult-max-negra",
-  "order": 130,
+  "order": 150,
   "img": "assets/img/products/stem-cult-max-negra-mwsc4lcanvkg.jpg?v=1795382070377"
  },
  {
@@ -96,7 +136,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-kink-track-negro",
-  "order": 120,
+  "order": 140,
   "img": "assets/img/products/stem-kink-track-negro-mwsbskkustkq.jpg?v=1795381511051"
  },
  {
@@ -116,7 +156,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-kink-track-cromada",
-  "order": 110,
+  "order": 130,
   "img": "assets/img/products/stem-kink-track-cromada-mwsbnrihjpof.jpg?v=1795381284552"
  },
  {
@@ -141,7 +181,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-cult-salvation-cromada",
-  "order": 150,
+  "order": 170,
   "img": "assets/img/products/stem-cult-salvation-cromada-mwsaz8ijrdp1.jpg?v=1795380139978"
  },
  {
@@ -161,7 +201,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-fiend-mills-fl-cromada",
-  "order": 260,
+  "order": 280,
   "img": "assets/img/products/stem-fiend-mills-fl-cromada-mws5khbepzcb.jpg?v=1795371056136"
  },
  {
@@ -201,7 +241,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-profile-racing-acoustic-negra",
-  "order": 70,
+  "order": 90,
   "img": "assets/img/products/stem-profile-racing-acoustic-negra-mws4zo3mraxh.jpg?v=1795370082633"
  },
  {
@@ -221,7 +261,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-cult-mind-control-cromada",
-  "order": 60,
+  "order": 50,
   "img": "assets/img/products/stem-cult-mind-control-cromada-mws4cpabto3x.jpg?v=1795369033735"
  },
  {
@@ -6053,7 +6093,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 230,
+  "order": 250,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8309,7 +8349,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-cult-mind-control-negra-top-load",
-  "order": 50,
+  "order": 40,
   "img": "assets/img/products/cana-cult-mind-control-negra-top-load.jpg?v=1792523555864"
  },
  {
@@ -8332,7 +8372,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-cult-mind-control-rasta-front-load",
-  "order": 40,
+  "order": 30,
   "img": "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1792523555864"
  },
  {
@@ -8436,7 +8476,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 80,
+  "order": 100,
   "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1792523555864"
  },
  {
@@ -8836,7 +8876,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 250,
+  "order": 270,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -9012,7 +9052,7 @@ window.ESCENA_PRODUCTS = [
     8
    ]
   },
-  "order": 210,
+  "order": 230,
   "img": "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864"
  },
  {
@@ -9036,7 +9076,7 @@ window.ESCENA_PRODUCTS = [
     "price": 310000
    }
   ],
-  "order": 140,
+  "order": 160,
   "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -9058,7 +9098,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 90,
+  "order": 110,
   "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1792523555864"
  },
  {
@@ -9115,7 +9155,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 240,
+  "order": 260,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -9134,7 +9174,7 @@ window.ESCENA_PRODUCTS = [
     "price": 250000
    }
   ],
-  "order": 190,
+  "order": 210,
   "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1792523555864"
  },
  {
@@ -9183,7 +9223,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 30,
+  "order": 60,
   "img": "assets/img/products/cana-s-m-enduro-40mm-negra.jpg?v=1792523555864"
  },
  {
@@ -9230,7 +9270,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 200,
+  "order": 220,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9661,7 +9701,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bsd-stem-negro-2.jpg?v=1792523555864",
    "assets/img/products/bsd-stem-negro-3.jpg?v=1792523555864"
   ],
-  "order": 180,
+  "order": 200,
   "img": "assets/img/products/bsd-stem-negro.jpg?v=1792523555864"
  },
  {
@@ -9684,7 +9724,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/stem-plata-pulido.jpg?v=1792523555864",
    "assets/img/products/stem-plata-pulido-2.jpg?v=1792523555864"
   ],
-  "order": 100,
+  "order": 120,
   "imgPos": "50% 0%",
   "img": "assets/img/products/stem-plata-pulido.jpg?v=1792523555864"
  },
@@ -9704,7 +9744,7 @@ window.ESCENA_PRODUCTS = [
     "price": 210000
    }
   ],
-  "order": 220,
+  "order": 240,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
