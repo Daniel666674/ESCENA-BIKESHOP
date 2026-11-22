@@ -1,5 +1,30 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Stem Cult Salvation Cromada",
+  "brand": "Cult",
+  "cat": "stems",
+  "spec": "fabricada en aluminio 6061-T6 mecanizado  por CNC - Top Load - alcance 46mm",
+  "price": 310000,
+  "sku": "CAN-CLT-004",
+  "units": 2,
+  "imgFit": "cover",
+  "imgs": [
+   "assets/img/products/stem-cult-salvation-cromada-mwsaz8ijrdp1.jpg?v=1795380139978",
+   "assets/img/products/stem-cult-salvation-cromada-mwsaza2z6svx.jpg?v=1795380141689",
+   "assets/img/products/stem-cult-salvation-cromada-mwsazbehlhlq.jpg?v=1795380143961"
+  ],
+  "sizes": [
+   {
+    "label": "46mm",
+    "units": 2,
+    "price": 310000
+   }
+  ],
+  "slug": "stem-cult-salvation-cromada",
+  "order": 120,
+  "img": "assets/img/products/stem-cult-salvation-cromada-mwsaz8ijrdp1.jpg?v=1795380139978"
+ },
+ {
   "n": "Stem Fiend Mills FL cromada",
   "brand": "Fiend",
   "cat": "stems",
@@ -16,6 +41,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-fiend-mills-fl-cromada",
+  "order": 210,
   "img": "assets/img/products/stem-fiend-mills-fl-cromada-mws5khbepzcb.jpg?v=1795371056136"
  },
  {
@@ -5907,7 +5933,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 170,
+  "order": 180,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -8688,7 +8714,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 190,
+  "order": 200,
   "img": "assets/img/products/cana-shadow-finest-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -8965,7 +8991,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 180,
+  "order": 190,
   "img": "assets/img/products/cana-odyssey-cfl3.jpg?v=1792523555864"
  },
  {
@@ -8984,7 +9010,7 @@ window.ESCENA_PRODUCTS = [
     "price": 250000
    }
   ],
-  "order": 130,
+  "order": 140,
   "colors": [
    {
     "label": "Azul",
@@ -9092,7 +9118,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/mutanty-savage-v2-stem-plata-2.jpg?v=1792523555864",
    "assets/img/products/mutanty-savage-v2-stem-plata-3.jpg?v=1792523555864"
   ],
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/mutanty-savage-v2-stem-plata.jpg?v=1792523555864"
  },
  {
@@ -9523,7 +9549,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/bsd-stem-negro-2.jpg?v=1792523555864",
    "assets/img/products/bsd-stem-negro-3.jpg?v=1792523555864"
   ],
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/bsd-stem-negro.jpg?v=1792523555864"
  },
  {
@@ -9564,7 +9590,7 @@ window.ESCENA_PRODUCTS = [
     "units": 5
    }
   ],
-  "order": 150,
+  "order": 170,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
