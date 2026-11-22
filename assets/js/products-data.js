@@ -86,12 +86,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Alcance 50 mm - Rise 7 mm Altura de la pila 32 mm Material - Aluminio 6061-T6 Pernos Seis tornillos hexagonales sólidos de 6 mm de gran tamaño Peso 12.4 oz",
   "price": 340000,
   "sku": "CAN-340-001",
-  "units": 0,
+  "units": 1,
   "imgFit": "cover",
   "sizes": [
    {
     "label": "50mm",
-    "units": 0,
+    "units": 1,
     "price": 340000
    }
   ],
@@ -8280,11 +8280,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Aluminio 6061  pernos macizos tapa limpia para una apariencia limpia de pernos de compresión empotrados Alcance de 48 mm / Elevación de 8,5 mm",
   "price": 320000,
   "sku": "CAN-CLT-002",
-  "units": 1,
+  "units": 2,
   "sizes": [
    {
     "label": "48mm",
-    "units": 1
+    "units": 2,
+    "price": 320000
    }
   ],
   "slug": "cana-cult-mind-control-negra-top-load",
@@ -8306,7 +8307,8 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "48mm",
-    "units": 1
+    "units": 1,
+    "price": 340000
    }
   ],
   "slug": "cana-cult-mind-control-rasta-front-load",
@@ -8920,11 +8922,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: Aluminio 6061-T6 mecanizado por CNC - Alcance: 48 mm - Elevación: 23 mm - Top Load - Tornillos de potencia de cromolio macizo - Tapa superior de ajuste al ras",
   "price": 320000,
   "sku": "CAN-FND-001",
-  "units": 1,
+  "units": 2,
   "sizes": [
    {
     "label": "48mm",
-    "units": 1,
+    "units": 2,
     "price": 320000
    }
   ],
@@ -8940,7 +8942,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Carga superior · Alcance 53mm · Aluminio CNC",
   "price": 200000,
   "sku": "CAN-SHW-002",
-  "units": 1,
+  "units": 2,
   "imgs": [
    "assets/img/products/cana-shadow-ravage-topload.jpg?v=1792523555864",
    "assets/img/products/cana-shadow-ravage-topload-2.jpg?v=1792523555864",
@@ -8955,7 +8957,8 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "53mm",
-    "units": 1
+    "units": 2,
+    "price": 200000
    }
   ],
   "colors": [
@@ -9103,27 +9106,15 @@ window.ESCENA_PRODUCTS = [
   "spec": "Aluminio CNC",
   "price": 250000,
   "sku": "Shadow chula",
-  "units": 1,
+  "units": 2,
   "sizes": [
    {
     "label": "48mm",
-    "units": 1,
+    "units": 2,
     "price": 250000
    }
   ],
   "order": 190,
-  "colors": [
-   {
-    "label": "Azul",
-    "units": 1,
-    "price": 250000
-   },
-   {
-    "label": "Cromado",
-    "units": 1,
-    "price": 250000
-   }
-  ],
   "img": "assets/img/products/cana-shadow-chula-48mm.jpg?v=1792523555864"
  },
  {
@@ -9661,11 +9652,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Carga frontal",
   "price": 330000,
   "sku": "STEM-PLATA-PULIDO",
-  "units": 12,
+  "units": 1,
   "sizes": [
    {
     "label": "Única",
-    "units": 12
+    "units": 1,
+    "price": 330000
    }
   ],
   "imgs": [
@@ -9684,11 +9676,12 @@ window.ESCENA_PRODUCTS = [
   "spec": "Carga frontal · Alcance 50mm · Aluminio plata pulido",
   "price": 210000,
   "sku": "FEDERAL-STEM-PLATA",
-  "units": 5,
+  "units": 1,
   "sizes": [
    {
     "label": "Única",
-    "units": 5
+    "units": 1,
+    "price": 210000
    }
   ],
   "order": 220,
