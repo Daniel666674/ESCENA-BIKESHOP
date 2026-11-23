@@ -10949,5 +10949,15 @@ window.ESCENA_AUDIT = [
    "cana-shadow-ravage-topload"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-23T21:53:53.375Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "llanta-merritt-ft1-negra"
+  ],
+  "deleted": []
  }
 ];
