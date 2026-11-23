@@ -16,6 +16,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-gw-elite-negra",
+  "order": 340,
   "img": "assets/img/products/stem-gw-elite-negra-mwsfg47hnpfh.jpg?v=1795387646102"
  },
  {
@@ -35,7 +36,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-shadow-ravager-cromada",
-  "order": 290,
+  "order": 270,
   "img": "assets/img/products/stem-shadow-ravager-cromada-mwseypq1din7.jpg?v=1795386834155"
  },
  {
@@ -6192,7 +6193,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "cana-federal-front-load-negra",
-  "order": 280,
+  "order": 290,
   "img": "assets/img/products/cana-federal-front-load-negra.jpg?v=1792523555864"
  },
  {
@@ -9809,7 +9810,7 @@ window.ESCENA_PRODUCTS = [
     "price": 210000
    }
   ],
-  "order": 270,
+  "order": 280,
   "imgs": [
    "assets/img/products/federal-stem-plata.jpg?v=1792523555864",
    "assets/img/products/federal-stem-plata-2.jpg?v=1792523555864"
