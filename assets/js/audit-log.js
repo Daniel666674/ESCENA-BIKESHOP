@@ -10959,5 +10959,18 @@ window.ESCENA_AUDIT = [
    "llanta-merritt-ft1-negra"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-23T21:59:37.431Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "4 productos editados",
+  "created": [],
+  "edited": [
+   "stem-gw-elite-negra",
+   "stem-shadow-ravager-cromada",
+   "cana-federal-front-load-negra",
+   "federal-stem-plata"
+  ],
+  "deleted": []
  }
 ];
