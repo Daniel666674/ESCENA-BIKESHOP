@@ -10587,7 +10587,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "20 x 2.40\" · Doble compuesto · Negro",
   "price": 180000,
   "sku": "CORAZA_CULT_WAFFLECUP_2.40",
-  "units": 2,
+  "units": 0,
   "order": 20,
   "imgs": [
    "assets/img/products/coraza_cult_wafflecup_2.40-2.jpg?v=1792523555864",
@@ -10598,7 +10598,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "20x2.40\"",
-    "units": 2,
+    "units": 0,
     "price": 180000
    }
   ],
