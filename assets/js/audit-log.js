@@ -10972,5 +10972,15 @@ window.ESCENA_AUDIT = [
    "federal-stem-plata"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-23T22:51:38.283Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "coraza_cult_wafflecup_2.40"
+  ],
+  "deleted": []
  }
 ];
