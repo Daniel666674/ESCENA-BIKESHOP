@@ -2369,7 +2369,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: compuesto de caucho dobleificaciones: -  - Tamaño: 20 x 2,35\" - Diámetro inflado: 62 mm - Firma de Brian Foster",
   "price": 150000,
   "sku": "LLA-MER-006",
-  "units": 2,
+  "units": 0,
   "imgFit": "cover",
   "imgs": [
    "assets/img/products/llanta-merritt-ft1-negra-muh7o3unm8tk.jpg?v=1792523555864",
@@ -2378,7 +2378,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "2.35\"",
-    "units": 2,
+    "units": 0,
     "price": 150000
    }
   ],
