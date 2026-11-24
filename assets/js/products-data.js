@@ -7023,7 +7023,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "bielas-cult-hawk-cromada",
-  "order": 10,
+  "order": 20,
   "img": "assets/img/products/bielas-cult-hawk-cromada.jpg?v=1792523555864"
  },
  {
@@ -7041,7 +7041,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "bielas-fitbikeco-blunt-negra",
-  "order": 30,
+  "order": 70,
   "img": "assets/img/products/bielas-fitbikeco-blunt-negra.jpg?v=1792523555864"
  },
  {
@@ -8459,7 +8459,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material Aluminio 6061  pernos macizos tapa limpia para una apariencia limpia de pernos de compresión empotrados Alcance de 48 mm / Elevación de 8,5 mm",
   "price": 340000,
   "sku": "CAN-CLT-001",
-  "units": 1,
+  "units": 2,
   "imgs": [
    "assets/img/products/cana-cult-mind-control-rasta-front-load.jpg?v=1792523555864",
    "assets/img/products/cana-cult-mind-control-rasta-front-load-2.jpg?v=1792523555864"
@@ -8467,7 +8467,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "48mm",
-    "units": 1,
+    "units": 2,
     "price": 340000
    }
   ],
@@ -9129,7 +9129,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Carga superior · Alcance 46mm · Aluminio CNC",
   "price": 310000,
   "sku": "STEAM",
-  "units": 1,
+  "units": 2,
   "imgs": [
    "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1792523555864",
    "assets/img/products/cana-cult-salvation-v4-negra-topload-2.jpg?v=1792523555864",
@@ -9138,7 +9138,7 @@ window.ESCENA_PRODUCTS = [
   "sizes": [
    {
     "label": "46mm",
-    "units": 1,
+    "units": 2,
     "price": 310000
    }
   ],
@@ -9384,7 +9384,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 40,
+  "order": 0,
   "imgs": [
    "assets/img/products/fiend-bielas-negro.jpg?v=1792523555864",
    "assets/img/products/fiend-bielas-negro-2.jpg?v=1792523555864"
@@ -9406,7 +9406,7 @@ window.ESCENA_PRODUCTS = [
     "units": 3
    }
   ],
-  "order": 0,
+  "order": 10,
   "imgs": [
    "assets/img/products/cult-bielas-negro.jpg?v=1792523555864",
    "assets/img/products/cult-bielas-negro-2.jpg?v=1792523555864"
@@ -9653,7 +9653,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 20,
+  "order": 60,
   "img": "assets/img/products/bielas-fitbikeco-blunt-cromada-mu1u8rjwm2sb.jpg?v=1792523555864"
  },
  {
@@ -9671,7 +9671,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 70,
+  "order": 50,
   "imgs": [
    "assets/img/products/colony-bielas-negro.jpg?v=1792523555864",
    "assets/img/products/colony-bielas-negro-2.jpg?v=1792523555864",
@@ -9706,7 +9706,7 @@ window.ESCENA_PRODUCTS = [
     "price": 920000
    }
   ],
-  "order": 50,
+  "order": 40,
   "imgs": [
    "assets/img/products/kit-hardware-bielas-plata.jpg?v=1792523555864",
    "assets/img/products/kit-hardware-bielas-plata-2.jpg?v=1792523555864"
@@ -9739,7 +9739,7 @@ window.ESCENA_PRODUCTS = [
     "price": 880000
    }
   ],
-  "order": 60,
+  "order": 30,
   "imgs": [
    "assets/img/products/kit-hardware-bielas-negro.jpg?v=1792523555864",
    "assets/img/products/kit-hardware-bielas-negro-2.jpg?v=1792523555864",
