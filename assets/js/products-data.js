@@ -1,5 +1,18 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Conix Federal H24 Cromada",
+  "brand": "Federal",
+  "cat": "piezas",
+  "spec": "Hilo H24 Broca Allen de 6 mm y 8 mm Logotipo grabado con láser",
+  "price": 50000,
+  "sku": "PZA-FED-002",
+  "units": 1,
+  "imgFit": "cover",
+  "slug": "conix-federal-h24-cromada",
+  "order": 210,
+  "img": "assets/img/products/conix-federal-h24-cromada-mwvckagjqvbd.jpg?v=1795564200470"
+ },
+ {
   "n": "Stem Gw Elite Negra",
   "brand": "GW",
   "cat": "stems",
@@ -502,7 +515,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "kit-de-trinquetes-y-resortes-v2",
-  "order": 220,
+  "order": 230,
   "img": "assets/img/products/kit-de-trinquetes-y-resortes-v2-mwpfibdu3nqs.jpg?v=1795206350520"
  },
  {
@@ -541,7 +554,7 @@ window.ESCENA_PRODUCTS = [
   "units": 5,
   "imgFit": "cover",
   "slug": "kit-de-trinquetes-optimus-v1",
-  "order": 210,
+  "order": 220,
   "img": "assets/img/products/kit-de-trinquetes-optimus-v1-mwp6bj99ii75.jpg?v=1795190917235"
  },
  {
