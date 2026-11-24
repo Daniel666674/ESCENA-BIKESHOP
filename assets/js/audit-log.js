@@ -11025,5 +11025,29 @@ window.ESCENA_AUDIT = [
    "colony-bielas-negro"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-24T21:38:28.725Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "15 productos editados",
+  "created": [],
+  "edited": [
+   "marco-cult-biggie-hammertone",
+   "marco-federal-chiller-20-75-cola-12-7",
+   "marco-federal-command-negro-20-5-x-cola-12-5",
+   "marco-federal-team-ics2-rojo",
+   "marco-federal-team-ics2-negro",
+   "fate-namaste-negro",
+   "marco-colony-prisma-negro",
+   "cult-biggie-jaime-sintes-hammertone-negro",
+   "marco-wethepeople-message-verde",
+   "wethepeople-doomsayer-negro",
+   "tukanbikes-industrial-raw",
+   "marco-gw-destructor-tornasol",
+   "marco-gw-destructor-morado",
+   "marco-gw-destructor-azul-20-5",
+   "total-marco-2075-blanco-azul"
+  ],
+  "deleted": []
  }
 ];
