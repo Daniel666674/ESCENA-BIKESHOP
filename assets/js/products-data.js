@@ -76,7 +76,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-s-m-enduro-morado",
-  "order": 100,
+  "order": 130,
   "img": "assets/img/products/stem-s-m-enduro-morado-mwsej19mtla0.jpg?v=1795386102573"
  },
  {
@@ -96,7 +96,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-s-m-enduro-cromada",
-  "order": 90,
+  "order": 120,
   "img": "assets/img/products/stem-s-m-enduro-cromada-mwsecj7s4jeo.jpg?v=1795385802502"
  },
  {
@@ -116,7 +116,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-s-m-enduro-cobre",
-  "order": 80,
+  "order": 110,
   "img": "assets/img/products/stem-s-m-enduro-cobre-mwse43xy96jc.jpg?v=1795385406248"
  },
  {
@@ -136,7 +136,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-s-m-enduro-gris",
-  "order": 70,
+  "order": 100,
   "img": "assets/img/products/stem-s-m-enduro-gris-mwsecnbaj8ip.jpg?v=1795385805434"
  },
  {
@@ -216,7 +216,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-cult-max-negra",
-  "order": 170,
+  "order": 60,
   "img": "assets/img/products/stem-cult-max-negra-mwsc4lcanvkg.jpg?v=1795382070377"
  },
  {
@@ -236,7 +236,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-kink-track-negro",
-  "order": 160,
+  "order": 190,
   "img": "assets/img/products/stem-kink-track-negro-mwsbskkustkq.jpg?v=1795381511051"
  },
  {
@@ -256,7 +256,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-kink-track-cromada",
-  "order": 150,
+  "order": 180,
   "img": "assets/img/products/stem-kink-track-cromada-mwsbnrihjpof.jpg?v=1795381284552"
  },
  {
@@ -281,7 +281,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-cult-salvation-cromada",
-  "order": 190,
+  "order": 80,
   "img": "assets/img/products/stem-cult-salvation-cromada-mwsaz8ijrdp1.jpg?v=1795380139978"
  },
  {
@@ -341,7 +341,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "stem-profile-racing-acoustic-negra",
-  "order": 110,
+  "order": 140,
   "img": "assets/img/products/stem-profile-racing-acoustic-negra-mws4zo3mraxh.jpg?v=1795370082633"
  },
  {
@@ -8576,7 +8576,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 120,
+  "order": 150,
   "img": "assets/img/products/cana-volume-bison-negra-frontload.jpg?v=1792523555864"
  },
  {
@@ -9082,11 +9082,11 @@ window.ESCENA_PRODUCTS = [
   "spec": "Material: Aluminio 6061-T6 mecanizado por CNC - Alcance: 48 mm - Elevación: 23 mm - Top Load - Tornillos de potencia de cromolio macizo - Tapa superior de ajuste al ras",
   "price": 320000,
   "sku": "CAN-FND-001",
-  "units": 2,
+  "units": 1,
   "sizes": [
    {
     "label": "48mm",
-    "units": 2,
+    "units": 1,
     "price": 320000
    }
   ],
@@ -9142,7 +9142,7 @@ window.ESCENA_PRODUCTS = [
     "price": 310000
    }
   ],
-  "order": 180,
+  "order": 70,
   "img": "assets/img/products/cana-cult-salvation-v4-negra-topload.jpg?v=1792523555864"
  },
  {
@@ -9164,7 +9164,7 @@ window.ESCENA_PRODUCTS = [
     "units": 1
    }
   ],
-  "order": 130,
+  "order": 160,
   "img": "assets/img/products/cana-volume-bison-frontload.jpg?v=1792523555864"
  },
  {
@@ -9289,7 +9289,7 @@ window.ESCENA_PRODUCTS = [
     "units": 2
    }
   ],
-  "order": 60,
+  "order": 90,
   "img": "assets/img/products/cana-s-m-enduro-40mm-negra-mwsecpkqsoij.jpg?v=1795385807647"
  },
  {
@@ -9790,7 +9790,7 @@ window.ESCENA_PRODUCTS = [
    "assets/img/products/stem-plata-pulido.jpg?v=1792523555864",
    "assets/img/products/stem-plata-pulido-2.jpg?v=1792523555864"
   ],
-  "order": 140,
+  "order": 170,
   "imgPos": "50% 0%",
   "img": "assets/img/products/stem-plata-pulido.jpg?v=1792523555864"
  },
