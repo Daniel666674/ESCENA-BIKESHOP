@@ -10982,5 +10982,29 @@ window.ESCENA_AUDIT = [
    "coraza_cult_wafflecup_2.40"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-24T21:17:12.582Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "15 productos editados",
+  "created": [],
+  "edited": [
+   "cana-fiend-mills-topload",
+   "stem-cult-max-negra",
+   "stem-kink-track-negro",
+   "stem-kink-track-cromada",
+   "stem-plata-pulido",
+   "cana-volume-bison-frontload",
+   "cana-volume-bison-negra-frontload",
+   "stem-profile-racing-acoustic-negra",
+   "stem-s-m-enduro-morado",
+   "stem-s-m-enduro-cromada",
+   "stem-s-m-enduro-cobre",
+   "stem-s-m-enduro-gris",
+   "cana-s-m-enduro-40mm-negra",
+   "cana-cult-salvation-v4-negra-topload",
+   "stem-cult-salvation-cromada"
+  ],
+  "deleted": []
  }
 ];
