@@ -10322,7 +10322,7 @@ window.ESCENA_PRODUCTS = [
   "spec": "Multiherramienta plegable · 6mm · 8mm · dado 17mm",
   "price": 90000,
   "sku": "CULT-MULTIHERRAMIENTA-01",
-  "units": 1,
+  "units": 0,
   "order": 10,
   "imgFit": "cover",
   "img": "assets/img/products/cult-multiherramienta-01-mun4o2run0pg.jpg?v=1792523555864"
