@@ -11006,5 +11006,24 @@ window.ESCENA_AUDIT = [
    "stem-cult-salvation-cromada"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-24T21:19:19.575Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "10 productos editados",
+  "created": [],
+  "edited": [
+   "cana-cult-salvation-v4-negra-topload",
+   "cana-cult-mind-control-rasta-front-load",
+   "fiend-bielas-negro",
+   "bielas-fitbikeco-blunt-negra",
+   "bielas-fitbikeco-blunt-cromada",
+   "bielas-cult-hawk-cromada",
+   "cult-bielas-negro",
+   "kit-hardware-bielas-negro",
+   "kit-hardware-bielas-plata",
+   "colony-bielas-negro"
+  ],
+  "deleted": []
  }
 ];
