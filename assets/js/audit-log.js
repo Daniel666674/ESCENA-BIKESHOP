@@ -11049,5 +11049,15 @@ window.ESCENA_AUDIT = [
    "total-marco-2075-blanco-azul"
   ],
   "deleted": []
+ },
+ {
+  "ts": "2026-11-24T21:43:44.107Z",
+  "actor": "ivan.escena@gmail.com",
+  "summary": "1 producto editado",
+  "created": [],
+  "edited": [
+   "cult-multiherramienta-01"
+  ],
+  "deleted": []
  }
 ];
