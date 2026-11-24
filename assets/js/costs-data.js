@@ -372,7 +372,7 @@ window.ESCENA_COSTS = {
  "llave-y-roja": 7200,
  "cult-biggie-jaime-sintes-hammertone-negro": 1432000,
  "fate-namaste-negro": 1040000,
- "total-marco-2075-blanco-azul": 1680000,
+ "total-marco-2075-blanco-azul": 1512000,
  "tukanbikes-industrial-raw": 216000,
  "wethepeople-doomsayer-negro": 1440000,
  "cult-havens-gate-alex-duleba-negro": 1432000,
