@@ -507,5 +507,6 @@ window.ESCENA_COSTS = {
  "stem-shadow-chula-cromada": 200000,
  "stem-shadow-ravager-cromada": 160000,
  "stem-gw-elite-negra": 44000,
- "conix-federal-h24-cromada": 40000
+ "conix-federal-h24-cromada": 40000,
+ "timon-snafu-noa-negro": 344000
 };
