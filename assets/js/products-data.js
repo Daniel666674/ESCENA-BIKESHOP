@@ -1,5 +1,25 @@
 window.ESCENA_PRODUCTS = [
  {
+  "n": "Timon Snafu Noa Negro",
+  "brand": "Snafu",
+  "cat": "manubrios",
+  "spec": "Firma: Martin Logan Material: Acero al cromo-molibdeno 4130 tratado térmicamente El manillar se eleva: 9.4\" Ancho de Handlebars:29\" Retroceso: 11° Barrido ascendente: 1° Peso:\t808 g  Color:Negro",
+  "price": 430000,
+  "sku": "TMN-SNA-001",
+  "units": 1,
+  "imgFit": "cover",
+  "sizes": [
+   {
+    "label": "9.4\"",
+    "units": 1,
+    "price": 430000
+   }
+  ],
+  "slug": "timon-snafu-noa-negro",
+  "order": 80,
+  "img": "assets/img/products/timon-snafu-noa-negro-mwznevdaftwm.jpg?v=1795824288227"
+ },
+ {
   "n": "Conix Federal H24 Cromada",
   "brand": "Federal",
   "cat": "piezas",
@@ -1051,7 +1071,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-federal-bruno-v3-negro",
-  "order": 100,
+  "order": 110,
   "img": "assets/img/products/timon-federal-bruno-v3-negro-mwdxxfc7afnd.jpg?v=1794511694149"
  },
  {
@@ -1071,7 +1091,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-tall-order-180-negro",
-  "order": 130,
+  "order": 140,
   "img": "assets/img/products/timon-tall-order-180-negro-mwdxcanva3h0.jpg?v=1794510710721"
  },
  {
@@ -1154,7 +1174,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-s-m-hoder-negro",
-  "order": 180,
+  "order": 190,
   "img": "assets/img/products/timon-s-m-hoder-negro-mw44l0dssxy6.jpg?v=1793918210531"
  },
  {
@@ -1174,7 +1194,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-s-m-hoder-dorado",
-  "order": 170,
+  "order": 180,
   "img": "assets/img/products/timon-s-m-hoder-dorado-mw44l23n8ens.jpg?v=1793918212370"
  },
  {
@@ -1194,7 +1214,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-s-m-perfect-10-industrial",
-  "order": 160,
+  "order": 170,
   "img": "assets/img/products/timon-s-m-perfect-10-industrial-mw42yq2ium8r.jpg?v=1793915491002"
  },
  {
@@ -1214,7 +1234,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-s-m-perfect-10-negro",
-  "order": 150,
+  "order": 160,
   "img": "assets/img/products/timon-s-m-perfect-10-negro-mw42yrp6tlec.jpg?v=1793915492918"
  },
  {
@@ -1264,7 +1284,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-stolen-roll-cromado",
-  "order": 140,
+  "order": 150,
   "img": "assets/img/products/timon-stolen-roll-cromado-mw3snobj6yys.jpg?v=1793898180949"
  },
  {
@@ -1294,7 +1314,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-stolen-roll-negro",
-  "order": 120,
+  "order": 130,
   "img": "assets/img/products/timon-stolen-roll-negro-mw3sf0htna0q.jpg?v=1793897775719"
  },
  {
@@ -2974,7 +2994,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-merritt-slaughter-4pc-negro",
-  "order": 70,
+  "order": 90,
   "img": "assets/img/products/timon-merritt-slaughter-4pc-negro-mue04z0fal11.jpg?v=1792523555864"
  },
  {
@@ -7242,7 +7262,7 @@ window.ESCENA_PRODUCTS = [
    ]
   },
   "slug": "timon-federal-assaut",
-  "order": 90,
+  "order": 100,
   "img": "assets/img/products/timon-federal-assaut.jpg?v=1792523555864"
  },
  {
@@ -7265,7 +7285,7 @@ window.ESCENA_PRODUCTS = [
    }
   ],
   "slug": "timon-colony-rick-4-piezas",
-  "order": 110,
+  "order": 120,
   "img": "assets/img/products/timon-colony-rick-4-piezas.jpg?v=1792523555864"
  },
  {
@@ -7433,7 +7453,7 @@ window.ESCENA_PRODUCTS = [
     1
    ]
   },
-  "order": 220,
+  "order": 230,
   "img": "assets/img/products/timon-gw-gorila-4pc-negro-2.jpg?v=1792523555864"
  },
  {
@@ -7481,7 +7501,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 190,
+  "order": 200,
   "img": "assets/img/products/timon-gw-destructor-tornasol.jpg?v=1792523555864"
  },
  {
@@ -10715,7 +10735,7 @@ window.ESCENA_PRODUCTS = [
     2
    ]
   },
-  "order": 80,
+  "order": 70,
   "img": "assets/img/products/manubrio-cromoly-negro-01.jpg?v=1792523555864"
  },
  {
@@ -10773,7 +10793,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 200,
+  "order": 210,
   "img": "assets/img/products/manubrio-cromoly-negro-03.jpg?v=1792523555864"
  },
  {
@@ -10791,7 +10811,7 @@ window.ESCENA_PRODUCTS = [
     "units": 0
    }
   ],
-  "order": 210,
+  "order": 220,
   "img": "assets/img/products/manubrio-cromoly-negro-04-mt8wbjgs18xl.jpg?v=1792523555864"
  }
 ];
